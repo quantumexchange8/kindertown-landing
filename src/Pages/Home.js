@@ -246,7 +246,7 @@ const Home = () => {
       </div>
 
       <div className="w-full flex flex-col bg-[#FFF7EF] mt-24 py-[150px]">
-        {/* Title */}
+        {/* CONTENT 4 */}
         <div className="w-[1000px] mx-auto flex flex-col justify-center items-center gap-y-12 px-24">
           <div className="flex flex-col justify-center items-center">
             <img src={Tools} className="w-32 h-32" alt="Tools" />
@@ -257,9 +257,9 @@ const Home = () => {
             </h1>
           </div>
         </div>
-        {/* Content */}
+
         <div className="w-[1000px] mx-auto flex flex-col justify-center items-center pt-[200px] gap-y-[150px]">
-          {/* Content Section 1 */}
+          {/* Content 5 */}
           <div className="flex flex-col">
             <div className="flex flex-row gap-x-9">
               <div className="w-[100px] h-[100px]">
@@ -296,7 +296,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          {/* Content Section 2 */}
+          {/* Content 6 */}
           <div className="flex flex-col">
             <div className="flex flex-row gap-x-9">
               <div className="w-[100px] h-[100px]">
@@ -331,7 +331,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          {/* Content Section 3 */}
+          {/* Content 7 */}
           <div className="flex flex-col">
             <div className="flex flex-row gap-x-9">
               <div className="w-[100px] h-[100px]">
