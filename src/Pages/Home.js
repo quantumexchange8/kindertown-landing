@@ -1,4 +1,5 @@
 import React from "react";
+
 import GirlBg from "../assets/girl_child.mp4";
 import Planner from "../assets/home/planner.svg";
 import Child from "../assets/home/child.svg";
@@ -15,6 +16,7 @@ import Owners from "../assets/home/schoolowners.svg";
 import Admin from "../assets/home/admin.png";
 import Teacher2 from "../assets/home/teacher2.svg";
 import Parent from "../assets/home/parent.svg";
+import Main from "../assets/home/main.svg";
 const Home = () => {
   return (
     <>
@@ -22,7 +24,7 @@ const Home = () => {
         <div className="w-full max-w-[1000px] mt-[50px] flex flex-col">
           {/* CONTENT 1 */}
           <div>
-            <img src="/image/home/main.svg" alt="" loading="lazy" />
+            <img src={Main} alt="" loading="lazy" />
           </div>
 
           <div className="w-full flex flex-col justify-center gap-[150px]">
