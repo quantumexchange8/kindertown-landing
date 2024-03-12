@@ -17,3 +17,8 @@
   font-family: 'SF Pro Bold';
   src: local('SF Pro'), url('./fonts/SF-Pro-Text-Bold.otf') format('opentype');
 }
+
+@font-face {
+  font-family: 'SF Pro Extrabold';
+  src: local('SF Pro'), url('./fonts/SF-Pro-Text-Heavy.otf') format('opentype');
+}

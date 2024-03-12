@@ -56,7 +56,7 @@ const Home = () => {
               Kindertown’s app super highlight
             </h1>
             <div className="flex flex-col md:flex-row md:flex-wrap justify-between">
-              <div className="md:w-[315px] md:h-[460px] md:rounded-[30px] bg-[#F67F00] flex flex-col justify-center items-center gap-[60px] py-[70px]">
+              <div className="md:w-[315px] md:h-[460px] md:rounded-[30px] py-[70px] pl-[27px] pr-[18px] bg-[#F67F00] flex flex-col justify-center items-center gap-[60px]">
                 <div>
                   <img
                     src={Planner}
@@ -65,24 +65,16 @@ const Home = () => {
                   ></img>
                 </div>
 
-                <div className="flex flex-col items-center gap-5 px-[27px] w-[270px] md:h-[140px]">
-                  <div>
-                    <h2
-                      className="text-center font-bold text-xl"
-                      style={{ fontFamily: "SF Pro Bold" }}
-                    >
-                      Say goodbye to enrolment worries
-                    </h2>
+                <div className="flex flex-col items-center gap-5 w-[270px] md:h-full">
+                  <div className="text-center text-xl leading-normal w-full" style={{ fontFamily: "SF Pro Bold" }}>
+                      <div className="flex items-center justify-center h-6">Say goodbye to</div>
+                      <div className="flex items-center justify-center h-6">enrolment worries</div>
                   </div>
 
-                  <div>
-                    <p
-                      className="text-center"
-                      style={{ fontFamily: "SF Pro Medium" }}
-                    >
-                      You can now secure a seat in your preferred kindergarten
-                      in Kindertown.
-                    </p>
+                  <div className="text-center text-[20px] leading-normal">
+                    <div className="flex items-center justify-center h-[25px]" style={{ fontFamily: "SF Pro Medium" }}>You can now secure</div>
+                    <div className="flex items-center justify-center h-[25px]" style={{ fontFamily: "SF Pro Medium" }}>a seat in your preferred</div>
+                    <div className="flex items-center justify-center h-[25px]" style={{ fontFamily: "SF Pro Medium" }}>kindergarten in Kindertown.</div>
                   </div>
                 </div>
               </div>
@@ -270,7 +262,7 @@ const Home = () => {
               <div className="flex flex-grow items-center">
                 <h2
                   className="text-[#4D9138] text-3xl"
-                  style={{ fontFamily: "SF Pro Bold" }}
+                  style={{ fontFamily: "SF Pro Extrabold" }}
                 >
                   Child's Learning Journey
                 </h2>
