@@ -20,7 +20,7 @@ import Main from "../assets/home/main.svg";
 const Home = () => {
   return (
     <>
-      <div className="w-full flex justify-center mt-[50px] px-[220px]">
+      <div className="w-full flex justify-center mt-[50px]">
         <div className="w-full max-w-[1000px] mt-[50px] flex flex-col">
           {/* CONTENT 1 */}
           <div>
@@ -36,15 +36,15 @@ const Home = () => {
               >
                 Zero - Worries. Zero - Hassle.
               </div>
-              <div
-                className="w-[1000px] text-center my-6 text-[32px]"
-                style={{ fontFamily: "SF Pro Medium" }}
-              >
-                A child's learning world begins in the classroom, using tools
-                that are flexible, easy to operate, prioritise privacy,
-                accessibility, and sustainability. Parents will have a better
-                understanding of their child's journey in kindergarten because
-                of our products.
+              <div className="w-full text-center text-[32px]" style={{ fontFamily: "SF Pro Display M", lineHeight: "normal" }}>
+              A child's learning world begins in the classroom, using tools that are
+              flexible, easy to operate, prioritise privacy, accessibility, and sustainability.
+              Parents will have a better understanding of their child's journey in
+              kindergarten because of our products.
+                {/* <div className="" ></div>
+                <div className="text-[32px]" style={{ fontFamily: "SF Pro Display M" }}></div>
+                <div className="text-[32px]" style={{ fontFamily: "SF Pro Display M" }}></div>
+                <div className="text-[32px]" style={{ fontFamily: "SF Pro Display M" }}></div> */}
               </div>
             </div>
           </div>
@@ -460,7 +460,7 @@ const Home = () => {
         </div>
 
         <div className="w-[1000px] mx-auto flex flex-col justify-center items-center pt-[200px] gap-y-[150px]">
-          <div className="flex flex-col">
+          {/* <div className="flex flex-col">
             <div className="flex flex-row gap-x-9">
               <div className="w-[100px] h-[100px]">
                 <img src={Family} alt="Family" />
@@ -493,6 +493,35 @@ const Home = () => {
                   className="text-[32px]  leading-normal"
                   style={{ fontFamily: "SF Pro Medium" }}
                 >
+                  It also includes features such as connectivity with school
+                  CCTV, essential management features, and adorable widgets.
+                  This allows you to track every detail of your child's learning
+                  journey at anytime, anywhere, ensuring that no important
+                  information is missed out.
+                </div>
+              </div>
+            </div>
+          </div> */}
+
+          {/* REFER HERE FOR SAMPLE */}
+          <div className="flex gap-9">
+            <div>
+              <img src={Family} alt="Family"/>
+            </div>
+            <div className="flex flex-col justify-center w-[864px] gap-[30px]">
+               <div className="text-[#4D9138] text-[32px] pt-[30px]" style={{ fontFamily: "SF Pro Extrabold" }}>
+                Child's Learning Journey
+              </div>
+              <div className="flex flex-col gap-10">
+                <div className="text-[32px]" style={{ fontFamily: "SF Pro Display M", lineHeight: "normal" }}>
+                    Through the powerful Kindertown Parents mobile application,
+                    not only does it enhance the intimate relationship between
+                    parents and children, but it also makes it easy for parents to
+                    find outstanding kindergartens for their children, preparing
+                    them for future enrollment. Our system provides the simplest
+                    and most convenient registration process and payment methods.
+                </div>
+                <div className="text-[32px]" style={{ fontFamily: "SF Pro Display M", lineHeight: "normal" }}>
                   It also includes features such as connectivity with school
                   CCTV, essential management features, and adorable widgets.
                   This allows you to track every detail of your child's learning
@@ -577,7 +606,7 @@ const Home = () => {
                   teachers, and posting announcements.
                 </div>
                 <br />
-                <pdiv
+                <div
                   className="text-[32px]  leading-normal"
                   style={{ fontFamily: "SF Pro Medium" }}
                 >
@@ -586,7 +615,7 @@ const Home = () => {
                   Most importantly, it significantly alleviates the burden of
                   tedious and slow processing tasks that traditional mode
                   kindergartens still face.
-                </pdiv>
+                </div>
               </div>
             </div>
           </div>
