@@ -12,12 +12,14 @@ const Parent = () => {
               <div style={{ fontSize: "80px", fontFamily: "SF Pro Bold" }}>
                 Kindertown Parents
               </div>
-              <div
-                className="flex items-center"
-                style={{ fontSize: "32px", fontFamily: "SF Pro Medium" }}
-              >
-                A powerful platform that allows you to seamlessly monitor your
-                child's activities at any time, from anywhere.
+              <div className="flex flex-col items-center">
+                <div
+                  className="leading-normal text-center"
+                  style={{ fontSize: "32px", fontFamily: "SF Pro Medium" }}
+                >
+                  A powerful platform that allows you to seamlessly monitor your
+                  child's activities at any time, from anywhere.
+                </div>
               </div>
             </div>
           </div>
