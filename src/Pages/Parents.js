@@ -8,7 +8,18 @@ const Parent = () => {
         <div className="w-[1000px] px-[100px] ">
           <div className="w-full flex flex-col items-center gap-y-[100px]">
             <div className="md:w-[800px] md:h-[660px] md:rounded-[50px] bg-gradient-to-t from-[#FFDD98]  via-[#FFEABE] to-[#FFF7E5]"></div>
-            <div className="flex flex-col gap-[50px]"></div>
+            <div className="flex flex-col gap-[50px] justify-center items-center">
+              <div style={{ fontSize: "80px", fontFamily: "SF Pro Bold" }}>
+                Kindertown Parents
+              </div>
+              <div
+                className="flex items-center"
+                style={{ fontSize: "32px", fontFamily: "SF Pro Medium" }}
+              >
+                A powerful platform that allows you to seamlessly monitor your
+                child's activities at any time, from anywhere.
+              </div>
+            </div>
           </div>
         </div>
       </div>
