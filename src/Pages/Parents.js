@@ -28,11 +28,7 @@ const Parent = () => {
 
               {/* Small Image on top right */}
               <div className="relative">
-                <img
-                  src={Icon}
-                  alt="Small Image"
-                  className="w-[200px] h-[200px] absolute top-0 right-0 max-w-[calc(100% - 94px)] max-h-[calc(100% - 87px)]"
-                />
+                <img src={Icon} alt="icon" className="w-[200px] h-[200px] absolute top-0 right-0 max-w-[calc(100% - 94px)] max-h-[calc(100% - 87px)]"/>
               </div>
 
               {/* Text on bottom left */}
@@ -47,7 +43,7 @@ const Parent = () => {
             </div>
           </div>
           <div className="w-full flex flex-col items-center gap-[50px]">
-            <div style={{ fontSize: "80px", fontFamily: "SF Pro Bold" }}>
+            <div style={{ fontSize: "80px", fontFamily: "SF Pro Display B" }}>
               Kindertown Parents
             </div>
             <div className="flex items-center">
@@ -75,7 +71,7 @@ const Parent = () => {
           {/*CONTENT 2 */}
           <div className="w-full flex items-center gap-[66px]">
             <div className="flex flex-col h-[711px] md:max-w-[350px]">
-              <img src={Phone1}></img>
+              <img src={Phone1} alt="phone1"/>
             </div>
 
             <div className="flex flex-col items-center">
@@ -83,13 +79,13 @@ const Parent = () => {
                 className="text-center text-[50px] w-full text-[#F67F00]"
                 style={{ fontFamily: "SF Pro Display B" }}
               >
-                <div className="flex items-center justify-center">
+                <div className="flex items-center justify-center h-14">
                   Designed for the future.
                 </div>
-                <div className="flex items-center justify-center">
+                <div className="flex items-center justify-center h-14">
                   Designed for
                 </div>
-                <div className="flex items-center justify-center">
+                <div className="flex items-center justify-center h-14">
                   kindergarten.
                 </div>
               </div>
@@ -102,22 +98,22 @@ const Parent = () => {
                 className="text-center text-[50px] w-full text-[#64697A]"
                 style={{ fontFamily: "SF Pro Display B" }}
               >
-                <div className="flex items-center justify-center">
+                <div className="flex items-center justify-center h-14">
                   Build for Learning
                 </div>
-                <div className="flex items-center justify-center">
+                <div className="flex items-center justify-center h-14">
                   Connecting and Caring
                 </div>
               </div>
             </div>
             <div className="flex flex-col w-[350px] h-[711px]">
-              <img src={Phone2}></img>
+              <img src={Phone2} alt="phone2"/>
             </div>
           </div>
           {/*CONTENT 4 */}
           <div className="w-full flex items-center gap-[66px]">
             <div className="flex flex-col w-[350px] h-[711px]">
-              <img src={Phone3}></img>
+              <img src={Phone3} alt="phone3"/>
             </div>
 
             <div className="flex flex-col items-center">
@@ -125,10 +121,10 @@ const Parent = () => {
                 className="text-center text-[50px] w-full text-[#003A91]"
                 style={{ fontFamily: "SF Pro Display B" }}
               >
-                <div className="flex items-center justify-center">
+                <div className="flex items-center justify-center h-14">
                   Witness the boundless
                 </div>
-                <div className="flex items-center justify-center">
+                <div className="flex items-center justify-center h-14">
                   imagination of a child.
                 </div>
               </div>
@@ -141,32 +137,32 @@ const Parent = () => {
                 className="text-center text-[50px] w-full text-[#FF0001]"
                 style={{ fontFamily: "SF Pro Display B" }}
               >
-                <div className="flex items-center justify-center">
+                <div className="flex items-center justify-center h-14">
                   Ignite the learning
                 </div>
-                <div className="flex items-center justify-center">
+                <div className="flex items-center justify-center h-14">
                   passion in every student.
                 </div>
               </div>
             </div>
             <div className="flex flex-col w-[350px]">
-              <img src={Phone4}></img>
+              <img src={Phone4} alt="phone4"/>
             </div>
           </div>
           {/*CONTENT 6 */}
           <div className="w-full flex items-center gap-[66px]">
             <div className="flex flex-col w-[350px]">
-              <img src={Phone5}></img>
+              <img src={Phone5} alt="phone5"/>
             </div>
             <div className="flex flex-col items-center w-[584px]">
               <div
                 className="text-center text-[50px] w-full text-[#4D9138]"
                 style={{ fontFamily: "SF Pro Display B" }}
               >
-                <div className="flex items-center justify-center">
+                <div className="flex items-center justify-center h-14">
                   Share little moment in the
                 </div>
-                <div className="flex items-center justify-center">
+                <div className="flex items-center justify-center h-14">
                   education community.
                 </div>
               </div>

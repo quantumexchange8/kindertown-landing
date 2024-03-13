@@ -452,7 +452,7 @@ const Home = () => {
           <div className="flex flex-col items-center w-full md:h-full">
             <div
               className="text-center text-[80px] text-[#7A5AF8] leading-[90px] w-full"
-              style={{ fontFamily: "SF Pro Bold" }}
+              style={{ fontFamily: "SF Pro Display B" }}
             >
               <div className="flex items-center justify-center h-[90px]">
                 Essential tools.
@@ -692,7 +692,7 @@ const Home = () => {
             <div className="flex w-[466px] h-40">
               <div
                 className="text-[#752A15] leading-[90px]"
-                style={{ fontSize: "80px", fontFamily: "SF Pro Bold" }}
+                style={{ fontSize: "80px", fontFamily: "SF Pro Display B" }}
               >
                 Why choose Kindertown?
               </div>
@@ -728,7 +728,7 @@ const Home = () => {
               ></img>
             </div>
             <div className="flex flex-col justify-center items-center gap-[30px]">
-              <div style={{ fontSize: "50px", fontFamily: "SF Pro Bold" }}>
+              <div style={{ fontSize: "50px", fontFamily: "SF Pro Display B" }}>
                 School Owners
               </div>
 
@@ -767,7 +767,7 @@ const Home = () => {
               ></img>
             </div>
             <div className="flex flex-col justify-center items-center gap-[30px]">
-              <div style={{ fontSize: "50px", fontFamily: "SF Pro Bold" }}>
+              <div style={{ fontSize: "50px", fontFamily: "SF Pro Display B" }}>
                 Administrators
               </div>
 
@@ -849,7 +849,7 @@ const Home = () => {
               ></img>
             </div>
             <div className="flex flex-col justify-center items-center gap-[30px]">
-              <div style={{ fontSize: "50px", fontFamily: "SF Pro Bold" }}>
+              <div style={{ fontSize: "50px", fontFamily: "SF Pro Display B" }}>
                 Parents
               </div>
 
