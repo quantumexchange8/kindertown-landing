@@ -1,6 +1,6 @@
 // JoinUs.jsx
 import React from "react";
-import Kaki from "./Privacy";
+import Privacy from "./Privacy";
 import Phone1 from "../assets/parent/phone1.svg";
 import Phone2 from "../assets/parent/phone2.svg";
 import Phone3 from "../assets/parent/phone3.svg";
@@ -211,7 +211,7 @@ const Parent = () => {
           </div>
         </div>
       </div>
-      <Kaki />
+      <Privacy />
     </>
   );
 };
