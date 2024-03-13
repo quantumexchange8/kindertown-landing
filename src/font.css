@@ -1,34 +1,38 @@
 @font-face {
-  font-family: 'SF Pro Regular';
-  src: url('./fonts/SF-Pro-Text-Regular.otf') format('opentype');
+  font-family: "SF Pro Regular";
+  src: url("./fonts/SF-Pro-Text-Regular.otf") format("opentype");
 }
 
 @font-face {
-  font-family: 'SF Pro Display R';
-  src: url('./fonts/SF-Pro-Display-Regular.otf') format('opentype');
+  font-family: "SF Pro Display R";
+  src: url("./fonts/SF-Pro-Display-Regular.otf") format("opentype");
 }
 
 @font-face {
-  font-family: 'SF Pro Medium';
-  src: url('./fonts/SF-Pro-Text-Medium.otf') format('opentype');
+  font-family: "SF Pro Medium";
+  src: url("./fonts/SF-Pro-Text-Medium.otf") format("opentype");
 }
 
 @font-face {
-  font-family: 'SF Pro Display M';
-  src: url('./fonts/SF-Pro-Display-Medium.otf') format('opentype');
+  font-family: "SF Pro Display M";
+  src: url("./fonts/SF-Pro-Display-Medium.otf") format("opentype");
 }
 
 @font-face {
-  font-family: 'SF Pro Semibold';
-  src: url('./fonts/SF-Pro-Text-Semibold.otf') format('opentype');
+  font-family: "SF Pro Semibold";
+  src: url("./fonts/SF-Pro-Text-Semibold.otf") format("opentype");
 }
 
 @font-face {
-  font-family: 'SF Pro Bold';
-  src: url('./fonts/SF-Pro-Text-Bold.otf') format('opentype');
+  font-family: "SF Pro Bold";
+  src: url("./fonts/SF-Pro-Text-Bold.otf") format("opentype");
 }
 
 @font-face {
-  font-family: 'SF Pro Extrabold';
-  src: url('./fonts/SF-Pro-Text-Heavy.otf') format('opentype');
+  font-family: "SF Pro Extrabold";
+  src: url("./fonts/SF-Pro-Text-Heavy.otf") format("opentype");
+}
+@font-face {
+  font-family: "SF Pro Display B";
+  src: url("./fonts/SF-Pro-Display-Bold.otf") format("opentype");
 }

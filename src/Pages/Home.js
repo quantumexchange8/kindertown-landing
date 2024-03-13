@@ -36,11 +36,15 @@ const Home = () => {
               >
                 Zero - Worries. Zero - Hassle.
               </div>
-              <div className="w-full text-center text-[32px]" style={{ fontFamily: "SF Pro Display M", lineHeight: "normal" }}>
-              A child's learning world begins in the classroom, using tools that are
-              flexible, easy to operate, prioritise privacy, accessibility, and sustainability.
-              Parents will have a better understanding of their child's journey in
-              kindergarten because of our products.
+              <div
+                className="w-full text-center text-[32px]"
+                style={{ fontFamily: "SF Pro Display M", lineHeight: "normal" }}
+              >
+                A child's learning world begins in the classroom, using tools
+                that are flexible, easy to operate, prioritise privacy,
+                accessibility, and sustainability. Parents will have a better
+                understanding of their child's journey in kindergarten because
+                of our products.
                 {/* <div className="" ></div>
                 <div className="text-[32px]" style={{ fontFamily: "SF Pro Display M" }}></div>
                 <div className="text-[32px]" style={{ fontFamily: "SF Pro Display M" }}></div>
@@ -440,6 +444,7 @@ const Home = () => {
       </div>
                   */}
       <div className="w-full flex flex-col bg-[#FFF7EF] mt-24 py-[150px] px-[220px]">
+        {/*CONTENT 4*/}
         <div className="w-[1000px] mx-auto flex flex-col justify-center items-center gap-y-12">
           <div className="flex flex-col justify-center items-center">
             <img src={Tools} className="w-32 h-32" alt="Tools" />
@@ -460,7 +465,8 @@ const Home = () => {
         </div>
 
         <div className="w-[1000px] mx-auto flex flex-col justify-center items-center pt-[200px] gap-y-[150px]">
-          {/* <div className="flex flex-col">
+          {/* 
+          <div className="flex flex-col">
             <div className="flex flex-row gap-x-9">
               <div className="w-[100px] h-[100px]">
                 <img src={Family} alt="Family" />
@@ -501,27 +507,45 @@ const Home = () => {
                 </div>
               </div>
             </div>
-          </div> */}
+          </div> 
+          */}
 
           {/* REFER HERE FOR SAMPLE */}
+
+          {/* CONTENT 5 */}
           <div className="flex gap-9">
             <div>
-              <img src={Family} alt="Family"/>
+              <img src={Family} alt="Family" />
             </div>
             <div className="flex flex-col justify-center w-[864px] gap-[30px]">
-               <div className="text-[#4D9138] text-[32px] pt-[30px]" style={{ fontFamily: "SF Pro Extrabold" }}>
+              <div
+                className="text-[#4D9138] text-[32px] pt-[30px]"
+                style={{ fontFamily: "SF Pro Extrabold" }}
+              >
                 Child's Learning Journey
               </div>
               <div className="flex flex-col gap-10">
-                <div className="text-[32px]" style={{ fontFamily: "SF Pro Display M", lineHeight: "normal" }}>
-                    Through the powerful Kindertown Parents mobile application,
-                    not only does it enhance the intimate relationship between
-                    parents and children, but it also makes it easy for parents to
-                    find outstanding kindergartens for their children, preparing
-                    them for future enrollment. Our system provides the simplest
-                    and most convenient registration process and payment methods.
+                <div
+                  className="text-[32px]"
+                  style={{
+                    fontFamily: "SF Pro Display M",
+                    lineHeight: "normal",
+                  }}
+                >
+                  Through the powerful Kindertown Parents mobile application,
+                  not only does it enhance the intimate relationship between
+                  parents and children, but it also makes it easy for parents to
+                  find outstanding kindergartens for their children, preparing
+                  them for future enrollment. Our system provides the simplest
+                  and most convenient registration process and payment methods.
                 </div>
-                <div className="text-[32px]" style={{ fontFamily: "SF Pro Display M", lineHeight: "normal" }}>
+                <div
+                  className="text-[32px]"
+                  style={{
+                    fontFamily: "SF Pro Display M",
+                    lineHeight: "normal",
+                  }}
+                >
                   It also includes features such as connectivity with school
                   CCTV, essential management features, and adorable widgets.
                   This allows you to track every detail of your child's learning
@@ -531,27 +555,25 @@ const Home = () => {
               </div>
             </div>
           </div>
-
-          <div className="flex flex-col">
-            <div className="flex flex-row gap-x-9">
-              <div className="w-[100px] h-[100px]">
-                <img src={Teachers} alt="Family" />
-              </div>
-              <div className="flex flex-grow items-center">
-                <h2
-                  className="text-[#752912] text-3xl"
-                  style={{ fontFamily: "SF Pro Extrabold" }}
-                >
-                  We understand the busyness of teachers
-                </h2>
-              </div>
+          {/* CONTENT 6 */}
+          <div className="flex gap-9">
+            <div>
+              <img src={Teachers} alt="Family" />
             </div>
-            <div className="flex flex-row gap-x-9">
-              <div className="w-[100px] h-[100px]"></div>
-              <div className="flex-grow w-[864px] ">
+            <div className="flex flex-col justify-center w-[864px] gap-[30px]">
+              <div
+                className="text-[#752912] text-[32px] pt-[30px]"
+                style={{ fontFamily: "SF Pro Extrabold" }}
+              >
+                We understand the busyness of teachers
+              </div>
+              <div className="flex flex-col gap-10">
                 <div
-                  className="text-[32px]  leading-normal"
-                  style={{ fontFamily: "SF Pro Medium" }}
+                  className="text-[32px]"
+                  style={{
+                    fontFamily: "SF Pro Display M",
+                    lineHeight: "normal",
+                  }}
                 >
                   Kindertown Teacher strengthens the connection between
                   children, parents, and teachers. Recognizing the challenge of
@@ -560,10 +582,12 @@ const Home = () => {
                   multifunctional system to manage children's educational
                   progress.
                 </div>
-                <br />
                 <div
-                  className="text-[32px]  leading-normal"
-                  style={{ fontFamily: "SF Pro Medium" }}
+                  className="text-[32px]"
+                  style={{
+                    fontFamily: "SF Pro Display M",
+                    lineHeight: "normal",
+                  }}
                 >
                   Kindertown Teacher effectively addresses this challenge,
                   enabling teachers to conveniently record children's learning
@@ -575,27 +599,25 @@ const Home = () => {
               </div>
             </div>
           </div>
-
-          <div className="flex flex-col">
-            <div className="flex flex-row gap-x-9">
-              <div className="w-[100px] h-[100px]">
-                <img src={Slowmode} alt="Family" />
-              </div>
-              <div className="flex flex-grow items-center">
-                <h2
-                  className="text-[#00A0CB] text-3xl"
-                  style={{ fontFamily: "SF Pro Extrabold" }}
-                >
-                  Break free from traditional slow modes.
-                </h2>
-              </div>
+          {/* CONTENT 7 */}
+          <div className="flex gap-9">
+            <div>
+              <img src={Slowmode} alt="Family" />
             </div>
-            <div className="flex flex-row gap-x-9">
-              <div className="w-[100px] h-[100px]"></div>
-              <div className="flex-grow w-[864px] ">
+            <div className="flex flex-col justify-center w-[864px] gap-[30px]">
+              <div
+                className="text-[#00A0CB] text-[32px] pt-[30px]"
+                style={{ fontFamily: "SF Pro Extrabold" }}
+              >
+                Break free from traditional slow modes.
+              </div>
+              <div className="flex flex-col gap-10">
                 <div
-                  className="text-[32px]  leading-normal"
-                  style={{ fontFamily: "SF Pro Medium" }}
+                  className="text-[32px]"
+                  style={{
+                    fontFamily: "SF Pro Display M",
+                    lineHeight: "normal",
+                  }}
                 >
                   The Kindertown Admin plays a crucial role in the kindergarten
                   management system, efficiently handling all user information
@@ -605,10 +627,12 @@ const Home = () => {
                   year, recording payments, managing the onboarding of new
                   teachers, and posting announcements.
                 </div>
-                <br />
                 <div
-                  className="text-[32px]  leading-normal"
-                  style={{ fontFamily: "SF Pro Medium" }}
+                  className="text-[32px]"
+                  style={{
+                    fontFamily: "SF Pro Display M",
+                    lineHeight: "normal",
+                  }}
                 >
                   It enhances the visibility of the kindergarten, ensures
                   adherence to safety protocols, and boosts parents' confidence.
@@ -660,6 +684,7 @@ const Home = () => {
 
       <div className="w-full py-[200px]  px-[220px] flex justify-center items-center">
         <div className="w-[1000px] flex flex-col justify-center items-center gap-y-[200px]">
+          {/*CONTENT 9*/}
           <div className="flex flex-col justify-center items-center gap-[50px]">
             <div>
               <img src={Choose} alt="Teachers" className="w-32 h-32"></img>
@@ -674,8 +699,11 @@ const Home = () => {
             </div>
             <div className="flex items-center">
               <div
-                style={{ fontFamily: "SF Pro Medium" }}
-                className="text-[32px] text-center leading-normal"
+                className="text-[32px]"
+                style={{
+                  fontFamily: "SF Pro Display M",
+                  lineHeight: "normal",
+                }}
               >
                 <div className="flex items-center justify-center ">
                   Let's address the complex operations of the school to enhance
@@ -689,7 +717,9 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col justify-center items-center gap-[50px]">
+
+          {/*CONTENT 10*/}
+          <div className="w-full flex flex-col justify-center items-center gap-[50px]">
             <div>
               <img
                 src={Owners}
@@ -701,20 +731,34 @@ const Home = () => {
               <div style={{ fontSize: "50px", fontFamily: "SF Pro Bold" }}>
                 School Owners
               </div>
+
               <div className="flex items-center">
                 <div
-                  style={{ fontFamily: "SF Pro Medium" }}
-                  className="text-[32px] text-center leading-normal"
+                  className="text-[32px]"
+                  style={{
+                    fontFamily: "SF Pro Display M",
+                    lineHeight: "normal",
+                  }}
                 >
-                  We will comprehensively understand the school and ensure
-                  reputation and quality control. Supervise the operational
-                  aspects of the school and improve communication between
-                  teachers and staff.
+                  <div className="flex items-center justify-center ">
+                    We will comprehensively understand the school and ensure
+                    reputation
+                  </div>
+                  <div className="flex items-center justify-center">
+                    and quality control. Supervise the operational aspects of
+                    the school and
+                  </div>
+                  <div className="flex items-center justify-center">
+                    improve communication between teachers and staff.
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="flex flex-col justify-center items-center gap-[50px]">
+
+          {/*CONTENT 11*/}
+
+          <div className="w-full flex flex-col justify-center items-center gap-[50px]">
             <div>
               <img
                 src={Admin}
@@ -726,20 +770,36 @@ const Home = () => {
               <div style={{ fontSize: "50px", fontFamily: "SF Pro Bold" }}>
                 Administrators
               </div>
+
               <div className="flex items-center">
                 <div
-                  style={{ fontFamily: "SF Pro Medium" }}
-                  className="text-[32px] text-center leading-normal"
+                  className="text-[32px]"
+                  style={{
+                    fontFamily: "SF Pro Display M",
+                    lineHeight: "normal",
+                  }}
                 >
-                  An advanced management system with technological records,
-                  significantly enhancing efficiency and saving time and money
-                  in administrative tasks. It also addresses the sluggish
-                  procedural issues often found intraditional school settings.
+                  <div className="flex items-center justify-center ">
+                    An advanced management system with technological records,
+                  </div>
+                  <div className="flex items-center justify-center">
+                    significantly enhancing efficiency and saving time and money
+                    in
+                  </div>
+                  <div className="flex items-center justify-center">
+                    administrative tasks. It also addresses the sluggish
+                    procedural issues
+                  </div>
+                  <div className="flex items-center justify-center">
+                    often found intraditional school settings.
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="flex flex-col justify-center items-center gap-[50px]">
+
+          {/*CONTENT 12*/}
+          <div className="w-full flex flex-col justify-center items-center gap-[50px]">
             <div>
               <img
                 src={Teacher2}
@@ -751,19 +811,35 @@ const Home = () => {
               <div style={{ fontSize: "50px", fontFamily: "SF Pro Bold" }}>
                 Teachers
               </div>
-              <div className="w-full flex items-center">
+
+              <div className="flex items-center">
                 <div
-                  style={{ fontFamily: "SF Pro Medium" }}
-                  className="text-[32px] text-center leading-normal"
+                  className="text-[32px]"
+                  style={{
+                    fontFamily: "SF Pro Display M",
+                    lineHeight: "normal",
+                  }}
                 >
-                  Effectively enhance accountability for teachers regarding
-                  student attitudes and progress in learning. Additionally, it
-                  enables faster real-time synchronization of students'
-                  assignments and activities within the school.
+                  <div className="flex items-center justify-center ">
+                    Effectively enhance accountability for teachers regarding
+                    student
+                  </div>
+                  <div className="flex items-center justify-center">
+                    attitudes and progress in learning. Additionally, it enables
+                    faster
+                  </div>
+                  <div className="flex items-center justify-center">
+                    real-time synchronization of students' assignments and
+                    activities
+                  </div>
+                  <div className="flex items-center justify-center">
+                    within the school.
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+          {/*CONTENT 13*/}
           <div className="flex flex-col justify-center items-center gap-[50px]">
             <div>
               <img
@@ -776,17 +852,34 @@ const Home = () => {
               <div style={{ fontSize: "50px", fontFamily: "SF Pro Bold" }}>
                 Parents
               </div>
-              <div className="w-full flex items-center">
+
+              <div className="flex items-center">
                 <div
-                  style={{ fontFamily: "SF Pro Medium" }}
-                  className="text-[32px] text-center leading-normal"
+                  className="text-[32px]"
+                  style={{
+                    fontFamily: "SF Pro Display M",
+                    lineHeight: "normal",
+                  }}
                 >
-                  Stay informed in real-time about your child's learning
-                  progress, school activities, announcements, temperature
-                  records, kindergarten check-ins, important updates, and
-                  convenient tuition payment options. This system allows parents
-                  to engage more humanely and effectively with school-related
-                  matters.
+                  <div className="flex items-center justify-center ">
+                    Stay informed in real-time about your child's learning
+                    progress, school
+                  </div>
+                  <div className="flex items-center justify-center">
+                    activities, announcements, temperature records, kindergarten
+                    check-ins,
+                  </div>
+                  <div className="flex items-center justify-center">
+                    important updates, and convenient tuition payment options.
+                    This system
+                  </div>
+                  <div className="flex items-center justify-center">
+                    allows parents to engage more humanely and effectively with
+                    school-
+                  </div>
+                  <div className="flex items-center justify-center">
+                    related matters.
+                  </div>
                 </div>
               </div>
             </div>
