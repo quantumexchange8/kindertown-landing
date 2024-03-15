@@ -6,14 +6,14 @@ import Tab2 from "../assets/teacher/tab2.svg";
 import Tab3 from "../assets/teacher/tab3.svg";
 import Tab4 from "../assets/teacher/tab4.svg";
 import Tab5 from "../assets/teacher/tab5.svg";
-import Logo from "../assets/teacher/logo.svg";
+
 import CTLogo from "../assets/teacher/ct-logo.svg";
 import Header from "../assets/teacher/header.svg";
 const Teacher = () => {
   return (
     <>
       <div className="w-full flex flex-col justify-center items-center pt-[150px]">
-        <img src={Header} className="w-full"></img>
+        <img src={Header} alt="Header" className="w-full" />
       </div>
       <div className="w-full flex flex-col justify-center items-center pt-[100px] gap-[200px] px-[220px] pb-[200px]">
         {/*CONTENT 2*/}
@@ -40,7 +40,7 @@ const Teacher = () => {
         {/*CONTENT 3*/}
         <div className="w-[1000px] flex flex-col gap-[50px]">
           <div className="flex flex-col justify-center items-center">
-            <img src={Tab1} alt="Tablet1" className="w-[800px] h-[614px]"></img>
+            <img src={Tab1} alt="Tablet1" className="w-[800px] h-[614px]" />
           </div>
           <div className="flex flex-col justify-center items-center">
             <div
@@ -71,7 +71,7 @@ const Teacher = () => {
         {/*CONTENT 4*/}
         <div className="w-[1000px] flex flex-col gap-[50px]">
           <div className="flex flex-col justify-center items-center">
-            <img src={Tab2} alt="Tablet2" className="w-[800px] h-[614px]"></img>
+            <img src={Tab2} alt="Tablet2" className="w-[800px] h-[614px]" />
           </div>
           <div className="flex flex-col justify-center items-center">
             <div
@@ -102,7 +102,7 @@ const Teacher = () => {
         {/*CONTENT 5*/}
         <div className="w-[1000px] flex flex-col gap-[50px]">
           <div className="flex flex-col justify-center items-center">
-            <img src={Tab3} alt="Tablet3" className="w-[800px] h-[614px]"></img>
+            <img src={Tab3} alt="Tablet3" className="w-[800px] h-[614px]" />
           </div>
           <div className="flex flex-col justify-center items-center">
             <div
@@ -130,7 +130,7 @@ const Teacher = () => {
         {/*CONTENT 6*/}
         <div className="w-[1000px] flex flex-col gap-[50px]">
           <div className="flex flex-col justify-center items-center">
-            <img src={Tab4} alt="Tablet4" className="w-[800px] h-[614px]"></img>
+            <img src={Tab4} alt="Tablet4" className="w-[800px] h-[614px]" />
           </div>
           <div className="flex flex-col justify-center items-center">
             <div
@@ -167,7 +167,7 @@ const Teacher = () => {
         {/*CONTENT 7*/}
         <div className="w-[1000px] flex flex-col gap-[50px]">
           <div className="flex flex-col justify-center items-center">
-            <img src={Tab5} alt="Tablet5" className="w-[800px] h-[614px]"></img>
+            <img src={Tab5} alt="Tablet5" className="w-[800px] h-[614px]" />
           </div>
           <div className="flex flex-col justify-center items-center">
             <div
@@ -217,9 +217,9 @@ const Teacher = () => {
               <div className="flex flex-col justify-center items-center">
                 <img
                   src={CTLogo}
-                  alt="CT Logo"
+                  alt="CTLogo"
                   className="w-[160px] h-[106px]"
-                ></img>
+                />
               </div>
               <div className="flex flex-col justify-center items-center gap-[40px]">
                 <div className="flex flex-col justify-center items-center">
@@ -230,7 +230,7 @@ const Teacher = () => {
                       lineHeight: "normal",
                     }}
                   >
-                    CT PRODUCT {""}
+                    CT PRODUCT
                     <span className=" bg-black  md:w-[77px] h-[29px] md:rounded-[4px] text-white px-[5.6px]">
                       CARE
                     </span>

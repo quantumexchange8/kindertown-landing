@@ -66,7 +66,7 @@ const Home = () => {
                     src={Planner}
                     alt="Planner"
                     className="md:w-40 md:h-[120px]"
-                  ></img>
+                  />
                 </div>
 
                 <div className="flex flex-col items-center gap-5 w-[270px] md:h-full">
@@ -110,7 +110,7 @@ const Home = () => {
                     src={Child}
                     alt="Child"
                     className="md:h-[120px] md:w-[133px]"
-                  ></img>
+                  />
                 </div>
 
                 <div className="flex flex-col items-center gap-5 w-[270px] md:h-full">
@@ -154,7 +154,7 @@ const Home = () => {
                     src={Playground}
                     alt="Child"
                     className="md:h-[120px] md:w-[137px]"
-                  ></img>
+                  />
                 </div>
 
                 <div className="flex flex-col items-center gap-[18px] w-full md:h-full">
@@ -208,7 +208,7 @@ const Home = () => {
                     src={Computer}
                     alt="Gadget"
                     className="md:h-[120px] md:w-[150px]"
-                  ></img>
+                  />
                 </div>
 
                 <div className="flex flex-col items-center gap-5 w-[270px] md:h-full">
@@ -254,7 +254,7 @@ const Home = () => {
                     src={Pencil}
                     alt="Pencil"
                     className="md:h-[120px] md:w-[120px]"
-                  ></img>
+                  />
                 </div>
 
                 <div className="flex flex-col items-center gap-5 w-[270px] md:h-full">
@@ -300,7 +300,7 @@ const Home = () => {
                     src={Tel}
                     alt="Telephone"
                     className="md:h-[120px] md:w-[126px]"
-                  ></img>
+                  />
                 </div>
                 <div className="flex flex-col items-center gap-5 w-[270px] md:h-full">
                   <div
@@ -687,7 +687,7 @@ const Home = () => {
           {/*CONTENT 9*/}
           <div className="flex flex-col justify-center items-center gap-[50px]">
             <div>
-              <img src={Choose} alt="Teachers" className="w-32 h-32"></img>
+              <img src={Choose} alt="Teachers" className="w-32 h-32" />
             </div>
             <div className="flex w-[466px] h-40">
               <div
@@ -721,11 +721,7 @@ const Home = () => {
           {/*CONTENT 10*/}
           <div className="w-full flex flex-col justify-center items-center gap-[50px]">
             <div>
-              <img
-                src={Owners}
-                alt="Owner"
-                className="w-[600px] h-[426px]"
-              ></img>
+              <img src={Owners} alt="Owner" className="w-[600px] h-[426px]" />
             </div>
             <div className="flex flex-col justify-center items-center gap-[30px]">
               <div style={{ fontSize: "50px", fontFamily: "SF Pro Display B" }}>
@@ -760,11 +756,7 @@ const Home = () => {
 
           <div className="w-full flex flex-col justify-center items-center gap-[50px]">
             <div>
-              <img
-                src={Admin}
-                alt="Admin"
-                className="w-[600px] h-[388px]"
-              ></img>
+              <img src={Admin} alt="Admin" className="w-[600px] h-[388px]" />
             </div>
             <div className="flex flex-col justify-center items-center gap-[30px]">
               <div style={{ fontSize: "50px", fontFamily: "SF Pro Display B" }}>
@@ -805,7 +797,7 @@ const Home = () => {
                 src={Teacher2}
                 alt="Teacher"
                 className="w-[600px] h-[406px]"
-              ></img>
+              />
             </div>
             <div className="flex flex-col justify-center items-center gap-[30px]">
               <div style={{ fontSize: "50px", fontFamily: "SF Pro Bold" }}>
@@ -842,11 +834,7 @@ const Home = () => {
           {/*CONTENT 13*/}
           <div className="flex flex-col justify-center items-center gap-[50px]">
             <div>
-              <img
-                src={Parent}
-                alt="Parent"
-                className="w-[530px] h-[450px]"
-              ></img>
+              <img src={Parent} alt="Parent" className="w-[530px] h-[450px]" />
             </div>
             <div className="flex flex-col justify-center items-center gap-[30px]">
               <div style={{ fontSize: "50px", fontFamily: "SF Pro Display B" }}>

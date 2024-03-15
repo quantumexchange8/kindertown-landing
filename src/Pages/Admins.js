@@ -3,6 +3,7 @@ import React from "react";
 import Privacy from "./Privacy";
 import Header from "../assets/admin/header.svg";
 import Device from "../assets/admin/Device - Macbook Pro.svg";
+import Device2 from "../assets/admin/Device2.svg";
 import Macbook from "../assets/admin/macbook2.svg";
 import Macbook2 from "../assets/admin/Device.svg";
 import Ipad from "../assets/admin/ipad.svg";
@@ -30,6 +31,7 @@ import icon21 from "../assets/admin/icon21.svg";
 import icon22 from "../assets/admin/icon22.svg";
 import icon23 from "../assets/admin/icon23.svg";
 import icon24 from "../assets/admin/icon24.svg";
+import CTLogo from "../assets/admin/ct-logo.svg";
 const Admin = () => {
   return (
     <>
@@ -37,11 +39,7 @@ const Admin = () => {
       <div className="w-full flex flex-col justify-center items-center pt-[150px]">
         <div className="flex flex-col justify-center items-center gap-[100px]">
           <div className="flex flex-col items-center">
-            <img
-              src={Header}
-              alt="Header"
-              className="w-[800px] h-[622px]"
-            ></img>
+            <img src={Header} alt="Header" className="w-[800px] h-[622px]" />
           </div>
           <div className="w-[1000px] flex flex-col justify-center items-center gap-[50px]">
             <div className="flex flex-col items-center">
@@ -72,18 +70,51 @@ const Admin = () => {
           </div>
         </div>
       </div>
-
       {/*Havent try it yet */}
 
-      {/*       <div className="w-full flex flex-col gap-[200px] pt-[200px]">
+      {/*
+      <div className="w-full flex flex-col gap-[200px] pt-[200px]">
         <div className="flex flex-col pl-[220px]">
           <div class="flex justify-end gap-[30px]">
-            <div className="flex flex-col justify-center items-center">
+            <div className="flex flex-col justify-center items-center ">
               <div
                 className="text-[50px]"
                 style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
               >
-                Superb Interface with Exceptional User Experience
+                Superb Interface
+                <br />
+                with Exceptional
+                <br />
+                User Experience
+              </div>
+            </div>
+
+            <div className="flex flex-col relative">
+              <img
+                src={Device}
+                alt="Device"
+                className="w-[1008px] h-[591px] absolute right-0"
+                style={{ objectFit: "cover", overflow: "hidden" }}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    
+              */}
+      <div className="w-full flex flex-col gap-[200px] pt-[200px]">
+        <div className="flex flex-col pl-[220px]">
+          <div class="flex justify-center gap-[30px]">
+            <div className="flex flex-col justify-center items-center w-[400px]">
+              <div
+                className="text-[50px]"
+                style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
+              >
+                <div className="flex flex-col items-center">
+                  <div className="flex items-center">Superb Interface</div>
+                  <div className="flex items-center">with Exceptional</div>
+                  <div className="flex items-center">User Experience</div>
+                </div>
               </div>
             </div>
 
@@ -92,7 +123,28 @@ const Admin = () => {
             </div>
           </div>
         </div>
-      </div>*/}
+        <div className="flex flex-col pr-[220px]">
+          <div class="flex justify-center gap-[30px]">
+            <div className="flex flex-col w-[1008px] h-[591px]">
+              <img src={Device2} alt="Device2" />
+            </div>
+            <div className="flex flex-col justify-center items-center w-[400px]">
+              <div
+                className="text-[50px]"
+                style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
+              >
+                <div className="flex flex-col items-center">
+                  <div className="flex items-center">Make school</div>
+                  <div className="flex items-center">enrollment </div>
+                  <div className="flex items-center">effortless, </div>
+                  <div className="flex items-center">efficient, and </div>
+                  <div className="flex items-center">time-saving. </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div className="w-full flex flex-col justify-center items-center gap-[200px] pt-[200px]">
         {/*CONTENT 4*/}
@@ -119,7 +171,7 @@ const Admin = () => {
           </div>
 
           <div className="flex flex-col justify-center items-center">
-            <img src={Macbook} alt="Macbook" className="w-[1000px]"></img>
+            <img src={Macbook} alt="Macbook" className="w-[1000px]" />
           </div>
         </div>
         {/*CONTENT 5*/}
@@ -144,7 +196,7 @@ const Admin = () => {
             </div>
           </div>
           <div className="flex flex-col justify-center items-center">
-            <img src={Macbook2} alt="Macbook" className="w-[1000px]"></img>
+            <img src={Macbook2} alt="Macbook2" className="w-[1000px]" />
           </div>
         </div>
         {/*CONTENT 6*/}
@@ -185,40 +237,36 @@ const Admin = () => {
             </div>
           </div>
           <div className="flex flex-col justify-center items-center">
-            <img
-              src={Ipad}
-              alt="Macbook"
-              className="w-[1000px] h-[768px]"
-            ></img>
+            <img src={Ipad} alt="Macbook3" className="w-[1000px] h-[768px]" />
           </div>
         </div>
       </div>
-
-      <div className="w-full flex flex-col justify-center items-center pt-[200px] px-[169px]">
-        {/*CONTENT 7*/} {/*I havent finish fixing the gap yet */}
-        <div className="w-[1102px] flex flex-col justify-center items-center gap-[100px]">
-          <div className="w-[793px] flex flex-col justify-center items-center">
-            <div
-              className="text-[70px] text-center"
-              style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
-            >
-              <div className="flex flex-col items-center">
-                <div className="flex justify-center items-center">
-                  All thoughtful features
-                </div>
-                <div className="flex justify-center items-center">
-                  are designed for schools.
+      <div className="w-full flex flex-col justify-center items-center py-[200px] gap-[200px]">
+        {/*Content 7*/}
+        <div className="w-full flex flex-col justify-center items-center  gap-[100px]">
+          <div className="w-[1102px] flex flex-col justify-center items-center pl-[155px] pr-[154px]">
+            <div className="w-[793px] flex flex-col justify-center items-center">
+              <div
+                className="text-[70px] text-center"
+                style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
+              >
+                <div className="flex flex-col items-center">
+                  <div className="flex justify-center items-center">
+                    All thoughtful features
+                  </div>
+                  <div className="flex justify-center items-center">
+                    are designed for schools.
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="w-full flex flex-col justify-center items-center gap-[65px]">
-            {/*ROW 1 */}
-            <div className="flex justify-between items-center gap-[50px]">
-              {/*Icon 1*/}
-              <div className="flex flex-col justify-center items-center gap-4 w-[107px]">
+          <div className="w-[1102px] flex flex-col justify-center items-center  gap-y-[66px]">
+            {/*row 1*/}
+            <div className="w-full grid grid-cols-8">
+              <div className="flex flex-col justify-center items-center gap-4">
                 <div>
-                  <img src={icon1}></img>
+                  <img src={icon1} alt="admission" />
                 </div>
                 <div
                   className="text-base w-[106px] text-center"
@@ -234,9 +282,9 @@ const Admin = () => {
                 </div>
               </div>
               {/*Icon 2*/}
-              <div className="flex flex-col justify-center items-center gap-4 w-[76px]">
+              <div className="flex flex-col justify-center items-center gap-4">
                 <div>
-                  <img src={icon2}></img>
+                  <img src={icon2} alt="Student" />
                 </div>
                 <div
                   className="text-base w-[106px] text-center"
@@ -251,10 +299,9 @@ const Admin = () => {
                   </div>
                 </div>
               </div>
-              {/*Icon 3*/}
-              <div className="flex flex-col justify-center items-center gap-4 w-[84px]">
+              <div className="flex flex-col justify-center items-center gap-4">
                 <div>
-                  <img src={icon3}></img>
+                  <img src={icon3} alt="Dashboard" />
                 </div>
                 <div
                   className="text-base w-[106px] text-center"
@@ -270,9 +317,9 @@ const Admin = () => {
                 </div>
               </div>
               {/*Icon 4*/}
-              <div className="flex flex-col justify-center items-center gap-4 w-[107px]">
+              <div className="flex flex-col justify-center items-center gap-4">
                 <div>
-                  <img src={icon4}></img>
+                  <img src={icon4} alt="Classroom" />
                 </div>
                 <div
                   className="text-base w-[106px] text-center"
@@ -288,9 +335,9 @@ const Admin = () => {
                 </div>
               </div>
               {/*Icon 5*/}
-              <div className="flex flex-col justify-center items-center gap-4 w-[98px]">
+              <div className="flex flex-col justify-center items-center gap-4">
                 <div>
-                  <img src={icon5}></img>
+                  <img src={icon5} alt="Qualification" />
                 </div>
                 <div
                   className="text-base w-[106px] text-center"
@@ -306,9 +353,9 @@ const Admin = () => {
                 </div>
               </div>
               {/*Icon 6*/}
-              <div className="flex flex-col justify-center items-center gap-4 w-[76px]">
+              <div className="flex flex-col justify-center items-center gap-4">
                 <div>
-                  <img src={icon6}></img>
+                  <img src={icon6} alt="Check Log" />
                 </div>
                 <div
                   className="text-base w-[106px] text-center"
@@ -324,9 +371,9 @@ const Admin = () => {
                 </div>
               </div>
               {/*Icon 7*/}
-              <div className="flex flex-col justify-center items-center gap-4 w-[98px]">
+              <div className="flex flex-col justify-center items-center gap-4">
                 <div>
-                  <img src={icon7}></img>
+                  <img src={icon7} alt="Homework" />
                 </div>
                 <div
                   className="text-base w-[106px] text-center"
@@ -342,9 +389,9 @@ const Admin = () => {
                 </div>
               </div>
               {/*Icon 8*/}
-              <div className="flex flex-col justify-center items-center gap-4 w-[97px]">
+              <div className="flex flex-col justify-center items-center gap-4">
                 <div>
-                  <img src={icon8}></img>
+                  <img src={icon8} alt="Download" />
                 </div>
                 <div
                   className="text-base w-[106px] text-center"
@@ -360,12 +407,12 @@ const Admin = () => {
                 </div>
               </div>
             </div>
-            {/*ROW 2 */}
-            <div className="flex justify-around items-center gap-[50px]">
+            {/* Row 2 */}
+            <div className="w-full grid grid-cols-8">
               {/*Icon 1*/}
-              <div className="flex flex-col justify-center items-center gap-4 w-[87px]">
+              <div className="flex flex-col justify-center items-center gap-4">
                 <div>
-                  <img src={icon9}></img>
+                  <img src={icon9} alt="Calendar" />
                 </div>
                 <div
                   className="text-base w-[106px] text-center"
@@ -381,9 +428,9 @@ const Admin = () => {
                 </div>
               </div>
               {/*Icon 2*/}
-              <div className="flex flex-col justify-center items-center gap-4 w-[90px]">
+              <div className="flex flex-col justify-center items-center gap-4">
                 <div>
-                  <img src={icon10}></img>
+                  <img src={icon10} alt="Email" />
                 </div>
                 <div
                   className="text-base w-[106px] text-center"
@@ -399,9 +446,9 @@ const Admin = () => {
                 </div>
               </div>
               {/*Icon 3*/}
-              <div className="flex flex-col justify-center items-center gap-4 w-[117px]">
+              <div className="flex flex-col justify-center items-center gap-4">
                 <div>
-                  <img src={icon11}></img>
+                  <img src={icon11} alt="Announcement" />
                 </div>
                 <div
                   className="text-base w-[106px] text-center"
@@ -417,9 +464,9 @@ const Admin = () => {
                 </div>
               </div>
               {/*Icon 4*/}
-              <div className="flex flex-col justify-center items-center gap-4 w-[88px]">
+              <div className="flex flex-col justify-center items-center gap-4">
                 <div>
-                  <img src={icon12}></img>
+                  <img src={icon12} alt="Community" />
                 </div>
                 <div
                   className="text-base w-[106px] text-center"
@@ -435,9 +482,9 @@ const Admin = () => {
                 </div>
               </div>
               {/*Icon 5*/}
-              <div className="flex flex-col justify-center items-center gap-4 w-[69px]">
+              <div className="flex flex-col justify-center items-center gap-4">
                 <div>
-                  <img src={icon13}></img>
+                  <img src={icon13} alt="Payment" />
                 </div>
                 <div
                   className="text-base w-[106px] text-center"
@@ -453,9 +500,9 @@ const Admin = () => {
                 </div>
               </div>
               {/*Icon 6*/}
-              <div className="flex flex-col justify-center items-center gap-4 w-[56px]">
+              <div className="flex flex-col justify-center items-center gap-4">
                 <div>
-                  <img src={icon14}></img>
+                  <img src={icon14} alt="Market" />
                 </div>
                 <div
                   className="text-base w-[106px] text-center"
@@ -471,9 +518,9 @@ const Admin = () => {
                 </div>
               </div>
               {/*Icon 7*/}
-              <div className="flex flex-col justify-center items-center gap-4 w-[83px]">
+              <div className="flex flex-col justify-center items-center gap-4">
                 <div>
-                  <img src={icon15}></img>
+                  <img src={icon15} alt="TimeTable" />
                 </div>
                 <div
                   className="text-base w-[106px] text-center"
@@ -489,9 +536,9 @@ const Admin = () => {
                 </div>
               </div>
               {/*Icon 8*/}
-              <div className="flex flex-col justify-center items-center gap-4 w-[101px]">
+              <div className="flex flex-col justify-center items-center gap-4">
                 <div>
-                  <img src={icon16}></img>
+                  <img src={icon16} alt="Event" />
                 </div>
                 <div
                   className="text-base w-[106px] text-center"
@@ -507,12 +554,12 @@ const Admin = () => {
                 </div>
               </div>
             </div>
-            {/*ROW 3 */}
-            <div className="flex justify-between items-center gap-[50px]">
+            {/* Row 3 */}
+            <div className="w-full grid grid-cols-8">
               {/*Icon 1*/}
               <div className="flex flex-col justify-center items-center gap-4">
                 <div>
-                  <img src={icon17}></img>
+                  <img src={icon17} alt="Attendance" />
                 </div>
                 <div
                   className="text-base w-[106px] text-center"
@@ -527,10 +574,10 @@ const Admin = () => {
                   </div>
                 </div>
               </div>
-              {/*Icon 3*/}
+              {/*Icon 2*/}
               <div className="flex flex-col justify-center items-center gap-4">
                 <div>
-                  <img src={icon18}></img>
+                  <img src={icon18} alt="Grading" />
                 </div>
                 <div
                   className="text-base w-[106px] text-center"
@@ -548,7 +595,7 @@ const Admin = () => {
               {/*Icon 3*/}
               <div className="flex flex-col justify-center items-center gap-4">
                 <div>
-                  <img src={icon19}></img>
+                  <img src={icon19} alt="daycare" />
                 </div>
                 <div
                   className="text-base w-[106px] text-center"
@@ -566,7 +613,7 @@ const Admin = () => {
               {/*Icon 4*/}
               <div className="flex flex-col justify-center items-center gap-4">
                 <div>
-                  <img src={icon20}></img>
+                  <img src={icon20} alt="bus" />
                 </div>
                 <div
                   className="text-base w-[106px] text-center"
@@ -584,7 +631,7 @@ const Admin = () => {
               {/*Icon 5*/}
               <div className="flex flex-col justify-center items-center gap-4">
                 <div>
-                  <img src={icon21}></img>
+                  <img src={icon21} alt="CCTV" />
                 </div>
                 <div
                   className="text-base w-[106px] text-center"
@@ -602,7 +649,7 @@ const Admin = () => {
               {/*Icon 6*/}
               <div className="flex flex-col justify-center items-center gap-4">
                 <div>
-                  <img src={icon22}></img>
+                  <img src={icon22} alt="SMS" />
                 </div>
                 <div
                   className="text-base w-[106px] text-center"
@@ -620,7 +667,7 @@ const Admin = () => {
               {/*Icon 7*/}
               <div className="flex flex-col justify-center items-center gap-4">
                 <div>
-                  <img src={icon23}></img>
+                  <img src={icon23} alt="homework" />
                 </div>
                 <div
                   className="text-base w-[106px] text-center"
@@ -638,7 +685,7 @@ const Admin = () => {
               {/*Icon 8*/}
               <div className="flex flex-col justify-center items-center gap-4">
                 <div>
-                  <img src={icon24}></img>
+                  <img src={icon24} alt="exam" />
                 </div>
                 <div
                   className="text-base w-[106px] text-center"
@@ -656,7 +703,55 @@ const Admin = () => {
             </div>
           </div>
         </div>
+
+        {/*Content 8*/}
+        <div className="w-[1000px] flex flex-col gap-[50px]">
+          <div className="flex flex-col justify-center items-center">
+            <div className="relative flex flex-col md:w-[400px] md:h-[400px] md:rounded-[50px] bg-gradient-to-t from-[#ADADAD] to-[#F9F9F9] pt-[53px] pb-[61px] pl-[34px] pr-[33px] gap-[59px]">
+              <div className="flex flex-col justify-center items-center">
+                <img
+                  src={CTLogo}
+                  alt="CTLogo"
+                  className="w-[160px] h-[106px]"
+                />
+              </div>
+              <div className="flex flex-col justify-center items-center gap-[40px]">
+                <div className="flex flex-col justify-center items-center">
+                  <div
+                    className="text-[24px] inline-block"
+                    style={{
+                      fontFamily: "SF Pro Display B",
+                      lineHeight: "normal",
+                    }}
+                  >
+                    CT PRODUCT {""}
+                    <span className=" bg-black  md:w-[77px] h-[29px] md:rounded-[4px] text-white px-[5.6px]">
+                      CARE
+                    </span>
+                  </div>
+                </div>
+                <div className="flex flex-col justify-center items-center">
+                  <div
+                    className="text-[24px] inline-block text-center"
+                    style={{
+                      fontFamily: "SF Pro Display R",
+                      lineHeight: "normal",
+                    }}
+                  >
+                    <div className="flex items-center justify-center ">
+                      Free provide face to face training
+                    </div>
+                    <div className="flex items-center justify-center ">
+                      and online tutorials.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+      <Privacy />
     </>
   );
 };
