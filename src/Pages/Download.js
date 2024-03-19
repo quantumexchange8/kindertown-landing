@@ -18,9 +18,12 @@ import troli from "../assets/download/troli.svg";
 import video from "../assets/download/video.mp4";
 import video2 from "../assets/download/videobg.mp4";
 import video3 from "../assets/download/videobg2.mp4";
+import video4 from "../assets/download/videobg3.mp4";
 import chat from "../assets/download/chat.svg";
 import calendar from "../assets/download/calendar.svg";
 import suhu from "../assets/download/suhu.svg";
+import open from "../assets/download/open.svg";
+import user from "../assets/download/user.svg";
 const Download = () => {
   return (
     <>
@@ -328,7 +331,7 @@ const Download = () => {
           </div>
         </div>
       </div>
-      <div className="w-full flex flex-col justify-center items-center gap-[300px] py-[300px]">
+      <div className="w-full flex flex-col justify-center items-center gap-[300px] pt-[300px] pb-[200px]">
         <div className="w-[1000px] flex flex-col justify-center items-center gap-[100px]">
           <div className="flex flex-col">
             <div
@@ -435,36 +438,129 @@ const Download = () => {
             </div>
           </div>
           <div className="w-full flex flex-col gap-5">
- <div className="relative md:w-[1000px] md:h-[500px] md:rounded-[30px] flex gap-20 pr-[643px] pb-[57px] pt-[273px] pl-[57px]">
-            <video
-              className="absolute inset-0 w-full h-full object-cover rounded-[30px]"
-              autoPlay
-              loop
-              muted
-            >
-              <source src={video3} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-            <div className="relative bottom-0 left-0 flex items-center w-[300px] h-[170px]">
-              <div className="flex flex-col">
+            <div className="relative md:w-[1000px] md:h-[500px] md:rounded-[30px] flex gap-20 pr-[643px] pb-[57px] pt-[273px] pl-[57px]">
+              <video
+                className="absolute inset-0 w-full h-full object-cover rounded-[30px]"
+                autoPlay
+                loop
+                muted
+              >
+                <source src={video3} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <div className="relative bottom-0 left-0 flex items-center w-[300px] h-[170px]">
+                <div className="flex flex-col">
+                  <div
+                    className="text-[30px] text-left"
+                    style={{
+                      fontFamily: "SF Pro Display B",
+                      lineHeight: "normal",
+                    }}
+                  >
+                    <div>The most</div>
+                    <div>indispensable tool</div>
+                    <div>for educational </div>
+                    <div>institutions is an </div>
+                    <div>Intelligent Assistant.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="relative md:w-[1000px] md:h-[500px] md:rounded-[30px] bg-[#FCBF4A] flex items-center pr-[122px] py-[75px] pl-[108px] gap-[54px]">
+              <div className="flex flex-col justify-center items-center w-[440px]">
                 <div
-                  className="text-[30px] text-left"
+                  className="text-3xl"
+                  style={{ fontFamily: "SF Pro Display B" }}
+                >
+                  <div className="flex flex-col  gap-[30px]">
+                    <div className="w-[370px] h-[60px] text-[#FF0001]">
+                      Do we still have to line up for school enrollment?{" "}
+                    </div>
+                    <div className="w-[370px] h-[60px] text-[#4800FF]">
+                      Can we submit our documents online?
+                    </div>
+                    <div className="w-[370px] h-[60px] text-[#00821D]">
+                      Can I reserve a seat for my child in advance?
+                    </div>
+                    <div className="w-[440px] h-[60px]">
+                      It seems like every year, parents ask the same questions!
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-col justify-center">
+                <img
+                  src={open}
+                  alt="OpenSign"
+                  className="w-[250px] h-[298px]"
+                />
+              </div>
+            </div>
+            <div className="relative md:w-[1000px] md:h-[500px] md:rounded-[30px] bg-[#FFDA92] flex items-center pr-[76px] py-[133px] pl-[108px] gap-[96px]">
+              <div className="flex flex-col justify-center items-center">
+                <img src={user} alt="User" className="w-[250px] h-[234px]" />
+              </div>
+              <div className="flex w-[470px] flex-col items-center justify-center">
+                <div
+                  className="text-3xl text-left"
                   style={{
                     fontFamily: "SF Pro Display B",
                     lineHeight: "normal",
                   }}
                 >
-                  <div>The most</div>
-                  <div>indispensable tool</div>
-                  <div>for educational </div>
-                  <div>institutions is an </div>
-                  <div>Intelligent Assistant.</div>
+                  <div> When developing our system,</div>
+                  <div> we have already incorporated</div>
+                  <div> privacy features and controls</div>
+                  <div> to safeguard the personal</div>
+                  <div>information of schools, teachers,</div>
+                  <div> parents, and students.</div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/*CONTENT VIDEO*/}
+      <div className="relative w-full overflow-hidden">
+        <div className="w-full h-[900px] pl-[114px] pb-[117px] pt-[603px] pr-[836px]">
+          <video
+            src={video4}
+            autoPlay
+            loop
+            muted
+            className="absolute top-[-257px] left-0 w-full object-cover object-center"
+          />
+
+          <div className="relative bottom-0 left-0 flex justify-center items-center w-[490px] h-[180px]">
+            <div
+              className="text-[40px] text-white"
+              style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
+            >
+              <div>From the moment children</div>
+              <div>step into kindergarten, </div>
+              <div>their journey of learning</div>
+              <div>dreams begins.</div>
+            </div>
           </div>
-         
+        </div>
+      </div>
+      <div className="w-full flex flex-col justify-center items-center gap-[100px] pt-[300px]">
+        <div className="w-[1000px] flex flex-col">
+          <div
+            className="text-[32px] text-center"
+            style={{ fontFamily: "SF Pro Display M", lineHeight: "normal" }}
+          >
+            <div>
+              At any moment, feel free to leave your contact information without{" "}
+            </div>
+            <div>
+              hesitation, and our attentive service personnel will get in touch
+              with you.
+            </div>
+            <div>Only through quality communication can</div>
+            <div>we understand your needs.</div>
+          </div>
         </div>
       </div>
     </>
