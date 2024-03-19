@@ -24,6 +24,7 @@ import calendar from "../assets/download/calendar.svg";
 import suhu from "../assets/download/suhu.svg";
 import open from "../assets/download/open.svg";
 import user from "../assets/download/user.svg";
+import icon from "../assets/download/Rectangle.svg";
 const Download = () => {
   return (
     <>
@@ -560,6 +561,28 @@ const Download = () => {
             </div>
             <div>Only through quality communication can</div>
             <div>we understand your needs.</div>
+          </div>
+        </div>
+        <div
+          className="relative md:w-[1100px] md:h-[1225px] md:rounded-[30px] flex flex-col items-center gap-[92px] px-[86px] pt-[82px] pb-[95px] "
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(221, 221, 221, 0.3), rgba(221, 221, 221, 1), rgba(221, 221, 221, 0.7))",
+          }}
+        >
+          <div className="flex flex-col w-[800px] justify-center items-center">
+            <div
+              className="text-[32px] text-center"
+              style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
+            >
+              We have prepared detailed product demonstrations prior to
+              subscription, along with one-on-one or group teaching modes, to
+              provide you with a more comprehensive understanding of how our
+              Kindertown management system is essential for your school.
+            </div>
+          </div>
+          <div className="flex flex-col">
+            <img src={icon} alt="Icon" />
           </div>
         </div>
       </div>
