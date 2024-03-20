@@ -24,7 +24,8 @@ import calendar from "../assets/download/calendar.svg";
 import suhu from "../assets/download/suhu.svg";
 import open from "../assets/download/open.svg";
 import user from "../assets/download/user.svg";
-import icon from "../assets/download/Rectangle.svg";
+import icon from "../assets/download/Mask group.png";
+import tele from "../assets/download/tele.svg";
 const Download = () => {
   return (
     <>
@@ -473,15 +474,17 @@ const Download = () => {
                   className="text-3xl"
                   style={{ fontFamily: "SF Pro Display B" }}
                 >
-                  <div className="flex flex-col  gap-[30px]">
-                    <div className="w-[370px] h-[60px] text-[#FF0001]">
-                      Do we still have to line up for school enrollment?{" "}
-                    </div>
-                    <div className="w-[370px] h-[60px] text-[#4800FF]">
-                      Can we submit our documents online?
-                    </div>
-                    <div className="w-[370px] h-[60px] text-[#00821D]">
-                      Can I reserve a seat for my child in advance?
+                  <div className="flex flex-col gap-[50px]">
+                    <div className="flex flex-col  gap-[30px]">
+                      <div className="w-[370px] h-[60px] text-[#FF0001]">
+                        Do we still have to line up for school enrollment?{" "}
+                      </div>
+                      <div className="w-[370px] h-[60px] text-[#4800FF]">
+                        Can we submit our documents online?
+                      </div>
+                      <div className="w-[370px] h-[60px] text-[#00821D]">
+                        Can I reserve a seat for my child in advance?
+                      </div>
                     </div>
                     <div className="w-[440px] h-[60px]">
                       It seems like every year, parents ask the same questions!
@@ -523,30 +526,32 @@ const Download = () => {
       </div>
 
       {/*CONTENT VIDEO*/}
-      <div className="relative w-full overflow-hidden">
-        <div className="w-full h-[900px] pl-[114px] pb-[117px] pt-[603px] pr-[836px]">
-          <video
-            src={video4}
-            autoPlay
-            loop
-            muted
-            className="absolute top-[-257px] left-0 w-full object-cover object-center"
-          />
-
-          <div className="relative bottom-0 left-0 flex justify-center items-center w-[490px] h-[180px]">
+      <div className="relative w-full h-[900px] overflow-hidden">
+        <video
+          className="absolute top-0 left-0 z-0 object-cover w-full h-full"
+          autoPlay
+          loop
+          muted
+        >
+          <source src={video4} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div className="w-[490px] h-[180px] flex flex-col">
+          <div className="absolute bottom-0 left-0 p-4 pl-[117px] pr-[836px] pb-[117px] pt-[603px]">
             <div
-              className="text-[40px] text-white"
+              className="text-[40px]  text-white"
               style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
             >
-              <div>From the moment children</div>
-              <div>step into kindergarten, </div>
-              <div>their journey of learning</div>
-              <div>dreams begins.</div>
+              <div> From the moment children</div>
+              <div>step into kindergarten,</div>
+              <div> their journey of learning</div>
+              <div> dreams begins.</div>
             </div>
           </div>
         </div>
       </div>
-      <div className="w-full flex flex-col justify-center items-center gap-[100px] pt-[300px]">
+
+      <div className="w-full flex flex-col justify-center items-center gap-[100px] pt-[300px] pb-[200px]">
         <div className="w-[1000px] flex flex-col">
           <div
             className="text-[32px] text-center"
@@ -564,7 +569,7 @@ const Download = () => {
           </div>
         </div>
         <div
-          className="relative md:w-[1100px] md:h-[1225px] md:rounded-[30px] flex flex-col items-center gap-[92px] px-[86px] pt-[82px] pb-[95px] "
+          className="relative md:w-[1100px] md:h-[1225px] md:rounded-[30px] flex flex-col items-center gap-[90px] px-[86px] pt-[82px] pb-[95px] "
           style={{
             background:
               "linear-gradient(180deg, rgba(221, 221, 221, 0.3), rgba(221, 221, 221, 1), rgba(221, 221, 221, 0.7))",
@@ -581,8 +586,81 @@ const Download = () => {
               Kindertown management system is essential for your school.
             </div>
           </div>
-          <div className="flex flex-col">
-            <img src={icon} alt="Icon" />
+          <div className="flex flex-col justify-center items-center gap-[100px]">
+            <div className="flex flex-col">
+              <img src={icon} alt="Icon" className="w-[246px] h-[246px]" />
+            </div>
+            <div className="flex flex-col gap-[30px]">
+              <div className="flex gap-7">
+                <div
+                  className="flex flex-col md:w-[450px] gap-3 text-[20px]"
+                  style={{ fontFamily: "SF Pro Display M" }}
+                >
+                  <label>School Name:</label>
+                  <input
+                    type="text"
+                    name="schoolname"
+                    id="schoolname"
+                    className="w-[450px] h-[66px] bg-transparent border-2 rounded-[15px] border-white text-gray-900 px-2 dark:hover:bg-gray-700"
+                  />
+                </div>
+                <div
+                  className="flex flex-col md:w-[450px] gap-3 text-[20px]"
+                  style={{ fontFamily: "SF Pro Display M" }}
+                >
+                  <label>Name of person-in-charge:</label>
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    className="w-[450px] h-[66px] bg-transparent border-2 rounded-[15px] border-white text-gray-900 px-2"
+                  />
+                </div>
+              </div>
+              <div className="flex gap-7">
+                <div
+                  className="flex flex-col md:w-[450px] gap-3 text-[20px]"
+                  style={{ fontFamily: "SF Pro Display M" }}
+                >
+                  <label>Email address:</label>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    className="w-[450px] h-[66px] bg-transparent border-2 rounded-[15px] border-white text-gray-900 px-2"
+                  />
+                </div>
+                <div
+                  className="flex flex-col md:w-[450px] gap-3 text-[20px]"
+                  style={{ fontFamily: "SF Pro Display M" }}
+                >
+                  <label>Contact number or Whatsapp:</label>
+                  <input
+                    type="text"
+                    name="tel"
+                    id="tel"
+                    className="w-[450px] h-[66px] bg-transparent border-2 rounded-[15px] border-white text-gray-900 px-2"
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col">
+              <button
+                type="button"
+                className="flex items-center justify-between w-[536px] pl-[53px] pr-[52px] h-[93px] text-gray-900 ring-[#BBB] ring-1 bg-white border border-gray-300 shadow-md focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 rounded-[15px] px-2 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+              >
+                <div className="flex items-center gap-[29px]">
+                  <div
+                    className="flex flex-col text-xl w-[362px]"
+                    style={{ fontFamily: "SF Pro Display M" }}
+                  >
+                    <div>Within 24 hours after sending,</div>
+                    <div> our service personnel will contact you.</div>
+                  </div>
+                  <img src={tele} alt="Tele" className="w-10 h-10" />
+                </div>
+              </button>
+            </div>
           </div>
         </div>
       </div>
