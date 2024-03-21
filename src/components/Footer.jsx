@@ -3,9 +3,10 @@ import logo from "../assets/footer/logo.svg";
 import socmed from "../assets/footer/socmed.svg";
 import google from "../assets/footer/google.svg";
 import ios from "../assets/footer/ios.svg";
+import ct from "../assets/footer/ct.svg";
 const Footer = () => {
   return (
-    <footer className="bg-[#FFF7EF]  justify-center items-center pb-[65px]  pt-16">
+    <footer className="bg-[#FFF7EF]  justify-center items-center pb-[64px]  pt-16">
       <div className="w-full flex flex-col justify-center items-center pb-[48px] px-[170px] gap-9">
         <div className="w-[1000px] flex flex-col justify-center gap-9">
           <div className="flex flex-col w-full">
@@ -83,10 +84,10 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <hr class="w-[1000px] border-[#000] mx-auto dark:border-black-900" />
+      <hr className="w-[1000px] border-[#000] mx-auto dark:border-black-900" />
       <div className="w-full flex justify-center items-center px-[170px]">
-        <div className="w-[1000px] pt-[15px] flex justify-center gap-[351px]">
-          <div className="flex flex-col w-[501px] justify-between">
+        <div className="w-[1000px] pt-[15px] flex justify-between">
+          <div className="flex flex-col w-[501px]">
             <div
               className="text-xs text-[#565656]"
               style={{ fontFamily: "SF Pro Display R" }}
@@ -103,12 +104,19 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col w-[501px] justify-between">
+          <div className="flex flex-col">
             <div
               className="text-xs text-[#565656]"
               style={{ fontFamily: "SF Pro Display R" }}
             >
-              <div className="flex gap-2"></div>
+              <div className="flex gap-4">
+                <div className="flex flex-col">
+                  <img src={ct} alt="CTLogo" />
+                </div>
+                <div className="flex flex-col">
+                  Powered by Current Tech Industries
+                </div>
+              </div>
             </div>
           </div>
         </div>

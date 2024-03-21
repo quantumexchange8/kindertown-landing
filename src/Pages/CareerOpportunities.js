@@ -37,34 +37,24 @@ const CareerOpportunities = () => {
           </div>
         </div>
         {/*CONTENT 2*/}
-        <div className="relative w-full overflow-hidden">
-          <div className="w-full h-[1000px] pt-[86px] pl-[83px]">
-            <video
-              src={GirlBg}
-              autoPlay
-              loop
-              muted
-              className="absolute top-[-143px] left-0 w-full object-cover object-center"
-            />
 
-            <div className="relative bottom-0 flex justify-start items-center h-[320px]">
-              <div>
-                <div
-                  className="text-[40px]"
-                  style={{
-                    fontFamily: "SF Pro Display B",
-                    lineHeight: "normal",
-                  }}
-                >
-                  <div>Discover how you can</div>
-                  <div>make an impact:</div>
-                  <div>understand the nature of</div>
-                  <div>our work, give yourself a</div>
-                  <div>platform to excel, and</div>
-                  <div>create the achievements</div>
-                  <div>that satisfy you.</div>
-                </div>
-              </div>
+        <div className="relative w-full h-[1000px] flex items-center justify-center overflow-hidden">
+          <video className="w-full h-full object-cover" autoPlay loop muted>
+            <source src={GirlBg} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div className="absolute top-0 left-0 pt-[86px] pl-[83px]">
+            <div
+              className="text-[40px] text-left"
+              style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
+            >
+              <div>Discover how you can</div>
+              <div>make an impact: </div>
+              <div>understand the nature of</div>
+              <div>our work, give yourself a</div>
+              <div>platform to excel, and</div>
+              <div>create the achievements </div>
+              <div>that satisfy you.</div>
             </div>
           </div>
         </div>
@@ -120,29 +110,25 @@ const CareerOpportunities = () => {
       </div>
 
       {/*CONTENT 5*/}
-      <div className="relative w-full overflow-hidden">
-        <div className="w-full h-[900px] pb-[90px] pl-[83px] pt-[630px] pr-[867px]">
-          <video
-            src={LadyBg}
-            autoPlay
-            loop
-            muted
-            className="absolute top-[-68px] left-0 w-full object-cover object-center"
-          />
-
-          <div className="relative flex justify-start items-end w-[490px] h-[180px]">
-            <div
-              className="text-[40px] items-end"
-              style={{
-                fontFamily: "SF Pro Display B",
-                lineHeight: "normal",
-              }}
-            >
-              <div>Your values are integrated</div>
-              <div>into everything we build </div>
-              <div>here, expanding your </div>
-              <div>career infinitely.</div>
-            </div>
+      <div className="relative w-full h-[1000px] flex items-center justify-center overflow-hidden">
+        <video
+          className="w-full h-full object-cover object-center"
+          autoPlay
+          loop
+          muted
+        >
+          <source src={LadyBg} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div className="absolute bottom-0 left-0 pb-[90px] pl-[83px]">
+          <div
+            className="text-[40px] text-left"
+            style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
+          >
+            <div>Your values are integrated</div>
+            <div>into everything we build </div>
+            <div>here, expanding your </div>
+            <div>career infinitely.</div>
           </div>
         </div>
       </div>
@@ -174,30 +160,26 @@ const CareerOpportunities = () => {
       </div>
 
       {/*CONTENT 7*/}
-      <div className="relative w-full overflow-hidden">
-        <div className="w-full h-[900px] pl-[83px] pr-[807px] pt-[582px] pb-[88px]">
-          <video
-            src={Coding}
-            autoPlay
-            loop
-            muted
-            className="absolute top-[-68px] left-0 w-full object-cover object-center"
-          />
-
-          <div className="relative flex justify-start items-end w-[550px] h-[230px]">
-            <div
-              className="text-[40px] items-end text-white"
-              style={{
-                fontFamily: "SF Pro Display B",
-                lineHeight: "normal",
-              }}
-            >
-              <div>Our IT engineers focus on one</div>
-              <div>key point when developing </div>
-              <div>software - the people who will </div>
-              <div>use it. This is also based on </div>
-              <div>respect for customer needs. </div>
-            </div>
+      <div className="relative w-full h-[1000px] flex items-center justify-center overflow-hidden">
+        <video
+          className="w-full h-full object-cover object-center"
+          autoPlay
+          loop
+          muted
+        >
+          <source src={Coding} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div className="absolute bottom-0 left-0 pb-[88px] pl-[83px]">
+          <div
+            className="text-[40px] text-left text-white"
+            style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
+          >
+            <div>Our IT engineers focus on one</div>
+            <div>key point when developing </div>
+            <div>software - the people who will </div>
+            <div>use it. This is also based on</div>
+            <div>respect for customer needs.</div>
           </div>
         </div>
       </div>

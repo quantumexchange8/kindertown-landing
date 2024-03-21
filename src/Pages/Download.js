@@ -1,5 +1,9 @@
 // Products.jsx
-import React from "react";
+
+import React, { useState } from "react";
+import Modal1 from "../components/modal/Modal1";
+import Modal2 from "../components/modal/Modal2";
+import Modal3 from "../components/modal/Modal3";
 import mobile from "../assets/download/mobile.png";
 import phone from "../assets/download/phone.png";
 import tab from "../assets/download/tablet.png";
@@ -27,6 +31,9 @@ import user from "../assets/download/user.svg";
 import icon from "../assets/download/Mask group.png";
 import tele from "../assets/download/tele.svg";
 const Download = () => {
+  const [modal1Open, setModal1Open] = useState(false);
+  const [modal2Open, setModal2Open] = useState(false);
+  const [modal3Open, setModal3Open] = useState(false);
   return (
     <>
       <div className="w-full flex flex-col justify-center items-center gap-[200px] pt-[150px]">
@@ -72,7 +79,13 @@ const Download = () => {
                   />
                 </div>
                 <div className="absolute bottom-0 right-0 p-[30px]">
-                  <img src={button1} alt="Button1" />
+                  <button onClick={() => setModal1Open(true)}>
+                    <img src={button1} alt="Button1" />
+                  </button>
+                  <Modal1
+                    isOpen={modal1Open}
+                    onClose={() => setModal1Open(false)}
+                  />
                 </div>
               </div>
             </div>
@@ -100,40 +113,56 @@ const Download = () => {
                   </div>
                 </div>
                 <div className="absolute bottom-0 right-0 p-[30px]">
-                  <img src={button2} alt="Button1" />
+                  <button onClick={() => setModal2Open(true)}>
+                    <img src={button2} alt="Button2" />
+                  </button>
+                  <Modal2
+                    isOpen={modal2Open}
+                    onClose={() => setModal2Open(false)}
+                  />
                 </div>
               </div>
             </div>
           </div>
           {/*CONTENT 4*/}
 
-          <div className="relative md:w-[1000px] md:h-[500px] md:rounded-[30px] bg-[#2FC300] flex items-center gap-6 overflow-hidden">
-            <div className="flex gap-[99px]">
-              <div className="w-[592px] h-[500px] flex flex-col items-end pt-[49px]">
-                <div className="relative right-9">
-                  <img src={imac} alt="Mobile" />
+          <div className="relative md:w-[1000px] md:h-[500px] md:rounded-[30px] items-center bg-[#2FC300] flex gap-[99px] pr-[30px] overflow-hidden">
+            <div className="flex w-[546px] relative bottom-0 top-10 right-3">
+              <img src={imac} alt="imac" className="w-[592px] h-full" />
+            </div>
+            <div className="flex text-center gap-7">
+              <div className="flex flex-col gap-5">
+                <div className="flex flex-col">
+                  <div
+                    className="text-[30px]"
+                    style={{ fontFamily: "SF Pro Display B" }}
+                  >
+                    Kindertown Admin
+                  </div>
+                </div>
+                <div className="flex flex-col">
+                  <div
+                    className="flex flex-col text-2xl text-left text-white"
+                    style={{
+                      fontFamily: "SF Pro Display M",
+                      lineHeight: "normal",
+                    }}
+                  >
+                    <div>No more sluggish</div>
+                    <div>school enrollment </div>
+                    <div>processes from now.</div>
+                  </div>
                 </div>
               </div>
-              <div className="flex flex-col gap-5">
-                <div
-                  className="text-[30px]"
-                  style={{ fontFamily: "SF Pro Display B" }}
-                >
-                  Kindertown Admin
-                </div>
-                <div
-                  className="flex flex-col text-2xl text-left text-white"
-                  style={{
-                    fontFamily: "SF Pro Display M",
-                    lineHeight: "normal",
-                  }}
-                >
-                  <div>No more sluggish</div>
-                  <div>school enrollment </div>
-                  <div>processes from now.</div>
-                </div>
-                <div className="absolute bottom-0 right-0 pr-[30px] pb-[30px]">
-                  <img src={button3} alt="Button3" />
+              <div className="flex flex-col">
+                <div className="absolute bottom-[30px] right-[30px]">
+                  <button onClick={() => setModal3Open(true)}>
+                    <img src={button3} alt="Button3" />
+                  </button>
+                  <Modal3
+                    isOpen={modal3Open}
+                    onClose={() => setModal3Open(false)}
+                  />
                 </div>
               </div>
             </div>
@@ -305,7 +334,7 @@ const Download = () => {
               </div>
             </div>
           </div>
-          <div className="relative md:w-[490px] md:h-[500px] md:rounded-[30px] flex flex-col pr-[38px] pl-[152px] pt-[357px] pb-[43px]">
+          <div className="relative md:w-[490px] md:h-[500px] md:rounded-[30px] flex flex-col">
             <video
               className="absolute inset-0 w-full h-full object-cover rounded-[30px]"
               autoPlay
@@ -315,7 +344,7 @@ const Download = () => {
               <source src={video} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-            <div className="relative bottom-0 right-0 flex justify-start items-center w-[300px] h-[100px]">
+            <div className="absolute bottom-11 right-9 flex justify-start items-center w-[300px] h-[100px]">
               <div className="flex flex-col">
                 <div
                   className="text-[30px] text-right"
@@ -367,7 +396,7 @@ const Download = () => {
                 <img src={tab2} alt="Tablet2" />
               </div>
             </div>
-            <div className="relative md:w-[1000px] md:h-[500px] md:rounded-[30px] flex gap-20 pr-[51px] pb-[51px] pt-[279px] pl-[623px]">
+            <div className="relative md:w-[1000px] md:h-[500px] md:rounded-[30px] flex gap-20">
               <video
                 className="absolute inset-0 w-full h-full object-cover rounded-[30px]"
                 autoPlay
@@ -377,7 +406,7 @@ const Download = () => {
                 <source src={video2} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
-              <div className="relative bottom-0 right-0 flex items-center w-[326px] h-[170px]">
+              <div className="absolute bottom-11 right-9 flex items-center w-[326px] h-[170px]">
                 <div className="flex flex-col">
                   <div
                     className="text-[30px] text-right text-white"
@@ -440,7 +469,7 @@ const Download = () => {
             </div>
           </div>
           <div className="w-full flex flex-col gap-5">
-            <div className="relative md:w-[1000px] md:h-[500px] md:rounded-[30px] flex gap-20 pr-[643px] pb-[57px] pt-[273px] pl-[57px]">
+            <div className="relative md:w-[1000px] md:h-[500px] md:rounded-[30px] flex gap-20">
               <video
                 className="absolute inset-0 w-full h-full object-cover rounded-[30px]"
                 autoPlay
@@ -450,7 +479,7 @@ const Download = () => {
                 <source src={video3} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
-              <div className="relative bottom-0 left-0 flex items-center w-[300px] h-[170px]">
+              <div className="absolute bottom-14 left-14 flex items-center w-[300px] h-[170px]">
                 <div className="flex flex-col">
                   <div
                     className="text-[30px] text-left"
@@ -537,7 +566,7 @@ const Download = () => {
           Your browser does not support the video tag.
         </video>
         <div className="w-[490px] h-[180px] flex flex-col">
-          <div className="absolute bottom-0 left-0 p-4 pl-[117px] pr-[836px] pb-[117px] pt-[603px]">
+          <div className="absolute bottom-[117px] left-[114px]">
             <div
               className="text-[40px]  text-white"
               style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
