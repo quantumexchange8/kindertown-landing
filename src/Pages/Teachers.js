@@ -1,14 +1,14 @@
 // JoinUs.jsx
 import React from "react";
 import Privacy from "./Privacy";
-import Tab1 from "../assets/teacher/tab1.svg";
-import Tab2 from "../assets/teacher/tab2.svg";
-import Tab3 from "../assets/teacher/tab3.svg";
-import Tab4 from "../assets/teacher/tab4.svg";
-import Tab5 from "../assets/teacher/tab5.svg";
+import Tab1 from "../assets/teacher/tab1.png";
+import Tab2 from "../assets/teacher/tab2.png";
+import Tab3 from "../assets/teacher/tab3.png";
+import Tab4 from "../assets/teacher/tab4.png";
+import Tab5 from "../assets/teacher/tab5.png";
 
 import CTLogo from "../assets/teacher/ct-logo.svg";
-import Header from "../assets/teacher/header.svg";
+import Header from "../assets/teacher/header.png";
 const Teacher = () => {
   return (
     <>

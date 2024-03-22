@@ -1,22 +1,22 @@
 import React from "react";
 
 import GirlBg from "../assets/girl_child.mp4";
-import Planner from "../assets/home/planner.svg";
-import Child from "../assets/home/child.svg";
+import Planner from "../assets/home/planner.png";
+import Child from "../assets/home/child.png";
 import Playground from "../assets/home/playground.png";
-import Tel from "../assets/home/tel.svg";
+import Tel from "../assets/home/tel.png";
 import Pencil from "../assets/home/pencils.png";
-import Computer from "../assets/home/computer.svg";
+import Computer from "../assets/home/computer.png";
 import Tools from "../assets/home/measure.svg";
-import Family from "../assets/home/family.svg";
-import Teachers from "../assets/home/teachers.svg";
+import Family from "../assets/home/family.png";
+import Teachers from "../assets/home/teachers.png";
 import Slowmode from "../assets/home/slowmode.png";
 import Choose from "../assets/home/choose.svg";
-import Owners from "../assets/home/schoolowners.svg";
+import Owners from "../assets/home/schoolowners.png";
 import Admin from "../assets/home/admin.png";
-import Teacher2 from "../assets/home/teacher2.svg";
-import Parent from "../assets/home/parent.svg";
-import Main from "../assets/home/main.svg";
+import Teacher2 from "../assets/home/teachers2.png";
+import Parent from "../assets/home/parent.png";
+import Main from "../assets/home/main.png";
 const Home = () => {
   return (
     <>
@@ -343,106 +343,6 @@ const Home = () => {
         </div>
       </div>
 
-      {/* 
-      <div className="w-full flex flex-col justify-center bg-[#FFF7EF] mt-[150px] px-[220px] py-[150px] gap-y-[200px]">
-        <div className="w-[1000px] mx-auto  flex flex-col justify-center items-center gap-y-[50px]">
-          <div className="flex flex-col justify-center items-center">
-            <img src={Tools} className="w-32 h-32" alt="Tools" />
-          </div>
-          <div className="flex flex-col justify-center items-center">
-            <div
-              className="text-center text-[80px] text-[#7A5AF8] leading-[90px] w-full"
-              style={{ fontFamily: "SF Pro Bold" }}
-            >
-              <div className="flex items-center justify-center h-[90px]">
-                Essential tools.
-              </div>
-              <div className="flex items-center justify-center h-[90px]">
-                Powerful system.
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="w-[1000px] mx-auto  flex flex-col justify-center items-center gap-y-[150px]">
-          <div className="w-[1000px] flex gap-x-9">
-            <div className="flex flex-col w-[100px] h-[100px]">
-              <img src={Family}></img>
-            </div>
-            <div className="flex flex-col w-[864px] gap-y-[29px] pt-[30px]">
-              <div className="flex flex-row justify-center items-center">
-                <div className="flex flex-grow items-center">
-                  <div
-                    className="text-[#4D9138] text-[32px] leading-normal"
-                    style={{ fontFamily: "SF Pro Extrabold" }}
-                  >
-                    Child's Learning Journey
-                  </div>
-                </div>
-              </div>
-              <div className="flex flex-row justify-center items-center">
-                <div
-                  className="text-[32px] leading-normal"
-                  style={{ fontFamily: "SF Pro Medium" }}
-                >
-                  Through the powerful Kindertown Parents mobile application,
-                  not only does it enhance the intimate relationship between
-                  parents and children, but it also makes it easy for parents to
-                  find outstanding kindergartens for their children, preparing
-                  them for future enrollment. Our system provides the simplest
-                  and most convenient registration process and payment methods.
-                  <br></br>
-                  <br></br>
-                  It also includes features such as connectivity with school
-                  CCTV, essential management features, and adorable widgets.
-                  This allows you to track every detail of your child's learning
-                  journey at anytime, anywhere, ensuring that no important
-                  information is missed out.
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="w-[1000px] flex gap-x-9">
-            <div className="flex flex-col w-[100px] h-[100px]">
-              <img src={Family}></img>
-            </div>
-            <div className="flex flex-col w-[864px] gap-y-[29px] pt-[30px]">
-              <div className="flex flex-row justify-center items-center">
-                <div className="flex flex-grow items-center">
-                  <div
-                    className="text-[#752912] text-[32px] leading-normal"
-                    style={{ fontFamily: "SF Pro Extrabold" }}
-                  >
-                    We understand the busyness of teachers
-                  </div>
-                </div>
-              </div>
-              <div className="flex flex-row justify-center items-center">
-                <div
-                  className="text-[32px] leading-normal"
-                  style={{ fontFamily: "SF Pro Medium" }}
-                >
-                  Kindertown Teacher strengthens the connection between
-                  children, parents, and teachers. Recognizing the challenge of
-                  guiding the learning process and organizing details for
-                  numerous children, we understand the need for a powerful and
-                  multifunctional system to manage children's educational
-                  progress.
-                  <br></br>
-                  <br></br>
-                  Kindertown Teacher effectively addresses this challenge,
-                  enabling teachers to conveniently record children's learning
-                  advancements and activities. In addition, the ‘Collection’
-                  feature in the app allowing teachers to take photos and upload
-                  children's assignments or projects which facilitates parents
-                  in tracking the overall learning process of their children.
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-                  */}
       <div className="w-full flex flex-col bg-[#FFF7EF] mt-24 py-[150px] px-[220px]">
         {/*CONTENT 4*/}
         <div className="w-[1000px] mx-auto flex flex-col justify-center items-center gap-y-12">
@@ -465,51 +365,6 @@ const Home = () => {
         </div>
 
         <div className="w-[1000px] mx-auto flex flex-col justify-center items-center pt-[200px] gap-y-[150px]">
-          {/* 
-          <div className="flex flex-col">
-            <div className="flex flex-row gap-x-9">
-              <div className="w-[100px] h-[100px]">
-                <img src={Family} alt="Family" />
-              </div>
-              <div className="flex flex-grow items-center">
-                <h2
-                  className="text-[#4D9138] text-[32px]"
-                  style={{ fontFamily: "SF Pro Extrabold" }}
-                >
-                  Child's Learning Journey
-                </h2>
-              </div>
-            </div>
-            <div className="flex flex-row gap-x-9">
-              <div className="w-[100px] h-[100px]"></div>
-              <div className="flex-grow w-full">
-                <div
-                  className="text-[32px] leading-normal"
-                  style={{ fontFamily: "SF Pro Medium" }}
-                >
-                  Through the powerful Kindertown Parents mobile application,
-                  not only does it enhance the intimate relationship between
-                  parents and children, but it also makes it easy for parents to
-                  find outstanding kindergartens for their children, preparing
-                  them for future enrollment. Our system provides the simplest
-                  and most convenient registration process and payment methods.
-                </div>
-                <br />
-                <div
-                  className="text-[32px]  leading-normal"
-                  style={{ fontFamily: "SF Pro Medium" }}
-                >
-                  It also includes features such as connectivity with school
-                  CCTV, essential management features, and adorable widgets.
-                  This allows you to track every detail of your child's learning
-                  journey at anytime, anywhere, ensuring that no important
-                  information is missed out.
-                </div>
-              </div>
-            </div>
-          </div> 
-          */}
-
           {/* REFER HERE FOR SAMPLE */}
 
           {/* CONTENT 5 */}

@@ -3,13 +3,12 @@ import { Link, useLocation } from "react-router-dom";
 import { GlobalIcon } from "./Icons/outline";
 import "../font.css";
 
-const Navbar = () => {
+const Navbar = ({ isModalOpen }) => {
   const location = useLocation();
-  const [activeProductSubPage, setActiveProductSubPage] = useState("parent"); // Default active sub-page for Products section
+  const [activeProductSubPage, setActiveProductSubPage] = useState("parent");
   const [activeJoinUsSubPage, setActiveJoinUsSubPage] =
-    useState("referral-program"); // Default active sub-page for Products section
+    useState("referral-program");
 
-  // Define common styles for the links
   const linkStyles = {
     base: "flex justify-center items-center text-[#FFF] bg-[#F67F00] rounded-[15px]",
     home: "w-[66px]",
@@ -23,16 +22,14 @@ const Navbar = () => {
     none: "text-[#BBB] text-center text-base",
   };
 
-  // Handle click on Products link to set the default active sub-page
   const handleProductsClick = () => {
-    setActiveProductSubPage("parent"); // Set the default active sub-page to Kindertown Parent
+    setActiveProductSubPage("parent");
   };
 
   const handleJoinUsClick = () => {
-    setActiveJoinUsSubPage("referral-program"); // Set the default active sub-page to Kindertown Parent
+    setActiveJoinUsSubPage("referral-program");
   };
 
-  // Handle click on Products sub-page links
   const handleProductSubPage = (subPage) => {
     setActiveProductSubPage(subPage);
   };
@@ -40,6 +37,11 @@ const Navbar = () => {
   const handleJoinUsSubPage = (subPage) => {
     setActiveJoinUsSubPage(subPage);
   };
+
+  // Conditionally render the navbar based on whether a modal is open
+  if (isModalOpen) {
+    return null; // Hide the navbar if a modal is open
+  }
 
   return (
     <div className="flex flex-col fixed top-0 w-full z-50">

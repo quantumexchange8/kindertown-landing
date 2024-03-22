@@ -1,6 +1,8 @@
 // Products.jsx
 
 import React, { useState } from "react";
+import ReactModal from "react-modal";
+
 import Modal1 from "../components/modal/Modal1";
 import Modal2 from "../components/modal/Modal2";
 import Modal3 from "../components/modal/Modal3";
@@ -11,11 +13,11 @@ import tab2 from "../assets/download/tablet2.png";
 import button1 from "../assets/download/button1.svg";
 import button2 from "../assets/download/button2.svg";
 import button3 from "../assets/download/button3.svg";
-import imac from "../assets/download/imac.svg";
+import imac from "../assets/download/imac.png";
 import sticker1 from "../assets/download/sticker1.svg";
 import sticker2 from "../assets/download/sticker2.svg";
 import sticker3 from "../assets/download/sticker3.svg";
-import sticker4 from "../assets/download/sticker4.svg";
+import sticker4 from "../assets/download/sticker4.png";
 import sticker5 from "../assets/download/sticker5.svg";
 import sticker6 from "../assets/download/sticker6.svg";
 import troli from "../assets/download/troli.svg";
@@ -82,10 +84,25 @@ const Download = () => {
                   <button onClick={() => setModal1Open(true)}>
                     <img src={button1} alt="Button1" />
                   </button>
-                  <Modal1
+
+                  <ReactModal
                     isOpen={modal1Open}
-                    onClose={() => setModal1Open(false)}
-                  />
+                    onRequestClose={() => setModal1Open(false)}
+                    contentLabel="Modal 3"
+                    style={{
+                      content: {
+                        width: "900px", // Set width to 900px
+                        margin: "auto", // Center horizontally
+                        borderRadius: "50px", // Set border radius to 50px
+                        display: "flex",
+                        justifyContent: "center", // Center horizontally
+                        alignItems: "center", // Center vertically
+                        overflow: "auto",
+                      },
+                    }}
+                  >
+                    <Modal1 onClose={() => setModal1Open(false)} />
+                  </ReactModal>
                 </div>
               </div>
             </div>
@@ -159,10 +176,14 @@ const Download = () => {
                   <button onClick={() => setModal3Open(true)}>
                     <img src={button3} alt="Button3" />
                   </button>
-                  <Modal3
+
+                  <ReactModal
                     isOpen={modal3Open}
-                    onClose={() => setModal3Open(false)}
-                  />
+                    onRequestClose={() => setModal3Open(false)}
+                    contentLabel="Modal 3"
+                  >
+                    <Modal3 onClose={() => setModal3Open(false)} />
+                  </ReactModal>
                 </div>
               </div>
             </div>

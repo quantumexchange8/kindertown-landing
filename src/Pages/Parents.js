@@ -1,16 +1,16 @@
 // JoinUs.jsx
 import React from "react";
 import Privacy from "./Privacy";
-import Phone1 from "../assets/parent/phone1.svg";
-import Phone2 from "../assets/parent/phone2.svg";
-import Phone3 from "../assets/parent/phone3.svg";
-import Phone4 from "../assets/parent/phone4.svg";
-import Phone5 from "../assets/parent/phone5.svg";
-import Phone6 from "../assets/parent/phone6.svg";
-import Phone7 from "../assets/parent/phone7.svg";
+import Phone1 from "../assets/parent/phone1.png";
+import Phone2 from "../assets/parent/phone2.png";
+import Phone3 from "../assets/parent/phone3.png";
+import Phone4 from "../assets/parent/phone4.png";
+import Phone5 from "../assets/parent/phone5.png";
+import Phone6 from "../assets/parent/phone6.png";
+import Phone7 from "../assets/parent/phone7.png";
 import Jam1 from "../assets/parent/jam2.png";
 import Jam2 from "../assets/parent/jam1.png";
-import Icon from "../assets/parent/small icon.svg";
+import Icon from "../assets/parent/icon.png";
 import Arrow from "../assets/parent/arrow.svg";
 const Parent = () => {
   return (
@@ -28,7 +28,11 @@ const Parent = () => {
 
               {/* Small Image on top right */}
               <div className="relative">
-                <img src={Icon} alt="icon" className="w-[200px] h-[200px] absolute top-0 right-0 max-w-[calc(100% - 94px)] max-h-[calc(100% - 87px)]"/>
+                <img
+                  src={Icon}
+                  alt="icon"
+                  className="w-[200px] h-[200px] absolute top-0 right-0 max-w-[calc(100% - 94px)] max-h-[calc(100% - 87px)]"
+                />
               </div>
 
               {/* Text on bottom left */}
@@ -71,7 +75,7 @@ const Parent = () => {
           {/*CONTENT 2 */}
           <div className="w-full flex items-center gap-[66px]">
             <div className="flex flex-col h-[711px] md:max-w-[350px]">
-              <img src={Phone1} alt="phone1"/>
+              <img src={Phone1} alt="phone1" />
             </div>
 
             <div className="flex flex-col items-center">
@@ -107,13 +111,13 @@ const Parent = () => {
               </div>
             </div>
             <div className="flex flex-col w-[350px] h-[711px]">
-              <img src={Phone2} alt="phone2"/>
+              <img src={Phone2} alt="phone2" />
             </div>
           </div>
           {/*CONTENT 4 */}
           <div className="w-full flex items-center gap-[66px]">
             <div className="flex flex-col w-[350px] h-[711px]">
-              <img src={Phone3} alt="phone3"/>
+              <img src={Phone3} alt="phone3" />
             </div>
 
             <div className="flex flex-col items-center">
@@ -146,13 +150,13 @@ const Parent = () => {
               </div>
             </div>
             <div className="flex flex-col w-[350px]">
-              <img src={Phone4} alt="phone4"/>
+              <img src={Phone4} alt="phone4" />
             </div>
           </div>
           {/*CONTENT 6 */}
           <div className="w-full flex items-center gap-[66px]">
             <div className="flex flex-col w-[350px]">
-              <img src={Phone5} alt="phone5"/>
+              <img src={Phone5} alt="phone5" />
             </div>
             <div className="flex flex-col items-center w-[584px]">
               <div

@@ -1,7 +1,7 @@
 // JoinUs.jsx
 import React from "react";
-import img1 from "../assets/referral/img1.png";
-import pc from "../assets/referral/pcs.svg";
+import img1 from "../assets/referral/img group.png";
+import pc from "../assets/referral/pcs.png";
 import ic from "../assets/referral/ic.svg";
 import card from "../assets/referral/card.svg";
 import register from "../assets/referral/register.svg";

@@ -1,12 +1,12 @@
 // JoinUs.jsx
 import React from "react";
 import Privacy from "./Privacy";
-import Header from "../assets/admin/header.svg";
-import Device from "../assets/admin/Device - Macbook Pro.svg";
-import Device2 from "../assets/admin/Device2.svg";
-import Macbook from "../assets/admin/macbook2.svg";
-import Macbook2 from "../assets/admin/Device.svg";
-import Ipad from "../assets/admin/ipad.svg";
+import Header from "../assets/admin/header.png";
+import Device from "../assets/admin/Device - Macbook Pro.png";
+import Device2 from "../assets/admin/Device2.png";
+import Macbook from "../assets/admin/macbook2.png";
+import Macbook2 from "../assets/admin/Device.png";
+import Ipad from "../assets/admin/ipad.png";
 import icon1 from "../assets/admin/icon1.svg";
 import icon2 from "../assets/admin/icon2.svg";
 import icon3 from "../assets/admin/icon3.svg";
