@@ -88,7 +88,7 @@ const Download = () => {
                   <ReactModal
                     isOpen={modal1Open}
                     onRequestClose={() => setModal1Open(false)}
-                    contentLabel="Modal 3"
+                    contentLabel="Modal 1"
                     style={{
                       content: {
                         width: "900px", // Set width to 900px
@@ -119,7 +119,7 @@ const Download = () => {
                     className="text-3xl  text-left"
                     style={{ fontFamily: "SF Pro Display B" }}
                   >
-                    Kindertown Parent
+                    Kindertown Teacher
                   </div>
                   <div
                     className="text-2xl text-white text-left"
@@ -133,10 +133,25 @@ const Download = () => {
                   <button onClick={() => setModal2Open(true)}>
                     <img src={button2} alt="Button2" />
                   </button>
-                  <Modal2
+
+                  <ReactModal
                     isOpen={modal2Open}
-                    onClose={() => setModal2Open(false)}
-                  />
+                    onRequestClose={() => setModal2Open(false)}
+                    contentLabel="Modal 2"
+                    style={{
+                      content: {
+                        width: "900px", // Set width to 900px
+                        margin: "auto", // Center horizontally
+                        borderRadius: "50px", // Set border radius to 50px
+                        display: "flex",
+                        justifyContent: "center", // Center horizontally
+                        alignItems: "center", // Center vertically
+                        overflow: "auto",
+                      },
+                    }}
+                  >
+                    <Modal2 onClose={() => setModal2Open(false)} />
+                  </ReactModal>
                 </div>
               </div>
             </div>
@@ -181,6 +196,17 @@ const Download = () => {
                     isOpen={modal3Open}
                     onRequestClose={() => setModal3Open(false)}
                     contentLabel="Modal 3"
+                    style={{
+                      content: {
+                        width: "900px", // Set width to 900px
+                        margin: "auto", // Center horizontally
+                        borderRadius: "50px", // Set border radius to 50px
+                        display: "flex",
+                        justifyContent: "center", // Center horizontally
+                        alignItems: "center", // Center vertically
+                        overflow: "auto",
+                      },
+                    }}
                   >
                     <Modal3 onClose={() => setModal3Open(false)} />
                   </ReactModal>

@@ -110,8 +110,8 @@ function Modal1({ isOpen, onClose }) {
                     Data Linked to You
                   </div>
 
-                  <div className="w-full flex flex-col justify-center items-center gap-5">
-                    <div className="w-full grid grid-cols-3">
+                  <div className="flex flex-col gap-5">
+                    <div className="w-full grid grid-cols-3 gap-[50px]">
                       <div className="flex w-full">
                         <div className="flex items-center gap-5">
                           <div className="w-5 h-5">
@@ -144,7 +144,7 @@ function Modal1({ isOpen, onClose }) {
                             <img src={setting} alt="Diagnostic" />
                           </div>
                           <div
-                            className="text-xl"
+                            className="text-xl w-[108px]"
                             style={{ fontFamily: "SF Pro Display R" }}
                           >
                             Diagnostics
@@ -152,10 +152,10 @@ function Modal1({ isOpen, onClose }) {
                         </div>
                       </div>
                     </div>
-                    <div className="w-full grid grid-cols-3">
+                    <div className="w-full grid grid-cols-3 gap-[50px]">
                       <div className="flex w-full">
                         <div className="flex items-center gap-5">
-                          <div>
+                          <div className="w-5 h-5">
                             <img src={location} alt="Location" />
                           </div>
                           <div
@@ -166,10 +166,9 @@ function Modal1({ isOpen, onClose }) {
                           </div>
                         </div>
                       </div>
-
                       <div className="flex w-full">
                         <div className="flex items-center gap-5">
-                          <div>
+                          <div className="w-5 h-5">
                             <img src={education} alt="Education" />
                           </div>
                           <div
@@ -180,11 +179,10 @@ function Modal1({ isOpen, onClose }) {
                           </div>
                         </div>
                       </div>
-
-                      <div className="flex w-full">
+                      <div className="flex w-[162px]">
                         <div className="flex items-center gap-5">
-                          <div>
-                            <img src={gallery} alt="gallery" />
+                          <div className="w-5 h-5">
+                            <img src={gallery} alt="UserContent" />
                           </div>
                           <div
                             className="text-xl"
@@ -195,11 +193,11 @@ function Modal1({ isOpen, onClose }) {
                         </div>
                       </div>
                     </div>
-                    <div className="w-full grid grid-cols-3">
+                    <div className="w-full grid grid-cols-3 gap-[50px]">
                       <div className="flex w-full">
                         <div className="flex items-center gap-5">
-                          <div>
-                            <img src={data} alt="Data" />
+                          <div className="w-5 h-5">
+                            <img src={data} alt="UsageData" />
                           </div>
                           <div
                             className="text-xl"
@@ -209,10 +207,9 @@ function Modal1({ isOpen, onClose }) {
                           </div>
                         </div>
                       </div>
-
                       <div className="flex w-full">
                         <div className="flex items-center gap-5">
-                          <div>
+                          <div className="w-5 h-5">
                             <img src={contact} alt="Contacts" />
                           </div>
                           <div
@@ -223,11 +220,10 @@ function Modal1({ isOpen, onClose }) {
                           </div>
                         </div>
                       </div>
-
-                      <div className="flex w-full">
+                      <div className="flex w-[162px]">
                         <div className="flex items-center gap-5">
-                          <div>
-                            <img src={data2} alt="OtherData" />
+                          <div className="w-5 h-5">
+                            <img src={data2} alt="Other Data" />
                           </div>
                           <div
                             className="text-xl"
@@ -255,12 +251,40 @@ function Modal1({ isOpen, onClose }) {
             </div>
             <div
               className="w-[700px] flex flex-col text-[32px]"
-              style={{ fontFamily: "SF Pro Display R" }}
+              style={{ fontFamily: "SF Pro Display R", lineHeight: "normal" }}
             >
-              <ul className="list-inside list-disc">
+              <ul className="list-outside list-disc flex flex-col gap-10 pl-[50px]">
                 <li>Search the kindergartens near you.</li>
                 <li>Referral Program and Reward Wallet function.</li>
                 <li>Reserve a seat for your kids through Kindertown.</li>
+                <li>
+                  Pay your school fee directly through Kindertown app,
+                  seamlessly supported by over 10 banks.
+                </li>
+                <li>Instant notification feature on mobile phones.</li>
+                <li>Child's daily mission with adorable star sticker.</li>
+                <li>Checking kid’s academic performance. </li>
+                <li>Feedback form for kindergarten.</li>
+                <li>
+                  Purchase school supplies through the ‘Market’ in Kindertown.
+                </li>
+                <li>
+                  Self pick-up / delay pick-up / emergency pick-up protection /
+                  change contact feature.
+                </li>
+                <li>
+                  Track kids’ daily activities, status, meal intake, temperature
+                  and more simply on Kindertown.
+                </li>
+                <li>Live connect to school CCTV.</li>
+                <li>
+                  Interact with teacher or other parents from the same
+                  kindergarten in ‘Community’.
+                </li>
+                <li>
+                  Cute widgets and etc that can be purchased in{" "}
+                  <span>the app.</span>
+                </li>
               </ul>
             </div>
           </div>
@@ -269,4 +293,5 @@ function Modal1({ isOpen, onClose }) {
     </div>
   );
 }
+
 export default Modal1;

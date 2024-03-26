@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
+import ReactModal from "react-modal";
 import logo from "../assets/footer/logo.svg";
 import socmed from "../assets/footer/socmed.svg";
 import google from "../assets/footer/google.svg";
 import ios from "../assets/footer/ios.svg";
 import ct from "../assets/footer/ct.svg";
+import Privacy from "../components/modal/Privacy";
 const Footer = () => {
+  const [PrivacyOpen, setPrivacyOpen] = useState(false);
+  const [TermsOpen, setTermsOpen] = useState(false);
   return (
     <footer className="bg-[#FFF7EF]  justify-center items-center pb-[64px]  pt-16">
       <div className="w-full flex flex-col justify-center items-center pb-[48px] px-[170px] gap-9">
@@ -97,7 +101,32 @@ const Footer = () => {
                   © 2006 Current Tech Industries Sdn Bhd.
                 </div>
                 <div>|</div>
-                <div className="flex-col">Privacy Policy</div>
+                <div className="flex-col">
+                  <button
+                    className="hover:text-[#FF8400]"
+                    onClick={() => setPrivacyOpen(true)}
+                  >
+                    Privacy Policy
+                  </button>
+                  <ReactModal
+                    isOpen={PrivacyOpen}
+                    onRequestClose={() => setPrivacyOpen(false)}
+                    contentLabel="Privacy"
+                    style={{
+                      content: {
+                        width: "900px", // Set width to 900px
+                        margin: "auto", // Center horizontally
+                        borderRadius: "50px", // Set border radius to 50px
+                        display: "flex",
+                        justifyContent: "center", // Center horizontally
+                        alignItems: "center", // Center vertically
+                        overflow: "auto",
+                      },
+                    }}
+                  >
+                    <Privacy onClose={() => setPrivacyOpen(false)} />
+                  </ReactModal>
+                </div>
                 <div>|</div>
                 <div className="flex-col">Terms of use</div>
                 <div>|</div>

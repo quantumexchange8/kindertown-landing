@@ -9,7 +9,8 @@ import Admin from "./Pages/Admins";
 import ReferralProgrames from "./Pages/ReferralProgrames";
 import CareerOpportunities from "./Pages/CareerOpportunities";
 import Download from "./Pages/Download";
-
+import ScrollUp from "react-scroll-up";
+import arrowUpImage from "../src/assets/up.png";
 function App() {
   return (
     <Router>
@@ -31,6 +32,9 @@ function App() {
           <Route path="/download" element={<Download />} />
         </Routes>
         <Footer />
+        <ScrollUp showUnder={160}>
+          <img src={arrowUpImage} alt="Scroll to top" />
+        </ScrollUp>
       </div>
     </Router>
   );
