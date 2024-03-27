@@ -7,7 +7,7 @@ import Tab3 from "../assets/teacher/tab3.png";
 import Tab4 from "../assets/teacher/tab4.png";
 import Tab5 from "../assets/teacher/tab5.png";
 
-import CTLogo from "../assets/teacher/ct-logo.svg";
+import CTLogo from "../assets/teacher/ct-logo.png";
 import Header from "../assets/teacher/header.png";
 const Teacher = () => {
   return (
@@ -230,7 +230,7 @@ const Teacher = () => {
                       lineHeight: "normal",
                     }}
                   >
-                    CT PRODUCT
+                    CT PRODUCT{" "}
                     <span className=" bg-black  md:w-[77px] h-[29px] md:rounded-[4px] text-white px-[5.6px]">
                       CARE
                     </span>

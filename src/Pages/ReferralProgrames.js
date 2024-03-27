@@ -2,11 +2,11 @@
 import React from "react";
 import img1 from "../assets/referral/img group.png";
 import pc from "../assets/referral/pcs.png";
-import ic from "../assets/referral/ic.svg";
-import card from "../assets/referral/card.svg";
-import register from "../assets/referral/register.svg";
-import subscribe from "../assets/referral/subscribe.svg";
-import reward from "../assets/referral/reward.svg";
+import ic from "../assets/referral/ic.png";
+import card from "../assets/referral/card.png";
+import register from "../assets/referral/register.png";
+import subscribe from "../assets/referral/subscribe.png";
+import reward from "../assets/referral/reward.png";
 
 const ReferralProgrames = () => {
   return (

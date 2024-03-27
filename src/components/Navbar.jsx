@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { GlobalIcon } from "./Icons/outline";
 import "../font.css";
@@ -7,7 +7,7 @@ const Navbar = () => {
   const location = useLocation();
   const [activeProductSubPage, setActiveProductSubPage] = useState("parent"); // Default active sub-page for Products section
   const [activeJoinUsSubPage, setActiveJoinUsSubPage] =
-    useState("referral-program"); // Default active sub-page for Products section
+    useState("referral-program"); // Default active sub-page for Join Us section
 
   // Define common styles for the links
   const linkStyles = {
@@ -22,6 +22,14 @@ const Navbar = () => {
     active: "text-[#000] text-center text-base",
     none: "text-[#BBB] text-center text-base",
   };
+  useEffect(() => {
+    // Update active sub-page based on current location
+    if (location.pathname.includes("/products")) {
+      setActiveProductSubPage(getActiveProductSubPage(location.pathname));
+    } else if (location.pathname.includes("/join-us")) {
+      setActiveJoinUsSubPage(getActiveJoinUsSubPage(location.pathname));
+    }
+  }, [location.pathname]);
 
   // Handle click on Products link to set the default active sub-page
   const handleProductsClick = () => {
@@ -32,23 +40,41 @@ const Navbar = () => {
     setActiveJoinUsSubPage("referral-program"); // Set the default active sub-page to Kindertown Parent
   };
 
-  // Handle click on Products sub-page links
-  const handleProductSubPage = (subPage) => {
-    setActiveProductSubPage(subPage);
+  const getActiveProductSubPage = (pathname) => {
+    // Logic to determine active sub-page for Products section
+    if (pathname.includes("/products/parent")) {
+      return "parent";
+    } else if (pathname.includes("/products/teacher")) {
+      return "teacher";
+    } else if (pathname.includes("/products/admin")) {
+      return "admin";
+    }
+    // Default to "parent" if none matches
+    return "parent";
   };
 
-  const handleJoinUsSubPage = (subPage) => {
-    setActiveJoinUsSubPage(subPage);
+  const getActiveJoinUsSubPage = (pathname) => {
+    // Logic to determine active sub-page for Join Us section
+    if (pathname.includes("/join-us/referral-program")) {
+      return "referral-program";
+    } else if (pathname.includes("/join-us/career-opportunities")) {
+      return "career-opportunities";
+    }
+    // Default to "referral-program" if none matches
+    return "referral-program";
   };
 
   return (
     <div className="flex flex-col fixed top-0 w-full z-50">
+      {/* Navbar container */}
       <div className="bg-[#fff7efe6] w-full flex justify-center h-[50px]">
         <div className="max-w-[1000px] w-full flex items-center justify-between">
+          {/* Navbar content */}
           <div>
             <img src="image/logo/logo.svg" alt="" />
           </div>
           <div className="flex items-center gap-[20px]">
+            {/* Home link */}
             <Link
               to="/"
               className={`${
@@ -60,6 +86,7 @@ const Navbar = () => {
             >
               Home
             </Link>
+            {/* Products link */}
             <Link
               to="/products/parent"
               className={`${
@@ -68,10 +95,11 @@ const Navbar = () => {
                   : ""
               }`}
               style={{ fontFamily: "SF Pro Medium" }}
-              onClick={handleProductsClick}
+              onClick={handleProductsClick} // Add onClick handler
             >
               Products
             </Link>
+            {/* Join Us link */}
             <Link
               to="/join-us/referral-program"
               className={`${
@@ -80,10 +108,11 @@ const Navbar = () => {
                   : ""
               }`}
               style={{ fontFamily: "SF Pro Medium" }}
-              onClick={handleJoinUsClick}
+              onClick={handleJoinUsClick} // Add onClick handler
             >
               Join Us
             </Link>
+            {/* Download link */}
             <Link
               to="/download"
               className={`${
@@ -95,6 +124,7 @@ const Navbar = () => {
             >
               Download
             </Link>
+            {/* Global icon */}
             <div>
               <GlobalIcon />
             </div>
@@ -102,18 +132,21 @@ const Navbar = () => {
         </div>
       </div>
 
+      {/* Sub-navigation content for products */}
       {location.pathname.includes("/products") && (
         <div className="bg-[#ffffffe6] w-full flex justify-center h-[50px]">
           <div className="max-w-[1000px] w-full flex items-end justify-end gap-[26px] border-b border-[#DDD]">
+            {/* Sub-navigation links for products */}
             <Link
               to="/products/parent"
+              id="parent-link"
               className={`${
                 activeProductSubPage === "parent"
                   ? `${subLinkStyles.active}`
                   : `${subLinkStyles.none}`
               }`}
               style={{ fontFamily: "SF Pro Medium" }}
-              onClick={() => handleProductSubPage("parent")}
+              onClick={() => setActiveProductSubPage("parent")}
             >
               Kindertown Parent
             </Link>
@@ -125,7 +158,7 @@ const Navbar = () => {
                   : `${subLinkStyles.none}`
               }`}
               style={{ fontFamily: "SF Pro Medium" }}
-              onClick={() => handleProductSubPage("teacher")}
+              onClick={() => setActiveProductSubPage("teacher")}
             >
               Kindertown Teacher
             </Link>
@@ -137,7 +170,7 @@ const Navbar = () => {
                   : `${subLinkStyles.none}`
               }`}
               style={{ fontFamily: "SF Pro Medium" }}
-              onClick={() => handleProductSubPage("admin")}
+              onClick={() => setActiveProductSubPage("admin")}
             >
               Kindertown Admin
             </Link>
@@ -145,9 +178,11 @@ const Navbar = () => {
         </div>
       )}
 
+      {/* Sub-navigation content for join-us */}
       {location.pathname.includes("/join-us") && (
         <div className="w-full bg-[#ffffffe6] flex justify-center h-[50px]">
           <div className="max-w-[1000px] w-full flex items-end justify-end gap-[26px] border-b border-[#DDD]">
+            {/* Sub-navigation links for join-us */}
             <Link
               to="/join-us/referral-program"
               className={`${
@@ -156,7 +191,7 @@ const Navbar = () => {
                   : `${subLinkStyles.none}`
               }`}
               style={{ fontFamily: "SF Pro Medium" }}
-              onClick={() => handleJoinUsSubPage("referral-program")}
+              onClick={() => setActiveJoinUsSubPage("referral-program")}
             >
               Referral Program
             </Link>
@@ -168,7 +203,7 @@ const Navbar = () => {
                   : `${subLinkStyles.none}`
               }`}
               style={{ fontFamily: "SF Pro Medium" }}
-              onClick={() => handleJoinUsSubPage("career-opportunities")}
+              onClick={() => setActiveJoinUsSubPage("career-opportunities")}
             >
               Career Opportunities
             </Link>

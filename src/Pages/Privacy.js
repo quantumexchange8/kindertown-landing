@@ -1,5 +1,5 @@
 import React from "react";
-import Lock from "../assets/privacy/lock.svg";
+import Lock from "../assets/privacy/lock.png";
 const Privacy = () => {
   return (
     <div className="w-full bg-[#000] py-[200px] px-[270px] flex justify-center">

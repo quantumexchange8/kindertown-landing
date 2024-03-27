@@ -1,18 +1,18 @@
 import React from "react";
-import apple from "../../assets/parentmodal/apple.svg";
-import android from "../../assets/parentmodal/android.svg";
+import apple from "../../assets/parentmodal/apple.png";
+import android from "../../assets/parentmodal/android.png";
 import video from "../../assets/teachermodal/video2.mp4";
-import close from "../../assets/parentmodal/close.svg";
+import close from "../../assets/parentmodal/close.png";
 import icon from "../../assets/teachermodal/icon.png";
-import shopping from "../../assets/parentmodal/shopping.svg";
-import smile from "../../assets/parentmodal/smile.svg";
-import setting from "../../assets/parentmodal/setting.svg";
-import location from "../../assets/parentmodal/location.svg";
-import education from "../../assets/parentmodal/education.svg";
-import gallery from "../../assets/parentmodal/gallery.svg";
-import data from "../../assets/parentmodal/data.svg";
-import contact from "../../assets/parentmodal/contact.svg";
-import data2 from "../../assets/parentmodal/data2.svg";
+import shopping from "../../assets/parentmodal/shopping.png";
+import smile from "../../assets/parentmodal/smile.png";
+import setting from "../../assets/parentmodal/setting.png";
+import location from "../../assets/parentmodal/location.png";
+import education from "../../assets/parentmodal/education.png";
+import gallery from "../../assets/parentmodal/gallery.png";
+import data from "../../assets/parentmodal/data.png";
+import contact from "../../assets/parentmodal/contact.png";
+import data2 from "../../assets/parentmodal/data2.png";
 function Modal2({ isOpen, onClose }) {
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto bg-gray-800 bg-opacity-75 backdrop-blur-sm py-10">

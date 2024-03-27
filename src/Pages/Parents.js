@@ -11,7 +11,7 @@ import Phone7 from "../assets/parent/phone7.png";
 import Jam1 from "../assets/parent/jam2.png";
 import Jam2 from "../assets/parent/jam1.png";
 import Icon from "../assets/parent/icon.png";
-import Arrow from "../assets/parent/arrow.svg";
+import Arrow from "../assets/parent/arrow.png";
 const Parent = () => {
   return (
     <>

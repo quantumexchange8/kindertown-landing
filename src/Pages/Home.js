@@ -7,11 +7,11 @@ import Playground from "../assets/home/playground.png";
 import Tel from "../assets/home/tel.png";
 import Pencil from "../assets/home/pencils.png";
 import Computer from "../assets/home/computer.png";
-import Tools from "../assets/home/measure.svg";
+import Tools from "../assets/home/measure.png";
 import Family from "../assets/home/family.png";
 import Teachers from "../assets/home/teachers.png";
 import Slowmode from "../assets/home/slowmode.png";
-import Choose from "../assets/home/choose.svg";
+import Choose from "../assets/home/choose.png";
 import Owners from "../assets/home/schoolowners.png";
 import Admin from "../assets/home/admin.png";
 import Teacher2 from "../assets/home/teachers2.png";
@@ -20,8 +20,8 @@ import Main from "../assets/home/main.png";
 const Home = () => {
   return (
     <>
-      <div className="w-full flex justify-center mt-[50px]">
-        <div className="w-full max-w-[1000px] mt-[50px] flex flex-col">
+      <div className=" flex justify-center mt-[50px]">
+        <div className="md:w-[1000px] mt-[50px] flex flex-col">
           {/* CONTENT 1 */}
           <div>
             <img src={Main} alt="" loading="lazy" />
@@ -31,7 +31,7 @@ const Home = () => {
             {/*Content 2 */}
             <div className="flex flex-col items-center w-full gap-[60px]">
               <div
-                className="w-[610px] text-[80px] text-center leading-[90px]"
+                className="w-full max-w-[610px] text-[80px] text-center leading-[90px]"
                 style={{ fontFamily: "SF Pro Bold" }}
               >
                 Zero - Worries. Zero - Hassle.

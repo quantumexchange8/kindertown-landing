@@ -3,7 +3,7 @@ import React from "react";
 import GirlBg from "../assets/career/lady.mp4";
 import LadyBg from "../assets/career/lady2.mp4";
 import Coding from "../assets/career/coding.mp4";
-import Bg from "../assets/career/bg.svg";
+import Bg from "../assets/career/bg.png";
 const CareerOpportunities = () => {
   return (
     <>

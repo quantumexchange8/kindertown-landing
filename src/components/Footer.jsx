@@ -1,21 +1,38 @@
 import React, { useState } from "react";
 import ReactModal from "react-modal";
-import logo from "../assets/footer/logo.svg";
-import socmed from "../assets/footer/socmed.svg";
-import google from "../assets/footer/google.svg";
-import ios from "../assets/footer/ios.svg";
-import ct from "../assets/footer/ct.svg";
+import { Link } from "react-router-dom";
+import logo from "../assets/footer/logo.png";
+import wsp from "../assets/footer/wsp-01.png";
+import fb from "../assets/footer/fb-01.png";
+import ig from "../assets/footer/ig-01.png";
+import msg from "../assets/footer/msg-01.png";
+import linkedin from "../assets/footer/in-01.png";
+import tele from "../assets/footer/tele-01.png";
+import google from "../assets/footer/google.png";
+import ios from "../assets/footer/ios.png";
+import ct from "../assets/footer/ct.png";
 import Privacy from "../components/modal/Privacy";
+import Terms from "../components/modal/Terms";
 const Footer = () => {
   const [PrivacyOpen, setPrivacyOpen] = useState(false);
   const [TermsOpen, setTermsOpen] = useState(false);
+  const handleLinkClick = (url) => {
+    window.location.href = url;
+  };
+
   return (
     <footer className="bg-[#FFF7EF]  justify-center items-center pb-[64px]  pt-16">
       <div className="w-full flex flex-col justify-center items-center pb-[48px] px-[170px] gap-9">
         <div className="w-[1000px] flex flex-col justify-center gap-9">
           <div className="flex flex-col w-full">
             <div className="w-[74px] h-[51px]">
-              <img src={logo} alt="Logo" />
+              <Link
+                to="/"
+                onClick={() => handleLinkClick("/")}
+                className="hover:text-[#F67F00]"
+              >
+                <img src={logo} alt="Logo" />
+              </Link>
             </div>
           </div>
           <div className="flex justify-between">
@@ -35,27 +52,73 @@ const Footer = () => {
                   style={{ fontFamily: "SF Pro Display M" }}
                 >
                   <div className="flex flex-col  w-[207px]">
-                    Kindertown Parents
+                    <Link
+                      to="/products/parent"
+                      onClick={() => handleLinkClick("/products/parent")}
+                      className="hover:text-[#F67F00]"
+                    >
+                      Kindertown Parents
+                    </Link>
                   </div>
-                  <div className="flex flex-col">Referral Program</div>
+                  <div className="flex flex-col">
+                    <Link
+                      to="/join-us/referral-program"
+                      onClick={() =>
+                        handleLinkClick("/join-us/referral-program")
+                      }
+                      className="hover:text-[#F67F00]"
+                    >
+                      Referral Program
+                    </Link>
+                  </div>
                 </div>
                 <div
                   className="flex gap-9 text-xl"
                   style={{ fontFamily: "SF Pro Display M" }}
                 >
                   <div className="flex flex-col w-[207px]">
-                    Kindertown Teacher
+                    <Link
+                      to="/products/teacher"
+                      onClick={() => handleLinkClick("/products/teacher")}
+                      className="hover:text-[#F67F00]"
+                    >
+                      Kindertown Teacher
+                    </Link>
                   </div>
-                  <div className="flex flex-col">Career Opportunities</div>
+                  <div className="flex flex-col">
+                    <Link
+                      to="/join-us/career-opportunities"
+                      onClick={() =>
+                        handleLinkClick("/join-us/career-opportunities")
+                      }
+                      className="hover:text-[#F67F00]"
+                    >
+                      Career Opportunities
+                    </Link>
+                  </div>
                 </div>
                 <div
                   className="flex gap-9 text-xl"
                   style={{ fontFamily: "SF Pro Display M" }}
                 >
                   <div className="flex flex-col w-[207px]">
-                    Kindertown Admin
+                    <Link
+                      to="/products/admin"
+                      onClick={() => handleLinkClick("/products/admin")}
+                      className="hover:text-[#F67F00]"
+                    >
+                      Kindertown Admin
+                    </Link>
                   </div>
-                  <div className="flex flex-col">Download</div>
+                  <div className="flex flex-col">
+                    <Link
+                      to="/download"
+                      onClick={() => handleLinkClick("/download")}
+                      className="hover:text-[#F67F00]"
+                    >
+                      Download
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
@@ -68,8 +131,25 @@ const Footer = () => {
                 >
                   Stay connect with us:
                 </div>
-                <div className="flex justify-end">
-                  <img src={socmed} alt="SocMed" />
+                <div className="flex justify-end gap-[10px]">
+                  <div className="flex flex-col">
+                    <img src={wsp} alt="Whatsapp" />
+                  </div>
+                  <div className="flex flex-col">
+                    <img src={tele} alt="Telegram" />
+                  </div>
+                  <div className="flex flex-col">
+                    <img src={msg} alt="Messenger" />
+                  </div>
+                  <div className="flex flex-col">
+                    <img src={fb} alt="Facebook" />
+                  </div>
+                  <div className="flex flex-col">
+                    <img src={ig} alt="Instagram" />
+                  </div>
+                  <div className="flex flex-col">
+                    <img src={linkedin} alt="Linkedin" />
+                  </div>
                 </div>
               </div>
               <div className="flex flex-col gap-[15px]">
@@ -128,7 +208,33 @@ const Footer = () => {
                   </ReactModal>
                 </div>
                 <div>|</div>
-                <div className="flex-col">Terms of use</div>
+                <div className="flex-col">
+                  {" "}
+                  <button
+                    className="hover:text-[#FF8400]"
+                    onClick={() => setTermsOpen(true)}
+                  >
+                    Terms of use
+                  </button>
+                  <ReactModal
+                    isOpen={TermsOpen}
+                    onRequestClose={() => setTermsOpen(false)}
+                    contentLabel="Terms"
+                    style={{
+                      content: {
+                        width: "900px", // Set width to 900px
+                        margin: "auto", // Center horizontally
+                        borderRadius: "50px", // Set border radius to 50px
+                        display: "flex",
+                        justifyContent: "center", // Center horizontally
+                        alignItems: "center", // Center vertically
+                        overflow: "auto",
+                      },
+                    }}
+                  >
+                    <Terms onClose={() => setTermsOpen(false)} />
+                  </ReactModal>
+                </div>
                 <div>|</div>
               </div>
             </div>
