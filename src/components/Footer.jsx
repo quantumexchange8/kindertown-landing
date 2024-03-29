@@ -10,7 +10,7 @@ import linkedin from "../assets/footer/in-01.svg";
 import tele from "../assets/footer/tele-01.svg";
 import google from "../assets/footer/android.svg";
 import ios from "../assets/footer/apple.svg";
-import ct from "../assets/footer/ct.png";
+import ct from "../assets/footer/ct.svg";
 import Privacy from "../components/modal/Privacy";
 import Terms from "../components/modal/Terms";
 const Footer = () => {
