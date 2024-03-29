@@ -371,7 +371,7 @@ const Home = () => {
             <div className="flex flex-col justify-center w-[864px] gap-[30px]">
               <div
                 className="text-[#4D9138] text-[32px] pt-[30px]"
-                style={{ fontFamily: "SF Pro Display B" }}
+                style={{ fontFamily: "SF Pro Display EB" }}
               >
                 Child's Learning Journey
               </div>
@@ -414,7 +414,7 @@ const Home = () => {
             <div className="flex flex-col justify-center w-[864px] gap-[30px]">
               <div
                 className="text-[#752912] text-[32px] pt-[30px]"
-                style={{ fontFamily: "SF Pro Display B" }}
+                style={{ fontFamily: "SF Pro Display EB" }}
               >
                 We understand the busyness of teachers
               </div>
@@ -458,7 +458,7 @@ const Home = () => {
             <div className="flex flex-col justify-center w-[864px] gap-[30px]">
               <div
                 className="text-[#00A0CB] text-[32px] pt-[30px]"
-                style={{ fontFamily: "SF Pro Display B" }}
+                style={{ fontFamily: "SF Pro Display EB" }}
               >
                 Break free from traditional slow modes.
               </div>
@@ -508,26 +508,13 @@ const Home = () => {
             className="absolute top-[-379px] left-0 w-full object-cover object-center"
           />
 
-          <div className="relative bottom-0 left-24 top-24 flex justify-start items-center h-[130px]">
-            <div>
-              <div
-                className="text-[40px] leading-normal"
-                style={{ fontFamily: "SF Pro Display B" }}
-              >
-                Documenting the child's
-              </div>
-              <div
-                className="text-[40px] leading-normal"
-                style={{ fontFamily: "SF Pro Display B" }}
-              >
-                learning and joyful
-              </div>
-              <div
-                className="text-[40px] leading-normal"
-                style={{ fontFamily: "SF Pro Display B" }}
-              >
-                journey in kindergarten.
-              </div>
+          <div className="relative left-24 top-24 flex justify-start items-center">
+            <div
+              className="text-[40px] w-[460px]"
+              style={{ fontFamily: "SF Pro Display B" }}
+            >
+              Documenting the child's learning and joyful journey in
+              kindergarten.
             </div>
           </div>
         </div>

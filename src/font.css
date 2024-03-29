@@ -36,3 +36,7 @@
   font-family: "SF Pro Display B";
   src: url("./fonts/SF-Pro-Display-Bold.otf") format("opentype");
 }
+@font-face {
+  font-family: "SF Pro Display EB";
+  src: url("./fonts/SF-Pro-Display-Heavy.otf") format("opentype");
+}
