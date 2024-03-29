@@ -32,7 +32,7 @@ const Home = () => {
             <div className="flex flex-col items-center w-full gap-[60px]">
               <div
                 className="w-full max-w-[610px] text-[80px] text-center leading-[90px]"
-                style={{ fontFamily: "SF Pro Bold" }}
+                style={{ fontFamily: "SF Pro Display B" }}
               >
                 Zero - Worries. Zero - Hassle.
               </div>
@@ -56,7 +56,10 @@ const Home = () => {
           {/*CONTENT 3 */}
 
           <div className="w-full mt-[50px] max-w-[1000px] justify-center">
-            <h1 className="text-center my-20 text-3xl font-bold">
+            <h1
+              className="text-center my-20 text-3xl"
+              style={{ fontFamily: "SF Pro Display B" }}
+            >
               Kindertown’s app super highlight
             </h1>
             <div className="flex flex-col md:flex-row md:flex-wrap justify-between">
@@ -71,8 +74,11 @@ const Home = () => {
 
                 <div className="flex flex-col items-center gap-5 w-[270px] md:h-full">
                   <div
-                    className="text-center text-xl leading-normal w-full"
-                    style={{ fontFamily: "SF Pro Bold" }}
+                    className="text-center text-xl w-full"
+                    style={{
+                      fontFamily: "SF Pro Display B",
+                      lineHeight: "normal",
+                    }}
                   >
                     <div className="flex items-center justify-center h-6">
                       Say goodbye to
@@ -82,22 +88,25 @@ const Home = () => {
                     </div>
                   </div>
 
-                  <div className="text-center text-[20px] leading-normal">
+                  <div className="text-center text-[20px]">
                     <div
                       className="flex items-center justify-center h-[25px]"
-                      style={{ fontFamily: "SF Pro Medium" }}
+                      style={{
+                        fontFamily: "SF Pro Display M",
+                        lineHeight: "normal",
+                      }}
                     >
                       You can now secure
                     </div>
                     <div
                       className="flex items-center justify-center h-[25px]"
-                      style={{ fontFamily: "SF Pro Medium" }}
+                      style={{ fontFamily: "SF Pro Display M" }}
                     >
                       a seat in your preferred
                     </div>
                     <div
                       className="flex items-center justify-center h-[25px]"
-                      style={{ fontFamily: "SF Pro Medium" }}
+                      style={{ fontFamily: "SF Pro Display M" }}
                     >
                       kindergarten in Kindertown.
                     </div>
@@ -116,7 +125,7 @@ const Home = () => {
                 <div className="flex flex-col items-center gap-5 w-[270px] md:h-full">
                   <div
                     className="text-center text-xl leading-normal w-full"
-                    style={{ fontFamily: "SF Pro Bold" }}
+                    style={{ fontFamily: "SF Pro Display B" }}
                   >
                     <div className="flex items-center justify-center h-6">
                       Know what your
@@ -129,19 +138,19 @@ const Home = () => {
                   <div className="text-center text-[20px] leading-normal">
                     <div
                       className="flex items-center justify-center h-[25px]"
-                      style={{ fontFamily: "SF Pro Medium" }}
+                      style={{ fontFamily: "SF Pro Display M" }}
                     >
                       Stay informed about your
                     </div>
                     <div
                       className="flex items-center justify-center h-[25px]"
-                      style={{ fontFamily: "SF Pro Medium" }}
+                      style={{ fontFamily: "SF Pro Display M" }}
                     >
                       kids’ academic status,
                     </div>
                     <div
                       className="flex items-center justify-center h-[25px]"
-                      style={{ fontFamily: "SF Pro Medium" }}
+                      style={{ fontFamily: "SF Pro Display M" }}
                     >
                       performance and more.
                     </div>
@@ -160,7 +169,7 @@ const Home = () => {
                 <div className="flex flex-col items-center gap-[18px] w-full md:h-full">
                   <div
                     className="text-center text-xl leading-normal w-full"
-                    style={{ fontFamily: "SF Pro Bold" }}
+                    style={{ fontFamily: "SF Pro Display B" }}
                   >
                     <div className="flex items-center justify-center h-6">
                       Never miss a school
@@ -173,29 +182,16 @@ const Home = () => {
                   <div className="text-center text-[20px] leading-normal">
                     <div
                       className="h-[25px]"
-                      style={{ fontFamily: "SF Pro Medium" }}
-                    >
-                      Stay in the loop with all the{" "}
-                    </div>
-                    <div
-                      className="h-[25px]"
-                      style={{ fontFamily: "SF Pro Medium" }}
-                    >
-                      latest happenings in school.
-                    </div>
-                    {/* <div
-                      className="flex items-center justify-center h-[25px]"
-                      style={{ fontFamily: "SF Pro Medium" }}
+                      style={{ fontFamily: "SF Pro Display M" }}
                     >
                       Stay in the loop with all the
                     </div>
-
                     <div
-                      className="flex items-center justify-center h-[25px]"
-                      style={{ fontFamily: "SF Pro Medium" }}
+                      className="h-[25px]"
+                      style={{ fontFamily: "SF Pro Display M" }}
                     >
                       latest happenings in school.
-                    </div> */}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -214,7 +210,7 @@ const Home = () => {
                 <div className="flex flex-col items-center gap-5 w-[270px] md:h-full">
                   <div
                     className="text-center text-xl leading-normal w-full"
-                    style={{ fontFamily: "SF Pro Bold" }}
+                    style={{ fontFamily: "SF Pro Display B" }}
                   >
                     <div className="flex items-center justify-center h-6">
                       Pay your school
@@ -227,20 +223,20 @@ const Home = () => {
                   <div className="text-center text-xl leading-normal">
                     <div
                       className="flex items-center justify-center h-[25px]"
-                      style={{ fontFamily: "SF Pro Medium" }}
+                      style={{ fontFamily: "SF Pro Display M" }}
                     >
                       Make your school fee
                     </div>
 
                     <div
                       className="flex items-center justify-center h-[25px]"
-                      style={{ fontFamily: "SF Pro Medium" }}
+                      style={{ fontFamily: "SF Pro Display M" }}
                     >
                       payments instantly with
                     </div>
                     <div
                       className="flex items-center justify-center h-[25px]"
-                      style={{ fontFamily: "SF Pro Medium" }}
+                      style={{ fontFamily: "SF Pro Display M" }}
                     >
                       only a few clicks.
                     </div>
@@ -260,7 +256,7 @@ const Home = () => {
                 <div className="flex flex-col items-center gap-5 w-[270px] md:h-full">
                   <div
                     className="text-center text-xl leading-normal w-full"
-                    style={{ fontFamily: "SF Pro Bold" }}
+                    style={{ fontFamily: "SF Pro Display B" }}
                   >
                     <div className="flex items-center justify-center h-6">
                       Marketplace that
@@ -273,20 +269,20 @@ const Home = () => {
                   <div className="text-center text-xl leading-normal">
                     <div
                       className="flex items-center justify-center h-[25px]"
-                      style={{ fontFamily: "SF Pro Medium" }}
+                      style={{ fontFamily: "SF Pro Display M" }}
                     >
                       Supplying resources that
                     </div>
 
                     <div
                       className="flex items-center justify-center h-[25px]"
-                      style={{ fontFamily: "SF Pro Medium" }}
+                      style={{ fontFamily: "SF Pro Display M" }}
                     >
                       cater to your child's needs
                     </div>
                     <div
                       className="flex items-center justify-center h-[25px]"
-                      style={{ fontFamily: "SF Pro Medium" }}
+                      style={{ fontFamily: "SF Pro Display M" }}
                     >
                       at any moment.
                     </div>
@@ -305,7 +301,7 @@ const Home = () => {
                 <div className="flex flex-col items-center gap-5 w-[270px] md:h-full">
                   <div
                     className="text-center text-xl leading-normal w-full"
-                    style={{ fontFamily: "SF Pro Bold" }}
+                    style={{ fontFamily: "SF Pro Display B" }}
                   >
                     <div className="flex items-center justify-center h-6">
                       Discover countless
@@ -318,20 +314,20 @@ const Home = () => {
                   <div className="text-center text-xl leading-normal">
                     <div
                       className="flex items-center justify-center h-[25px]"
-                      style={{ fontFamily: "SF Pro Medium" }}
+                      style={{ fontFamily: "SF Pro Display M" }}
                     >
                       Super-strong interaction
                     </div>
 
                     <div
                       className="flex items-center justify-center h-[25px]"
-                      style={{ fontFamily: "SF Pro Medium" }}
+                      style={{ fontFamily: "SF Pro Display M" }}
                     >
                       function between teachers,
                     </div>
                     <div
                       className="flex items-center justify-center h-[25px]"
-                      style={{ fontFamily: "SF Pro Medium" }}
+                      style={{ fontFamily: "SF Pro Display M" }}
                     >
                       students and parents.
                     </div>
@@ -375,7 +371,7 @@ const Home = () => {
             <div className="flex flex-col justify-center w-[864px] gap-[30px]">
               <div
                 className="text-[#4D9138] text-[32px] pt-[30px]"
-                style={{ fontFamily: "SF Pro Extrabold" }}
+                style={{ fontFamily: "SF Pro Display B" }}
               >
                 Child's Learning Journey
               </div>
@@ -418,7 +414,7 @@ const Home = () => {
             <div className="flex flex-col justify-center w-[864px] gap-[30px]">
               <div
                 className="text-[#752912] text-[32px] pt-[30px]"
-                style={{ fontFamily: "SF Pro Extrabold" }}
+                style={{ fontFamily: "SF Pro Display B" }}
               >
                 We understand the busyness of teachers
               </div>
@@ -462,7 +458,7 @@ const Home = () => {
             <div className="flex flex-col justify-center w-[864px] gap-[30px]">
               <div
                 className="text-[#00A0CB] text-[32px] pt-[30px]"
-                style={{ fontFamily: "SF Pro Extrabold" }}
+                style={{ fontFamily: "SF Pro Display B" }}
               >
                 Break free from traditional slow modes.
               </div>
@@ -516,19 +512,19 @@ const Home = () => {
             <div>
               <div
                 className="text-[40px] leading-normal"
-                style={{ fontFamily: "SF Pro Bold" }}
+                style={{ fontFamily: "SF Pro Display B" }}
               >
                 Documenting the child's
               </div>
               <div
                 className="text-[40px] leading-normal"
-                style={{ fontFamily: "SF Pro Bold" }}
+                style={{ fontFamily: "SF Pro Display B" }}
               >
                 learning and joyful
               </div>
               <div
                 className="text-[40px] leading-normal"
-                style={{ fontFamily: "SF Pro Bold" }}
+                style={{ fontFamily: "SF Pro Display B" }}
               >
                 journey in kindergarten.
               </div>
@@ -655,7 +651,7 @@ const Home = () => {
               />
             </div>
             <div className="flex flex-col justify-center items-center gap-[30px]">
-              <div style={{ fontSize: "50px", fontFamily: "SF Pro Bold" }}>
+              <div style={{ fontSize: "50px", fontFamily: "SF Pro Display B" }}>
                 Teachers
               </div>
 

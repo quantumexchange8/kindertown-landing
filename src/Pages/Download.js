@@ -1,8 +1,9 @@
 // Products.jsx
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import Swal from "sweetalert2";
 import ReactModal from "react-modal";
-
+import emailjs from "@emailjs/browser";
 import Modal1 from "../components/modal/Modal1";
 import Modal2 from "../components/modal/Modal2";
 import Modal3 from "../components/modal/Modal3";
@@ -36,6 +37,32 @@ const Download = () => {
   const [modal1Open, setModal1Open] = useState(false);
   const [modal2Open, setModal2Open] = useState(false);
   const [modal3Open, setModal3Open] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    if (isSubmitting) return; // Prevent multiple submissions
+
+    setIsSubmitting(true);
+    emailjs
+      .sendForm("service_pszh76a", "template_4m4ms5u", form.current, {
+        publicKey: "gQzDzwQht4bausMz-",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+          setIsSubmitting(false); // Enable the button after submission
+          Swal.fire("Success!", "Form submitted successfully", "success");
+          form.current.reset(); // Reset the form
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+          setIsSubmitting(false); // Enable the button after submission
+          Swal.fire("Error!", "Form submission failed", "error");
+        }
+      );
+  };
   return (
     <>
       <div className="w-full flex flex-col justify-center items-center gap-[200px] pt-[150px]">
@@ -662,82 +689,85 @@ const Download = () => {
               Kindertown management system is essential for your school.
             </div>
           </div>
-          <div className="flex flex-col justify-center items-center gap-[100px]">
-            <div className="flex flex-col">
-              <img src={icon} alt="Icon" className="w-[246px] h-[246px]" />
-            </div>
-            <div className="flex flex-col gap-[30px]">
-              <div className="flex gap-7">
-                <div
-                  className="flex flex-col md:w-[450px] gap-3 text-[20px]"
-                  style={{ fontFamily: "SF Pro Display M" }}
-                >
-                  <label>School Name:</label>
-                  <input
-                    type="text"
-                    name="schoolname"
-                    id="schoolname"
-                    className="w-[450px] h-[66px] bg-transparent border-2 rounded-[15px] border-white text-gray-900 px-2 dark:hover:bg-gray-700"
-                  />
-                </div>
-                <div
-                  className="flex flex-col md:w-[450px] gap-3 text-[20px]"
-                  style={{ fontFamily: "SF Pro Display M" }}
-                >
-                  <label>Name of person-in-charge:</label>
-                  <input
-                    type="text"
-                    name="name"
-                    id="name"
-                    className="w-[450px] h-[66px] bg-transparent border-2 rounded-[15px] border-white text-gray-900 px-2"
-                  />
-                </div>
+          <form ref={form} onSubmit={sendEmail}>
+            <div className="flex flex-col justify-center items-center gap-[100px]">
+              <div className="flex flex-col">
+                <img src={icon} alt="Icon" className="w-[246px] h-[246px]" />
               </div>
-              <div className="flex gap-7">
-                <div
-                  className="flex flex-col md:w-[450px] gap-3 text-[20px]"
-                  style={{ fontFamily: "SF Pro Display M" }}
-                >
-                  <label>Email address:</label>
-                  <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    className="w-[450px] h-[66px] bg-transparent border-2 rounded-[15px] border-white text-gray-900 px-2"
-                  />
-                </div>
-                <div
-                  className="flex flex-col md:w-[450px] gap-3 text-[20px]"
-                  style={{ fontFamily: "SF Pro Display M" }}
-                >
-                  <label>Contact number or Whatsapp:</label>
-                  <input
-                    type="text"
-                    name="tel"
-                    id="tel"
-                    className="w-[450px] h-[66px] bg-transparent border-2 rounded-[15px] border-white text-gray-900 px-2"
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-col">
-              <button
-                type="button"
-                className="flex items-center justify-between w-[536px] pl-[53px] pr-[52px] h-[93px] text-gray-900 ring-[#BBB] ring-1 bg-white border border-gray-300 shadow-md focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 rounded-[15px] px-2 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
-              >
-                <div className="flex items-center gap-[29px]">
+              <div className="flex flex-col gap-[30px]">
+                <div className="flex gap-7">
                   <div
-                    className="flex flex-col text-xl w-[362px]"
+                    className="flex flex-col md:w-[450px] gap-3 text-[20px]"
                     style={{ fontFamily: "SF Pro Display M" }}
                   >
-                    <div>Within 24 hours after sending,</div>
-                    <div> our service personnel will contact you.</div>
+                    <label>School Name:</label>
+                    <input
+                      type="text"
+                      name="school_name"
+                      id="schoolname"
+                      className="w-[450px] h-[66px] bg-transparent border-2 rounded-[15px] border-white text-gray-900 px-2 dark:hover:bg-gray-700"
+                    />
                   </div>
-                  <img src={tele} alt="Tele" className="w-10 h-10" />
+                  <div
+                    className="flex flex-col md:w-[450px] gap-3 text-[20px]"
+                    style={{ fontFamily: "SF Pro Display M" }}
+                  >
+                    <label>Name of person-in-charge:</label>
+                    <input
+                      type="text"
+                      name="from_name"
+                      id="name"
+                      className="w-[450px] h-[66px] bg-transparent border-2 rounded-[15px] border-white text-gray-900 px-2"
+                    />
+                  </div>
                 </div>
-              </button>
+                <div className="flex gap-7">
+                  <div
+                    className="flex flex-col md:w-[450px] gap-3 text-[20px]"
+                    style={{ fontFamily: "SF Pro Display M" }}
+                  >
+                    <label>Email address:</label>
+                    <input
+                      type="email"
+                      name="from_email"
+                      id="email"
+                      className="w-[450px] h-[66px] bg-transparent border-2 rounded-[15px] border-white text-gray-900 px-2"
+                    />
+                  </div>
+                  <div
+                    className="flex flex-col md:w-[450px] gap-3 text-[20px]"
+                    style={{ fontFamily: "SF Pro Display M" }}
+                  >
+                    <label>Contact number or Whatsapp:</label>
+                    <input
+                      type="text"
+                      name="phone"
+                      id="tel"
+                      className="w-[450px] h-[66px] bg-transparent border-2 rounded-[15px] border-white text-gray-900 px-2"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-col">
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="flex items-center justify-between w-[536px] pl-[53px] pr-[52px] h-[93px] text-gray-900 ring-[#BBB] ring-1 bg-white border border-gray-300 shadow-md focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 rounded-[15px] px-2 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+                >
+                  <div className="flex items-center gap-[29px]">
+                    <div
+                      className="flex flex-col text-xl w-[362px]"
+                      style={{ fontFamily: "SF Pro Display M" }}
+                    >
+                      <div>Within 24 hours after sending,</div>
+                      <div> our service personnel will contact you.</div>
+                    </div>
+                    <img src={tele} alt="Tele" className="w-10 h-10" />
+                  </div>
+                </button>
+              </div>
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </>

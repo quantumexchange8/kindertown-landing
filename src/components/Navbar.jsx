@@ -82,7 +82,7 @@ const Navbar = () => {
                   ? `${linkStyles.base} ${linkStyles.home}`
                   : ""
               }`}
-              style={{ fontFamily: "SF Pro Medium" }}
+              style={{ fontFamily: "SF Pro Display M" }}
             >
               Home
             </Link>
@@ -94,7 +94,7 @@ const Navbar = () => {
                   ? `${linkStyles.base} ${linkStyles.products}`
                   : ""
               }`}
-              style={{ fontFamily: "SF Pro Medium" }}
+              style={{ fontFamily: "SF Pro Display M" }}
               onClick={handleProductsClick} // Add onClick handler
             >
               Products
@@ -107,7 +107,7 @@ const Navbar = () => {
                   ? `${linkStyles.base} ${linkStyles.joinUs}`
                   : ""
               }`}
-              style={{ fontFamily: "SF Pro Medium" }}
+              style={{ fontFamily: "SF Pro Display M" }}
               onClick={handleJoinUsClick} // Add onClick handler
             >
               Join Us
@@ -120,7 +120,7 @@ const Navbar = () => {
                   ? `${linkStyles.base} ${linkStyles.download}`
                   : ""
               }`}
-              style={{ fontFamily: "SF Pro Medium" }}
+              style={{ fontFamily: "SF Pro Display M" }}
             >
               Download
             </Link>
@@ -145,7 +145,7 @@ const Navbar = () => {
                   ? `${subLinkStyles.active}`
                   : `${subLinkStyles.none}`
               }`}
-              style={{ fontFamily: "SF Pro Medium" }}
+              style={{ fontFamily: "SF Pro Display M" }}
               onClick={() => setActiveProductSubPage("parent")}
             >
               Kindertown Parent
@@ -157,7 +157,7 @@ const Navbar = () => {
                   ? `${subLinkStyles.active}`
                   : `${subLinkStyles.none}`
               }`}
-              style={{ fontFamily: "SF Pro Medium" }}
+              style={{ fontFamily: "SF Pro Display M" }}
               onClick={() => setActiveProductSubPage("teacher")}
             >
               Kindertown Teacher
@@ -169,7 +169,7 @@ const Navbar = () => {
                   ? `${subLinkStyles.active}`
                   : `${subLinkStyles.none}`
               }`}
-              style={{ fontFamily: "SF Pro Medium" }}
+              style={{ fontFamily: "SF Pro Display M" }}
               onClick={() => setActiveProductSubPage("admin")}
             >
               Kindertown Admin
@@ -190,7 +190,7 @@ const Navbar = () => {
                   ? `${subLinkStyles.active}`
                   : `${subLinkStyles.none}`
               }`}
-              style={{ fontFamily: "SF Pro Medium" }}
+              style={{ fontFamily: "SF Pro Display M" }}
               onClick={() => setActiveJoinUsSubPage("referral-program")}
             >
               Referral Program
@@ -202,7 +202,7 @@ const Navbar = () => {
                   ? `${subLinkStyles.active}`
                   : `${subLinkStyles.none}`
               }`}
-              style={{ fontFamily: "SF Pro Medium" }}
+              style={{ fontFamily: "SF Pro Display M" }}
               onClick={() => setActiveJoinUsSubPage("career-opportunities")}
             >
               Career Opportunities
