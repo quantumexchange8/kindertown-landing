@@ -705,6 +705,7 @@ const Download = () => {
                       type="text"
                       name="school_name"
                       id="schoolname"
+                      required
                       className="w-[450px] h-[66px] bg-transparent border-2 rounded-[15px] border-white text-gray-900 px-2 dark:hover:bg-gray-700"
                     />
                   </div>
@@ -717,6 +718,7 @@ const Download = () => {
                       type="text"
                       name="from_name"
                       id="name"
+                      required
                       className="w-[450px] h-[66px] bg-transparent border-2 rounded-[15px] border-white text-gray-900 px-2"
                     />
                   </div>
@@ -731,6 +733,7 @@ const Download = () => {
                       type="email"
                       name="from_email"
                       id="email"
+                      required
                       className="w-[450px] h-[66px] bg-transparent border-2 rounded-[15px] border-white text-gray-900 px-2"
                     />
                   </div>
@@ -743,6 +746,7 @@ const Download = () => {
                       type="text"
                       name="phone"
                       id="tel"
+                      required
                       className="w-[450px] h-[66px] bg-transparent border-2 rounded-[15px] border-white text-gray-900 px-2"
                     />
                   </div>
