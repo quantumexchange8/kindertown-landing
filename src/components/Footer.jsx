@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import ReactModal from "react-modal";
 import { Link } from "react-router-dom";
-import logo from "../assets/footer/logo.png";
-import wsp from "../assets/footer/wsp-01.png";
-import fb from "../assets/footer/fb-01.png";
-import ig from "../assets/footer/ig-01.png";
-import msg from "../assets/footer/msg-01.png";
-import linkedin from "../assets/footer/in-01.png";
-import tele from "../assets/footer/tele-01.png";
-import google from "../assets/footer/google.png";
-import ios from "../assets/footer/ios.png";
+import logo from "../assets/footer/logo.svg";
+import wsp from "../assets/footer/wsp-01.svg";
+import fb from "../assets/footer/fb.svg";
+import ig from "../assets/footer/ig-01.svg";
+import msg from "../assets/footer/msg-01.svg";
+import linkedin from "../assets/footer/in-01.svg";
+import tele from "../assets/footer/tele-01.svg";
+import google from "../assets/footer/android.svg";
+import ios from "../assets/footer/apple.svg";
 import ct from "../assets/footer/ct.png";
 import Privacy from "../components/modal/Privacy";
 import Terms from "../components/modal/Terms";
@@ -133,22 +133,46 @@ const Footer = () => {
                 </div>
                 <div className="flex justify-end gap-[10px]">
                   <div className="flex flex-col">
-                    <img src={wsp} alt="Whatsapp" />
+                    <img
+                      src={wsp}
+                      alt="Whatsapp"
+                      className="w-[30px] h-[30px]"
+                    />
                   </div>
                   <div className="flex flex-col">
-                    <img src={tele} alt="Telegram" />
+                    <img
+                      src={tele}
+                      alt="Telegram"
+                      className="w-[30px] h-[30px]"
+                    />
                   </div>
                   <div className="flex flex-col">
-                    <img src={msg} alt="Messenger" />
+                    <img
+                      src={msg}
+                      alt="Messenger"
+                      className="w-[30px] h-[30px]"
+                    />
                   </div>
                   <div className="flex flex-col">
-                    <img src={fb} alt="Facebook" />
+                    <img
+                      src={fb}
+                      alt="Facebook"
+                      className="w-[30px] h-[30px]"
+                    />
                   </div>
                   <div className="flex flex-col">
-                    <img src={ig} alt="Instagram" />
+                    <img
+                      src={ig}
+                      alt="Instagram"
+                      className="w-[30px] h-[30px]"
+                    />
                   </div>
                   <div className="flex flex-col">
-                    <img src={linkedin} alt="Linkedin" />
+                    <img
+                      src={linkedin}
+                      alt="Linkedin"
+                      className="w-[30px] h-[30px]"
+                    />
                   </div>
                 </div>
               </div>
