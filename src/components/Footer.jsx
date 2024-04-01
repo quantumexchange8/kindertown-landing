@@ -39,7 +39,7 @@ const Footer = () => {
             {/*Language*/}
             <div className="flex flex-col gap-[25px]">
               <div
-                className="flex h-[30px] gap-[30px] text-2xl"
+                className="flex h-[30px] gap-[30px] text-2xl font-semibold"
                 style={{ fontFamily: "SF Pro Display M" }}
               >
                 <div className="flex flex-col">English</div>
