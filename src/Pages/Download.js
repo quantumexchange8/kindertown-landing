@@ -46,6 +46,7 @@ const Download = () => {
 
     setIsSubmitting(true);
     emailjs
+      //change the id, template id and public key
       .sendForm("service_pszh76a", "template_4m4ms5u", form.current, {
         publicKey: "gQzDzwQht4bausMz-",
       })
@@ -328,7 +329,7 @@ const Download = () => {
         {/*CONTENT 6*/}
         <div className="w-[1000px] flex flex-wrap justify-center items-center gap-5">
           <div className="relative md:w-[1000px] md:h-[500px] md:rounded-[30px] bg-[#D5FFCD] flex gap-[88px] pr-[114px] pl-[100px] pt-[100px] overflow-hidden">
-            <div className="flex flex-col justify-center w-[400px] h-[180px]">
+            <div className="flex flex-col items-center w-[400px] h-[180px]">
               <div
                 className="text-[40px]"
                 style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
@@ -427,9 +428,8 @@ const Download = () => {
                     lineHeight: "normal",
                   }}
                 >
-                  <div>Capture the moments</div>
-                  <div>of childlike innocence</div>
-                  <div>and earnest learning.</div>
+                  Capture the moments of childlike innocence and earnest
+                  learning.
                 </div>
               </div>
             </div>
@@ -459,11 +459,8 @@ const Download = () => {
                   className="text-3xl text-white"
                   style={{ fontFamily: "SF Pro Display B" }}
                 >
-                  <div>With just a tap of </div>
-                  <div>their fingertips,</div>
-                  <div>teachers can tackle</div>
-                  <div>the majority of their</div>
-                  <div> ongoing busyness.</div>
+                  With just a tap of their fingertips, teachers can tackle the
+                  majority of their ongoing busyness.
                 </div>
               </div>
               <div className="flex flex-col">
@@ -481,7 +478,7 @@ const Download = () => {
                 Your browser does not support the video tag.
               </video>
               <div className="absolute bottom-11 right-9 flex items-center w-[326px] h-[170px]">
-                <div className="flex flex-col">
+                <div className="flex flex-col w-[326px]">
                   <div
                     className="text-[30px] text-right text-white"
                     style={{
@@ -489,11 +486,8 @@ const Download = () => {
                       lineHeight: "normal",
                     }}
                   >
-                    <div>The era of intelligence</div>
-                    <div>is gradually enabling</div>
-                    <div>teachers to save a</div>
-                    <div>considerable amount</div>
-                    <div>of valuable time.</div>
+                    The era of intelligence is gradually enabling teachers to
+                    save a considerable amount of valuable time.
                   </div>
                 </div>
               </div>
@@ -554,7 +548,7 @@ const Download = () => {
                 Your browser does not support the video tag.
               </video>
               <div className="absolute bottom-14 left-14 flex items-center w-[300px] h-[170px]">
-                <div className="flex flex-col">
+                <div className="flex flex-col w-[300px]">
                   <div
                     className="text-[30px] text-left"
                     style={{

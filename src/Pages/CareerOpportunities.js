@@ -3,7 +3,7 @@ import React from "react";
 import GirlBg from "../assets/career/lady.mp4";
 import LadyBg from "../assets/career/lady2.mp4";
 import Coding from "../assets/career/coding.mp4";
-import Bg from "../assets/career/bg.png";
+import Bg from "../assets/career/bg.svg";
 const CareerOpportunities = () => {
   return (
     <>
@@ -45,16 +45,12 @@ const CareerOpportunities = () => {
           </video>
           <div className="absolute top-0 left-0 pt-[86px] pl-[83px]">
             <div
-              className="text-[40px] text-left"
+              className="text-[40px] text-left w-[460px]"
               style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
             >
-              <div>Discover how you can</div>
-              <div>make an impact: </div>
-              <div>understand the nature of</div>
-              <div>our work, give yourself a</div>
-              <div>platform to excel, and</div>
-              <div>create the achievements </div>
-              <div>that satisfy you.</div>
+              Discover how you can make an impact: understand the nature of our
+              work, give yourself a platform to excel, and create the
+              achievements that satisfy you.
             </div>
           </div>
         </div>
@@ -62,10 +58,10 @@ const CareerOpportunities = () => {
 
       {/*CONTENT 3*/}
       <div
-        className="w-full flex flex-col justify-center items-center h-screen bg-cover"
+        className="w-full flex flex-col justify-center items-center bg-cover py-[250px]"
         style={{ backgroundImage: `url(${Bg})` }}
       >
-        <div className="w-full flex flex-col justify-center items-center px-[220px] py-[250px]">
+        <div className="w-full flex flex-col justify-center items-center px-[220px]">
           <div className="w-[1000px] flex flex-col justify-center items-center">
             <div
               className="text-[60px] text-white text-center"
@@ -122,13 +118,11 @@ const CareerOpportunities = () => {
         </video>
         <div className="absolute bottom-0 left-0 pb-[90px] pl-[83px]">
           <div
-            className="text-[40px] text-left"
+            className="text-[40px] text-left w-[490px]"
             style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
           >
-            <div>Your values are integrated</div>
-            <div>into everything we build </div>
-            <div>here, expanding your </div>
-            <div>career infinitely.</div>
+            Your values are integrated into everything we build here, expanding
+            your career infinitely.
           </div>
         </div>
       </div>
@@ -172,14 +166,12 @@ const CareerOpportunities = () => {
         </video>
         <div className="absolute bottom-0 left-0 pb-[88px] pl-[83px]">
           <div
-            className="text-[40px] text-left text-white"
+            className="text-[40px] text-left text-white w-[550px]"
             style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
           >
-            <div>Our IT engineers focus on one</div>
-            <div>key point when developing </div>
-            <div>software - the people who will </div>
-            <div>use it. This is also based on</div>
-            <div>respect for customer needs.</div>
+            Our IT engineers focus on one key point when developing software -
+            the people who will use it. This is also based on respect for
+            customer needs.
           </div>
         </div>
       </div>

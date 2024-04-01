@@ -513,7 +513,7 @@ const Home = () => {
           <div className="relative left-24 top-24 flex justify-start items-center">
             <div
               className="text-[40px] w-[460px]"
-              style={{ fontFamily: "SF Pro Display B" }}
+              style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
             >
               Documenting the child's learning and joyful journey in
               kindergarten.

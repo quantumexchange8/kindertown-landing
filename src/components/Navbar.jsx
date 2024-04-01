@@ -3,8 +3,10 @@ import { Link, useLocation } from "react-router-dom";
 import { GlobalIcon } from "./Icons/outline";
 import "../font.css";
 import logo from "../assets/logo.svg";
+
 const Navbar = () => {
   const location = useLocation();
+
   const [activeProductSubPage, setActiveProductSubPage] = useState("parent"); // Default active sub-page for Products section
   const [activeJoinUsSubPage, setActiveJoinUsSubPage] =
     useState("referral-program"); // Default active sub-page for Join Us section
@@ -22,6 +24,7 @@ const Navbar = () => {
     active: "text-[#000] text-center text-base",
     none: "text-[#BBB] text-center text-base",
   };
+
   useEffect(() => {
     // Update active sub-page based on current location
     if (location.pathname.includes("/products")) {
@@ -73,6 +76,7 @@ const Navbar = () => {
           <div>
             <img src={logo} alt="Logo" />
           </div>
+
           <div className="flex items-center gap-[20px]">
             {/* Home link */}
             <Link
