@@ -32,7 +32,7 @@ function App() {
           <Route path="/download" element={<Download />} />
         </Routes>
         <Footer />
-        <ScrollUp showUnder={150} duration={0.5}>
+        <ScrollUp showUnder={150} duration={2000}>
           <img src={arrowUpImage} alt="Scroll to top" />
         </ScrollUp>
       </div>
