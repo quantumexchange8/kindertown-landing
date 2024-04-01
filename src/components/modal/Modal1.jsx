@@ -30,13 +30,11 @@ function Modal1({ isOpen, onClose }) {
               Your browser does not support the video tag.
             </video>
             <div
-              className="absolute bottom-[49px] right-[46px] text-right text-white text-[32px]"
+              className="absolute bottom-[49px] right-[46px] text-right text-white text-[32px] w-[410px]"
               style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
             >
-              <div>The gift parents give to their</div>
-              <div>children is not only love and</div>
-              <div>companionship, but more</div>
-              <div>importantly, education.</div>
+              The gift parents give to their children is not only love and
+              companionship, but more importantly, education.
             </div>
           </div>
 
