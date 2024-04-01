@@ -68,10 +68,11 @@ const Navbar = () => {
   };
 
   return (
-    <div className="flex flex-col fixed top-0 w-full z-50">
+    <div className="flex flex-col top-0 w-full z-50">
       {/* Navbar container */}
+
       <div className="bg-[#fff7efe6] w-full flex justify-center h-[50px]">
-        <div className="max-w-[1000px] w-full flex items-center justify-between">
+        <div className="md:w-[1000px] w-full flex items-center justify-between">
           {/* Navbar content */}
           <div>
             <img src={logo} alt="Logo" />

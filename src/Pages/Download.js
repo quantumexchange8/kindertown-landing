@@ -1,9 +1,8 @@
-// Products.jsx
-
 import React, { useState, useRef } from "react";
 import Swal from "sweetalert2";
 import ReactModal from "react-modal";
 import emailjs from "@emailjs/browser";
+import "./modal.css";
 import Modal1 from "../components/modal/Modal1";
 import Modal2 from "../components/modal/Modal2";
 import Modal3 from "../components/modal/Modal3";
@@ -117,6 +116,8 @@ const Download = () => {
                     isOpen={modal1Open}
                     onRequestClose={() => setModal1Open(false)}
                     contentLabel="Modal 1"
+                    className="modal-content"
+                    overlayClassName="modal-overlay"
                     style={{
                       content: {
                         width: "900px", // Set width to 900px
@@ -166,6 +167,8 @@ const Download = () => {
                     isOpen={modal2Open}
                     onRequestClose={() => setModal2Open(false)}
                     contentLabel="Modal 2"
+                    className="modal-content"
+                    overlayClassName="modal-overlay"
                     style={{
                       content: {
                         width: "900px", // Set width to 900px
@@ -224,6 +227,8 @@ const Download = () => {
                     isOpen={modal3Open}
                     onRequestClose={() => setModal3Open(false)}
                     contentLabel="Modal 3"
+                    className="modal-content"
+                    overlayClassName="modal-overlay"
                     style={{
                       content: {
                         width: "900px", // Set width to 900px

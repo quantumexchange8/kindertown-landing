@@ -10,7 +10,7 @@ import ReferralProgrames from "./Pages/ReferralProgrames";
 import CareerOpportunities from "./Pages/CareerOpportunities";
 import Download from "./Pages/Download";
 import ScrollUp from "react-scroll-up";
-import arrowUpImage from "../src/assets/up.png";
+import arrowUpImage from "../src/assets/up1-01.png";
 function App() {
   return (
     <Router>

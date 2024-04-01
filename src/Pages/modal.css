@@ -1,0 +1,14 @@
+/* Define fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Apply the animation to modal content */
+.modal-content {
+  animation: fadeIn 0.8s ease-in-out forwards;
+}
