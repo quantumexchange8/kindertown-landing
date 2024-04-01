@@ -30,13 +30,11 @@ function Modal3({ isOpen, onClose }) {
               Your browser does not support the video tag.
             </video>
             <div
-              className="absolute top-[29px] right-[46px] text-right text-[32px]"
+              className="absolute top-[29px] right-[46px] text-right text-[32px] w-[389px]"
               style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
             >
-              <div>The contributions made by</div>
-              <div>the school owner to the</div>
-              <div>school, teachers, and</div>
-              <div>students are revolutionary.</div>
+              The contributions made by the school owner to the school,
+              teachers, and students are revolutionary.
             </div>
           </div>
 

@@ -30,13 +30,11 @@ function Modal2({ isOpen, onClose }) {
               Your browser does not support the video tag.
             </video>
             <div
-              className="absolute top-[49px] right-[46px] text-right text-[32px]"
+              className="absolute top-[49px] right-[46px] text-right text-[32px] w-[330px]"
               style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
             >
-              <div>The selfless guidance</div>
-              <div>that teachers provide</div>
-              <div>to children is evident</div>
-              <div>to everyone.</div>
+              The selfless guidance that teachers provide to children is evident
+              to everyone.
             </div>
           </div>
 
