@@ -7,7 +7,7 @@ import Tab3 from "../assets/teacher/tab3.png";
 import Tab4 from "../assets/teacher/tab4.png";
 import Tab5 from "../assets/teacher/tab5.png";
 
-import CTLogo from "../assets/teacher/ct-logo.png";
+import CTLogo from "../assets/teacher/ct-logo.svg";
 import Header from "../assets/teacher/header.png";
 const Teacher = () => {
   return (
