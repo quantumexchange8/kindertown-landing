@@ -1,8 +1,8 @@
 import React from "react";
 
-import logo from "../../assets/termspolicy/Icon.png";
+import logo from "../../assets/termspolicy/Icon.svg";
 
-import close from "../../assets/parentmodal/close.png";
+import close from "../../assets/parentmodal/close.svg";
 
 function Privacy({ isOpen, onClose }) {
   return (
