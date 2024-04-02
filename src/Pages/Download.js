@@ -1,11 +1,14 @@
 import React, { useState, useRef } from "react";
+
 import Swal from "sweetalert2";
-import ReactModal from "react-modal";
+
 import emailjs from "@emailjs/browser";
 import "./modal.css";
-import Modal1 from "../components/modal/Modal1";
-import Modal2 from "../components/modal/Modal2";
-import Modal3 from "../components/modal/Modal3";
+
+import Modal1 from "../components/modal/modalparent";
+
+import Modal2 from "../components/modal/modalteacher";
+import Modal3 from "../components/modal/modaladmin";
 import mobile from "../assets/download/mobile.png";
 import phone from "../assets/download/phone.png";
 import tab from "../assets/download/tablet.png";
@@ -33,9 +36,10 @@ import user from "../assets/download/user.svg";
 import icon from "../assets/download/Mask group.png";
 import tele from "../assets/download/tele.svg";
 const Download = () => {
-  const [modal1Open, setModal1Open] = useState(false);
-  const [modal2Open, setModal2Open] = useState(false);
-  const [modal3Open, setModal3Open] = useState(false);
+  const [showModal1, setShowModal1] = useState(false);
+  const [showModal2, setShowModal2] = useState(false);
+  const [showModal3, setShowModal3] = useState(false);
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const form = useRef();
 
@@ -44,10 +48,15 @@ const Download = () => {
     if (isSubmitting) return; // Prevent multiple submissions
 
     setIsSubmitting(true);
+
+    const formData = new FormData(form.current);
+    const userEmail = formData.get("from_email"); // Assuming the input field has name="email"
+
     emailjs
       //change the id, template id and public key
       .sendForm("service_pszh76a", "template_4m4ms5u", form.current, {
         publicKey: "gQzDzwQht4bausMz-",
+        userEmail: userEmail,
       })
       .then(
         () => {
@@ -80,8 +89,9 @@ const Download = () => {
             </div>
           </div>
         </div>
+        {/*Modal1*/}
+
         <div className="w-[1000px] flex flex-wrap justify-center items-center gap-5">
-          {/*CONTENT 2*/}
           <div className="relative md:w-[490px] md:h-[500px] md:rounded-[30px] bg-[#FFDFA1] pt-[44px] pl-[52px] pr-[30px] flex flex-col gap-6">
             <div className="flex flex-col justify-end gap-5">
               <div
@@ -108,35 +118,17 @@ const Download = () => {
                   />
                 </div>
                 <div className="absolute bottom-0 right-0 p-[30px]">
-                  <button onClick={() => setModal1Open(true)}>
+                  <button onClick={() => setShowModal1(true)}>
                     <img src={button1} alt="Button1" />
                   </button>
-
-                  <ReactModal
-                    isOpen={modal1Open}
-                    onRequestClose={() => setModal1Open(false)}
-                    contentLabel="Modal 1"
-                    className="modal-content"
-                    overlayClassName="modal-overlay"
-                    style={{
-                      content: {
-                        width: "900px", // Set width to 900px
-                        margin: "auto", // Center horizontally
-                        borderRadius: "50px", // Set border radius to 50px
-                        display: "flex",
-                        justifyContent: "center", // Center horizontally
-                        alignItems: "center", // Center vertically
-                        overflow: "auto",
-                      },
-                    }}
-                  >
-                    <Modal1 onClose={() => setModal1Open(false)} />
-                  </ReactModal>
+                  <Modal1
+                    showModal1={showModal1}
+                    setShowModal1={setShowModal1}
+                  />
                 </div>
               </div>
             </div>
           </div>
-          {/*CONTENT 3*/}
           <div className="relative md:w-[490px] md:h-[500px] md:rounded-[30px] bg-[#3F5DFF] pt-[41px] pb-[30px] pl-[62px] pr-[30px] flex flex-col gap-6">
             <div className="flex flex-col justify-end gap-5">
               <img src={tab} alt="Tablet" className="w-[365px] h-[280px]" />
@@ -159,36 +151,17 @@ const Download = () => {
                   </div>
                 </div>
                 <div className="absolute bottom-0 right-0 p-[30px]">
-                  <button onClick={() => setModal2Open(true)}>
+                  <button onClick={() => setShowModal2(true)}>
                     <img src={button2} alt="Button2" />
                   </button>
-
-                  <ReactModal
-                    isOpen={modal2Open}
-                    onRequestClose={() => setModal2Open(false)}
-                    contentLabel="Modal 2"
-                    className="modal-content"
-                    overlayClassName="modal-overlay"
-                    style={{
-                      content: {
-                        width: "900px", // Set width to 900px
-                        margin: "auto", // Center horizontally
-                        borderRadius: "50px", // Set border radius to 50px
-                        display: "flex",
-                        justifyContent: "center", // Center horizontally
-                        alignItems: "center", // Center vertically
-                        overflow: "auto",
-                      },
-                    }}
-                  >
-                    <Modal2 onClose={() => setModal2Open(false)} />
-                  </ReactModal>
+                  <Modal2
+                    showModal2={showModal2}
+                    setShowModal2={setShowModal2}
+                  />
                 </div>
               </div>
             </div>
           </div>
-          {/*CONTENT 4*/}
-
           <div className="relative md:w-[1000px] md:h-[500px] md:rounded-[30px] items-center bg-[#2FC300] flex gap-[99px] pr-[30px] overflow-hidden">
             <div className="flex w-[546px] relative bottom-0 top-10 right-3">
               <img src={imac} alt="imac" className="w-[592px] h-full" />
@@ -219,103 +192,19 @@ const Download = () => {
               </div>
               <div className="flex flex-col">
                 <div className="absolute bottom-[30px] right-[30px]">
-                  <button onClick={() => setModal3Open(true)}>
+                  <button onClick={() => setShowModal3(true)}>
                     <img src={button3} alt="Button3" />
                   </button>
-
-                  <ReactModal
-                    isOpen={modal3Open}
-                    onRequestClose={() => setModal3Open(false)}
-                    contentLabel="Modal 3"
-                    className="modal-content"
-                    overlayClassName="modal-overlay"
-                    style={{
-                      content: {
-                        width: "900px", // Set width to 900px
-                        margin: "auto", // Center horizontally
-                        borderRadius: "50px", // Set border radius to 50px
-                        display: "flex",
-                        justifyContent: "center", // Center horizontally
-                        alignItems: "center", // Center vertically
-                        overflow: "auto",
-                      },
-                    }}
-                  >
-                    <Modal3 onClose={() => setModal3Open(false)} />
-                  </ReactModal>
+                  <Modal3
+                    showModal3={showModal3}
+                    setShowModal3={setShowModal3}
+                  />
                 </div>
               </div>
             </div>
           </div>
-
-          {/* coding margin-method
-          <div className="relative md:w-[1000px] md:h-[500px] md:rounded-[30px] bg-[#2FC300] pr-[30xp] flex gap-6 overflow-hidden">
-            <div className="flex gap-[99px]">
-              <div className="w-[592px] h-[500px] flex flex-col items-end">
-                <div className="mt-12">
-                  <img src={imac} alt="Mobile" />
-                </div>
-              </div>
-              <div className="flex flex-col justify-center items-center gap-5">
-                <div
-                  className="text-[30px]"
-                  style={{ fontFamily: "SF Pro Display B" }}
-                >
-                  Kindertown Admin
-                </div>
-                <div
-                  className="flex flex-col text-2xl text-left text-white"
-                  style={{
-                    fontFamily: "SF Pro Display M",
-                    lineHeight: "normal",
-                  }}
-                >
-                  <div>No more sluggish</div>
-                  <div>school enrollment </div>
-                  <div>processes from now.</div>
-                </div>
-              </div>
-            </div>
-          </div>
-                */}
-          {/* method asal
-          <div className="relative box-border md:w-[1000px] md:h-[500px] md:rounded-[30px] bg-[#2FC300] pt-[49px] pr-[30px] flex gap-6">
-            <div className="flex justify-start gap-[99px] overflow-hidden">
-              <div className="w-[592px] h-[500px] flex flex-col justify-start">
-                <div className="relative right-10">
-                  <img src={imac} alt="Mobile" />
-                </div>
-              </div>
-              <div className="flex flex-col justify-center items-center">
-                <div className="flex justify-center items-center">
-                  <div className="flex flex-col justify-start gap-5">
-                    <div
-                      className="text-[30px]"
-                      style={{ fontFamily: "SF Pro Display B" }}
-                    >
-                      Kindertown Admin
-                    </div>
-                    <div
-                      className="text-2xl text-left text-white"
-                      style={{
-                        fontFamily: "SF Pro Display M",
-                        lineHeight: "normal",
-                      }}
-                    >
-                      <div>No more sluggish</div>
-                      <div>school enrollment</div>
-                      <div> processes from now.</div>
-                    </div>
-                  </div>
-                  <div className="absolute bottom-0 right-0 pr-[30px] pb-[30px]">
-                    <img src={button3} alt="Button3" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          */}
         </div>
+
         {/*CONTENT 5*/}
         <div className="w-[1000px] flex-col justify-center items-center">
           <div

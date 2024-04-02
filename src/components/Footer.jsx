@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ReactModal from "react-modal";
+
 import { Link } from "react-router-dom";
 import logo from "../assets/footer/logo.svg";
 import wsp from "../assets/footer/wsp-01.svg";
@@ -11,8 +11,8 @@ import tele from "../assets/footer/tele-01.svg";
 import google from "../assets/footer/android.svg";
 import ios from "../assets/footer/apple.svg";
 import ct from "../assets/footer/ct.svg";
-import Privacy from "../components/modal/Privacy";
-import Terms from "../components/modal/Terms";
+import Privacy from "../components/modal/privacymodal";
+import Terms from "../components/modal/termsmodal";
 const Footer = () => {
   const [PrivacyOpen, setPrivacyOpen] = useState(false);
   const [TermsOpen, setTermsOpen] = useState(false);
@@ -212,52 +212,20 @@ const Footer = () => {
                   >
                     Privacy Policy
                   </button>
-                  <ReactModal
-                    isOpen={PrivacyOpen}
-                    onRequestClose={() => setPrivacyOpen(false)}
-                    contentLabel="Privacy"
-                    style={{
-                      content: {
-                        width: "900px", // Set width to 900px
-                        margin: "auto", // Center horizontally
-                        borderRadius: "50px", // Set border radius to 50px
-                        display: "flex",
-                        justifyContent: "center", // Center horizontally
-                        alignItems: "center", // Center vertically
-                        overflow: "auto",
-                      },
-                    }}
-                  >
-                    <Privacy onClose={() => setPrivacyOpen(false)} />
-                  </ReactModal>
+                  <Privacy
+                    PrivacyOpen={PrivacyOpen}
+                    setPrivacyOpen={setPrivacyOpen}
+                  />
                 </div>
                 <div>|</div>
                 <div className="flex-col">
-                  {" "}
                   <button
                     className="hover:text-[#FF8400]"
                     onClick={() => setTermsOpen(true)}
                   >
                     Terms of use
                   </button>
-                  <ReactModal
-                    isOpen={TermsOpen}
-                    onRequestClose={() => setTermsOpen(false)}
-                    contentLabel="Terms"
-                    style={{
-                      content: {
-                        width: "900px", // Set width to 900px
-                        margin: "auto", // Center horizontally
-                        borderRadius: "50px", // Set border radius to 50px
-                        display: "flex",
-                        justifyContent: "center", // Center horizontally
-                        alignItems: "center", // Center vertically
-                        overflow: "auto",
-                      },
-                    }}
-                  >
-                    <Terms onClose={() => setTermsOpen(false)} />
-                  </ReactModal>
+                  <Terms TermsOpen={TermsOpen} setTermsOpen={setTermsOpen} />
                 </div>
                 <div>|</div>
               </div>
