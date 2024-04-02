@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { GlobalIcon } from "./Icons/outline";
 import "../font.css";
@@ -23,6 +23,15 @@ const Navbar = () => {
     none: "text-[#BBB] text-center text-base",
   };
 
+  useEffect(() => {
+    // Update active sub-page based on current location
+    if (location.pathname.includes("/products")) {
+      setActiveProductSubPage(getActiveProductSubPage(location.pathname));
+    } else if (location.pathname.includes("/join-us")) {
+      setActiveJoinUsSubPage(getActiveJoinUsSubPage(location.pathname));
+    }
+  }, [location.pathname]);
+
   // Handle click on Products link to set the default active sub-page
   const handleProductsClick = () => {
     setActiveProductSubPage("parent"); // Set the default active sub-page to Kindertown Parent
@@ -32,13 +41,28 @@ const Navbar = () => {
     setActiveJoinUsSubPage("referral-program"); // Set the default active sub-page to Kindertown Parent
   };
 
-  // Handle click on Products sub-page links
-  const handleProductSubPage = (subPage) => {
-    setActiveProductSubPage(subPage);
+  const getActiveProductSubPage = (pathname) => {
+    // Logic to determine active sub-page for Products section
+    if (pathname.includes("/products/parent")) {
+      return "parent";
+    } else if (pathname.includes("/products/teacher")) {
+      return "teacher";
+    } else if (pathname.includes("/products/admin")) {
+      return "admin";
+    }
+    // Default to "parent" if none matches
+    return "parent";
   };
 
-  const handleJoinUsSubPage = (subPage) => {
-    setActiveJoinUsSubPage(subPage);
+  const getActiveJoinUsSubPage = (pathname) => {
+    // Logic to determine active sub-page for Join Us section
+    if (pathname.includes("/join-us/referral-program")) {
+      return "referral-program";
+    } else if (pathname.includes("/join-us/career-opportunities")) {
+      return "career-opportunities";
+    }
+    // Default to "referral-program" if none matches
+    return "referral-program";
   };
 
   return (
@@ -46,7 +70,7 @@ const Navbar = () => {
       <div className="bg-[#fff7efe6] w-full flex justify-center h-[50px]">
         <div className="max-w-[1000px] w-full flex items-center justify-between">
           <div>
-            <img src={logo} alt="" />
+            <img src={logo} alt="Logo" />
           </div>
           <div className="flex items-center gap-[20px]">
             <Link
@@ -113,7 +137,7 @@ const Navbar = () => {
                   : `${subLinkStyles.none}`
               }`}
               style={{ fontFamily: "SF Pro Medium" }}
-              onClick={() => handleProductSubPage("parent")}
+              onClick={() => setActiveProductSubPage("parent")}
             >
               Kindertown Parent
             </Link>
@@ -125,7 +149,7 @@ const Navbar = () => {
                   : `${subLinkStyles.none}`
               }`}
               style={{ fontFamily: "SF Pro Medium" }}
-              onClick={() => handleProductSubPage("teacher")}
+              onClick={() => setActiveProductSubPage("teacher")}
             >
               Kindertown Teacher
             </Link>
@@ -137,7 +161,7 @@ const Navbar = () => {
                   : `${subLinkStyles.none}`
               }`}
               style={{ fontFamily: "SF Pro Medium" }}
-              onClick={() => handleProductSubPage("admin")}
+              onClick={() => setActiveProductSubPage("admin")}
             >
               Kindertown Admin
             </Link>
@@ -156,7 +180,7 @@ const Navbar = () => {
                   : `${subLinkStyles.none}`
               }`}
               style={{ fontFamily: "SF Pro Medium" }}
-              onClick={() => handleJoinUsSubPage("referral-program")}
+              onClick={() => setActiveJoinUsSubPage("referral-program")}
             >
               Referral Program
             </Link>
@@ -168,7 +192,7 @@ const Navbar = () => {
                   : `${subLinkStyles.none}`
               }`}
               style={{ fontFamily: "SF Pro Medium" }}
-              onClick={() => handleJoinUsSubPage("career-opportunities")}
+              onClick={() => setActiveJoinUsSubPage("career-opportunities")}
             >
               Career Opportunities
             </Link>
