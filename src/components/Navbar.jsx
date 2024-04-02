@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { GlobalIcon } from "./Icons/outline";
 import "../font.css";
-
+import logo from "../assets/logo.svg";
 const Navbar = () => {
   const location = useLocation();
   const [activeProductSubPage, setActiveProductSubPage] = useState("parent"); // Default active sub-page for Products section
@@ -46,7 +46,7 @@ const Navbar = () => {
       <div className="bg-[#fff7efe6] w-full flex justify-center h-[50px]">
         <div className="max-w-[1000px] w-full flex items-center justify-between">
           <div>
-            <img src="image/logo/logo.svg" alt="" />
+            <img src={logo} alt="" />
           </div>
           <div className="flex items-center gap-[20px]">
             <Link
