@@ -8,7 +8,7 @@ import Tel from "../assets/home/tel.png";
 import Pencil from "../assets/home/pencils.png";
 import Computer from "../assets/home/computer.png";
 import Tools from "../assets/home/measure.svg";
-import Family from "../assets/home/family.svg";
+import Family from "../assets/home/family.png";
 import Teachers from "../assets/home/teachers.png";
 import Slowmode from "../assets/home/slowmode.png";
 import Choose from "../assets/home/choose.svg";
@@ -20,8 +20,8 @@ import Main from "../assets/home/main.png";
 const Home = () => {
   return (
     <>
-      <div className=" flex justify-center mt-[50px]">
-        <div className="md:w-[1000px] mt-[50px] flex flex-col">
+      <div className=" flex justify-center mt-[50px] md:pb-[150px] pb-[100px]">
+        <div className="w-full md:w-[1000px] pt-[30px] md:pt-[50px] flex flex-col pl-[31px] pr-[32px] md:px-0">
           {/* CONTENT 1 */}
           <div>
             <img src={Main} alt="" loading="lazy" />
@@ -29,15 +29,15 @@ const Home = () => {
 
           <div className="w-full flex flex-col justify-center gap-[150px]">
             {/*Content 2 */}
-            <div className="flex flex-col items-center w-full gap-[60px]">
+            <div className="flex flex-col items-center w-full md:gap-[60px] gap-[30px]">
               <div
-                className="w-full max-w-[610px] text-[80px] text-center leading-[90px]"
+                className="w-full md:max-w-[610px] text-4xl md:text-[80px] text-center md:leading-[90px]"
                 style={{ fontFamily: "SF Pro Display B" }}
               >
                 Zero - Worries. Zero - Hassle.
               </div>
               <div
-                className="w-full text-center text-[32px]"
+                className="w-full text-center md:text-[32px] text-xl"
                 style={{ fontFamily: "SF Pro Display M", lineHeight: "normal" }}
               >
                 A child's learning world begins in the classroom, using tools
@@ -55,16 +55,16 @@ const Home = () => {
 
           {/*CONTENT 3 */}
 
-          <div className="w-full mt-[50px] max-w-[1000px] justify-center">
+          <div className="w-full md:pt-[150px] pt-[100px] md:max-w-[1000px] flex flex-col justify-center items-center">
             <h1
-              className="text-center my-20 text-3xl"
+              className="text-center w-[175px] md:w-[496px] justify-center items-center md:text-3xl text-xl"
               style={{ fontFamily: "SF Pro Display B" }}
             >
               Kindertown’s app super highlight
             </h1>
-            <div className="flex flex-col gap-7">
-              <div className="flex flex-col md:flex-row md:flex-wrap justify-between">
-                <div className="md:w-[315px] md:h-[460px] md:rounded-[30px] py-[70px] pl-[27px] pr-[18px] bg-[#F67F00] flex flex-col justify-center items-center gap-[60px]">
+            <div className="md:w-[1000px] flex flex-col  md:gap-7 gap-[30px] md:pt-[50px] pt-[30px] ">
+              <div className="flex flex-col md:flex-row flex-wrap justify-between md:gap-7 gap-[30px]">
+                <div className="w-full md:w-[315px] md:h-[460px] rounded-[30px] pt-[47px] pb-12 md:py-[70px] px-[25px] md:pl-[27px] md:pr-[18px] bg-[#F67F00] flex flex-col justify-center items-center gap-[50px] md:gap-[60px]">
                   <div>
                     <img
                       src={Planner}
@@ -73,7 +73,7 @@ const Home = () => {
                     />
                   </div>
 
-                  <div className="flex flex-col items-center gap-5 w-[270px] md:h-full">
+                  <div className="flex flex-col items-center gap-[30px] md:gap-5 w-[270px] md:h-full">
                     <div
                       className="text-center text-xl w-full"
                       style={{
@@ -114,7 +114,7 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-                <div className="md:w-[315px] md:h-[460px] md:rounded-[30px] py-[70px] pl-[22px] pr-[23px] bg-[#FFC19F]  flex flex-col justify-center items-center gap-[60px]">
+                <div className="w-full md:w-[315px] md:h-[460px] rounded-[30px] py-[44px] md:py-[70px] md:pl-[22px] md:pr-[23px] px-[25px] bg-[#FFC19F]  flex flex-col justify-center items-center gap-[50px] md:gap-[60px]">
                   <div>
                     <img
                       src={Child}
@@ -123,7 +123,7 @@ const Home = () => {
                     />
                   </div>
 
-                  <div className="flex flex-col items-center gap-5 w-[270px] md:h-full">
+                  <div className="flex flex-col items-center gap-[30px] md:gap-5 w-[270px] md:h-full">
                     <div
                       className="text-center text-xl leading-normal w-full"
                       style={{ fontFamily: "SF Pro Display B" }}
@@ -158,7 +158,7 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-                <div className="md:w-[314px] md:h-[460px] md:rounded-[30px] pt-[70px] pb-[93px] px-[21px] bg-[#FCBF4A]  flex flex-col justify-center items-center gap-[60px]">
+                <div className="w-full md:w-[314px] md:h-[460px] rounded-[30px] py-[60px] md:pt-[70px] md:pb-[93px] px-[25px] md:px-[21px] bg-[#FCBF4A]  flex flex-col justify-center items-center gap-[50px] md:gap-[60px]">
                   <div>
                     <img
                       src={Playground}
@@ -167,7 +167,7 @@ const Home = () => {
                     />
                   </div>
 
-                  <div className="flex flex-col items-center gap-[18px] w-full md:h-full">
+                  <div className="flex flex-col items-center gap-[30px] md:gap-[18px] w-full md:h-full">
                     <div
                       className="text-center text-xl leading-normal w-full"
                       style={{ fontFamily: "SF Pro Display B" }}
@@ -198,8 +198,8 @@ const Home = () => {
                 </div>
               </div>
 
-              <div className="flex flex-col md:flex-row md:flex-wrap justify-between">
-                <div className="md:w-[315px] md:h-[460px] md:rounded-[30px] bg-[#FDE0A4] pl-[27px] pr-[18px] flex flex-col justify-center items-center gap-[60px] py-[70px]">
+              <div className="flex flex-col md:flex-row flex-wrap justify-between md:gap-7 gap-[30px]">
+                <div className="w-full md:w-[315px] md:h-[460px] rounded-[30px] bg-[#FDE0A4] px-[25px] md:pl-[27px] md:pr-[18px] pt-[47px] pb-12 md:py-[70px] flex flex-col justify-center items-center gap-[50px] md:gap-[60px]">
                   <div>
                     <img
                       src={Computer}
@@ -208,7 +208,7 @@ const Home = () => {
                     />
                   </div>
 
-                  <div className="flex flex-col items-center gap-5 w-[270px] md:h-full">
+                  <div className="flex flex-col items-center md:gap-5 gap-[30px] w-[270px] md:h-full">
                     <div
                       className="text-center text-xl leading-normal w-full"
                       style={{ fontFamily: "SF Pro Display B" }}
@@ -245,7 +245,7 @@ const Home = () => {
                   </div>
                 </div>
 
-                <div className="md:w-[315px] md:h-[460px] md:rounded-[30px]  bg-[#E0956C] flex flex-col justify-center items-center gap-[60px] py-[70px] pl-[27px] pr-[18px] ">
+                <div className="w-full md:w-[315px] md:h-[460px] rounded-[30px]  bg-[#E0956C] flex flex-col justify-center items-center md:gap-[60px] gap-[50px] md:py-[70px] md:pl-[27px] md:pr-[18px] pt-[47px] pb-[48px] px-[25px]">
                   <div>
                     <img
                       src={Pencil}
@@ -254,7 +254,7 @@ const Home = () => {
                     />
                   </div>
 
-                  <div className="flex flex-col items-center gap-5 w-[270px] md:h-full">
+                  <div className="flex flex-col items-center gap-[30px] md:gap-5 w-[270px] md:h-full">
                     <div
                       className="text-center text-xl leading-normal w-full"
                       style={{ fontFamily: "SF Pro Display B" }}
@@ -291,7 +291,7 @@ const Home = () => {
                   </div>
                 </div>
 
-                <div className="md:w-[314px] md:h-[460px] md:rounded-[30px]  bg-[#FFDDB9] flex flex-col justify-center items-center gap-[60px] px-[22px] py-[70px]">
+                <div className="w-full md:w-[314px] md:h-[460px] rounded-[30px]  bg-[#FFDDB9] flex flex-col justify-center items-center gap-[50px] md:gap-[60px] px-[25px] md:px-[22px] md:py-[70px] pt-[38px] pb-[39px]">
                   <div>
                     <img
                       src={Tel}
@@ -299,7 +299,7 @@ const Home = () => {
                       className="md:h-[120px] md:w-[126px]"
                     />
                   </div>
-                  <div className="flex flex-col items-center gap-5 w-[270px] md:h-full">
+                  <div className="flex flex-col items-center gap-[30px] md:gap-5 w-[270px] md:h-full">
                     <div
                       className="text-center text-xl leading-normal w-full"
                       style={{ fontFamily: "SF Pro Display B" }}
@@ -341,45 +341,47 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="w-full flex flex-col bg-[#FFF7EF] mt-24 py-[150px] px-[220px]">
+      <div className="w-full flex flex-col justify-center items-center bg-[#FFF7EF] md:py-[150px] px-5 md:px-[220px] pt-[50px] pb-[100px]">
         {/*CONTENT 4*/}
-        <div className="w-[1000px] mx-auto flex flex-col justify-center items-center gap-y-12">
+        <div className="w-full md:w-[1000px] flex flex-col justify-center items-center gap-[30px] md:gap-[50px]">
           <div className="flex flex-col justify-center items-center">
             <img src={Tools} className="w-32 h-32" alt="Tools" />
           </div>
           <div className="flex flex-col items-center w-full md:h-full">
             <div
-              className="text-center text-[80px] text-[#7A5AF8] leading-[90px] w-full"
-              style={{ fontFamily: "SF Pro Display B" }}
+              className="text-center text-4xl md:text-[80px] text-[#7A5AF8] md:leading-[90px] leading-normal w-full"
+              style={{
+                fontFamily: "SF Pro Display B",
+              }}
             >
-              <div className="flex items-center justify-center h-[90px]">
+              <div className="flex items-center justify-center">
                 Essential tools.
               </div>
-              <div className="flex items-center justify-center h-[90px]">
+              <div className="flex items-center justify-center">
                 Powerful system.
               </div>
             </div>
           </div>
         </div>
 
-        <div className="w-[1000px] mx-auto flex flex-col justify-center items-center pt-[200px] gap-y-[150px]">
+        <div className="w-full md:w-[1000px] flex flex-col justify-center items-center pt-[100px] md:pt-[200px] gap-[100px] md:gap-[150px]">
           {/* REFER HERE FOR SAMPLE */}
 
           {/* CONTENT 5 */}
-          <div className="flex gap-9">
+          <div className="w-full md:flex flex-wrap md:gap-9 gap-[30px]">
             <div>
               <img src={Family} alt="Family" />
             </div>
-            <div className="flex flex-col justify-center w-[864px] gap-[30px]">
+            <div className="flex flex-col justify-center w-full md:w-[864px] md:gap-[30px] gap-[15px]">
               <div
-                className="text-[#4D9138] text-[32px] pt-[30px]"
+                className="text-[#4D9138] text-[20px] md:text-[32px] pt-[30px]"
                 style={{ fontFamily: "SF Pro Display EB" }}
               >
                 Child's Learning Journey
               </div>
               <div className="flex flex-col gap-10">
                 <div
-                  className="text-[32px]"
+                  className="md:text-[32px] text-xl"
                   style={{
                     fontFamily: "SF Pro Display M",
                     lineHeight: "normal",
@@ -393,7 +395,7 @@ const Home = () => {
                   and most convenient registration process and payment methods.
                 </div>
                 <div
-                  className="text-[32px]"
+                  className="md:text-[32px] text-xl"
                   style={{
                     fontFamily: "SF Pro Display M",
                     lineHeight: "normal",
@@ -409,20 +411,23 @@ const Home = () => {
             </div>
           </div>
           {/* CONTENT 6 */}
-          <div className="flex gap-9">
+          <div className="w-full md:flex flex-wrap md:gap-9 gap-[30px]">
             <div>
               <img src={Teachers} alt="Family" />
             </div>
-            <div className="flex flex-col justify-center w-[864px] gap-[30px]">
+            <div className="flex flex-col justify-center md:w-[864px] md:gap-[30px] gap-[15px]">
               <div
-                className="text-[#752912] text-[32px] pt-[30px]"
-                style={{ fontFamily: "SF Pro Display EB" }}
+                className="text-[#752912] md:text-[32px] text-[20px] pt-[30px]"
+                style={{
+                  fontFamily: "SF Pro Display EB",
+                  lineHeight: "normal",
+                }}
               >
                 We understand the busyness of teachers
               </div>
               <div className="flex flex-col gap-10">
                 <div
-                  className="text-[32px]"
+                  className="md:text-[32px] text-[20px]"
                   style={{
                     fontFamily: "SF Pro Display M",
                     lineHeight: "normal",
@@ -436,7 +441,7 @@ const Home = () => {
                   progress.
                 </div>
                 <div
-                  className="text-[32px]"
+                  className="md:text-[32px] text-[20px]"
                   style={{
                     fontFamily: "SF Pro Display M",
                     lineHeight: "normal",
@@ -453,20 +458,20 @@ const Home = () => {
             </div>
           </div>
           {/* CONTENT 7 */}
-          <div className="flex gap-9">
+          <div className="w-full md:flex flex-wrap md:gap-9 gap-[30px]">
             <div>
               <img src={Slowmode} alt="Family" />
             </div>
-            <div className="flex flex-col justify-center w-[864px] gap-[30px]">
+            <div className="flex flex-col justify-center w-full md:w-[864px] md:gap-[30px] gap-[15px]">
               <div
-                className="text-[#00A0CB] text-[32px] pt-[30px]"
+                className="text-[#00A0CB] md:text-[32px] text-xl pt-[30px]"
                 style={{ fontFamily: "SF Pro Display EB" }}
               >
                 Break free from traditional slow modes.
               </div>
               <div className="flex flex-col gap-10">
                 <div
-                  className="text-[32px]"
+                  className="md:text-[32px] text-xl"
                   style={{
                     fontFamily: "SF Pro Display M",
                     lineHeight: "normal",
@@ -481,7 +486,7 @@ const Home = () => {
                   teachers, and posting announcements.
                 </div>
                 <div
-                  className="text-[32px]"
+                  className="md:text-[32px] text-xl"
                   style={{
                     fontFamily: "SF Pro Display M",
                     lineHeight: "normal",
@@ -500,19 +505,20 @@ const Home = () => {
       </div>
 
       {/*Content 8 - Video */}
-      <div className="relative w-full overflow-hidden">
-        <div className="w-full h-[900px]">
+
+      <div className="relative w-full  md:h-[900px] h-[280px] overflow-hidden">
+        <div className="w-full md:pt-[108px] md:pl-[106px]">
           <video
             src={GirlBg}
             autoPlay
             loop
             muted
-            className="absolute top-[-379px] left-0 w-full object-cover object-center"
+            className="absolute md:top-[-379px] left-0 w-full md:object-cover object-center"
           />
 
-          <div className="relative left-24 top-24 flex justify-start items-center">
+          <div className="absolute md:left-24 md:top-24 left-5 top-[21px] flex items-center">
             <div
-              className="text-[40px] w-[460px]"
+              className="md:text-[40px] text-base md:w-[460px] w-[149px]"
               style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
             >
               Documenting the child's learning and joyful journey in
@@ -522,37 +528,53 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="w-full py-[200px]  px-[220px] flex justify-center items-center">
-        <div className="w-[1000px] flex flex-col justify-center items-center gap-y-[200px]">
+      <div className="w-full md:flex md:py-[200px] pt-[100px] md:px-[220px] pl-[31px] pr-[32px] flex justify-center items-center">
+        <div className="w-full md:w-[1000px] flex flex-col justify-center items-center md:gap-[200px] gap-[100px]">
           {/*CONTENT 9*/}
-          <div className="flex flex-col justify-center items-center gap-[50px]">
+          <div className="flex flex-col justify-center items-center gap-[30px] md:gap-[50px]">
             <div>
               <img src={Choose} alt="Teachers" className="w-32 h-32" />
             </div>
-            <div className="flex w-[466px] h-40">
+            <div className="flex md:w-[466px] md:h-40 items-center">
               <div
-                className="text-[#752A15] leading-[90px]"
-                style={{ fontSize: "80px", fontFamily: "SF Pro Display B" }}
+                className="text-[#752A15] md:text-[80px] text-center text-4xl md:leading-[90px]"
+                style={{ fontFamily: "SF Pro Display B" }}
               >
                 Why choose Kindertown?
               </div>
             </div>
             <div className="flex items-center">
               <div
-                className="text-[32px]"
+                className="md:text-[32px] text-base"
                 style={{
                   fontFamily: "SF Pro Display M",
                   lineHeight: "normal",
                 }}
               >
-                <div className="flex items-center justify-center ">
+                <div className="hidden md:flex items-center justify-center ">
                   Let's address the complex operations of the school to enhance
                 </div>
-                <div className="flex items-center justify-center">
+                <div className="hidden md:flex items-center justify-center">
                   efficiency for both the school and teachers. Simultaneously,
                 </div>
-                <div className="flex items-center justify-center">
+                <div className="hidden md:flex items-center justify-center">
                   let's effectively enhance the school's reputation.
+                </div>
+
+                <div className="md:hidden flex items-center justify-center ">
+                  Let's address the complex operations of
+                </div>
+                <div className=" md:hidden flex items-center justify-center">
+                  the school to enhance efficiency for both
+                </div>
+                <div className=" md:hidden flex items-center justify-center">
+                  the school and teachers. Simultaneously,
+                </div>
+                <div className=" md:hidden flex items-center justify-center">
+                  let's effectively enhance the school's
+                </div>
+                <div className=" md:hidden flex items-center justify-center">
+                  reputation.
                 </div>
               </div>
             </div>
@@ -561,16 +583,23 @@ const Home = () => {
           {/*CONTENT 10*/}
           <div className="w-full flex flex-col justify-center items-center gap-[50px]">
             <div>
-              <img src={Owners} alt="Owner" className="w-[600px] h-[426px]" />
+              <img
+                src={Owners}
+                alt="Owner"
+                className="md:w-[600px] md:h-[426px]"
+              />
             </div>
             <div className="flex flex-col justify-center items-center gap-[30px]">
-              <div style={{ fontSize: "50px", fontFamily: "SF Pro Display B" }}>
+              <div
+                className="md:text-[50px] text-[32px]"
+                style={{ fontFamily: "SF Pro Display B" }}
+              >
                 School Owners
               </div>
 
               <div className="flex items-center">
                 <div
-                  className="text-[32px]"
+                  className="md:text-[32px] text-base"
                   style={{
                     fontFamily: "SF Pro Display M",
                     lineHeight: "normal",

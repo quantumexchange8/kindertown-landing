@@ -3,12 +3,18 @@ import { Link, useLocation } from "react-router-dom";
 import { GlobalIcon } from "./Icons/outline";
 import "../font.css";
 import logo from "../assets/logo.svg";
+import menu from "../assets/menu.svg";
 const Navbar = () => {
   const location = useLocation();
   const [activeProductSubPage, setActiveProductSubPage] = useState("parent"); // Default active sub-page for Products section
   const [activeJoinUsSubPage, setActiveJoinUsSubPage] =
     useState("referral-program"); // Default active sub-page for Products section
+  const [showMenu, setShowMenu] = useState(false); // State to manage the visibility of the menu
 
+  useEffect(() => {
+    // Close the menu when the location changes
+    setShowMenu(false);
+  }, [location]);
   // Define common styles for the links
   const linkStyles = {
     base: "flex justify-center items-center text-[#FFF] bg-[#F67F00] rounded-[15px]",
@@ -18,8 +24,16 @@ const Navbar = () => {
     download: "w-[100px]",
   };
 
+  const linkStylesmobile = {
+    base: "flex px-2 text-[#FFF] bg-[#F67F00] rounded-[15px] items-center h-[28px]  text-[20px]",
+    home: "w-[76px] items-center justify-center",
+    products: "block w-[90px] items-center justify-center",
+    joinUs: "block w-20 items-center justify-center",
+    download: "block w-[100px] items-center justify-center",
+  };
+
   const subLinkStyles = {
-    active: "text-[#000] text-center text-base",
+    active: "text-[#000] text-center text-[base]",
     none: "text-[#BBB] text-center text-base",
   };
 
@@ -66,13 +80,14 @@ const Navbar = () => {
   };
 
   return (
-    <div className="flex flex-col fixed top-0 w-full z-40">
-      <div className="bg-[#fff7efe6] w-full flex justify-center h-[50px]">
-        <div className="max-w-[1000px] w-full flex items-center justify-between">
-          <div>
+    <div className="flex flex-col fixed top-0 md:w-full z-40">
+      <div className="bg-[#fff7efe6] w-full flex justify-center h-[50px] px-5 md:px-[220px]">
+        <div className="w-full md:w-[1000px] flex items-center justify-between">
+          <div className="hidden md:flex flex-col">
             <img src={logo} alt="Logo" />
           </div>
-          <div className="flex items-center gap-[20px]">
+          {/* web/desktop*/}
+          <div className="hidden md:flex items-center gap-[20px]">
             <Link
               to="/"
               className={`${
@@ -121,6 +136,89 @@ const Navbar = () => {
             </Link>
             <div>
               <GlobalIcon />
+            </div>
+          </div>
+          {/* mobile*/}
+          <div className="flex md:hidden items-center justify-between gap-[234px]">
+            <div className="flex flex-col">
+              <img src={logo} alt="Logo" />
+            </div>
+            <div className="flex gap-[30px] items-center">
+              <div>
+                <GlobalIcon />
+              </div>
+              <div>
+                <button onClick={() => setShowMenu(!showMenu)}>
+                  <img src={menu} alt="Menu" />
+                </button>
+              </div>
+            </div>
+          </div>
+          {/*Mobile*/}
+          <div className={`md:hidden ${showMenu ? "block" : "hidden"}`}>
+            <div className="fixed inset-0 z-50">
+              <div className="bg-[#E8E8E8] bg-opacity-75 backdrop-blur-sm flex items-center justify-center min-h-screen">
+                <div className="bg-white w-full flex flex-col pb-[100px] gap-3 h-[212px] py-[30px] px-5 text-left">
+                  <div className="text-[20px]">
+                    <Link
+                      to="/"
+                      className={`${
+                        location.pathname === "/"
+                          ? `${linkStylesmobile.base} ${linkStylesmobile.home}`
+                          : ""
+                      }`}
+                      style={{ fontFamily: "SF Pro Display M" }}
+                    >
+                      Home
+                    </Link>
+                  </div>
+                  <div className="text-[20px]">
+                    {/* Products link */}
+                    <Link
+                      to="/products/parent"
+                      className={`${
+                        location.pathname.includes("/products")
+                          ? `${linkStylesmobile.base} ${linkStylesmobile.products}`
+                          : ""
+                      }`}
+                      style={{ fontFamily: "SF Pro Display M" }}
+                      onClick={handleProductsClick} // Add onClick handler
+                    >
+                      Products
+                    </Link>
+                  </div>
+                  <div className="text-[20px]">
+                    {/* Join Us link */}
+                    <Link
+                      to="/join-us/referral-program"
+                      className={`${
+                        location.pathname.includes("/join-us")
+                          ? `${linkStylesmobile.base} ${linkStylesmobile.joinUs}`
+                          : ""
+                      }`}
+                      style={{ fontFamily: "SF Pro Display M" }}
+                      onClick={handleJoinUsClick} // Add onClick handler
+                    >
+                      Join Us
+                    </Link>
+                  </div>
+                  <div className="text-[20px]">
+                    {/* Download link */}
+                    <Link
+                      to="/download"
+                      className={`${
+                        location.pathname === "/download"
+                          ? `${linkStylesmobile.base} ${linkStylesmobile.download}`
+                          : ""
+                      }`}
+                      style={{ fontFamily: "SF Pro Display M" }}
+                    >
+                      Download
+                    </Link>
+                    {/* Global icon */}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
