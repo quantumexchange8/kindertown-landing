@@ -1,0 +1,13 @@
+.responsive-image {
+  /* Set default styles for the image */
+  width: auto; /* This will make the image retain its original width */
+  max-width: 100%; /* This will ensure the image does not exceed its container's width */
+}
+
+@media (max-width: 768px) {
+  /* Adjust the size of the image for mobile screens */
+  .responsive-image {
+    width: 100%; /* Set the image width to 100% of its container on mobile screens */
+    height: auto; /* Allow the image to adjust its height proportionally */
+  }
+}

@@ -12,23 +12,27 @@ import Header from "../assets/teacher/header.png";
 const Teacher = () => {
   return (
     <>
-      <div className="w-full flex flex-col justify-center items-center pt-[150px]">
+      <div className="w-full flex flex-col justify-center items-center md:pt-[150px] pt-[80px]">
         <img src={Header} alt="Header" className="w-full" />
       </div>
-      <div className="w-full flex flex-col justify-center items-center pt-[100px] gap-[200px] px-[220px] pb-[200px]">
+      <div className="w-full flex flex-col justify-center items-center md:pt-[100px] pt-[50px] md:gap-[200px] gap-[100px] md:px-[220px] pl-[32px] pr-[31px] md:pb-[200px] pb-[100px]">
         {/*CONTENT 2*/}
-        <div className="w-[1000px] flex flex-col gap-[50px]">
+        <div className="w-full md:w-[1000px] flex flex-col md:gap-[50px] gap-[30px]">
           <div className="flex flex-col justify-center items-center">
             <div
-              className="text-center text-[80px]"
+              className="text-center md:text-[80px] text-4xl"
               style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
             >
-              Kindertown Teacher
+              <div className="hidden md:flex"> Kindertown Teacher</div>
+              <div className="md:hidden flex flex-col">
+                <div>Kindertown</div>
+                <div> Teacher</div>
+              </div>
             </div>
           </div>
           <div className="flex flex-col justify-center items-center">
             <div
-              className="text-center text-[32px]"
+              className="text-center md:text-[32px] text-xl"
               style={{ fontFamily: "SF Pro Display M", lineHeight: "normal" }}
             >
               Moving away from traditional manual handling of school affairs and
@@ -38,13 +42,17 @@ const Teacher = () => {
           </div>
         </div>
         {/*CONTENT 3*/}
-        <div className="w-[1000px] flex flex-col gap-[50px]">
+        <div className="w-full md:w-[1000px] flex flex-col md:gap-[50px] gap-[30px]">
           <div className="flex flex-col justify-center items-center">
-            <img src={Tab1} alt="Tablet1" className="w-[800px] h-[614px]" />
+            <img
+              src={Tab1}
+              alt="Tablet1"
+              className="md:w-[800px] md:h-[614px]"
+            />
           </div>
           <div className="flex flex-col justify-center items-center">
             <div
-              className="text-[40px]"
+              className="hidden md:flex flex-col text-[40px]"
               style={{
                 fontFamily: "SF Pro Display M",
                 lineHeight: "normal",
@@ -66,16 +74,49 @@ const Teacher = () => {
                 teachers and parents.
               </div>
             </div>
+            <div
+              className="md:hidden flex flex-col text-base"
+              style={{
+                fontFamily: "SF Pro Display M",
+                lineHeight: "normal",
+              }}
+            >
+              <div className="flex items-center justify-center ">
+                Everyone approaches tasks in different
+              </div>
+              <div className="flex items-center justify-center">
+                ways. We're dedicated to technological
+              </div>
+              <div className="flex items-center justify-center">
+                innovation - transforming thinking,
+              </div>
+              <div className="flex items-center justify-center">
+                challenging limitations, and assisting
+              </div>
+              <div className="flex items-center justify-center">
+                educators in creating the best possible
+              </div>
+              <div className="flex items-center justify-center">
+                experiences for both teachers
+              </div>
+              <div className="flex items-center justify-center">
+                and parents.
+              </div>
+            </div>
           </div>
         </div>
         {/*CONTENT 4*/}
-        <div className="w-[1000px] flex flex-col gap-[50px]">
+        <div className="w-full md:w-[1000px] flex flex-col gap-[50px]">
           <div className="flex flex-col justify-center items-center">
-            <img src={Tab2} alt="Tablet2" className="w-[800px] h-[614px]" />
+            <img
+              src={Tab2}
+              alt="Tablet2"
+              className="md:w-[800px] md:h-[614px]"
+            />
           </div>
           <div className="flex flex-col justify-center items-center">
             <div
-              className="text-[40px]"
+              className="hidden md:flex flex-col text-[40px]"
               style={{
                 fontFamily: "SF Pro Display M",
                 lineHeight: "normal",

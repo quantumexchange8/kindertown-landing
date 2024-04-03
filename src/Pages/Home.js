@@ -381,7 +381,7 @@ const Home = () => {
               </div>
               <div className="flex flex-col gap-10">
                 <div
-                  className="md:text-[32px] text-xl"
+                  className="flex md:text-[32px] text-xl"
                   style={{
                     fontFamily: "SF Pro Display M",
                     lineHeight: "normal",
@@ -394,6 +394,7 @@ const Home = () => {
                   them for future enrollment. Our system provides the simplest
                   and most convenient registration process and payment methods.
                 </div>
+
                 <div
                   className="md:text-[32px] text-xl"
                   style={{
@@ -528,7 +529,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="w-full md:flex md:py-[200px] pt-[100px] md:px-[220px] pl-[31px] pr-[32px] flex justify-center items-center">
+      <div className="w-full md:flex md:py-[200px] py-[100px] md:px-[220px] pl-[31px] pr-[32px] flex justify-center items-center">
         <div className="w-full md:w-[1000px] flex flex-col justify-center items-center md:gap-[200px] gap-[100px]">
           {/*CONTENT 9*/}
           <div className="flex flex-col justify-center items-center gap-[30px] md:gap-[50px]">
@@ -551,6 +552,7 @@ const Home = () => {
                   lineHeight: "normal",
                 }}
               >
+                {/*Desktop*/}
                 <div className="hidden md:flex items-center justify-center ">
                   Let's address the complex operations of the school to enhance
                 </div>
@@ -560,7 +562,7 @@ const Home = () => {
                 <div className="hidden md:flex items-center justify-center">
                   let's effectively enhance the school's reputation.
                 </div>
-
+                {/*Mobile*/}
                 <div className="md:hidden flex items-center justify-center ">
                   Let's address the complex operations of
                 </div>
@@ -589,7 +591,7 @@ const Home = () => {
                 className="md:w-[600px] md:h-[426px]"
               />
             </div>
-            <div className="flex flex-col justify-center items-center gap-[30px]">
+            <div className="flex flex-col justify-center items-center gap-4 md:gap-[30px]">
               <div
                 className="md:text-[50px] text-[32px]"
                 style={{ fontFamily: "SF Pro Display B" }}
@@ -605,16 +607,33 @@ const Home = () => {
                     lineHeight: "normal",
                   }}
                 >
-                  <div className="flex items-center justify-center ">
+                  {/*Desktop*/}
+                  <div className="hidden md:flex items-center justify-center ">
                     We will comprehensively understand the school and ensure
                     reputation
                   </div>
-                  <div className="flex items-center justify-center">
+                  <div className="hidden md:flex items-center justify-center">
                     and quality control. Supervise the operational aspects of
                     the school and
                   </div>
-                  <div className="flex items-center justify-center">
+                  <div className="hidden md:flex items-center justify-center">
                     improve communication between teachers and staff.
+                  </div>
+                  {/*Mobile*/}
+                  <div className="md:hidden flex items-center justify-center ">
+                    We will comprehensively understand the
+                  </div>
+                  <div className="md:hidden flex items-center justify-center">
+                    school and ensure reputation and quality
+                  </div>
+                  <div className=" md:hidden flex items-center justify-center">
+                    control. Supervise the operational aspects
+                  </div>
+                  <div className=" md:hidden flex items-center justify-center">
+                    of the school and improve communication
+                  </div>
+                  <div className=" md:hidden flex items-center justify-center">
+                    between teachers and staff.
                   </div>
                 </div>
               </div>
@@ -625,34 +644,50 @@ const Home = () => {
 
           <div className="w-full flex flex-col justify-center items-center gap-[50px]">
             <div>
-              <img src={Admin} alt="Admin" className="w-[600px] h-[388px]" />
+              <img
+                src={Admin}
+                alt="Admin"
+                className="md:w-[600px] md:h-[388px]"
+              />
             </div>
-            <div className="flex flex-col justify-center items-center gap-[30px]">
-              <div style={{ fontSize: "50px", fontFamily: "SF Pro Display B" }}>
+            <div className="flex flex-col justify-center items-center md:gap-[30px] gap-4">
+              <div
+                className="md:text-[50px] text-[32px]"
+                style={{ fontFamily: "SF Pro Display B" }}
+              >
                 Administrators
               </div>
 
               <div className="flex items-center">
                 <div
-                  className="text-[32px]"
+                  className="md:text-[32px] text-base"
                   style={{
                     fontFamily: "SF Pro Display M",
                     lineHeight: "normal",
                   }}
                 >
-                  <div className="flex items-center justify-center ">
+                  {/*desktop*/}
+                  <div className="hidden md:flex items-center justify-center ">
                     An advanced management system with technological records,
                   </div>
-                  <div className="flex items-center justify-center">
+                  <div className="hidden md:flex items-center justify-center">
                     significantly enhancing efficiency and saving time and money
                     in
                   </div>
-                  <div className="flex items-center justify-center">
+                  <div className="hidden md:flex items-center justify-center">
                     administrative tasks. It also addresses the sluggish
                     procedural issues
                   </div>
-                  <div className="flex items-center justify-center">
+                  <div className="hidden md:flex items-center justify-center">
                     often found intraditional school settings.
+                  </div>
+                  {/*mobile*/}
+                  <div className="md:hidden flex items-center justify-center text-center ">
+                    An advanced management system with technological records,
+                    significantly enhancing efficiency, and saving time and
+                    money in administrative tasks. It also addresses the
+                    sluggish procedural issues often found in traditional school
+                    settings.
                   </div>
                 </div>
               </div>
@@ -665,35 +700,55 @@ const Home = () => {
               <img
                 src={Teacher2}
                 alt="Teacher"
-                className="w-[600px] h-[406px]"
+                className="md:w-[600px] md:h-[406px]"
               />
             </div>
-            <div className="flex flex-col justify-center items-center gap-[30px]">
-              <div style={{ fontSize: "50px", fontFamily: "SF Pro Display B" }}>
+            <div className="flex flex-col justify-center items-center md:gap-[30px] gap-4">
+              <div
+                className="md:text-[50px] text-[32px]"
+                style={{ fontFamily: "SF Pro Display B" }}
+              >
                 Teachers
               </div>
 
               <div className="flex items-center">
                 <div
-                  className="text-[32px]"
+                  className="md:text-[32px] text-base"
                   style={{
                     fontFamily: "SF Pro Display M",
                     lineHeight: "normal",
                   }}
                 >
-                  <div className="flex items-center justify-center ">
+                  {/*Mobile*/}
+                  <div className="md:hidden flex items-center justify-center text-center">
+                    Effectively enhance accountability for
+                  </div>
+                  <div className="md:hidden flex items-center justify-center text-center">
+                    teachers regarding student attitudes and
+                  </div>
+                  <div className="md:hidden flex items-center justify-center text-center">
+                    progress in learning. Additionally, it
+                  </div>
+                  <div className="md:hidden flex items-center justify-center text-center">
+                    enables faster real-time synchronization
+                  </div>
+                  <div className="md:hidden flex items-center justify-center text-center">
+                    of students' assignments and activities within the school.
+                  </div>
+                  {/*Desktop*/}
+                  <div className="hidden md:flex items-center justify-center ">
                     Effectively enhance accountability for teachers regarding
                     student
                   </div>
-                  <div className="flex items-center justify-center">
+                  <div className="hidden md:flex items-center justify-center">
                     attitudes and progress in learning. Additionally, it enables
                     faster
                   </div>
-                  <div className="flex items-center justify-center">
+                  <div className="hidden md:flex items-center justify-center">
                     real-time synchronization of students' assignments and
                     activities
                   </div>
-                  <div className="flex items-center justify-center">
+                  <div className="hidden md:flex items-center justify-center">
                     within the school.
                   </div>
                 </div>
@@ -703,38 +758,71 @@ const Home = () => {
           {/*CONTENT 13*/}
           <div className="flex flex-col justify-center items-center gap-[50px]">
             <div>
-              <img src={Parent} alt="Parent" className="w-[530px] h-[450px]" />
+              <img
+                src={Parent}
+                alt="Parent"
+                className="md:w-[530px] md:h-[450px]"
+              />
             </div>
-            <div className="flex flex-col justify-center items-center gap-[30px]">
-              <div style={{ fontSize: "50px", fontFamily: "SF Pro Display B" }}>
+            <div className="flex flex-col justify-center items-center md:gap-[30px] gap-4">
+              <div
+                className="md:text-[50px] text-[32px]"
+                style={{ fontFamily: "SF Pro Display B" }}
+              >
                 Parents
               </div>
 
               <div className="flex items-center">
                 <div
-                  className="text-[32px]"
+                  className="md:text-[32px] text-base"
                   style={{
                     fontFamily: "SF Pro Display M",
                     lineHeight: "normal",
                   }}
                 >
-                  <div className="flex items-center justify-center ">
+                  {/*Mobile*/}
+                  <div className="md:hidden flex items-center justify-center">
+                    Stay informed in real-time about your
+                  </div>
+                  <div className="md:hidden flex items-center justify-center">
+                    child's learning progress, school
+                  </div>
+                  <div className="md:hidden flex items-center justify-center">
+                    activities, announcements, temperature
+                  </div>
+                  <div className="md:hidden flex items-center justify-center">
+                    records, kindergarten check-ins,
+                  </div>
+                  <div className="md:hidden flex items-center justify-center">
+                    important updates, and convenient tuition
+                  </div>
+                  <div className="md:hidden flex items-center justify-center">
+                    payment options. This system allows
+                  </div>
+                  <div className="md:hidden flex items-center justify-center">
+                    parents to engage more humanely and
+                  </div>
+                  <div className="md:hidden flex items-center justify-center">
+                    effectively with school-related matters.
+                  </div>
+                  {/*Desktop*/}
+                  <div className="hidden md:flex items-center justify-center ">
                     Stay informed in real-time about your child's learning
                     progress, school
                   </div>
-                  <div className="flex items-center justify-center">
+                  <div className="hidden md:flex items-center justify-center">
                     activities, announcements, temperature records, kindergarten
                     check-ins,
                   </div>
-                  <div className="flex items-center justify-center">
+                  <div className="hidden md:flex items-center justify-center">
                     important updates, and convenient tuition payment options.
                     This system
                   </div>
-                  <div className="flex items-center justify-center">
+                  <div className="hidden md:flex items-center justify-center">
                     allows parents to engage more humanely and effectively with
                     school-
                   </div>
-                  <div className="flex items-center justify-center">
+                  <div className="hidden md:flex items-center justify-center">
                     related matters.
                   </div>
                 </div>

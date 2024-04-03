@@ -80,7 +80,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="flex flex-col fixed top-0 md:w-full z-40">
+    <div className="flex flex-col fixed top-0 w-full z-40">
       <div className="bg-[#fff7efe6] w-full flex justify-center h-[50px] px-5 md:px-[220px]">
         <div className="w-full md:w-[1000px] flex items-center justify-between">
           <div className="hidden md:flex flex-col">
@@ -225,7 +225,7 @@ const Navbar = () => {
       </div>
 
       {location.pathname.includes("/products") && (
-        <div className="bg-[#ffffffe6] w-full flex justify-center h-[50px]">
+        <div className="bg-[#ffffffe6] hidden w-full md:flex justify-center h-[50px]">
           <div className="max-w-[1000px] w-full flex items-end justify-end gap-[26px] border-b border-[#DDD]">
             <Link
               to="/products/parent"

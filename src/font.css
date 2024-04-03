@@ -40,19 +40,3 @@
   font-family: "SF Pro Display EB";
   src: url("./fonts/SF-Pro-Display-Heavy.otf") format("opentype");
 }
-
-.font-regular-mobile {
-  font-family: "SF Pro Regular";
-}
-
-.font-regular-desktop {
-  font-family: "SF Pro Display R";
-}
-
-.font-medium-mobile {
-  font-family: "SF Pro Medium";
-}
-
-.font-medium-desktop {
-  font-family: "SF Pro Display M";
-}
