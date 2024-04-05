@@ -102,9 +102,75 @@ const Admin = () => {
     */}
 
       <div className="w-full flex flex-col md:gap-[200px] gap-[100px] pt-[100px] md:pt-[200px]">
-        {/* Content 2 */}
+        {/* Content 2  */}
+        <div className="w-full flex md:flex-row flex-col md:pl-[220px] pl-[31px] gap-[30px]">
+          <div className="flex flex-col w-full justify-center items-center">
+            <div
+              className="md:text-[50px] text-xl w-full md:w-[400px]"
+              style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
+            >
+              <div
+                className="md:text-[50px] text-xl"
+                style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
+              >
+                <div className="hidden md:flex flex-col items-center">
+                  <div className="flex items-center">Superb Interface</div>
+                  <div className="flex items-center">with Exceptional</div>
+                  <div className="flex items-center">User Experience</div>
+                </div>
+                <div className="md:hidden flex flex-col items-center">
+                  <div className="flex items-center">Superb Interface with</div>
+                  <div className="flex items-center">
+                    Exceptional User Experience
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col w-full overflow-hidden justify-end">
+            <div className="md:w-[1008px] md:h-[591px]  w-full h-[207px] relative bg-hero-image bg-cover bg-no-repeat md:left-[10%] left-[20%]"></div>
+          </div>
+        </div>
+
+        {/* Content 3 */}
+        <div className="w-full flex md:flex-row flex-col md:pr-[220px] pr-[31px] gap-[30px]">
+          <div className="flex flex-col w-full overflow-hidden justify-start">
+            <div className="md:w-[1008px] md:h-[591px]  w-full h-[207px] relative bg-hero-image2 bg-cover bg-no-repeat overflow-hidden md:order-none order-last md:right-[20%] right-[30%]"></div>
+          </div>
+          <div className="flex flex-col w-full md:order-last order-first md:pl-0 pl-[31px] justify-center items-center">
+            <div
+              className="md:text-[50px] text-xl w-full md:w-[50%]"
+              style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
+            >
+              <div
+                className="md:text-[50px] text-xl"
+                style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
+              >
+                <div className="hidden md:flex flex-col items-center">
+                  <div className="flex items-center">Make school</div>
+                  <div className="flex items-center">enrollment </div>
+                  <div className="flex items-center">effortless, </div>
+                  <div className="flex items-center">efficient, and </div>
+                  <div className="flex items-center">time-saving. </div>
+                </div>
+                <div className="md:hidden flex flex-col items-center">
+                  <div className="flex items-center">
+                    Make school enrollment
+                  </div>
+                  <div className="flex items-center">
+                    effortless, efficient, and
+                  </div>
+                  <div className="flex items-center">time-saving. </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/*content 2
+        
         <div className="flex md:flex-row flex-col md:pl-[220px] pl-[31px] gap-[30px]">
-          {/* Left Column (Text) */}
+    
           <div className="w-full md:w-1/2 flex flex-col justify-center items-center pr-[32px] md:pr-0">
             <div
               className="md:text-[50px] text-xl w-full md:w-[400px]"
@@ -129,20 +195,18 @@ const Admin = () => {
             </div>
           </div>
 
-          {/* Right Column (Background Image) */}
-          <div className="w-full md:w-1/2  flex flex-col overflow-hidden">
-            <div className="md:w-full md:h-[591px] w-[353px] h-[207px] flex flex-col bg-hero-image md:bg-left-custom bg-cover bg-no-repeat overflow-hidden"></div>
+       
+          <div className="flex flex-col w-[1008px] overflow-hidden justify-end">
+            <div className="md:w-[1008px] md:h-[591px] w-full h-[200px] flex flex-col bg-hero-image bg-left-custom bg-cover  bg-no-repeat overflow-hidden"></div>
           </div>
         </div>
-
-        {/* Content 3 */}
+        content 3
         <div className="flex md:flex-row flex-col md:pr-[220px] pr-[32px] gap-[30px]">
-          {/* Right Column (Text) on Mobile, Image on Larger Screens */}
+
           <div className="w-full md:w-1/2  flex flex-col overflow-hidden">
-            <div className="md:w-full md:h-[591px] w-[353px] h-[207px] flex flex-col bg-hero-image2 md:bg-right-custom bg-right-mobile-custom bg-cover bg-no-repeat overflow-hidden md:order-none order-last"></div>
+            <div className="md:w-[1008px] md:h-[591px] w-full h-[207px] flex flex-col bg-hero-image2 md:bg-left-custom bg-cover bg-no-repeat overflow-hidden md:order-none order-last"></div>
           </div>
 
-          {/* Left Column (Background Image) on Mobile, Text on Larger Screens */}
           <div className="md:w-1/2 w-full flex flex-col justify-center items-center md:order-last order-first md:pl-0 pl-[31px]">
             <div
               className="md:text-[50px] text-xl w-full md:w-[50%]"
@@ -172,6 +236,7 @@ const Admin = () => {
             </div>
           </div>
         </div>
+        */}
       </div>
 
       {/*CONTENT 2 & CONTENT 3*/}
@@ -948,34 +1013,34 @@ const Admin = () => {
         </div>
 
         {/*Content 8*/}
-        <div className="w-full md:w-[1000px] flex flex-col gap-[50px]">
+        <div className="w-full md:w-[1000px] flex flex-col">
           <div className="flex flex-col justify-center items-center">
-            <div className="relative flex flex-col md:w-[400px] md:h-[400px] md:rounded-[50px] bg-gradient-to-t from-[#ADADAD] to-[#F9F9F9] pt-[53px] pb-[61px] pl-[34px] pr-[33px] gap-[59px]">
+            <div className="relative flex flex-col md:w-[400px] md:h-[400px] md:rounded-[50px] rounded-[16px] bg-gradient-to-t from-[#ADADAD] to-[#F9F9F9] md:pt-[53px] pt-[27px] md:pb-[61px] pb-[22px] px-[14px] md:pl-[34px] md:pr-[33px] md:gap-[59px] gap-[27px]">
               <div className="flex flex-col justify-center items-center">
                 <img
                   src={CTLogo}
                   alt="CTLogo"
-                  className="w-[160px] h-[106px]"
+                  className="md:w-[160px] md:h-[106px] w-[66px]"
                 />
               </div>
-              <div className="flex flex-col justify-center items-center gap-[40px]">
+              <div className="flex flex-col justify-center items-center md:gap-[40px] gap-[10px]">
                 <div className="flex flex-col justify-center items-center">
                   <div
-                    className="text-[24px] inline-block"
+                    className="md:text-[24px] text-[10px] inline-block"
                     style={{
                       fontFamily: "SF Pro Display B",
                       lineHeight: "normal",
                     }}
                   >
                     CT PRODUCT {""}
-                    <span className=" bg-black  md:w-[77px] h-[29px] md:rounded-[4px] text-white px-[5.6px]">
+                    <span className=" bg-black  md:w-[77px] h-[29px] md:rounded-[4px] rounded-[2px] text-white px-[5.6px]">
                       CARE
                     </span>
                   </div>
                 </div>
                 <div className="flex flex-col justify-center items-center">
                   <div
-                    className="text-[24px] inline-block text-center"
+                    className="md:text-[24px] text-[10px] inline-block text-center"
                     style={{
                       fontFamily: "SF Pro Display R",
                       lineHeight: "normal",

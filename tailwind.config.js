@@ -7,9 +7,10 @@ module.exports = {
         "hero-image2": "url('../src/assets/admin/Device2.png')",
       },
       backgroundPosition: {
-        "left-custom": "-70% 50%", // Adjust the values as needed
-        "right-custom": "180% 50%", // Adjust the values as needed
-        "right-mobile-custom": "100% 30%", // Adjust the values as needed
+        "left-custom": "-150% 50%", // Adjust the values as needed
+        "left-mobile-custom": "-100% 50%", // Adjust the values as needed
+        "right-custom": "10% 50%", // Adjust the values as needed
+        "right-mobile-custom": "110% 30%", // Adjust the values as needed
       },
     },
   },

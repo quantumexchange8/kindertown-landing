@@ -74,142 +74,249 @@ const Download = () => {
   };
   return (
     <>
-      <div className="w-full flex flex-col justify-center items-center gap-[200px] pt-[150px]">
-        {/*CONTENT 1*/}
-        <div className="w-full flex flex-col justify-center items-center px-[220px]">
-          <div className="w-[1000px] flex flex-col justify-center items-center">
-            <div
-              className="text-[50px] text-center"
-              style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
-            >
+      {/*Content 1*/}
+
+      <div className="w-full flex flex-col justify-center items-center md:pt-[150px] pt-[80px] md:px-[220px] pl-[31px] pr-[32px]">
+        <div className="w-full md:w-[1000px] flex flex-col justify-center items-center">
+          <div
+            className="md:text-[50px] text-2xl text-center"
+            style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
+          >
+            <div className="hidden md:flex flex-col">
               <div>You can download our Kindertown</div>
               <div>management system anytime from the</div>
               <div>Apple AppStore and Google PlayStore.</div>
               <div>Let's turn our ideas into reality together.</div>
             </div>
+            <div className="md:hidden flex flex-col">
+              You can download our Kindertown management system anytime from the
+              Apple AppStore and Google PlayStore. Let's turn our ideas into
+              reality together.
+            </div>
           </div>
         </div>
-        {/*Modal1*/}
+      </div>
 
-        <div className="w-[1000px] flex flex-wrap justify-center items-center gap-5">
-          <div className="relative md:w-[490px] md:h-[500px] md:rounded-[30px] bg-[#FFDFA1] pt-[44px] pl-[52px] pr-[30px] flex flex-col gap-6">
-            <div className="flex flex-col justify-end gap-5">
-              <div
-                className="text-3xl  text-right"
-                style={{ fontFamily: "SF Pro Display B" }}
-              >
-                Kindertown Parent
+      {/*Content 2*/}
+
+      <div className="w-full flex flex-col md:pt-[200px] pt-[50px] md:gap-5 gap-[30px]">
+        <div className="w-full flex flex-col justify-center items-center md:px-[220px] pl-[31px] pr-[32px]">
+          <div className="w-full md:w-[1000px] flex md:flex flex-wrap justify-center items-center md:gap-5 gap-[30px]">
+            <div className="relative w-full md:w-[490px] md:h-[500px] h-[337px] md:rounded-[30px] rounded-[20px] bg-[#FFDFA1] pt-[44px] md:pl-[52px] pl-[35px] pr-[28px] md:pr-[30px] flex flex-col md:gap-6 gap-[19px]">
+              <div className="flex flex-col justify-end md:gap-5 gap-[10px]">
+                <div
+                  className="md:text-3xl text-base  text-right"
+                  style={{ fontFamily: "SF Pro Display B" }}
+                >
+                  Kindertown Parent
+                </div>
+                <div
+                  className="md:text-2xl text-base text-[#666] text-right"
+                  style={{ fontFamily: "SF Pro Display M" }}
+                >
+                  <div>Understanding the child's</div>
+                  <div>learning journey.</div>
+                </div>
               </div>
-              <div
-                className="text-2xl text-[#666] text-right"
-                style={{ fontFamily: "SF Pro Display M" }}
-              >
-                <div>Understanding the child's</div>
-                <div>learning journey.</div>
+              <div className="flex flex-col justify-center overflow-hidden">
+                <div className="flex justify-start">
+                  <div className="justify-start relative md:top-[100px] top-[80px]">
+                    <img
+                      src={mobile}
+                      alt="Mobile"
+                      className="md:w-[250px] md:h-[508px] w-[168px]"
+                    />
+                  </div>
+                  <div className="absolute bottom-0 right-0 p-[30px]">
+                    <button onClick={() => setShowModal1(true)}>
+                      <img
+                        src={button1}
+                        alt="Button1"
+                        className="md:w-[40px] md:h-[40px] w-[25px] h-[25px]"
+                      />
+                    </button>
+                    <Modal1
+                      showModal1={showModal1}
+                      setShowModal1={setShowModal1}
+                    />
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="flex flex-col justify-center overflow-hidden">
-              <div className="flex justify-start">
-                <div className="flex flex-col justify-start relative top-[100px]">
-                  <img
-                    src={mobile}
-                    alt="Mobile"
-                    className="w-[250px] h-[508px]"
-                  />
-                </div>
-                <div className="absolute bottom-0 right-0 p-[30px]">
-                  <button onClick={() => setShowModal1(true)}>
-                    <img src={button1} alt="Button1" />
-                  </button>
-                  <Modal1
-                    showModal1={showModal1}
-                    setShowModal1={setShowModal1}
-                  />
+            <div className="relative md:w-[490px] w-full md:h-[500px] md:rounded-[30px] rounded-[20px] bg-[#3F5DFF] md:pt-[41px] pt-[27px] md:pb-[30px] pb-[28px] md:pl-[62px] pl-[42px] pr-[30px] flex flex-col md:gap-6 gap-[33px]">
+              <div className="flex flex-col justify-end">
+                <img
+                  src={tab}
+                  alt="Tablet"
+                  className="md:w-[365px] md:h-[280px]"
+                />
+              </div>
+              <div className="flex flex-col justify-start">
+                <div className="flex justify-start">
+                  <div className="flex flex-col justify-start items-start md:gap-5 gap-[10px]">
+                    <div
+                      className="md:text-3xl text-base  text-left"
+                      style={{ fontFamily: "SF Pro Display B" }}
+                    >
+                      Kindertown Teacher
+                    </div>
+                    <div
+                      className="md:text-2xl  text-base text-white text-left"
+                      style={{ fontFamily: "SF Pro Display M" }}
+                    >
+                      <div>Escape the busyness, </div>
+                      <div>save valuable time.</div>
+                    </div>
+                  </div>
+                  <div className="absolute bottom-0 right-0 p-[30px]">
+                    <button onClick={() => setShowModal2(true)}>
+                      <img
+                        src={button2}
+                        alt="Button2"
+                        className="md:w-[40px] md:h-[40px] w-[25px] h-[25px]"
+                      />
+                    </button>
+                    <Modal2
+                      showModal2={showModal2}
+                      setShowModal2={setShowModal2}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="relative md:w-[490px] md:h-[500px] md:rounded-[30px] bg-[#3F5DFF] pt-[41px] pb-[30px] pl-[62px] pr-[30px] flex flex-col gap-6">
-            <div className="flex flex-col justify-end gap-5">
-              <img src={tab} alt="Tablet" className="w-[365px] h-[280px]" />
+        </div>
+        <div className="w-full flex flex-col justify-center items-center">
+          <div className="relative md:w-[1000px] w-full md:h-[500px] md:rounded-[30px] items-center bg-[#2FC300] flex md:gap-[99px] gap-6 md:pr-[30px] pr-[32px] overflow-hidden md:pt-[49px] pt-[43px] md:pb-0 pb-[44px]">
+            <div className="flex flex-col md:w-[546px] w-[300px] relative bottom-0 md:top-10 top-0 right-3">
+              <img src={imac} alt="imac" className="md:w-[592px] md:h-full" />
             </div>
-            <div className="flex flex-col justify-start">
-              <div className="flex justify-start">
-                <div className="flex flex-col justify-start items-start gap-5">
-                  <div
-                    className="text-3xl  text-left"
-                    style={{ fontFamily: "SF Pro Display B" }}
-                  >
-                    Kindertown Teacher
-                  </div>
-                  <div
-                    className="text-2xl text-white text-left"
-                    style={{ fontFamily: "SF Pro Display M" }}
-                  >
-                    <div>Escape the busyness, </div>
-                    <div>save valuable time.</div>
-                  </div>
-                </div>
-                <div className="absolute bottom-0 right-0 p-[30px]">
-                  <button onClick={() => setShowModal2(true)}>
-                    <img src={button2} alt="Button2" />
-                  </button>
-                  <Modal2
-                    showModal2={showModal2}
-                    setShowModal2={setShowModal2}
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="relative md:w-[1000px] md:h-[500px] md:rounded-[30px] items-center bg-[#2FC300] flex gap-[99px] pr-[30px] overflow-hidden">
-            <div className="flex w-[546px] relative bottom-0 top-10 right-3">
-              <img src={imac} alt="imac" className="w-[592px] h-full" />
-            </div>
-            <div className="flex text-center gap-7">
-              <div className="flex flex-col gap-5">
-                <div className="flex flex-col">
-                  <div
-                    className="text-[30px]"
-                    style={{ fontFamily: "SF Pro Display B" }}
-                  >
-                    Kindertown Admin
-                  </div>
-                </div>
-                <div className="flex flex-col">
-                  <div
-                    className="flex flex-col text-2xl text-left text-white"
-                    style={{
-                      fontFamily: "SF Pro Display M",
-                      lineHeight: "normal",
-                    }}
-                  >
-                    <div>No more sluggish</div>
-                    <div>school enrollment </div>
-                    <div>processes from now.</div>
-                  </div>
-                </div>
-              </div>
+            <div className="w-full md:w-[256px] flex flex-col md:gap-5 gap-[10px]">
               <div className="flex flex-col">
-                <div className="absolute bottom-[30px] right-[30px]">
-                  <button onClick={() => setShowModal3(true)}>
-                    <img src={button3} alt="Button3" />
-                  </button>
-                  <Modal3
-                    showModal3={showModal3}
-                    setShowModal3={setShowModal3}
-                  />
+                <div
+                  className="md:text-[30px] text-base"
+                  style={{
+                    fontFamily: "SF Pro Display B",
+                    lineHeight: "normal",
+                  }}
+                >
+                  <div className="hidden md:flex">Kindertown Admin</div>
+                  <div className="md:hidden flex flex-col">
+                    <div>Kindertown</div>
+                    <div> Admin</div>
+                  </div>
                 </div>
+              </div>
+              <div
+                className="flex flex-col md:text-2xl text-sm text-left text-white"
+                style={{
+                  fontFamily: "SF Pro Display M",
+                  lineHeight: "normal",
+                }}
+              >
+                {" "}
+                <div className="hidden md:flex flex-col">
+                  <div>No more sluggish</div>
+                  <div>school enrollment </div>
+                  <div>processes from now.</div>
+                </div>
+                <div className="md:hidden flex flex-col">
+                  <div>No more sluggish</div>
+                  <div>school enrollment </div>
+                  <div>processes from</div>
+                  <div>now.</div>
+                </div>
+              </div>
+              <div className="absolute md:bottom-[30px] md:right-[30px] bottom-[35px] right-[35px]">
+                <button onClick={() => setShowModal3(true)}>
+                  <img
+                    src={button3}
+                    alt="Button3"
+                    className="md:w-[40px] md:h-[40px] w-[25px] h-[25px]"
+                  />
+                </button>
+                <Modal3 showModal3={showModal3} setShowModal3={setShowModal3} />
               </div>
             </div>
           </div>
-        </div>
 
-        {/*CONTENT 5*/}
-        <div className="w-[1000px] flex-col justify-center items-center">
+          {/*Test
+
+            <div className="relative md:w-[1000px] w-full md:h-[500px] md:rounded-[30px] items-center bg-[#2FC300] flex md:gap-[99px] gap-6 md:pr-[30px] pr-[32px] overflow-hidden md:pt-[49px] pt-[43px] md:pb-0 pb-[44px]">
+              <div className="flex md:w-[546px] w-full relative bottom-0 md:top-10 top-0 right-3">
+                <img
+                  src={imac}
+                  alt="imac"
+                  className="md:w-[592px] md:h-full "
+                />
+              </div>
+              <div className="flex ">
+                <div className="flex flex-col md:gap-5 gap-[10px]">
+                  <div className="flex flex-col">
+                    <div
+                      className="md:text-[30px] text-base"
+                      style={{
+                        fontFamily: "SF Pro Display B",
+                        lineHeight: "normal",
+                      }}
+                    >
+                      <div className="hidden md:flex">Kindertown Admin</div>
+                      <div className="md:hidden flex flex-col">
+                        <div>Kindertown</div>
+                        <div> Admin</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex flex-col">
+                    <div
+                      className="flex flex-col md:text-2xl text-sm text-left text-white"
+                      style={{
+                        fontFamily: "SF Pro Display M",
+                        lineHeight: "normal",
+                      }}
+                    >
+                      {" "}
+                      <div className="hidden md:flex flex-col">
+                        <div>No more sluggish</div>
+                        <div>school enrollment </div>
+                        <div>processes from now.</div>
+                      </div>
+                      <div className="md:hidden flex flex-col">
+                        <div>No more sluggish</div>
+                        <div>school enrollment </div>
+                        <div>processes from</div>
+                        <div>now.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex flex-col">
+                  <div className="absolute md:bottom-[30px] md:right-[30px] bottom-[50px] right-[50px]">
+                    <button onClick={() => setShowModal3(true)}>
+                      <img
+                        src={button3}
+                        alt="Button3"
+                        className="md:w-[40px] md:h-[40px] w-[25px] h-[25px]"
+                      />
+                    </button>
+                    <Modal3
+                      showModal3={showModal3}
+                      setShowModal3={setShowModal3}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+                    */}
+        </div>
+      </div>
+
+      {/*Content 3*/}
+      <div className="w-full flex justify-center items-center  md:py-[200px] pt-[99px] pb-[101px]  pl-[31px] pr-[32px] md:px-[220px]">
+        <div className="w-full md:w-[1000px] flex-col justify-center items-center">
           <div
-            className="text-4xl"
-            style={{ fontFamily: "SF Pro Display B", lineHeight: "50px" }}
+            className="md:text-4xl text-base md:leading-[50px] leading-normal"
+            style={{ fontFamily: "SF Pro Display B" }}
           >
             We are dedicated to working with developers to transform their most
             outstanding ideas into applications that can revolutionize
@@ -220,137 +327,212 @@ const Download = () => {
             system, rather than just through conversation.
           </div>
         </div>
-        {/*CONTENT 6*/}
-        <div className="w-[1000px] flex flex-wrap justify-center items-center gap-5">
-          <div className="relative md:w-[1000px] md:h-[500px] md:rounded-[30px] bg-[#D5FFCD] flex gap-[88px] pr-[114px] pl-[100px] pt-[100px] overflow-hidden">
-            <div className="flex flex-col items-center w-[400px] h-[180px]">
+      </div>
+      {/*Content 4*/}
+      <div className="w-full flex flex-col justify-center items-center pl-[19px] pr-[21px] md:px-[220px]">
+        <div className="w-full md:w-[1000px] flex flex-wrap justify-center items-center md:gap-5 gap-[7px]">
+          <div className="relative w-full md:w-[1000px] md:h-[500px] h-[176px] md:rounded-[30px] rounded-[10px] bg-[#D5FFCD] flex gap-[29px] md:gap-[88px] md:pr-[114px] pr-[39px] md:pl-[100px] pl-[32px] md:pt-[100px] pt-[35px] overflow-hidden">
+            <div className="flex flex-col items-center md:w-[400px] md:h-[180px]">
               <div
-                className="text-[40px]"
+                className="md:text-[40px] text-base"
                 style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
               >
                 No longer will it be troublesome to pay school fees through
                 doorstep visits.
               </div>
             </div>
-            <div className="flex flex-col justify-center w-[300px] h-[609px]">
+            <div className="flex flex-col justify-center md:w-[300px] md:h-[609px] w-full relative md:top-5 top-11">
               <img src={phone} alt="Mobile" />
             </div>
           </div>
-          <div className="relative md:w-[490px] md:h-[500px] md:rounded-[30px] bg-[#176200] flex flex-col px-[45px] pt-[66px] pb-[85px] gap-[51px]">
-            <div className="flex flex-col justify-center items-center gap-[7px]">
-              <div className="flex justify-center items-center gap-[10px]">
-                <div className="flex flex-col">
-                  <img src={sticker1} alt="Sticker1" />
+          <div className="w-full flex justify-center items-center md:gap-5 gap-[7px]">
+            <div className="relative md:w-[490px] w-[173px] h-[177px] md:h-[500px] md:rounded-[30px] rounded-[10px] bg-[#176200] flex flex-col md:px-[45px] pl-[16px] pr-[15px] md:pt-[66px] pt-[22px] pb-[31px] md:pb-[85px] md:gap-[51px] gap-[22px]">
+              <div className="flex flex-col justify-center items-center md:gap-[7px] gap-[3px]">
+                <div className="flex justify-center items-center md:gap-[7px] gap-[3px]">
+                  <div className="flex flex-col">
+                    <img
+                      src={sticker1}
+                      alt="Sticker1"
+                      className="md:w-[94px] md:h-[94px] w-[33px] h-[33px]"
+                    />
+                  </div>
+                  <div className="flex flex-col">
+                    <img
+                      src={sticker2}
+                      alt="Sticker2"
+                      className="md:w-[94px] md:h-[94px] w-[33px] h-[33px]"
+                    />
+                  </div>
+                  <div className="flex flex-col">
+                    <img
+                      src={sticker3}
+                      alt="Sticke3"
+                      className="md:w-[94px] md:h-[94px] w-[33px] h-[33px]"
+                    />
+                  </div>
                 </div>
-                <div className="flex flex-col">
-                  <img src={sticker2} alt="Sticker2" />
-                </div>
-                <div className="flex flex-col">
-                  <img src={sticker3} alt="Sticke3" />
+                <div className="flex justify-center items-center md:gap-[7px] gap-[3px]">
+                  <div className="flex flex-col">
+                    <img
+                      src={sticker4}
+                      alt="Sticker4"
+                      className="md:w-[94px] md:h-[94px] w-[33px] h-[33px]"
+                    />
+                  </div>
+                  <div className="flex flex-col">
+                    <img
+                      src={sticker5}
+                      alt="Sticker5"
+                      className="md:w-[94px] md:h-[94px] w-[33px] h-[33px]"
+                    />
+                  </div>
+                  <div className="flex flex-col">
+                    <img
+                      src={sticker6}
+                      alt="Sticker6"
+                      className="md:w-[94px] md:h-[94px] w-[33px] h-[33px]"
+                    />
+                  </div>
                 </div>
               </div>
-              <div className="flex justify-center items-center gap-[10px]">
-                <div className="flex flex-col">
-                  <img src={sticker4} alt="Sticker4" />
-                </div>
-                <div className="flex flex-col">
-                  <img src={sticker5} alt="Sticker5" />
-                </div>
-                <div className="flex flex-col">
-                  <img src={sticker6} alt="Sticker6" />
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-col justify-center items-center">
-              <div
-                className="text-3xl text-white text-center"
-                style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
-              >
-                <div>Thoughtful widgets can also</div>
-                <div> help children cultivate</div>
-                <div>good habits.</div>
-              </div>
-            </div>
-          </div>
-          <div className="relative md:w-[490px] md:h-[500px] md:rounded-[30px] bg-[#D5FFCD] flex flex-col pl-[56px] pr-[55px] pt-[80px] pb-[55px] gap-[86px]">
-            <div className="flex flex-col justify-center items-center">
-              <div
-                className="text-3xl text-center"
-                style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
-              >
-                <div>You can easily find the </div>
-                <div>stationery children need on</div>
-                <div>the marketplace.</div>
-              </div>
-            </div>
-            <div className="flex flex-col justify-center items-center">
-              <img src={troli} alt="Troli" className="w-[200px] h-[178px]" />
-            </div>
-          </div>
-          <div className="relative md:w-[490px] md:h-[500px] md:rounded-[30px] bg-[#D5FFCD] flex flex-col px-[40px] pt-[62px] pb-[61px] gap-[50px]">
-            <div className="flex flex-col justify-center items-center">
-              <img src={chat} alt="Chat" className="w-[200px] h-[196px]" />
-            </div>
-            <div className="flex flex-col justify-center items-center">
-              <div
-                className="text-3xl text-center"
-                style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
-              >
-                <div>In community, schools, </div>
-                <div>teachers and parents will</div>
-                <div>share the delightful moments</div>
-                <div>of children's growth together.</div>
-              </div>
-            </div>
-          </div>
-          <div className="relative md:w-[490px] md:h-[500px] md:rounded-[30px] flex flex-col">
-            <video
-              className="absolute inset-0 w-full h-full object-cover rounded-[30px]"
-              autoPlay
-              loop
-              muted
-            >
-              <source src={video} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-            <div className="absolute bottom-11 right-9 flex justify-start items-center w-[300px] h-[100px]">
-              <div className="flex flex-col">
+              <div className="flex flex-col justify-center items-center">
                 <div
-                  className="text-[30px] text-right"
+                  className="md:text-3xl text-[10px] text-white text-center"
                   style={{
                     fontFamily: "SF Pro Display B",
                     lineHeight: "normal",
                   }}
                 >
-                  Capture the moments of childlike innocence and earnest
-                  learning.
+                  <div className="hidden md:flex flex-col">
+                    <div>Thoughtful widgets can also</div>
+                    <div> help children cultivate</div>
+                    <div>good habits.</div>
+                  </div>
+                  <div className="md:hidden flex flex-col">
+                    Thoughtful widgets can also help children cultivategood
+                    habits.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="relative md:w-[490px] w-[173px] h-[177px] md:h-[500px]  md:rounded-[30px] rounded-[10px] bg-[#D5FFCD] flex flex-col md:pl-[56px] md:pr-[55px] px-[19px] md:pt-[80px] pt-[32px] md:pb-[55px] pb-[19px] md:gap-[86px] gap-[31px]">
+              <div className="flex flex-col justify-center items-center">
+                <div
+                  className="md:text-3xl text-[10px] text-center"
+                  style={{
+                    fontFamily: "SF Pro Display B",
+                    lineHeight: "normal",
+                  }}
+                >
+                  <div className="hidden md:flex flex-col">
+                    <div>You can easily find the </div>
+                    <div>stationery children need on</div>
+                    <div>the marketplace.</div>
+                  </div>
+                  <div className="md:hidden flex flex-col">
+                    You can easily find the stationery children need on the
+                    marketplace.
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-col justify-center items-center">
+                <img
+                  src={troli}
+                  alt="Troli"
+                  className="md:w-[200px] md:h-[178px] w-[70] h-[63px]"
+                />
+              </div>
+            </div>
+          </div>
+          <div className="w-full flex justify-center items-center md:gap-5 gap-[7px]">
+            <div className="relative md:w-[490px] w-[173px] h-[177px] md:h-[500px] md:rounded-[30px] rounded-[10px] bg-[#D5FFCD] flex flex-col md:px-[40px] px-[14px] md:pt-[62px] pt-[21px] md:pb-[61px] pb-[15px] md:gap-[50px] gap-[10px]">
+              <div className="flex flex-col justify-center items-center">
+                <img
+                  src={chat}
+                  alt="Chat"
+                  className="md:w-[200px] md:h-[196px] w-[70px] h-[70px]"
+                />
+              </div>
+              <div className="flex flex-col justify-center items-center">
+                <div
+                  className="md:text-3xl text-[10px] text-center"
+                  style={{
+                    fontFamily: "SF Pro Display B",
+                    lineHeight: "normal",
+                  }}
+                >
+                  <div className="hidden md:flex flex-col">
+                    <div>In community, schools, </div>
+                    <div>teachers and parents will</div>
+                    <div>share the delightful moments</div>
+                    <div>of children's growth together.</div>
+                  </div>
+                  <div className="md:hidden flex flex-col">
+                    In community, schools, teachers, and parents will share the
+                    delightful moments of children's growth together.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="relative md:w-[490px] w-[173px] h-[177px]  md:h-[500px] md:rounded-[30px] rounded-[10px] flex flex-col">
+              <video
+                className="absolute inset-0 w-full h-full object-cover md:rounded-[30px] rounded-[10px]"
+                autoPlay
+                loop
+                muted
+              >
+                <source src={video} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <div className="absolute md:bottom-11 bottom-[14px] md:right-9 right-[14px] flex justify-start items-center md:w-[300px] md:h-[100px] w-[106px]">
+                <div className="flex flex-col">
+                  <div
+                    className="md:text-[30px] text-[10px] text-right "
+                    style={{
+                      fontFamily: "SF Pro Display B",
+                      lineHeight: "normal",
+                    }}
+                  >
+                    Capture the moments of childlike innocence and earnest
+                    learning.
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="w-full flex flex-col justify-center items-center gap-[300px] pt-[300px] pb-[200px]">
-        <div className="w-[1000px] flex flex-col justify-center items-center gap-[100px]">
+      {/*Content 5*/}
+      <div className="w-full flex flex-col justify-center items-center gap-[300px] md:pt-[300px] pt-[100px] pb-[200px]">
+        <div className="w-full md:w-[1000px] flex flex-col justify-center items-center md:gap-[100px] gap-[50px]">
           <div className="flex flex-col">
             <div
-              className="text-[70px] text-center"
+              className="md:text-[70px] text-4xl text-center"
               style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
             >
-              <div>
-                More <span className="text-[#FF5F5F]"> intelligent </span>
-                experiences
+              <div className="hidden md:flex flex-col ">
+                <div>
+                  More <span className="text-[#FF5F5F]"> intelligent </span>
+                  experiences
+                </div>
+                <div>
+                  with <span className="text-[#F67F00]"> Kindertown</span>{" "}
+                  system
+                </div>
               </div>
-              <div>
-                with <span className="text-[#F67F00]"> Kindertown</span> system
+              <div className="md:hidden flex flex-wrap justify-center items-center">
+                More &nbsp;<span className="text-[#FF5F5F]"> intelligent </span>{" "}
+                experiences with{" "}
+                <span className="text-[#F67F00]"> Kindertown &nbsp;</span>{" "}
+                system
               </div>
             </div>
           </div>
           <div className="flex flex-wrap justify-center items-center gap-5">
-            <div className="relative md:w-[1000px] md:h-[500px] md:rounded-[30px] bg-[#7F5FFF] flex items-center gap-20 pr-[29px] pb-[58px] pt-[57px] pl-[99px]">
+            <div className="relative w-full md:w-[1000px] md:h-[500px] md:rounded-[30px] rounded-[10px] bg-[#7F5FFF] flex items-center gap-20 pr-[29px] pb-[58px] pt-[57px] pl-[99px]">
               <div className="flex flex-col w-[292px] h-[180px] justify-center items-center">
                 <div
-                  className="text-3xl text-white"
+                  className="md:text-3xl text-xs text-white"
                   style={{ fontFamily: "SF Pro Display B" }}
                 >
                   With just a tap of their fingertips, teachers can tackle the
