@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import apple from "../../assets/parentmodal/apple.svg";
 import android from "../../assets/parentmodal/android.svg";
 import video from "../../assets/parentmodal/video.mp4";
@@ -14,19 +14,34 @@ import data from "../../assets/parentmodal/data.svg";
 import contact from "../../assets/parentmodal/contact.svg";
 import data2 from "../../assets/parentmodal/data2.svg";
 
-const modalparent = ({ showModal1, setShowModal1 }) => {
+const ModalParent = ({ showModal1, setShowModal1 }) => {
+  useEffect(() => {
+    const handleOutsideClick = (event) => {
+      if (!document.querySelector(".modal-content").contains(event.target)) {
+        setShowModal1(false);
+      }
+    };
+
+    if (showModal1) {
+      document.addEventListener("mousedown", handleOutsideClick);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+    };
+  }, [showModal1, setShowModal1]);
   return (
     <>
       {showModal1 ? (
         <>
           <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
-            <div className="relative max-w-[900px] overflow-auto  my-auto py-[100px] flex modal-content">
+            <div className="relative w-full md:max-w-[900px] overflow-auto  my-auto md:py-[100px] flex modal-content">
               {/*content*/}
-              <div className="border-0 rounded-[50px] shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none pb-[100px]">
+              <div className="border-0 md:rounded-[50px] shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none md:pb-[100px] pb-[60px]">
                 {/*video*/}
                 <div className="relative h-auto">
                   <video
-                    className="w-full h-full object-cover rounded-t-[50px]"
+                    className="w-full h-full object-cover md:rounded-t-[50px]"
                     autoPlay
                     loop
                     muted
@@ -35,7 +50,7 @@ const modalparent = ({ showModal1, setShowModal1 }) => {
                     Your browser does not support the video tag.
                   </video>
                   <div
-                    className="absolute bottom-[49px] right-[46px] text-right text-white text-[32px] w-[410px]"
+                    className="absolute md:bottom-[49px] bottom-[29px] md:right-[46px] right-[25px] text-right text-white md:text-[32px] text-xs md:w-[410px] w-[180px]"
                     style={{
                       fontFamily: "SF Pro Display B",
                       lineHeight: "normal",
@@ -46,19 +61,24 @@ const modalparent = ({ showModal1, setShowModal1 }) => {
                   </div>
                 </div>
                 {/*Content1*/}
-                <div className="w-full flex flex-col gap-[50px] pt-[100px]">
-                  <div className="w-[900px] px-[100px] justify-start">
+                <div className="w-full flex flex-col gap-[50px] md:pt-[100px] pt-[50px]">
+                  <div className="w-full md:w-[900px] md:px-[100px] pl-[31px] pr-[32px] justify-start">
                     <div
-                      className="text-4xl"
+                      className="md:text-4xl text-[24px]"
                       style={{ fontFamily: "SF Pro Display B" }}
                     >
-                      <div>The beginning of a child's learning</div>
-                      <div>journey is crucial.</div>
+                      <div className="hidden md:flex flex-col">
+                        <div>The beginning of a child's learning</div>
+                        <div>journey is crucial.</div>
+                      </div>
+                      <div className=" md:hidden flex flex-col">
+                        The beginning of a child's learning journey is crucial.
+                      </div>
                     </div>
                   </div>
-                  <div className="w-[900px] flex flex-col gap-12 pl-[100px] pr-[40px]">
+                  <div className="w-full md:w-[900px] flex flex-col gap-12 md:pl-[100px] md:pr-[40px] pl-[31px] pr-[32px]">
                     <div
-                      className="w-[700px] text-[32px]"
+                      className="w-full md:w-[700px] md:text-[32px] text-xl"
                       style={{
                         fontFamily: "SF Pro Display M",
                         lineHeight: "normal",
@@ -71,7 +91,7 @@ const modalparent = ({ showModal1, setShowModal1 }) => {
                     </div>
                     <div className="w-full flex">
                       <div
-                        className="w-[700px] text-[32px]"
+                        className="w-full md:w-[700px] md:text-[32px] text-xl"
                         style={{
                           fontFamily: "SF Pro Display M",
                           lineHeight: "normal",
@@ -95,8 +115,8 @@ const modalparent = ({ showModal1, setShowModal1 }) => {
                 </div>
 
                 {/*content2*/}
-                <div className="w-full pt-[200px] px-[100px]">
-                  <div className="relative md:w-[700px] rounded-[30px] bg-[#D1C5B8] flex flex-col items-center py-[49px] gap-20 px-[78px]">
+                <div className="w-full md:pt-[200px] pt-[100px] md:px-[100px] pl-[31px] pr-[32px]">
+                  <div className="relative md:w-[700px] rounded-[30px] bg-[#D1C5B8] flex flex-col items-center md:py-[49px] py-[27px] gap-9 md:gap-20 md:px-[78px] pl-[26px] pr-[25px]">
                     <div>
                       <img
                         src={icon}
@@ -104,8 +124,8 @@ const modalparent = ({ showModal1, setShowModal1 }) => {
                         className=" w-[150px] h-[150px]"
                       />
                     </div>
-                    <div className="w-full flex flex-col items-center gap-[60px]">
-                      <div className="flex gap-[50px]">
+                    <div className="w-full flex flex-col items-center md:gap-[60px] gap-[26px]">
+                      <div className="flex md:gap-[50px] gap-[11px]">
                         <div>
                           <img src={apple} alt="Apple" />
                         </div>
@@ -113,7 +133,7 @@ const modalparent = ({ showModal1, setShowModal1 }) => {
                           <img src={android} alt="Android" />
                         </div>
                       </div>
-                      <div className="w-full flex flex-col items-center gap-9">
+                      <div className="w-full flex flex-col items-center md:gap-9 gap-[17px]">
                         <div
                           className=" text-base "
                           style={{
@@ -124,15 +144,15 @@ const modalparent = ({ showModal1, setShowModal1 }) => {
                           Data Linked to You
                         </div>
 
-                        <div className="flex flex-col gap-5">
-                          <div className="w-full grid grid-cols-3 gap-[50px]">
+                        <div className="flex flex-col md:gap-5 gap-[11px]">
+                          <div className="w-full grid grid-cols-3 md:gap-[50px] gap-[15px] ">
                             <div className="flex w-full">
-                              <div className="flex items-center gap-5">
-                                <div className="w-5 h-5">
+                              <div className="flex items-center md:gap-5 gap-[11px]">
+                                <div className="md:w-5 md:h-5 w-[10px] h-[10px]">
                                   <img src={shopping} alt="Shopping" />
                                 </div>
                                 <div
-                                  className="text-xl"
+                                  className="md:text-xl text-[10px]"
                                   style={{
                                     fontFamily: "SF Pro Display R",
                                   }}
@@ -142,12 +162,12 @@ const modalparent = ({ showModal1, setShowModal1 }) => {
                               </div>
                             </div>
                             <div className="flex w-full">
-                              <div className="flex items-center gap-5">
-                                <div className="w-5 h-5">
+                              <div className="flex items-center md:gap-5 gap-[11px]">
+                                <div className="md:w-5 md:h-5 w-[10px] h-[10px]">
                                   <img src={smile} alt="Identifier" />
                                 </div>
                                 <div
-                                  className="text-xl"
+                                  className="md:text-xl text-[10px]"
                                   style={{
                                     fontFamily: "SF Pro Display R",
                                   }}
@@ -157,12 +177,12 @@ const modalparent = ({ showModal1, setShowModal1 }) => {
                               </div>
                             </div>
                             <div className="flex w-full">
-                              <div className="flex items-center gap-5">
-                                <div className="w-5 h-5">
+                              <div className="flex items-center md:gap-5 gap-[11px]">
+                                <div className="md:w-5 md:h-5 w-[10px] h-[10px]">
                                   <img src={setting} alt="Diagnostic" />
                                 </div>
                                 <div
-                                  className="text-xl w-[108px]"
+                                  className="md:text-xl text-[10px] w-[108px]"
                                   style={{
                                     fontFamily: "SF Pro Display R",
                                   }}
@@ -172,14 +192,14 @@ const modalparent = ({ showModal1, setShowModal1 }) => {
                               </div>
                             </div>
                           </div>
-                          <div className="w-full grid grid-cols-3 gap-[50px]">
+                          <div className="w-full grid grid-cols-3 md:gap-[50px] gap-[15px]">
                             <div className="flex w-full">
-                              <div className="flex items-center gap-5">
-                                <div className="w-5 h-5">
+                              <div className="flex items-center md:gap-5 gap-[11px]">
+                                <div className="md:w-5 md:h-5 w-[10px] h-[10px]">
                                   <img src={location} alt="Location" />
                                 </div>
                                 <div
-                                  className="text-xl"
+                                  className="md:text-xl text-[10px]"
                                   style={{
                                     fontFamily: "SF Pro Display R",
                                   }}
@@ -189,12 +209,12 @@ const modalparent = ({ showModal1, setShowModal1 }) => {
                               </div>
                             </div>
                             <div className="flex w-full">
-                              <div className="flex items-center gap-5">
-                                <div className="w-5 h-5">
+                              <div className="flex items-center md:gap-5 gap-[11px]">
+                                <div className="md:w-5 md:h-5 w-[10px] h-[10px]">
                                   <img src={education} alt="Education" />
                                 </div>
                                 <div
-                                  className="text-xl"
+                                  className="md:text-xl text-[10px]"
                                   style={{
                                     fontFamily: "SF Pro Display R",
                                   }}
@@ -204,12 +224,12 @@ const modalparent = ({ showModal1, setShowModal1 }) => {
                               </div>
                             </div>
                             <div className="flex w-[162px]">
-                              <div className="flex items-center gap-5">
-                                <div className="w-5 h-5">
+                              <div className="flex items-center md:gap-5 gap-[11px]">
+                                <div className="md:w-5 md:h-5 w-[10px] h-[10px]">
                                   <img src={gallery} alt="UserContent" />
                                 </div>
                                 <div
-                                  className="text-xl"
+                                  className="md:text-xl text-[10px]"
                                   style={{
                                     fontFamily: "SF Pro Display R",
                                   }}
@@ -219,14 +239,14 @@ const modalparent = ({ showModal1, setShowModal1 }) => {
                               </div>
                             </div>
                           </div>
-                          <div className="w-full grid grid-cols-3 gap-[50px]">
+                          <div className="w-full grid grid-cols-3 md:gap-[50px] gap-[15px]">
                             <div className="flex w-full">
-                              <div className="flex items-center gap-5">
-                                <div className="w-5 h-5">
+                              <div className="flex items-center md:gap-5 gap-[11px]">
+                                <div className="md:w-5 md:h-5 w-[10px] h-[10px]">
                                   <img src={data} alt="UsageData" />
                                 </div>
                                 <div
-                                  className="text-xl"
+                                  className="md:text-xl text-[10px]"
                                   style={{
                                     fontFamily: "SF Pro Display R",
                                   }}
@@ -236,12 +256,12 @@ const modalparent = ({ showModal1, setShowModal1 }) => {
                               </div>
                             </div>
                             <div className="flex w-full">
-                              <div className="flex items-center gap-5">
-                                <div className="w-5 h-5">
+                              <div className="flex items-center md:gap-5 gap-[11px]">
+                                <div className="md:w-5 md:h-5 w-[10px] h-[10px]">
                                   <img src={contact} alt="Contacts" />
                                 </div>
                                 <div
-                                  className="text-xl"
+                                  className="md:text-xl text-[10px]"
                                   style={{
                                     fontFamily: "SF Pro Display R",
                                   }}
@@ -251,12 +271,12 @@ const modalparent = ({ showModal1, setShowModal1 }) => {
                               </div>
                             </div>
                             <div className="flex w-[162px]">
-                              <div className="flex items-center gap-5">
-                                <div className="w-5 h-5">
+                              <div className="flex items-center md:gap-5 gap-[11px]">
+                                <div className="md:w-5 md:h-5 w-[10px] h-[10px]">
                                   <img src={data2} alt="Other Data" />
                                 </div>
                                 <div
-                                  className="text-xl"
+                                  className="md:text-xl text-[10px]"
                                   style={{
                                     fontFamily: "SF Pro Display R",
                                   }}
@@ -273,23 +293,23 @@ const modalparent = ({ showModal1, setShowModal1 }) => {
                 </div>
 
                 {/*Content3*/}
-                <div className="w-full flex flex-col px-[100px] justify-center pt-[100px] gap-[50px]">
+                <div className="w-full flex flex-col md:px-[100px] pl-[31px] pr-[32px] justify-center md:pt-[100px] pt-[50px] md:gap-[50px] gap-[30px]">
                   <div className="w-[700px] flex flex-col">
                     <div
-                      className="text-4xl"
+                      className="md:text-4xl text-xl"
                       style={{ fontFamily: " SF Pro Display B" }}
                     >
                       Features:
                     </div>
                   </div>
                   <div
-                    className="w-[700px] flex flex-col text-[32px]"
+                    className="w-full md:w-[700px] flex flex-col md:text-[32px] text-base"
                     style={{
                       fontFamily: "SF Pro Display R",
                       lineHeight: "normal",
                     }}
                   >
-                    <ul className="list-outside list-disc flex flex-col gap-10 pl-[50px]">
+                    <ul className="list-outside list-disc flex flex-col md:gap-10 gap-5 md:pl-[50px] pl-[20px]">
                       <li>Search the kindergartens near you.</li>
                       <li>Referral Program and Reward Wallet function.</li>
                       <li>Reserve a seat for your kids through Kindertown.</li>
@@ -328,11 +348,14 @@ const modalparent = ({ showModal1, setShowModal1 }) => {
               </div>
             </div>
           </div>
-          <div className=" fixed inset-0 z-40 bg-gray-800 bg-opacity-50 backdrop-blur-sm"></div>
+          <div
+            className=" fixed inset-0 z-40 bg-gray-800 bg-opacity-50 backdrop-blur-sm"
+            onClick={() => setShowModal1(false)}
+          ></div>
         </>
       ) : null}
     </>
   );
 };
 
-export default modalparent;
+export default ModalParent;

@@ -2,7 +2,8 @@
 import React from "react";
 import Privacy from "./Privacy";
 import Header from "../assets/admin/header.png";
-
+import Device from "../assets/admin/Device - Macbook Pro.png";
+import Device2 from "../assets/admin/Device2.png";
 import Macbook from "../assets/admin/macbook2.png";
 import Macbook2 from "../assets/admin/Device.png";
 import Ipad from "../assets/admin/ipad.png";
@@ -100,143 +101,65 @@ const Admin = () => {
         </div>
       </div>
     */}
-
-      <div className="w-full flex flex-col md:gap-[200px] gap-[100px] pt-[100px] md:pt-[200px]">
-        {/* Content 2  */}
-        <div className="w-full flex md:flex-row flex-col md:pl-[220px] pl-[31px] gap-[30px]">
-          <div className="flex flex-col w-full justify-center items-center">
+      <div className="w-full flex flex-col md:gap-[200px] gap-[100px]">
+        {/*Content 2*/}
+        <div className="w-full flex md:flex flex-wrap md:pl-[220px] md:pt-[200px] pt-[100px] gap-[30px]  justify-end items-center  overflow-hidden">
+          <div
+            className="flex flex-col md:w-[400px] md:text-[50px] text-xl w-full"
+            style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
+          >
             <div
-              className="md:text-[50px] text-xl w-full md:w-[400px]"
+              className="md:text-[50px] text-xl"
               style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
             >
-              <div
-                className="md:text-[50px] text-xl"
-                style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
-              >
-                <div className="hidden md:flex flex-col items-center">
-                  <div className="flex items-center">Superb Interface</div>
-                  <div className="flex items-center">with Exceptional</div>
-                  <div className="flex items-center">User Experience</div>
-                </div>
-                <div className="md:hidden flex flex-col items-center">
-                  <div className="flex items-center">Superb Interface with</div>
-                  <div className="flex items-center">
-                    Exceptional User Experience
-                  </div>
-                </div>
+              <div className="hidden md:flex flex-col items-center">
+                <div className="flex items-center">Superb Interface</div>
+                <div className="flex items-center">with Exceptional</div>
+                <div className="flex items-center">User Experience</div>
               </div>
-            </div>
-          </div>
-          <div className="flex flex-col w-full overflow-hidden justify-end">
-            <div className="md:w-[1008px] md:h-[591px]  w-full h-[207px] relative bg-hero-image bg-cover bg-no-repeat md:left-[10%] left-[20%]"></div>
-          </div>
-        </div>
-
-        {/* Content 3 */}
-        <div className="w-full flex md:flex-row flex-col md:pr-[220px] pr-[31px] gap-[30px]">
-          <div className="flex flex-col w-full overflow-hidden justify-start">
-            <div className="md:w-[1008px] md:h-[591px]  w-full h-[207px] relative bg-hero-image2 bg-cover bg-no-repeat overflow-hidden md:order-none order-last md:right-[20%] right-[30%]"></div>
-          </div>
-          <div className="flex flex-col w-full md:order-last order-first md:pl-0 pl-[31px] justify-center items-center">
-            <div
-              className="md:text-[50px] text-xl w-full md:w-[50%]"
-              style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
-            >
-              <div
-                className="md:text-[50px] text-xl"
-                style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
-              >
-                <div className="hidden md:flex flex-col items-center">
-                  <div className="flex items-center">Make school</div>
-                  <div className="flex items-center">enrollment </div>
-                  <div className="flex items-center">effortless, </div>
-                  <div className="flex items-center">efficient, and </div>
-                  <div className="flex items-center">time-saving. </div>
-                </div>
-                <div className="md:hidden flex flex-col items-center">
-                  <div className="flex items-center">
-                    Make school enrollment
-                  </div>
-                  <div className="flex items-center">
-                    effortless, efficient, and
-                  </div>
-                  <div className="flex items-center">time-saving. </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/*content 2
-        
-        <div className="flex md:flex-row flex-col md:pl-[220px] pl-[31px] gap-[30px]">
-    
-          <div className="w-full md:w-1/2 flex flex-col justify-center items-center pr-[32px] md:pr-0">
-            <div
-              className="md:text-[50px] text-xl w-full md:w-[400px]"
-              style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
-            >
-              <div
-                className="md:text-[50px] text-xl"
-                style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
-              >
-                <div className="hidden md:flex flex-col items-center">
-                  <div className="flex items-center">Superb Interface</div>
-                  <div className="flex items-center">with Exceptional</div>
-                  <div className="flex items-center">User Experience</div>
-                </div>
-                <div className="md:hidden flex flex-col items-center">
-                  <div className="flex items-center">Superb Interface with</div>
-                  <div className="flex items-center">
-                    Exceptional User Experience
-                  </div>
+              <div className="md:hidden flex flex-col items-center">
+                <div className="flex items-center">Superb Interface with</div>
+                <div className="flex items-center">
+                  Exceptional User Experience
                 </div>
               </div>
             </div>
           </div>
 
-       
-          <div className="flex flex-col w-[1008px] overflow-hidden justify-end">
-            <div className="md:w-[1008px] md:h-[591px] w-full h-[200px] flex flex-col bg-hero-image bg-left-custom bg-cover  bg-no-repeat overflow-hidden"></div>
+          <div className="flex flex-col relative left-[119px]">
+            <img src={Device} alt="Device" className="w-full" />
           </div>
         </div>
-        content 3
-        <div className="flex md:flex-row flex-col md:pr-[220px] pr-[32px] gap-[30px]">
-
-          <div className="w-full md:w-1/2  flex flex-col overflow-hidden">
-            <div className="md:w-[1008px] md:h-[591px] w-full h-[207px] flex flex-col bg-hero-image2 md:bg-left-custom bg-cover bg-no-repeat overflow-hidden md:order-none order-last"></div>
+        {/*Content 3*/}
+        <div className="w-full flex md:flex-row flex-col md:pr-[220px] gap-[30px]  justify-start items-center  overflow-hidden">
+          <div className="flex flex-col relative  right-[119px] md:order-1 order-2">
+            <img src={Device2} alt="Device2" className="w-full" />
           </div>
-
-          <div className="md:w-1/2 w-full flex flex-col justify-center items-center md:order-last order-first md:pl-0 pl-[31px]">
+          <div
+            className="md:text-[50px] text-xl w-full md:w-[400px] order-1 md:order-2"
+            style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
+          >
             <div
-              className="md:text-[50px] text-xl w-full md:w-[50%]"
+              className="md:text-[50px] text-xl"
               style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
             >
-              <div
-                className="md:text-[50px] text-xl"
-                style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
-              >
-                <div className="hidden md:flex flex-col items-center">
-                  <div className="flex items-center">Make school</div>
-                  <div className="flex items-center">enrollment </div>
-                  <div className="flex items-center">effortless, </div>
-                  <div className="flex items-center">efficient, and </div>
-                  <div className="flex items-center">time-saving. </div>
+              <div className="hidden md:flex flex-col items-center">
+                <div className="flex items-center">Make school</div>
+                <div className="flex items-center">enrollment </div>
+                <div className="flex items-center">effortless, </div>
+                <div className="flex items-center">efficient, and </div>
+                <div className="flex items-center">time-saving. </div>
+              </div>
+              <div className="md:hidden flex flex-col items-center">
+                <div className="flex items-center">Make school enrollment</div>
+                <div className="flex items-center">
+                  effortless, efficient, and
                 </div>
-                <div className="md:hidden flex flex-col items-center">
-                  <div className="flex items-center">
-                    Make school enrollment
-                  </div>
-                  <div className="flex items-center">
-                    effortless, efficient, and
-                  </div>
-                  <div className="flex items-center">time-saving. </div>
-                </div>
+                <div className="flex items-center">time-saving. </div>
               </div>
             </div>
           </div>
         </div>
-        */}
       </div>
 
       {/*CONTENT 2 & CONTENT 3*/}
