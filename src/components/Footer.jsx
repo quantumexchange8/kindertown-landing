@@ -22,9 +22,9 @@ const Footer = () => {
 
   return (
     <footer>
-      <div className="bg-[#FFF7EF]  justify-center items-center py-7 md:py-16 pl-[31px] pr-[120px] md:pl-0">
+      <div className="bg-[#FFF7EF]  justify-center items-center">
         {/*Mobile*/}
-        <div className="w-full md:hidden flex flex-wrap gap-9">
+        <div className="w-full md:hidden flex flex-wrap gap-9 py-7 px-8 md:p-0">
           <div className="flex flex-wrap gap-[40px] md:hidden">
             <div className="text-xl" style={{ fontFamily: "SF Pro Display M" }}>
               <div className="flex flex-col md:hidden gap-5">
@@ -159,7 +159,7 @@ const Footer = () => {
           </div>
         </div>
         {/*Desktop*/}
-        <div className="w-full hidden md:flex flex-col justify-center items-center pb-[48px] px-[170px] gap-9">
+        <div className="w-full hidden md:flex flex-col justify-center items-center gap-[50px]">
           <div className="w-full md:w-[1000px] md:flex flex-col justify-center gap-9">
             <div className="flex flex-col w-full">
               <div className="w-[74px] h-[51px]">
@@ -177,7 +177,7 @@ const Footer = () => {
               <div className="flex flex-col gap-[25px]">
                 <div
                   className="flex h-[30px] gap-[30px] text-2xl font-semibold"
-                  style={{ fontFamily: "SF Pro Display M" }}
+                  style={{ fontFamily: "SF Pro Display Semibold" }}
                 >
                   <div className="flex flex-col">English</div>
                   <div className="flex flex-col">Malay</div>
@@ -264,7 +264,7 @@ const Footer = () => {
                 <div className="flex flex-col gap-[15px]">
                   <div
                     className="text-2xl text-right"
-                    style={{ fontFamily: "SF Pro Display M" }}
+                    style={{ fontFamily: "SF Pro Display Semibold" }}
                   >
                     Stay connect with us:
                   </div>
@@ -316,7 +316,7 @@ const Footer = () => {
                 <div className="flex flex-col gap-[15px]">
                   <div
                     className="text-2xl text-right"
-                    style={{ fontFamily: "SF Pro Display M" }}
+                    style={{ fontFamily: "SF Pro Display Semibold" }}
                   >
                     Discover our applications:
                   </div>
@@ -328,62 +328,67 @@ const Footer = () => {
               </div>
             </div>
           </div>
-        </div>
-        <hr className="hidden md:flex md:w-[1000px] border-[#000] mx-auto dark:border-black-900" />
-        <div className="w-full md:flex justify-center items-center md:px-[170px]">
-          <div className="hidden md:w-[1000px] pt-[15px] md:flex justify-between">
-            <div className="flex flex-col w-[501px]">
-              <div
-                className="text-xs text-[#565656]"
-                style={{ fontFamily: "SF Pro Display R" }}
-              >
-                <div className="flex gap-2">
-                  <div className="flex-col">
-                    © 2006 Current Tech Industries Sdn Bhd.
+
+          <div className="flex flex-col gap-4 mb-16">
+            <hr className="hidden md:flex md:w-[1000px] border-[#000] mx-auto dark:border-black-900" />
+
+            <div className="w-full md:flex justify-center items-center">
+              <div className="hidden md:w-[1000px] md:flex justify-between">
+                <div className="flex flex-col w-[501px]">
+                  <div
+                    className="text-xs text-[#565656]"
+                    style={{ fontFamily: "SF Pro Display R" }}
+                  >
+                    <div className="flex gap-2">
+                      <div className="flex-col">
+                        © 2006 Current Tech Industries Sdn Bhd.
+                      </div>
+                      <div>|</div>
+                      <div className="flex-col">
+                        <button
+                          className="hover:text-[#FF8400]"
+                          onClick={() => setPrivacyOpen(true)}
+                        >
+                          Privacy Policy
+                        </button>
+                        <Privacy
+                          PrivacyOpen={PrivacyOpen}
+                          setPrivacyOpen={setPrivacyOpen}
+                        />
+                      </div>
+                      <div>|</div>
+                      <div className="flex-col">
+                        <button
+                          className="hover:text-[#FF8400]"
+                          onClick={() => setTermsOpen(true)}
+                        >
+                          Terms of use
+                        </button>
+                        <Terms TermsOpen={TermsOpen} setTermsOpen={setTermsOpen} />
+                      </div>
+                      <div>|</div>
+                    </div>
                   </div>
-                  <div>|</div>
-                  <div className="flex-col">
-                    <button
-                      className="hover:text-[#FF8400]"
-                      onClick={() => setPrivacyOpen(true)}
-                    >
-                      Privacy Policy
-                    </button>
-                    <Privacy
-                      PrivacyOpen={PrivacyOpen}
-                      setPrivacyOpen={setPrivacyOpen}
-                    />
-                  </div>
-                  <div>|</div>
-                  <div className="flex-col">
-                    <button
-                      className="hover:text-[#FF8400]"
-                      onClick={() => setTermsOpen(true)}
-                    >
-                      Terms of use
-                    </button>
-                    <Terms TermsOpen={TermsOpen} setTermsOpen={setTermsOpen} />
-                  </div>
-                  <div>|</div>
                 </div>
-              </div>
-            </div>
-            <div className="flex flex-col">
-              <div
-                className="text-xs text-[#565656]"
-                style={{ fontFamily: "SF Pro Display R" }}
-              >
-                <div className="flex gap-4">
-                  <div className="flex flex-col">
-                    <img src={ct} alt="CTLogo" />
-                  </div>
-                  <div className="flex flex-col">
-                    Powered by Current Tech Industries
+                <div className="flex flex-col">
+                  <div
+                    className="text-xs text-[#565656]"
+                    style={{ fontFamily: "SF Pro Display R" }}
+                  >
+                    <div className="flex gap-4">
+                      <div className="flex flex-col">
+                        <img src={ct} alt="CTLogo" />
+                      </div>
+                      <div className="flex flex-col">
+                        Powered by Current Tech Industries
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          
         </div>
       </div>
       <div className="md:hidden flex pl-[31px] pr-[120px] gap-4 pt-[10px] pb-[93px]">

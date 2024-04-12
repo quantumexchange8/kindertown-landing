@@ -4,6 +4,7 @@ import { GlobalIcon } from "./Icons/outline";
 import "../font.css";
 import logo from "../assets/logo.svg";
 import menu from "../assets/menu.svg";
+
 const Navbar = () => {
   const location = useLocation();
   const [activeProductSubPage, setActiveProductSubPage] = useState("parent"); // Default active sub-page for Products section
@@ -12,10 +13,12 @@ const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false); // State to manage the visibility of the menu
 
   useEffect(() => {
-    // Close the menu when the location changes
     setShowMenu(false);
+    
+    window.scrollTo(0, 0);
   }, [location]);
-  // Define common styles for the links
+
+  
   const linkStyles = {
     base: "flex justify-center items-center text-[#FFF] bg-[#F67F00] rounded-[15px]",
     home: "w-[66px]",

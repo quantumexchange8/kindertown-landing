@@ -21,7 +21,7 @@ const Home = () => {
   return (
     <>
       <div className=" flex justify-center mt-[50px] md:pb-[150px] pb-[100px]">
-        <div className="w-full md:w-[1000px] pt-[30px] md:pt-[50px] flex flex-col pl-[31px] pr-[32px] md:px-0">
+        <div className="w-full md:w-[1000px] pt-[30px] md:pt-[50px] flex flex-col pl-[31px] pr-[32px] md:px-0 md:items-center">
           {/* CONTENT 1 */}
           <div>
             <img src={Main} alt="" loading="lazy" />
@@ -34,7 +34,7 @@ const Home = () => {
                 className="w-full md:max-w-[610px] text-4xl md:text-[80px] text-center md:leading-[90px]"
                 style={{ fontFamily: "SF Pro Display B" }}
               >
-                Zero - Worries. Zero - Hassle.
+                Zero - Worries Zero - Hassle
               </div>
               <div
                 className="w-full text-center md:text-[32px] text-xl"
