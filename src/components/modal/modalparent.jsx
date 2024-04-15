@@ -36,6 +36,15 @@ const ModalParent = ({ showModal1, setShowModal1 }) => {
         <>
           <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
             <div className="relative w-full md:max-w-[900px] overflow-auto  my-auto md:py-[100px] flex modal-content">
+              <div className="md:hidden fixed z-50 bottom-[20px] right-[20px]">
+                <button onClick={() => setShowModal1(false)}>
+                  <img
+                    src={close}
+                    alt="CloseButton"
+                    className="md:w-[60px] md:h-[60px] w-[50px] h-[50px]"
+                  />
+                </button>
+              </div>
               {/*content*/}
               <div className="border-0 md:rounded-[50px] shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none md:pb-[100px] pb-[60px]">
                 {/*video*/}
@@ -101,7 +110,7 @@ const ModalParent = ({ showModal1, setShowModal1 }) => {
                         and IT engineers, parents will be able to focus more on
                         and better understand their child's learning progress.
                       </div>
-                      <div>
+                      <div className="hidden md:flex flex-col">
                         <button onClick={() => setShowModal1(false)}>
                           <img
                             src={close}
@@ -121,7 +130,7 @@ const ModalParent = ({ showModal1, setShowModal1 }) => {
                       <img
                         src={icon}
                         alt="iconmodal"
-                        className=" w-[150px] h-[150px]"
+                        className="md:w-[150px] md:h-[150px] w-[100px] h-[100px]"
                       />
                     </div>
                     <div className="w-full flex flex-col items-center md:gap-[60px] gap-[26px]">
@@ -135,7 +144,7 @@ const ModalParent = ({ showModal1, setShowModal1 }) => {
                       </div>
                       <div className="w-full flex flex-col items-center md:gap-9 gap-[17px]">
                         <div
-                          className=" text-base "
+                          className=" md:text-base text-xs "
                           style={{
                             fontFamily: "SF Pro Display B",
                             lineHeight: "normal",
@@ -223,7 +232,7 @@ const ModalParent = ({ showModal1, setShowModal1 }) => {
                                 </div>
                               </div>
                             </div>
-                            <div className="flex w-[162px]">
+                            <div className="flex md:w-[162px] w-full">
                               <div className="flex items-center md:gap-5 gap-[11px]">
                                 <div className="md:w-5 md:h-5 w-[10px] h-[10px]">
                                   <img src={gallery} alt="UserContent" />
@@ -270,7 +279,7 @@ const ModalParent = ({ showModal1, setShowModal1 }) => {
                                 </div>
                               </div>
                             </div>
-                            <div className="flex w-[162px]">
+                            <div className="flex md:w-[162px] w-full">
                               <div className="flex items-center md:gap-5 gap-[11px]">
                                 <div className="md:w-5 md:h-5 w-[10px] h-[10px]">
                                   <img src={data2} alt="Other Data" />
@@ -294,7 +303,7 @@ const ModalParent = ({ showModal1, setShowModal1 }) => {
 
                 {/*Content3*/}
                 <div className="w-full flex flex-col md:px-[100px] pl-[31px] pr-[32px] justify-center md:pt-[100px] pt-[50px] md:gap-[50px] gap-[30px]">
-                  <div className="w-[700px] flex flex-col">
+                  <div className="md:w-[700px] w-full flex flex-col">
                     <div
                       className="md:text-4xl text-xl"
                       style={{ fontFamily: " SF Pro Display B" }}

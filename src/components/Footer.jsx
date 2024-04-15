@@ -159,7 +159,7 @@ const Footer = () => {
           </div>
         </div>
         {/*Desktop*/}
-        <div className="w-full hidden md:flex flex-col justify-center items-center gap-[50px]">
+        <div className="w-full hidden md:flex flex-col justify-center items-center gap-[50px] pt-[64px]">
           <div className="w-full md:w-[1000px] md:flex flex-col justify-center gap-9">
             <div className="flex flex-col w-full">
               <div className="w-[74px] h-[51px]">
@@ -364,7 +364,10 @@ const Footer = () => {
                         >
                           Terms of use
                         </button>
-                        <Terms TermsOpen={TermsOpen} setTermsOpen={setTermsOpen} />
+                        <Terms
+                          TermsOpen={TermsOpen}
+                          setTermsOpen={setTermsOpen}
+                        />
                       </div>
                       <div>|</div>
                     </div>
@@ -388,7 +391,6 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          
         </div>
       </div>
       <div className="md:hidden flex pl-[31px] pr-[120px] gap-4 pt-[10px] pb-[93px]">

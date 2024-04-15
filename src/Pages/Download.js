@@ -188,10 +188,14 @@ const Download = () => {
         </div>
         <div className="w-full flex flex-col justify-center items-center">
           <div className="relative md:w-[1000px] w-full md:h-[500px] md:rounded-[30px] items-center bg-[#2FC300] flex md:gap-[99px] gap-6 md:pr-[30px] pr-[32px] overflow-hidden md:pt-[49px] pt-[43px] md:pb-0 pb-[44px]">
-            <div className="flex flex-col md:w-[546px] w-[300px] relative bottom-0 md:top-10 top-0 right-3">
-              <img src={imac} alt="imac" className="md:w-[592px] md:h-full" />
+            <div className="flex flex-col md:w-[546px] w-2/3 relative bottom-0 md:top-10 top-0 right-3">
+              <img
+                src={imac}
+                alt="imac"
+                className="md:w-[592px] md:h-full w-full"
+              />
             </div>
-            <div className="w-full md:w-[256px] flex flex-col md:gap-5 gap-[10px]">
+            <div className="w-1/3 md:w-[256px] flex flex-col md:gap-5 gap-[10px]">
               <div className="flex flex-col">
                 <div
                   className="md:text-[30px] text-base"
@@ -214,17 +218,13 @@ const Download = () => {
                   lineHeight: "normal",
                 }}
               >
-                {" "}
                 <div className="hidden md:flex flex-col">
                   <div>No more sluggish</div>
                   <div>school enrollment </div>
                   <div>processes from now.</div>
                 </div>
                 <div className="md:hidden flex flex-col">
-                  <div>No more sluggish</div>
-                  <div>school enrollment </div>
-                  <div>processes from</div>
-                  <div>now.</div>
+                  No more sluggish school enrollment processes from now.
                 </div>
               </div>
               <div className="absolute md:bottom-[30px] md:right-[30px] bottom-[35px] right-[35px]">

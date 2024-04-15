@@ -14,11 +14,10 @@ const Navbar = () => {
 
   useEffect(() => {
     setShowMenu(false);
-    
+
     window.scrollTo(0, 0);
   }, [location]);
 
-  
   const linkStyles = {
     base: "flex justify-center items-center text-[#FFF] bg-[#F67F00] rounded-[15px]",
     home: "w-[66px]",
@@ -86,7 +85,7 @@ const Navbar = () => {
     <div className="flex flex-col fixed top-0 w-full z-40">
       <div className="bg-[#fff7efe6] w-full flex justify-center h-[50px] px-5 md:px-[220px]">
         <div className="w-full md:w-[1000px] flex items-center justify-between">
-          <div className="hidden md:flex flex-col">
+          <div className="flex flex-col">
             <img src={logo} alt="Logo" />
           </div>
           {/* web/desktop*/}
@@ -142,15 +141,12 @@ const Navbar = () => {
             </div>
           </div>
           {/* mobile*/}
-          <div className="flex md:hidden items-center justify-between gap-[234px]">
-            <div className="flex flex-col">
-              <img src={logo} alt="Logo" />
-            </div>
+          <div className="flex md:hidden items-center">
             <div className="flex gap-[30px] items-center">
               <div>
                 <GlobalIcon />
               </div>
-              <div>
+              <div className="w-[26px]">
                 <button onClick={() => setShowMenu(!showMenu)}>
                   <img src={menu} alt="Menu" />
                 </button>
@@ -175,6 +171,7 @@ const Navbar = () => {
                       Home
                     </Link>
                   </div>
+
                   <div className="text-[20px]">
                     {/* Products link */}
                     <Link

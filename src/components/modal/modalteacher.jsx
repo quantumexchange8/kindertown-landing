@@ -36,6 +36,15 @@ const ModalTeacher = ({ showModal2, setShowModal2 }) => {
         <>
           <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
             <div className="relative w-full md:w-[900px] overflow-y-auto  my-auto md:py-[100px]  flex modal-content">
+              <div className="md:hidden fixed z-50 bottom-[20px] right-[20px]">
+                <button onClick={() => setShowModal2(false)}>
+                  <img
+                    src={close}
+                    alt="CloseButton"
+                    className="md:w-[60px] md:h-[60px] w-[50px] h-[50px]"
+                  />
+                </button>
+              </div>
               {/*content*/}
               <div className="border-0 md:rounded-[50px] relative flex flex-col w-full bg-white outline-none focus:outline-none md:pb-[100px] pb-[60px]">
                 {/* Video section */}
@@ -125,7 +134,7 @@ const ModalTeacher = ({ showModal2, setShowModal2 }) => {
                       <img
                         src={icon}
                         alt="icon"
-                        className=" md:w-[150px] md:h-[150px]"
+                        className=" md:w-[150px] md:h-[150px] w-[100px] h-[100px]"
                       />
                     </div>
                     <div className="w-full flex flex-col items-center md:gap-[60px] gap-[26px]">

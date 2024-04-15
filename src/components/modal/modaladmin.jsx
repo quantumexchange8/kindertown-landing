@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import apple from "../../assets/parentmodal/apple.svg";
 import android from "../../assets/parentmodal/android.svg";
 import video from "../../assets/adminmodal/header.mp4";
@@ -14,19 +14,43 @@ import data from "../../assets/parentmodal/data.svg";
 import contact from "../../assets/parentmodal/contact.svg";
 import data2 from "../../assets/parentmodal/data2.svg";
 
-const modaladmin = ({ showModal3, setShowModal3 }) => {
+const ModalAdmin = ({ showModal3, setShowModal3 }) => {
+  useEffect(() => {
+    const handleOutsideClick = (event) => {
+      if (!document.querySelector(".modal-content").contains(event.target)) {
+        setShowModal3(false);
+      }
+    };
+
+    if (showModal3) {
+      document.addEventListener("mousedown", handleOutsideClick);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+    };
+  }, [showModal3, setShowModal3]);
   return (
     <>
       {showModal3 ? (
         <>
           <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
-            <div className="relative max-w-[900px] overflow-auto  my-auto py-[50px] flex modal-content">
+            <div className="relative w-full md:max-w-[900px] overflow-auto  my-auto md:py-[50px] flex modal-content">
+              <div className="md:hidden fixed z-50 bottom-[20px] right-[20px]">
+                <button onClick={() => setShowModal3(false)}>
+                  <img
+                    src={close}
+                    alt="CloseButton"
+                    className="md:w-[60px] md:h-[60px] w-[50px] h-[50px]"
+                  />
+                </button>
+              </div>
               {/*content*/}
-              <div className="border-0 rounded-[50px] relative flex flex-col w-full bg-white outline-none focus:outline-none pb-[100px]">
+              <div className="border-0 md:rounded-[50px] relative flex flex-col w-full bg-white outline-none focus:outline-none md:pb-[100px] pb-[60px]">
                 {/* Video section */}
                 <div className="relative h-auto">
                   <video
-                    className="w-full h-full object-cover rounded-t-[50px]"
+                    className="w-full h-full object-cover md:rounded-t-[50px]"
                     autoPlay
                     loop
                     muted
@@ -35,7 +59,7 @@ const modaladmin = ({ showModal3, setShowModal3 }) => {
                     Your browser does not support the video tag.
                   </video>
                   <div
-                    className="absolute top-[29px] right-[46px] text-right text-[32px] w-[389px]"
+                    className="absolute md:top-[29px] md:right-[46px] text-right md:text-[32px] text-xs md:w-[389px] w-[164px] right-[29px] top-[34px]"
                     style={{
                       fontFamily: "SF Pro Display B",
                       lineHeight: "normal",
@@ -47,10 +71,10 @@ const modaladmin = ({ showModal3, setShowModal3 }) => {
                 </div>
 
                 {/* CONTENT 2*/}
-                <div className="w-full flex flex-col gap-[50px] py-[100px]">
-                  <div className="w-[900px] px-[100px] justify-start">
+                <div className="w-full flex flex-col md:gap-[50px] gap-[30px] md:py-[100px] py-[50px]">
+                  <div className="md:w-[900px] w-full md:px-[100px] pl-[31px] pr-[32px] justify-start">
                     <div
-                      className="text-4xl text-left"
+                      className="md:text-4xl text-2xl text-left"
                       style={{ fontFamily: "SF Pro Display B" }}
                     >
                       The school owner is the key force behind the success of
@@ -59,10 +83,10 @@ const modaladmin = ({ showModal3, setShowModal3 }) => {
                       management system for everyone.
                     </div>
                   </div>
-                  <div className="w-[900px] flex flex-col gap-12 pl-[100px] pr-[40px]">
+                  <div className="w-full md:w-[900px] flex flex-col md:pl-[100px] md:pr-[40px] pl-[31px] pr-[32px]">
                     <div className="w-full flex items-center ">
                       <div
-                        className="w-[700px] text-[32px]  text-left"
+                        className="md:w-[700px] md:text-[32px] text-xl text-left"
                         style={{
                           fontFamily: "SF Pro Display M",
                           lineHeight: "normal",
@@ -74,7 +98,7 @@ const modaladmin = ({ showModal3, setShowModal3 }) => {
                         school. They enable educators to focus more on nurturing
                         young minds.
                       </div>
-                      <div>
+                      <div className="hidden md:flex">
                         <button onClick={() => setShowModal3(false)}>
                           <img
                             src={close}
@@ -86,38 +110,52 @@ const modaladmin = ({ showModal3, setShowModal3 }) => {
                     </div>
                   </div>
                 </div>
-                <hr className="w-[700px] border-[#F67F00] mx-auto dark:border-[#F67F00]-900" />
+                <div className="w-full md:px-[100px] pl-[31px] pr-[32px]">
+                  <hr className=" w-full border-[#F67F00] mx-auto dark:border-[#F67F00]-900" />
+                </div>
+
                 {/*CONTENT 3*/}
-                <div className="w-full pt-[100px] px-[100px]">
-                  <div className="w-[700px] flex flex-col items-center">
+                <div className="w-full md:pt-[100px] pt-[50px] md:px-[100px] pl-[31px] pr-[32px]">
+                  <div className="w-full md:w-[700px] flex flex-col items-center">
                     <div
-                      className="text-[32px] text-center"
+                      className="md:text-[32px] text-2xl text-center"
                       style={{
                         fontFamily: "SF Pro Display M",
                         lineHeight: "normal",
                       }}
                     >
-                      <div> Subscribing to the Premium Plan allows you to</div>
-                      <div>
-                        enjoy top-tier features specifically designed to
+                      <div className="hidden md:flex flex-col">
+                        <div>Subscribing to the Premium Plan allows you to</div>
+                        <div>
+                          enjoy top-tier features specifically designed to
+                        </div>
+                        <div>
+                          {" "}
+                          meet the unique needs of kindergartens, along
+                        </div>
+                        <div> with an exceptional level of service.</div>
                       </div>
-                      <div> meet the unique needs of kindergartens, along</div>
-                      <div> with an exceptional level of service.</div>
+                      <div className="md:hidden flex flex-wrap">
+                        Subscribing to the Premium Plan allows you to enjoy
+                        top-tier features specifically designed to meet the
+                        unique needs of kindergartens, along with an exceptional
+                        level of service.
+                      </div>
                     </div>
                   </div>
                 </div>
                 {/*CONTENT 4*/}
-                <div className="w-full pt-[200px] px-[100px]">
-                  <div className="relative md:w-[700px] rounded-[30px] bg-[#D1C5B8] flex flex-col items-center py-[49px] gap-20 px-[78px]">
+                <div className="w-full md:pt-[200px] pt-[100px] md:px-[100px] pl-[31px] pr-[32px]">
+                  <div className="relative md:w-[700px] rounded-[30px] bg-[#D1C5B8] flex flex-col items-center md:py-[49px] py-[26px] md:gap-20 gap-[36px] md:px-[78px] pl-[26px] pr-[25px]">
                     <div>
                       <img
                         src={icon}
                         alt="icon"
-                        className=" w-[150px] h-[150px]"
+                        className="md:w-[150px] md:h-[150px] w-[100px] h-[100px]"
                       />
                     </div>
-                    <div className="w-full flex flex-col items-center gap-[60px]">
-                      <div className="flex gap-[50px]">
+                    <div className="w-full flex flex-col items-center md:gap-[60px] gap-[25px]">
+                      <div className="flex md:gap-[50px] gap-[11px]">
                         <div>
                           <img src={apple} alt="Apple" />
                         </div>
@@ -125,9 +163,9 @@ const modaladmin = ({ showModal3, setShowModal3 }) => {
                           <img src={android} alt="Android" />
                         </div>
                       </div>
-                      <div className="w-full flex flex-col justify-center items-center gap-9">
+                      <div className="w-full flex flex-col justify-center items-center md:gap-9 gap-[17px]">
                         <div
-                          className=" text-base "
+                          className="md:text-base text-xs"
                           style={{
                             fontFamily: "SF Pro Display B",
                             lineHeight: "normal",
@@ -136,15 +174,15 @@ const modaladmin = ({ showModal3, setShowModal3 }) => {
                           Data Linked to You
                         </div>
 
-                        <div className="flex flex-col gap-5">
-                          <div className="w-full grid grid-cols-3 gap-[50px]">
+                        <div className="flex flex-col md:gap-5 gap-[11px]">
+                          <div className="w-full grid grid-cols-3 md:gap-[50px] gap-[11px]">
                             <div className="flex w-full">
-                              <div className="flex items-center gap-5">
-                                <div className="w-5 h-5">
+                              <div className="flex items-center md:gap-5 gap-[11px]">
+                                <div className="md:w-5 md:h-5 w-[10px] h-[10px]">
                                   <img src={shopping} alt="Shopping" />
                                 </div>
                                 <div
-                                  className="text-xl"
+                                  className="md:text-xl text-[10px]"
                                   style={{ fontFamily: "SF Pro Display R" }}
                                 >
                                   Purchases
@@ -152,12 +190,12 @@ const modaladmin = ({ showModal3, setShowModal3 }) => {
                               </div>
                             </div>
                             <div className="flex w-full">
-                              <div className="flex items-center gap-5">
-                                <div className="w-5 h-5">
+                              <div className="flex items-center md:gap-5 gap-[11px]">
+                                <div className="md:w-5 md:h-5 w-[10px] h-[10px]">
                                   <img src={smile} alt="Identifier" />
                                 </div>
                                 <div
-                                  className="text-xl"
+                                  className="md:text-xl text-[10px]"
                                   style={{ fontFamily: "SF Pro Display R" }}
                                 >
                                   Identifiers
@@ -165,12 +203,12 @@ const modaladmin = ({ showModal3, setShowModal3 }) => {
                               </div>
                             </div>
                             <div className="flex w-full">
-                              <div className="flex items-center gap-5">
-                                <div className="w-5 h-5">
+                              <div className="flex items-center md:gap-5 gap-[11px]">
+                                <div className="md:w-5 md:h-5 w-[10px] h-[10px]">
                                   <img src={setting} alt="Diagnostic" />
                                 </div>
                                 <div
-                                  className="text-xl w-[108px]"
+                                  className="md:text-xl text-[10px] md:w-[108px]"
                                   style={{ fontFamily: "SF Pro Display R" }}
                                 >
                                   Diagnostics
@@ -178,14 +216,14 @@ const modaladmin = ({ showModal3, setShowModal3 }) => {
                               </div>
                             </div>
                           </div>
-                          <div className="w-full grid grid-cols-3 gap-[50px]">
+                          <div className="w-full grid grid-cols-3 md:gap-[50px] gap-[11px]">
                             <div className="flex w-full">
-                              <div className="flex items-center gap-5">
-                                <div className="w-5 h-5">
+                              <div className="flex items-center md:gap-5 gap-[11px]">
+                                <div className="md:w-5 md:h-5 w-[10px] h-[10px]">
                                   <img src={location} alt="Location" />
                                 </div>
                                 <div
-                                  className="text-xl"
+                                  className="md:text-xl text-[10px]"
                                   style={{ fontFamily: "SF Pro Display R" }}
                                 >
                                   Location
@@ -193,25 +231,25 @@ const modaladmin = ({ showModal3, setShowModal3 }) => {
                               </div>
                             </div>
                             <div className="flex w-full">
-                              <div className="flex items-center gap-5">
-                                <div className="w-5 h-5">
+                              <div className="flex items-center md:gap-5 gap-[11px]">
+                                <div className="md:w-5 md:h-5 w-[10px] h-[10px]">
                                   <img src={education} alt="Education" />
                                 </div>
                                 <div
-                                  className="text-xl"
+                                  className="md:text-xl text-[10px]"
                                   style={{ fontFamily: "SF Pro Display R" }}
                                 >
                                   Education
                                 </div>
                               </div>
                             </div>
-                            <div className="flex w-[162px]">
-                              <div className="flex items-center gap-5">
-                                <div className="w-5 h-5">
+                            <div className="flex md:w-[162px]">
+                              <div className="flex items-center md:gap-5 gap-[11px]">
+                                <div className="md:w-5 md:h-5 w-[10px] h-[10px]">
                                   <img src={gallery} alt="UserContent" />
                                 </div>
                                 <div
-                                  className="text-xl"
+                                  className="md:text-xl text-[10px]"
                                   style={{ fontFamily: "SF Pro Display R" }}
                                 >
                                   User Content
@@ -219,14 +257,14 @@ const modaladmin = ({ showModal3, setShowModal3 }) => {
                               </div>
                             </div>
                           </div>
-                          <div className="w-full grid grid-cols-3 gap-[50px]">
+                          <div className="w-full grid grid-cols-3 md:gap-[50px] gap-[11px]">
                             <div className="flex w-full">
-                              <div className="flex items-center gap-5">
-                                <div className="w-5 h-5">
+                              <div className="flex items-center md:gap-5 gap-[11px]">
+                                <div className="md:w-5 md:h-5 w-[10px] h-[10px]">
                                   <img src={data} alt="UsageData" />
                                 </div>
                                 <div
-                                  className="text-xl"
+                                  className="md:text-xl text-[10px]"
                                   style={{ fontFamily: "SF Pro Display R" }}
                                 >
                                   Usage Data
@@ -234,25 +272,25 @@ const modaladmin = ({ showModal3, setShowModal3 }) => {
                               </div>
                             </div>
                             <div className="flex w-full">
-                              <div className="flex items-center gap-5">
-                                <div className="w-5 h-5">
+                              <div className="flex items-center md:gap-5 gap-[11px]">
+                                <div className="md:w-5 md:h-5 w-[10px] h-[10px]">
                                   <img src={contact} alt="Contacts" />
                                 </div>
                                 <div
-                                  className="text-xl"
+                                  className="md:text-xl text-[10px]"
                                   style={{ fontFamily: "SF Pro Display R" }}
                                 >
                                   Contacts
                                 </div>
                               </div>
                             </div>
-                            <div className="flex w-[162px]">
-                              <div className="flex items-center gap-5">
-                                <div className="w-5 h-5">
+                            <div className="flex md:w-[162px] w-full">
+                              <div className="flex items-center md:gap-5 gap-[11px]">
+                                <div className="md:w-5 md:h-5 w-[10px] h-[10px]">
                                   <img src={data2} alt="Other Data" />
                                 </div>
                                 <div
-                                  className="text-xl"
+                                  className="md:text-xl text-[10px]"
                                   style={{ fontFamily: "SF Pro Display R" }}
                                 >
                                   Other Data
@@ -266,23 +304,23 @@ const modaladmin = ({ showModal3, setShowModal3 }) => {
                   </div>
                 </div>
                 {/*CONTENT 5*/}
-                <div className="w-full flex flex-col px-[100px] justify-center items-center pt-[100px] gap-[50px]">
-                  <div className="w-[700px] flex flex-col">
+                <div className="w-full flex flex-col md:px-[100px] pl-[31px] pr-[32px] justify-center items-center md:pt-[100px] pt-[50px] md:gap-[50px] gap-[30px]">
+                  <div className="w-full md:w-[700px] flex flex-col">
                     <div
-                      className="text-4xl text-left"
+                      className="md:text-4xl text-2xl text-left"
                       style={{ fontFamily: " SF Pro Display B" }}
                     >
                       Features:
                     </div>
                   </div>
                   <div
-                    className="w-[700px] flex flex-col text-[32px]"
+                    className="w-full md:w-[700px] flex flex-col md:text-[32px] text-base"
                     style={{
                       fontFamily: "SF Pro Display R",
                       lineHeight: "normal",
                     }}
                   >
-                    <ul className="list-outside list-disc flex flex-col gap-10 pl-[50px] text-left">
+                    <ul className="list-outside list-disc flex flex-col md:gap-10 gap-5 md:pl-[50px] pl-[35px] text-left">
                       <li>Add student accounts and parents accounts.</li>
                       <li>Add teacher accounts and sub-admin accounts.</li>
                       <li>Add class room.</li>
@@ -309,10 +347,10 @@ const modaladmin = ({ showModal3, setShowModal3 }) => {
                   </div>
                 </div>
                 {/*CONTENT 6*/}
-                <div className="w-full pt-[150px] px-[100px]">
-                  <div className="relative md:w-[700px] rounded-t-[30px] bg-[#FF8400] items-center pl-[86px] pr-[85px] py-[38px]">
+                <div className="w-full md:pt-[150px] pt-[50px] md:px-[100px] pl-[31px] pr-[32px]">
+                  <div className="relative md:w-[700px] md:rounded-t-[30px] rounded-t-[14px] bg-[#FF8400] items-center md:pl-[86px] pl-[37px] pr-[32px] md:pr-[85px] md:py-[38px] pt-[15px] pb-[17px]">
                     <div
-                      className="text-xl  flex justify-between text-center "
+                      className="md:text-xl text-xs flex justify-between text-center "
                       style={{ fontFamily: "SF Pro Display M" }}
                     >
                       <div className="flex flex-col"> Free</div>
@@ -320,27 +358,30 @@ const modaladmin = ({ showModal3, setShowModal3 }) => {
                       <div className="flex flex-col">Premium</div>
                     </div>
                   </div>
-                  <div className="relative md:w-[700px] rounded-b-[30px] bg-[#FFB261] items-center pl-[72px] pr-[79px] py-[26px]">
+                  <div className="relative md:w-[700px] md:rounded-b-[30px] rounded-b-[14px] bg-[#FFB261] items-center md:pl-[72px] md:pr-[79px] px-[29px] md:py-[26px] py-[9px]">
                     <div
-                      className="text-xl flex justify-between text-center"
+                      className="md:text-xl text-xs flex md:justify-between gap-[47px] md:gap-0 text-center"
                       style={{ fontFamily: "SF Pro Display M" }}
                     >
-                      <div className="flex-col w-[70px]">Limited Access</div>
-                      <div className="flex-col w-[121px]">
+                      <div className="flex-col md:w-[70px]">Limited Access</div>
+                      <div className="flex-col md:w-[121px]">
                         Daily Charge per seat
                       </div>
-                      <div className="flex-col w-[97px]">Get Quote Now!</div>
+                      <div className="flex-col md:w-[97px]">Get Quote Now!</div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className=" fixed inset-0 z-40 bg-gray-800 bg-opacity-50 backdrop-blur-sm"></div>
+          <div
+            className=" fixed inset-0 z-40 bg-gray-800 bg-opacity-50 backdrop-blur-sm"
+            onClick={() => setShowModal3(false)}
+          ></div>
         </>
       ) : null}
     </>
   );
 };
 
-export default modaladmin;
+export default ModalAdmin;

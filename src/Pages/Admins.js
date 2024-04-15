@@ -103,19 +103,17 @@ const Admin = () => {
     */}
       <div className="w-full flex flex-col md:gap-[200px] gap-[100px]">
         {/*Content 2*/}
-        <div className="w-full flex md:flex flex-wrap md:pl-[220px] md:pt-[200px] pt-[100px] gap-[30px]  justify-end items-center  overflow-hidden">
+        <div className="w-full flex md:flex-row flex-col md:pl-[220px] md:pt-[200px] pt-[100px] gap-[30px]  justify-end items-center  overflow-hidden">
           <div
-            className="flex flex-col md:w-[400px] md:text-[50px] text-xl w-full"
+            className="flex flex-col w-full md:w-[400px] md:text-[50px] text-xl"
             style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
           >
             <div
-              className="md:text-[50px] text-xl"
+              className="md:text-[50px] text-xl text-center"
               style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
             >
-              <div className="hidden md:flex flex-col items-center">
-                <div className="flex items-center">Superb Interface</div>
-                <div className="flex items-center">with Exceptional</div>
-                <div className="flex items-center">User Experience</div>
+              <div className="hidden md:w-[400px] md:flex flex-wrap items-center">
+                Superb Interface with Exceptional User Experience
               </div>
               <div className="md:hidden flex flex-col items-center">
                 <div className="flex items-center">Superb Interface with</div>
@@ -127,28 +125,24 @@ const Admin = () => {
           </div>
 
           <div className="flex flex-col relative left-[119px]">
-            <img src={Device} alt="Device" className="w-full" />
+            <img src={Device} alt="Device" className="md:w-[1008px] w-full" />
           </div>
         </div>
         {/*Content 3*/}
         <div className="w-full flex md:flex-row flex-col md:pr-[220px] gap-[30px]  justify-start items-center  overflow-hidden">
           <div className="flex flex-col relative  right-[119px] md:order-1 order-2">
-            <img src={Device2} alt="Device2" className="w-full" />
+            <img src={Device2} alt="Device2" className="md:w-[1008px] w-full" />
           </div>
           <div
             className="md:text-[50px] text-xl w-full md:w-[400px] order-1 md:order-2"
             style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
           >
             <div
-              className="md:text-[50px] text-xl"
+              className="md:text-[50px] text-xl text-center"
               style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
             >
-              <div className="hidden md:flex flex-col items-center">
-                <div className="flex items-center">Make school</div>
-                <div className="flex items-center">enrollment </div>
-                <div className="flex items-center">effortless, </div>
-                <div className="flex items-center">efficient, and </div>
-                <div className="flex items-center">time-saving. </div>
+              <div className="hidden md:w-[400px] md:flex flex-col items-center">
+                Make school enrollment effortless, efficient, and time-saving.
               </div>
               <div className="md:hidden flex flex-col items-center">
                 <div className="flex items-center">Make school enrollment</div>
