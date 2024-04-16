@@ -11,13 +11,23 @@ const Navbar = () => {
   const [activeJoinUsSubPage, setActiveJoinUsSubPage] =
     useState("referral-program"); // Default active sub-page for Products section
   const [showMenu, setShowMenu] = useState(false); // State to manage the visibility of the menu
+  const [showProduct, setProduct] = useState(false);
+  const [showJoin, setShowJoinUsSubmenu] = useState(false);
 
+  const toggleProductDropdown = () => {
+    setProduct((prev) => !prev); //Toggle dropdown for submenu Product for mobile view
+  };
+  const toggleJoinUsDropdown = () => {
+    setShowJoinUsSubmenu((prev) => !prev); //Toggle dropdown for submenu Join Us for mobile view
+  };
+
+  //Close the menu whenever the location change and scroll to top-mobile view
   useEffect(() => {
     setShowMenu(false);
-
     window.scrollTo(0, 0);
   }, [location]);
 
+  //Css for menu for web version
   const linkStyles = {
     base: "flex justify-center items-center text-[#FFF] bg-[#F67F00] rounded-[15px]",
     home: "w-[66px]",
@@ -26,21 +36,33 @@ const Navbar = () => {
     download: "w-[100px]",
   };
 
+  //Css for menu for mobile version
   const linkStylesmobile = {
-    base: "flex px-2 text-[#FFF] bg-[#F67F00] rounded-[15px] items-center h-[28px]  text-[20px]",
-    home: "w-[76px] items-center justify-center",
-    products: "block w-[90px] items-center justify-center",
-    joinUs: "block w-20 items-center justify-center",
-    download: "block w-[100px] items-center justify-center",
+    base: "flex justify-center items-center text-[#FFF] bg-[#F67F00] rounded-[15px]",
+    home: "w-[76px]",
+    products: "w-[107px]",
+    joinUs: "w-[91px]",
+    download: "w-[116px]",
   };
+  /* 
+  const linkStylesmobile = {
+    active:"bg-[#F67F00] w-full rounded-[15px] h-[28px] text-[20px] text-[#FFF] px-5",
+    base: "bg-[#FFF]  h-[28px] text-[20px] text-black px-5 text-left",
+    home: "w-full justify-center",
+    products: "w-full justify-center",
+    joinUs: "w-full justify-center",
+    download: "w-full justify-center",
+  };
+*/
 
+  //Css for submenu for web version
   const subLinkStyles = {
-    active: "text-[#000] text-center text-[base]",
+    active: "text-[#000] text-center text-base",
     none: "text-[#BBB] text-center text-base",
   };
 
+  // Update active sub-page based on current location
   useEffect(() => {
-    // Update active sub-page based on current location
     if (location.pathname.includes("/products")) {
       setActiveProductSubPage(getActiveProductSubPage(location.pathname));
     } else if (location.pathname.includes("/join-us")) {
@@ -52,9 +74,9 @@ const Navbar = () => {
   const handleProductsClick = () => {
     setActiveProductSubPage("parent"); // Set the default active sub-page to Kindertown Parent
   };
-
+  // Handle click on Join link to set the default active sub-page
   const handleJoinUsClick = () => {
-    setActiveJoinUsSubPage("referral-program"); // Set the default active sub-page to Kindertown Parent
+    setActiveJoinUsSubPage("referral-program"); // Set the default active sub-page to referral
   };
 
   const getActiveProductSubPage = (pathname) => {
@@ -79,6 +101,14 @@ const Navbar = () => {
     }
     // Default to "referral-program" if none matches
     return "referral-program";
+  };
+
+  const handleCloseModal = () => {
+    setShowMenu(false);
+  };
+
+  const handleModalClick = (e) => {
+    e.stopPropagation(); // Stop propagation to prevent backdrop click from firing
   };
 
   return (
@@ -153,69 +183,177 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-          {/*Mobile*/}
           <div className={`md:hidden ${showMenu ? "block" : "hidden"}`}>
             <div className="fixed inset-0 z-50">
-              <div className="bg-[#E8E8E8] bg-opacity-75 backdrop-blur-sm flex items-center justify-center min-h-screen">
-                <div className="bg-white w-full flex flex-col pb-[100px] gap-3 h-[212px] py-[30px] px-5 text-left">
-                  <div className="text-[20px]">
-                    <Link
-                      to="/"
-                      className={`${
-                        location.pathname === "/"
-                          ? `${linkStylesmobile.base} ${linkStylesmobile.home}`
-                          : ""
-                      }`}
-                      style={{ fontFamily: "SF Pro Display M" }}
-                    >
-                      Home
-                    </Link>
-                  </div>
+              <div
+                className="bg-[#E8E8E8] bg-opacity-75 backdrop-blur-sm flex items-center justify-center min-h-screen"
+                onClick={handleCloseModal}
+              >
+                <div
+                  className="bg-white fixed top-[40px] w-full flex flex-col gap-3 h-[212px] py-[30px] px-6"
+                  onClick={handleModalClick}
+                >
+                  <div className="flex gap-[60px]">
+                    <div className="flex flex-col  justify-between h-[140px] text-left">
+                      <div className="text-[20px]">
+                        <Link
+                          to="/"
+                          className={`${
+                            location.pathname === "/"
+                              ? `${linkStylesmobile.home} ${linkStylesmobile.base}`
+                              : ""
+                          } px-2`}
+                          style={{ fontFamily: "SF Pro Display M" }}
+                          onClick={() => {
+                            setShowJoinUsSubmenu(false);
+                            setProduct(false);
+                          }}
+                        >
+                          Home
+                        </Link>
+                      </div>
 
-                  <div className="text-[20px]">
-                    {/* Products link */}
-                    <Link
-                      to="/products/parent"
-                      className={`${
-                        location.pathname.includes("/products")
-                          ? `${linkStylesmobile.base} ${linkStylesmobile.products}`
-                          : ""
-                      }`}
-                      style={{ fontFamily: "SF Pro Display M" }}
-                      onClick={handleProductsClick} // Add onClick handler
-                    >
-                      Products
-                    </Link>
-                  </div>
-                  <div className="text-[20px]">
-                    {/* Join Us link */}
-                    <Link
-                      to="/join-us/referral-program"
-                      className={`${
-                        location.pathname.includes("/join-us")
-                          ? `${linkStylesmobile.base} ${linkStylesmobile.joinUs}`
-                          : ""
-                      }`}
-                      style={{ fontFamily: "SF Pro Display M" }}
-                      onClick={handleJoinUsClick} // Add onClick handler
-                    >
-                      Join Us
-                    </Link>
-                  </div>
-                  <div className="text-[20px]">
-                    {/* Download link */}
-                    <Link
-                      to="/download"
-                      className={`${
-                        location.pathname === "/download"
-                          ? `${linkStylesmobile.base} ${linkStylesmobile.download}`
-                          : ""
-                      }`}
-                      style={{ fontFamily: "SF Pro Display M" }}
-                    >
-                      Download
-                    </Link>
-                    {/* Global icon */}
+                      <div className="text-[20px]">
+                        {/* Products link */}
+                        <button
+                          className={`${
+                            location.pathname.includes("/products")
+                              ? `${linkStylesmobile.products} ${linkStylesmobile.base}`
+                              : ""
+                          } px-2`}
+                          style={{ fontFamily: "SF Pro Display M" }}
+                          onClick={() => {
+                            toggleProductDropdown();
+
+                            setShowJoinUsSubmenu(false);
+                          }}
+                        >
+                          Products
+                        </button>
+                      </div>
+
+                      <div className="text-[20px]">
+                        {/* Join Us link */}
+                        <button
+                          className={`${
+                            location.pathname.includes("/join-us")
+                              ? `${linkStylesmobile.joinUs} ${linkStylesmobile.base}`
+                              : ""
+                          } px-2`}
+                          style={{ fontFamily: "SF Pro Display M" }}
+                          onClick={() => {
+                            toggleJoinUsDropdown();
+                            setProduct(false);
+                          }}
+                        >
+                          Join Us
+                        </button>
+                      </div>
+                      <div className="text-[20px]">
+                        {/* Download link */}
+                        <Link
+                          to="/download"
+                          className={`${
+                            location.pathname === "/download"
+                              ? `${linkStylesmobile.download} ${linkStylesmobile.base}`
+                              : ""
+                          } px-2`}
+                          style={{ fontFamily: "SF Pro Display M" }}
+                          onClick={() => {
+                            setProduct(false);
+
+                            setShowJoinUsSubmenu(false);
+                          }}
+                        >
+                          Download
+                        </Link>
+                        {/* Global icon */}
+                      </div>
+                    </div>
+                    {showProduct && (
+                      <div className="flex gap-5">
+                        <div className="border-r border-gray-300 h-full"></div>
+                        <div className="flex flex-col h-[100px] justify-between">
+                          <div>
+                            {" "}
+                            <Link
+                              to="/products/parent"
+                              className={`${
+                                location.pathname === "/products"
+                                  ? `${linkStylesmobile.base} ${linkStylesmobile.products}`
+                                  : ""
+                              }`}
+                              style={{ fontFamily: "SF Pro Display M" }}
+                            >
+                              Kindertown Parent
+                            </Link>
+                          </div>
+                          <div>
+                            {" "}
+                            <Link
+                              to="/products/teacher"
+                              className={`${
+                                location.pathname === "/products"
+                                  ? `${linkStylesmobile.base} ${linkStylesmobile.products}`
+                                  : ""
+                              }`}
+                              style={{ fontFamily: "SF Pro Display M" }}
+                            >
+                              Kindertown Teacher
+                            </Link>
+                          </div>
+                          <div>
+                            {" "}
+                            <Link
+                              to="/products/admin"
+                              className={`${
+                                location.pathname === "/products"
+                                  ? `${linkStylesmobile.base} ${linkStylesmobile.products}`
+                                  : ""
+                              }`}
+                              style={{ fontFamily: "SF Pro Display M" }}
+                            >
+                              Kindertown Admin
+                            </Link>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                    {showJoin && (
+                      <div className="flex gap-5">
+                        <div className="border-r border-gray-300 h-full"></div>
+                        <div className="flex flex-col h-[140px] gap-[15px]">
+                          <div>
+                            {" "}
+                            <Link
+                              to="/join-us/referral-program"
+                              className={`${
+                                location.pathname === "/join-us"
+                                  ? `${linkStylesmobile.base} ${linkStylesmobile.joinUs}`
+                                  : ""
+                              }`}
+                              style={{ fontFamily: "SF Pro Display M" }}
+                            >
+                              Referral Program
+                            </Link>
+                          </div>
+                          <div>
+                            {" "}
+                            <Link
+                              to="/join-us/career-opportunities"
+                              className={`${
+                                location.pathname === "/join-us"
+                                  ? `${linkStylesmobile.base} ${linkStylesmobile.joinUs}`
+                                  : ""
+                              }`}
+                              style={{ fontFamily: "SF Pro Display M" }}
+                            >
+                              Career Opportunities
+                            </Link>
+                          </div>
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
@@ -224,6 +362,7 @@ const Navbar = () => {
         </div>
       </div>
 
+      {/* web/desktop*/}
       {location.pathname.includes("/products") && (
         <div className="bg-[#ffffffe6] hidden w-full md:flex justify-center h-[50px]">
           <div className="max-w-[1000px] w-full flex items-end justify-end gap-[26px] border-b border-[#DDD]">
@@ -268,7 +407,7 @@ const Navbar = () => {
       )}
 
       {location.pathname.includes("/join-us") && (
-        <div className="w-full bg-[#ffffffe6] flex justify-center h-[50px]">
+        <div className="w-full bg-[#ffffffe6] hidden md:flex justify-center h-[50px]">
           <div className="max-w-[1000px] w-full flex items-end justify-end gap-[26px] border-b border-[#DDD]">
             <Link
               to="/join-us/referral-program"

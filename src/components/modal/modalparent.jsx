@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import apple from "../../assets/parentmodal/apple.svg";
 import android from "../../assets/parentmodal/android.svg";
 import video from "../../assets/parentmodal/video.mp4";
@@ -15,27 +15,25 @@ import contact from "../../assets/parentmodal/contact.svg";
 import data2 from "../../assets/parentmodal/data2.svg";
 
 const ModalParent = ({ showModal1, setShowModal1 }) => {
-  useEffect(() => {
-    const handleOutsideClick = (event) => {
-      if (!document.querySelector(".modal-content").contains(event.target)) {
-        setShowModal1(false);
-      }
-    };
+  const handleCloseModal = () => {
+    setShowModal1(false);
+  };
 
-    if (showModal1) {
-      document.addEventListener("mousedown", handleOutsideClick);
-    }
-
-    return () => {
-      document.removeEventListener("mousedown", handleOutsideClick);
-    };
-  }, [showModal1, setShowModal1]);
+  const handleModalClick = (e) => {
+    e.stopPropagation(); // Stop propagation to prevent backdrop click from firing
+  };
   return (
     <>
       {showModal1 ? (
         <>
-          <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
-            <div className="relative w-full md:max-w-[900px] overflow-auto  my-auto md:py-[100px] flex modal-content">
+          <div
+            className="justify-center items-center flex overflow-x-hidden fixed inset-0 z-50 outline-none focus:outline-none"
+            onClick={handleCloseModal}
+          >
+            <div
+              className="relative w-full md:max-w-[900px] overflow-y-auto  my-auto md:py-[100px] flex modal-content"
+              onClick={handleModalClick}
+            >
               <div className="md:hidden fixed z-50 bottom-[20px] right-[20px]">
                 <button onClick={() => setShowModal1(false)}>
                   <img
@@ -357,10 +355,7 @@ const ModalParent = ({ showModal1, setShowModal1 }) => {
               </div>
             </div>
           </div>
-          <div
-            className=" fixed inset-0 z-40 bg-gray-800 bg-opacity-50 backdrop-blur-sm"
-            onClick={() => setShowModal1(false)}
-          ></div>
+          <div className=" fixed inset-0 z-40 bg-gray-800 bg-opacity-50 backdrop-blur-sm"></div>
         </>
       ) : null}
     </>

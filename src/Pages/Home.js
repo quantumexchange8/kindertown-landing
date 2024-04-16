@@ -34,7 +34,8 @@ const Home = () => {
                 className="w-full md:max-w-[610px] text-4xl md:text-[80px] text-center md:leading-[90px]"
                 style={{ fontFamily: "SF Pro Display B" }}
               >
-                Zero - Worries Zero - Hassle
+                <div>Zero - Worries</div>
+                <div> Zero - Hassle</div>
               </div>
               <div
                 className="w-full text-center md:text-[32px] text-xl"

@@ -794,7 +794,7 @@ const Download = () => {
         </div>
       </div>
 
-      <div className="w-full flex flex-col justify-center items-center md:gap-[100px] gap-[50px] md:pt-[300px] pt-[50px]">
+      <div className="w-full flex flex-col justify-center items-center md:gap-[100px] gap-[50px] md:pt-[300px] pt-[50px] md:pb-[200px]">
         <div className="w-full flex flex-col justify-center items-center  md:px-[220px] pr-[32px] pl-[31px]">
           <div className="w-full md:w-[1000px] flex flex-col">
             <div

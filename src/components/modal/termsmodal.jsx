@@ -4,29 +4,51 @@ import logo from "../../assets/termspolicy/Icon.svg";
 
 import close from "../../assets/parentmodal/close.svg";
 const termsmodal = ({ TermsOpen, setTermsOpen }) => {
+  const handleCloseModal = () => {
+    setTermsOpen(false);
+  };
+
+  const handleModalClick = (e) => {
+    e.stopPropagation(); // Stop propagation to prevent backdrop click from firing
+  };
   return (
     <>
       {TermsOpen ? (
         <>
-          <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
-            <div className="relative max-w-[900px] overflow-auto  my-auto py-[50px] flex modal-content">
+          <div
+            className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+            onClick={handleCloseModal}
+          >
+            <div
+              className="relative w-full md:max-w-[900px] overflow-auto  my-auto md:py-[50px] flex modal-content"
+              onClick={handleModalClick}
+            >
+              <div className="md:hidden fixed z-50 bottom-[20px] right-[20px]">
+                <button onClick={() => setTermsOpen(false)}>
+                  <img
+                    src={close}
+                    alt="CloseButton"
+                    className="md:w-[60px] md:h-[60px] w-[50px] h-[50px]"
+                  />
+                </button>
+              </div>
               {/*content*/}
-              <div className="border-0 rounded-[50px] relative flex flex-col w-full bg-white outline-none focus:outline-none px-[100px] pt-20 pb-[100px]">
-                <div className="flex flex-col gap-[200px]">
+              <div className="border-0 md:rounded-[50px] relative flex flex-col w-full bg-white outline-none focus:outline-none md:px-[100px] pl-[41px] pr-[42px] md:pt-20 pt-[50px] md:pb-[100px] pb-[60px]">
+                <div className="flex flex-col md:gap-[200px] gap-[100px]">
                   <div className="flex flex-col w-[74px] h-[50px]">
                     <img src={logo} alt="Logo" />
                   </div>
                   {/*CONTENT 1*/}
 
-                  <div className="w-[700px] flex flex-col gap-5 text-[#000]">
+                  <div className="w-full md:w-[700px] flex flex-col md:gap-5 gap-[15px] text-[#000]">
                     <div
-                      className="text-5xl"
+                      className="md:text-5xl text-xl"
                       style={{ fontFamily: "SF Pro Display B" }}
                     >
                       Kindertown Website Terms of Use
                     </div>
                     <div
-                      className="text-[28px]"
+                      className="md:text-[28px] text-base"
                       style={{ fontFamily: "SF Pro Display M" }}
                     >
                       Kindertown Website Terms of Use
@@ -37,14 +59,14 @@ const termsmodal = ({ TermsOpen, setTermsOpen }) => {
                 {/*CONTENT 2*/}
                 <div className="w-full flex flex-col pt-[100px] gap-5 text-[#000]">
                   <div
-                    className="text-3xl"
+                    className="md:text-3xl text-xl"
                     style={{ fontFamily: "SF Pro Display B" }}
                   >
                     Ownership of Site; Agreement to Terms of Use
                   </div>
 
                   <div
-                    className="text-2xl"
+                    className="md:text-2xl text-base"
                     style={{
                       fontFamily: "SF Pro Display M",
                       lineHeight: "normal",
@@ -76,7 +98,7 @@ const termsmodal = ({ TermsOpen, setTermsOpen }) => {
                         privilege to access and use the Website.
                       </div>
                     </div>
-                    <div className="flex justify-end">
+                    <div className="hidden md:flex justify-end">
                       <button onClick={() => setTermsOpen(false)}>
                         <img
                           src={close}
@@ -87,17 +109,17 @@ const termsmodal = ({ TermsOpen, setTermsOpen }) => {
                     </div>
                   </div>
                 </div>
-                <div className="flex flex-col pt-[91px] gap-[150px] text-[#000]">
+                <div className="flex flex-col md:pt-[91px] pt-[100px] md:gap-[150px] gap-[100px] text-[#000]">
                   {/*CONTENT 3*/}
                   <div className="flex flex-col gap-5">
                     <div
-                      className="text-3xl"
+                      className="md:text-3xl text-xl"
                       style={{ fontFamily: "SF Pro Display B" }}
                     >
                       Content
                     </div>
                     <div
-                      className="text-xl flex flex-col gap-7"
+                      className="md:text-xl text-base flex flex-col md:gap-7 gap-4"
                       style={{ fontFamily: "SF Pro Display M" }}
                     >
                       <div>
@@ -163,13 +185,13 @@ const termsmodal = ({ TermsOpen, setTermsOpen }) => {
                   {/*CONTENT 4*/}
                   <div className="flex flex-col gap-5">
                     <div
-                      className="text-3xl"
+                      className="md:text-3xl text-xl"
                       style={{ fontFamily: "SF Pro Display B" }}
                     >
                       Your Use of the Website
                     </div>
                     <div
-                      className="text-xl flex flex-col gap-7"
+                      className="md:text-xl text-base flex flex-col md:gap-7 gap-4"
                       style={{ fontFamily: "SF Pro Display M" }}
                     >
                       <div>
@@ -243,13 +265,13 @@ const termsmodal = ({ TermsOpen, setTermsOpen }) => {
                   {/*CONTENT 5*/}
                   <div className="flex flex-col gap-5">
                     <div
-                      className="text-3xl"
+                      className="md:text-3xl text-xl"
                       style={{ fontFamily: "SF Pro Display B" }}
                     >
                       Accounts, Passwords, and Security
                     </div>
                     <div
-                      className="text-xl flex flex-col gap-7"
+                      className="md:text-xl text-base flex flex-col md:gap-7 gap-4"
                       style={{ fontFamily: "SF Pro Display M" }}
                     >
                       <div>
@@ -283,13 +305,13 @@ const termsmodal = ({ TermsOpen, setTermsOpen }) => {
                   {/*CONTENT 6*/}
                   <div className="flex flex-col gap-5">
                     <div
-                      className="text-3xl"
+                      className="md:text-3xl text-xl"
                       style={{ fontFamily: "SF Pro Display B" }}
                     >
                       Disclaimer
                     </div>
                     <div
-                      className="text-xl flex flex-col gap-7"
+                      className="md:text-xl text-base flex flex-col md:gap-7 gap-4"
                       style={{ fontFamily: "SF Pro Display M" }}
                     >
                       <div>
