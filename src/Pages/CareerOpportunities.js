@@ -136,7 +136,7 @@ const CareerOpportunities = () => {
           <source src={LadyBg} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <div className="absolute md:bottom-0 bottom-5 md:left-0 left-5 md:pb-[90px] md:pl-[83px]">
+        <div className="absolute md:left-[83px] md:bottom-[90px] left-5 bottom-5">
           <div
             className="md:text-[40px] text-xs md:text-black text-white text-left md:w-[490px] w-[140px]"
             style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
@@ -149,8 +149,8 @@ const CareerOpportunities = () => {
 
       {/*CONTENT 6*/}
       <div className="w-full flex flex-col justify-center items-center">
-        <div className="w-full flex flex-col justify-center items-center md:px-[165px] pl-[32px] pr-[31px] md:py-[400px] py-[100px]">
-          <div className="w-full md:w-[1000px] flex flex-col justify-center items-center gap-10">
+        <div className="w-full flex flex-col justify-center items-center md:px-[165px] pr-[32px] pl-[31px] md:py-[400px] py-[100px]">
+          <div className="w-full md:w-[1000px] flex flex-col justify-center items-center md:gap-10 gap-[30px]">
             <div
               className="md:text-[36px] text-xl text-center"
               style={{ fontFamily: "SF Pro Display M", lineHeight: "normal" }}
@@ -173,7 +173,7 @@ const CareerOpportunities = () => {
         </div>
       </div>
 
-      {/*CONTENT 7*/}
+      {/*CONTENT 7 - VIDEO*/}
       <div className="relative w-full md:h-[1000px] flex items-center justify-center overflow-hidden">
         <video
           className="w-full h-full object-cover object-center"
@@ -184,7 +184,7 @@ const CareerOpportunities = () => {
           <source src={Coding} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <div className="absolute md:bottom-0 bottom-[21px] left-5 md:left-0 md:pb-[88px] md:pl-[83px]">
+        <div className="absolute md:bottom-[88px] bottom-[21px] left-5 md:left-[83px]">
           <div
             className=" md:w-[550px] w-[190px] text-xs md:text-[40px] text-left text-white"
             style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
@@ -207,13 +207,7 @@ const CareerOpportunities = () => {
                 lineHeight: "normal",
               }}
             >
-              <div className="hidden md:flex flex-col">
-                <div>Innovation and development</div>
-                <div>are our ultimate decisions.</div>
-              </div>
-              <div className="md:hidden flex flex-wrap">
-                Innovation and development are our ultimate decisions.
-              </div>
+              Innovation and development are our ultimate decisions.
             </div>
             <div
               className="md:text-[32px] text-xl"
@@ -222,15 +216,7 @@ const CareerOpportunities = () => {
                 lineHeight: "normal",
               }}
             >
-              <div className="hidden md:flex flex-col">
-                {" "}
-                <div>
-                  Being able to see your capabilities and work shine in our
-                  products and
-                </div>
-                <div>development platforms will make us incredibly proud.</div>
-              </div>
-              <div className="md:hidden flex flex-col">
+              <div className=" flex flex-col">
                 Being able to see your capabilities and work shine in our
                 products and development platforms will make us incredibly
                 proud.

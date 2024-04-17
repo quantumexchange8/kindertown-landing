@@ -66,14 +66,27 @@ const Admin = () => {
                 <div
                   className="md:text-[32px] text-xl text-center"
                   style={{
-                    fontFamily: "SF Pro Display M",
                     lineHeight: "normal",
                   }}
                 >
-                  Kindertown is a management system specifically designed for
-                  kindergartens and early childhood education. It can be
-                  customized according to the specific conditions and needs of
-                  the kindergarten.
+                  <div
+                    className="hidden md:flex flex-col"
+                    style={{ fontFamily: "SF Pro Display M" }}
+                  >
+                    Kindertown is a management system specifically designed for
+                    kindergartens and early childhood education. It can be
+                    customized according to the specific conditions and needs of
+                    the kindergarten.
+                  </div>
+                  <div
+                    className="md:hidden flex flex-col"
+                    style={{ fontFamily: "SF Pro Display Semibold" }}
+                  >
+                    Kindertown is a management system specifically designed for
+                    kindergartens and early childhood education. It can be
+                    customized according to the specific conditions and needs of
+                    the kindergarten.
+                  </div>
                 </div>
               </div>
             </div>
@@ -112,10 +125,10 @@ const Admin = () => {
               className="md:text-[50px] text-xl text-center"
               style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
             >
-              <div className="hidden md:w-[400px] md:flex flex-wrap items-center">
+              <div className="hidden md:w-[400px] md:flex flex-wrap items-center ">
                 Superb Interface with Exceptional User Experience
               </div>
-              <div className="md:hidden flex flex-col items-center">
+              <div className="md:hidden flex flex-col items-center  pl-[31px] pr-[32px]">
                 <div className="flex items-center">Superb Interface with</div>
                 <div className="flex items-center">
                   Exceptional User Experience
@@ -144,7 +157,7 @@ const Admin = () => {
               <div className="hidden md:w-[400px] md:flex flex-col items-center">
                 Make school enrollment effortless, efficient, and time-saving.
               </div>
-              <div className="md:hidden flex flex-col items-center">
+              <div className="md:hidden flex flex-col items-center  pl-[31px] pr-[32px]">
                 <div className="flex items-center">Make school enrollment</div>
                 <div className="flex items-center">
                   effortless, efficient, and
@@ -212,7 +225,7 @@ const Admin = () => {
       <div className="w-full flex flex-col justify-center items-center md:gap-[200px] gap-[100px] md:pt-[200px] pt-[100px] md:pl-[221px] md:pr-[219px] px-[20px]">
         {/*CONTENT 4*/}
         <div className="w-full md:w-[1000px] flex flex-col justify-center md:gap-[100px] gap-[30px]">
-          <div className="flex flex-col justify-center items-center">
+          <div className="flex flex-col justify-center items-center px-[12px] md:px-0">
             <div
               className="text-center md:text-[40px] text-xl"
               style={{
@@ -222,17 +235,12 @@ const Admin = () => {
               {/*Desktop*/}
               <div
                 className="hidden md:flex flex-col items-center"
-                style={{ fontFamily: "SF Pro Display M" }}
+                style={{ fontFamily: "SF Pro Display Semibold" }}
               >
-                <div className="flex items-center">
-                  See how innovative management tools and schools are
-                </div>
-                <div className="flex items-center">
-                  leveraging our technology to expand the possibilities of
-                </div>
-                <div className="flex items-center">school operations.</div>
+                See how innovative management tools and schools are leveraging
+                our technology to expand the possibilities of school operations.
               </div>
-
+              {/*Mobile*/}
               <div
                 className="md:hidden flex flex-col items-center"
                 style={{ fontFamily: "SF Pro Display B" }}
@@ -249,7 +257,7 @@ const Admin = () => {
         </div>
         {/*CONTENT 5*/}
         <div className="w-full md:w-[1000px] flex flex-col justify-center md:gap-[100px] gap-[30px]">
-          <div className="flex flex-col justify-center items-center">
+          <div className="flex flex-col justify-center items-center px-[12px] md:px-0">
             <div
               className="text-center md:text-[40px] text-xl"
               style={{
@@ -258,13 +266,11 @@ const Admin = () => {
             >
               <div
                 className="hidden md:flex flex-col items-center "
-                style={{ fontFamily: "SF Pro Display M" }}
+                style={{ fontFamily: "SF Pro Display Semibold" }}
               >
                 <div className="flex items-center">
-                  Schools and educators are making significant
-                </div>
-                <div className="flex items-center">
-                  contributions to childrens’ academic achievements.
+                  Schools and educators are making significant contributions to
+                  childrens’ academic achievements.
                 </div>
               </div>
               <div
@@ -296,35 +302,20 @@ const Admin = () => {
               {/*Desktop*/}
               <div
                 className="hidden md:flex flex-col items-center"
-                style={{ fontFamily: "SF Pro Display M" }}
+                style={{ fontFamily: "SF Pro Display Semibold" }}
               >
-                <div className="flex items-center">
-                  We firmly believe that schools, teachers, and parents
-                </div>
-                <div className="flex items-center">
-                  highly value the learning progress and journey of
-                </div>
-                <div className="flex items-center">
-                  students. Our Kindertown management system is
-                </div>
-                <div className="flex items-center">
-                  precisely the tool to achieve this goal, all without altering
-                </div>
-                <div className="flex items-center">
-                  the classroom structure or increasing additional burden
-                </div>
-                <div className="flex items-center">
-                  to students admission. Single cost with double effect, our
-                </div>
-                <div className="flex items-center">
-                  system remains a smart choice to support your most
-                </div>
-                <div className="flex items-center">cherished priorities.</div>
+                We firmly believe that schools, teachers, and parents highly
+                value the learning progress and journey of students. Our
+                Kindertown management system is precisely the tool to achieve
+                this goal, all without altering the classroom structure or
+                increasing additional burden to students admission. Single cost
+                with double effect, our system remains a smart choice to support
+                your most cherished priorities.
               </div>
               {/*Mobile*/}
               <div
                 className="md:hidden flex flex-col items-center"
-                style={{ fontFamily: "SF Pro Display B" }}
+                style={{ fontFamily: "SF Pro Display Semibold" }}
               >
                 We firmly believe that schools, teachers, and parents highly
                 value the learning progress and journey of students. Our
@@ -337,19 +328,15 @@ const Admin = () => {
             </div>
           </div>
           <div className="flex flex-col justify-center items-center">
-            <img
-              src={Ipad}
-              alt="Macbook3"
-              className="md:w-[1000px] md:h-[768px] w-full"
-            />
+            <img src={Ipad} alt="Macbook3" className="md:w-[768px]  w-full" />
           </div>
         </div>
       </div>
-      <div className="w-full flex flex-col justify-center items-center md:py-[200px] py-[100px] gap-[100px] md:gap-[200px] px-[20px] md:pr-[171px] md:pl-[169px]">
+      <div className="w-full flex flex-col justify-center items-center md:pt-[200px] pt-[100px] gap-[100px] md:gap-[200px] px-[20px] md:px-[169px]">
         {/*Content 7*/}
         <div className="w-full flex flex-col justify-center items-center  md:gap-[100px] gap-[35px]">
           <div className="w-full md:w-[1102px] flex flex-col justify-center items-center md:pl-[155px] md:pr-[154px]">
-            <div className="w-full md:w-[793px] flex flex-col justify-center items-center">
+            <div className="w-full flex flex-col justify-center items-center">
               <div
                 className="md:text-[70px] text-[32px] text-center"
                 style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
@@ -357,10 +344,7 @@ const Admin = () => {
                 {/*Desktop*/}
                 <div className="hidden md:flex flex-col items-center">
                   <div className="flex justify-center items-center">
-                    All thoughtful features
-                  </div>
-                  <div className="flex justify-center items-center">
-                    are designed for schools.
+                    All thoughtful features are designed for schools.
                   </div>
                 </div>
                 {/*Mobile*/}
@@ -378,7 +362,7 @@ const Admin = () => {
               </div>
             </div>
           </div>
-          <div className="w-full md:w-[1102px] flex flex-col justify-center items-center md:gap-y-[66px] gap-9">
+          <div className="w-full md:w-[1102px] flex flex-col justify-center items-center md:gap-[66px] gap-9">
             {/*row 1*/}
             <div className="w-full grid md:grid-cols-8 grid-cols-4 md:gap-y-0 gap-y-9">
               <div className="flex flex-col justify-center items-center md:gap-4 gap-[10px]">
@@ -928,11 +912,12 @@ const Admin = () => {
             </div>
           </div>
         </div>
+      </div>
 
-        {/*Content 8*/}
-        <div className="w-full md:w-[1000px] flex flex-col">
+      <div className="w-full flex flex-col md:px-[220px] px-[113px] items-center md:py-[200px] py-[100px]">
+        <div className="w-full md:w-[1000px] flex flex-col justify-center items-center">
           <div className="flex flex-col justify-center items-center">
-            <div className="relative flex flex-col md:w-[400px] md:h-[400px] md:rounded-[50px] rounded-[16px] bg-gradient-to-t from-[#ADADAD] to-[#F9F9F9] md:pt-[53px] pt-[27px] md:pb-[61px] pb-[22px] px-[14px] md:pl-[34px] md:pr-[33px] md:gap-[59px] gap-[27px]">
+            <div className="relative flex flex-col md:w-[400px] md:h-[400px] w-full rounded-[16px] md:rounded-[50px] bg-gradient-to-t from-[#ADADAD] to-[#F9F9F9] md:pt-[53px] pt-[27px] md:pb-[61px] pb-[22px] md:pl-[34px] md:pr-[33px] px-[14px] md:gap-[59px] gap-[27px]">
               <div className="flex flex-col justify-center items-center">
                 <img
                   src={CTLogo}
@@ -940,7 +925,7 @@ const Admin = () => {
                   className="md:w-[160px] md:h-[106px] w-[66px]"
                 />
               </div>
-              <div className="flex flex-col justify-center items-center md:gap-[40px] gap-[10px]">
+              <div className="flex flex-col justify-center items-center md:gap-[40px] gap-3">
                 <div className="flex flex-col justify-center items-center">
                   <div
                     className="md:text-[24px] text-[10px] inline-block"
@@ -949,8 +934,8 @@ const Admin = () => {
                       lineHeight: "normal",
                     }}
                   >
-                    CT PRODUCT {""}
-                    <span className=" bg-black  md:w-[77px] h-[29px] md:rounded-[4px] rounded-[2px] text-white px-[5.6px]">
+                    CT PRODUCT{" "}
+                    <span className=" bg-black  md:w-[77px] h-[29px] md:rounded-[4px] rounded-[2px] text-white md:px-[5.6px] px-[3px] py-[1px]">
                       CARE
                     </span>
                   </div>
@@ -959,15 +944,22 @@ const Admin = () => {
                   <div
                     className="md:text-[24px] text-[10px] inline-block text-center"
                     style={{
-                      fontFamily: "SF Pro Display R",
                       lineHeight: "normal",
                     }}
                   >
-                    <div className="flex items-center justify-center ">
-                      Free provide face to face training
+                    <div
+                      className="hidden md:flex flex-col"
+                      style={{ fontFamily: "SF Pro Display R" }}
+                    >
+                      <div className="flex items-center justify-center ">
+                        Free provide face to face training and online tutorials.
+                      </div>
                     </div>
-                    <div className="flex items-center justify-center ">
-                      and online tutorials.
+                    <div
+                      className="md:hidden flex flex-wrap"
+                      style={{ fontFamily: "SF Pro Display Semibold" }}
+                    >
+                      Free provide face to face training and online tutorials.
                     </div>
                   </div>
                 </div>
@@ -976,6 +968,7 @@ const Admin = () => {
           </div>
         </div>
       </div>
+
       <Privacy />
     </>
   );

@@ -16,24 +16,24 @@ import Arrow from "../assets/parent/arrow.svg";
 const Parent = () => {
   return (
     <>
-      <div className="w-full flex flex-col justify-center items-center pb-[100px] pt-[80px] md:py-[200px] md:px-[320px] px-[20px]">
+      <div className="w-full flex flex-col justify-center items-center pb-[100px] pt-[80px] md:py-[200px] md:px-0 px-[20px]">
         <div className="w-full md:w-[1000px] flex flex-col items-center gap-[50px] md:gap-[100px] md:px-[100px]">
-          <div className="relative w-full md:w-[800px] md:h-[660px] h-[273px] md:rounded-[50px] rounded-[20px] md:pt-[87px]  md:pb-[88px] md:pl-[94px] pr-[33px] pl-[30px] pb-[25px] pt-[37px] md:pr-[58px] bg-gradient-to-t from-[#FFDD98]  via-[#FFEABE] to-[#FFF7E5]">
-            <div className="absolute md:top-[87px] md:right-[80px] right-[30px]">
+          <div className="relative w-full md:w-[800px] md:h-[660px] h-[273px] md:rounded-[50px] rounded-[20px]  bg-gradient-to-t from-[#FFDD98]  via-[#FFEABE] to-[#FFF7E5]">
+            <div className="absolute md:top-[87px] top-[37px] md:right-[80px] right-[30px]">
               <img
                 src={Icon}
                 alt="Icon"
                 className="md:w-[200px] md:h-[200px] w-[100px] h-[100px]"
               />
             </div>
-            <div className="absolute md:bottom-[150px] md:right-[180px] bottom-[70px] right-[80px]">
+            <div className="absolute md:bottom-[150px] md:right-[128px] bottom-[70px] right-[80px]">
               <img
                 src={Arrow}
                 alt="arrow"
                 className="md:w-[210px] md:h-[266px] w-[100px]"
               />
             </div>
-            <div className="absolute md:bottom-[88px] md:left-[94px] left-[30px] bottom-[25px]">
+            <div className="absolute md:bottom-[88px] md:left-[94px] md:right-[175px] left-[30px] right-[84px] bottom-[25px] md:w-[531px] w-[239px]">
               <div
                 className="md:text-[80px] text-4xl text-[#0CA39B]"
                 style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
@@ -60,17 +60,9 @@ const Parent = () => {
               style={{ fontFamily: "SF Pro Display M", lineHeight: "normal" }}
             >
               {/*Mobile*/}
-              <div className="md:hidden flex items-center justify-center ">
-                A powerful platform that allows
-              </div>
-              <div className=" md:hidden flex items-center justify-center">
-                you to seamlessly monitor your
-              </div>
-              <div className=" md:hidden flex items-center justify-center">
-                child's activities at any time,
-              </div>
-              <div className=" md:hidden flex items-center justify-center">
-                from anywhere.
+              <div className="md:hidden flex items-center justify-center text-center">
+                A powerful platform that allows you to seamlessly monitor your
+                child's activities at any time, from anywhere.
               </div>
               {/*Desktop*/}
               <div className="hidden md:flex items-center justify-center ">
@@ -143,7 +135,7 @@ const Parent = () => {
       <div className="w-full flex flex-col justify-center items-center md:px-[220px] pl-[31px] pr-[32px]">
         <div className="w-full md:w-[1000px] gap-[100px] flex flex-col justify-center items-center">
           {/*CONTENT 2 */}
-          <div className="w-full flex items-center md:gap-[66px] gap-[26px]">
+          <div className="w-full flex justify-center items-center md:gap-[66px] gap-[26px]">
             <div className="flex flex-col  md:h-[711px] md:w-[350px]">
               <img src={Phone1} alt="phone1" />
             </div>
@@ -166,7 +158,7 @@ const Parent = () => {
             </div>
           </div>
           {/*CONTENT 3 */}
-          <div className="w-full flex items-center md:gap-[66px] gap-[26px]">
+          <div className="w-full flex items-center justify-center md:gap-[66px] gap-[26px]">
             <div className="flex flex-col items-center">
               <div
                 className="text-center md:text-[50px] text-xl w-full text-[#64697A]"
@@ -185,7 +177,7 @@ const Parent = () => {
             </div>
           </div>
           {/*CONTENT 4 */}
-          <div className="w-full flex items-center md:gap-[66px] gap-[26px]">
+          <div className="w-full flex items-center justify-center md:gap-[66px] gap-[26px]">
             <div className="flex flex-col md:w-[350px] md:h-[711px]">
               <img src={Phone3} alt="phone3" />
             </div>
@@ -205,7 +197,7 @@ const Parent = () => {
             </div>
           </div>
           {/*CONTENT 5 */}
-          <div className="w-full flex items-center md:gap-[66px] gap-[26px]">
+          <div className="w-full flex items-center justify-center md:gap-[66px] gap-[26px]">
             <div className="flex flex-col items-center">
               <div
                 className="text-center md:text-[50px] text-xl w-full text-[#FF0001]"
@@ -235,7 +227,7 @@ const Parent = () => {
             </div>
           </div>
           {/*CONTENT 6 */}
-          <div className="w-full flex items-center md:gap-[66px] gap-[26px]">
+          <div className="w-full flex items-center justify-center md:gap-[66px] gap-[26px]">
             <div className="flex flex-col md:w-[350px] md:h-[711px]">
               <img src={Phone5} alt="phone5" />
             </div>
@@ -255,7 +247,7 @@ const Parent = () => {
           </div>
         </div>
       </div>
-      <div className="w-full flex flex-col justify-center items-center md:pt-[300px] pt-[100px] md:pb-[200px] pb-[100px] md:px-[220px] pl-[31px] pr-[32px] gap-[150px]">
+      <div className="w-full flex flex-col justify-center items-center md:pt-[300px] pt-[100px] md:pb-[200px] pb-[100px] md:px-[220px] pl-[31px] pr-[32px] md:gap-[150px] gap-[50px]">
         <div className="w-full md:w-[1000px]  flex flex-col justify-center items-center ">
           <div className="flex flex-col justify-center items-center">
             <div className="flex flex-col items-center">
@@ -279,7 +271,7 @@ const Parent = () => {
           </div>
         </div>
 
-        <div className="w-full md:w-[1000px]  flex flex-col justify-center items-center md:pr-[102px] md:pl-[99px]">
+        <div className="w-full md:w-[1000px]  flex flex-col justify-center items-center md:px-[100px]">
           <div className="flex justify-around items-end md:gap-[40px] gap-4">
             <div className="flex flex-col">
               <img src={Jam2} alt="Jam2" className=" md:w-[154px] md:h-[255]" />

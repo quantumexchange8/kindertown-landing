@@ -11,7 +11,7 @@ import reward from "../assets/referral/reward.svg";
 const ReferralProgrames = () => {
   return (
     <>
-      <div className="w-full flex flex-col justify-center items-center md:gap-[200px] gap-[100px] md:pt-[150px] pt-[80px] pb-[100px] md:pb-[300px] md:px-[320px] pl-[31px] pr-[32px]">
+      <div className="w-full flex flex-col justify-center items-center md:gap-[200px] gap-[100px] md:pt-[150px] pt-[80px]  md:px-[320px] pl-[31px] pr-[32px]">
         {/*CONTENT 1*/}
         <div className="w-full md:w-[800px] flex flex-col gap-[50px]">
           <div className="flex flex-col justify-center items-center">
@@ -33,33 +33,26 @@ const ReferralProgrames = () => {
             <img src={img1} alt="Ladies" />
           </div>
         </div>
-
+      </div>
+      <div className="w-full flex flex-col justify-center items-center md:gap-[200px] gap-[100px] md:pt-[200px] pt-[100px] pb-[100px] md:pb-[300px] md:px-[220px] px-5">
         {/*Content 2*/}
         <div className="w-full md:w-[1000px] flex flex-col items-center md:gap-[100px] gap-[50px]">
           <div className="flex flex-col justify-center items-center">
             <div
               className="md:text-[32px] text-[20px]"
-              style={{ fontFamily: "SF Pro Display M", lineHeight: "normal" }}
+              style={{
+                fontFamily: "SF Pro Display Semibold",
+                lineHeight: "normal",
+              }}
             >
               <div className="hidden md:flex flex-col">
-                <div className="flex items-center justify-center ">
+                <div className="flex items-center justify-center text-center">
                   We have a highly comprehensive referral program system that
-                  allows
-                </div>
-                <div className="flex items-center justify-center">
-                  you to easily recommend our system to parents or schools who
-                  have
-                </div>
-                <div className="flex items-center justify-center">
-                  not yet used it. Both the referrer and the referred both can
-                  receive
-                </div>
-                <div className="flex items-center justify-center">
-                  rewards, and more importantly, your small act of sharing
-                  addresses a
-                </div>
-                <div className="flex items-center justify-center">
-                  problem that schools have been facing for a long time.
+                  allows you to easily recommend our system to parents or
+                  schools who have not yet used it. Both the referrer and the
+                  referred both can receive rewards, and more importantly, your
+                  small act of sharing addresses a problem that schools have
+                  been facing for a long time.
                 </div>
               </div>
               <div className="md:hidden flex flex-col text-center">
@@ -77,7 +70,8 @@ const ReferralProgrames = () => {
           </div>
         </div>
       </div>
-      <div className="w-full flex flex-col justify-center items-center md:gap-[200px] gap-[100px] md:pb-[200px] pb-[100px] px-[32px] md:px-[320px]">
+      {/*Content 3*/}
+      <div className="w-full flex flex-col justify-center items-center md:gap-[200px] gap-[100px] md:pb-[200px] pb-[100px] pl-[31px] pr-[32px] md:px-[320px]">
         <div className="md:w-[800px] w-full flex flex-col justify-center items-center md:gap-[100px] gap-[50px]">
           <div className="flex flex-col justify-center items-center">
             <div
@@ -94,11 +88,11 @@ const ReferralProgrames = () => {
             </div>
           </div>
           <div className="w-full flex flex-col">
-            <div className="relative md:w-[800px] w-full md:h-[500px] md:rounded-t-[47px] rounded-t-[20px] bg-[#C1FFB4]  pt-[51px] pb-[50px] md:py-[129px] md:px-[250px] px-[100px]">
+            <div className="relative md:w-[800px] w-full md:rounded-t-[47px] rounded-t-[20px] bg-[#C1FFB4]  pt-[51px] pb-[50px] md:py-[129px] md:px-[250px] px-[100px]">
               <img src={ic} alt="IdentificationCard" />
             </div>
-            <div className="relative md:w-[800px] w-full md:h-[300px] md:rounded-b-[47px] rounded-b-[20px] bg-[#6EDD58]  md:py-[80px] pt-[31px] pb-[30px] md:px-[75px] px-[15px]">
-              <div className="flex flex-col justify-center items-center md:gap-[30px] gap-[20px]">
+            <div className="relative md:w-[800px] w-full md:rounded-b-[47px] rounded-b-[20px] bg-[#6EDD58]  md:py-[80px] pt-[31px] pb-[30px] md:px-[75px] px-[15px]">
+              <div className="flex flex-col justify-center items-center md:gap-[30px] gap-5">
                 <div
                   className="md:text-[40px] text-base"
                   style={{
@@ -115,15 +109,7 @@ const ReferralProgrames = () => {
                     lineHeight: "normal",
                   }}
                 >
-                  <div className="hidden md:flex flex-col">
-                    <div className="flex items-center">
-                      Regardless of whether you registered as a
-                    </div>
-                    <div className="flex justify-center items-center">
-                      parent, teacher, or school owner.
-                    </div>
-                  </div>
-                  <div className="md:hidden flex flex-wrap">
+                  <div className="flex flex-col">
                     Regardless of whether you registered as a parent, teacher,
                     or school owner.
                   </div>
@@ -132,11 +118,11 @@ const ReferralProgrames = () => {
             </div>
           </div>
           <div className="w-full flex flex-col">
-            <div className="relative md:w-[800px] w-full md:h-[500px] md:rounded-t-[47px] rounded-t-[20px] bg-[#FFF6C5] pt-[44px] pb-[45px] md:py-[115px] px-[100px] md:px-[250px]">
+            <div className="relative md:w-[800px] w-full md:rounded-t-[47px] rounded-t-[20px] bg-[#FFF6C5] pt-[44px] pb-[45px] md:py-[115px] px-[100px] md:px-[250px]">
               <img src={card} alt="Card" />
             </div>
-            <div className="relative md:w-[800px]  w-full  md:h-[300px] md:rounded-b-[47px] rounded-b-[20px] bg-[#FFE55A]  pt-[30px] pb-[31px] md:py-[80px] md:px-[75px] px-[15px]">
-              <div className="flex flex-col justify-center items-center md:gap-[30px] gap-[20px]">
+            <div className="relative md:w-[800px]  w-full  md:rounded-b-[47px] rounded-b-[20px] bg-[#FFE55A]  pt-[30px] pb-[31px] md:py-[80px] md:px-[75px] px-[15px]">
+              <div className="flex flex-col justify-center items-center md:gap-[30px] gap-5">
                 <div
                   className="md:text-[40px] text-base"
                   style={{
@@ -153,15 +139,7 @@ const ReferralProgrames = () => {
                     lineHeight: "normal",
                   }}
                 >
-                  <div className="hidden md:flex flex-col">
-                    <div className="flex items-center">
-                      Copy your referral code and share it with a
-                    </div>
-                    <div className="flex justify-center items-center">
-                      parent or school owner.
-                    </div>
-                  </div>
-                  <div className="md:hidden flex flex-wrap">
+                  <div className="flex flex-col">
                     Copy your referral code and share it with a parent or school
                     owner.
                   </div>
@@ -170,11 +148,11 @@ const ReferralProgrames = () => {
             </div>
           </div>
           <div className="w-full flex flex-col">
-            <div className="relative md:w-[800px] w-full md:h-[500px] md:rounded-t-[47px] rounded-t-[20px] bg-[#FFB9B9]  md:py-[80px] md:px-[250px] px-[100px] pt-[29px] pb-[30px]">
+            <div className="relative md:w-[800px] w-full md:rounded-t-[47px] rounded-t-[20px] bg-[#FFB9B9]  md:py-[80px] md:px-[250px] px-[100px] pt-[29px] pb-[30px]">
               <img src={register} alt="Register" />
             </div>
-            <div className="relative md:w-[800px] w-full md:h-[300px] md:rounded-b-[47px] rounded-b-[20px] bg-[#FF6161] pt-[30px] pb-[31px] md:py-[80px] md:px-[75px] px-[15px]">
-              <div className="flex flex-col justify-center items-center md:gap-[30px] gap-[20px]">
+            <div className="relative md:w-[800px] w-full md:rounded-b-[47px] rounded-b-[20px] bg-[#FF6161] pt-[30px] pb-[31px] md:py-[80px] md:px-[75px] px-[15px]">
+              <div className="flex flex-col justify-center items-center md:gap-[30px] gap-5">
                 <div
                   className="md:text-[40px] text-base"
                   style={{
@@ -207,11 +185,11 @@ const ReferralProgrames = () => {
             </div>
           </div>
           <div className="w-full flex flex-col">
-            <div className="relative md:w-[800px] w-full md:h-[500px] md:rounded-t-[47px] rounded-t-[20px] bg-[#BEC8FF]  md:py-[94px] md:px-[250px] px-[100px] pt-[35px] pb-9">
+            <div className="relative md:w-[800px] w-full md:rounded-t-[47px] rounded-t-[20px] bg-[#BEC8FF]  md:py-[94px] md:px-[250px] px-[100px] pt-[35px] pb-9">
               <img src={subscribe} alt="Subscriber" />
             </div>
-            <div className="relative md:w-[800px] w-full md:h-[300px] md:rounded-b-[47px] rounded-b-[20px] bg-[#7188FF]  md:py-[80px] md:px-[75px] pt-[20px] pb-[21px] px-[15px]">
-              <div className="flex flex-col justify-center items-center md:gap-[30px] gap-[20px]">
+            <div className="relative md:w-[800px] w-full md:rounded-b-[47px] rounded-b-[20px] bg-[#7188FF]  md:py-[80px] md:px-[75px] pt-[20px] pb-[21px] px-[15px]">
+              <div className="flex flex-col justify-center items-center md:gap-[30px] gap-5">
                 <div
                   className="md:text-[40px] text-base"
                   style={{
@@ -228,15 +206,7 @@ const ReferralProgrames = () => {
                     lineHeight: "normal",
                   }}
                 >
-                  <div className="hidden md:flex flex-col">
-                    <div className="flex items-center">
-                      Referree's child successfully enrolled or school
-                    </div>
-                    <div className="flex justify-center items-center">
-                      owner successfully subscribed to the system.
-                    </div>
-                  </div>
-                  <div className="md:hidden flex flex-col">
+                  <div className="flex flex-col">
                     Referree's child successfully enrolled or school owner
                     successfully subscribed to the system.
                   </div>
@@ -245,11 +215,11 @@ const ReferralProgrames = () => {
             </div>
           </div>
           <div className="w-full flex flex-col">
-            <div className="relative md:w-[800px] w-full md:h-[500px] md:rounded-t-[47px] rounded-t-[20px] bg-[#FFD976]  md:py-[95px] md:px-[250px] px-[100px] pt-[32px] pb-[35px]">
+            <div className="relative md:w-[800px] w-full  md:rounded-t-[47px] rounded-t-[20px] bg-[#FFD976]  md:py-[95px] md:px-[250px] px-[100px] pt-[36px] pb-[35px]">
               <img src={reward} alt="Reward" />
             </div>
-            <div className="relative md:w-[800px] md:h-[300px] md:rounded-b-[47px] rounded-b-[20px] bg-[#FFB800]  pt-[30px] md:pt-[78px] pb-[31px] md:pb-[79px] px-[15px] md:px-[75px]">
-              <div className="flex flex-col justify-center items-center md:gap-[30px] gap-[20px]">
+            <div className="relative md:w-[800px] md:rounded-b-[47px] rounded-b-[20px] bg-[#FFB800]  pt-[30px] md:pt-[78px] pb-[31px] md:pb-[79px] px-[15px] md:px-[89px]">
+              <div className="flex flex-col justify-center items-center md:gap-[30px] gap-5">
                 <div
                   className="md:text-[40px] text-base"
                   style={{
@@ -266,16 +236,7 @@ const ReferralProgrames = () => {
                     lineHeight: "normal",
                   }}
                 >
-                  <div className="hidden md:flex flex-col">
-                    {" "}
-                    <div className="flex items-center">
-                      Both the referrer and the referee will receive
-                    </div>
-                    <div className="flex justify-center items-center">
-                      rewards simultaneously.
-                    </div>
-                  </div>
-                  <div className="md:hidden flex flex-wrap">
+                  <div className=" flex flex-wrap">
                     Both the referrer and the referee will receive rewards
                     simultaneously.
                   </div>

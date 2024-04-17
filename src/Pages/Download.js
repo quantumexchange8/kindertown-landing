@@ -75,7 +75,6 @@ const Download = () => {
   return (
     <>
       {/*Content 1*/}
-
       <div className="w-full flex flex-col justify-center items-center md:pt-[150px] pt-[80px] md:px-[220px] pl-[31px] pr-[32px]">
         <div className="w-full md:w-[1000px] flex flex-col justify-center items-center">
           <div
@@ -99,32 +98,34 @@ const Download = () => {
 
       {/*Content 2*/}
 
-      <div className="w-full flex flex-col md:pt-[200px] pt-[50px] md:gap-5 gap-[30px]">
-        <div className="w-full flex flex-col justify-center items-center md:px-[220px] pl-[31px] pr-[32px]">
+      <div className="w-full flex flex-col md:pt-[200px] pt-[50px] md:gap-5 gap-[30px] md:px-[220px] ">
+        <div className="w-full flex flex-col justify-center items-center md:px-0 pl-[31px] pr-[32px]">
           <div className="w-full md:w-[1000px] flex md:flex flex-wrap justify-center items-center md:gap-5 gap-[30px]">
             <div className="relative w-full md:w-[490px] md:h-[500px] h-[337px] md:rounded-[30px] rounded-[20px] bg-[#FFDFA1] pt-[44px] md:pl-[52px] pl-[35px] pr-[28px] md:pr-[30px] flex flex-col md:gap-6 gap-[19px]">
-              <div className="flex flex-col justify-end md:gap-5 gap-[10px]">
+              <div className="flex flex-col items-end md:gap-5 gap-[10px]">
                 <div
                   className="md:text-3xl text-base  text-right"
-                  style={{ fontFamily: "SF Pro Display B" }}
+                  style={{
+                    fontFamily: "SF Pro Display B",
+                    lineHeight: "normal",
+                  }}
                 >
                   Kindertown Parent
                 </div>
                 <div
-                  className="md:text-2xl text-base text-[#666] text-right"
+                  className="md:text-2xl text-base text-[#666] text-right md:w-[280px] w-[200px]"
                   style={{ fontFamily: "SF Pro Display M" }}
                 >
-                  <div>Understanding the child's</div>
-                  <div>learning journey.</div>
+                  Understanding the child's learning journey.
                 </div>
               </div>
               <div className="flex flex-col justify-center overflow-hidden">
-                <div className="flex justify-start">
-                  <div className="justify-start relative md:top-[100px] top-[80px]">
+                <div>
+                  <div className="relative md:top-[100px] top-[80px]">
                     <img
                       src={mobile}
                       alt="Mobile"
-                      className="md:w-[250px] md:h-[508px] w-[168px]"
+                      className="md:w-[250px]  w-[168px]"
                     />
                   </div>
                   <div className="absolute bottom-0 right-0 p-[30px]">
@@ -143,17 +144,13 @@ const Download = () => {
                 </div>
               </div>
             </div>
-            <div className="relative md:w-[490px] w-full md:h-[500px] md:rounded-[30px] rounded-[20px] bg-[#3F5DFF] md:pt-[41px] pt-[27px] md:pb-[30px] pb-[28px] md:pl-[62px] pl-[42px] pr-[30px] flex flex-col md:gap-6 gap-[33px]">
+            <div className="relative md:w-[490px] w-full md:h-[500px] md:rounded-[30px] rounded-[20px] bg-[#3F5DFF] md:pt-[41px] pt-[27px] md:pb-[30px] pb-[28px] md:pl-[62px] px-[42px] md:pr-[63px] flex flex-col md:gap-6 gap-[33px]">
               <div className="flex flex-col justify-end">
-                <img
-                  src={tab}
-                  alt="Tablet"
-                  className="md:w-[365px] md:h-[280px]"
-                />
+                <img src={tab} alt="Tablet" className="md:w-[365px]" />
               </div>
               <div className="flex flex-col justify-start">
-                <div className="flex justify-start">
-                  <div className="flex flex-col justify-start items-start md:gap-5 gap-[10px]">
+                <div className="flex">
+                  <div className="flex flex-col items-start md:gap-5 gap-[10px]">
                     <div
                       className="md:text-3xl text-base  text-left"
                       style={{ fontFamily: "SF Pro Display B" }}
@@ -161,14 +158,13 @@ const Download = () => {
                       Kindertown Teacher
                     </div>
                     <div
-                      className="md:text-2xl  text-base text-white text-left"
+                      className="md:text-2xl  text-base text-white text-left md:w-[243px] w-[176px]"
                       style={{ fontFamily: "SF Pro Display M" }}
                     >
-                      <div>Escape the busyness, </div>
-                      <div>save valuable time.</div>
+                      Escape the busyness, save valuable time.
                     </div>
                   </div>
-                  <div className="absolute bottom-0 right-0 p-[30px]">
+                  <div className="absolute bottom-[30px] right-[30px]">
                     <button onClick={() => setShowModal2(true)}>
                       <img
                         src={button2}
@@ -187,13 +183,9 @@ const Download = () => {
           </div>
         </div>
         <div className="w-full flex flex-col justify-center items-center">
-          <div className="relative md:w-[1000px] w-full md:h-[500px] md:rounded-[30px] items-center bg-[#2FC300] flex md:gap-[99px] gap-6 md:pr-[30px] pr-[32px] overflow-hidden md:pt-[49px] pt-[43px] md:pb-0 pb-[44px]">
-            <div className="flex flex-col md:w-[546px] w-2/3 relative bottom-0 md:top-10 top-0 right-3">
-              <img
-                src={imac}
-                alt="imac"
-                className="md:w-[592px] md:h-full w-full"
-              />
+          <div className="relative md:w-[1000px] w-full md:rounded-[30px] items-center bg-[#2FC300] flex md:gap-[99px] gap-6 md:pr-[98px] pr-[32px] overflow-hidden md:pt-[49px] pt-[43px] md:pb-0 pb-[44px]">
+            <div className="flex flex-col md:w-[546px] w-2/3 relative bottom-0 md:top-10 right-3">
+              <img src={imac} alt="imac" />
             </div>
             <div className="w-1/3 md:w-[256px] flex flex-col md:gap-5 gap-[10px]">
               <div className="flex flex-col">
@@ -227,7 +219,7 @@ const Download = () => {
                   No more sluggish school enrollment processes from now.
                 </div>
               </div>
-              <div className="absolute md:bottom-[30px] md:right-[30px] bottom-[35px] right-[35px]">
+              <div className="absolute md:bottom-[30px] md:right-[30px] bottom-[50px] right-[50px]">
                 <button onClick={() => setShowModal3(true)}>
                   <img
                     src={button3}
@@ -331,8 +323,8 @@ const Download = () => {
       {/*Content 4*/}
       <div className="w-full flex flex-col justify-center items-center pl-[19px] pr-[21px] md:px-[220px]">
         <div className="w-full md:w-[1000px] flex flex-wrap justify-center items-center md:gap-5 gap-[7px]">
-          <div className="relative w-full md:w-[1000px] md:h-[500px] h-[176px] md:rounded-[30px] rounded-[10px] bg-[#D5FFCD] flex gap-[29px] md:gap-[88px] md:pr-[114px] pr-[39px] md:pl-[100px] pl-[32px] md:pt-[100px] pt-[35px] overflow-hidden">
-            <div className="flex flex-col items-center md:w-[400px] md:h-[180px]">
+          <div className="relative w-full md:w-[1000px] md:h-[500px] h-[176px] md:rounded-[30px] rounded-[10px] bg-[#D5FFCD] flex gap-[29px] md:gap-[88px] md:pr-[112px] pr-[40px] md:pl-[100px] pl-[32px] md:pt-[100px] pt-[35px] overflow-hidden">
+            <div className="flex flex-col items-center md:w-[400px]">
               <div
                 className="md:text-[40px] text-base"
                 style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
@@ -341,12 +333,12 @@ const Download = () => {
                 doorstep visits.
               </div>
             </div>
-            <div className="flex flex-col justify-center md:w-[300px] md:h-[609px] w-full relative md:top-5 top-11">
+            <div className="flex flex-col justify-center md:w-[300px] w-full relative md:top-[100px] top-5">
               <img src={phone} alt="Mobile" />
             </div>
           </div>
           <div className="w-full flex justify-center items-center md:gap-5 gap-[7px]">
-            <div className="relative md:w-[490px] w-full h-[177px] md:h-[500px] md:rounded-[30px] rounded-[10px] bg-[#176200] flex flex-col md:px-[45px] pl-[16px] pr-[15px] md:pt-[66px] pt-[22px] pb-[31px] md:pb-[85px] md:gap-[51px] gap-[22px]">
+            <div className="relative md:w-[490px] w-full h-[177px] md:h-[500px] md:rounded-[30px] rounded-[10px] bg-[#176200] flex flex-col md:px-[45px] px-[16px] md:pt-[66px] pt-[22px] pb-[31px] md:pb-[85px] md:gap-[51px] gap-[22px]">
               <div className="flex flex-col justify-center items-center md:gap-[7px] gap-[3px]">
                 <div className="flex justify-center items-center md:gap-[7px] gap-[3px]">
                   <div className="flex flex-col">
@@ -444,7 +436,7 @@ const Download = () => {
               </div>
             </div>
           </div>
-          <div className="w-full flex justify-center items-center md:gap-5 gap-[7px]">
+          <div className="w-full flex justify-center items-center md:gap-5 gap-[8px]">
             <div className="relative md:w-[490px] w-full h-[177px] md:h-[500px] md:rounded-[30px] rounded-[10px] bg-[#D5FFCD] flex flex-col md:px-[40px] px-[14px] md:pt-[62px] pt-[21px] md:pb-[61px] pb-[15px] md:gap-[50px] gap-[10px]">
               <div className="flex flex-col justify-center items-center">
                 <img
@@ -484,7 +476,7 @@ const Download = () => {
                 <source src={video} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
-              <div className="absolute md:bottom-11 bottom-[14px] md:right-9 right-[14px] flex justify-start items-center md:w-[300px] md:h-[100px] w-[106px]">
+              <div className="absolute md:bottom-11 bottom-[14px] md:right-9 right-[14px] flex md:w-[300px] md:h-[100px] w-[106px]">
                 <div className="flex flex-col">
                   <div
                     className="md:text-[30px] text-[10px] text-right "
