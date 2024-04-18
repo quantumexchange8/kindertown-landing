@@ -16,8 +16,9 @@ import Arrow from "../assets/parent/arrow.svg";
 const Parent = () => {
   return (
     <>
+      {/*********Coding lama************/}
       <div className="w-full flex flex-col justify-center items-center pb-[100px] pt-[80px] md:py-[200px] md:px-0 px-[20px]">
-        <div className="w-full md:w-[1000px] flex flex-col items-center gap-[50px] md:gap-[100px] md:px-[100px]">
+        <div className="w-full md:max-w-[1000px] flex flex-col items-center gap-[50px] md:gap-[100px]">
           <div className="relative w-full md:w-[800px] md:h-[660px] h-[273px] md:rounded-[50px] rounded-[20px]  bg-gradient-to-t from-[#FFDD98]  via-[#FFEABE] to-[#FFF7E5]">
             <div className="absolute md:top-[87px] top-[37px] md:right-[80px] right-[30px]">
               <img
