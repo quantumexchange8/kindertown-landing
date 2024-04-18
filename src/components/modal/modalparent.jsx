@@ -68,7 +68,7 @@ const ModalParent = ({ showModal1, setShowModal1 }) => {
                   </div>
                 </div>
                 {/*Content1*/}
-                <div className="w-full flex flex-col gap-[50px] md:pt-[100px] pt-[50px]">
+                <div className="w-full flex flex-col md:gap-[50px] gap-5 md:pt-[100px] pt-[50px]">
                   <div className="w-full md:w-[900px] md:px-[100px] pl-[31px] pr-[32px] justify-start">
                     <div
                       className="md:text-4xl text-[24px]"
@@ -83,7 +83,7 @@ const ModalParent = ({ showModal1, setShowModal1 }) => {
                       </div>
                     </div>
                   </div>
-                  <div className="w-full md:w-[900px] flex flex-col gap-12 md:pl-[100px] md:pr-[40px] pl-[31px] pr-[32px]">
+                  <div className="w-full md:w-[900px] flex flex-col md:gap-12 gap-5 md:pl-[100px] md:pr-[40px] pl-[31px] pr-[32px]">
                     <div
                       className="w-full md:w-[700px] md:text-[32px] text-xl"
                       style={{
@@ -123,7 +123,7 @@ const ModalParent = ({ showModal1, setShowModal1 }) => {
 
                 {/*content2*/}
                 <div className="w-full md:pt-[200px] pt-[100px] md:px-[100px] pl-[31px] pr-[32px]">
-                  <div className="relative md:w-[700px] rounded-[30px] bg-[#D1C5B8] flex flex-col items-center md:py-[49px] py-[27px] gap-9 md:gap-20 md:px-[78px] pl-[26px] pr-[25px]">
+                  <div className="relative md:w-[700px] w-full rounded-[30px] bg-[#D1C5B8] flex flex-col items-center md:py-[49px] py-[27px] gap-9 md:gap-20 md:px-[78px] pl-[26px] pr-[25px]">
                     <div>
                       <img
                         src={icon}

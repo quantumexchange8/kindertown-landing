@@ -159,7 +159,10 @@ const Download = () => {
                     </div>
                     <div
                       className="md:text-2xl  text-base text-white text-left md:w-[243px] w-[176px]"
-                      style={{ fontFamily: "SF Pro Display M" }}
+                      style={{
+                        fontFamily: "SF Pro Display M",
+                        lineHeight: "normal",
+                      }}
                     >
                       Escape the busyness, save valuable time.
                     </div>
@@ -219,7 +222,7 @@ const Download = () => {
                   No more sluggish school enrollment processes from now.
                 </div>
               </div>
-              <div className="absolute md:bottom-[30px] md:right-[30px] bottom-[50px] right-[50px]">
+              <div className="absolute md:bottom-[30px] md:right-[30px] bottom-[45px] right-[50px]">
                 <button onClick={() => setShowModal3(true)}>
                   <img
                     src={button3}
@@ -416,12 +419,7 @@ const Download = () => {
                     lineHeight: "normal",
                   }}
                 >
-                  <div className="hidden md:flex flex-col">
-                    <div>You can easily find the </div>
-                    <div>stationery children need on</div>
-                    <div>the marketplace.</div>
-                  </div>
-                  <div className="md:hidden flex flex-col">
+                  <div className="flex flex-col">
                     You can easily find the stationery children need on the
                     marketplace.
                   </div>
@@ -453,13 +451,7 @@ const Download = () => {
                     lineHeight: "normal",
                   }}
                 >
-                  <div className="hidden md:flex flex-col">
-                    <div>In community, schools, </div>
-                    <div>teachers and parents will</div>
-                    <div>share the delightful moments</div>
-                    <div>of children's growth together.</div>
-                  </div>
-                  <div className="md:hidden flex flex-col">
+                  <div className="flex flex-col">
                     In community, schools, teachers, and parents will share the
                     delightful moments of children's growth together.
                   </div>
@@ -513,11 +505,15 @@ const Download = () => {
                 </div>
               </div>
               <div className="md:hidden flex flex-wrap justify-center items-center">
-                More &nbsp;
-                <span className="text-[#FF5F5F]"> intelligent </span>{" "}
-                experiences with{" "}
-                <span className="text-[#F67F00]"> Kindertown &nbsp;</span>{" "}
-                system
+                <div>
+                  More
+                  <span className="text-[#FF5F5F]"> intelligent </span>
+                </div>
+                <div>experiences with</div>
+                <div>
+                  <span className="text-[#F67F00]"> Kindertown {""}</span>
+                  system
+                </div>
               </div>
             </div>
           </div>
@@ -563,7 +559,7 @@ const Download = () => {
                 </div>
               </div>
             </div>
-            <div className="w-full flex justify-center md:gap-5 gap-[8px]">
+            <div className="w-full flex justify-center md:gap-5 gap-[7px]">
               <div className="relative w-full md:w-[490px] md:h-[500px] md:rounded-[30px] rounded-[10px] bg-[#582DFF] flex flex-col justify-center items-center md:gap-[90px] gap-[21px] md:pb-[113px] pb-[21px] md:pt-[54px] pt-[19px] md:px-[35px] px-[18px]">
                 <div className="flex flex-col justify-center items-center">
                   <img
@@ -577,8 +573,13 @@ const Download = () => {
                     className="md:text-3xl text-xs text-white text-center"
                     style={{ fontFamily: "SF Pro Display B" }}
                   >
-                    <div>An easier arrangement</div>
-                    <div>for classroom schedules.</div>
+                    <div className="hidden md:flex flex-col">
+                      <div>An easier arrangement</div>
+                      <div>for classroom schedules.</div>
+                    </div>
+                    <div className=" md:hidden flex flex-col">
+                      An easier arrangement for classroom schedules.
+                    </div>
                   </div>
                 </div>
               </div>
@@ -595,9 +596,15 @@ const Download = () => {
                     className="md:text-3xl text-xs text-center"
                     style={{ fontFamily: "SF Pro Display B" }}
                   >
-                    <div>We also place great</div>
-                    <div>importance on students' </div>
-                    <div>health conditions.</div>
+                    <div className="hidden md:flex flex-col">
+                      <div>We also place great</div>
+                      <div>importance on students' </div>
+                      <div>health conditions.</div>
+                    </div>
+                    <div className="md:hidden flex flex-col">
+                      We also place great importance on students' health
+                      conditions.
+                    </div>
                   </div>
                 </div>
               </div>
@@ -606,7 +613,7 @@ const Download = () => {
         </div>
       </div>
       {/*Content 6*/}
-      <div className="w-full flex flex-col justify-center items-center md:pt-[300px] pt-[100px] md:pb-[200px] pb-[50px] md:px-[220px] px-5">
+      <div className="w-full flex flex-col justify-center items-center md:pt-[300px] pt-[100px] md:pb-[200px] pb-[50px] md:px-[220px] pl-[19px] pr-[21px]">
         <div className="w-full md:w-[1000px] flex flex-col justify-center items-center md:gap-[100px] gap-[50px]">
           <div className="flex flex-col justify-center items-center">
             <div
@@ -621,15 +628,10 @@ const Download = () => {
                 </div>
                 <div className="text-[#23D300]">Intelligent Assistant.</div>
               </div>
-              <div className="md:hidden flex flex-col">
-                <div> Kindertown is more</div>
-                <div>
-                  than just a<span className="text-[#814300]"> system</span>;
-                </div>
-                <div> it's like your</div>
-                <div>
-                  <span className="text-[#23D300]">Intelligent Assistant.</span>
-                </div>
+              <div className="md:hidden flex flex-wrap justify-center">
+                Kindertown is more than just a
+                <span className="text-[#814300]"> system</span>; it's like your
+                <span className="text-[#23D300]">Intelligent Assistant.</span>
               </div>
             </div>
           </div>
@@ -662,7 +664,7 @@ const Download = () => {
                 </div>
               </div>
             </div>
-            <div className="relative w-full md:w-[1000px] md:h-[500px] md:rounded-[30px] rounded-[10px] bg-[#FCBF4A] flex items-center md:pr-[122px] md:py-[75px] pt-[33px] pb-[31px] md:pl-[108px] pr-[43px] pl-[34px] md:gap-[54px] gap-[8px]">
+            <div className="relative w-full md:w-[1000px] md:rounded-[30px] rounded-[10px] bg-[#FCBF4A] flex items-center md:pr-[122px] md:py-[75px] pt-[33px] pb-[31px] md:pl-[108px] pr-[43px] pl-[34px] md:gap-[54px] gap-[8px]">
               <div className="flex flex-col justify-center items-center md:w-[440px]">
                 <div
                   className="md:text-3xl text-[10px]"
@@ -671,17 +673,17 @@ const Download = () => {
                   {/*Desktop*/}
                   <div className="hidden md:flex flex-col gap-[50px]">
                     <div className="flex flex-col  gap-[30px]">
-                      <div className="w-[370px] h-[60px] text-[#FF0001]">
+                      <div className="w-[370px] text-[#FF0001]">
                         Do we still have to line up for school enrollment?{" "}
                       </div>
-                      <div className="w-[370px] h-[60px] text-[#4800FF]">
+                      <div className="w-[370px] text-[#4800FF]">
                         Can we submit our documents online?
                       </div>
-                      <div className="w-[370px] h-[60px] text-[#00821D]">
+                      <div className="w-[370px] text-[#00821D]">
                         Can I reserve a seat for my child in advance?
                       </div>
                     </div>
-                    <div className="w-[440px] h-[60px]">
+                    <div className="w-[440px]">
                       It seems like every year, parents ask the same questions!
                     </div>
                   </div>
@@ -710,7 +712,7 @@ const Download = () => {
                 <img
                   src={open}
                   alt="OpenSign"
-                  className="md:w-[250px] md:h-[298px] w-[88px] h-[105px]"
+                  className="md:w-[250px] md:h-[298px] w-full"
                 />
               </div>
             </div>
@@ -719,10 +721,10 @@ const Download = () => {
                 <img
                   src={user}
                   alt="User"
-                  className="md:w-[250px] md:h-[234px]"
+                  className="md:w-[250px] md:h-[234px] w-[88px]"
                 />
               </div>
-              <div className="flex w-[470px] flex-col items-center justify-center">
+              <div className="flex md:w-[470px] w-full flex-col items-center justify-center">
                 <div
                   className="md:text-3xl text-[10px] text-left"
                   style={{
@@ -769,18 +771,13 @@ const Download = () => {
             className="md:text-[40px] text-xs  text-white"
             style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
           >
-            <div className="hidden md:flex flex-col">
-              <div> From the moment children</div>
-              <div>step into kindergarten,</div>
-              <div> their journey of learning</div>
-              <div> dreams begins.</div>
+            <div className="hidden md:flex flex-col w-[490px]">
+              From the moment children step into kindergarten, their journey of
+              learning dreams begins.
             </div>
-            <div className="md:hidden flex flex-col">
-              <div> From the moment</div>
-              <div> children step into</div>
-              <div> kindergarten, their </div>
-              <div>journey of learning</div>
-              <div> dreams begins.</div>
+            <div className="md:hidden flex flex-col w-[120px]">
+              From the moment children step into kindergarten, their journey of
+              learning dreams begins.
             </div>
           </div>
         </div>
@@ -791,10 +788,13 @@ const Download = () => {
           <div className="w-full md:w-[1000px] flex flex-col">
             <div
               className="md:text-[32px] text-base text-center"
-              style={{ fontFamily: "SF Pro Display M", lineHeight: "normal" }}
+              style={{ lineHeight: "normal" }}
             >
               {/*Desktop*/}
-              <div className="hidden md:flex flex-col">
+              <div
+                className="hidden md:flex flex-col"
+                style={{ fontFamily: "SF Pro Display M" }}
+              >
                 <div>
                   At any moment, feel free to leave your contact information
                   without{" "}
@@ -807,7 +807,10 @@ const Download = () => {
                 <div>we understand your needs.</div>
               </div>
               {/*Mobile*/}
-              <div className=" md:hidden flex flex-col">
+              <div
+                className=" md:hidden flex flex-col"
+                style={{ fontFamily: "SF Pro Display Semibold" }}
+              >
                 At any moment, feel free to leave your contact information
                 without hesitation, and our attentive service personnel will get
                 in touch with you. Only through quality communication can we
@@ -816,121 +819,125 @@ const Download = () => {
             </div>
           </div>
         </div>
-        <div
-          className="relative w-full md:w-[1100px] md:h-[1225px] md:rounded-[30px] flex flex-col items-center gap-[30px] md:gap-[92px] md:px-[86px] pr-[32px] pl-[31px] md:pt-[82px] py-[50px] md:pb-[95px]"
-          style={{
-            background:
-              "linear-gradient(180deg, rgba(221, 221, 221, 0.3), rgba(221, 221, 221, 1), rgba(221, 221, 221, 0.7))",
-          }}
-        >
-          <div className="flex flex-col w-full md:w-[800px] justify-center items-center">
-            <div
-              className="md:text-[32px]  text-base text-center"
-              style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
-            >
-              We have prepared detailed product demonstrations prior to
-              subscription, along with one-on-one or group teaching modes, to
-              provide you with a more comprehensive understanding of how our
-              Kindertown management system is essential for your school.
+        <div className="w-full md:px-[170px] flex justify-center items-center">
+          <div
+            className="relative w-full md:w-[1100px] md:rounded-[30px] flex flex-col items-center gap-[30px] md:gap-[90px] md:px-[86px] pr-[32px] pl-[31px] md:pt-[82px] py-[50px] md:pb-[95px]"
+            style={{
+              background:
+                "linear-gradient(180deg, rgba(221, 221, 221, 0.3), rgba(221, 221, 221, 1), rgba(221, 221, 221, 0.7))",
+            }}
+          >
+            <div className="flex flex-col w-full md:w-[800px] justify-center items-center">
+              <div
+                className="md:text-[32px]  text-base text-center"
+                style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
+              >
+                We have prepared detailed product demonstrations prior to
+                subscription, along with one-on-one or group teaching modes, to
+                provide you with a more comprehensive understanding of how our
+                Kindertown management system is essential for your school.
+              </div>
             </div>
-          </div>
-          <div>
-            <img
-              src={icon}
-              alt="Icon"
-              className="md:w-[246px] md:h-[246px] w-[100px] h-[100px]"
-            />
-          </div>
-          <form ref={form} onSubmit={sendEmail}>
-            <div className="w-full flex flex-col items-center md:gap-[100px] gap-[42px]">
-              <div className="w-full md:w-[928px] flex md:flex flex-col md:gap-[30px] gap-5">
-                <div className="w-full md:w-[928px] flex md:flex flex-wrap md:gap-7 gap-5">
-                  <div
-                    className="flex flex-col md:w-[450px] w-full md:gap-3 gap-[6px] md:text-[20px] text-base"
-                    style={{ fontFamily: "SF Pro Display M" }}
-                  >
-                    <label>School Name:</label>
-                    <input
-                      type="text"
-                      name="school_name"
-                      id="schoolname"
-                      required
-                      className="md:w-[450px] w-full h-[66px] bg-transparent border-2 rounded-[15px] border-white text-gray-900 px-2 dark:hover:bg-gray-700"
-                    />
-                  </div>
-                  <div
-                    className="flex flex-col md:w-[450px]  w-full gap-3 md:text-[20px] text-base"
-                    style={{ fontFamily: "SF Pro Display M" }}
-                  >
-                    <label>Name of person-in-charge:</label>
-                    <input
-                      type="text"
-                      name="from_name"
-                      id="name"
-                      required
-                      className="md:w-[450px] h-[66px]  w-full bg-transparent border-2 rounded-[15px] border-white text-gray-900 px-2"
-                    />
-                  </div>
-                </div>
+            <div className="flex flex-col md:gap-[100px] gap-[50px] items-center justify-center">
+              <div>
+                <img
+                  src={icon}
+                  alt="Icon"
+                  className="md:w-[246px] md:h-[246px] w-[100px] h-[100px]"
+                />
+              </div>
+              <form ref={form} onSubmit={sendEmail}>
+                <div className="w-full flex flex-col items-center md:gap-[100px] gap-[42px]">
+                  <div className="w-full md:w-[928px] flex md:flex flex-col md:gap-[30px] gap-5">
+                    <div className="w-full md:w-[928px] flex md:flex flex-wrap md:gap-7 gap-5">
+                      <div
+                        className="flex flex-col md:w-[450px] w-full md:gap-3 gap-[6px] md:text-[20px] text-base"
+                        style={{ fontFamily: "SF Pro Display M" }}
+                      >
+                        <label>School Name:</label>
+                        <input
+                          type="text"
+                          name="school_name"
+                          id="schoolname"
+                          required
+                          className="md:w-[450px] w-full h-[66px] bg-transparent border-2 rounded-[15px] border-white text-gray-900 px-2 dark:hover:bg-gray-700"
+                        />
+                      </div>
+                      <div
+                        className="flex flex-col md:w-[450px]  w-full gap-3 md:text-[20px] text-base"
+                        style={{ fontFamily: "SF Pro Display M" }}
+                      >
+                        <label>Name of person-in-charge:</label>
+                        <input
+                          type="text"
+                          name="from_name"
+                          id="name"
+                          required
+                          className="md:w-[450px] h-[66px]  w-full bg-transparent border-2 rounded-[15px] border-white text-gray-900 px-2"
+                        />
+                      </div>
+                    </div>
 
-                <div className="w-full md:w-[928px] flex md:flex flex-wrap md:gap-7 gap-5">
-                  <div
-                    className="flex flex-col md:w-[450px] w-full md:gap-3 gap-[6px] md:text-[20px] text-base"
-                    style={{ fontFamily: "SF Pro Display M" }}
-                  >
-                    <label>Email address:</label>
-                    <input
-                      type="email"
-                      name="from_email"
-                      id="email"
-                      required
-                      className="md:w-[450px] h-[66px] bg-transparent border-2 rounded-[15px] border-white text-gray-900 px-2"
-                    />
+                    <div className="w-full md:w-[928px] flex md:flex flex-wrap md:gap-7 gap-5">
+                      <div
+                        className="flex flex-col md:w-[450px] w-full md:gap-3 gap-[6px] md:text-[20px] text-base"
+                        style={{ fontFamily: "SF Pro Display M" }}
+                      >
+                        <label>Email address:</label>
+                        <input
+                          type="email"
+                          name="from_email"
+                          id="email"
+                          required
+                          className="md:w-[450px] h-[66px] bg-transparent border-2 rounded-[15px] border-white text-gray-900 px-2"
+                        />
+                      </div>
+                      <div
+                        className="flex flex-col md:w-[450px] w-full md:gap-3 gap-[6px] md:text-[20px] text-base"
+                        style={{ fontFamily: "SF Pro Display M" }}
+                      >
+                        <label>Contact number or Whatsapp:</label>
+                        <input
+                          type="text"
+                          name="phone"
+                          id="tel"
+                          required
+                          className="md:w-[450px] h-[66px] bg-transparent border-2 rounded-[15px] border-white text-gray-900 px-2"
+                        />
+                      </div>
+                    </div>
                   </div>
-                  <div
-                    className="flex flex-col md:w-[450px] w-full md:gap-3 gap-[6px] md:text-[20px] text-base"
-                    style={{ fontFamily: "SF Pro Display M" }}
-                  >
-                    <label>Contact number or Whatsapp:</label>
-                    <input
-                      type="text"
-                      name="phone"
-                      id="tel"
-                      required
-                      className="md:w-[450px] h-[66px] bg-transparent border-2 rounded-[15px] border-white text-gray-900 px-2"
-                    />
+                  <div className="flex flex-col">
+                    <button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="flex items-center justify-between w-full md:w-[536px] md:pl-[53px] px-4 md:pr-[52px] md:h-[93px] md:pt-[23px] md:pb-[22px] py-[22px] text-gray-900 ring-[#BBB] ring-1 bg-white border border-gray-300 shadow-md focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 rounded-[15px] dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+                    >
+                      <div className="flex md:flex-row flex-col items-center md:gap-[29px] gap-[7px]">
+                        <div
+                          className="flex flex-col md:text-xl text-base md:w-[362px] w-full md:order-first order-last"
+                          style={{
+                            fontFamily: "SF Pro Display M",
+                            lineHeight: "normal",
+                          }}
+                        >
+                          <div>Within 24 hours after sending,</div>
+                          <div> our service personnel will contact you.</div>
+                        </div>
+                        <div>
+                          <img
+                            src={tele}
+                            alt="Tele"
+                            className="w-10 h-10 md:order-last order-first"
+                          />
+                        </div>
+                      </div>
+                    </button>
                   </div>
                 </div>
-              </div>
-              <div className="flex flex-col">
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="flex items-center justify-between w-full md:w-[536px] md:pl-[53px] px-4 md:pr-[52px] md:h-[93px] md:pt-[23px] md:pb-[22px] py-[22px] text-gray-900 ring-[#BBB] ring-1 bg-white border border-gray-300 shadow-md focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 rounded-[15px] dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
-                >
-                  <div className="flex md:flex-row flex-col items-center md:gap-[29px] gap-[7px]">
-                    <div
-                      className="flex flex-col md:text-xl text-base md:w-[362px] w-full md:order-first order-last"
-                      style={{
-                        fontFamily: "SF Pro Display M",
-                        lineHeight: "normal",
-                      }}
-                    >
-                      <div>Within 24 hours after sending,</div>
-                      <div> our service personnel will contact you.</div>
-                    </div>
-                    <div>
-                      <img
-                        src={tele}
-                        alt="Tele"
-                        className="w-10 h-10 md:order-last order-first"
-                      />
-                    </div>
-                  </div>
-                </button>
-              </div>
+              </form>
             </div>
-          </form>
+          </div>
         </div>
 
         {/*Contact form

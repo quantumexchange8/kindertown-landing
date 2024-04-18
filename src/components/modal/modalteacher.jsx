@@ -101,7 +101,7 @@ const ModalTeacher = ({ showModal2, setShowModal2 }) => {
                         effectively with parents to keep them informed about
                         their child's progress at school.
                       </div>
-                      <div className="hidden md:flex flex-col relative top-[196px] right-0">
+                      <div className="hidden md:flex flex-col justify-end">
                         <button onClick={() => setShowModal2(false)}>
                           <img
                             src={close}

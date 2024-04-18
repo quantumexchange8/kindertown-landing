@@ -70,7 +70,7 @@ const ModalAdmin = ({ showModal3, setShowModal3 }) => {
 
                 {/* CONTENT 2*/}
                 <div className="w-full flex flex-col md:gap-[50px] gap-[30px] md:py-[100px] py-[50px]">
-                  <div className="md:w-[900px] w-full md:px-[100px] pl-[31px] pr-[32px] justify-start">
+                  <div className="md:w-[900px] w-full md:px-[100px] pl-[31px] pr-[32px]">
                     <div
                       className="md:text-4xl text-2xl text-left"
                       style={{ fontFamily: "SF Pro Display B" }}
@@ -127,10 +127,7 @@ const ModalAdmin = ({ showModal3, setShowModal3 }) => {
                         <div>
                           enjoy top-tier features specifically designed to
                         </div>
-                        <div>
-                          {" "}
-                          meet the unique needs of kindergartens, along
-                        </div>
+                        <div>meet the unique needs of kindergartens, along</div>
                         <div> with an exceptional level of service.</div>
                       </div>
                       <div className="md:hidden flex flex-wrap">

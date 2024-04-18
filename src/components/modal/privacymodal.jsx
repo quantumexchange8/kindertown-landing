@@ -40,7 +40,7 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                   </div>
                   {/*CONTENT 1*/}
                   <div className="w-full md:w-[700px] flex flex-col md:gap-10 gap-[30px]">
-                    <div className="flex flex-col gap-5">
+                    <div className="flex flex-col md:gap-5 gap-[15px]">
                       <div
                         className="md:text-5xl text-xl"
                         style={{ fontFamily: "SF Pro Display B" }}

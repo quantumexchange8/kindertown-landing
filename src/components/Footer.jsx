@@ -24,41 +24,28 @@ const Footer = () => {
     <footer>
       <div className="bg-[#FFF7EF]  justify-center items-center">
         {/*Mobile*/}
-        <div className="w-full md:hidden flex flex-wrap gap-9 py-7 px-8 md:p-0">
+        <div className="w-full md:hidden flex flex-wrap gap-9 py-7 pl-[31px] pr-8 md:p-0">
           <div className="flex flex-wrap gap-[40px] md:hidden">
             <div className="text-xl" style={{ fontFamily: "SF Pro Display M" }}>
               <div className="flex flex-col md:hidden gap-5">
                 <div>
-                  <Link
-                    to="/products/parent"
-                    onClick={() => handleLinkClick("/products/parent")}
-                    className="hover:text-[#F67F00]"
-                  >
+                  <Link to="/products/parent" className="hover:text-[#F67F00]">
                     Kindertown Parents
                   </Link>
                 </div>
                 <div>
-                  <Link
-                    to="/products/teacher"
-                    onClick={() => handleLinkClick("/products/teacher")}
-                    className="hover:text-[#F67F00]"
-                  >
+                  <Link to="/products/teacher" className="hover:text-[#F67F00]">
                     Kindertown Teacher
                   </Link>
                 </div>
                 <div>
-                  <Link
-                    to="/products/admin"
-                    onClick={() => handleLinkClick("/products/admin")}
-                    className="hover:text-[#F67F00]"
-                  >
+                  <Link to="/products/admin" className="hover:text-[#F67F00]">
                     Kindertown Admin
                   </Link>
                 </div>
                 <div>
                   <Link
                     to="/join-us/referral-program"
-                    onClick={() => handleLinkClick("/join-us/referral-program")}
                     className="hover:text-[#F67F00]"
                   >
                     Referral Program
@@ -67,20 +54,13 @@ const Footer = () => {
                 <div>
                   <Link
                     to="/join-us/career-opportunities"
-                    onClick={() =>
-                      handleLinkClick("/join-us/career-opportunities")
-                    }
                     className="hover:text-[#F67F00]"
                   >
                     Career Opportunities
                   </Link>
                 </div>
                 <div>
-                  <Link
-                    to="/download"
-                    onClick={() => handleLinkClick("/download")}
-                    className="hover:text-[#F67F00]"
-                  >
+                  <Link to="/download" className="hover:text-[#F67F00]">
                     Download
                   </Link>
                 </div>
@@ -159,7 +139,7 @@ const Footer = () => {
           </div>
         </div>
         {/*Desktop*/}
-        <div className="w-full hidden md:flex flex-col justify-center items-center gap-[50px] pt-[64px]">
+        <div className="w-full hidden md:flex flex-col justify-center items-center gap-[50px] pt-16 pb-[65px]">
           <div className="w-full md:w-[1000px] md:flex flex-col justify-center gap-9">
             <div className="flex flex-col w-full">
               <div className="w-[74px] h-[51px]">
@@ -191,7 +171,6 @@ const Footer = () => {
                     <div className="flex flex-col  w-[207px]">
                       <Link
                         to="/products/parent"
-                        onClick={() => handleLinkClick("/products/parent")}
                         className="hover:text-[#F67F00]"
                       >
                         Kindertown Parents
@@ -200,9 +179,6 @@ const Footer = () => {
                     <div className="flex flex-col">
                       <Link
                         to="/join-us/referral-program"
-                        onClick={() =>
-                          handleLinkClick("/join-us/referral-program")
-                        }
                         className="hover:text-[#F67F00]"
                       >
                         Referral Program
@@ -216,7 +192,6 @@ const Footer = () => {
                     <div className="flex flex-col w-[207px]">
                       <Link
                         to="/products/teacher"
-                        onClick={() => handleLinkClick("/products/teacher")}
                         className="hover:text-[#F67F00]"
                       >
                         Kindertown Teacher
@@ -225,9 +200,6 @@ const Footer = () => {
                     <div className="flex flex-col">
                       <Link
                         to="/join-us/career-opportunities"
-                        onClick={() =>
-                          handleLinkClick("/join-us/career-opportunities")
-                        }
                         className="hover:text-[#F67F00]"
                       >
                         Career Opportunities
@@ -241,18 +213,13 @@ const Footer = () => {
                     <div className="flex flex-col w-[207px]">
                       <Link
                         to="/products/admin"
-                        onClick={() => handleLinkClick("/products/admin")}
                         className="hover:text-[#F67F00]"
                       >
                         Kindertown Admin
                       </Link>
                     </div>
                     <div className="flex flex-col">
-                      <Link
-                        to="/download"
-                        onClick={() => handleLinkClick("/download")}
-                        className="hover:text-[#F67F00]"
-                      >
+                      <Link to="/download" className="hover:text-[#F67F00]">
                         Download
                       </Link>
                     </div>
@@ -329,7 +296,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="flex flex-col gap-4 mb-16">
+          <div className="flex flex-col gap-4">
             <hr className="hidden md:flex md:w-[1000px] border-[#000] mx-auto dark:border-black-900" />
 
             <div className="w-full md:flex justify-center items-center">
