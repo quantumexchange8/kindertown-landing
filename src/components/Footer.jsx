@@ -360,6 +360,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      {/*Mobile*/}
       <div className="md:hidden flex pl-[31px] pr-[120px] gap-4 pt-[10px] pb-[93px]">
         <div>
           <img src={ct} alt="CT" />

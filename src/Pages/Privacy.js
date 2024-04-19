@@ -3,7 +3,7 @@ import Lock from "../assets/privacy/lock.svg";
 import "../font.css";
 const Privacy = () => {
   return (
-    <div className="w-full bg-[#000] md:py-[200px] py-[44px] md:px-[270px] pl-[31px] pr-[32px] flex justify-center">
+    <div className="w-full bg-[#000] md:py-[200px] py-[44px] md:px-0 pl-[31px] pr-[32px] flex justify-center">
       <div className="w-full md:w-[1000px] flex flex-wrap md:justify-center md:items-center md:gap-[50px] gap-[15px]">
         <div className="flex flex-col md:justify-center md:items-center md:w-[165px] md:h-[182px] w-[60px] h-[66px]">
           <img src={Lock} alt="Lock"></img>
