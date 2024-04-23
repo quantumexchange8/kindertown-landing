@@ -39,7 +39,7 @@ const ReferralProgrames = () => {
               </div>
               {/*CONTENT 2*/}
               <div className="flex flex-col justify-center items-center md:px-0 px-5">
-                <div className="w-full md:w-[1000px] flex flex-col items-center md:gap-[100px] gap-[50px]">
+                <div className="w-full  flex flex-col items-center md:gap-[100px] gap-[50px]">
                   <div className="flex flex-col">
                     <div
                       className="md:text-[32px] text-[20px] text-center"

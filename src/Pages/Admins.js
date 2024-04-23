@@ -95,21 +95,16 @@ const Admin = () => {
           {/*Content 2*/}
           <div className="w-full flex md:flex-row flex-col gap-[30px] justify-center items-center">
             <div
-              className="flex flex-col w-full md:text-[50px] text-xl"
+              className="flex flex-col  md:text-[50px] text-xl text-center"
               style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
             >
-              <div
-                className="md:text-[50px] text-xl text-center"
-                style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
-              >
-                <div className="hidden md:flex flex-wrap items-center ">
-                  Superb Interface with Exceptional User Experience
-                </div>
-                <div className="md:hidden flex flex-col items-center">
-                  <div className="flex items-center">Superb Interface with</div>
-                  <div className="flex items-center">
-                    Exceptional User Experience
-                  </div>
+              <div className="hidden md:flex flex-wrap items-center w-[400px]">
+                Superb Interface with Exceptional User Experience
+              </div>
+              <div className="md:hidden flex flex-col items-center">
+                <div className="flex items-center">Superb Interface with</div>
+                <div className="flex items-center">
+                  Exceptional User Experience
                 </div>
               </div>
             </div>
@@ -119,38 +114,24 @@ const Admin = () => {
             </div>
           </div>
           {/*Content 3*/}
-          <div className="w-full flex md:flex-row flex-col gap-[30px]  justify-start items-center">
+          <div className="w-full flex md:flex-row flex-col gap-[30px] justify-center items-center">
             <div className="flex flex-col md:order-1 order-2">
-              <img src={Device2} alt="Device2" className=" w-full" />
+              <img src={Device2} alt="Device2" className="w-full" />
             </div>
             <div
-              className="md:text-[50px] text-xl w-full order-1 md:order-2"
+              className="flex flex-col  md:text-[50px] text-xl text-center  md:order-2 order-1"
               style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
             >
-              <div
-                className="md:text-[50px] text-xl text-center"
-                style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
-              >
-                <div className="hidden md:flex flex-col items-center">
-                  <div> Make school</div>
-                  <div> enrollment</div>
-                  <div>effortless,</div>
-                  <div> efficient, and</div>
-                  <div> time-saving.</div>
-                </div>
-                <div className="md:hidden flex flex-col items-center">
-                  <div className="flex items-center">
-                    Make school enrollment
-                  </div>
-                  <div className="flex items-center">
-                    effortless, efficient, and
-                  </div>
-                  <div className="flex items-center">time-saving. </div>
-                </div>
+              <div className="hidden md:flex flex-wrap items-center md:w-[400px]">
+                Make school enrollment effortless, efficient, and time-saving.
+              </div>
+              <div className="md:hidden flex flex-col items-center">
+                <div> Make school enrollment</div>
+                <div> effortless, efficient, and</div>
+                <div> time-saving.</div>
               </div>
             </div>
           </div>
-
           {/*CONTENT 4*/}
           <div className="w-full flex flex-col justify-center md:gap-[100px] gap-[30px]">
             <div className="flex flex-col justify-center items-center px-[12px] md:px-0">
