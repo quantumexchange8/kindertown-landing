@@ -4,11 +4,11 @@ import "../font.css";
 const Privacy = () => {
   return (
     <div className="w-full bg-[#000] md:py-[200px] py-[44px] md:px-0 pl-[31px] pr-[32px] flex justify-center">
-      <div className="w-full md:w-[1000px] flex flex-wrap  md:gap-[50px] gap-[15px]">
+      <div className="w-full md:w-[1000px] flex flex-wrap items-center md:gap-[50px] gap-[15px]">
         <div className="flex flex-col md:justify-center md:items-center md:w-[165px] md:h-[182px] w-[60px] h-[66px]">
           <img src={Lock} alt="Lock"></img>
         </div>
-        <div className="flex flex-col justify-center md:gap-[30px] gap-[20px] md:w-[685px] w-[330px]">
+        <div className=" flex flex-col justify-center md:gap-[30px] gap-[20px] md:w-[685px] w-full">
           <div className="flex justify-start items-center">
             <div
               className="md:text-[60px] text-[18px] text-[#FFF]"
