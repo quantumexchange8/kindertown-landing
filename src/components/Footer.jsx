@@ -22,9 +22,9 @@ const Footer = () => {
 
   return (
     <footer>
-      <div className="w-full bg-[#FFF7EF] flex flex-col justify-center items-center">
+      <div className="w-full bg-[#FFF7EF] flex flex-col justify-center items-center  md:pt-16  md:pb-[64px]  py-7 md:px-0 pl-[31px] pr-8">
         {/*Desktop*/}
-        <div className="w-full md:max-w-[1000px] hidden md:flex flex-col md:pt-16 pt-7 pb-[64px] md:gap-9">
+        <div className="w-full md:max-w-[1000px] hidden md:flex flex-col md:gap-9">
           <div className="flex justify-start items-start w-[74px] h-[50px]">
             <Link
               to="/"
@@ -224,7 +224,7 @@ const Footer = () => {
         </div>
 
         {/*Mobile*/}
-        <div className="w-full md:hidden flex flex-col gap-10 py-7 pl-[31px] pr-8">
+        <div className="w-full md:hidden flex flex-col gap-10 ">
           <div
             className="flex flex-col gap-5 text-xl"
             style={{ fontFamily: "SF Pro Display M" }}
