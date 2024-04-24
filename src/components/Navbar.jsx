@@ -44,16 +44,6 @@ const Navbar = () => {
     joinUs: "w-[91px]",
     download: "w-[116px]",
   };
-  /* 
-  const linkStylesmobile = {
-    active:"bg-[#F67F00] w-full rounded-[15px] h-[28px] text-[20px] text-[#FFF] px-5",
-    base: "bg-[#FFF]  h-[28px] text-[20px] text-black px-5 text-left",
-    home: "w-full justify-center",
-    products: "w-full justify-center",
-    joinUs: "w-full justify-center",
-    download: "w-full justify-center",
-  };
-*/
 
   //Css for submenu for web version
   const subLinkStyles = {

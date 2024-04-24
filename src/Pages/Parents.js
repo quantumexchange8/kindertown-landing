@@ -20,7 +20,7 @@ const Parent = () => {
         <div className="w-full md:max-w-[1000px] flex flex-col md:gap-[200px] gap-[100px]">
           <div className="w-full md:px-0 px-5 flex flex-col gap-[50px] md:gap-[100px] items-center">
             {/*Content 1*/}
-            <div className="relative w-full md:w-[800px] md:h-[660px] h-[273px] md:rounded-[50px] rounded-[20px]  bg-gradient-to-t from-[#FFDD98]  via-[#FFEABE] to-[#FFF7E5]">
+            <div className="relative w-full md:w-[800px] md:h-[660px] h-[273px] md:rounded-[50px] rounded-[20px] justify-end flex flex-col bg-gradient-to-t from-[#FFDD98]  via-[#FFEABE] to-[#FFF7E5]">
               <div className="absolute md:top-[87px] top-[37px] md:right-[80px] right-[30px]">
                 <img
                   src={Icon}
@@ -35,6 +35,7 @@ const Parent = () => {
                   className="md:w-[210px] md:h-[266px] w-[100px]"
                 />
               </div>
+
               <div className="absolute md:bottom-[88px] md:left-[94px] md:right-[175px] left-[30px] right-[84px] bottom-[25px] md:w-[531px] w-[239px]">
                 <div
                   className="md:text-[80px] text-4xl text-[#0CA39B]"
@@ -98,19 +99,19 @@ const Parent = () => {
               </div>
             </div>
           </div>
-          <div className="w-full flex flex-col md:gap-[300px] gap-[100px]  md:px-0 pl-[31px]  pr-8 ">
-            <div className="w-full flex flex-col gap-[100px]">
+          <div className="w-full flex flex-col justify-center items-center md:gap-[300px] gap-[100px]  md:px-0 pl-[31px]  pr-8 ">
+            <div className="w-full flex items-center flex-col gap-[100px]">
               {/*CONTENT 2 */}
-              <div className="w-full flex justify-center items-center md:gap-[66px] gap-[26px]">
-                <div className="flex flex-col">
+              <div className="w-full flex items-center justify-center md:gap-[66px] gap-[26px]">
+                <div className="flex flex-col ">
                   <img
                     src={Phone1}
                     alt="phone1"
-                    className="  md:h-[711px] md:w-[350px] w-[150px]"
+                    className="md:w-[350px] w-[150px]"
                   />
                 </div>
 
-                <div className="md:flex flex-col items-center">
+                <div className="flex flex-col items-center">
                   <div
                     className="text-center md:text-[50px] text-xl w-full text-[#F67F00]"
                     style={{
@@ -118,18 +119,16 @@ const Parent = () => {
                       lineHeight: "normal",
                     }}
                   >
-                    {/*Web Version*/}
-                    <div className="hidden md:flex flex-col justify-center items-center">
-                      <div className="md:h-14">Designed for the future.</div>
-                      <div className="md:h-14">Designed for</div>
-                      <div className="md:h-14">kindergarten.</div>
+                    <div className="hidden md:flex flex-col items-center justify-center">
+                      <div> Designed for the future.</div>
+                      <div>Designed for</div>
+                      <div>kindergarten.</div>
                     </div>
-                    {/*Mobile Version*/}
-                    <div className="md:hidden flex flex-col justify-center items-center">
-                      <div> Designed for </div>
-                      <div> the future. </div>
+                    <div className="md:hidden flex flex-col items-center justify-center w-[154px]">
                       <div> Designed for</div>
-                      <div> kindergarten. </div>
+                      <div>the future.</div>
+                      <div> Designed for</div>
+                      <div> kindergarten.</div>
                     </div>
                   </div>
                 </div>
@@ -145,10 +144,10 @@ const Parent = () => {
                     }}
                   >
                     <div className="hidden md:flex flex-col justify-center items-center ">
-                      <div className="md:h-14">Build for Learning</div>
-                      <div className="md:h-14">Connecting and Caring</div>
+                      <div>Build for Learning</div>
+                      <div>Connecting and Caring</div>
                     </div>
-                    <div className="md:hidden flex flex-col justify-center items-center ">
+                    <div className="md:hidden flex flex-col justify-center items-center w-[154px]">
                       <div>Build for</div>
                       <div> Learning</div>
                       <div>Connecting</div> <div>and Caring</div>
@@ -159,7 +158,7 @@ const Parent = () => {
                   <img
                     src={Phone2}
                     alt="phone2"
-                    className=" md:w-[350px] md:h-[711px] w-[150px]"
+                    className=" md:w-[350px] w-[150px]"
                   />
                 </div>
               </div>
@@ -169,7 +168,7 @@ const Parent = () => {
                   <img
                     src={Phone3}
                     alt="phone3"
-                    className="md:w-[350px] md:h-[711px] w-[150px]"
+                    className="md:w-[350px] w-[150px]"
                   />
                 </div>
 
@@ -182,10 +181,10 @@ const Parent = () => {
                     }}
                   >
                     <div className="hidden md:flex flex-col items-center justify-center">
-                      <div className="md:h-14">Witness the boundless</div>
-                      <div className="md:h-14">imagination of a child.</div>
+                      <div>Witness the boundless</div>
+                      <div>imagination of a child.</div>
                     </div>
-                    <div className="md:hidden flex flex-col items-center justify-center">
+                    <div className="md:hidden flex flex-col items-center justify-center w-[154px]">
                       <div>Witness</div>
                       <div>the boundless</div>
                       <div>imagination</div>
@@ -205,15 +204,15 @@ const Parent = () => {
                     }}
                   >
                     {/*Desktop*/}
-                    <div className="hidden md:flex items-center justify-center md:h-14">
+                    <div className="hidden md:flex items-center justify-center">
                       Ignite the learning
                     </div>
-                    <div className="hidden md:flex items-center justify-center md:h-14">
+                    <div className="hidden md:flex items-center justify-center">
                       passion in every student.
                     </div>
 
                     {/*Mobile*/}
-                    <div className="md:hidden flex flex-col items-center justify-center">
+                    <div className="md:hidden flex flex-col items-center justify-center w-[154px]">
                       <div> Ignite the</div>
                       <div> learning</div>
                       <div> passion in</div>
@@ -225,7 +224,7 @@ const Parent = () => {
                   <img
                     src={Phone4}
                     alt="phone4"
-                    className="md:w-[350px] md:h-[711px] w-[150px]"
+                    className="md:w-[350px] w-[150px]"
                   />
                 </div>
               </div>
@@ -235,7 +234,7 @@ const Parent = () => {
                   <img
                     src={Phone5}
                     alt="phone5"
-                    className=" md:w-[350px] md:h-[711px] w-[150px]"
+                    className=" md:w-[350px] w-[150px]"
                   />
                 </div>
                 <div className="flex flex-col items-center">
@@ -248,11 +247,11 @@ const Parent = () => {
                   >
                     {/*Desktop*/}
                     <div className="hidden md:flex flex-col items-center justify-center">
-                      <div className="md:h-14">Share little moment in the</div>
-                      <div className="md:h-14">education community.</div>
+                      <div>Share little moment in the</div>
+                      <div>education community.</div>
                     </div>
                     {/*Mobile*/}
-                    <div className="md:hidden flex flex-col items-center justify-center">
+                    <div className="md:hidden flex flex-col items-center justify-center w-[154px]">
                       <div>Share little</div>
                       <div>moment in the</div>
                       <div>education</div>
@@ -262,6 +261,7 @@ const Parent = () => {
                 </div>
               </div>
             </div>
+
             <div className="w-full flex flex-col md:gap-[150px] gap-[50px]">
               <div className="flex flex-col justify-center items-center">
                 <div className="flex flex-col items-center">
@@ -273,15 +273,14 @@ const Parent = () => {
                     }}
                   >
                     <div className="md:hidden flex flex-col items-center justify-center">
-                      <div>All the attractive widgets</div>
-                      <div>you love. And, even more</div>
-                      <div>to discover.</div>
+                      All the attractive widgets you love. And, even more to
+                      discover.
                     </div>
                     <div className="hidden md:flex items-center justify-center">
-                      All the attractive widgets you love.
-                    </div>
-                    <div className="hidden md:flex items-center justify-center">
-                      And, even more to discover.
+                      <span className="inline-block w-[950px]">
+                        All the attractive widgets you love. And, even more to
+                        discover.
+                      </span>
                     </div>
                   </div>
                 </div>

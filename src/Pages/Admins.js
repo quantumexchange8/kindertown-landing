@@ -109,13 +109,13 @@ const Admin = () => {
               </div>
             </div>
 
-            <div className="flex flex-col">
+            <div className="w-full flex flex-col">
               <img src={Device} alt="Device" className="w-full" />
             </div>
           </div>
           {/*Content 3*/}
           <div className="w-full flex md:flex-row flex-col gap-[30px] justify-center items-center">
-            <div className="flex flex-col md:order-1 order-2">
+            <div className="w-full flex flex-col md:order-1 order-2">
               <img src={Device2} alt="Device2" className="w-full" />
             </div>
             <div

@@ -20,340 +20,344 @@ import Main from "../assets/home/main.png";
 const Home = () => {
   return (
     <>
-      <div className="w-full flex justify-center md:pt-[100px] md:pb-[150px] pt-[80px] pb-[100px] pl-[31px] pr-[32px] md:px-0 ">
-        <div className="w-full md:max-w-[1000px] flex flex-col md:gap-[150px] gap-[100px] justify-center items-center">
-          <div className="w-full flex flex-col md:gap-[100px] gap-[50px]">
-            {/*CONTENT 1 GAMBAR*/}
-            <div>
-              <img src={Main} alt="" loading="lazy" />
-            </div>
-            {/*Content 2 */}
-            <div className="w-full flex flex-col justify-center gap-[150px]">
-              <div className="flex flex-col items-center w-full md:gap-[60px] gap-[30px]">
-                <div
-                  className="w-full md:max-w-[610px] text-4xl md:text-[80px] text-center md:leading-[90px]"
-                  style={{ fontFamily: "SF Pro Display B" }}
-                >
-                  <div>Zero - Worries</div>
-                  <div> Zero - Hassle</div>
-                </div>
-                <div
-                  className="w-full text-center md:text-[32px] text-xl"
-                  style={{
-                    fontFamily: "SF Pro Display M",
-                    lineHeight: "normal",
-                  }}
-                >
-                  A child's learning world begins in the classroom, using tools
-                  that are flexible, easy to operate, prioritise privacy,
-                  accessibility, and sustainability. Parents will have a better
-                  understanding of their child's journey in kindergarten because
-                  of our products.
-                  {/* <div className="" ></div>
+      <div className="w-full flex flex-col justify-center items-center md:pt-[100px] pt-[80px] md:gap-[150px] gap-[100px]">
+        <div className="w-full md:max-w-[1000px] flex flex-col justify-center items-center">
+          <div className="w-full flex flex-col md:px-0 pl-[31px] pr-[32px] md:gap-[150px] gap-[100px]">
+            {/*Gambar main*/}
+            <div className="w-full flex flex-col md:gap-[100px] gap-[50px]">
+              {/*CONTENT 1 GAMBAR*/}
+              <div>
+                <img src={Main} alt="" loading="lazy" />
+              </div>
+              {/*Content 2 */}
+              <div className="w-full flex flex-col justify-center gap-[150px]">
+                <div className="flex flex-col items-center w-full md:gap-[60px] gap-[30px]">
+                  <div
+                    className="w-full md:max-w-[610px] text-4xl md:text-[80px] text-center md:leading-[90px]"
+                    style={{ fontFamily: "SF Pro Display B" }}
+                  >
+                    <div>Zero - Worries</div>
+                    <div> Zero - Hassle</div>
+                  </div>
+                  <div
+                    className="w-full text-center md:text-[32px] text-xl"
+                    style={{
+                      fontFamily: "SF Pro Display M",
+                      lineHeight: "normal",
+                    }}
+                  >
+                    A child's learning world begins in the classroom, using
+                    tools that are flexible, easy to operate, prioritise
+                    privacy, accessibility, and sustainability. Parents will
+                    have a better understanding of their child's journey in
+                    kindergarten because of our products.
+                    {/* <div className="" ></div>
                 <div className="text-[32px]" style={{ fontFamily: "SF Pro Display M" }}></div>
                 <div className="text-[32px]" style={{ fontFamily: "SF Pro Display M" }}></div>
                 <div className="text-[32px]" style={{ fontFamily: "SF Pro Display M" }}></div> */}
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          {/*Content 3 */}
-          <div className="flex flex-col md:gap-[50px] gap-[30px]  justify-center items-center ">
-            <div
-              className="text-center w-[175px] md:w-[496px] md:text-3xl text-xl"
-              style={{ fontFamily: "SF Pro Display B" }}
-            >
-              Kindertown’s app super highlight
-            </div>
-            <div className="flex flex-wrap md:gap-7 gap-[30px]">
-              <div className="w-full md:w-[315px] md:h-[460px] rounded-[30px] pt-[47px] pb-12 md:py-[70px] px-[25px] md:pl-[27px] md:pr-[18px] bg-[#F67F00] flex flex-col justify-center items-center gap-[50px] md:gap-[60px]">
-                <div>
-                  <img
-                    src={Planner}
-                    alt="Planner"
-                    className="md:w-40 md:h-[120px]"
-                  />
-                </div>
 
-                <div className="flex flex-col items-center gap-[30px] md:gap-5 w-[270px] md:h-full">
-                  <div
-                    className="text-center text-xl w-full"
-                    style={{
-                      fontFamily: "SF Pro Display B",
-                      lineHeight: "normal",
-                    }}
-                  >
-                    <div className="flex items-center justify-center h-6">
-                      Say goodbye to
-                    </div>
-                    <div className="flex items-center justify-center h-6">
-                      enrolment worries
-                    </div>
+            {/*Kindertown superhighlight*/}
+            <div className="flex flex-col md:gap-[50px] gap-[30px]  justify-center items-center ">
+              <div
+                className="text-center w-[175px] md:w-[496px] md:text-3xl text-xl"
+                style={{ fontFamily: "SF Pro Display B" }}
+              >
+                Kindertown’s app super highlight
+              </div>
+              <div className="w-full flex flex-wrap md:gap-7 gap-[30px]">
+                <div className="w-full md:w-[315px] md:h-[460px] rounded-[30px] pt-[47px] pb-12 md:py-[70px] px-[25px] md:pl-[27px] md:pr-[18px] bg-[#F67F00] flex flex-col justify-center items-center gap-[50px] md:gap-[60px]">
+                  <div>
+                    <img
+                      src={Planner}
+                      alt="Planner"
+                      className="md:w-40 md:h-[120px]"
+                    />
                   </div>
-                  {/*web*/}
-                  <div className="hidden md:flex flex-col text-center text-[20px]">
+
+                  <div className="flex flex-col items-center gap-[30px] md:gap-5 w-[270px] md:h-full">
                     <div
-                      className="flex items-center justify-center h-[25px]"
+                      className="text-center text-xl w-full"
                       style={{
-                        fontFamily: "SF Pro Display M",
+                        fontFamily: "SF Pro Display B",
                         lineHeight: "normal",
                       }}
                     >
-                      You can now secure
+                      <div className="flex items-center justify-center h-6">
+                        Say goodbye to
+                      </div>
+                      <div className="flex items-center justify-center h-6">
+                        enrolment worries
+                      </div>
                     </div>
-                    <div
-                      className="flex items-center justify-center h-[25px]"
-                      style={{ fontFamily: "SF Pro Display M" }}
-                    >
-                      a seat in your preferred
+                    {/*web*/}
+                    <div className="hidden md:flex flex-col text-center text-[20px]">
+                      <div
+                        className="flex items-center justify-center h-[25px]"
+                        style={{
+                          fontFamily: "SF Pro Display M",
+                          lineHeight: "normal",
+                        }}
+                      >
+                        You can now secure
+                      </div>
+                      <div
+                        className="flex items-center justify-center h-[25px]"
+                        style={{ fontFamily: "SF Pro Display M" }}
+                      >
+                        a seat in your preferred
+                      </div>
+                      <div
+                        className="flex items-center justify-center h-[25px]"
+                        style={{ fontFamily: "SF Pro Display M" }}
+                      >
+                        kindergarten in Kindertown.
+                      </div>
                     </div>
-                    <div
-                      className="flex items-center justify-center h-[25px]"
-                      style={{ fontFamily: "SF Pro Display M" }}
-                    >
-                      kindergarten in Kindertown.
-                    </div>
-                  </div>
-                  {/*Mobile*/}
-                  <div className="md:hidden flex flex-col text-center text-[20px]">
-                    <div
-                      className="flex items-center justify-center h-[25px]"
-                      style={{
-                        fontFamily: "SF Pro Display M",
-                        lineHeight: "normal",
-                      }}
-                    >
-                      You can now secure a seat in
-                    </div>
-                    <div
-                      className="flex items-center justify-center h-[25px]"
-                      style={{ fontFamily: "SF Pro Display M" }}
-                    >
-                      your preferred kindergarten
-                    </div>
-                    <div
-                      className="flex items-center justify-center h-[25px]"
-                      style={{ fontFamily: "SF Pro Display M" }}
-                    >
-                      in Kindertown.
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="w-full md:w-[315px] md:h-[460px] rounded-[30px] py-[44px] md:py-[70px] md:pl-[22px] md:pr-[23px] px-[25px] bg-[#FFC19F]  flex flex-col justify-center items-center gap-[50px] md:gap-[60px]">
-                <div>
-                  <img
-                    src={Child}
-                    alt="Child"
-                    className="md:h-[120px] md:w-[133px]"
-                  />
-                </div>
-
-                <div className="flex flex-col items-center gap-[30px] md:gap-5 w-[270px] md:h-full">
-                  <div
-                    className="text-center text-xl leading-normal w-full"
-                    style={{ fontFamily: "SF Pro Display B" }}
-                  >
-                    <div className="flex items-center justify-center h-6">
-                      Know what your
-                    </div>
-                    <div className="flex items-center justify-center h-6">
-                      kids up to in school
-                    </div>
-                  </div>
-
-                  <div className="text-center text-[20px] leading-normal">
-                    <div
-                      className="flex items-center justify-center h-[25px]"
-                      style={{ fontFamily: "SF Pro Display M" }}
-                    >
-                      Stay informed about your
-                    </div>
-                    <div
-                      className="flex items-center justify-center h-[25px]"
-                      style={{ fontFamily: "SF Pro Display M" }}
-                    >
-                      kids’ academic status,
-                    </div>
-                    <div
-                      className="flex items-center justify-center h-[25px]"
-                      style={{ fontFamily: "SF Pro Display M" }}
-                    >
-                      performance and more.
+                    {/*Mobile*/}
+                    <div className="md:hidden flex flex-col text-center text-[20px]">
+                      <div
+                        className="flex items-center justify-center h-[25px]"
+                        style={{
+                          fontFamily: "SF Pro Display M",
+                          lineHeight: "normal",
+                        }}
+                      >
+                        You can now secure a seat in
+                      </div>
+                      <div
+                        className="flex items-center justify-center h-[25px]"
+                        style={{ fontFamily: "SF Pro Display M" }}
+                      >
+                        your preferred kindergarten
+                      </div>
+                      <div
+                        className="flex items-center justify-center h-[25px]"
+                        style={{ fontFamily: "SF Pro Display M" }}
+                      >
+                        in Kindertown.
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div className="w-full md:w-[314px] md:h-[460px] rounded-[30px] py-[60px] md:pt-[70px] md:pb-[93px] px-[25px] md:px-[21px] bg-[#FCBF4A]  flex flex-col justify-center items-center gap-[50px] md:gap-[60px]">
-                <div>
-                  <img
-                    src={Playground}
-                    alt="Child"
-                    className="md:h-[120px] md:w-[137px]"
-                  />
-                </div>
-
-                <div className="flex flex-col items-center gap-[30px] md:gap-[18px] w-full md:h-full">
-                  <div
-                    className="text-center text-xl leading-normal w-full"
-                    style={{ fontFamily: "SF Pro Display B" }}
-                  >
-                    <div className="flex items-center justify-center h-6">
-                      Never miss a school
-                    </div>
-                    <div className="flex items-center justify-center h-6">
-                      event or class activity
-                    </div>
+                <div className="w-full md:w-[315px] md:h-[460px] rounded-[30px] py-[44px] md:py-[70px] md:pl-[22px] md:pr-[23px] px-[25px] bg-[#FFC19F]  flex flex-col justify-center items-center gap-[50px] md:gap-[60px]">
+                  <div>
+                    <img
+                      src={Child}
+                      alt="Child"
+                      className="md:h-[120px] md:w-[133px]"
+                    />
                   </div>
 
-                  <div className="text-center text-[20px] leading-normal">
+                  <div className="flex flex-col items-center gap-[30px] md:gap-5 w-[270px] md:h-full">
                     <div
-                      className="h-[25px]"
-                      style={{ fontFamily: "SF Pro Display M" }}
+                      className="text-center text-xl leading-normal w-full"
+                      style={{ fontFamily: "SF Pro Display B" }}
                     >
-                      Stay in the loop with all the
-                    </div>
-                    <div
-                      className="h-[25px]"
-                      style={{ fontFamily: "SF Pro Display M" }}
-                    >
-                      latest happenings in school.
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="w-full md:w-[315px] md:h-[460px] rounded-[30px] bg-[#FDE0A4] px-[25px] md:pl-[27px] md:pr-[18px] pt-[47px] pb-12 md:py-[70px] flex flex-col justify-center items-center gap-[50px] md:gap-[60px]">
-                <div>
-                  <img
-                    src={Computer}
-                    alt="Gadget"
-                    className="md:h-[120px] md:w-[150px]"
-                  />
-                </div>
-
-                <div className="flex flex-col items-center md:gap-5 gap-[30px] w-[270px] md:h-full">
-                  <div
-                    className="text-center text-xl leading-normal w-full"
-                    style={{ fontFamily: "SF Pro Display B" }}
-                  >
-                    <div className="flex items-center justify-center h-6">
-                      Pay your school
-                    </div>
-                    <div className="flex items-center justify-center h-6">
-                      fees with ease
-                    </div>
-                  </div>
-
-                  <div className="text-center text-xl leading-normal">
-                    <div
-                      className="flex items-center justify-center h-[25px]"
-                      style={{ fontFamily: "SF Pro Display M" }}
-                    >
-                      Make your school fee
+                      <div className="flex items-center justify-center h-6">
+                        Know what your
+                      </div>
+                      <div className="flex items-center justify-center h-6">
+                        kids up to in school
+                      </div>
                     </div>
 
-                    <div
-                      className="flex items-center justify-center h-[25px]"
-                      style={{ fontFamily: "SF Pro Display M" }}
-                    >
-                      payments instantly with
-                    </div>
-                    <div
-                      className="flex items-center justify-center h-[25px]"
-                      style={{ fontFamily: "SF Pro Display M" }}
-                    >
-                      only a few clicks.
+                    <div className="text-center text-[20px] leading-normal">
+                      <div
+                        className="flex items-center justify-center h-[25px]"
+                        style={{ fontFamily: "SF Pro Display M" }}
+                      >
+                        Stay informed about your
+                      </div>
+                      <div
+                        className="flex items-center justify-center h-[25px]"
+                        style={{ fontFamily: "SF Pro Display M" }}
+                      >
+                        kids’ academic status,
+                      </div>
+                      <div
+                        className="flex items-center justify-center h-[25px]"
+                        style={{ fontFamily: "SF Pro Display M" }}
+                      >
+                        performance and more.
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-
-              <div className="w-full md:w-[315px] md:h-[460px] rounded-[30px]  bg-[#E0956C] flex flex-col justify-center items-center md:gap-[60px] gap-[50px] md:py-[70px] md:pl-[27px] md:pr-[18px] pt-[47px] pb-[48px] px-[25px]">
-                <div>
-                  <img
-                    src={Pencil}
-                    alt="Pencil"
-                    className="md:h-[120px] md:w-[120px]"
-                  />
-                </div>
-
-                <div className="flex flex-col items-center gap-[30px] md:gap-5 w-[270px] md:h-full">
-                  <div
-                    className="text-center text-xl leading-normal w-full"
-                    style={{ fontFamily: "SF Pro Display B" }}
-                  >
-                    <div className="flex items-center justify-center h-6">
-                      Marketplace that
-                    </div>
-                    <div className="flex items-center justify-center h-6">
-                      brings convenience
-                    </div>
+                <div className="w-full md:w-[314px] md:h-[460px] rounded-[30px] py-[60px] md:pt-[70px] md:pb-[93px] px-[25px] md:px-[21px] bg-[#FCBF4A]  flex flex-col justify-center items-center gap-[50px] md:gap-[60px]">
+                  <div>
+                    <img
+                      src={Playground}
+                      alt="Child"
+                      className="md:h-[120px] md:w-[137px]"
+                    />
                   </div>
 
-                  <div className="text-center text-xl leading-normal">
+                  <div className="flex flex-col items-center gap-[30px] md:gap-[18px] w-full md:h-full">
                     <div
-                      className="flex items-center justify-center h-[25px]"
-                      style={{ fontFamily: "SF Pro Display M" }}
+                      className="text-center text-xl leading-normal w-full"
+                      style={{ fontFamily: "SF Pro Display B" }}
                     >
-                      Supplying resources that
+                      <div className="flex items-center justify-center h-6">
+                        Never miss a school
+                      </div>
+                      <div className="flex items-center justify-center h-6">
+                        event or class activity
+                      </div>
                     </div>
 
-                    <div
-                      className="flex items-center justify-center h-[25px]"
-                      style={{ fontFamily: "SF Pro Display M" }}
-                    >
-                      cater to your child's needs
-                    </div>
-                    <div
-                      className="flex items-center justify-center h-[25px]"
-                      style={{ fontFamily: "SF Pro Display M" }}
-                    >
-                      at any moment.
+                    <div className="text-center text-[20px] leading-normal">
+                      <div
+                        className="h-[25px]"
+                        style={{ fontFamily: "SF Pro Display M" }}
+                      >
+                        Stay in the loop with all the
+                      </div>
+                      <div
+                        className="h-[25px]"
+                        style={{ fontFamily: "SF Pro Display M" }}
+                      >
+                        latest happenings in school.
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-
-              <div className="w-full md:w-[314px] md:h-[460px] rounded-[30px]  bg-[#FFDDB9] flex flex-col justify-center items-center gap-[50px] md:gap-[60px] px-[25px] md:px-[22px] md:py-[70px] pt-[38px] pb-[39px]">
-                <div>
-                  <img
-                    src={Tel}
-                    alt="Telephone"
-                    className="md:h-[120px] md:w-[126px]"
-                  />
-                </div>
-                <div className="flex flex-col items-center gap-[30px] md:gap-5 w-[270px] md:h-full">
-                  <div
-                    className="text-center text-xl leading-normal w-full"
-                    style={{ fontFamily: "SF Pro Display B" }}
-                  >
-                    <div className="flex items-center justify-center h-6">
-                      Discover countless
-                    </div>
-                    <div className="flex items-center justify-center h-6">
-                      powerful features
-                    </div>
+                <div className="w-full md:w-[315px] md:h-[460px] rounded-[30px] bg-[#FDE0A4] px-[25px] md:pl-[27px] md:pr-[18px] pt-[47px] pb-12 md:py-[70px] flex flex-col justify-center items-center gap-[50px] md:gap-[60px]">
+                  <div>
+                    <img
+                      src={Computer}
+                      alt="Gadget"
+                      className="md:h-[120px] md:w-[150px]"
+                    />
                   </div>
 
-                  <div className="text-center text-xl leading-normal">
+                  <div className="flex flex-col items-center md:gap-5 gap-[30px] w-[270px] md:h-full">
                     <div
-                      className="flex items-center justify-center h-[25px]"
-                      style={{ fontFamily: "SF Pro Display M" }}
+                      className="text-center text-xl leading-normal w-full"
+                      style={{ fontFamily: "SF Pro Display B" }}
                     >
-                      Super-strong interaction
+                      <div className="flex items-center justify-center h-6">
+                        Pay your school
+                      </div>
+                      <div className="flex items-center justify-center h-6">
+                        fees with ease
+                      </div>
                     </div>
 
-                    <div
-                      className="flex items-center justify-center h-[25px]"
-                      style={{ fontFamily: "SF Pro Display M" }}
-                    >
-                      function between teachers,
+                    <div className="text-center text-xl leading-normal">
+                      <div
+                        className="flex items-center justify-center h-[25px]"
+                        style={{ fontFamily: "SF Pro Display M" }}
+                      >
+                        Make your school fee
+                      </div>
+
+                      <div
+                        className="flex items-center justify-center h-[25px]"
+                        style={{ fontFamily: "SF Pro Display M" }}
+                      >
+                        payments instantly with
+                      </div>
+                      <div
+                        className="flex items-center justify-center h-[25px]"
+                        style={{ fontFamily: "SF Pro Display M" }}
+                      >
+                        only a few clicks.
+                      </div>
                     </div>
+                  </div>
+                </div>
+
+                <div className="w-full md:w-[315px] md:h-[460px] rounded-[30px]  bg-[#E0956C] flex flex-col justify-center items-center md:gap-[60px] gap-[50px] md:py-[70px] md:pl-[27px] md:pr-[18px] pt-[47px] pb-[48px] px-[25px]">
+                  <div>
+                    <img
+                      src={Pencil}
+                      alt="Pencil"
+                      className="md:h-[120px] md:w-[120px]"
+                    />
+                  </div>
+
+                  <div className="flex flex-col items-center gap-[30px] md:gap-5 w-[270px] md:h-full">
                     <div
-                      className="flex items-center justify-center h-[25px]"
-                      style={{ fontFamily: "SF Pro Display M" }}
+                      className="text-center text-xl leading-normal w-full"
+                      style={{ fontFamily: "SF Pro Display B" }}
                     >
-                      students and parents.
+                      <div className="flex items-center justify-center h-6">
+                        Marketplace that
+                      </div>
+                      <div className="flex items-center justify-center h-6">
+                        brings convenience
+                      </div>
+                    </div>
+
+                    <div className="text-center text-xl leading-normal">
+                      <div
+                        className="flex items-center justify-center h-[25px]"
+                        style={{ fontFamily: "SF Pro Display M" }}
+                      >
+                        Supplying resources that
+                      </div>
+
+                      <div
+                        className="flex items-center justify-center h-[25px]"
+                        style={{ fontFamily: "SF Pro Display M" }}
+                      >
+                        cater to your child's needs
+                      </div>
+                      <div
+                        className="flex items-center justify-center h-[25px]"
+                        style={{ fontFamily: "SF Pro Display M" }}
+                      >
+                        at any moment.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="w-full md:w-[314px] md:h-[460px] rounded-[30px]  bg-[#FFDDB9] flex flex-col justify-center items-center gap-[50px] md:gap-[60px] px-[25px] md:px-[22px] md:py-[70px] pt-[38px] pb-[39px]">
+                  <div>
+                    <img
+                      src={Tel}
+                      alt="Telephone"
+                      className="md:h-[120px] md:w-[126px]"
+                    />
+                  </div>
+                  <div className="flex flex-col items-center gap-[30px] md:gap-5 w-[270px] md:h-full">
+                    <div
+                      className="text-center text-xl leading-normal w-full"
+                      style={{ fontFamily: "SF Pro Display B" }}
+                    >
+                      <div className="flex items-center justify-center h-6">
+                        Discover countless
+                      </div>
+                      <div className="flex items-center justify-center h-6">
+                        powerful features
+                      </div>
+                    </div>
+
+                    <div className="text-center text-xl leading-normal">
+                      <div
+                        className="flex items-center justify-center h-[25px]"
+                        style={{ fontFamily: "SF Pro Display M" }}
+                      >
+                        Super-strong interaction
+                      </div>
+
+                      <div
+                        className="flex items-center justify-center h-[25px]"
+                        style={{ fontFamily: "SF Pro Display M" }}
+                      >
+                        function between teachers,
+                      </div>
+                      <div
+                        className="flex items-center justify-center h-[25px]"
+                        style={{ fontFamily: "SF Pro Display M" }}
+                      >
+                        students and parents.
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -361,157 +365,157 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </div>
-
-      <div className="w-full flex justify-center pt-[50px] pb-[100px] md:py-[150px] px-5 md:px-0 bg-[#FFF7EF]">
-        <div className="w-full md:max-w-[1000px] flex flex-col md:gap-[200px] gap-[100px]">
-          {/*Content 4*/}
-          <div className="flex flex-col  justify-center items-center gap-[30px] md:gap-[50px]">
-            <div className="flex flex-col justify-center items-center">
-              <img
-                src={Tools}
-                className="md:w-32 md:h-32 w-[100px] h-[100px]"
-                alt="Tools"
-              />
-            </div>
-            <div className="flex flex-col items-center w-full ">
-              <div
-                className="text-center text-4xl md:text-[80px] text-[#7A5AF8] md:leading-[90px] leading-normal w-full"
-                style={{
-                  fontFamily: "SF Pro Display B",
-                }}
-              >
-                <div className="flex items-center justify-center">
-                  Essential tools.
-                </div>
-                <div className="flex items-center justify-center">
-                  Powerful system.
-                </div>
+        <div className="w-full flex flex-col bg-[#FFF7EF] justify-center items-center md:px-0 px-5 ">
+          <div className="w-full md:max-w-[1000px] flex flex-col justify-center md:gap-[200px] gap-[100px] md:py-[150px] pt-[50px] pb-[100px]">
+            {/*Essential tools*/}
+            <div className="w-full flex flex-col md:gap-[50px] gap-[30px]">
+              <div className="flex flex-col justify-center items-center">
+                <img
+                  src={Tools}
+                  className="md:w-32 md:h-32 w-[100px] h-[100px]"
+                  alt="Tools"
+                />
               </div>
-            </div>
-          </div>
-          <div className="flex flex-col md:gap-[150px] gap-[100px]">
-            {/*Content 5*/}
-            <div className="flex flex-wrap w-full md:gap-9 gap-[30px]">
-              <div>
-                <img src={Family} alt="Family" />
-              </div>
-              <div className="flex flex-col justify-center w-full md:w-[864px] md:gap-[30px] gap-[15px]">
+              <div className="flex flex-col items-center w-full ">
                 <div
-                  className="text-[#4D9138] text-[20px] md:text-[32px] md:pt-[30px]"
-                  style={{ fontFamily: "SF Pro Display EB" }}
-                >
-                  <div> Child's Learning Journey</div>
-                </div>
-                <div>
-                  <div
-                    className="md:text-[32px] text-xl flex flex-col gap-10"
-                    style={{
-                      fontFamily: "SF Pro Display M",
-                      lineHeight: "normal",
-                    }}
-                  >
-                    <div>
-                      Through the powerful Kindertown Parents mobile
-                      application, not only does it enhance the intimate
-                      relationship between parents and children, but it also
-                      makes it easy for parents to find outstanding
-                      kindergartens for their children, preparing them for
-                      future enrollment. Our system provides the simplest and
-                      most convenient registration process and payment methods.
-                    </div>
-                    <div>
-                      {" "}
-                      It also includes features such as connectivity with school
-                      CCTV, essential management features, and adorable widgets.
-                      This allows you to track every detail of your child's
-                      learning journey at anytime, anywhere, ensuring that no
-                      important information is missed out.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/*Content 6*/}
-            <div className="flex flex-wrap w-full md:gap-9 gap-[30px]">
-              <div>
-                <img src={Teachers} alt="Teacher" />
-              </div>
-              <div className="flex flex-col justify-center md:w-[864px] md:gap-[30px] gap-[15px]">
-                <div
-                  className="text-[#752912] md:text-[32px] text-[20px] md:pt-[30px]"
+                  className="text-center text-4xl md:text-[80px] text-[#7A5AF8] md:leading-[90px] leading-normal w-full"
                   style={{
-                    fontFamily: "SF Pro Display EB",
-                    lineHeight: "normal",
+                    fontFamily: "SF Pro Display B",
                   }}
                 >
-                  We understand the busyness of teachers
-                </div>
-                <div>
-                  <div
-                    className="md:text-[32px] text-[20px]  flex flex-col gap-10"
-                    style={{
-                      fontFamily: "SF Pro Display M",
-                      lineHeight: "normal",
-                    }}
-                  >
-                    <div>
-                      Kindertown Teacher strengthens the connection between
-                      children, parents, and teachers. Recognizing the challenge
-                      of guiding the learning process and organizing details for
-                      numerous children, we understand the need for a powerful
-                      and multifunctional system to manage children's
-                      educational progress.
-                    </div>
-                    <div>
-                      Kindertown Teacher effectively addresses this challenge,
-                      enabling teachers to conveniently record children's
-                      learning advancements and activities. In addition, the
-                      ‘Collection’ feature in the app allowing teachers to take
-                      photos and upload children's assignments or projects which
-                      facilitates parents in tracking the overall learning
-                      process of their children.
-                    </div>
+                  <div className="flex items-center justify-center">
+                    Essential tools.
+                  </div>
+                  <div className="flex items-center justify-center">
+                    Powerful system.
                   </div>
                 </div>
               </div>
             </div>
-            {/*Content 7*/}
-            <div className="flex flex-wrap w-full md:gap-9 gap-[30px]">
-              <div>
-                <img src={Slowmode} alt="SlowModes" />
-              </div>
-              <div className="flex flex-col justify-center w-full md:w-[864px] md:gap-[30px] gap-[15px]">
-                <div
-                  className="text-[#00A0CB] md:text-[32px] text-xl md:pt-[30px]"
-                  style={{ fontFamily: "SF Pro Display EB" }}
-                >
-                  Break free from traditional slow modes.
-                </div>
+            <div className="flex flex-col justify-center items-center md:gap-[150px] gap-[100px]">
+              {/*Content 5*/}
+              <div className="flex flex-wrap w-full md:gap-9 gap-[30px]">
                 <div>
+                  <img src={Family} alt="Family" />
+                </div>
+                <div className="flex flex-col justify-center w-full md:w-[864px] md:gap-[30px] gap-[15px]">
                   <div
-                    className="md:text-[32px] text-xl  flex flex-col gap-10"
+                    className="text-[#4D9138] text-[20px] md:text-[32px] md:pt-[30px]"
+                    style={{ fontFamily: "SF Pro Display EB" }}
+                  >
+                    <div> Child's Learning Journey</div>
+                  </div>
+                  <div>
+                    <div
+                      className="md:text-[32px] text-xl flex flex-col md:gap-10 gap-5"
+                      style={{
+                        fontFamily: "SF Pro Display M",
+                        lineHeight: "normal",
+                      }}
+                    >
+                      <div>
+                        Through the powerful Kindertown Parents mobile
+                        application, not only does it enhance the intimate
+                        relationship between parents and children, but it also
+                        makes it easy for parents to find outstanding
+                        kindergartens for their children, preparing them for
+                        future enrollment. Our system provides the simplest and
+                        most convenient registration process and payment
+                        methods.
+                      </div>
+                      <div>
+                        {" "}
+                        It also includes features such as connectivity with
+                        school CCTV, essential management features, and adorable
+                        widgets. This allows you to track every detail of your
+                        child's learning journey at anytime, anywhere, ensuring
+                        that no important information is missed out.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {/*Content 6*/}
+              <div className="flex flex-wrap w-full md:gap-9 gap-[30px]">
+                <div>
+                  <img src={Teachers} alt="Teacher" />
+                </div>
+                <div className="flex flex-col justify-center md:w-[864px] md:gap-[30px] gap-[15px]">
+                  <div
+                    className="text-[#752912] md:text-[32px] text-[20px] md:pt-[30px]"
                     style={{
-                      fontFamily: "SF Pro Display M",
+                      fontFamily: "SF Pro Display EB",
                       lineHeight: "normal",
                     }}
                   >
-                    <div>
-                      The Kindertown Admin plays a crucial role in the
-                      kindergarten management system, efficiently handling all
-                      user information and updates related to teachers, parents,
-                      and children. On the administrator's page, it effectively
-                      manages the complexity of powerful features such as
-                      handling student enrollment each year, recording payments,
-                      managing the onboarding of new teachers, and posting
-                      announcements.
+                    We understand the busyness of teachers
+                  </div>
+                  <div>
+                    <div
+                      className="md:text-[32px] text-[20px]  flex flex-col md:gap-10 gap-5"
+                      style={{
+                        fontFamily: "SF Pro Display M",
+                        lineHeight: "normal",
+                      }}
+                    >
+                      <div>
+                        Kindertown Teacher strengthens the connection between
+                        children, parents, and teachers. Recognizing the
+                        challenge of guiding the learning process and organizing
+                        details for numerous children, we understand the need
+                        for a powerful and multifunctional system to manage
+                        children's educational progress.
+                      </div>
+                      <div>
+                        Kindertown Teacher effectively addresses this challenge,
+                        enabling teachers to conveniently record children's
+                        learning advancements and activities. In addition, the
+                        ‘Collection’ feature in the app allowing teachers to
+                        take photos and upload children's assignments or
+                        projects which facilitates parents in tracking the
+                        overall learning process of their children.
+                      </div>
                     </div>
-                    <div>
-                      It enhances the visibility of the kindergarten, ensures
-                      adherence to safety protocols, and boosts parents'
-                      confidence. Most importantly, it significantly alleviates
-                      the burden of tedious and slow processing tasks that
-                      traditional mode kindergartens still face.
+                  </div>
+                </div>
+              </div>
+              {/*Content 7*/}
+              <div className="flex flex-wrap w-full md:gap-9 gap-[30px]">
+                <div>
+                  <img src={Slowmode} alt="SlowModes" />
+                </div>
+                <div className="flex flex-col justify-center w-full md:w-[864px] md:gap-[30px] gap-[15px]">
+                  <div
+                    className="text-[#00A0CB] md:text-[32px] text-xl md:pt-[30px]"
+                    style={{ fontFamily: "SF Pro Display EB" }}
+                  >
+                    Break free from traditional slow modes.
+                  </div>
+                  <div>
+                    <div
+                      className="md:text-[32px] text-xl  flex flex-col md:gap-10 gap-5"
+                      style={{
+                        fontFamily: "SF Pro Display M",
+                        lineHeight: "normal",
+                      }}
+                    >
+                      <div>
+                        The Kindertown Admin plays a crucial role in the
+                        kindergarten management system, efficiently handling all
+                        user information and updates related to teachers,
+                        parents, and children. On the administrator's page, it
+                        effectively manages the complexity of powerful features
+                        such as handling student enrollment each year, recording
+                        payments, managing the onboarding of new teachers, and
+                        posting announcements.
+                      </div>
+                      <div>
+                        It enhances the visibility of the kindergarten, ensures
+                        adherence to safety protocols, and boosts parents'
+                        confidence. Most importantly, it significantly
+                        alleviates the burden of tedious and slow processing
+                        tasks that traditional mode kindergartens still face.
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -520,6 +524,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+
       {/************LAMA PUNYE***********************/}
 
       {/*
@@ -847,7 +852,7 @@ const Home = () => {
                 className="md:w-32 md:h-32 w-full"
               />
             </div>
-            <div className="flex md:w-[466px] w-full items-center">
+            <div className="flex md:w-[466px] w-full justify-center items-center">
               <div
                 className="text-[#752A15] md:text-[80px] text-center text-4xl md:leading-[90px]"
                 style={{ fontFamily: "SF Pro Display B" }}
@@ -864,17 +869,17 @@ const Home = () => {
                 }}
               >
                 {/*Desktop*/}
-                <div className="hidden md:flex items-center justify-center ">
-                  Let's address the complex operations of the school to enhance
+                <div className="hidden md:flex ">
+                  <span className="inline-block w-[870px]">
+                    Let's address the complex operations of the school to
+                    enhance efficiency for both the school and teachers.
+                    Simultaneously, let's effectively enhance the school's
+                    reputation.
+                  </span>
                 </div>
-                <div className="hidden md:flex items-center justify-center">
-                  efficiency for both the school and teachers. Simultaneously,
-                </div>
-                <div className="hidden md:flex items-center justify-center">
-                  let's effectively enhance the school's reputation.
-                </div>
+
                 {/*Mobile*/}
-                <div className="md:hidden flex items-center justify-center w-full">
+                <div className="w-full md:hidden flex items-center justify-center ">
                   Let's address the complex operations of the school to enhance
                   efficiency for both the school and teachers. Simultaneously,
                   let's effectively enhance the school's reputation.
@@ -990,20 +995,13 @@ const Home = () => {
                   </div>
 
                   {/*Desktop*/}
-                  <div className="hidden md:flex items-center justify-center">
-                    Effectively enhance accountability for teachers regarding
-                    student
-                  </div>
-                  <div className="hidden md:flex items-center justify-center">
-                    attitudes and progress in learning. Additionally, it enables
-                    faster
-                  </div>
-                  <div className="hidden md:flex items-center justify-center">
-                    real-time synchronization of students' assignments and
-                    activities
-                  </div>
-                  <div className="hidden md:flex items-center justify-center">
-                    within the school.
+                  <div className="hidden md:flex flex-wrap justify-center">
+                    <span className="inline-block w-[900px]">
+                      Effectively enhance accountability for teachers regarding
+                      student attitudes and progress in learning. Additionally,
+                      it enables faster real-time synchronization of students'
+                      assignments and activities within the school.
+                    </span>
                   </div>
                 </div>
               </div>
