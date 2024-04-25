@@ -67,7 +67,7 @@ const ReferralProgrames = () => {
               {/*Content 3*/}
               <div className="w-full md:w-[800px] flex flex-col md:gap-[100px] gap-[50px]">
                 {/*Ttile*/}
-                <div className="w-full flex">
+                <div className="flex flex-col">
                   <div
                     className="md:text-[70px] text-[36px]"
                     style={{
@@ -85,7 +85,7 @@ const ReferralProgrames = () => {
                 {/*Box1*/}
                 <div>
                   <div className="relative w-full flex justify-center md:rounded-t-[47px] rounded-t-[20px] bg-[#C1FFB4]  pt-[51px] pb-[50px] md:py-[129px] md:px-[250px] px-[100px]">
-                    <img src={ic} alt="IdentificationCard" />
+                    <img src={ic} alt="IdentificationCard" className="w-full" />
                   </div>
                   <div className="relative w-full md:rounded-b-[47px] rounded-b-[20px] bg-[#6EDD58]  md:py-[80px] pt-[31px] pb-[30px] md:px-[75px] px-[15px]">
                     <div className="flex flex-col justify-center items-center md:gap-[30px] gap-5">
@@ -116,7 +116,7 @@ const ReferralProgrames = () => {
                 {/*Box2*/}
                 <div>
                   <div className="relative w-full flex justify-center md:rounded-t-[47px] rounded-t-[20px] bg-[#FFF6C5] pt-[44px] pb-[45px] md:py-[115px] px-[100px] md:px-[250px]">
-                    <img src={card} alt="Card" />
+                    <img src={card} alt="Card" className="w-full" />
                   </div>
                   <div className="relative w-full  md:rounded-b-[47px] rounded-b-[20px] bg-[#FFE55A]  pt-[30px] pb-[31px] md:py-[80px] md:px-[75px] px-[15px]">
                     <div className="flex flex-col justify-center items-center md:gap-[30px] gap-5">
@@ -186,7 +186,7 @@ const ReferralProgrames = () => {
                 {/*Box4*/}
                 <div>
                   <div className="relative w-full flex justify-center md:rounded-t-[47px] rounded-t-[20px] bg-[#BEC8FF]  md:py-[94px] md:px-[250px] px-[100px] pt-[35px] pb-9">
-                    <img src={subscribe} alt="Subscriber" />
+                    <img src={subscribe} alt="Subscriber" className="w-full" />
                   </div>
                   <div className="relative w-full md:rounded-b-[47px] rounded-b-[20px] bg-[#7188FF]  md:py-[80px] md:px-[75px] pt-[20px] pb-[21px] px-[15px]">
                     <div className="flex flex-col justify-center items-center md:gap-[30px] gap-5">

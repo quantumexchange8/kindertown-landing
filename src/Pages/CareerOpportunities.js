@@ -16,17 +16,15 @@ const CareerOpportunities = () => {
                 className="md:text-[70px] text-[32px]"
                 style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
               >
-                <div className="w-full flex flex-wrap">
-                  <div>
-                    We're not just{" "}
-                    <span className="text-[#4D9138]"> creating products</span>;
-                    at the same time, we're
-                    <span className="text-[#F67F00]">
-                      {" "}
-                      crafting an experience{" "}
-                    </span>
-                    for the people who use them.
-                  </div>
+                <div>
+                  We're not just
+                  <span className="text-[#4D9138]"> creating products</span>; at
+                  the same time, we're
+                  <span className="text-[#F67F00]">
+                    {" "}
+                    crafting an experience{" "}
+                  </span>
+                  for the people who use them.
                 </div>
               </div>
             </div>

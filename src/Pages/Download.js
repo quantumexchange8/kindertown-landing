@@ -99,7 +99,7 @@ const Download = () => {
               {/*Content 2*/}
               <div className="w-full flex flex-col md:gap-5 gap-[30px]">
                 <div className="w-full flex flex-wrap justify-center md:gap-5 gap-[30px] md:px-0 pl-[31px] pr-[32px]">
-                  <div className="relative md:w-[490px] md:h-[500px] h-[336px] w-full flex flex-col md:rounded-[30px] rounded-[20px] bg-[#FFDFA1] pt-[44px] md:pl-[52px] pl-[35px] pr-[28px] md:pr-[30px] md:gap-6 gap-[19px]">
+                  <div className="relative md:w-[490px] md:h-[500px] h-[336px] w-full flex flex-col md:rounded-[30px] rounded-[20px] bg-[#FFDFA1] md:pt-[44px] pt-[27px] md:pl-[52px] pl-[35px] pr-[28px] md:pr-[30px] md:gap-6 gap-[19px]">
                     <div className="flex flex-col items-end md:gap-5 gap-[9px]">
                       <div
                         className="md:text-[30px] text-base"
@@ -150,7 +150,7 @@ const Download = () => {
                       >
                         Kindertown Teacher
                       </div>
-                      <div className="w-full flex md:justify-between">
+                      <div className="w-full flex justify-between">
                         <div
                           className="text-base md:text-2xl text-[#FFF]"
                           style={{ fontFamily: "SF Pro Display M" }}
@@ -259,11 +259,11 @@ const Download = () => {
                   </div>*/}
                 </div>
                 <div className="w-full">
-                  <div className="relative w-full bg-[#2FC300] md:rounded-[30px] justify-between items-center flex md:gap-[100px] gap-6 py-[43px] md:pr-[98px] pr-[32px] md:pb-0  overflow-hidden">
+                  <div className="relative w-full bg-[#2FC300] md:rounded-[30px] justify-between items-center flex md:gap-[100px] gap-6 py-[43px] md:pt-[49px] md:pr-[98px] pr-[32px] md:pb-0  overflow-hidden">
                     <div className="w-2/3 md:w-[544px] relative md:top-[19px] md:right-5 right-4">
                       <img src={imac} alt="imac" className="w-full" />
                     </div>
-                    <div className="w-1/3 md:w-[256px] flex flex-col md:gap-5 gap-[10px]">
+                    <div className="w-[124px] md:w-[256px] flex flex-col md:gap-5 gap-[10px]">
                       <div className="flex flex-col">
                         <div
                           className="md:text-[30px] text-base"
@@ -292,10 +292,10 @@ const Download = () => {
                           <div>processes from now.</div>
                         </div>
                         <div className="md:hidden flex flex-col">
-                          <div>No more sluggish</div>
-                          <div>school enrollment </div>
-                          <div>processes from </div>
-                          <div>now.</div>
+                          <div>
+                            No more sluggish school enrollment processes from
+                            now.
+                          </div>
                         </div>
                       </div>
                       <div className="absolute md:bottom-[30px] md:right-[30px] bottom-[40px] right-[40px]">
@@ -391,7 +391,29 @@ const Download = () => {
             <div className="w-full flex flex-col md:px-0 pl-[19px] pr-[21px] gap-[100px] md:gap-[300px]">
               {/*Content 4 */}
               <div className="w-full flex flex-wrap justify-center items-center md:gap-5 gap-[7px]">
-                <div className="relative w-full md:h-[500px] h-[176px] md:rounded-[30px] rounded-[10px] bg-[#D5FFCD] flex gap-[29px] md:gap-[88px] md:pr-[112px] pr-[40px] md:pl-[100px] pl-[32px] md:pt-[100px] pt-[35px] overflow-hidden">
+                <div className="w-full relative h-[176px] md:h-[500px] md:rounded-[30px] rounded-[10px] bg-[#D5FFCD] flex gap-[29px] md:gap-[88px] md:pr-[112px] pr-[40px] md:pl-[100px] pl-[32px] md:pt-[100px] pt-[35px]">
+                  <div>
+                    {" "}
+                    <div
+                      className="md:text-[40px] text-base"
+                      style={{
+                        fontFamily: "SF Pro Display B",
+                        lineHeight: "normal",
+                      }}
+                    >
+                      No longer will it be troublesome to pay school fees
+                      through doorstep visits.
+                    </div>
+                  </div>
+                  <div className="relative overflow-hidden w-full">
+                    <img
+                      src={phone}
+                      alt="Mobile"
+                      className="absolute top-2 left-0 object-cover w-full"
+                    />
+                  </div>
+                </div>
+                {/* <div className="relative w-full md:h-[500px] h-[176px] md:rounded-[30px] rounded-[10px] bg-[#D5FFCD] flex gap-[29px] md:gap-[88px] md:pr-[112px] pr-[40px] md:pl-[100px] pl-[32px] md:pt-[100px] pt-[35px] overflow-hidden">
                   <div className="flex flex-col items-center md:w-[400px]">
                     <div
                       className="md:text-[40px] text-base"
@@ -407,7 +429,8 @@ const Download = () => {
                   <div className="flex flex-col justify-center md:w-[300px] w-full relative md:top-[100px] top-5">
                     <img src={phone} alt="Mobile" />
                   </div>
-                </div>
+                </div> */}
+
                 <div className="w-full flex justify-center items-center md:gap-5 gap-[7px]">
                   <div className="relative md:w-[490px] w-full h-[177px] md:h-[500px] md:rounded-[30px] rounded-[10px] bg-[#176200] flex flex-col md:px-[45px] px-[16px] md:pt-[66px] pt-[22px] pb-[31px] md:pb-[85px] md:gap-[51px] gap-[22px]">
                     <div className="flex flex-col justify-center items-center md:gap-[7px] gap-[3px]">

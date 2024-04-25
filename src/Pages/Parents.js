@@ -67,7 +67,7 @@ const Parent = () => {
                 </div>
               </div>
 
-              <div className="hidden md:flex flex-col justify-center items-center">
+              <div className="flex flex-col justify-center items-center">
                 <div
                   className="text-center md:text-[32px] text-xl"
                   style={{
@@ -76,25 +76,12 @@ const Parent = () => {
                   }}
                 >
                   {/*Desktop*/}
-                  <div className="hidden md:flex flex-wrap items-center justify-center ">
-                    <div>A powerful platform that allows you to seamlessly</div>
-                    <div>
-                      monitor your child's activities at any time, from
-                      anywhere.
-                    </div>
+                  <div className="flex flex-wrap items-center justify-center ">
+                    <span className="inline-block md:w-[785px]">
+                      A powerful platform that allows you to seamlessly monitor
+                      your child's activities at any time, from anywhere.
+                    </span>
                   </div>
-                </div>
-              </div>
-              <div className="md:hidden flex flex-col justify-center items-center">
-                <div
-                  className="text-center md:text-[32px] text-xl"
-                  style={{
-                    fontFamily: "SF Pro Display Semibold",
-                    lineHeight: "normal",
-                  }}
-                >
-                  A powerful platform that allows you to seamlessly monitor your
-                  child's activities at any time, from anywhere.
                 </div>
               </div>
             </div>

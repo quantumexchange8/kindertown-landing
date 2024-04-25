@@ -134,7 +134,7 @@ const Admin = () => {
           </div>
           {/*CONTENT 4*/}
           <div className="w-full flex flex-col justify-center md:gap-[100px] gap-[30px]">
-            <div className="flex flex-col justify-center items-center px-[12px] md:px-0">
+            <div className="flex flex-col justify-center items-center">
               <div
                 className="text-center md:text-[40px] text-xl"
                 style={{
@@ -168,7 +168,7 @@ const Admin = () => {
           </div>
           {/*CONTENT 5*/}
           <div className="w-full flex flex-col justify-center md:gap-[100px] gap-[30px]">
-            <div className="flex flex-col justify-center items-center px-[12px] md:px-0">
+            <div className="flex flex-col justify-center items-center">
               <div
                 className="text-center md:text-[40px] text-xl"
                 style={{
@@ -194,11 +194,7 @@ const Admin = () => {
               </div>
             </div>
             <div className="flex flex-col justify-center items-center">
-              <img
-                src={Macbook2}
-                alt="Macbook2"
-                className="md:w-[1000px] w-full"
-              />
+              <img src={Macbook2} alt="Macbook2" className="w-full" />
             </div>
           </div>
           {/*CONTENT 6*/}
@@ -210,22 +206,8 @@ const Admin = () => {
                   lineHeight: "normal",
                 }}
               >
-                {/*Desktop*/}
                 <div
-                  className="hidden md:flex flex-col items-center"
-                  style={{ fontFamily: "SF Pro Display Semibold" }}
-                >
-                  We firmly believe that schools, teachers, and parents highly
-                  value the learning progress and journey of students. Our
-                  Kindertown management system is precisely the tool to achieve
-                  this goal, all without altering the classroom structure or
-                  increasing additional burden to students admission. Single
-                  cost with double effect, our system remains a smart choice to
-                  support your most cherished priorities.
-                </div>
-                {/*Mobile*/}
-                <div
-                  className="md:hidden flex flex-col items-center"
+                  className="flex flex-col items-center"
                   style={{ fontFamily: "SF Pro Display Semibold" }}
                 >
                   We firmly believe that schools, teachers, and parents highly
@@ -239,43 +221,34 @@ const Admin = () => {
               </div>
             </div>
             <div className="flex flex-col justify-center items-center">
-              <img src={Ipad} alt="Macbook3" className="md:w-[768px]  w-full" />
+              <img src={Ipad} alt="Macbook3" />
             </div>
           </div>
         </div>
         {/*Content 7*/}
 
         <div className="w-full md:w-[1102px] flex flex-col justify-center items-center  md:gap-[100px] gap-[35px]">
-          <div className="w-full  flex flex-col justify-center items-center">
-            <div className="w-full flex flex-col justify-center items-center">
-              <div
-                className="md:text-[70px] text-[32px] text-center"
-                style={{
-                  fontFamily: "SF Pro Display B",
-                  lineHeight: "normal",
-                }}
-              >
-                {/*Desktop*/}
-                <div className="w-[793px] hidden md:flex flex-col items-center">
-                  <div className="flex justify-center items-center">
-                    All thoughtful features are designed for schools.
-                  </div>
-                </div>
-                {/*Mobile*/}
-                <div className="md:hidden flex flex-col items-center">
-                  <div className="flex justify-center items-center">
-                    All thoughtful
-                  </div>
-                  <div className="flex justify-center items-center">
-                    features are
-                  </div>
-                  <div className="flex justify-center items-center">
-                    designed for schools.
-                  </div>
-                </div>
+          <div className="w-full flex flex-col justify-center items-center">
+            <div
+              className="md:text-[70px] text-[32px] text-center"
+              style={{
+                fontFamily: "SF Pro Display B",
+                lineHeight: "normal",
+              }}
+            >
+              {/*Desktop*/}
+              <div className="w-[793px] hidden md:flex flex-col justify-center items-center">
+                All thoughtful features are designed for schools.
+              </div>
+              {/*Mobile*/}
+              <div className="md:hidden flex flex-col justify-center items-center">
+                <div> All thoughtful</div>
+                <div> features are</div>
+                <div> designed for schools.</div>
               </div>
             </div>
           </div>
+
           <div className="w-full flex flex-col justify-center items-center md:gap-[66px] gap-9">
             {/*row 1*/}
             <div className="w-full grid md:grid-cols-8 grid-cols-4 md:gap-y-0 gap-y-9">
@@ -295,12 +268,12 @@ const Admin = () => {
                   }}
                 >
                   <div className="hidden md:flex flex-col items-center">
-                    <div className="flex items-center">Admission</div>
-                    <div className="flex items-center">& Enrollment</div>
+                    <div>Admission</div>
+                    <div>& Enrollment</div>
                   </div>
                   <div className="md:hidden flex flex-col items-center">
-                    <div className="flex items-center">School</div>
-                    <div className="flex items-center">Enrollment</div>
+                    <div>School</div>
+                    <div>Enrollment</div>
                   </div>
                 </div>
               </div>
@@ -321,8 +294,8 @@ const Admin = () => {
                   }}
                 >
                   <div className="flex flex-col items-center">
-                    <div className="flex items-center">Student</div>
-                    <div className="flex items-center">database</div>
+                    <div>Student</div>
+                    <div>database</div>
                   </div>
                 </div>
               </div>
@@ -342,8 +315,8 @@ const Admin = () => {
                   }}
                 >
                   <div className="flex flex-col items-center">
-                    <div className="flex items-center">Statistic</div>
-                    <div className="flex items-center">dashboard</div>
+                    <div>Statistic</div>
+                    <div>dashboard</div>
                   </div>
                 </div>
               </div>
