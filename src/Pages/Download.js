@@ -526,7 +526,7 @@ const Download = () => {
                   </div>
                 </div>
                 <div className="w-full flex justify-center items-center md:gap-5 gap-[8px]">
-                  <div className="relative md:w-[490px] w-full h-[177px] md:h-[500px] md:rounded-[30px] rounded-[10px] bg-[#D5FFCD] flex flex-col md:px-[40px] px-[14px] md:pt-[62px] pt-[21px] md:pb-[61px] pb-[15px] md:gap-[50px] gap-[10px]">
+                  <div className="relative md:w-[490px] w-full h-[177px] md:h-[500px] md:rounded-[30px] rounded-[10px] bg-[#D5FFCD] flex flex-col justify-center md:px-[40px] px-[14px] md:pt-[62px] pt-[21px] md:pb-[61px] pb-[15px] md:gap-[50px] gap-[10px]">
                     <div className="flex flex-col justify-center items-center">
                       <img
                         src={chat}
@@ -760,7 +760,7 @@ const Download = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="relative w-full md:rounded-[30px] rounded-[10px] bg-[#FCBF4A] flex items-center md:pr-[122px] md:py-[75px] pt-[33px] pb-[31px] md:pl-[108px] pr-[43px] pl-[34px] md:gap-[54px] gap-[8px]">
+                  <div className="relative w-full md:rounded-[30px] rounded-[10px] bg-[#FCBF4A] flex justify-center items-center md:pr-[122px] md:py-[75px] pt-[33px] pb-[31px] md:pl-[108px] pr-[43px] pl-[34px] md:gap-[54px] gap-[8px]">
                     <div className="flex flex-col justify-center items-center md:w-[440px]">
                       <div
                         className="md:text-3xl text-[10px]"
@@ -899,21 +899,19 @@ const Download = () => {
                     className="hidden md:flex flex-col"
                     style={{ fontFamily: "SF Pro Display M" }}
                   >
-                    <div className="flex flex-col items-center">
-                      <span className="inline-block w-[980px]">
+                    <div className="flex flex-col justify-center items-center">
+                      <div>
                         At any moment, feel free to leave your contact
                         information without hesitation, and our attentive
                         service personnel will get in touch with you.
-                      </span>
-                      <span className="inline-block w-[580px]">
-                        Only through quality communication can we understand
-                        your needs.
-                      </span>
+                      </div>
+                      <div>Only through quality communication can</div>
+                      <div>we understand your needs.</div>
                     </div>
                   </div>
                   {/*Mobile*/}
                   <div
-                    className="md:hidden flex flex-col"
+                    className="md:hidden flex flex-col justify-center items-center"
                     style={{ fontFamily: "SF Pro Display Semibold" }}
                   >
                     At any moment, feel free to leave your contact information

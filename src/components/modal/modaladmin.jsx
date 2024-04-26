@@ -44,7 +44,7 @@ const ModalAdmin = ({ showModal3, setShowModal3 }) => {
                 </button>
               </div>
               {/*content*/}
-              <div className="border-0 md:rounded-[50px] relative flex flex-col w-full bg-white outline-none focus:outline-none md:pb-[100px] pb-[60px]">
+              <div className="border-0 md:rounded-[50px] relative flex flex-col w-full bg-white outline-none focus:outline-none">
                 {/* Video section */}
                 <div className="relative h-auto">
                   <video
@@ -68,7 +68,7 @@ const ModalAdmin = ({ showModal3, setShowModal3 }) => {
                   </div>
                 </div>
 
-                <div className="w-full md:max-w-[900px] flex flex-col justify-center items-center  md:px-0 pl-[31px] pr-[32px] md:pt-[100px] pt-[50px]">
+                <div className="w-full md:max-w-[900px] flex flex-col justify-center items-center  md:px-0 pl-[31px] pr-[32px] md:pt-[100px] pt-[50px]  md:pb-[100px] pb-[60px]">
                   <div className="w-full md:w-[700px]  flex flex-col">
                     <div className="w-full flex flex-col md:gap-[100px] gap-[50px]">
                       {/*Content 2*/}

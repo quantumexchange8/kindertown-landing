@@ -44,7 +44,7 @@ const ModalParent = ({ showModal1, setShowModal1 }) => {
                 </button>
               </div>
               {/*content*/}
-              <div className="border-0 md:rounded-[50px] shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none md:pb-[100px] pb-[60px]">
+              <div className="border-0 md:rounded-[50px] shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                 {/*video*/}
                 <div className="relative h-auto">
                   <video
@@ -68,7 +68,7 @@ const ModalParent = ({ showModal1, setShowModal1 }) => {
                   </div>
                 </div>
                 {/*Content1*/}
-                <div className="w-full md:w-[900px] flex flex-col justify-center items-center  md:pt-[100px] pt-[50px] md:px-0 pl-[31px] pr-8 md:gap-[200px] gap-[100px]">
+                <div className="w-full md:w-[900px] flex flex-col justify-center items-center  md:pt-[100px] pt-[50px] md:px-0 pl-[31px] pr-8 md:gap-[200px] gap-[100px]  md:pb-[100px] pb-[60px]">
                   <div className="w-full md:w-[700px] flex flex-col md:gap-[50px] gap-5">
                     <div
                       className="md:text-4xl text-[24px]"
@@ -344,8 +344,8 @@ const ModalParent = ({ showModal1, setShowModal1 }) => {
                             kindergarten in ‘Community’.
                           </li>
                           <li>
-                            Cute widgets and etc that can be purchased in{" "}
-                            <span>the app.</span>
+                            Cute widgets and etc that can be purchased in the
+                            app.
                           </li>
                         </ul>
                       </div>

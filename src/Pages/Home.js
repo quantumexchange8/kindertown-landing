@@ -33,7 +33,7 @@ const Home = () => {
               <div className="w-full flex flex-col justify-center gap-[150px]">
                 <div className="flex flex-col items-center w-full md:gap-[60px] gap-[30px]">
                   <div
-                    className="w-full md:max-w-[610px] text-4xl md:text-[80px] text-center md:leading-[90px]"
+                    className="w-full text-4xl md:text-[80px] text-center md:leading-[90px]"
                     style={{ fontFamily: "SF Pro Display B" }}
                   >
                     <div>Zero - Worries</div>
@@ -489,7 +489,7 @@ const Home = () => {
                     className="text-[#00A0CB] md:text-[32px] text-xl md:pt-[30px]"
                     style={{ fontFamily: "SF Pro Display EB" }}
                   >
-                    Break free from traditional slow modes.
+                    Break free from traditional slow modes
                   </div>
                   <div>
                     <div
