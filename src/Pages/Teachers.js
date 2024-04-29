@@ -29,11 +29,7 @@ const Teacher = () => {
                     lineHeight: "normal",
                   }}
                 >
-                  <div className="hidden md:flex"> Kindertown Teacher</div>
-                  <div className="md:hidden flex flex-col">
-                    <div>Kindertown</div>
-                    <div> Teacher</div>
-                  </div>
+                  <div> Kindertown Teacher</div>
                 </div>
               </div>
 

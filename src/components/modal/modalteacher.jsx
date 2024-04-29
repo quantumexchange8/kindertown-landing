@@ -76,11 +76,7 @@ const ModalTeacher = ({ showModal2, setShowModal2 }) => {
                         className="md:text-4xl text-2xl"
                         style={{ fontFamily: "SF Pro Display B" }}
                       >
-                        <div className="hidden md:flex flex-col">
-                          <div>The dynamics of children at school are </div>
-                          <div>observed and guided by teachers.</div>
-                        </div>
-                        <div className="md:hidden flex flex-col">
+                        <div className="flex flex-col">
                           The dynamics of children at school are observed and
                           guided by teachers.
                         </div>
