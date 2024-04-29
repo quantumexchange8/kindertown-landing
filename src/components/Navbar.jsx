@@ -177,10 +177,14 @@ const Navbar = () => {
             <div className="fixed inset-0 z-50">
               <div
                 className="bg-[#E8E8E8] bg-opacity-75 backdrop-blur-sm flex items-center justify-center min-h-screen"
-                onClick={handleCloseModal}
+                onClick={() => {
+                  handleCloseModal();
+                  setShowJoinUsSubmenu(false);
+                  setProduct(false);
+                }}
               >
                 <div
-                  className="bg-white fixed top-[40px] w-full flex flex-col gap-3 h-[212px] py-[30px] px-6"
+                  className="bg-white fixed justify-center top-[40px] w-full flex flex-col gap-3 h-[212px] py-[30px] px-6"
                   onClick={handleModalClick}
                 >
                   <div className="flex gap-[60px]">
