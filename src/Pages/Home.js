@@ -365,8 +365,8 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="w-full flex flex-col bg-[#FFF7EF] justify-center items-center md:px-0 px-5 ">
-          <div className="w-full md:max-w-[1000px] flex flex-col justify-center md:gap-[200px] gap-[100px] md:py-[150px] pt-[50px] pb-[100px]">
+        <div className="w-full flex flex-col bg-[#FFF7EF] justify-center items-center md:px-0 px-5 md:py-[150px] pt-[50px] pb-[100px]">
+          <div className="w-full md:max-w-[1000px] flex flex-col justify-center md:gap-[200px] gap-[100px] ">
             {/*Essential tools*/}
             <div className="w-full flex flex-col md:gap-[50px] gap-[30px]">
               <div className="flex flex-col justify-center items-center">
