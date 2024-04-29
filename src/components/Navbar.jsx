@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { GlobalIcon } from "./Icons/outline";
+import { useTranslation } from "react-i18next";
 import "../font.css";
 import logo from "../assets/logo.svg";
 import menu from "../assets/menu.svg";
-
+import i18n from "../i18n";
 const Navbar = () => {
+  const { t } = useTranslation();
   const location = useLocation();
   const [activeProductSubPage, setActiveProductSubPage] = useState("parent"); // Default active sub-page for Products section
   const [activeJoinUsSubPage, setActiveJoinUsSubPage] =
@@ -13,6 +15,11 @@ const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false); // State to manage the visibility of the menu
   const [showProduct, setProduct] = useState(false);
   const [showJoin, setShowJoinUsSubmenu] = useState(false);
+  const [isLanguageOpen, setIsLanguageOpen] = useState(false);
+
+  const toggleLanguageDropdown = () => {
+    setIsLanguageOpen(!isLanguageOpen);
+  };
 
   const toggleProductDropdown = () => {
     setProduct((prev) => !prev); //Toggle dropdown for submenu Product for mobile view
@@ -32,7 +39,7 @@ const Navbar = () => {
     base: "flex justify-center items-center text-[#FFF] bg-[#F67F00] rounded-[15px]",
     home: "w-[66px]",
     products: "w-[90px]",
-    joinUs: "w-20",
+    joinUs: "w-[86px]",
     download: "w-[100px]",
   };
 
@@ -117,9 +124,9 @@ const Navbar = () => {
                   ? `${linkStyles.base} ${linkStyles.home}`
                   : ""
               }`}
-              style={{ fontFamily: "SF Pro Medium" }}
+              style={{ fontFamily: "SF Pro Display M" }}
             >
-              Home
+              {t("home")}
             </Link>
             <Link
               to="/products/parent"
@@ -128,10 +135,10 @@ const Navbar = () => {
                   ? `${linkStyles.base} ${linkStyles.products}`
                   : ""
               }`}
-              style={{ fontFamily: "SF Pro Medium" }}
+              style={{ fontFamily: "SF Pro Display M" }}
               onClick={handleProductsClick}
             >
-              Products
+              {t("products")}
             </Link>
             <Link
               to="/join-us/referral-program"
@@ -140,10 +147,10 @@ const Navbar = () => {
                   ? `${linkStyles.base} ${linkStyles.joinUs}`
                   : ""
               }`}
-              style={{ fontFamily: "SF Pro Medium" }}
+              style={{ fontFamily: "SF Pro Display M" }}
               onClick={handleJoinUsClick}
             >
-              Join Us
+              {t("join-us")}
             </Link>
             <Link
               to="/download"
@@ -152,19 +159,80 @@ const Navbar = () => {
                   ? `${linkStyles.base} ${linkStyles.download}`
                   : ""
               }`}
-              style={{ fontFamily: "SF Pro Medium" }}
+              style={{ fontFamily: "SF Pro Display M" }}
             >
               Download
             </Link>
-            <div>
-              <GlobalIcon />
+            <div className="relative">
+              <button onClick={toggleLanguageDropdown}>
+                <GlobalIcon />
+              </button>
+              {isLanguageOpen && (
+                <div className="absolute top-full right-[5px] z-50 bg-[#fff7efe6] shadow-md">
+                  <div
+                    className="py-2 flex flex-col px-5 gap-4 items-start md:text-base"
+                    style={{ fontFamily: "SF Pro Display R" }}
+                  >
+                    <button
+                      className="hover:text-[#F67F00]"
+                      onClick={() => {
+                        i18n.changeLanguage("en");
+                        window.location.reload();
+                      }}
+                    >
+                      English
+                    </button>
+                    <button
+                      className="hover:text-[#F67F00]"
+                      onClick={() => {
+                        i18n.changeLanguage("ms");
+                        window.location.reload();
+                      }}
+                    >
+                      Malay
+                    </button>
+                    <button className="hover:text-[#F67F00]">中文</button>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
+
           {/* mobile*/}
           <div className="flex md:hidden items-center">
             <div className="flex gap-[30px] items-center">
-              <div>
-                <GlobalIcon />
+              <div className="relative">
+                <button onClick={toggleLanguageDropdown}>
+                  <GlobalIcon />
+                </button>
+                {isLanguageOpen && (
+                  <div className="absolute top-full right-[5px] z-50 bg-[#fff7ef] shadow-md">
+                    <div
+                      className="py-2 flex flex-col px-5 gap-4 items-start md:text-base"
+                      style={{ fontFamily: "SF Pro Display R" }}
+                    >
+                      <button
+                        className="hover:text-[#F67F00]"
+                        onClick={() => {
+                          i18n.changeLanguage("en");
+                          window.location.reload();
+                        }}
+                      >
+                        English
+                      </button>
+                      <button
+                        className="hover:text-[#F67F00]"
+                        onClick={() => {
+                          i18n.changeLanguage("ms");
+                          window.location.reload();
+                        }}
+                      >
+                        Malay
+                      </button>
+                      <button className="hover:text-[#F67F00]">中文</button>
+                    </div>
+                  </div>
+                )}
               </div>
               <div className="w-[26px]">
                 <button onClick={() => setShowMenu(!showMenu)}>
@@ -203,7 +271,7 @@ const Navbar = () => {
                             setProduct(false);
                           }}
                         >
-                          Home
+                          {t("home")}
                         </Link>
                       </div>
 
@@ -222,7 +290,7 @@ const Navbar = () => {
                             setShowJoinUsSubmenu(false);
                           }}
                         >
-                          Products
+                          {t("products")}
                         </button>
                       </div>
 
@@ -240,7 +308,7 @@ const Navbar = () => {
                             setProduct(false);
                           }}
                         >
-                          Join Us
+                          {t("join-us")}
                         </button>
                       </div>
                       <div className="text-[20px]">
@@ -328,7 +396,8 @@ const Navbar = () => {
                               }`}
                               style={{ fontFamily: "SF Pro Display M" }}
                             >
-                              Referral Program
+                              {" "}
+                              {t("referral-program")}
                             </Link>
                           </div>
                           <div>
@@ -342,7 +411,7 @@ const Navbar = () => {
                               }`}
                               style={{ fontFamily: "SF Pro Display M" }}
                             >
-                              Career Opportunities
+                              {t("career-opportunity")}
                             </Link>
                           </div>
                         </div>
@@ -357,6 +426,7 @@ const Navbar = () => {
       </div>
 
       {/* web/desktop*/}
+
       {location.pathname.includes("/products") && (
         <div className="bg-[#ffffffe6] hidden w-full md:flex justify-center h-[50px]">
           <div className="max-w-[1000px] w-full flex items-end justify-end gap-[26px] border-b border-[#DDD]">
@@ -413,7 +483,7 @@ const Navbar = () => {
               style={{ fontFamily: "SF Pro Medium" }}
               onClick={() => setActiveJoinUsSubPage("referral-program")}
             >
-              Referral Program
+              {t("referral-program")}
             </Link>
             <Link
               to="/join-us/career-opportunities"
@@ -425,7 +495,7 @@ const Navbar = () => {
               style={{ fontFamily: "SF Pro Medium" }}
               onClick={() => setActiveJoinUsSubPage("career-opportunities")}
             >
-              Career Opportunities
+              {t("career-opportunity")}
             </Link>
           </div>
         </div>

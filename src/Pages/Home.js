@@ -17,7 +17,9 @@ import Admin from "../assets/home/admin.png";
 import Teacher2 from "../assets/home/teachers2.png";
 import Parent from "../assets/home/parent.png";
 import Main from "../assets/home/main.png";
+import { useTranslation } from "react-i18next";
 const Home = () => {
+  const { t, i18n } = useTranslation();
   return (
     <>
       <div className="w-full flex flex-col justify-center items-center md:pt-[100px] pt-[80px] md:gap-[150px] gap-[100px]">
@@ -36,8 +38,8 @@ const Home = () => {
                     className="w-full text-4xl md:text-[80px] text-center md:leading-[90px]"
                     style={{ fontFamily: "SF Pro Display B" }}
                   >
-                    <div>Zero - Worries</div>
-                    <div> Zero - Hassle</div>
+                    <div>{t("zero-worry")}</div>
+                    <div> {t("zero-hassle")}</div>
                   </div>
                   <div
                     className="w-full text-center md:text-[32px] text-xl"
@@ -46,11 +48,8 @@ const Home = () => {
                       lineHeight: "normal",
                     }}
                   >
-                    A child's learning world begins in the classroom, using
-                    tools that are flexible, easy to operate, prioritise
-                    privacy, accessibility, and sustainability. Parents will
-                    have a better understanding of their child's journey in
-                    kindergarten because of our products.
+                    {t("main-text")}
+
                     {/* <div className="" ></div>
                 <div className="text-[32px]" style={{ fontFamily: "SF Pro Display M" }}></div>
                 <div className="text-[32px]" style={{ fontFamily: "SF Pro Display M" }}></div>
@@ -66,10 +65,10 @@ const Home = () => {
                 className="text-center w-[175px] md:w-[496px] md:text-3xl text-xl"
                 style={{ fontFamily: "SF Pro Display B" }}
               >
-                Kindertown’s app super highlight
+                {t("app-highlight")}
               </div>
               <div className="w-full flex flex-wrap md:gap-7 gap-[30px]">
-                <div className="w-full md:w-[315px] md:h-[460px] rounded-[30px] pt-[47px] pb-12 md:py-[70px] px-[25px] md:pl-[27px] md:pr-[18px] bg-[#F67F00] flex flex-col justify-center items-center gap-[50px] md:gap-[60px]">
+                <div className="w-full md:w-[315px] rounded-[30px] pt-[47px] pb-12 md:py-[70px] px-[25px] md:pl-[27px] md:pr-[18px] bg-[#F67F00] flex flex-col justify-center items-center gap-[50px] md:gap-[60px]">
                   <div>
                     <img
                       src={Planner}
@@ -87,11 +86,17 @@ const Home = () => {
                       }}
                     >
                       <div className="flex items-center justify-center h-6">
-                        Say goodbye to
+                        {t("say-goodbye")}
                       </div>
                       <div className="flex items-center justify-center h-6">
-                        enrolment worries
+                        {t("say-goodbye2")}
                       </div>
+
+                      {i18n.language === "ms" && (
+                        <div className="flex items-center justify-center h-6">
+                          {t("say-goodbye3")}
+                        </div>
+                      )}
                     </div>
                     {/*web*/}
                     <div className="hidden md:flex flex-col text-center text-[20px]">
@@ -102,19 +107,19 @@ const Home = () => {
                           lineHeight: "normal",
                         }}
                       >
-                        You can now secure
+                        {t("now-secure")}
                       </div>
                       <div
                         className="flex items-center justify-center h-[25px]"
                         style={{ fontFamily: "SF Pro Display M" }}
                       >
-                        a seat in your preferred
+                        {t("now-secure2")}
                       </div>
                       <div
                         className="flex items-center justify-center h-[25px]"
                         style={{ fontFamily: "SF Pro Display M" }}
                       >
-                        kindergarten in Kindertown.
+                        {t("now-secure3")}
                       </div>
                     </div>
                     {/*Mobile*/}
@@ -143,7 +148,7 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-                <div className="w-full md:w-[315px] md:h-[460px] rounded-[30px] py-[44px] md:py-[70px] md:pl-[22px] md:pr-[23px] px-[25px] bg-[#FFC19F]  flex flex-col justify-center items-center gap-[50px] md:gap-[60px]">
+                <div className="w-full md:w-[315px] rounded-[30px] py-[44px] md:py-[70px] md:pl-[22px] md:pr-[23px] px-[25px] bg-[#FFC19F]  flex flex-col justify-center items-center gap-[50px] md:gap-[60px]">
                   <div>
                     <img
                       src={Child}
@@ -158,36 +163,40 @@ const Home = () => {
                       style={{ fontFamily: "SF Pro Display B" }}
                     >
                       <div className="flex items-center justify-center h-6">
-                        Know what your
+                        {t("know-ur-kid")}
                       </div>
                       <div className="flex items-center justify-center h-6">
-                        kids up to in school
+                        {t("know-ur-kid2")}
                       </div>
+                      {i18n.language === "ms" && (
+                        <div className="flex items-center justify-center h-6">
+                          {t("know-ur-kid3")}
+                        </div>
+                      )}
                     </div>
 
-                    <div className="text-center text-[20px] leading-normal">
-                      <div
-                        className="flex items-center justify-center h-[25px]"
-                        style={{ fontFamily: "SF Pro Display M" }}
-                      >
-                        Stay informed about your
+                    <div
+                      className="text-center text-xl leading-normal"
+                      style={{ fontFamily: "SF Pro Display M" }}
+                    >
+                      <div className="flex items-center justify-center h-[25px]">
+                        {t("stay-inform")}
                       </div>
-                      <div
-                        className="flex items-center justify-center h-[25px]"
-                        style={{ fontFamily: "SF Pro Display M" }}
-                      >
-                        kids’ academic status,
+                      <div className="flex items-center justify-center h-[25px]">
+                        {t("stay-inform2")}
                       </div>
-                      <div
-                        className="flex items-center justify-center h-[25px]"
-                        style={{ fontFamily: "SF Pro Display M" }}
-                      >
-                        performance and more.
+                      <div className="flex items-center justify-center h-[25px]">
+                        {t("stay-inform3")}
                       </div>
+                      {i18n.language === "ms" && (
+                        <div className="flex items-center justify-center h-[25px]">
+                          {t("stay-inform4")}
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
-                <div className="w-full md:w-[314px] md:h-[460px] rounded-[30px] py-[60px] md:pt-[70px] md:pb-[93px] px-[25px] md:px-[21px] bg-[#FCBF4A]  flex flex-col justify-center items-center gap-[50px] md:gap-[60px]">
+                <div className="w-full md:w-[314px] rounded-[30px] py-[60px] md:pt-[70px] md:pb-[93px] px-[25px] md:px-[21px] bg-[#FCBF4A]  flex flex-col justify-center items-center gap-[50px] md:gap-[60px]">
                   <div>
                     <img
                       src={Playground}
@@ -202,30 +211,31 @@ const Home = () => {
                       style={{ fontFamily: "SF Pro Display B" }}
                     >
                       <div className="flex items-center justify-center h-6">
-                        Never miss a school
+                        {t("miss-school-act")}
                       </div>
                       <div className="flex items-center justify-center h-6">
-                        event or class activity
+                        {t("miss-school-act2")}
                       </div>
+                      {i18n.language === "ms" && (
+                        <div className="flex items-center justify-center h-6">
+                          {t("miss-school-act3")}
+                        </div>
+                      )}
                     </div>
 
-                    <div className="text-center text-[20px] leading-normal">
-                      <div
-                        className="h-[25px]"
-                        style={{ fontFamily: "SF Pro Display M" }}
-                      >
-                        Stay in the loop with all the
-                      </div>
-                      <div
-                        className="h-[25px]"
-                        style={{ fontFamily: "SF Pro Display M" }}
-                      >
-                        latest happenings in school.
-                      </div>
+                    <div
+                      className="text-center text-[20px] leading-normal"
+                      style={{ fontFamily: "SF Pro Display M" }}
+                    >
+                      <div className="h-[25px]">{t("latest-happening")}</div>
+                      <div className="h-[25px]">{t("latest-happening2")}</div>
+                      {i18n.language === "ms" && (
+                        <div className="h-[25px]">{t("latest-happening3")}</div>
+                      )}
                     </div>
                   </div>
                 </div>
-                <div className="w-full md:w-[315px] md:h-[460px] rounded-[30px] bg-[#FDE0A4] px-[25px] md:pl-[27px] md:pr-[18px] pt-[47px] pb-12 md:py-[70px] flex flex-col justify-center items-center gap-[50px] md:gap-[60px]">
+                <div className="w-full md:w-[315px] rounded-[30px] bg-[#FDE0A4] px-[25px] md:pl-[27px] md:pr-[18px] pt-[47px] pb-12 md:py-[70px] flex flex-col justify-center items-center gap-[50px] md:gap-[60px]">
                   <div>
                     <img
                       src={Computer}
@@ -240,10 +250,10 @@ const Home = () => {
                       style={{ fontFamily: "SF Pro Display B" }}
                     >
                       <div className="flex items-center justify-center h-6">
-                        Pay your school
+                        {t("pay-fees")}
                       </div>
                       <div className="flex items-center justify-center h-6">
-                        fees with ease
+                        {t("pay-fees2")}
                       </div>
                     </div>
 
@@ -252,26 +262,26 @@ const Home = () => {
                         className="flex items-center justify-center h-[25px]"
                         style={{ fontFamily: "SF Pro Display M" }}
                       >
-                        Make your school fee
+                        {t("school-fee")}
                       </div>
 
                       <div
                         className="flex items-center justify-center h-[25px]"
                         style={{ fontFamily: "SF Pro Display M" }}
                       >
-                        payments instantly with
+                        {t("school-fee2")}
                       </div>
                       <div
                         className="flex items-center justify-center h-[25px]"
                         style={{ fontFamily: "SF Pro Display M" }}
                       >
-                        only a few clicks.
+                        {t("school-fee3")}
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <div className="w-full md:w-[315px] md:h-[460px] rounded-[30px]  bg-[#E0956C] flex flex-col justify-center items-center md:gap-[60px] gap-[50px] md:py-[70px] md:pl-[27px] md:pr-[18px] pt-[47px] pb-[48px] px-[25px]">
+                <div className="w-full md:w-[315px] rounded-[30px]  bg-[#E0956C] flex flex-col justify-center items-center md:gap-[60px] gap-[50px] md:py-[70px] md:pl-[27px] md:pr-[18px] pt-[47px] pb-[48px] px-[25px]">
                   <div>
                     <img
                       src={Pencil}
@@ -286,11 +296,16 @@ const Home = () => {
                       style={{ fontFamily: "SF Pro Display B" }}
                     >
                       <div className="flex items-center justify-center h-6">
-                        Marketplace that
+                        {t("market-convenience")}
                       </div>
                       <div className="flex items-center justify-center h-6">
-                        brings convenience
+                        {t("market-convenience2")}
                       </div>
+                      {i18n.language === "ms" && (
+                        <div className="flex items-center justify-center h-6">
+                          {t("market-convenience3")}
+                        </div>
+                      )}
                     </div>
 
                     <div className="text-center text-xl leading-normal">
@@ -298,26 +313,26 @@ const Home = () => {
                         className="flex items-center justify-center h-[25px]"
                         style={{ fontFamily: "SF Pro Display M" }}
                       >
-                        Supplying resources that
+                        {t("supply-resource1")}
                       </div>
 
                       <div
                         className="flex items-center justify-center h-[25px]"
                         style={{ fontFamily: "SF Pro Display M" }}
                       >
-                        cater to your child's needs
+                        {t("supply-resource2")}
                       </div>
                       <div
                         className="flex items-center justify-center h-[25px]"
                         style={{ fontFamily: "SF Pro Display M" }}
                       >
-                        at any moment.
+                        {t("supply-resource3")}
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <div className="w-full md:w-[314px] md:h-[460px] rounded-[30px]  bg-[#FFDDB9] flex flex-col justify-center items-center gap-[50px] md:gap-[60px] px-[25px] md:px-[22px] md:py-[70px] pt-[38px] pb-[39px]">
+                <div className="w-full md:w-[314px] rounded-[30px]  bg-[#FFDDB9] flex flex-col justify-center items-center gap-[50px] md:gap-[60px] px-[25px] md:px-[22px] md:py-[70px] pt-[38px] pb-[39px]">
                   <div>
                     <img
                       src={Tel}

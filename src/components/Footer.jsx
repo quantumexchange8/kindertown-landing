@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import i18n from "../i18n";
 import { Link } from "react-router-dom";
 import logo from "../assets/footer/logo.svg";
 import wsp from "../assets/footer/wsp-01.svg";
@@ -13,12 +13,14 @@ import ios from "../assets/footer/apple.svg";
 import ct from "../assets/footer/ct.svg";
 import Privacy from "../components/modal/privacymodal";
 import Terms from "../components/modal/termsmodal";
+import { useTranslation } from "react-i18next";
 const Footer = () => {
   const [PrivacyOpen, setPrivacyOpen] = useState(false);
   const [TermsOpen, setTermsOpen] = useState(false);
   const handleLinkClick = (url) => {
     window.location.href = url;
   };
+  const { t } = useTranslation();
 
   return (
     <footer>
@@ -39,8 +41,25 @@ const Footer = () => {
               <div className="w-full flex flex-wrap justify-between">
                 <div className="flex flex-col md:gap-[25px]">
                   <div className="flex md:gap-[30px] md:text-2xl font-semibold">
-                    <div>English</div>
-                    <div>Malay</div>
+                    <button
+                      className="hover:text-[#F67F00]"
+                      onClick={() => {
+                        i18n.changeLanguage("en");
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }}
+                    >
+                      English
+                    </button>
+                    <button
+                      className="hover:text-[#F67F00]"
+                      onClick={() => {
+                        i18n.changeLanguage("ms");
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }}
+                    >
+                      Malay
+                    </button>
+
                     <div>中文</div>
                   </div>
                   <div
@@ -61,7 +80,7 @@ const Footer = () => {
                           to="/join-us/referral-program"
                           className="hover:text-[#F67F00]"
                         >
-                          Referral Program
+                          {t("referral-program")}
                         </Link>
                       </div>
                     </div>
@@ -79,7 +98,7 @@ const Footer = () => {
                           to="/join-us/career-opportunities"
                           className="hover:text-[#F67F00]"
                         >
-                          Career Opportunities
+                          {t("career-opportunity")}
                         </Link>
                       </div>
                     </div>
@@ -106,7 +125,7 @@ const Footer = () => {
                       className="md:text-2xl text-right"
                       style={{ fontFamily: "SF Pro Display Semibold" }}
                     >
-                      Stay connect with us:
+                      {t("stay-connect")}
                     </div>
                     <div className="flex justify-end gap-[10px]">
                       <div className="flex flex-col">
@@ -158,7 +177,7 @@ const Footer = () => {
                       className="text-2xl text-right"
                       style={{ fontFamily: "SF Pro Display Semibold" }}
                     >
-                      Discover our applications:
+                      {t("discover-app")}
                     </div>
                     <div className="flex justify-end gap-3">
                       <img src={ios} alt="IOS" />
@@ -243,13 +262,13 @@ const Footer = () => {
                 to="/join-us/referral-program"
                 className="hover:text-[#F67F00]"
               >
-                Referral Program
+                {t("referral-program")}
               </Link>
               <Link
                 to="/join-us/career-opportunities"
                 className="hover:text-[#F67F00]"
               >
-                Career Opportunities
+                {t("career-opportunity")}
               </Link>
               <Link to="/download" className="hover:text-[#F67F00]">
                 Download
@@ -261,7 +280,7 @@ const Footer = () => {
                   className="text-2xl"
                   style={{ fontFamily: "SF Pro Display Semibold" }}
                 >
-                  Stay connect with us:
+                  {t("stay-connect")}
                 </div>
                 <div className="flex justify-end gap-[10px]">
                   <div className="flex flex-col">
