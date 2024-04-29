@@ -199,7 +199,7 @@ const Teacher = () => {
             <div className="w-full flex flex-col md:px-0 items-center">
               <div className="w-full md:w-[1000px] flex flex-col justify-center items-center">
                 <div className="flex flex-col justify-center items-center">
-                  <div className="relative flex flex-col md:w-[400px] w-[167px] rounded-[16px] md:rounded-[50px] bg-gradient-to-t from-[#ADADAD] to-[#F9F9F9] md:pt-[53px] pt-[27px] md:pb-[61px] pb-[22px] md:pl-[34px] md:pr-[33px] px-[14px] md:gap-[59px] gap-[27px]">
+                  <div className="relative flex flex-col justify-center md:w-[400px] w-[167px] rounded-[16px] md:rounded-[50px] bg-gradient-to-t from-[#ADADAD] to-[#F9F9F9] md:pt-[53px] pt-[27px] md:pb-[61px] pb-[22px] md:pl-[34px] md:pr-[33px] px-[14px] md:gap-[59px] gap-[27px]">
                     <div className="flex flex-col justify-center items-center">
                       <img
                         src={CTLogo}
