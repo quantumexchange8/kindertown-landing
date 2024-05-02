@@ -20,6 +20,36 @@ import Main from "../assets/home/main.png";
 import { useTranslation } from "react-i18next";
 const Home = () => {
   const { t, i18n } = useTranslation();
+  const getLocaleGap = () => {
+    switch (i18n.language) {
+      case "en":
+        return "gap-[30px] md:gap-5";
+      case "ms":
+        return "md:gap-[45px]";
+      default:
+        return "gap-[50px] md:gap-[60px]";
+    }
+  };
+  const getDocumentJourneyWidth = () => {
+    switch (i18n.language) {
+      case "en":
+        return "md:w-[460px] w-[150px]";
+      case "ms":
+        return "md:w-[495px] w-[160px]";
+      default:
+        return "md:w-[460px] w-[150px]";
+    }
+  };
+  const TeacherDescWidth = () => {
+    switch (i18n.language) {
+      case "en":
+        return "w-[900px]";
+      case "ms":
+        return " w-[990px]";
+      default:
+        return "w-[900px]";
+    }
+  };
   return (
     <>
       <div className="w-full flex flex-col justify-center items-center md:pt-[100px] pt-[80px] md:gap-[150px] gap-[100px]">
@@ -244,7 +274,9 @@ const Home = () => {
                     />
                   </div>
 
-                  <div className="flex flex-col items-center md:gap-5 gap-[30px] w-[270px] md:h-full">
+                  <div
+                    className={`flex flex-col items-center  w-[270px] md:h-full ${getLocaleGap()}`}
+                  >
                     <div
                       className="text-center text-xl leading-normal w-full"
                       style={{ fontFamily: "SF Pro Display B" }}
@@ -340,16 +372,18 @@ const Home = () => {
                       className="md:h-[120px] md:w-[126px]"
                     />
                   </div>
-                  <div className="flex flex-col items-center gap-[30px] md:gap-5 w-[270px] md:h-full">
+                  <div
+                    className={`flex flex-col items-center md:gap-5 w-[270px] md:h-full ${getLocaleGap()}`}
+                  >
                     <div
                       className="text-center text-xl leading-normal w-full"
                       style={{ fontFamily: "SF Pro Display B" }}
                     >
                       <div className="flex items-center justify-center h-6">
-                        Discover countless
+                        {t("countless-feature")}
                       </div>
                       <div className="flex items-center justify-center h-6">
-                        powerful features
+                        {t("countless-feature2")}
                       </div>
                     </div>
 
@@ -358,20 +392,20 @@ const Home = () => {
                         className="flex items-center justify-center h-[25px]"
                         style={{ fontFamily: "SF Pro Display M" }}
                       >
-                        Super-strong interaction
+                        {t("interaction-teacher")}
                       </div>
 
                       <div
                         className="flex items-center justify-center h-[25px]"
                         style={{ fontFamily: "SF Pro Display M" }}
                       >
-                        function between teachers,
+                        {t("interaction-teacher2")}
                       </div>
                       <div
                         className="flex items-center justify-center h-[25px]"
                         style={{ fontFamily: "SF Pro Display M" }}
                       >
-                        students and parents.
+                        {t("interaction-teacher3")}
                       </div>
                     </div>
                   </div>
@@ -399,10 +433,10 @@ const Home = () => {
                   }}
                 >
                   <div className="flex items-center justify-center">
-                    Essential tools.
+                    {t("essential-tool")}
                   </div>
                   <div className="flex items-center justify-center">
-                    Powerful system.
+                    {t("powerful-system")}
                   </div>
                 </div>
               </div>
@@ -418,7 +452,7 @@ const Home = () => {
                     className="text-[#4D9138] text-[20px] md:text-[32px] md:pt-[30px]"
                     style={{ fontFamily: "SF Pro Display EB" }}
                   >
-                    <div> Child's Learning Journey</div>
+                    <div> {t("learn-journey")}</div>
                   </div>
                   <div>
                     <div
@@ -428,24 +462,8 @@ const Home = () => {
                         lineHeight: "normal",
                       }}
                     >
-                      <div>
-                        Through the powerful Kindertown Parents mobile
-                        application, not only does it enhance the intimate
-                        relationship between parents and children, but it also
-                        makes it easy for parents to find outstanding
-                        kindergartens for their children, preparing them for
-                        future enrollment. Our system provides the simplest and
-                        most convenient registration process and payment
-                        methods.
-                      </div>
-                      <div>
-                        {" "}
-                        It also includes features such as connectivity with
-                        school CCTV, essential management features, and adorable
-                        widgets. This allows you to track every detail of your
-                        child's learning journey at anytime, anywhere, ensuring
-                        that no important information is missed out.
-                      </div>
+                      <div>{t("learn-journey-desc")}</div>
+                      <div>{t("learn-journey-desc2")}</div>
                     </div>
                   </div>
                 </div>
@@ -463,7 +481,7 @@ const Home = () => {
                       lineHeight: "normal",
                     }}
                   >
-                    We understand the busyness of teachers
+                    {t("busy-teacher")}
                   </div>
                   <div>
                     <div
@@ -473,23 +491,8 @@ const Home = () => {
                         lineHeight: "normal",
                       }}
                     >
-                      <div>
-                        Kindertown Teacher strengthens the connection between
-                        children, parents, and teachers. Recognizing the
-                        challenge of guiding the learning process and organizing
-                        details for numerous children, we understand the need
-                        for a powerful and multifunctional system to manage
-                        children's educational progress.
-                      </div>
-                      <div>
-                        Kindertown Teacher effectively addresses this challenge,
-                        enabling teachers to conveniently record children's
-                        learning advancements and activities. In addition, the
-                        ‘Collection’ feature in the app allowing teachers to
-                        take photos and upload children's assignments or
-                        projects which facilitates parents in tracking the
-                        overall learning process of their children.
-                      </div>
+                      <div>{t("busy-teacher-desc")}</div>
+                      <div>{t("busy-teacher-desc2")}</div>
                     </div>
                   </div>
                 </div>
@@ -504,7 +507,7 @@ const Home = () => {
                     className="text-[#00A0CB] md:text-[32px] text-xl md:pt-[30px]"
                     style={{ fontFamily: "SF Pro Display EB" }}
                   >
-                    Break free from traditional slow modes
+                    {t("slow-mode")}
                   </div>
                   <div>
                     <div
@@ -514,23 +517,8 @@ const Home = () => {
                         lineHeight: "normal",
                       }}
                     >
-                      <div>
-                        The Kindertown Admin plays a crucial role in the
-                        kindergarten management system, efficiently handling all
-                        user information and updates related to teachers,
-                        parents, and children. On the administrator's page, it
-                        effectively manages the complexity of powerful features
-                        such as handling student enrollment each year, recording
-                        payments, managing the onboarding of new teachers, and
-                        posting announcements.
-                      </div>
-                      <div>
-                        It enhances the visibility of the kindergarten, ensures
-                        adherence to safety protocols, and boosts parents'
-                        confidence. Most importantly, it significantly
-                        alleviates the burden of tedious and slow processing
-                        tasks that traditional mode kindergartens still face.
-                      </div>
+                      <div>{t("slow-mode-desc")}</div>
+                      <div>{t("slow-mode-desc2")}</div>
                     </div>
                   </div>
                 </div>
@@ -846,11 +834,13 @@ const Home = () => {
 
           <div className="absolute md:left-24 md:top-24 left-5 top-[21px] flex items-center">
             <div
-              className="md:text-[40px] text-base md:w-[460px] w-[149px]"
-              style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
+              className={`md:text-[40px] text-base  ${getDocumentJourneyWidth()}`}
+              style={{
+                fontFamily: "SF Pro Display B",
+                lineHeight: "normal",
+              }}
             >
-              Documenting the child's learning and joyful journey in
-              kindergarten.
+              {t("document-journey")}
             </div>
           </div>
         </div>
@@ -867,12 +857,12 @@ const Home = () => {
                 className="md:w-32 md:h-32 w-full"
               />
             </div>
-            <div className="flex md:w-[466px] w-full justify-center items-center">
+            <div className="flex md:w-[690px] w-full justify-center items-center">
               <div
                 className="text-[#752A15] md:text-[80px] text-center text-4xl md:leading-[90px]"
                 style={{ fontFamily: "SF Pro Display B" }}
               >
-                Why choose Kindertown?
+                {t("choose-KT")}
               </div>
             </div>
             <div className="flex items-center">
@@ -884,20 +874,16 @@ const Home = () => {
                 }}
               >
                 {/*Desktop*/}
-                <div className="hidden md:flex ">
-                  <span className="inline-block w-[870px]">
-                    Let's address the complex operations of the school to
-                    enhance efficiency for both the school and teachers.
-                    Simultaneously, let's effectively enhance the school's
-                    reputation.
-                  </span>
+                <div className="hidden md:flex flex-col justify-center items-center">
+                  <div> {t("choose-desc")}</div>
+                  <div> {t("choose-desc2")}</div>
+                  <div> {t("choose-desc3")}</div>
+                  {i18n.language === "ms" && <div> {t("choose-desc4")}</div>}
                 </div>
 
                 {/*Mobile*/}
                 <div className="w-full md:hidden flex items-center justify-center ">
-                  Let's address the complex operations of the school to enhance
-                  efficiency for both the school and teachers. Simultaneously,
-                  let's effectively enhance the school's reputation.
+                  {t("choose-desc")}
                 </div>
               </div>
             </div>
@@ -917,7 +903,7 @@ const Home = () => {
                 className="md:text-[50px] text-[32px]"
                 style={{ fontFamily: "SF Pro Display B" }}
               >
-                School Owners
+                {t("school-owner")}
               </div>
 
               <div className="flex items-center">
@@ -929,10 +915,7 @@ const Home = () => {
                   }}
                 >
                   <div className="flex items-center justify-center ">
-                    We will comprehensively understand the school and ensure
-                    reputation and quality control. Supervise the operational
-                    aspects of the school and improve communication between
-                    teachers and staff.
+                    {t("school-owner-desc")}
                   </div>
                 </div>
               </div>
@@ -949,29 +932,39 @@ const Home = () => {
                 className="md:w-[600px] md:h-[388px]"
               />
             </div>
-            <div className="flex flex-col justify-center items-center md:gap-[30px] gap-4">
+            <div className="w-full flex flex-col justify-center items-center md:gap-[30px] gap-4">
               <div
                 className="md:text-[50px] text-[32px]"
                 style={{ fontFamily: "SF Pro Display B" }}
               >
-                Administrators
+                {t("administrator")}
               </div>
 
-              <div className="flex items-center">
-                <div
-                  className="md:text-[32px] text-base text-center"
-                  style={{
-                    fontFamily: "SF Pro Display M",
-                    lineHeight: "normal",
-                  }}
-                >
-                  <div className="flex items-center justify-center ">
-                    An advanced management system with technological records,
-                    significantly enhancing efficiency and saving time and money
-                    in administrative tasks. It also addresses the sluggish
-                    procedural issues often found intraditional school settings.
+              <div
+                className="w-full flex flex-col items-center md:text-[32px] text-base text-center"
+                style={{
+                  fontFamily: "SF Pro Display M",
+                  lineHeight: "normal",
+                }}
+              >
+                {i18n.language === "ms" && (
+                  <div className=" md:flex hidden flex-col items-center justify-center">
+                    <div> {t("admin-desc1")}</div>
+                    <div> {t("admin-desc2")}</div>
+                    <div> {t("admin-desc3")}</div>
+                    <div> {t("admin-desc4")}</div>
                   </div>
-                </div>
+                )}
+                {i18n.language === "ms" && (
+                  <div className="md:hidden flex items-center justify-center">
+                    {t("admin-desc")}
+                  </div>
+                )}
+                {i18n.language === "en" && (
+                  <div className="flex items-center justify-center">
+                    {t("admin-desc")}
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -990,7 +983,7 @@ const Home = () => {
                 className="md:text-[50px] text-[32px]"
                 style={{ fontFamily: "SF Pro Display B" }}
               >
-                Teachers
+                {t("teacher")}
               </div>
 
               <div className="flex items-center">
@@ -1003,19 +996,13 @@ const Home = () => {
                 >
                   {/*Mobile*/}
                   <div className="md:hidden flex items-center justify-center text-center">
-                    Effectively enhance accountability for teachers regarding
-                    student attitudes and progress in learning. Additionally, it
-                    enables faster real-time synchronization of students'
-                    assignments and activities within the school.
+                    {t("teacher-desc")}
                   </div>
 
                   {/*Desktop*/}
-                  <div className="hidden md:flex flex-wrap justify-center">
-                    <span className="inline-block w-[900px]">
-                      Effectively enhance accountability for teachers regarding
-                      student attitudes and progress in learning. Additionally,
-                      it enables faster real-time synchronization of students'
-                      assignments and activities within the school.
+                  <div className="hidden md:flex flex-wrap justify-center items-center">
+                    <span className={`inline-block ${TeacherDescWidth()}`}>
+                      {t("teacher-desc")}
                     </span>
                   </div>
                 </div>
@@ -1036,7 +1023,7 @@ const Home = () => {
                 className="md:text-[50px] text-[32px]"
                 style={{ fontFamily: "SF Pro Display B" }}
               >
-                Parents
+                {t("parent")}
               </div>
 
               <div className="flex items-center">
@@ -1049,21 +1036,11 @@ const Home = () => {
                 >
                   {/*Mobile*/}
                   <div className="md:hidden flex items-center justify-center">
-                    Stay informed in real-time about your child's learning
-                    progress, school activities, announcements, temperature
-                    records, kindergarten check-ins, important updates, and
-                    convenient tuition payment options. This system allows
-                    parents to engage more humanely and effectively with
-                    school-related matters.
+                    {t("parent-desc")}
                   </div>
                   {/*Desktop*/}
                   <div className="hidden md:flex items-center justify-center ">
-                    Stay informed in real-time about your child's learning
-                    progress, school activities, announcements, temperature
-                    records, kindergarten check-ins, important updates, and
-                    convenient tuition payment options. This system allows
-                    parents to engage more humanely and effectively with
-                    school-related matters.
+                    {t("parent-desc")}
                   </div>
                 </div>
               </div>

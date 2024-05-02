@@ -6,10 +6,11 @@ import Tab2 from "../assets/teacher/tab2.png";
 import Tab3 from "../assets/teacher/tab3.png";
 import Tab4 from "../assets/teacher/tab4.png";
 import Tab5 from "../assets/teacher/tab5.png";
-
 import CTLogo from "../assets/admin/ct-logo.svg";
 import Header from "../assets/teacher/header.png";
+import { useTranslation } from "react-i18next";
 const Teacher = () => {
+  const { t } = useTranslation();
   return (
     <>
       <div className="w-full flex flex-col justify-center items-center md:pt-[150px] pt-[80px] md:gap-[100px] gap-[50px] md:pb-[200px] pb-[100px]">
@@ -41,9 +42,7 @@ const Teacher = () => {
                     lineHeight: "normal",
                   }}
                 >
-                  Moving away from traditional manual handling of school affairs
-                  and transitioning into a technological system which allows
-                  school staff to easily address the daily intricacies.
+                  {t("KT-teacher-desc")}
                 </div>
               </div>
               <div className="md:hidden flex flex-col justify-center items-center">
@@ -54,9 +53,7 @@ const Teacher = () => {
                     lineHeight: "normal",
                   }}
                 >
-                  Moving away from traditional manual handling of school affairs
-                  and transitioning into a technological system which allows
-                  school staff to easily address the daily intricacies.
+                  {t("KT-teacher-desc")}
                 </div>
               </div>
             </div>
@@ -77,10 +74,7 @@ const Teacher = () => {
                     lineHeight: "normal",
                   }}
                 >
-                  Everyone approaches tasks in different ways. We're dedicated
-                  to technological innovation - transforming thinking,
-                  challenging limitations, and assisting educators in creating
-                  the best possible experiences for both teachers and parents.
+                  {t("diff-ways")}
                 </div>
               </div>
             </div>
@@ -102,11 +96,7 @@ const Teacher = () => {
                   }}
                 >
                   <div className="flex flex-col justify-center items-center">
-                    We excel at solving the challenges of student check-in,
-                    check-out, temperature monitoring, and attendance tracking.
-                    Say goodbye to tedious manual processes and welcome seamless
-                    efficiency, allowing educators to focus on what matters
-                    most.
+                    {t("solve-challenge")}
                   </div>
                 </div>
               </div>
@@ -128,12 +118,7 @@ const Teacher = () => {
                     lineHeight: "normal",
                   }}
                 >
-                  <div className="flex flex-col">
-                    Our system fully harnesses the power of technology, by
-                    saving teachers valuable time. Whether it's students'
-                    assignments, learning capabilities, or their behavior, we
-                    seamlessly integrate into every important aspect.
-                  </div>
+                  <div className="flex flex-col">{t("harness-power")}</div>
                 </div>
               </div>
             </div>
@@ -154,15 +139,7 @@ const Teacher = () => {
                     lineHeight: "normal",
                   }}
                 >
-                  <div className="flex flex-col">
-                    We take pride in offering a solution that perfectly
-                    addresses the busy task of educators such as recording
-                    student assignment grades, tracking grades across different
-                    subjects, and assessing student skills. Moreover, through
-                    seamless synchronisation with the Kindertown Parents App,
-                    parents can monitor their child's learning progress in
-                    real-time.
-                  </div>
+                  <div className="flex flex-col">{t("take-pride")}</div>
                 </div>
               </div>
             </div>
@@ -183,14 +160,8 @@ const Teacher = () => {
                     lineHeight: "normal",
                   }}
                 >
-                  <div className="flex flex-col">
-                    The powerful Kindertown Community, where parents and
-                    educators come together to share in the joyous journey of
-                    student learning. Witness the naivety and happiness of
-                    children's learning experiences while gaining deeper
-                    insights into your child's development. It's a platform that
-                    fosters collaboration, celebrates milestones, and brings
-                    families closer together.
+                  <div className="flex flex-col text-center">
+                    {t("kingdom-community")}
                   </div>
                 </div>
               </div>

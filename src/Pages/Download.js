@@ -35,7 +35,9 @@ import open from "../assets/download/open.svg";
 import user from "../assets/download/user.svg";
 import icon from "../assets/download/Mask group.png";
 import tele from "../assets/download/tele.svg";
+import { useTranslation } from "react-i18next";
 const Download = () => {
+  const { t, i18n } = useTranslation();
   const [showModal1, setShowModal1] = useState(false);
   const [showModal2, setShowModal2] = useState(false);
   const [showModal3, setShowModal3] = useState(false);
@@ -72,6 +74,50 @@ const Download = () => {
         }
       );
   };
+
+  const tapFinger = () => {
+    switch (i18n.language) {
+      case "en":
+        return "md:w-[292px]";
+      case "ms":
+        return "md:w-[339px]";
+      default:
+        return "md:w-[292px]";
+    }
+  };
+
+  const tapFingerGap = () => {
+    switch (i18n.language) {
+      case "en":
+        return "md:gap-20 gap-[19px]";
+      case "ms":
+        return "md:gap-[33px] gap-[19px]";
+      default:
+        return "md:gap-20 gap-[19px]";
+    }
+  };
+
+  const CaptureVideo = () => {
+    switch (i18n.language) {
+      case "en":
+        return "md:w-[300px]";
+      case "ms":
+        return "md:w-[380px]";
+      default:
+        return "md:w-[300px]";
+    }
+  };
+
+  const widthAdminModal = () => {
+    switch (i18n.language) {
+      case "en":
+        return "md:w-[256px] w-[124px]";
+      case "ms":
+        return "md:w-[280px] w-[124px]";
+      default:
+        return "md:w-[256px] w-[124px]";
+    }
+  };
   return (
     <>
       <div className="w-full flex flex-wrap justify-center md:pt-[150px] pt-[80px] md:gap-[200px] gap-[50px] md:pb-[200px]">
@@ -90,9 +136,7 @@ const Download = () => {
               >
                 <div className=" flex flex-col items-center">
                   <span className="inline-block md:max-w-[950px] w-full">
-                    You can download our Kindertown management system anytime
-                    from the Apple AppStore and Google PlayStore. Let's turn our
-                    ideas into reality together.
+                    {t("dw-KT-app")}
                   </span>
                 </div>
               </div>
@@ -111,8 +155,8 @@ const Download = () => {
                         className="md:text-2xl text-base text-[#666] text-right"
                         style={{ fontFamily: "SF Pro Display M" }}
                       >
-                        <div>Understanding the child's</div>
-                        <div> learning journey.</div>
+                        <div>{t("understand-child")}</div>
+                        <div> {t("learning-journey")}</div>
                       </div>
                     </div>
                     <div className="flex overflow-hidden justify-between">
@@ -155,8 +199,8 @@ const Download = () => {
                           className="text-base md:text-2xl text-[#FFF]"
                           style={{ fontFamily: "SF Pro Display M" }}
                         >
-                          <div> Escape the busyness,</div>
-                          <div> save valuable time.</div>
+                          <div> {t("escape-busy")}</div>
+                          <div> {t("valuable-time")}</div>
                         </div>
                         <div className="flex">
                           <button onClick={() => setShowModal2(true)}>
@@ -263,7 +307,9 @@ const Download = () => {
                     <div className="w-2/3 md:w-[544px] relative md:top-[19px] md:right-5 right-4">
                       <img src={imac} alt="imac" className="w-full" />
                     </div>
-                    <div className="w-[124px] md:w-[256px] flex flex-col md:gap-5 gap-[10px]">
+                    <div
+                      className={`flex flex-col md:gap-5 gap-[10px] ${widthAdminModal()}`}
+                    >
                       <div className="flex flex-col">
                         <div
                           className="md:text-[30px] text-base"
@@ -287,9 +333,9 @@ const Download = () => {
                         }}
                       >
                         <div className="hidden md:flex flex-col">
-                          <div>No more sluggish</div>
-                          <div>school enrollment </div>
-                          <div>processes from now.</div>
+                          <div>{t("no-sluggish")}</div>
+                          <div>{t("school-enroll")}</div>
+                          <div>{t("process-now")}</div>
                         </div>
                         <div className="md:hidden flex flex-col">
                           <div>
@@ -377,14 +423,7 @@ const Download = () => {
                 className="md:text-4xl text-base md:leading-[50px] leading-normal"
                 style={{ fontFamily: "SF Pro Display B" }}
               >
-                We are dedicated to working with developers to transform their
-                most outstanding ideas into applications that can revolutionize
-                traditional kindergarten practices. That's why we are always
-                striving to find more efficient ways to alleviate the busy
-                workload of teachers and schools. More importantly, we aim to
-                empower parents to understand their child's kindergarten journey
-                through a powerful system, rather than just through
-                conversation.
+                {t("dedicated-work")}
               </div>
             </div>
 
@@ -401,8 +440,7 @@ const Download = () => {
                         lineHeight: "normal",
                       }}
                     >
-                      No longer will it be troublesome to pay school fees
-                      through doorstep visits.
+                      {t("no-troublesome")}
                     </div>
                   </div>
                   <div className="relative overflow-hidden w-full">
@@ -490,13 +528,12 @@ const Download = () => {
                         }}
                       >
                         <div className="hidden md:flex flex-col">
-                          <div>Thoughtful widgets can also</div>
-                          <div> help children cultivate</div>
-                          <div>good habits.</div>
+                          <div>{t("thoughtful-widget")}</div>
+                          <div> {t("children-cultivate")}</div>
+                          <div>{t("good-habit")}</div>
                         </div>
                         <div className="md:hidden flex flex-col">
-                          Thoughtful widgets can also help children
-                          cultivategood habits.
+                          {t("thoughtful-widget-mobile")}
                         </div>
                       </div>
                     </div>
@@ -511,8 +548,7 @@ const Download = () => {
                         }}
                       >
                         <div className="flex flex-col">
-                          You can easily find the stationery children need on
-                          the marketplace.
+                          {t("find-stationary")}
                         </div>
                       </div>
                     </div>
@@ -543,9 +579,7 @@ const Download = () => {
                         }}
                       >
                         <div className="flex flex-col">
-                          In community, schools, teachers, and parents will
-                          share the delightful moments of children's growth
-                          together.
+                          {t("share-delightmoment")}
                         </div>
                       </div>
                     </div>
@@ -560,7 +594,9 @@ const Download = () => {
                       <source src={video} type="video/mp4" />
                       Your browser does not support the video tag.
                     </video>
-                    <div className="absolute md:bottom-11 bottom-[14px] md:right-9 right-[14px] flex md:w-[300px] md:h-[100px] w-[106px]">
+                    <div
+                      className={`absolute md:bottom-11 bottom-[14px] md:right-9 right-[14px] flex md:h-[100px] w-[106px] ${CaptureVideo()}`}
+                    >
                       <div className="flex flex-col">
                         <div
                           className="md:text-[30px] text-[10px] text-right "
@@ -569,8 +605,7 @@ const Download = () => {
                             lineHeight: "normal",
                           }}
                         >
-                          Capture the moments of childlike innocence and earnest
-                          learning.
+                          {t("capture-moment")}
                         </div>
                       </div>
                     </div>
@@ -588,14 +623,21 @@ const Download = () => {
                 >
                   <div className="hidden md:flex flex-col">
                     <div>
-                      More&nbsp;
-                      <span className="text-[#FF5F5F]"> intelligent&nbsp;</span>
-                      experiences
+                      {t("more")}&nbsp;
+                      <span className="text-[#FF5F5F]">
+                        {" "}
+                        {t("intelligent")}&nbsp;
+                      </span>
+                      {i18n.language === "en" && (
+                        <span> {t("experiences")} </span>
+                      )}
                     </div>
                     <div>
-                      with&nbsp;
-                      <span className="text-[#F67F00]">Kindertown</span>
-                      &nbsp;system
+                      {t("with")}&nbsp;
+                      <span className="text-[#F67F00]">{t("Kindertown")}</span>
+                      {i18n.language === "en" && (
+                        <span>&nbsp;{t("system")}</span>
+                      )}
                     </div>
                   </div>
                   <div className="md:hidden flex flex-wrap justify-center items-center">
@@ -607,6 +649,7 @@ const Download = () => {
                   </div>
                 </div>
 
+                {/*Coding lama*/}
                 <div className="w-full flex flex-wrap justify-center items-center md:gap-5 gap-2">
                   <div className="relative w-full md:w-[1000px] md:h-[500px] md:rounded-[30px] rounded-[10px] bg-[#7F5FFF] flex items-center md:gap-20 gap-[19px] md:pr-[29px] md:pb-[58px] py-[20px] md:pt-[57px] md:pl-[99px] pl-[27px] pr-[10px]">
                     <div className="flex flex-col w-[292px] h-[180px] justify-center items-center">
@@ -614,8 +657,7 @@ const Download = () => {
                         className="md:text-3xl text-xs text-white"
                         style={{ fontFamily: "SF Pro Display B" }}
                       >
-                        With just a tap of their fingertips, teachers can tackle
-                        the majority of their ongoing busyness.
+                        {t("tap-finger")}
                       </div>
                     </div>
                     <div className="flex flex-col">
@@ -693,6 +735,99 @@ const Download = () => {
                             We also place great importance on students' health
                             conditions.
                           </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {/*Coding lama*/}
+                <div className="w-full md:w-[1000px] flex flex-wrap justify-center items-center  md:gap-5 gap-2">
+                  <div
+                    className={`relative w-full  md:rounded-[30px] rounded-[10px] bg-[#7F5FFF] flex items-center md:pr-[29px] md:pb-[58px] py-[20px] md:pt-[57px] md:pl-[99px] pl-[27px] pr-[10px] ${tapFingerGap()}`}
+                  >
+                    <div
+                      className={`flex flex-col h-[180px] justify-center items-center ${tapFinger()}`}
+                    >
+                      <div
+                        className="md:text-3xl text-xs text-white"
+                        style={{ fontFamily: "SF Pro Display B" }}
+                      >
+                        {t("tap-finger")}
+                      </div>
+                    </div>
+                    <div className="flex flex-col">
+                      <img src={tab2} alt="Tablet2" />
+                    </div>
+                  </div>
+                  <div className="relative w-full h-[177px] md:h-[500px] md:rounded-[30px]">
+                    <video
+                      className="absolute inset-0 w-full h-full object-cover md:rounded-[30px] rounded-[10px]"
+                      autoPlay
+                      loop
+                      muted
+                    >
+                      <source src={video2} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                    <div className="absolute md:bottom-11 md:right-9 right-5 bottom-5 flex items-center">
+                      <div className="flex flex-col md:w-[326px] md:h-[170px] w-[141px]">
+                        <div
+                          className="md:text-[30px] text-xs text-right text-white"
+                          style={{
+                            fontFamily: "SF Pro Display B",
+                            lineHeight: "normal",
+                          }}
+                        >
+                          {t("era-intelligent")}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="w-full flex justify-center items-center md:gap-5 gap-[7px]">
+                    <div className="w-full relative md:rounded-[30px] rounded-[10px] bg-[#582DFF] flex flex-col justify-center items-center md:gap-[90px] gap-[21px] md:pb-[113px] pb-[21px] md:pt-[54px] pt-[19px] md:px-[35px] px-[18px]">
+                      <div>
+                        <img
+                          src={calendar}
+                          alt="Calendar"
+                          className="md:h-[182px] h-[64px]"
+                        />
+                      </div>
+                      <div
+                        className="md:text-3xl text-xs text-white text-center"
+                        style={{ fontFamily: "SF Pro Display B" }}
+                      >
+                        <div className="hidden md:flex justify-center items-center">
+                          An easier arrangement for classroom schedules.
+                        </div>
+                        <div className=" md:hidden flex flex-col justify-center items-center">
+                          <div>An easier</div>
+                          <div> arrangement</div>
+                          <div>for classroom</div>
+                          <div> schedules.</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="relative w-full md:rounded-[30px] rounded-[10px] bg-[#7F5FFF] flex flex-col justify-center items-center md:gap-[69px] gap-5 md:pb-[93px] pb-[22px] md:pt-[54px] pt-[19px] md:px-[35px] px-[21px]">
+                      <div>
+                        <img
+                          src={suhu}
+                          alt="Thermometer"
+                          className="md:h-[182px] h-[64px]"
+                        />
+                      </div>
+                      <div
+                        className="md:text-3xl text-xs text-center"
+                        style={{ fontFamily: "SF Pro Display B" }}
+                      >
+                        <div className="hidden md:flex justify-center items-center">
+                          We also place great importance on students' health
+                          conditions.
+                        </div>
+                        <div className="md:hidden flex flex-col justify-center items-center">
+                          <div>We also place great</div>
+                          <div>importance on</div>
+                          <div> students' health</div>
+                          <div>conditions.</div>
                         </div>
                       </div>
                     </div>

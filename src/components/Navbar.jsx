@@ -39,17 +39,19 @@ const Navbar = () => {
     base: "flex justify-center items-center text-[#FFF] bg-[#F67F00] rounded-[15px]",
     home: "w-[66px]",
     products: "w-[90px]",
-    joinUs: "w-[86px]",
+    joinUs: "w-[100px]",
     download: "w-[100px]",
   };
 
   //Css for menu for mobile version
   const linkStylesmobile = {
-    base: "flex justify-center items-center text-[#FFF] bg-[#F67F00] rounded-[15px]",
+    base: " text-[#FFF] bg-[#F67F00] rounded-[15px]",
+
+    /*   base: "flex justify-center items-center text-[#FFF] bg-[#F67F00] rounded-[15px]",
     home: "w-[76px]",
     products: "w-[107px]",
-    joinUs: "w-[91px]",
-    download: "w-[116px]",
+    joinUs: "w-[105px]",
+    download: "w-[116px]", */
   };
 
   //Css for submenu for web version
@@ -107,7 +109,7 @@ const Navbar = () => {
   const handleModalClick = (e) => {
     e.stopPropagation(); // Stop propagation to prevent backdrop click from firing
   };
-
+  const [isHovered, setIsHovered] = useState(false);
   return (
     <div className="w-full flex flex-col fixed top-0  z-40 justify-center items-center">
       <div className="bg-[#fff7efe6] w-full flex justify-center h-[50px] px-5 md:px-0">
@@ -122,8 +124,8 @@ const Navbar = () => {
               className={`${
                 location.pathname === "/"
                   ? `${linkStyles.base} ${linkStyles.home}`
-                  : ""
-              }`}
+                  : " hover:text-[#F67F00]"
+              } `}
               style={{ fontFamily: "SF Pro Display M" }}
             >
               {t("home")}
@@ -133,8 +135,8 @@ const Navbar = () => {
               className={`${
                 location.pathname.includes("/products")
                   ? `${linkStyles.base} ${linkStyles.products}`
-                  : ""
-              }`}
+                  : " hover:text-[#F67F00]"
+              } `}
               style={{ fontFamily: "SF Pro Display M" }}
               onClick={handleProductsClick}
             >
@@ -145,8 +147,8 @@ const Navbar = () => {
               className={`${
                 location.pathname.includes("/join-us")
                   ? `${linkStyles.base} ${linkStyles.joinUs}`
-                  : ""
-              }`}
+                  : " hover:text-[#F67F00]"
+              } `}
               style={{ fontFamily: "SF Pro Display M" }}
               onClick={handleJoinUsClick}
             >
@@ -157,15 +159,23 @@ const Navbar = () => {
               className={`${
                 location.pathname === "/download"
                   ? `${linkStyles.base} ${linkStyles.download}`
-                  : ""
-              }`}
+                  : " hover:text-[#F67F00]"
+              } `}
               style={{ fontFamily: "SF Pro Display M" }}
             >
-              Download
+              {t("download")}
             </Link>
             <div className="relative">
               <button onClick={toggleLanguageDropdown}>
-                <GlobalIcon />
+                <div
+                  className={`transition duration-300 ease-in-out transform ${
+                    isHovered ? "hover:scale-110 opacity-90" : ""
+                  }`}
+                  onMouseEnter={() => setIsHovered(true)}
+                  onMouseLeave={() => setIsHovered(false)}
+                >
+                  <GlobalIcon />
+                </div>
               </button>
               {isLanguageOpen && (
                 <div className="absolute top-full right-[5px] z-50 bg-[#fff7efe6] shadow-md">
@@ -252,17 +262,17 @@ const Navbar = () => {
                 }}
               >
                 <div
-                  className="bg-white fixed justify-center top-[40px] w-full flex flex-col gap-3 h-[212px] py-[30px] px-6"
+                  className="bg-white fixed justify-center top-[40px] w-full flex flex-col  h-[212px] py-[30px] px-5"
                   onClick={handleModalClick}
                 >
-                  <div className="flex gap-[60px]">
-                    <div className="flex flex-col  justify-between h-[140px] text-left">
+                  <div className="h-full flex gap-[50px]">
+                    <div className="w-[114px] flex flex-col justify-between text-left">
                       <div className="text-[20px]">
                         <Link
                           to="/"
                           className={`${
                             location.pathname === "/"
-                              ? `${linkStylesmobile.home} ${linkStylesmobile.base}`
+                              ? ` ${linkStylesmobile.base}`
                               : ""
                           } px-2`}
                           style={{ fontFamily: "SF Pro Display M" }}
@@ -274,15 +284,13 @@ const Navbar = () => {
                           {t("home")}
                         </Link>
                       </div>
-
                       <div className="text-[20px]">
-                        {/* Products link */}
                         <button
                           className={`${
                             location.pathname.includes("/products")
-                              ? `${linkStylesmobile.products} ${linkStylesmobile.base}`
+                              ? ` ${linkStylesmobile.base}`
                               : ""
-                          } px-2`}
+                          } px-2 `}
                           style={{ fontFamily: "SF Pro Display M" }}
                           onClick={() => {
                             toggleProductDropdown();
@@ -293,15 +301,13 @@ const Navbar = () => {
                           {t("products")}
                         </button>
                       </div>
-
                       <div className="text-[20px]">
-                        {/* Join Us link */}
                         <button
                           className={`${
                             location.pathname.includes("/join-us")
-                              ? `${linkStylesmobile.joinUs} ${linkStylesmobile.base}`
+                              ? ` ${linkStylesmobile.base}`
                               : ""
-                          } px-2`}
+                          } px-2 `}
                           style={{ fontFamily: "SF Pro Display M" }}
                           onClick={() => {
                             toggleJoinUsDropdown();
@@ -312,14 +318,13 @@ const Navbar = () => {
                         </button>
                       </div>
                       <div className="text-[20px]">
-                        {/* Download link */}
                         <Link
                           to="/download"
                           className={`${
                             location.pathname === "/download"
-                              ? `${linkStylesmobile.download} ${linkStylesmobile.base}`
+                              ? ` ${linkStylesmobile.base}`
                               : ""
-                          } px-2`}
+                          } px-2 `}
                           style={{ fontFamily: "SF Pro Display M" }}
                           onClick={() => {
                             setProduct(false);
@@ -327,22 +332,20 @@ const Navbar = () => {
                             setShowJoinUsSubmenu(false);
                           }}
                         >
-                          Download
+                          {t("download")}
                         </Link>
-                        {/* Global icon */}
                       </div>
                     </div>
                     {showProduct && (
-                      <div className="flex gap-5">
+                      <div className="flex gap-4">
                         <div className="border-r border-gray-300 h-full"></div>
-                        <div className="flex flex-col h-[100px] justify-between">
+                        <div className="flex flex-col gap-5">
                           <div>
-                            {" "}
                             <Link
                               to="/products/parent"
                               className={`${
                                 location.pathname === "/products"
-                                  ? `${linkStylesmobile.base} ${linkStylesmobile.products}`
+                                  ? `${linkStylesmobile.base}`
                                   : ""
                               }`}
                               style={{ fontFamily: "SF Pro Display M" }}
@@ -351,12 +354,11 @@ const Navbar = () => {
                             </Link>
                           </div>
                           <div>
-                            {" "}
                             <Link
                               to="/products/teacher"
                               className={`${
                                 location.pathname === "/products"
-                                  ? `${linkStylesmobile.base} ${linkStylesmobile.products}`
+                                  ? `${linkStylesmobile.base}`
                                   : ""
                               }`}
                               style={{ fontFamily: "SF Pro Display M" }}
@@ -365,12 +367,11 @@ const Navbar = () => {
                             </Link>
                           </div>
                           <div>
-                            {" "}
                             <Link
                               to="/products/admin"
                               className={`${
                                 location.pathname === "/products"
-                                  ? `${linkStylesmobile.base} ${linkStylesmobile.products}`
+                                  ? `${linkStylesmobile.base}`
                                   : ""
                               }`}
                               style={{ fontFamily: "SF Pro Display M" }}
@@ -381,32 +382,30 @@ const Navbar = () => {
                         </div>
                       </div>
                     )}
+
                     {showJoin && (
-                      <div className="flex gap-5">
+                      <div className="flex gap-4">
                         <div className="border-r border-gray-300 h-full"></div>
-                        <div className="flex flex-col h-[140px] gap-[15px]">
+                        <div className="flex flex-col h-[100px] gap-5">
                           <div>
-                            {" "}
                             <Link
                               to="/join-us/referral-program"
                               className={`${
                                 location.pathname === "/join-us"
-                                  ? `${linkStylesmobile.base} ${linkStylesmobile.joinUs}`
+                                  ? `${linkStylesmobile.base}`
                                   : ""
                               }`}
                               style={{ fontFamily: "SF Pro Display M" }}
                             >
-                              {" "}
                               {t("referral-program")}
                             </Link>
                           </div>
                           <div>
-                            {" "}
                             <Link
                               to="/join-us/career-opportunities"
                               className={`${
                                 location.pathname === "/join-us"
-                                  ? `${linkStylesmobile.base} ${linkStylesmobile.joinUs}`
+                                  ? `${linkStylesmobile.base}`
                                   : ""
                               }`}
                               style={{ fontFamily: "SF Pro Display M" }}

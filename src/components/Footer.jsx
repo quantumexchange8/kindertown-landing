@@ -113,7 +113,7 @@ const Footer = () => {
                       </div>
                       <div>
                         <Link to="/download" className="hover:text-[#F67F00]">
-                          Download
+                          {t("download")}
                         </Link>
                       </div>
                     </div>
@@ -271,7 +271,7 @@ const Footer = () => {
                 {t("career-opportunity")}
               </Link>
               <Link to="/download" className="hover:text-[#F67F00]">
-                Download
+                {t("download")}
               </Link>
             </div>
             <div className="flex flex-col gap-9">

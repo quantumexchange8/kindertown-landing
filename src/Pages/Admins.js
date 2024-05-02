@@ -32,7 +32,9 @@ import icon22 from "../assets/admin/icon22.svg";
 import icon23 from "../assets/admin/icon23.svg";
 import icon24 from "../assets/admin/icon24.svg";
 import CTLogo from "../assets/admin/ct-logo.svg";
+import { useTranslation } from "react-i18next";
 const Admin = () => {
+  const { t, i18n } = useTranslation();
   return (
     <>
       <div className="w-full flex flex-col justify-center items-center md:pt-[150px] pt-[80px] md:px-0 px-5 md:gap-[200px] gap-[100px] md:pb-[200px] pb-[100px]">
@@ -74,19 +76,13 @@ const Admin = () => {
                     className="hidden md:flex flex-col"
                     style={{ fontFamily: "SF Pro Display M" }}
                   >
-                    Kindertown is a management system specifically designed for
-                    kindergartens and early childhood education. It can be
-                    customized according to the specific conditions and needs of
-                    the kindergarten.
+                    {t("KT-admin-desc")}
                   </div>
                   <div
                     className="md:hidden flex flex-col"
                     style={{ fontFamily: "SF Pro Display Semibold" }}
                   >
-                    Kindertown is a management system specifically designed for
-                    kindergartens and early childhood education. It can be
-                    customized according to the specific conditions and needs of
-                    the kindergarten.
+                    {t("KT-admin-desc")}
                   </div>
                 </div>
               </div>
@@ -95,16 +91,33 @@ const Admin = () => {
           {/*Content 2*/}
           <div className="w-full flex md:flex-row flex-col gap-[30px] justify-center items-center">
             <div
-              className="flex flex-col  md:text-[50px] text-xl text-center"
+              className="flex flex-col  text-center"
               style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
             >
-              <div className="hidden md:flex flex-wrap items-center w-[400px]">
-                Superb Interface with Exceptional User Experience
-              </div>
-              <div className="md:hidden flex flex-col items-center">
-                <div className="flex items-center">Superb Interface with</div>
+              {i18n.language === "en" && (
+                <div className="hidden md:flex flex-wrap items-center w-[400px] text-[50px]">
+                  Superb Interface with Exceptional User Experience
+                </div>
+              )}
+              {i18n.language === "ms" && (
+                <div className="hidden md:flex flex-col items-center w-[400px] md:text-[40px]">
+                  <div> {t("superb-interface")}</div>
+                  <div> {t("superb-interface2")}</div>
+                  <div> {t("superb-interface3")}</div>
+                  <div>{t("superb-interface4")}</div>
+                  <div>{t("superb-interface5")}</div>
+                </div>
+              )}
+
+              <div
+                className="md:hidden flex flex-col items-center text-xl"
+                style={{ lineHeight: "normal" }}
+              >
                 <div className="flex items-center">
-                  Exceptional User Experience
+                  {t("superb-interface-mobile")}
+                </div>
+                <div className="flex items-center">
+                  {t("superb-interface2-mobile")}
                 </div>
               </div>
             </div>
@@ -119,16 +132,27 @@ const Admin = () => {
               <img src={Device2} alt="Device2" className="w-full" />
             </div>
             <div
-              className="flex flex-col  md:text-[50px] text-xl text-center  md:order-2 order-1"
+              className="flex flex-col  text-center  md:order-2 order-1"
               style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
             >
-              <div className="hidden md:flex flex-wrap items-center md:w-[400px]">
-                Make school enrollment effortless, efficient, and time-saving.
-              </div>
-              <div className="md:hidden flex flex-col items-center">
-                <div> Make school enrollment</div>
-                <div> effortless, efficient, and</div>
-                <div> time-saving.</div>
+              {i18n.language === "en" && (
+                <div className="hidden md:flex flex-wrap items-center md:w-[400px]  md:text-[50px] ">
+                  {t("efficient-timesave")}
+                </div>
+              )}
+              {i18n.language === "ms" && (
+                <div className="hidden md:flex flex-wrap items-center md:w-[400px]  md:text-[40px] ">
+                  {t("efficient-timesave")}
+                </div>
+              )}
+
+              <div
+                className="md:hidden flex flex-col items-center text-xl"
+                style={{ lineHeight: "normal" }}
+              >
+                <div> {t("efficient-timesave-mobile")}</div>
+                <div> {t("efficient-timesave2-mobile")}</div>
+                <div> {t("efficient-timesave3-mobile")}</div>
               </div>
             </div>
           </div>
@@ -146,18 +170,14 @@ const Admin = () => {
                   className="hidden md:flex flex-col items-center"
                   style={{ fontFamily: "SF Pro Display Semibold" }}
                 >
-                  See how innovative management tools and schools are leveraging
-                  our technology to expand the possibilities of school
-                  operations.
+                  {t("manage-tool")}
                 </div>
                 {/*Mobile*/}
                 <div
                   className="md:hidden flex flex-col items-center"
                   style={{ fontFamily: "SF Pro Display B" }}
                 >
-                  See how innovative management tools and schools are leveraging
-                  our technology to expand the possibilities of school
-                  operations.
+                  {t("manage-tool")}
                 </div>
               </div>
             </div>
@@ -180,16 +200,14 @@ const Admin = () => {
                   style={{ fontFamily: "SF Pro Display Semibold" }}
                 >
                   <div className="flex items-center">
-                    Schools and educators are making significant contributions
-                    to childrens’ academic achievements.
+                    {t("academic-achievement")}
                   </div>
                 </div>
                 <div
                   className="md:hidden flex flex-col items-center "
                   style={{ fontFamily: "SF Pro Display B" }}
                 >
-                  Schools and educators are making significant contributions to
-                  childrens’ academic achievements.
+                  {t("academic-achievement")}
                 </div>
               </div>
             </div>
@@ -210,13 +228,7 @@ const Admin = () => {
                   className="flex flex-col items-center"
                   style={{ fontFamily: "SF Pro Display Semibold" }}
                 >
-                  We firmly believe that schools, teachers, and parents highly
-                  value the learning progress and journey of students. Our
-                  Kindertown management system is precisely the tool to achieve
-                  this goal, all without altering the classroom structure or
-                  increasing additional burden to students admission. Single
-                  cost with double effect, our system remains a smart choice to
-                  support your most cherished priorities.
+                  {t("value-learning")}
                 </div>
               </div>
             </div>
@@ -237,14 +249,21 @@ const Admin = () => {
               }}
             >
               {/*Desktop*/}
-              <div className="w-[793px] hidden md:flex flex-col justify-center items-center">
-                All thoughtful features are designed for schools.
-              </div>
+              {i18n.language === "en" && (
+                <div className="w-[793px] hidden md:flex flex-col justify-center items-center">
+                  {t("thoughtful-feature")}
+                </div>
+              )}
+              {i18n.language === "ms" && (
+                <div className="w-full hidden md:flex flex-col justify-center items-center">
+                  {t("thoughtful-feature")}
+                </div>
+              )}
               {/*Mobile*/}
               <div className="md:hidden flex flex-col justify-center items-center">
-                <div> All thoughtful</div>
-                <div> features are</div>
-                <div> designed for schools.</div>
+                <div> {t("thoughtful-feature1-mobile")}</div>
+                <div> {t("thoughtful-feature2-mobile")}</div>
+                <div> {t("thoughtful-feature3-mobile")}</div>
               </div>
             </div>
           </div>

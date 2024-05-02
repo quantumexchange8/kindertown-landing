@@ -12,8 +12,10 @@ import Jam1 from "../assets/parent/jam2.png";
 import Jam2 from "../assets/parent/jam1.png";
 import Icon from "../assets/parent/icon.png";
 import Arrow from "../assets/parent/arrow.svg";
+import { useTranslation } from "react-i18next";
 
 const Parent = () => {
+  const { t, i18n } = useTranslation();
   return (
     <>
       <div className="w-full flex flex-col md:py-[200px] pt-[80px] pb-[100px] justify-center items-center">
@@ -44,9 +46,9 @@ const Parent = () => {
                     lineHeight: "normal",
                   }}
                 >
-                  <div>Bring an</div>
-                  <div>expert</div>
-                  <div>to your school.</div>
+                  <div>{t("bring-expert")}</div>
+                  <div>{t("bring-expert2")}</div>
+                  <div>{t("bring-expert3")}</div>
                 </div>
               </div>
             </div>
@@ -77,10 +79,16 @@ const Parent = () => {
                 >
                   {/*Desktop*/}
                   <div className="flex flex-wrap items-center justify-center ">
-                    <span className="inline-block md:w-[785px]">
-                      A powerful platform that allows you to seamlessly monitor
-                      your child's activities at any time, from anywhere.
-                    </span>
+                    {i18n.language === "en" && (
+                      <span className="inline-block md:w-[785px]">
+                        {t("KT-parent-desc")}
+                      </span>
+                    )}
+                    {i18n.language === "ms" && (
+                      <span className="inline-block md:w-full">
+                        {t("KT-parent-desc")}
+                      </span>
+                    )}
                   </div>
                 </div>
               </div>
@@ -107,15 +115,15 @@ const Parent = () => {
                     }}
                   >
                     <div className="hidden md:flex flex-col items-center justify-center">
-                      <div> Designed for the future.</div>
-                      <div>Designed for</div>
-                      <div>kindergarten.</div>
+                      <div> {t("design-web1")}</div>
+                      <div>{t("design-web2")}</div>
+                      <div>{t("design-web3")}</div>
                     </div>
                     <div className="md:hidden flex flex-col items-center justify-center w-[154px]">
-                      <div> Designed for</div>
-                      <div>the future.</div>
-                      <div> Designed for</div>
-                      <div> kindergarten.</div>
+                      <div> {t("design-mobile1")}</div>
+                      <div>{t("design-mobile2")}</div>
+                      <div>{t("design-mobile1")}</div>
+                      <div> {t("design-mobile3")}</div>
                     </div>
                   </div>
                 </div>
@@ -131,13 +139,20 @@ const Parent = () => {
                     }}
                   >
                     <div className="hidden md:flex flex-col justify-center items-center ">
-                      <div>Build for Learning</div>
-                      <div>Connecting and Caring</div>
+                      <div>{t("build-learning")}</div>
+                      <div>{t("build-learning2")}</div>
+                      {i18n.language === "ms" && (
+                        <div>
+                          <div>{t("build-learning3")}</div>
+                          <div>{t("build-learning4")}</div>{" "}
+                        </div>
+                      )}
                     </div>
                     <div className="md:hidden flex flex-col justify-center items-center w-[154px]">
-                      <div>Build for</div>
-                      <div> Learning</div>
-                      <div>Connecting</div> <div>and Caring</div>
+                      <div>{t("build-learning-mobile")}</div>
+                      <div> {t("build-learning2-mobile")}</div>
+                      <div>{t("build-learning3")}</div>
+                      <div>{t("build-learning4")}</div>
                     </div>
                   </div>
                 </div>
@@ -168,14 +183,17 @@ const Parent = () => {
                     }}
                   >
                     <div className="hidden md:flex flex-col items-center justify-center">
-                      <div>Witness the boundless</div>
-                      <div>imagination of a child.</div>
+                      <div>{t("boundless-imagination")}</div>
+                      <div>{t("boundless-imagination2")}</div>
+                      {i18n.language === "ms" && (
+                        <div>{t("boundless-imagination3")}</div>
+                      )}
                     </div>
                     <div className="md:hidden flex flex-col items-center justify-center w-[154px]">
-                      <div>Witness</div>
-                      <div>the boundless</div>
-                      <div>imagination</div>
-                      <div>of a child.</div>
+                      <div>{t("boundless-imagination-mobile")}</div>
+                      <div>{t("boundless-imagination2-mobile")}</div>
+                      <div>{t("boundless-imagination3-mobile")}</div>
+                      <div>{t("boundless-imagination4-mobile")}</div>
                     </div>
                   </div>
                 </div>
@@ -192,18 +210,23 @@ const Parent = () => {
                   >
                     {/*Desktop*/}
                     <div className="hidden md:flex items-center justify-center">
-                      Ignite the learning
+                      {t("ignite-learning")}
                     </div>
                     <div className="hidden md:flex items-center justify-center">
-                      passion in every student.
+                      {t("ignite-learning2")}
                     </div>
+                    {i18n.language === "ms" && (
+                      <div className="hidden md:flex items-center justify-center">
+                        {t("ignite-learning3")}
+                      </div>
+                    )}
 
                     {/*Mobile*/}
                     <div className="md:hidden flex flex-col items-center justify-center w-[154px]">
-                      <div> Ignite the</div>
-                      <div> learning</div>
-                      <div> passion in</div>
-                      <div>every student</div>
+                      <div> {t("ignite-learning-mobile")}</div>
+                      <div> {t("ignite-learning2-mobile")}</div>
+                      <div> {t("ignite-learning3-mobile")}</div>
+                      <div>{t("ignite-learning4-mobile")}</div>
                     </div>
                   </div>
                 </div>
@@ -234,15 +257,15 @@ const Parent = () => {
                   >
                     {/*Desktop*/}
                     <div className="hidden md:flex flex-col items-center justify-center">
-                      <div>Share little moment in the</div>
-                      <div>education community.</div>
+                      <div>{t("share-moment")}</div>
+                      <div>{t("share-moment2")}</div>
                     </div>
                     {/*Mobile*/}
                     <div className="md:hidden flex flex-col items-center justify-center w-[154px]">
-                      <div>Share little</div>
-                      <div>moment in the</div>
-                      <div>education</div>
-                      <div>community.</div>
+                      <div>{t("share-moment-mobile")}</div>
+                      <div>{t("share-moment2-mobile")}</div>
+                      <div>{t("share-moment3-mobile")}</div>
+                      <div>{t("share-moment4-mobile")}</div>
                     </div>
                   </div>
                 </div>
@@ -260,13 +283,11 @@ const Parent = () => {
                     }}
                   >
                     <div className="md:hidden flex flex-col items-center justify-center">
-                      All the attractive widgets you love. And, even more to
-                      discover.
+                      {t("attractive-widget")}
                     </div>
                     <div className="hidden md:flex items-center justify-center">
                       <span className="inline-block w-[950px]">
-                        All the attractive widgets you love. And, even more to
-                        discover.
+                        {t("attractive-widget")}
                       </span>
                     </div>
                   </div>

@@ -4,7 +4,41 @@ import GirlBg from "../assets/career/lady.mp4";
 import LadyBg from "../assets/career/lady2.mp4";
 import Coding from "../assets/career/coding.mp4";
 import Bg from "../assets/career/bg.svg";
+import { useTranslation } from "react-i18next";
 const CareerOpportunities = () => {
+  const { t, i18n } = useTranslation();
+  const videoWidth = () => {
+    switch (i18n.language) {
+      case "en":
+        return " md:w-[460px] w-[140px]";
+      case "ms":
+        return " md:w-[540px] w-[140px]";
+      default:
+        return " md:w-[460px] w-[140px]";
+    }
+  };
+
+  const videoWidth2 = () => {
+    switch (i18n.language) {
+      case "end":
+        return "md:w-[490px]";
+      case "ms":
+        return "md:w-[430px]";
+      default:
+        return "md:w-[490px]";
+    }
+  };
+
+  const videoWidth3 = () => {
+    switch (i18n.language) {
+      case "end":
+        return "md:w-[550px] w-[190px]";
+      case "ms":
+        return "md:w-[650px] w-[170px]";
+      default:
+        return "md:w-[550px] w-[190px]";
+    }
+  };
   return (
     <>
       <div className="w-full  flex flex-col justify-center items-center md:pt-[150px] pt-[80px] md:gap-[300px] gap-[100px] md:pb-[300px] pb-[100px] ">
@@ -17,14 +51,14 @@ const CareerOpportunities = () => {
                 style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
               >
                 <div>
-                  We're not just
-                  <span className="text-[#4D9138]"> creating products</span>; at
-                  the same time, we're
+                  {t("not-just")}
+                  <span className="text-[#4D9138]"> {t("create-product")}</span>
+                  {t("same-time")}
                   <span className="text-[#F67F00]">
                     {" "}
-                    crafting an experience{" "}
+                    {t("craft-experience")}{" "}
                   </span>
-                  for the people who use them.
+                  {t("use-them")}
                 </div>
               </div>
             </div>
@@ -43,15 +77,13 @@ const CareerOpportunities = () => {
                 </video>
                 <div className="absolute md:top-[86px] top-5 md:left-[83px] left-5">
                   <div
-                    className="md:text-[40px] text-xs text-left md:w-[460px] w-[140px]"
+                    className={`md:text-[40px] text-xs text-left ${videoWidth()}`}
                     style={{
                       fontFamily: "SF Pro Display B",
                       lineHeight: "normal",
                     }}
                   >
-                    Discover how you can make an impact: understand the nature
-                    of our work, give yourself a platform to excel, and create
-                    the achievements that satisfy you.
+                    {t("discover-impact")}
                   </div>
                 </div>
               </div>
@@ -69,20 +101,17 @@ const CareerOpportunities = () => {
                         lineHeight: "normal",
                       }}
                     >
-                      <div className="hidden md:flex flex-col">
-                        <div> This is a place where energy </div>
-                        <div>converges, dedicated to the</div>
-                        <div>pursuit of values that lead to great</div>
-                        <div>achievements. Here, you're not just</div>
-                        <div>joining something; in our community,</div>
-                        <div>you're contributing to the field</div>
-                        <div>of education.</div>
+                      <div className="hidden md:flex flex-col justify-center items-center">
+                        <div> {t("place-energy")} </div>
+                        <div>{t("converge")}</div>
+                        <div>{t("pursuit-value")}</div>
+                        <div>{t("achievement")}</div>
+                        <div>{t("join-community")}</div>
+                        <div>{t("contribute-field")}</div>
+                        <div>{t("of-education")}</div>
                       </div>
                       <div className="md:hidden flex flex-col">
-                        This is a place where energy converges, dedicated to the
-                        pursuit of values that lead to great achievements. Here,
-                        you're not just joining something; in our community,
-                        you're contributing to the field of education.
+                        {t("energy-converge-mobile")}
                       </div>
                     </div>
                   </div>
@@ -97,7 +126,7 @@ const CareerOpportunities = () => {
                 className="md:text-[36px] text-xl text-center"
                 style={{ fontFamily: "SF Pro Display M", lineHeight: "normal" }}
               >
-                Marketing Team
+                {t("marketing-team")}
               </div>
               <div
                 className="md:text-[70px] text-4xl text-center bg-gradient-to-r from-[#00057C] via-[#D942FF] to-[#0075FF]"
@@ -109,11 +138,11 @@ const CareerOpportunities = () => {
                 }}
               >
                 <div className="hidden md:flex flex-col">
-                  <div>Join our team and ignite</div>
-                  <div>the passion for work</div>
+                  <div>{t("join-team")}</div>
+                  <div>{t("passion-work")}</div>
                 </div>
                 <div className="md:hidden flex flex-col">
-                  Join our team and ignite the passion for work
+                  {t("join-team-mobile")}
                 </div>
               </div>
             </div>
@@ -130,14 +159,13 @@ const CareerOpportunities = () => {
               </video>
               <div className="absolute md:left-[83px] md:bottom-[90px] left-5 bottom-5">
                 <div
-                  className="md:text-[40px] text-xs md:text-black text-white text-left md:w-[490px] w-[140px]"
+                  className={`md:text-[40px] text-xs md:text-black text-white text-left  w-[140px] ${videoWidth2()}`}
                   style={{
                     fontFamily: "SF Pro Display B",
                     lineHeight: "normal",
                   }}
                 >
-                  Your values are integrated into everything we build here,
-                  expanding your career infinitely.
+                  {t("value-integrated")}
                 </div>
               </div>
             </div>
@@ -160,8 +188,8 @@ const CareerOpportunities = () => {
                   color: "transparent" /* Make text color transparent */,
                 }}
               >
-                <div>Work is full of innovation.</div>
-                <div>The experience is exhilarating.</div>
+                <div>{t("full-innovation")}</div>
+                <div>{t("experience-exhilarating")}</div>
               </div>
             </div>
             {/*video content-7*/}
@@ -177,15 +205,13 @@ const CareerOpportunities = () => {
               </video>
               <div className="absolute md:bottom-[88px] bottom-[21px] left-5 md:left-[83px]">
                 <div
-                  className=" md:w-[550px] w-[190px] text-xs md:text-[40px] text-left text-white"
+                  className={` text-xs md:text-[40px] text-left text-white ${videoWidth3()}`}
                   style={{
                     fontFamily: "SF Pro Display B",
                     lineHeight: "normal",
                   }}
                 >
-                  Our IT engineers focus on one key point when developing
-                  software - the people who will use it. This is also based on
-                  respect for customer needs.
+                  {t("key-point")}
                 </div>
               </div>
             </div>
@@ -202,7 +228,7 @@ const CareerOpportunities = () => {
                 lineHeight: "normal",
               }}
             >
-              Innovation and development are our ultimate decisions.
+              {t("innovation-development")}
             </div>
             <div
               className="md:text-[32px] text-xl"
@@ -211,11 +237,7 @@ const CareerOpportunities = () => {
                 lineHeight: "normal",
               }}
             >
-              <div className=" flex flex-col">
-                Being able to see your capabilities and work shine in our
-                products and development platforms will make us incredibly
-                proud.
-              </div>
+              <div className=" flex flex-col">{t("capability-work")}</div>
             </div>
           </div>
         </div>
