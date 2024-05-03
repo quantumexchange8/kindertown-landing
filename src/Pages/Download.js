@@ -117,17 +117,6 @@ const Download = () => {
     }
   };
 
-  const widthAdminModal = () => {
-    switch (i18n.language) {
-      case "en":
-        return "md:w-[256px] w-[124px]";
-      case "ms":
-        return "md:w-[280px] w-[124px]";
-      default:
-        return "md:w-[256px] w-[124px]";
-    }
-  };
-
   const paddingQues = () => {
     switch (i18n.language) {
       case "en":
