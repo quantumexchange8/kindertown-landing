@@ -1,4 +1,3 @@
-/*import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -14,7 +13,7 @@ import arrowUpImage from "../src/assets/up1-01.png";
 function App() {
   return (
     <Router>
-      <div>
+      <div className="App">
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -41,9 +40,9 @@ function App() {
 }
 
 export default App;
-*/
 
-import { Route, Routes } from "react-router-dom";
+{
+  /*import { Route, Routes } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -82,6 +81,5 @@ function App() {
       </ScrollUp>
     </div>
   );
+} */
 }
-
-export default App;

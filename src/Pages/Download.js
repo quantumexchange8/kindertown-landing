@@ -78,25 +78,23 @@ const Download = () => {
   const tapFinger = () => {
     switch (i18n.language) {
       case "en":
-        return "md:w-[292px]";
+        return "md:w-[292px] w-full";
       case "ms":
-        return "md:w-[339px]";
+        return "md:w-[339px] w-full";
       default:
-        return "md:w-[292px]";
+        return "md:w-[292px] w-full";
     }
   };
-
   const tapFingerGap = () => {
     switch (i18n.language) {
       case "en":
-        return "md:gap-20 gap-[19px]";
+        return "md:gap-20";
       case "ms":
-        return "md:gap-[33px] gap-[19px]";
+        return "md:gap-[33px]";
       default:
-        return "md:gap-20 gap-[19px]";
+        return "md:gap-[33px]";
     }
   };
-
   const CaptureVideo = () => {
     switch (i18n.language) {
       case "en":
@@ -108,6 +106,17 @@ const Download = () => {
     }
   };
 
+  const intelligentVideo = () => {
+    switch (i18n.language) {
+      case "en":
+        return "md:w-[326px] w-[141px]";
+      case "ms":
+        return "md:w-[420px] w-[170px]";
+      default:
+        return "md:w-[326px] w-[141px]";
+    }
+  };
+
   const widthAdminModal = () => {
     switch (i18n.language) {
       case "en":
@@ -116,6 +125,49 @@ const Download = () => {
         return "md:w-[280px] w-[124px]";
       default:
         return "md:w-[256px] w-[124px]";
+    }
+  };
+
+  const paddingQues = () => {
+    switch (i18n.language) {
+      case "en":
+        return "md:px-[108px] pl-[34px] md:py-[85px] py-[33px] pr-[43px] md:gap-[68px] gap-[8px]";
+      case "ms":
+        return "md:pl-[80px]  pl-[34px] md:pr-[108px] pr-[34px] md:py-[85px] py-[18px] md:gap-[66px] gap-[17px]";
+      default:
+        return "md:px-[108px] pl-[34px] md:py-[85px] py-[33px] pr-[43px] md:gap-[68px] gap-[8px]";
+    }
+  };
+
+  const font30 = () => {
+    switch (i18n.language) {
+      case "en":
+        return "md:text-3xl text-[10px]";
+      case "ms":
+        return "md:text-[25px] text-[10px]";
+      default:
+        return "md:text-3xl text-[10px]";
+    }
+  };
+  const getWidthClass = (width) => {
+    switch (i18n.language) {
+      case "en":
+        return `md:w-[370px]`;
+      case "ms":
+        return `md:w-[${width}px]`;
+      default:
+        return `md:w-[370px]`;
+    }
+  };
+
+  const momentChildwidth = () => {
+    switch (i18n.language) {
+      case "en":
+        return "md:w-[490px] w-[120px]";
+      case "ms":
+        return "md:w-[564px] w-[130px]";
+      default:
+        return "md:w-[490px] w-[120px]";
     }
   };
   return (
@@ -308,7 +360,9 @@ const Download = () => {
                       <img src={imac} alt="imac" className="w-full" />
                     </div>
                     <div
-                      className={`flex flex-col md:gap-5 gap-[10px] ${widthAdminModal()}`}
+                      className={`flex flex-col md:gap-5 gap-[10px] w-[124px] md:w-[${
+                        i18n.language === "ms" ? "280px" : "256px"
+                      }]`}
                     >
                       <div className="flex flex-col">
                         <div
@@ -338,13 +392,10 @@ const Download = () => {
                           <div>{t("process-now")}</div>
                         </div>
                         <div className="md:hidden flex flex-col">
-                          <div>
-                            No more sluggish school enrollment processes from
-                            now.
-                          </div>
+                          <div>{t("no-sluggish-full")}</div>
                         </div>
                       </div>
-                      <div className="absolute md:bottom-[30px] md:right-[30px] bottom-[40px] right-[40px]">
+                      <div className="absolute md:bottom-[30px] md:right-[30px] bottom-[30px] right-[30px]">
                         <button onClick={() => setShowModal3(true)}>
                           <img
                             src={button3}
@@ -623,10 +674,10 @@ const Download = () => {
                 >
                   <div className="hidden md:flex flex-col">
                     <div>
-                      {t("more")}&nbsp;
+                      {t("more")}
                       <span className="text-[#FF5F5F]">
                         {" "}
-                        {t("intelligent")}&nbsp;
+                        {t("intelligent")}{" "}
                       </span>
                       {i18n.language === "en" && (
                         <span> {t("experiences")} </span>
@@ -641,125 +692,39 @@ const Download = () => {
                     </div>
                   </div>
                   <div className="md:hidden flex flex-wrap justify-center items-center">
-                    More&nbsp;
-                    <span className="text-[#FF5F5F]"> intelligent&nbsp; </span>
-                    experiences with&nbsp;
-                    <span className="text-[#F67F00]">Kindertown</span>
-                    &nbsp;system
+                    {t("more")}&nbsp;
+                    <span className="text-[#FF5F5F]">{t("intelligent")} </span>
+                    {i18n.language === "en" && (
+                      <span> {t("experience")}&nbsp; </span>
+                    )}
+                    <span></span> {t("with")}
+                    <span className="text-[#F67F00]">
+                      {t("Kindertown")}&nbsp;
+                    </span>
+                    {i18n.language === "en" && <span>{t("system")}</span>}
                   </div>
                 </div>
 
-                {/*Coding lama*/}
-                <div className="w-full flex flex-wrap justify-center items-center md:gap-5 gap-2">
-                  <div className="relative w-full md:w-[1000px] md:h-[500px] md:rounded-[30px] rounded-[10px] bg-[#7F5FFF] flex items-center md:gap-20 gap-[19px] md:pr-[29px] md:pb-[58px] py-[20px] md:pt-[57px] md:pl-[99px] pl-[27px] pr-[10px]">
-                    <div className="flex flex-col w-[292px] h-[180px] justify-center items-center">
-                      <div
-                        className="md:text-3xl text-xs text-white"
-                        style={{ fontFamily: "SF Pro Display B" }}
-                      >
-                        {t("tap-finger")}
-                      </div>
-                    </div>
-                    <div className="flex flex-col">
-                      <img src={tab2} alt="Tablet2" />
-                    </div>
-                  </div>
-                  <div className="relative w-full md:w-[1000px] h-[177px] md:h-[500px] md:rounded-[30px]">
-                    <video
-                      className="absolute inset-0 w-full h-full object-cover md:rounded-[30px] rounded-[10px]"
-                      autoPlay
-                      loop
-                      muted
-                    >
-                      <source src={video2} type="video/mp4" />
-                      Your browser does not support the video tag.
-                    </video>
-                    <div className="absolute md:bottom-11 md:right-9 right-5 bottom-5 flex items-center">
-                      <div className="flex flex-col md:w-[326px] md:h-[170px] w-[141px]">
-                        <div
-                          className="md:text-[30px] text-xs text-right text-white"
-                          style={{
-                            fontFamily: "SF Pro Display B",
-                            lineHeight: "normal",
-                          }}
-                        >
-                          The era of intelligence is gradually enabling teachers
-                          to save a considerable amount of valuable time.
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="w-full flex justify-center md:gap-5 gap-[7px]">
-                    <div className="relative w-full md:w-[490px] md:h-[500px] md:rounded-[30px] rounded-[10px] bg-[#582DFF] flex flex-col justify-center items-center md:gap-[90px] gap-[21px] md:pb-[113px] pb-[21px] md:pt-[54px] pt-[19px] md:px-[35px] px-[18px]">
-                      <div className="flex flex-col justify-center items-center">
-                        <img
-                          src={calendar}
-                          alt="Calendar"
-                          className="md:w-[200px] md:h-[182px] w-full h-[64px]"
-                        />
-                      </div>
-                      <div className="flex flex-col w-full md:w-[420px] md:h-[60px] justify-center items-center">
-                        <div
-                          className="md:text-3xl text-xs text-white text-center"
-                          style={{ fontFamily: "SF Pro Display B" }}
-                        >
-                          <div className="hidden md:flex flex-col">
-                            <div>An easier arrangement</div>
-                            <div>for classroom schedules.</div>
-                          </div>
-                          <div className=" md:hidden flex flex-col">
-                            An easier arrangement for classroom schedules.
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="relative w-full md:w-[490px] md:h-[500px] md:rounded-[30px] rounded-[10px] bg-[#7F5FFF] flex flex-col justify-center items-center md:gap-[69px] gap-5 md:pb-[93px] pb-[22px] md:pt-[54px] pt-[19px] md:px-[35px] px-[21px]">
-                      <div className="flex flex-col justify-center items-center">
-                        <img
-                          src={suhu}
-                          alt="Thermometer"
-                          className="md:w-[107px] md:h-[182px] w-[38px] h-[64px]"
-                        />
-                      </div>
-                      <div className="flex flex-col md:w-[420px] md:h-[101px] justify-center items-center">
-                        <div
-                          className="md:text-3xl text-xs text-center"
-                          style={{ fontFamily: "SF Pro Display B" }}
-                        >
-                          <div className="hidden md:flex flex-col">
-                            <div>We also place great</div>
-                            <div>importance on students' </div>
-                            <div>health conditions.</div>
-                          </div>
-                          <div className="md:hidden flex flex-col">
-                            We also place great importance on students' health
-                            conditions.
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                {/*Coding lama*/}
-                <div className="w-full md:w-[1000px] flex flex-wrap justify-center items-center  md:gap-5 gap-2">
+                {/*Content 6*/}
+
+                <div className="w-full md:max-w-[1000px] flex flex-col justify-center items-center md:gap-5 gap-2">
                   <div
-                    className={`relative w-full  md:rounded-[30px] rounded-[10px] bg-[#7F5FFF] flex items-center md:pr-[29px] md:pb-[58px] py-[20px] md:pt-[57px] md:pl-[99px] pl-[27px] pr-[10px] ${tapFingerGap()}`}
+                    className={`w-full flex justify-center items-center md:rounded-[30px] rounded-[10px] bg-[#7F5FFF] md:pl-[99px] md:pr-[29px] md:py-[58px] py-5 pr-[10px] pl-[27px] gap-[19px] ${tapFingerGap()}`}
                   >
                     <div
-                      className={`flex flex-col h-[180px] justify-center items-center ${tapFinger()}`}
+                      className={`md:text-[30px] text-xs text-white ${tapFinger()}`}
+                      style={{
+                        fontFamily: "SF Pro Display B",
+                        lineHeight: "normal",
+                      }}
                     >
-                      <div
-                        className="md:text-3xl text-xs text-white"
-                        style={{ fontFamily: "SF Pro Display B" }}
-                      >
-                        {t("tap-finger")}
-                      </div>
+                      {t("tap-finger")}
                     </div>
-                    <div className="flex flex-col">
+                    <div>
                       <img src={tab2} alt="Tablet2" />
                     </div>
                   </div>
-                  <div className="relative w-full h-[177px] md:h-[500px] md:rounded-[30px]">
+                  <div className="relative w-full md:h-[500px] h-[177px] justify-center items-center  md:rounded-[30px]">
                     <video
                       className="absolute inset-0 w-full h-full object-cover md:rounded-[30px] rounded-[10px]"
                       autoPlay
@@ -770,7 +735,7 @@ const Download = () => {
                       Your browser does not support the video tag.
                     </video>
                     <div className="absolute md:bottom-11 md:right-9 right-5 bottom-5 flex items-center">
-                      <div className="flex flex-col md:w-[326px] md:h-[170px] w-[141px]">
+                      <div className={`flex flex-col ${intelligentVideo()}`}>
                         <div
                           className="md:text-[30px] text-xs text-right text-white"
                           style={{
@@ -784,7 +749,7 @@ const Download = () => {
                     </div>
                   </div>
                   <div className="w-full flex justify-center items-center md:gap-5 gap-[7px]">
-                    <div className="w-full relative md:rounded-[30px] rounded-[10px] bg-[#582DFF] flex flex-col justify-center items-center md:gap-[90px] gap-[21px] md:pb-[113px] pb-[21px] md:pt-[54px] pt-[19px] md:px-[35px] px-[18px]">
+                    <div className="w-full flex flex-col bg-[#582DFF] md:h-[500px] h-[180px] md:rounded-[30px] rounded-[10px] justify-center items-center md:px-[35px] md:pt-[54px] md:pb-[113px] pt-[19px] pb-[21px] px-[18px] md:gap-[90px] gap-[21px]">
                       <div>
                         <img
                           src={calendar}
@@ -793,48 +758,43 @@ const Download = () => {
                         />
                       </div>
                       <div
-                        className="md:text-3xl text-xs text-white text-center"
-                        style={{ fontFamily: "SF Pro Display B" }}
+                        className="md:text-[30px] text-xs text-white text-center"
+                        style={{
+                          fontFamily: "SF Pro Display B",
+                          lineHeight: "normal",
+                        }}
                       >
-                        <div className="hidden md:flex justify-center items-center">
-                          An easier arrangement for classroom schedules.
+                        <div className="hidden md:flex flex-col">
+                          <div> {t("easy-arrangement")}</div>
+                          <div>{t("easy-arrangement2")}</div>
                         </div>
-                        <div className=" md:hidden flex flex-col justify-center items-center">
-                          <div>An easier</div>
-                          <div> arrangement</div>
-                          <div>for classroom</div>
-                          <div> schedules.</div>
+                        <div className="md:hidden flex flex-col">
+                          {t("easy-arrangement-mobile")}
                         </div>
                       </div>
                     </div>
-                    <div className="relative w-full md:rounded-[30px] rounded-[10px] bg-[#7F5FFF] flex flex-col justify-center items-center md:gap-[69px] gap-5 md:pb-[93px] pb-[22px] md:pt-[54px] pt-[19px] md:px-[35px] px-[21px]">
+                    <div className="w-full flex flex-col bg-[#7F5FFF] md:h-[500px] md:rounded-[30px] rounded-[10px] justify-center items-center md:px-[35px] md:pt-[54px] md:pb-[93px] pt-[19px] pb-[21px] px-[21px] md:gap-[69px] gap-[20px]">
                       <div>
                         <img
                           src={suhu}
-                          alt="Thermometer"
+                          alt="Temperature"
                           className="md:h-[182px] h-[64px]"
                         />
                       </div>
                       <div
-                        className="md:text-3xl text-xs text-center"
-                        style={{ fontFamily: "SF Pro Display B" }}
+                        className="md:text-[30px] text-xs text-center"
+                        style={{
+                          fontFamily: "SF Pro Display B",
+                          lineHeight: "normal",
+                        }}
                       >
-                        <div className="hidden md:flex justify-center items-center">
-                          We also place great importance on students' health
-                          conditions.
-                        </div>
-                        <div className="md:hidden flex flex-col justify-center items-center">
-                          <div>We also place great</div>
-                          <div>importance on</div>
-                          <div> students' health</div>
-                          <div>conditions.</div>
-                        </div>
+                        {t("student-condition")}
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              {/*content 6 */}
+              {/*content 7 */}
               <div className="w-full flex flex-col justify-center items-center md:gap-[100px] gap-[50px]">
                 <div className="flex flex-col justify-center items-center">
                   <div
@@ -846,12 +806,13 @@ const Download = () => {
                   >
                     <div className="hidden w-full md:flex flex-col">
                       <span className="inline-block w-[960px]">
-                        Kindertown is more than just a{" "}
-                        <span className="text-[#814300]"> system</span>; it's
-                        like your{" "}
+                        {t("KT-more-than")}{" "}
+                        <span className="text-[#814300]">{t("system")}</span>
+                        {t("like-your")}{" "}
                         <span className="text-[#23D300]">
-                          Intelligent Assistant.
+                          {t("intelligent-assistant")}
                         </span>
+                        {i18n.language === "ms" && <span>{t("anda")}</span>}
                       </span>
                     </div>
                     <div className="md:hidden w-full flex flex-col">
@@ -877,7 +838,7 @@ const Download = () => {
                       <source src={video3} type="video/mp4" />
                       Your browser does not support the video tag.
                     </video>
-                    <div className="absolute md:bottom-14 bottom-[18px] left-[21px] md:left-14 flex items-center md:w-[300px] w-[130px] md:h-[170px]">
+                    <div className="absolute md:bottom-14 bottom-[18px] left-[21px] md:left-14 flex items-center">
                       <div className="flex flex-col">
                         <div
                           className="md:text-[30px] text-xs text-left"
@@ -886,69 +847,65 @@ const Download = () => {
                             lineHeight: "normal",
                           }}
                         >
-                          <div>The most</div>
-                          <div>indispensable tool</div>
-                          <div>for educational </div>
-                          <div>institutions is an </div>
-                          <div>Intelligent Assistant.</div>
+                          <div>{t("the-most")}</div>
+                          <div>{t("indispensable-tool")}</div>
+                          <div>{t("for-educational")} </div>
+                          {i18n.language === "en" && (
+                            <div>{t("institution-is")}</div>
+                          )}
+
+                          <div>{t("intelligent-assistant")}</div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div className="relative w-full md:rounded-[30px] rounded-[10px] bg-[#FCBF4A] flex justify-center items-center md:pr-[122px] md:py-[75px] pt-[33px] pb-[31px] md:pl-[108px] pr-[43px] pl-[34px] md:gap-[54px] gap-[8px]">
-                    <div className="flex flex-col justify-center items-center md:w-[440px]">
-                      <div
-                        className="md:text-3xl text-[10px]"
-                        style={{ fontFamily: "SF Pro Display B" }}
-                      >
-                        {/*Desktop*/}
-                        <div className="hidden md:flex flex-col gap-[50px]">
-                          <div className="flex flex-col  gap-[30px]">
-                            <div className="w-[370px] text-[#FF0001]">
-                              Do we still have to line up for school enrollment?{" "}
-                            </div>
-                            <div className="w-[370px] text-[#4800FF]">
-                              Can we submit our documents online?
-                            </div>
-                            <div className="w-[370px] text-[#00821D]">
-                              Can I reserve a seat for my child in advance?
-                            </div>
-                          </div>
-                          <div className="w-[440px]">
-                            It seems like every year, parents ask the same
-                            questions!
-                          </div>
-                        </div>
-                        {/*Mobile*/}
-                        <div
-                          className="md:hidden flex flex-col gap-[10px]"
-                          style={{ lineHeight: "normal" }}
-                        >
-                          <div className="text-[#FF0001] w-[131px]">
-                            Do we still have to line up for school enrollment?
-                          </div>
-                          <div className="text-[#4800FF] w-[131px]">
-                            Can we submit our documents online?
-                          </div>
-                          <div className="text-[#00821D] w-[162px]">
-                            Can I reserve a seat for my child in advance?
-                          </div>
 
-                          <div className="w-[170px]">
-                            It seems like every year, parents ask the same
-                            questions!
-                          </div>
-                        </div>
+                  {/*COntent 8*/}
+
+                  <div
+                    className={`relative w-full md:rounded-[30px] rounded-[10px] bg-[#FCBF4A] flex justify-center items-center md:py-[85px] ${paddingQues()}`}
+                  >
+                    <div
+                      className={`flex flex-col md:gap-[30px] gap-[10px] ${font30()}`}
+                      style={{
+                        fontFamily: "SF Pro Display B",
+                        lineHeight: "normal",
+                      }}
+                    >
+                      <div
+                        className={`text-[#FF0001] w-[140px] ${getWidthClass(
+                          440
+                        )}`}
+                      >
+                        {t("line-up")}{" "}
+                      </div>
+                      <div
+                        className={`text-[#4800FF] w-[150px] ${getWidthClass(
+                          470
+                        )}`}
+                      >
+                        {t("submit-docs")}{" "}
+                      </div>
+                      <div
+                        className={`text-[#00821D] w-[160px] ${getWidthClass(
+                          470
+                        )}`}
+                      >
+                        {t("seat-advance")}{" "}
+                      </div>
+                      <div className="w-[170px] md:w-[440px]">
+                        {t("same-ques")}{" "}
                       </div>
                     </div>
-                    <div className="flex flex-col justify-center">
+                    <div>
                       <img
                         src={open}
                         alt="OpenSign"
-                        className="md:w-[250px] md:h-[298px] w-full"
+                        className="md:w-[250px] md:h-[298px] w-[88px] h-[105px]"
                       />
                     </div>
                   </div>
+
                   <div className="relative w-full  md:h-[500px] h-[176px] md:rounded-[30px] rounded-[10px] bg-[#FFDA92] flex items-center md:pr-[76px] pr-[27px] md:py-[133px] py-[46px] md:pl-[108px] pl-[38px] md:gap-[96px] gap-[33px]">
                     <div className="flex flex-col justify-center items-center">
                       <img
@@ -967,19 +924,16 @@ const Download = () => {
                       >
                         {/*Desktop*/}
                         <div className="hidden md:flex flex-col">
-                          <div> When developing our system,</div>
-                          <div> we have already incorporated</div>
-                          <div> privacy features and controls</div>
-                          <div> to safeguard the personal</div>
-                          <div>information of schools, teachers,</div>
-                          <div> parents, and students.</div>
+                          <div>{t("develop-system")}</div>
+                          <div>{t("already-incorporate")}</div>
+                          <div> {t("privacy-feature")}</div>
+                          <div> {t("safeguard-personal")}</div>
+                          <div>{t("info-school")}</div>
+                          <div> {t("parent-student")}</div>
                         </div>
                         {/*mobile*/}
                         <div className="md:hidden flex flex-col">
-                          When developing our system, we have already
-                          incorporated privacy features and controls to
-                          safeguard the personal information of schools,
-                          teachers, parents, and students.
+                          {t("incorporate-feature")}
                         </div>
                       </div>
                     </div>
@@ -1010,13 +964,8 @@ const Download = () => {
                   lineHeight: "normal",
                 }}
               >
-                <div className="hidden md:flex flex-col w-[490px]">
-                  From the moment children step into kindergarten, their journey
-                  of learning dreams begins.
-                </div>
-                <div className="md:hidden flex flex-col w-[120px]">
-                  From the moment children step into kindergarten, their journey
-                  of learning dreams begins.
+                <div className={`flex flex-col ${momentChildwidth()}`}>
+                  {t("moment-children")}
                 </div>
               </div>
             </div>
@@ -1035,13 +984,9 @@ const Download = () => {
                     style={{ fontFamily: "SF Pro Display M" }}
                   >
                     <div className="flex flex-col justify-center items-center">
-                      <div>
-                        At any moment, feel free to leave your contact
-                        information without hesitation, and our attentive
-                        service personnel will get in touch with you.
-                      </div>
-                      <div>Only through quality communication can</div>
-                      <div>we understand your needs.</div>
+                      <div>{t("leave-contact")}</div>
+                      <div>{t("quality-communication")}</div>
+                      <div>{t("understand-need")}</div>
                     </div>
                   </div>
                   {/*Mobile*/}
@@ -1049,10 +994,7 @@ const Download = () => {
                     className="md:hidden flex flex-col justify-center items-center"
                     style={{ fontFamily: "SF Pro Display Semibold" }}
                   >
-                    At any moment, feel free to leave your contact information
-                    without hesitation, and our attentive service personnel will
-                    get in touch with you. Only through quality communication
-                    can we understand your needs.
+                    {t("leave-contact-full")}
                   </div>
                 </div>
               </div>
@@ -1065,7 +1007,11 @@ const Download = () => {
                     "linear-gradient(180deg, rgba(221, 221, 221, 0.3), rgba(221, 221, 221, 1), rgba(221, 221, 221, 0.7))",
                 }}
               >
-                <div className="flex flex-col w-full md:w-[800px] justify-center items-center">
+                <div
+                  className={`flex flex-col w-full justify-center items-center md:w-[${
+                    i18n.language === "ms" ? "950px" : "800px"
+                  }]`}
+                >
                   <div
                     className="md:text-[32px]  text-base text-center"
                     style={{
@@ -1073,11 +1019,7 @@ const Download = () => {
                       lineHeight: "normal",
                     }}
                   >
-                    We have prepared detailed product demonstrations prior to
-                    subscription, along with one-on-one or group teaching modes,
-                    to provide you with a more comprehensive understanding of
-                    how our Kindertown management system is essential for your
-                    school.
+                    {t("form-desc")}
                   </div>
                 </div>
                 <div className="flex flex-col md:gap-[100px] gap-[50px] items-center justify-center">
@@ -1096,7 +1038,7 @@ const Download = () => {
                             className="flex flex-col md:w-[450px] w-full md:gap-3 gap-[6px] md:text-[20px] text-base"
                             style={{ fontFamily: "SF Pro Display M" }}
                           >
-                            <label>School Name:</label>
+                            <label>{t("school-name")}</label>
                             <input
                               type="text"
                               name="school_name"
@@ -1109,7 +1051,7 @@ const Download = () => {
                             className="flex flex-col md:w-[450px]  w-full gap-3 md:text-[20px] text-base"
                             style={{ fontFamily: "SF Pro Display M" }}
                           >
-                            <label>Name of person-in-charge:</label>
+                            <label>{t("name-pic")}</label>
                             <input
                               type="text"
                               name="from_name"
@@ -1125,7 +1067,7 @@ const Download = () => {
                             className="flex flex-col md:w-[450px] w-full md:gap-3 gap-[6px] md:text-[20px] text-base"
                             style={{ fontFamily: "SF Pro Display M" }}
                           >
-                            <label>Email address:</label>
+                            <label>{t("email-address")}</label>
                             <input
                               type="email"
                               name="from_email"
@@ -1138,7 +1080,7 @@ const Download = () => {
                             className="flex flex-col md:w-[450px] w-full md:gap-3 gap-[6px] md:text-[20px] text-base"
                             style={{ fontFamily: "SF Pro Display M" }}
                           >
-                            <label>Contact number or Whatsapp:</label>
+                            <label>{t("contact-no")}</label>
                             <input
                               type="text"
                               name="phone"
@@ -1163,11 +1105,8 @@ const Download = () => {
                                 lineHeight: "normal",
                               }}
                             >
-                              <div>Within 24 hours after sending,</div>
-                              <div>
-                                {" "}
-                                our service personnel will contact you.
-                              </div>
+                              <div>{t("24hr-send")}</div>
+                              <div>{t("service-contact")}</div>
                             </div>
                             <div>
                               <img
