@@ -52,17 +52,25 @@ const Admin = () => {
             <div className="w-full flex flex-col justify-center items-center md:gap-[50px] gap-[30px]">
               <div className="flex flex-col items-center">
                 <div
-                  className="md:text-[80px] text-4xl"
+                  className={`md:text-[80px] text-4xl ${
+                    i18n.language === "zn" ? "font-bold" : ""
+                  }`}
                   style={{
                     fontFamily: "SF Pro Display B",
                     lineHeight: "normal",
                   }}
                 >
-                  <div className="hidden md:flex">Kindertown Admin</div>
-                  <div className="md:hidden flex flex-col items-center">
-                    <div> Kindertown</div>
-                    <div> Admin</div>
-                  </div>
+                  {i18n.language === "zn" && <div>{t("KT-admin")}</div>}
+
+                  {!(i18n.language === "zn") && (
+                    <>
+                      <div className="hidden md:flex">{t("KT-admin")}</div>
+                      <div className="md:hidden flex flex-col items-center">
+                        <div> Kindertown</div>
+                        <div> Admin</div>
+                      </div>
+                    </>
+                  )}
                 </div>
               </div>
               <div className="flex flex-col justify-center items-center">
@@ -76,11 +84,22 @@ const Admin = () => {
                     className="hidden md:flex flex-col"
                     style={{ fontFamily: "SF Pro Display M" }}
                   >
-                    {t("KT-admin-desc")}
+                    <span
+                      className={`inline-block ${
+                        i18n.language === "zn" ? "md:w-[750px]" : "w-full"
+                      }`}
+                    >
+                      {t("KT-admin-desc")}
+                    </span>
                   </div>
                   <div
                     className="md:hidden flex flex-col"
-                    style={{ fontFamily: "SF Pro Display Semibold" }}
+                    style={{
+                      fontFamily:
+                        i18n.language === "zn"
+                          ? "SF Pro Display M"
+                          : " SF Pro Display Semibold",
+                    }}
                   >
                     {t("KT-admin-desc")}
                   </div>
@@ -94,6 +113,20 @@ const Admin = () => {
               className="flex flex-col  text-center"
               style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
             >
+              <div
+                className={`hidden md:flex md:w-[400px] ${
+                  i18n.language === "ms" ? "md:text-[40px]" : "md:text-[50px]"
+                }`}
+              >
+                {t("superb-interface")}
+              </div>
+
+              <div className="md:hidden flex flex-col text-xl">
+                <div>{t("superb-interface-mobile")}</div>
+                <div>{t("superb-interface2-mobile")}</div>
+              </div>
+              {/*
+
               {i18n.language === "en" && (
                 <div className="hidden md:flex flex-wrap items-center w-[400px] text-[50px]">
                   Superb Interface with Exceptional User Experience
@@ -120,6 +153,8 @@ const Admin = () => {
                   {t("superb-interface2-mobile")}
                 </div>
               </div>
+
+               */}
             </div>
 
             <div className="w-full flex flex-col">

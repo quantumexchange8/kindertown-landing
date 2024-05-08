@@ -4,9 +4,7 @@ import Swal from "sweetalert2";
 
 import emailjs from "@emailjs/browser";
 import "./modal.css";
-
 import Modal1 from "../components/modal/modalparent";
-
 import Modal2 from "../components/modal/modalteacher";
 import Modal3 from "../components/modal/modaladmin";
 import mobile from "../assets/download/mobile.png";
@@ -157,6 +155,16 @@ const Download = () => {
         return "md:w-[564px] w-[130px]";
       default:
         return "md:w-[490px] w-[120px]";
+    }
+  };
+  const stationaryTroli = () => {
+    switch (i18n.language) {
+      case "en":
+        return "md:gap-[86px] gap-[31px] md:pt-[80px] md:pb-[55px] pt-[32px] pb-[19px]";
+      case "ms":
+        return "md:gap-[63px] gap-[21px] md:pt-[73px] md:pb-[55px] pt-[27px] pb-[19px]";
+      default:
+        return "md:gap-[86px] gap-[31px] md:pt-[80px] md:pb-[55px] pt-[32px] pb-[19px]";
     }
   };
   return (
@@ -470,11 +478,25 @@ const Download = () => {
             <div className="w-full flex flex-col md:px-0 pl-[19px] pr-[21px] gap-[100px] md:gap-[300px]">
               {/*Content 4 */}
               <div className="w-full flex flex-wrap justify-center items-center md:gap-5 gap-[7px]">
-                <div className="w-full relative h-[176px] md:h-[500px] md:rounded-[30px] rounded-[10px] bg-[#D5FFCD] flex gap-[29px] md:gap-[88px] md:pr-[112px] pr-[40px] md:pl-[100px] pl-[32px] md:pt-[100px] pt-[35px]">
+                <div
+                  className={`w-full relative h-[176px] md:h-[500px] md:rounded-[30px] rounded-[10px] bg-[#D5FFCD] flex   md:pt-[100px] pt-[35px] ${
+                    i18n.language === "en"
+                      ? "gap-[29px] md:gap-[88px]  pr-[40px] md:pr-[112px] md:pl-[100px] pl-[32px] "
+                      : i18n.language === "ms"
+                      ? "gap-[16px] md:gap-[13px] pr-[39px] md:pr-[112px] md:pl-[75px] pl-[32px]"
+                      : ""
+                  }`}
+                >
                   <div>
                     {" "}
                     <div
-                      className="md:text-[40px] text-base"
+                      className={`${
+                        i18n.language === "en"
+                          ? "md:text-[40px] text-base "
+                          : i18n.language === "ms"
+                          ? "md:text-[40px] text-xs w-[160px] md:w-[500px]"
+                          : ""
+                      }`}
                       style={{
                         fontFamily: "SF Pro Display B",
                         lineHeight: "normal",
@@ -487,7 +509,13 @@ const Download = () => {
                     <img
                       src={phone}
                       alt="Mobile"
-                      className="absolute top-2 left-0 object-cover w-full"
+                      className={` ${
+                        i18n.language === "en"
+                          ? "absolute md:top-2 md:left-0 object-cover w-full  "
+                          : i18n.language === "ms"
+                          ? "absolute md:top-5 md:left-0 w-full  "
+                          : ""
+                      }`}
                     />
                   </div>
                 </div>
@@ -578,7 +606,9 @@ const Download = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="relative md:w-[490px] w-full h-[177px] md:h-[500px]  md:rounded-[30px] rounded-[10px] bg-[#D5FFCD] flex flex-col md:pl-[56px] md:pr-[55px] px-[19px] md:pt-[80px] pt-[32px] md:pb-[55px] pb-[19px] md:gap-[86px] gap-[31px]">
+                  <div
+                    className={`relative md:w-[490px] w-full h-[177px] md:h-[500px]  md:rounded-[30px] rounded-[10px] bg-[#D5FFCD] flex flex-col md:pl-[56px] md:pr-[55px] px-[19px] ${stationaryTroli()}`}
+                  >
                     <div className="flex flex-col justify-center items-center">
                       <div
                         className="md:text-3xl text-[10px] text-center"
@@ -793,8 +823,8 @@ const Download = () => {
                       lineHeight: "normal",
                     }}
                   >
-                    <div className="hidden w-full md:flex flex-col">
-                      <span className="inline-block w-[960px]">
+                    <div className="w-full flex flex-col">
+                      <span className="inline-block md:w-[960px]">
                         {t("KT-more-than")}{" "}
                         <span className="text-[#814300]">{t("system")}</span>
                         {t("like-your")}{" "}
@@ -802,16 +832,6 @@ const Download = () => {
                           {t("intelligent-assistant")}
                         </span>
                         {i18n.language === "ms" && <span>{t("anda")}</span>}
-                      </span>
-                    </div>
-                    <div className="md:hidden w-full flex flex-col">
-                      <span className="inline-block w-full">
-                        Kindertown is more than just a{" "}
-                        <span className="text-[#814300]"> system</span>; it's
-                        like your{" "}
-                        <span className="text-[#23D300]">
-                          Intelligent Assistant.
-                        </span>
                       </span>
                     </div>
                   </div>

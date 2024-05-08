@@ -201,7 +201,15 @@ const Navbar = () => {
                     >
                       Malay
                     </button>
-                    <button className="hover:text-[#F67F00]">中文</button>
+                    <button
+                      className="hover:text-[#F67F00]"
+                      onClick={() => {
+                        i18n.changeLanguage("zn");
+                        window.location.reload();
+                      }}
+                    >
+                      中文
+                    </button>
                   </div>
                 </div>
               )}
@@ -239,7 +247,15 @@ const Navbar = () => {
                       >
                         Malay
                       </button>
-                      <button className="hover:text-[#F67F00]">中文</button>
+                      <button
+                        className="hover:text-[#F67F00]"
+                        onClick={() => {
+                          i18n.changeLanguage("zn");
+                          window.location.reload();
+                        }}
+                      >
+                        中文
+                      </button>
                     </div>
                   </div>
                 )}

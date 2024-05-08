@@ -13,8 +13,9 @@ import gallery from "../../assets/parentmodal/gallery.svg";
 import data from "../../assets/parentmodal/data.svg";
 import contact from "../../assets/parentmodal/contact.svg";
 import data2 from "../../assets/parentmodal/data2.svg";
-
+import { useTranslation } from "react-i18next";
 const ModalAdmin = ({ showModal3, setShowModal3 }) => {
+  const { t, i18n } = useTranslation();
   const handleCloseModal = () => {
     setShowModal3(false);
   };
@@ -57,14 +58,20 @@ const ModalAdmin = ({ showModal3, setShowModal3 }) => {
                     Your browser does not support the video tag.
                   </video>
                   <div
-                    className="absolute md:top-[29px] md:right-[46px] text-right md:text-[32px] text-xs md:w-[389px] w-[164px] right-[29px] top-[34px]"
+                    className={`absolute md:top-[29px] md:right-[46px] text-right md:text-[32px] text-xs  right-[29px] top-[34px] ${
+                      i18n.language === "en"
+                        ? "md:w-[389px] w-[164px] "
+                        : i18n.language === "ms"
+                        ? " md:w-[420px] w-[170px]"
+                        : "md:w-[389px] w-[164px] "
+                    }
+                    `}
                     style={{
                       fontFamily: "SF Pro Display B",
                       lineHeight: "normal",
                     }}
                   >
-                    The contributions made by the school owner to the school,
-                    teachers, and students are revolutionary.
+                    {t("adminmodal-video")}
                   </div>
                 </div>
 
@@ -77,10 +84,7 @@ const ModalAdmin = ({ showModal3, setShowModal3 }) => {
                           className="md:text-4xl text-2xl text-left"
                           style={{ fontFamily: "SF Pro Display B" }}
                         >
-                          The school owner is the key force behind the success
-                          of the institution. They set the direction, values,
-                          and standards of excellence, ensuring a transformative
-                          school management system for everyone.
+                          {t("adminmodal-title")}
                         </div>
                         <div className="flex">
                           <div
@@ -90,11 +94,7 @@ const ModalAdmin = ({ showModal3, setShowModal3 }) => {
                               lineHeight: "normal",
                             }}
                           >
-                            The school owner, with our Kindertown management
-                            system, has streamlined the student enrollment
-                            process and efficiently tackled the busy
-                            administrative tasks of the school. They enable
-                            educators to focus more on nurturing young minds.
+                            {t("adminmodal-desc")}
                           </div>
                           <div className="hidden md:flex absolute right-[40px] top-[910px]">
                             <button onClick={() => setShowModal3(false)}>
@@ -120,11 +120,16 @@ const ModalAdmin = ({ showModal3, setShowModal3 }) => {
                               lineHeight: "normal",
                             }}
                           >
-                            <div className="md:w-[650px] flex flex-wrap">
-                              Subscribing to the Premium Plan allows you to
-                              enjoy top-tier features specifically designed to
-                              meet the unique needs of kindergartens, along with
-                              an exceptional level of service.
+                            <div
+                              className={`flex flex-wrap   ${
+                                i18n.language === "en"
+                                  ? "md:w-[650px] "
+                                  : i18n.language === "ms"
+                                  ? "md:w-full"
+                                  : "md:w-[650px] "
+                              }`}
+                            >
+                              {t("subscribe-plan")}
                             </div>
                           </div>
                         </div>
@@ -318,7 +323,7 @@ const ModalAdmin = ({ showModal3, setShowModal3 }) => {
                                   className="md:text-4xl text-2xl text-left"
                                   style={{ fontFamily: " SF Pro Display B" }}
                                 >
-                                  Features:
+                                  {t("feature")}:
                                 </div>
                               </div>
                               <div
@@ -329,47 +334,105 @@ const ModalAdmin = ({ showModal3, setShowModal3 }) => {
                                 }}
                               >
                                 <ul className="list-outside list-disc flex flex-col md:gap-10 gap-5 md:pl-[50px] pl-[25px] text-left">
-                                  <li>
-                                    Add student accounts and parents accounts.
-                                  </li>
-                                  <li>
-                                    Add teacher accounts and sub-admin accounts.
-                                  </li>
-                                  <li>Add class room.</li>
-                                  <li>Create new notice or announcement.</li>
-                                  <li>Update student skill assessment.</li>
-                                  <li>Create invoice function.</li>
-                                  <li>Market store “Selling function”.</li>
-                                  <li>Live CCTV Connection.</li>
-                                  <li>Payment gateway function.</li>
-                                  <li>
-                                    Create teacher and student time table.
-                                  </li>
-                                  <li>
-                                    Teacher and student attendance report.
-                                  </li>
-                                  <li>Add driver or school bus service.</li>
-                                  <li>Add insurance coverage function.</li>
-                                  <li>
-                                    Face to face training, online training and
-                                    support.
-                                  </li>
-                                  <li>Referral Program.</li>
-                                  <li>
-                                    Delay pick-up / emergency pick-up protection
-                                    feature.
-                                  </li>
-                                  <li>
-                                    In-app purchase iPhone and iWatch widgets
-                                  </li>
-                                  <li>
-                                    Searchable in Kindertown reservation list.
-                                  </li>
+                                  <li>{t("add-account")}</li>
+                                  <li>{t("add-teacher")}</li>
+                                  <li>{t("add-class")}</li>
+                                  <li>{t("new-notice")}</li>
+                                  <li>{t("update-assessment")}</li>
+                                  <li>{t("invoice-function")}</li>
+                                  <li>{t("market-store")}</li>
+                                  <li>{t("live-connection")}</li>
+                                  <li>{t("payment-gateway")}</li>
+                                  <li>{t("create-timetable")}</li>
+                                  <li>{t("attendance-report")}</li>
+                                  <li>{t("driver-service")}</li>
+                                  <li>{t("add-insurance")}</li>
+                                  <li>{t("training-online")}</li>
+                                  <li>{t("referral-prog")}</li>
+                                  <li>{t("delay-pickup")}</li>
+                                  <li>{t("iphone-widget")}</li>
+                                  <li>{t("searchable")}</li>
                                 </ul>
                               </div>
                             </div>
                             <div className="w-full">
-                              <div className="relative w-full md:rounded-t-[30px] rounded-t-[14px] bg-[#FF8400] items-center md:pl-[86px] pl-[37px] pr-[32px] md:pr-[85px] md:py-[38px] pt-[15px] pb-[17px]">
+                              <div className="w-full relative md:rounded-t-[30px] rounded-t-[14px] bg-[#FF8400] md:py-[38px] pt-[15px] pb-[17px] md:pl-[86px] md:pr-[85px] pl-[37px] pr-[32px]">
+                                <div
+                                  className="md:text-xl text-xs flex justify-between"
+                                  style={{ fontFamily: "SF Pro Display M" }}
+                                >
+                                  <div> Free</div>
+                                  <div>Standard</div>
+                                  <div>Premium</div>
+                                </div>
+                              </div>
+                              <div
+                                className={`w-full relative md:rounded-b-[30px] rounded-b-[14px] bg-[#FFB261] md:py-[38px] py-[9px] ${
+                                  i18n.language === "en"
+                                    ? "md:pl-[72px] pl-[29px] pr-[29px] md:pr-[79px]"
+                                    : i18n.language === "ms"
+                                    ? "md:pl-[76px]  md:pr-[27px] pl-[25px] pr-5"
+                                    : ""
+                                }`}
+                              >
+                                <div
+                                  className={`md:text-xl text-xs flex ${
+                                    i18n.language === "en"
+                                      ? "md:gap-[128px] gap-[47px]"
+                                      : i18n.language === "ms"
+                                      ? "md:gap-[65px] gap-4"
+                                      : ""
+                                  }`}
+                                  style={{ fontFamily: "SF Pro Display M" }}
+                                >
+                                  <div
+                                    className={`flex text-center ${
+                                      i18n.language === "en"
+                                        ? "md:gap-[128px] gap-[46px]"
+                                        : i18n.language === "ms"
+                                        ? "md:gap-[100px] gap-4"
+                                        : ""
+                                    }`}
+                                  >
+                                    <div className="md:w-[70px]">
+                                      {" "}
+                                      {t("limit-access")}
+                                    </div>
+                                    <div
+                                      className={`hidden md:flex flex-col text-center ${
+                                        i18n.language === "en"
+                                          ? " md:w-[121px]"
+                                          : i18n.language === "ms"
+                                          ? ""
+                                          : ""
+                                      }`}
+                                    >
+                                      <div> {t("daily-charge")}</div>
+                                      {i18n.language === "ms" && (
+                                        <div> {t("daily-charge2")}</div>
+                                      )}
+                                    </div>
+                                    <div className="md:hidden flex flex-col text-center">
+                                      <div> {t("daily-charge-mobile")}</div>
+                                    </div>
+                                  </div>
+
+                                  <div
+                                    className={` text-center ${
+                                      i18n.language === "en"
+                                        ? " md:w-[97px]"
+                                        : i18n.language === "ms"
+                                        ? "md:w-[186px] w-[69px]"
+                                        : ""
+                                    }`}
+                                  >
+                                    {" "}
+                                    {t("get-quote")}
+                                  </div>
+                                </div>
+                              </div>
+                              {/*
+     <div className="relative w-full md:rounded-t-[30px] rounded-t-[14px] bg-[#FF8400] items-center md:pl-[86px] pl-[37px] pr-[32px] md:pr-[85px] md:py-[38px] pt-[15px] pb-[17px]">
                                 <div
                                   className="md:text-xl text-xs flex justify-between text-center "
                                   style={{ fontFamily: "SF Pro Display M" }}
@@ -385,16 +448,17 @@ const ModalAdmin = ({ showModal3, setShowModal3 }) => {
                                   style={{ fontFamily: "SF Pro Display M" }}
                                 >
                                   <div className="flex-col md:w-[70px]">
-                                    Limited Access
+                                    {t("limit-access")}
                                   </div>
                                   <div className="flex-col md:w-[121px]">
-                                    Daily Charge per seat
+                                    {t("daily-charge")}
                                   </div>
                                   <div className="flex-col md:w-[97px]">
                                     Get Quote Now!
                                   </div>
                                 </div>
                               </div>
+*/}
                             </div>
                           </div>
                         </div>

@@ -60,7 +60,18 @@ const Footer = () => {
                       Malay
                     </button>
 
-                    <div>中文</div>
+                    <div>
+                      {" "}
+                      <button
+                        className="hover:text-[#F67F00]"
+                        onClick={() => {
+                          i18n.changeLanguage("zn");
+                          window.scrollTo({ top: 0, behavior: "smooth" });
+                        }}
+                      >
+                        中文
+                      </button>
+                    </div>
                   </div>
                   <div
                     className="flex flex-col md:gap-4 md:text-xl"
@@ -72,7 +83,7 @@ const Footer = () => {
                           to="/products/parent"
                           className="hover:text-[#F67F00]"
                         >
-                          Kindertown Parents
+                          {t("footer-parent")}
                         </Link>
                       </div>
                       <div>
@@ -90,7 +101,7 @@ const Footer = () => {
                           to="/products/teacher"
                           className="hover:text-[#F67F00]"
                         >
-                          Kindertown Teacher
+                          {t("footer-teacher")}
                         </Link>
                       </div>
                       <div>
@@ -108,7 +119,7 @@ const Footer = () => {
                           to="/products/admin"
                           className="hover:text-[#F67F00]"
                         >
-                          Kindertown Admin
+                          {t("footer-admin")}
                         </Link>
                       </div>
                       <div>
@@ -250,13 +261,13 @@ const Footer = () => {
               style={{ fontFamily: "SF Pro Display M" }}
             >
               <Link to="/products/parent" className="hover:text-[#F67F00]">
-                Kindertown Parents
+                {t("footer-parent")}
               </Link>
               <Link to="/products/teacher" className="hover:text-[#F67F00]">
-                Kindertown Teacher
+                {t("footer-teacher")}
               </Link>
               <Link to="/products/admin" className="hover:text-[#F67F00]">
-                Kindertown Admin
+                {t("footer-admin")}
               </Link>
               <Link
                 to="/join-us/referral-program"

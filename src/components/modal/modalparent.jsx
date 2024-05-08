@@ -13,8 +13,9 @@ import gallery from "../../assets/parentmodal/gallery.svg";
 import data from "../../assets/parentmodal/data.svg";
 import contact from "../../assets/parentmodal/contact.svg";
 import data2 from "../../assets/parentmodal/data2.svg";
-
+import { useTranslation } from "react-i18next";
 const ModalParent = ({ showModal1, setShowModal1 }) => {
+  const { t, i18n } = useTranslation();
   const handleCloseModal = () => {
     setShowModal1(false);
   };
@@ -57,14 +58,19 @@ const ModalParent = ({ showModal1, setShowModal1 }) => {
                     Your browser does not support the video tag.
                   </video>
                   <div
-                    className="absolute md:bottom-[49px] bottom-[29px] md:right-[46px] right-[25px] text-right text-white md:text-[32px] text-xs md:w-[410px] w-[180px]"
+                    className={`absolute md:bottom-[49px] bottom-[29px] md:right-[46px] right-[25px] text-right text-white md:text-[32px] text-xs  ${
+                      i18n.language === "en"
+                        ? "md:w-[410px] w-[180px] "
+                        : i18n.language === "ms"
+                        ? "md:w-[440px] w-[180px]"
+                        : " md:w-[410px] w-[180px]"
+                    }`}
                     style={{
                       fontFamily: "SF Pro Display B",
                       lineHeight: "normal",
                     }}
                   >
-                    The gift parents give to their children is not only love and
-                    companionship, but more importantly, education.
+                    {t("parentmodal-video")}
                   </div>
                 </div>
                 {/*Content1*/}
@@ -75,11 +81,11 @@ const ModalParent = ({ showModal1, setShowModal1 }) => {
                       style={{ fontFamily: "SF Pro Display B" }}
                     >
                       <div className="hidden md:flex flex-col">
-                        <div>The beginning of a child's learning</div>
-                        <div>journey is crucial.</div>
+                        <div> {t("parentmodal-title1")}</div>
+                        <div> {t("parentmodal-title2")}</div>
                       </div>
                       <div className=" md:hidden flex flex-col">
-                        The beginning of a child's learning journey is crucial.
+                        {t("parentmodal-title-full")}
                       </div>
                     </div>
                     <div
@@ -89,10 +95,7 @@ const ModalParent = ({ showModal1, setShowModal1 }) => {
                         lineHeight: "normal",
                       }}
                     >
-                      The Kindertown management system we have carefully
-                      tailored for you will significantly enhance the quality of
-                      the school while also increasing confidence between
-                      parents and the school.
+                      {t("parentmodal-desc1")}
                     </div>
                     <div className="flex">
                       <div
@@ -102,9 +105,7 @@ const ModalParent = ({ showModal1, setShowModal1 }) => {
                           lineHeight: "normal",
                         }}
                       >
-                        Through the functionalities developed by our designers
-                        and IT engineers, parents will be able to focus more on
-                        and better understand their child's learning progress.
+                        {t("parentmodal-desc2")}
                       </div>
                       <div className="hidden md:flex absolute right-[40px]">
                         <button onClick={() => setShowModal1(false)}>
@@ -298,7 +299,7 @@ const ModalParent = ({ showModal1, setShowModal1 }) => {
                           className="md:text-4xl text-xl"
                           style={{ fontFamily: " SF Pro Display B" }}
                         >
-                          Features:
+                          {t("feature")}:
                         </div>
                       </div>
                       <div
@@ -309,44 +310,20 @@ const ModalParent = ({ showModal1, setShowModal1 }) => {
                         }}
                       >
                         <ul className="list-outside list-disc flex flex-col md:gap-10 gap-5 md:pl-[50px] pl-[25px]">
-                          <li>Search the kindergartens near you.</li>
-                          <li>Referral Program and Reward Wallet function.</li>
-                          <li>
-                            Reserve a seat for your kids through Kindertown.
-                          </li>
-                          <li>
-                            Pay your school fee directly through Kindertown app,
-                            seamlessly supported by over 10 banks.
-                          </li>
-                          <li>
-                            Instant notification feature on mobile phones.
-                          </li>
-                          <li>
-                            Child's daily mission with adorable star sticker.
-                          </li>
-                          <li>Checking kid’s academic performance. </li>
-                          <li>Feedback form for kindergarten.</li>
-                          <li>
-                            Purchase school supplies through the ‘Market’ in
-                            Kindertown.
-                          </li>
-                          <li>
-                            Self pick-up / delay pick-up / emergency pick-up
-                            protection / change contact feature.
-                          </li>
-                          <li>
-                            Track kids’ daily activities, status, meal intake,
-                            temperature and more simply on Kindertown.
-                          </li>
-                          <li>Live connect to school CCTV.</li>
-                          <li>
-                            Interact with teacher or other parents from the same
-                            kindergarten in ‘Community’.
-                          </li>
-                          <li>
-                            Cute widgets and etc that can be purchased in the
-                            app.
-                          </li>
+                          <li>{t("search-kindergarten")}</li>
+                          <li>{t("referral-function")}</li>
+                          <li>{t("seat-reserve")}</li>
+                          <li>{t("pay-school")}</li>
+                          <li>{t("instant-noti")}</li>
+                          <li>{t("daily-mission")}</li>
+                          <li>{t("academic-performance")}</li>
+                          <li>{t("feedback-form")}</li>
+                          <li>{t("purchase-supplies")}</li>
+                          <li>{t("self-pickup")}</li>
+                          <li>{t("track-activity")}</li>
+                          <li>{t("live-cctv")}</li>
+                          <li>{t("interact-community")}</li>
+                          <li>{t("cute-widget")}</li>
                         </ul>
                       </div>
                     </div>

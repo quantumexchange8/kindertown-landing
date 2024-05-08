@@ -13,8 +13,9 @@ import gallery from "../../assets/parentmodal/gallery.svg";
 import data from "../../assets/parentmodal/data.svg";
 import contact from "../../assets/parentmodal/contact.svg";
 import data2 from "../../assets/parentmodal/data2.svg";
-
+import { useTranslation } from "react-i18next";
 const ModalTeacher = ({ showModal2, setShowModal2 }) => {
+  const { t, i18n } = useTranslation();
   const handleCloseModal = () => {
     setShowModal2(false);
   };
@@ -57,14 +58,20 @@ const ModalTeacher = ({ showModal2, setShowModal2 }) => {
                     Your browser does not support the video tag.
                   </video>
                   <div
-                    className="absolute md:top-[49px] top-[26px] md:right-[46px] right-[23px] text-right md:text-[32px] text-xs md:w-[330px] w-[140px]"
+                    className={`absolute md:top-[49px] top-[26px] md:right-[46px] right-[23px] text-right md:text-[32px] text-xs  ${
+                      i18n.language === "en"
+                        ? " md:w-[330px] w-[140px] "
+                        : i18n.language === "ms"
+                        ? " md:w-[370px] w-[154px]"
+                        : "md:w-[330px] w-[140px]"
+                    }
+                    `}
                     style={{
                       fontFamily: "SF Pro Display B",
                       lineHeight: "normal",
                     }}
                   >
-                    The selfless guidance that teachers provide to children is
-                    evident to everyone.
+                    {t("teachermodal-video")}
                   </div>
                 </div>
 
@@ -77,8 +84,7 @@ const ModalTeacher = ({ showModal2, setShowModal2 }) => {
                         style={{ fontFamily: "SF Pro Display B" }}
                       >
                         <div className="flex flex-col">
-                          The dynamics of children at school are observed and
-                          guided by teachers.
+                          {t("teachermodal-title")}
                         </div>
                       </div>
                       <div className="flex">
@@ -89,12 +95,7 @@ const ModalTeacher = ({ showModal2, setShowModal2 }) => {
                             lineHeight: "normal",
                           }}
                         >
-                          We fully understand the crucial role teachers play in
-                          the education of children. From language learning to
-                          homework, moral values, and discipline, teachers must
-                          attentively observe each student and communicate
-                          effectively with parents to keep them informed about
-                          their child's progress at school.
+                          {t("teachermodal-desc1")}
                         </div>{" "}
                         <div className="hidden md:flex absolute right-[40px] top-[930px]">
                           <button onClick={() => setShowModal2(false)}>
@@ -113,9 +114,7 @@ const ModalTeacher = ({ showModal2, setShowModal2 }) => {
                           lineHeight: "normal",
                         }}
                       >
-                        Therefore, teachers need better management tools to make
-                        their workload more efficient. The valuable time of
-                        teachers should not be wasted due to busyness.
+                        {t("teachermodal-desc2")}
                       </div>
                     </div>
 
@@ -283,7 +282,7 @@ const ModalTeacher = ({ showModal2, setShowModal2 }) => {
                             className="md:text-4xl text-2xl"
                             style={{ fontFamily: " SF Pro Display B" }}
                           >
-                            Features:
+                            {t("feature")}:
                           </div>
                         </div>
                         <div
@@ -294,28 +293,14 @@ const ModalTeacher = ({ showModal2, setShowModal2 }) => {
                           }}
                         >
                           <ul className="list-outside list-disc flex flex-col md:gap-10 gap-5 md:pl-[50px] pl-[30px]">
-                            <li>Update students check-in / out status.</li>
-                            <li>Update students temperature.</li>
-                            <li>
-                              Update students daily activities and academic
-                              performance.
-                            </li>
-                            <li>
-                              Update students homework and grades status through
-                              the Kindertown app.
-                            </li>
-                            <li>
-                              Referral Program and Reward Wallet function.
-                            </li>
-                            <li>
-                              Interact with teacher or other parents from the
-                              same kindergarten in ‘Community’.
-                            </li>
-                            <li>
-                              Receive self pick-up / delay pick-up / emergency
-                              pick-up protection / change contact notification.{" "}
-                            </li>
-                            <li>Time table checking function.</li>
+                            <li>{t("update-checkin")}</li>
+                            <li>{t("update-temp")}</li>
+                            <li>{t("update-activity")}</li>
+                            <li>{t("update-homework")}</li>
+                            <li>{t("referral-function")}</li>
+                            <li>{t("interact-community")}</li>
+                            <li>{t("receive-pickup")}</li>
+                            <li>{t("timetable-function")}</li>
                           </ul>
                         </div>
                       </div>

@@ -20,22 +20,15 @@ import Main from "../assets/home/main.png";
 import { useTranslation } from "react-i18next";
 const Home = () => {
   const { t, i18n } = useTranslation();
-  const getLocaleGap = () => {
-    switch (i18n.language) {
-      case "en":
-        return "gap-[30px] md:gap-5";
-      case "ms":
-        return "md:gap-[45px]";
-      default:
-        return "gap-[50px] md:gap-[60px]";
-    }
-  };
+
   const getDocumentJourneyWidth = () => {
     switch (i18n.language) {
       case "en":
         return "md:w-[460px] w-[150px]";
       case "ms":
         return "md:w-[495px] w-[160px]";
+      case "zh":
+        return "md:w-[460px] w-[150px]";
       default:
         return "md:w-[460px] w-[150px]";
     }
@@ -46,6 +39,8 @@ const Home = () => {
         return "w-[900px]";
       case "ms":
         return " w-[990px]";
+      case "zh":
+        return " w-full";
       default:
         return "w-[900px]";
     }
@@ -63,22 +58,58 @@ const Home = () => {
               </div>
               {/*Content 2 */}
               <div className="w-full flex flex-col justify-center gap-[150px]">
-                <div className="flex flex-col items-center w-full md:gap-[60px] gap-[30px]">
+                <div
+                  className={`flex flex-col items-center w-full ${
+                    i18n.language === "en"
+                      ? "gap-[30px] md:gap-[60px] "
+                      : i18n.language === "ms"
+                      ? "md:gap-[100px] gap-[30px] "
+                      : i18n.language === "zh"
+                      ? "gap-[50px] md:gap-[100px] "
+                      : "gap-[30px] md:gap-[60px] "
+                  }`}
+                >
                   <div
-                    className="w-full text-4xl md:text-[80px] text-center md:leading-[90px]"
+                    className={`w-full text-4xl md:text-[80px] text-center md:leading-[90px] ${
+                      i18n.language === "zh" ? "font-black" : ""
+                    }`}
                     style={{ fontFamily: "SF Pro Display B" }}
                   >
                     <div>{t("zero-worry")}</div>
                     <div> {t("zero-hassle")}</div>
                   </div>
                   <div
-                    className="w-full text-center md:text-[32px] text-xl"
+                    className={`w-full text-center ${
+                      i18n.language === "en"
+                        ? "md:text-[32px] text-xl "
+                        : i18n.language === "ms"
+                        ? "md:text-[32px] text-xl "
+                        : i18n.language === "zh"
+                        ? "md:text-[36px] text-xl "
+                        : "md:text-[32px] text-xl "
+                    }`}
                     style={{
                       fontFamily: "SF Pro Display M",
                       lineHeight: "normal",
                     }}
                   >
-                    {t("main-text")}
+                    <span
+                      className={` inline-block ${
+                        i18n.language === "en"
+                          ? "w-full"
+                          : i18n.language === "ms"
+                          ? "md:w-[900px] "
+                          : i18n.language === "zh"
+                          ? "md:w-[830px]"
+                          : "md:w-[950px]"
+                      }`}
+                      style={{
+                        fontFamily: "SF Pro Display M",
+                        lineHeight: "normal",
+                      }}
+                    >
+                      {t("main-text")}
+                    </span>
 
                     {/* <div className="" ></div>
                 <div className="text-[32px]" style={{ fontFamily: "SF Pro Display M" }}></div>
@@ -92,8 +123,19 @@ const Home = () => {
             {/*Kindertown superhighlight*/}
             <div className="flex flex-col md:gap-[50px] gap-[30px]  justify-center items-center ">
               <div
-                className="text-center w-[175px] md:w-[496px] md:text-3xl text-xl"
-                style={{ fontFamily: "SF Pro Display B" }}
+                className={`text-center w-[175px] md:w-[496px] ${
+                  i18n.language === "en"
+                    ? "md:text-3xl text-xl "
+                    : i18n.language === "ms"
+                    ? "md:text-3xl text-xl  "
+                    : i18n.language === "zh"
+                    ? "md:text-[32px] text-xl"
+                    : "md:text-3xl text-xl "
+                }`}
+                style={{
+                  fontFamily: "SF Pro Display B",
+                  fontWeight: i18n.language === "zh" ? "1000" : "",
+                }}
               >
                 {t("app-highlight")}
               </div>
@@ -107,11 +149,22 @@ const Home = () => {
                     />
                   </div>
 
-                  <div className="flex flex-col items-center gap-[30px] md:gap-5 w-[270px] md:h-full">
+                  <div
+                    className={`flex flex-col items-center  w-[270px] md:h-full ${
+                      i18n.language === "zh"
+                        ? "gap-[30px] md:gap-[26px] "
+                        : "gap-[30px] md:gap-5 "
+                    }`}
+                  >
                     <div
-                      className="text-center text-xl w-full"
+                      className={`text-center text-xl w-full ${
+                        i18n.language === "zh" ? "font-black" : " "
+                      }`}
                       style={{
-                        fontFamily: "SF Pro Display B",
+                        fontFamily:
+                          i18n.language === "zh"
+                            ? "SF Pro Display EB"
+                            : "SF Pro Display B",
                         lineHeight: "normal",
                       }}
                     >
@@ -161,19 +214,19 @@ const Home = () => {
                           lineHeight: "normal",
                         }}
                       >
-                        You can now secure a seat in
+                        {t("now-secure-mobile")}
                       </div>
                       <div
                         className="flex items-center justify-center h-[25px]"
                         style={{ fontFamily: "SF Pro Display M" }}
                       >
-                        your preferred kindergarten
+                        {t("now-secure2-mobile")}
                       </div>
                       <div
                         className="flex items-center justify-center h-[25px]"
                         style={{ fontFamily: "SF Pro Display M" }}
                       >
-                        in Kindertown.
+                        {t("now-secure3-mobile")}
                       </div>
                     </div>
                   </div>
@@ -187,9 +240,17 @@ const Home = () => {
                     />
                   </div>
 
-                  <div className="flex flex-col items-center gap-[30px] md:gap-5 w-[270px] md:h-full">
+                  <div
+                    className={`flex flex-col items-center w-[270px] md:h-full ${
+                      i18n.language === "zh"
+                        ? "gap-[30px] md:gap-[26px] "
+                        : "gap-[30px] md:gap-5 "
+                    }`}
+                  >
                     <div
-                      className="text-center text-xl leading-normal w-full"
+                      className={`text-center text-xl leading-normal w-full ${
+                        i18n.language === "zh" ? "font-black" : " "
+                      }`}
                       style={{ fontFamily: "SF Pro Display B" }}
                     >
                       <div className="flex items-center justify-center h-6">
@@ -215,9 +276,11 @@ const Home = () => {
                       <div className="flex items-center justify-center h-[25px]">
                         {t("stay-inform2")}
                       </div>
-                      <div className="flex items-center justify-center h-[25px]">
-                        {t("stay-inform3")}
-                      </div>
+                      {(i18n.language === "ms" || i18n.language === "en") && (
+                        <div className="flex items-center justify-center h-[25px]">
+                          {t("stay-inform3")}
+                        </div>
+                      )}
                       {i18n.language === "ms" && (
                         <div className="flex items-center justify-center h-[25px]">
                           {t("stay-inform4")}
@@ -235,9 +298,21 @@ const Home = () => {
                     />
                   </div>
 
-                  <div className="flex flex-col items-center gap-[30px] md:gap-[18px] w-full md:h-full">
+                  <div
+                    className={`flex flex-col items-center gap-[30px] w-full md:h-full ${
+                      i18n.language === "zh"
+                        ? "md:gap-[26px]"
+                        : i18n.language === "ms"
+                        ? "md:gap-5"
+                        : i18n.language === "en"
+                        ? "md:gap-[18px]"
+                        : "md:gap-[18px]"
+                    }`}
+                  >
                     <div
-                      className="text-center text-xl leading-normal w-full"
+                      className={`text-center text-xl leading-normal w-full ${
+                        i18n.language === "zh" ? "font-black" : " "
+                      }`}
                       style={{ fontFamily: "SF Pro Display B" }}
                     >
                       <div className="flex items-center justify-center h-6">
@@ -275,10 +350,20 @@ const Home = () => {
                   </div>
 
                   <div
-                    className={`flex flex-col items-center  w-[270px] md:h-full ${getLocaleGap()}`}
+                    className={`flex flex-col items-center  w-[270px] md:h-full gap-[30px] ${
+                      i18n.language === "zh"
+                        ? "md:gap-[26px]"
+                        : i18n.language === "ms"
+                        ? "md:gap-[45px]"
+                        : i18n.language === "en"
+                        ? "md:gap-5"
+                        : "md:gap-5"
+                    }`}
                   >
                     <div
-                      className="text-center text-xl leading-normal w-full"
+                      className={`text-center text-xl leading-normal w-full ${
+                        i18n.language === "zh" ? "font-black" : " "
+                      }`}
                       style={{ fontFamily: "SF Pro Display B" }}
                     >
                       <div className="flex items-center justify-center h-6">
@@ -289,26 +374,22 @@ const Home = () => {
                       </div>
                     </div>
 
-                    <div className="text-center text-xl leading-normal">
-                      <div
-                        className="flex items-center justify-center h-[25px]"
-                        style={{ fontFamily: "SF Pro Display M" }}
-                      >
+                    <div
+                      className="text-center text-xl leading-normal"
+                      style={{ fontFamily: "SF Pro Display M" }}
+                    >
+                      <div className="flex items-center justify-center h-[25px]">
                         {t("school-fee")}
                       </div>
 
-                      <div
-                        className="flex items-center justify-center h-[25px]"
-                        style={{ fontFamily: "SF Pro Display M" }}
-                      >
+                      <div className="flex items-center justify-center h-[25px]">
                         {t("school-fee2")}
                       </div>
-                      <div
-                        className="flex items-center justify-center h-[25px]"
-                        style={{ fontFamily: "SF Pro Display M" }}
-                      >
-                        {t("school-fee3")}
-                      </div>
+                      {(i18n.language === "ms" || i18n.language === "en") && (
+                        <div className="flex items-center justify-center h-[25px]">
+                          {t("school-fee3")}
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -322,9 +403,21 @@ const Home = () => {
                     />
                   </div>
 
-                  <div className="flex flex-col items-center gap-[30px] md:gap-5 w-[270px] md:h-full">
+                  <div
+                    className={`flex flex-col items-center gap-[30px]  w-[270px] md:h-full  ${
+                      i18n.language === "zh"
+                        ? "md:gap-[26px]"
+                        : i18n.language === "ms"
+                        ? "md:gap-5"
+                        : i18n.language === "en"
+                        ? "md:gap-5"
+                        : "md:gap-5"
+                    }`}
+                  >
                     <div
-                      className="text-center text-xl leading-normal w-full"
+                      className={`text-center text-xl leading-normal w-full ${
+                        i18n.language === "zh" ? "font-black" : " "
+                      }`}
                       style={{ fontFamily: "SF Pro Display B" }}
                     >
                       <div className="flex items-center justify-center h-6">
@@ -354,12 +447,14 @@ const Home = () => {
                       >
                         {t("supply-resource2")}
                       </div>
-                      <div
-                        className="flex items-center justify-center h-[25px]"
-                        style={{ fontFamily: "SF Pro Display M" }}
-                      >
-                        {t("supply-resource3")}
-                      </div>
+                      {(i18n.language === "ms" || i18n.language === "en") && (
+                        <div
+                          className="flex items-center justify-center h-[25px]"
+                          style={{ fontFamily: "SF Pro Display M" }}
+                        >
+                          {t("supply-resource3")}
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -373,10 +468,20 @@ const Home = () => {
                     />
                   </div>
                   <div
-                    className={`flex flex-col items-center md:gap-5 w-[270px] md:h-full ${getLocaleGap()}`}
+                    className={`flex flex-col items-center  w-[270px] md:h-full gap-[30px] ${
+                      i18n.language === "zh"
+                        ? "md:gap-[26px]"
+                        : i18n.language === "ms"
+                        ? "md:gap-[45px]"
+                        : i18n.language === "en"
+                        ? "md:gap-5"
+                        : "md:gap-5"
+                    }`}
                   >
                     <div
-                      className="text-center text-xl leading-normal w-full"
+                      className={`text-center text-xl leading-normal w-full ${
+                        i18n.language === "zh" ? "font-black" : " "
+                      }`}
                       style={{ fontFamily: "SF Pro Display B" }}
                     >
                       <div className="flex items-center justify-center h-6">
@@ -401,12 +506,14 @@ const Home = () => {
                       >
                         {t("interaction-teacher2")}
                       </div>
-                      <div
-                        className="flex items-center justify-center h-[25px]"
-                        style={{ fontFamily: "SF Pro Display M" }}
-                      >
-                        {t("interaction-teacher3")}
-                      </div>
+                      {(i18n.language === "ms" || i18n.language === "en") && (
+                        <div
+                          className="flex items-center justify-center h-[25px]"
+                          style={{ fontFamily: "SF Pro Display M" }}
+                        >
+                          {t("interaction-teacher3")}
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -414,8 +521,16 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="w-full flex flex-col bg-[#FFF7EF] justify-center items-center md:px-0 px-5 md:py-[150px] pt-[50px] pb-[100px]">
-          <div className="w-full md:max-w-[1000px] flex flex-col justify-center md:gap-[200px] gap-[100px] ">
+        <div
+          className={`w-full flex flex-col bg-[#FFF7EF] justify-center items-center md:px-0 px-5 md:py-[150px] pt-[50px] ${
+            i18n.language === "en" ? "pb-[100px]" : "  pb-[50px]"
+          }`}
+        >
+          <div
+            className={`w-full md:max-w-[1000px] flex flex-col justify-center md:gap-[200px] ${
+              i18n.language === "zh" ? "gap-[50px]" : "gap-[100px]"
+            }`}
+          >
             {/*Essential tools*/}
             <div className="w-full flex flex-col md:gap-[50px] gap-[30px]">
               <div className="flex flex-col justify-center items-center">
@@ -427,10 +542,13 @@ const Home = () => {
               </div>
               <div className="flex flex-col items-center w-full ">
                 <div
-                  className="text-center text-4xl md:text-[80px] text-[#7A5AF8] md:leading-[90px] leading-normal w-full"
                   style={{
                     fontFamily: "SF Pro Display B",
+                    lineHeight: "normal",
                   }}
+                  className={`text-center text-4xl md:text-[80px] text-[#7A5AF8] md:leading-[90px]  w-full  ${
+                    i18n.language === "zh" ? "font-bold" : " "
+                  }`}
                 >
                   <div className="flex items-center justify-center">
                     {t("essential-tool")}
@@ -443,22 +561,40 @@ const Home = () => {
             </div>
             <div className="flex flex-col justify-center items-center md:gap-[150px] gap-[100px]">
               {/*Content 5*/}
-              <div className="flex flex-wrap w-full md:gap-9 gap-[30px]">
+              <div
+                className={`flex flex-wrap w-full md:gap-9  ${
+                  i18n.language === "zh" ? "gap-5" : " gap-[30px]"
+                }`}
+              >
                 <div>
                   <img src={Family} alt="Family" />
                 </div>
-                <div className="flex flex-col justify-center w-full md:w-[864px] md:gap-[30px] gap-[15px]">
+                <div
+                  className={`flex flex-col justify-center w-full md:w-[864px] md:gap-[30px] ${
+                    i18n.language === "zh" ? "gap-[10px]" : "  gap-[15px]"
+                  }`}
+                >
                   <div
                     className="text-[#4D9138] text-[20px] md:text-[32px] md:pt-[30px]"
-                    style={{ fontFamily: "SF Pro Display EB" }}
+                    style={{
+                      fontFamily: "SF Pro Display EB",
+                      fontWeight: i18n.language === "zh" ? "860" : "",
+                    }}
                   >
                     <div> {t("learn-journey")}</div>
                   </div>
                   <div>
                     <div
-                      className="md:text-[32px] text-xl flex flex-col md:gap-10 gap-5"
+                      className={`text-xl flex flex-col md:gap-10 gap-5 ${
+                        i18n.language === "zh"
+                          ? "md:text-[30px]"
+                          : "md:text-[32px]"
+                      }`}
                       style={{
-                        fontFamily: "SF Pro Display M",
+                        fontFamily:
+                          i18n.language === "zh"
+                            ? "SF Pro Display R"
+                            : "SF Pro Display M",
                         lineHeight: "normal",
                       }}
                     >
@@ -469,13 +605,23 @@ const Home = () => {
                 </div>
               </div>
               {/*Content 6*/}
-              <div className="flex flex-wrap w-full md:gap-9 gap-[30px]">
+              <div
+                className={`flex flex-wrap w-full md:gap-9  ${
+                  i18n.language === "zh" ? "gap-5" : " gap-[30px]"
+                }`}
+              >
                 <div>
                   <img src={Teachers} alt="Teacher" />
                 </div>
-                <div className="flex flex-col justify-center md:w-[864px] md:gap-[30px] gap-[15px]">
+                <div
+                  className={`flex flex-col justify-center md:w-[864px] md:gap-[30px] ${
+                    i18n.language === "zh" ? "gap-[10px]" : "  gap-[15px]"
+                  }`}
+                >
                   <div
-                    className="text-[#752912] md:text-[32px] text-[20px] md:pt-[30px]"
+                    className={`text-[#752912] md:text-[32px] text-[20px] md:pt-[30px] ${
+                      i18n.language === "zh" ? "font-bold" : ""
+                    }`}
                     style={{
                       fontFamily: "SF Pro Display EB",
                       lineHeight: "normal",
@@ -485,9 +631,16 @@ const Home = () => {
                   </div>
                   <div>
                     <div
-                      className="md:text-[32px] text-[20px]  flex flex-col md:gap-10 gap-5"
+                      className={` text-[20px]  flex flex-col md:gap-10 gap-5 ${
+                        i18n.language === "zh"
+                          ? "md:text-[30px]"
+                          : "md:text-[32px]"
+                      }`}
                       style={{
-                        fontFamily: "SF Pro Display M",
+                        fontFamily:
+                          i18n.language === "zh"
+                            ? "SF Pro Display R"
+                            : "SF Pro Display M",
                         lineHeight: "normal",
                       }}
                     >
@@ -498,22 +651,39 @@ const Home = () => {
                 </div>
               </div>
               {/*Content 7*/}
-              <div className="flex flex-wrap w-full md:gap-9 gap-[30px]">
+              <div
+                className={`flex flex-wrap w-full md:gap-9 ${
+                  i18n.language === "zh" ? "gap-5" : " gap-[30px]"
+                }`}
+              >
                 <div>
                   <img src={Slowmode} alt="SlowModes" />
                 </div>
-                <div className="flex flex-col justify-center w-full md:w-[864px] md:gap-[30px] gap-[15px]">
+                <div
+                  className={`flex flex-col justify-center w-full md:w-[864px] md:gap-[30px] ${
+                    i18n.language === "zh" ? "gap-[10px]" : "gap-[15px]"
+                  }`}
+                >
                   <div
-                    className="text-[#00A0CB] md:text-[32px] text-xl md:pt-[30px]"
+                    className={`text-[#00A0CB] md:text-[32px] text-xl md:pt-[30px] ${
+                      i18n.language === "zh" ? "font-bold" : ""
+                    }`}
                     style={{ fontFamily: "SF Pro Display EB" }}
                   >
                     {t("slow-mode")}
                   </div>
                   <div>
                     <div
-                      className="md:text-[32px] text-xl  flex flex-col md:gap-10 gap-5"
+                      className={`text-xl  flex flex-col md:gap-10 gap-5  ${
+                        i18n.language === "zh"
+                          ? "md:text-[30px]"
+                          : "md:text-[32px]"
+                      }`}
                       style={{
-                        fontFamily: "SF Pro Display M",
+                        fontFamily:
+                          i18n.language === "zh"
+                            ? "SF Pro Display R"
+                            : "SF Pro Display M",
                         lineHeight: "normal",
                       }}
                     >
@@ -838,6 +1008,7 @@ const Home = () => {
               style={{
                 fontFamily: "SF Pro Display B",
                 lineHeight: "normal",
+                fontWeight: i18n.language === "zh" ? "700" : "",
               }}
             >
               {t("document-journey")}
@@ -850,24 +1021,49 @@ const Home = () => {
         <div className="w-full md:max-w-[1000px] flex flex-col justify-center items-center md:gap-[200px] gap-[100px]">
           {/*CONTENT 9*/}
           <div className="w-full flex flex-col justify-center items-center gap-[30px] md:gap-[50px]">
-            <div>
-              <img
-                src={Choose}
-                alt="Teachers"
-                className="md:w-32 md:h-32 w-full"
-              />
-            </div>
-            <div className="flex md:w-[690px] w-full justify-center items-center">
+            <div
+              className={`flex flex-col justify-center items-center ${
+                i18n.language === "zh"
+                  ? "md:gap-[66px] gap-[30px]"
+                  : " md:gap-[50px] gap-[30px]"
+              }`}
+            >
+              <div>
+                <img
+                  src={Choose}
+                  alt="Teachers"
+                  className="md:w-32 md:h-32 w-full"
+                />
+              </div>
               <div
-                className="text-[#752A15] md:text-[80px] text-center text-4xl md:leading-[90px]"
-                style={{ fontFamily: "SF Pro Display B" }}
+                className={`flex w-full justify-center items-center ${
+                  i18n.language === "zh" ? "md:w-[320px]" : "md:w-[690px] "
+                }`}
               >
-                {t("choose-KT")}
+                <div
+                  className={`text-[#752A15] md:text-[80px] text-center text-4xl md:leading-[90px] ${
+                    i18n.language === "zh" ? "font-bold" : " "
+                  }`}
+                  style={{ fontFamily: "SF Pro Display B" }}
+                >
+                  {(i18n.language === "ms" || i18n.language === "en") && (
+                    <div> {t("choose-KT")}</div>
+                  )}
+                  {i18n.language === "zh" && (
+                    <>
+                      <div> {t("choose-KT-mand")}</div>
+                      <div> {t("choose-KT-mand2")}</div>
+                    </>
+                  )}
+                </div>
               </div>
             </div>
+
             <div className="flex items-center">
               <div
-                className="md:text-[32px] text-base text-center"
+                className={`md:text-[32px] text-center ${
+                  i18n.language === "zh" ? "text-xl" : " text-base"
+                }`}
                 style={{
                   fontFamily: "SF Pro Display M",
                   lineHeight: "normal",
@@ -875,9 +1071,12 @@ const Home = () => {
               >
                 {/*Desktop*/}
                 <div className="hidden md:flex flex-col justify-center items-center">
-                  <div> {t("choose-desc")}</div>
+                  <div> {t("choose-desc1")}</div>
                   <div> {t("choose-desc2")}</div>
-                  <div> {t("choose-desc3")}</div>
+                  {(i18n.language === "ms" || i18n.language === "en") && (
+                    <div> {t("choose-desc3")}</div>
+                  )}
+
                   {i18n.language === "ms" && <div> {t("choose-desc4")}</div>}
                 </div>
 
@@ -898,9 +1097,17 @@ const Home = () => {
                 className="md:w-[600px] md:h-[426px]"
               />
             </div>
-            <div className="flex flex-col justify-center items-center gap-4 md:gap-[30px]">
+            <div
+              className={`flex flex-col justify-center items-center ${
+                i18n.language === "zh"
+                  ? "gap-5 md:gap-4"
+                  : " gap-4 md:gap-[30px]"
+              }`}
+            >
               <div
-                className="md:text-[50px] text-[32px]"
+                className={`md:text-[50px] text-[32px] ${
+                  i18n.language === "zh" ? "font-bold" : ""
+                }`}
                 style={{ fontFamily: "SF Pro Display B" }}
               >
                 {t("school-owner")}
@@ -908,14 +1115,27 @@ const Home = () => {
 
               <div className="flex items-center">
                 <div
-                  className="md:text-[32px] text-base text-center"
+                  className={`text-base text-center justify-center items-center ${
+                    i18n.language === "zh"
+                      ? "md:text-[30px] "
+                      : "md:text-[32px] "
+                  }`}
                   style={{
                     fontFamily: "SF Pro Display M",
                     lineHeight: "normal",
                   }}
                 >
-                  <div className="flex items-center justify-center ">
-                    {t("school-owner-desc")}
+                  {/**Web version */}
+                  <div className="hidden md:flex flex-col justify-center items-center">
+                    <div> {t("school-owner-desc")}</div>
+                    {i18n.language === "zh" && (
+                      <div> {t("school-owner-desc2")}</div>
+                    )}
+                  </div>
+
+                  {/**mobile version */}
+                  <div className="md:hidden flex flex-col justify-center items-center">
+                    <div> {t("school-owner-desc-mobile")}</div>
                   </div>
                 </div>
               </div>
@@ -932,37 +1152,47 @@ const Home = () => {
                 className="md:w-[600px] md:h-[388px]"
               />
             </div>
-            <div className="w-full flex flex-col justify-center items-center md:gap-[30px] gap-4">
+            <div
+              className={`w-full flex flex-col justify-center items-center  ${
+                i18n.language === "zh"
+                  ? "gap-5 md:gap-4"
+                  : " gap-4 md:gap-[30px]"
+              }`}
+            >
               <div
-                className="md:text-[50px] text-[32px]"
+                className={`md:text-[50px] text-[32px] ${
+                  i18n.language === "zh" ? "font-bold" : ""
+                }`}
                 style={{ fontFamily: "SF Pro Display B" }}
               >
                 {t("administrator")}
               </div>
 
               <div
-                className="w-full flex flex-col items-center md:text-[32px] text-base text-center"
+                className={`w-full flex flex-col items-center text-base text-center  ${
+                  i18n.language === "zh" ? "md:text-3xl" : "md:text-[32px]"
+                }`}
                 style={{
                   fontFamily: "SF Pro Display M",
                   lineHeight: "normal",
                 }}
               >
                 {i18n.language === "ms" && (
-                  <div className=" md:flex hidden flex-col items-center justify-center">
-                    <div> {t("admin-desc1")}</div>
-                    <div> {t("admin-desc2")}</div>
-                    <div> {t("admin-desc3")}</div>
-                    <div> {t("admin-desc4")}</div>
-                  </div>
+                  <>
+                    <div className="hidden md:flex flex-col justify-center items-center">
+                      <div> {t("admin-desc1")}</div>
+                      <div> {t("admin-desc2")}</div>
+                      <div> {t("admin-desc3")}</div>
+                      <div> {t("admin-desc4")}</div>
+                    </div>
+                    <div className="md:hidden flex flex-col justify-center items-center">
+                      <div> {t("admin-desc")}</div>
+                    </div>
+                  </>
                 )}
-                {i18n.language === "ms" && (
-                  <div className="md:hidden flex items-center justify-center">
-                    {t("admin-desc")}
-                  </div>
-                )}
-                {i18n.language === "en" && (
-                  <div className="flex items-center justify-center">
-                    {t("admin-desc")}
+                {(i18n.language === "en" || i18n.language === "zh") && (
+                  <div className="flex flex-col justify-center items-center">
+                    <div> {t("admin-desc")}</div>
                   </div>
                 )}
               </div>
@@ -978,9 +1208,17 @@ const Home = () => {
                 className="md:w-[600px] md:h-[406px]"
               />
             </div>
-            <div className="flex flex-col justify-center items-center md:gap-[30px] gap-4">
+            <div
+              className={`flex flex-col justify-center items-center  ${
+                i18n.language === "zh"
+                  ? "gap-5 md:gap-4"
+                  : " gap-4 md:gap-[30px]"
+              }`}
+            >
               <div
-                className="md:text-[50px] text-[32px]"
+                className={`md:text-[50px] text-[32px]  ${
+                  i18n.language === "zh" ? "font-bold" : ""
+                }`}
                 style={{ fontFamily: "SF Pro Display B" }}
               >
                 {t("teacher")}
@@ -988,7 +1226,11 @@ const Home = () => {
 
               <div className="flex items-center">
                 <div
-                  className="md:text-[32px] text-base text-center"
+                  className={`text-base text-center  ${
+                    i18n.language === "zh"
+                      ? "md:text-[30px] "
+                      : "md:text-[32px] "
+                  }`}
                   style={{
                     fontFamily: "SF Pro Display M",
                     lineHeight: "normal",
@@ -996,13 +1238,16 @@ const Home = () => {
                 >
                   {/*Mobile*/}
                   <div className="md:hidden flex items-center justify-center text-center">
-                    {t("teacher-desc")}
+                    {t("teacher-desc-mobile")}
                   </div>
 
                   {/*Desktop*/}
                   <div className="hidden md:flex flex-wrap justify-center items-center">
                     <span className={`inline-block ${TeacherDescWidth()}`}>
-                      {t("teacher-desc")}
+                      <div>{t("teacher-desc")}</div>
+                      {i18n.language === "zh" && (
+                        <div>{t("teacher-desc2")}</div>
+                      )}
                     </span>
                   </div>
                 </div>
@@ -1018,9 +1263,17 @@ const Home = () => {
                 className="md:w-[530px] md:h-[450px]"
               />
             </div>
-            <div className="flex flex-col justify-center items-center md:gap-[30px] gap-4">
+            <div
+              className={`flex flex-col justify-center items-center ${
+                i18n.language === "zh"
+                  ? "gap-5 md:gap-4"
+                  : " gap-4 md:gap-[30px]"
+              }`}
+            >
               <div
-                className="md:text-[50px] text-[32px]"
+                className={`md:text-[50px] text-[32px]  ${
+                  i18n.language === "zh" ? "font-bold" : ""
+                }`}
                 style={{ fontFamily: "SF Pro Display B" }}
               >
                 {t("parent")}
@@ -1028,18 +1281,17 @@ const Home = () => {
 
               <div className="flex items-center">
                 <div
-                  className="md:text-[32px] text-base text-center"
+                  className={`text-base text-center ${
+                    i18n.language === "zh"
+                      ? "md:text-[30px] "
+                      : "md:text-[32px] "
+                  }`}
                   style={{
                     fontFamily: "SF Pro Display M",
                     lineHeight: "normal",
                   }}
                 >
-                  {/*Mobile*/}
-                  <div className="md:hidden flex items-center justify-center">
-                    {t("parent-desc")}
-                  </div>
-                  {/*Desktop*/}
-                  <div className="hidden md:flex items-center justify-center ">
+                  <div className="flex items-center justify-center ">
                     {t("parent-desc")}
                   </div>
                 </div>

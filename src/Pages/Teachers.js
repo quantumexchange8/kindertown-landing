@@ -10,27 +10,37 @@ import CTLogo from "../assets/admin/ct-logo.svg";
 import Header from "../assets/teacher/header.png";
 import { useTranslation } from "react-i18next";
 const Teacher = () => {
-  const { t } = useTranslation();
+  const { i18n, t } = useTranslation();
   return (
     <>
-      <div className="w-full flex flex-col justify-center items-center md:pt-[150px] pt-[80px] md:gap-[100px] gap-[50px] md:pb-[200px] pb-[100px]">
+      <div
+        className={`w-full flex flex-col justify-center items-center md:pt-[150px] pt-[80px] md:gap-[100px] gap-[50px] pb-[100px] ${
+          i18n.language === "zh" ? "md:pb-[300px]" : "md:pb-[200px]"
+        }`}
+      >
         <div className="w-full">
           <img src={Header} alt="Header" className="w-full" />
         </div>
 
         <div className="w-full flex flex-col justify-center items-center md:px-0 pl-[31px] pr-[32px]">
-          <div className="w-full md:max-w-[1000px]  flex flex-col md:gap-[200px] gap-[100px]">
+          <div
+            className={`w-full md:max-w-[1000px]  flex flex-col  gap-[100px] ${
+              i18n.language === "zh" ? " md:gap-[300px]" : "  md:gap-[200px]"
+            }`}
+          >
             {/*CONTENT 2*/}
             <div className="w-full flex flex-col md:gap-[50px] gap-[30px]">
               <div className="flex flex-col justify-center items-center">
                 <div
-                  className="text-center md:text-[80px] text-4xl"
+                  className={`text-center md:text-[80px] text-4xl  ${
+                    i18n.language === "zh" ? "font-bold" : ""
+                  }`}
                   style={{
                     fontFamily: "SF Pro Display B",
                     lineHeight: "normal",
                   }}
                 >
-                  <div> Kindertown Teacher</div>
+                  <div>{t("kindertown-teacher")}</div>
                 </div>
               </div>
 
@@ -42,14 +52,23 @@ const Teacher = () => {
                     lineHeight: "normal",
                   }}
                 >
-                  {t("KT-teacher-desc")}
+                  <span
+                    className={`inline-block ${
+                      i18n.language === "zh" ? "md:w-[900px]" : "w-full"
+                    }`}
+                  >
+                    {t("KT-teacher-desc")}
+                  </span>
                 </div>
               </div>
               <div className="md:hidden flex flex-col justify-center items-center">
                 <div
                   className="text-center md:text-[32px] text-xl"
                   style={{
-                    fontFamily: "SF Pro Display Semibold",
+                    fontFamily:
+                      i18n.language === "zh"
+                        ? "SF Pro Display M"
+                        : "SF Pro Display Semibold",
                     lineHeight: "normal",
                   }}
                 >
@@ -58,7 +77,13 @@ const Teacher = () => {
               </div>
             </div>
             {/*CONTENT 3*/}
-            <div className="w-full flex flex-col md:gap-[50px] gap-[30px]">
+            <div
+              className={`w-full flex flex-col ${
+                i18n.language === "zh"
+                  ? "md:gap-[100px] gap-[50px] "
+                  : "md:gap-[50px] gap-[30px] "
+              }`}
+            >
               <div className="flex flex-col justify-center items-center">
                 <img
                   src={Tab1}
@@ -68,18 +93,35 @@ const Teacher = () => {
               </div>
               <div className="flex flex-col justify-center items-center">
                 <div
-                  className="flex flex-col md:text-[40px] text-base text-center"
+                  className={`flex flex-col justify-center md:text-[40px] text-center ${
+                    i18n.language === "zh" ? "text-xl" : "text-base"
+                  }`}
                   style={{
-                    fontFamily: "SF Pro Display Semibold",
+                    fontFamily:
+                      i18n.language === "zh"
+                        ? "SF Pro Display M"
+                        : "SF Pro Display Semibold",
                     lineHeight: "normal",
                   }}
                 >
-                  {t("diff-ways")}
+                  <span
+                    className={`inline-block text-center ${
+                      i18n.language === "zh" ? "md:w-[965px]" : "w-full"
+                    }`}
+                  >
+                    {t("diff-ways")}
+                  </span>
                 </div>
               </div>
             </div>
             {/*CONTENT 4*/}
-            <div className="w-full flex flex-col gap-[30px] md:gap-[50px]">
+            <div
+              className={`w-full flex flex-col ${
+                i18n.language === "zh"
+                  ? "md:gap-[100px] gap-[50px] "
+                  : "md:gap-[50px] gap-[30px] "
+              }`}
+            >
               <div className="flex flex-col justify-center items-center">
                 <img
                   src={Tab2}
@@ -89,7 +131,9 @@ const Teacher = () => {
               </div>
               <div className="flex flex-col justify-center items-center">
                 <div
-                  className="flex flex-col md:text-[40px] text-base text-center"
+                  className={`flex flex-col md:text-[40px] text-center ${
+                    i18n.language === "zh" ? "text-xl" : "text-base"
+                  }`}
                   style={{
                     fontFamily: "SF Pro Display Semibold",
                     lineHeight: "normal",
@@ -102,7 +146,13 @@ const Teacher = () => {
               </div>
             </div>
             {/*CONTENT 5*/}
-            <div className="w-full flex flex-col md:gap-[50px] gap-[30px]">
+            <div
+              className={`w-full flex flex-col ${
+                i18n.language === "zh"
+                  ? "md:gap-[100px] gap-[50px] "
+                  : "md:gap-[50px] gap-[30px] "
+              }`}
+            >
               <div className="flex flex-col justify-center items-center">
                 <img
                   src={Tab3}
@@ -112,18 +162,36 @@ const Teacher = () => {
               </div>
               <div className="flex flex-col justify-center items-center">
                 <div
-                  className="md:text-[40px] text-base text-center"
+                  className={`md:text-[40px] text-center ${
+                    i18n.language === "zh" ? "text-xl" : "text-base"
+                  }`}
                   style={{
                     fontFamily: "SF Pro Display Semibold",
                     lineHeight: "normal",
                   }}
                 >
-                  <div className="flex flex-col">{t("harness-power")}</div>
+                  <div className="flex flex-col">
+                    <span
+                      className={`inline-block ${
+                        i18n.language === "zh"
+                          ? "md:w-[960px] w-full"
+                          : "w-full"
+                      }`}
+                    >
+                      {t("harness-power")}
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
             {/*CONTENT 6*/}
-            <div className="w-full flex flex-col md:gap-[50px] gap-[30px]">
+            <div
+              className={`w-full flex flex-col ${
+                i18n.language === "zh"
+                  ? "md:gap-[100px] gap-[50px] "
+                  : "md:gap-[50px] gap-[30px] "
+              }`}
+            >
               <div className="flex flex-col justify-center items-center">
                 <img
                   src={Tab4}
@@ -133,7 +201,9 @@ const Teacher = () => {
               </div>
               <div className="flex flex-col justify-center items-center">
                 <div
-                  className="md:text-[40px] text-base text-center"
+                  className={`md:text-[40px] text-center ${
+                    i18n.language === "zh" ? "text-xl" : "text-base"
+                  }`}
                   style={{
                     fontFamily: "SF Pro Display Semibold",
                     lineHeight: "normal",
@@ -144,7 +214,13 @@ const Teacher = () => {
               </div>
             </div>
             {/*CONTENT 7*/}
-            <div className="w-full flex flex-col md:gap-[50px] gap-[30px]">
+            <div
+              className={`w-full flex flex-col ${
+                i18n.language === "zh"
+                  ? "md:gap-[100px] gap-[50px] "
+                  : "md:gap-[50px] gap-[30px] "
+              }`}
+            >
               <div className="flex flex-col justify-center items-center">
                 <img
                   src={Tab5}
@@ -154,7 +230,9 @@ const Teacher = () => {
               </div>
               <div className="flex flex-col justify-center items-center">
                 <div
-                  className="md:text-[40px] text-base text-center"
+                  className={`md:text-[40px] text-center ${
+                    i18n.language === "zh" ? "text-xl" : "text-base"
+                  }`}
                   style={{
                     fontFamily: "SF Pro Display Semibold",
                     lineHeight: "normal",
