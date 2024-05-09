@@ -38,7 +38,11 @@ const Admin = () => {
   return (
     <>
       <div className="w-full flex flex-col justify-center items-center md:pt-[150px] pt-[80px] md:px-0 px-5 md:gap-[200px] gap-[100px] md:pb-[200px] pb-[100px]">
-        <div className="w-full md:max-w-[1000px] flex flex-col justify-center items-center md:gap-[200px] gap-[100px] ">
+        <div
+          className={`w-full md:max-w-[1000px] flex flex-col justify-center items-center  gap-[100px] ${
+            i18n.language === "zh" ? "md:gap-[300px]" : "md:gap-[200px]"
+          }`}
+        >
           {/*Content 1*/}
           <div className="w-full flex flex-col md:gap-[100px] gap-[50px]">
             <div className="flex flex-col items-center">
@@ -53,16 +57,16 @@ const Admin = () => {
               <div className="flex flex-col items-center">
                 <div
                   className={`md:text-[80px] text-4xl ${
-                    i18n.language === "zn" ? "font-bold" : ""
+                    i18n.language === "zh" ? "font-bold" : ""
                   }`}
                   style={{
                     fontFamily: "SF Pro Display B",
                     lineHeight: "normal",
                   }}
                 >
-                  {i18n.language === "zn" && <div>{t("KT-admin")}</div>}
+                  {i18n.language === "zh" && <div>{t("KT-admin")}</div>}
 
-                  {!(i18n.language === "zn") && (
+                  {!(i18n.language === "zh") && (
                     <>
                       <div className="hidden md:flex">{t("KT-admin")}</div>
                       <div className="md:hidden flex flex-col items-center">
@@ -75,7 +79,9 @@ const Admin = () => {
               </div>
               <div className="flex flex-col justify-center items-center">
                 <div
-                  className="md:text-[32px] text-xl text-center"
+                  className={`text-center text-xl ${
+                    i18n.language === "zh" ? "md:text-3xl " : "md:text-[32px] "
+                  }`}
                   style={{
                     lineHeight: "normal",
                   }}
@@ -86,7 +92,7 @@ const Admin = () => {
                   >
                     <span
                       className={`inline-block ${
-                        i18n.language === "zn" ? "md:w-[750px]" : "w-full"
+                        i18n.language === "zh" ? "md:w-[700px]" : "w-full"
                       }`}
                     >
                       {t("KT-admin-desc")}
@@ -96,7 +102,7 @@ const Admin = () => {
                     className="md:hidden flex flex-col"
                     style={{
                       fontFamily:
-                        i18n.language === "zn"
+                        i18n.language === "zh"
                           ? "SF Pro Display M"
                           : " SF Pro Display Semibold",
                     }}
@@ -107,8 +113,14 @@ const Admin = () => {
               </div>
             </div>
           </div>
-          {/*Content 2*/}
-          <div className="w-full flex md:flex-row flex-col gap-[30px] justify-center items-center">
+          {/*Content 2 -- Superb Interface  */}
+          <div
+            className={`w-full flex md:flex-row flex-col justify-center items-center gap-[30px] ${
+              i18n.language === "zh"
+                ? " md:gap-[50px] font-bold"
+                : " md:gap-[30px]"
+            }`}
+          >
             <div
               className="flex flex-col  text-center"
               style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
@@ -125,36 +137,6 @@ const Admin = () => {
                 <div>{t("superb-interface-mobile")}</div>
                 <div>{t("superb-interface2-mobile")}</div>
               </div>
-              {/*
-
-              {i18n.language === "en" && (
-                <div className="hidden md:flex flex-wrap items-center w-[400px] text-[50px]">
-                  Superb Interface with Exceptional User Experience
-                </div>
-              )}
-              {i18n.language === "ms" && (
-                <div className="hidden md:flex flex-col items-center w-[400px] md:text-[40px]">
-                  <div> {t("superb-interface")}</div>
-                  <div> {t("superb-interface2")}</div>
-                  <div> {t("superb-interface3")}</div>
-                  <div>{t("superb-interface4")}</div>
-                  <div>{t("superb-interface5")}</div>
-                </div>
-              )}
-
-              <div
-                className="md:hidden flex flex-col items-center text-xl"
-                style={{ lineHeight: "normal" }}
-              >
-                <div className="flex items-center">
-                  {t("superb-interface-mobile")}
-                </div>
-                <div className="flex items-center">
-                  {t("superb-interface2-mobile")}
-                </div>
-              </div>
-
-               */}
             </div>
 
             <div className="w-full flex flex-col">
@@ -162,7 +144,11 @@ const Admin = () => {
             </div>
           </div>
           {/*Content 3*/}
-          <div className="w-full flex md:flex-row flex-col gap-[30px] justify-center items-center">
+          <div
+            className={`w-full flex md:flex-row flex-col justify-center items-center gap-[30px] ${
+              i18n.language === "zh" ? "md:gap-[66px]" : "md:gap-[30px]"
+            }`}
+          >
             <div className="w-full flex flex-col md:order-1 order-2">
               <img src={Device2} alt="Device2" className="w-full" />
             </div>
@@ -170,24 +156,41 @@ const Admin = () => {
               className="flex flex-col  text-center  md:order-2 order-1"
               style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
             >
-              {i18n.language === "en" && (
-                <div className="hidden md:flex flex-wrap items-center md:w-[400px]  md:text-[50px] ">
-                  {t("efficient-timesave")}
-                </div>
-              )}
-              {i18n.language === "ms" && (
-                <div className="hidden md:flex flex-wrap items-center md:w-[400px]  md:text-[40px] ">
-                  {t("efficient-timesave")}
-                </div>
-              )}
-
+              {/*Desktop */}
               <div
-                className="md:hidden flex flex-col items-center text-xl"
+                className={`hidden md:flex items-center md:w-[400px] ${
+                  i18n.language === "zh"
+                    ? "md:text-[50px] "
+                    : i18n.language === "en"
+                    ? "md:text-[50px] "
+                    : i18n.language === "ms"
+                    ? "md:text-[40px]"
+                    : " md:text-[50px]"
+                }`}
+              >
+                <span
+                  className={`inline-block ${
+                    i18n.language === "zh"
+                      ? "md:w-[300px] w-full font-bold"
+                      : "w-full"
+                  }`}
+                >
+                  {t("efficient-timesave")}
+                </span>
+              </div>
+
+              {/*Mobile */}
+              <div
+                className={`md:hidden flex flex-col justify-center items-center text-xl ${
+                  i18n.language === "zh" ? "font-bold" : ""
+                }`}
                 style={{ lineHeight: "normal" }}
               >
                 <div> {t("efficient-timesave-mobile")}</div>
                 <div> {t("efficient-timesave2-mobile")}</div>
-                <div> {t("efficient-timesave3-mobile")}</div>
+                {!(i18n.language === "zh") && (
+                  <div> {t("efficient-timesave3-mobile")}</div>
+                )}
               </div>
             </div>
           </div>
@@ -195,7 +198,11 @@ const Admin = () => {
           <div className="w-full flex flex-col justify-center md:gap-[100px] gap-[30px]">
             <div className="flex flex-col justify-center items-center">
               <div
-                className="text-center md:text-[40px] text-xl"
+                className={`text-center  text-xl ${
+                  i18n.language === "zh"
+                    ? "md:text-[50px] font-bold"
+                    : "md:text-[40px]"
+                }`}
                 style={{
                   lineHeight: "normal",
                 }}
@@ -225,7 +232,11 @@ const Admin = () => {
           <div className="w-full flex flex-col justify-center md:gap-[100px] gap-[30px]">
             <div className="flex flex-col justify-center items-center">
               <div
-                className="text-center md:text-[40px] text-xl"
+                className={`text-center  text-xl ${
+                  i18n.language === "zh"
+                    ? "md:text-[50px] font-bold"
+                    : "md:text-[40px]"
+                }`}
                 style={{
                   lineHeight: "normal",
                 }}
@@ -254,7 +265,11 @@ const Admin = () => {
           <div className="w-full flex flex-col justify-center  md:gap-[100px] gap-[30px]">
             <div className="flex flex-col justify-center items-center">
               <div
-                className="text-center md:text-[40px] text-xl"
+                className={`text-center text-xl ${
+                  i18n.language === "zh"
+                    ? " md:text-3xl font-semibold"
+                    : " md:text-[40px]"
+                }`}
                 style={{
                   lineHeight: "normal",
                 }}
@@ -277,28 +292,36 @@ const Admin = () => {
         <div className="w-full md:w-[1102px] flex flex-col justify-center items-center  md:gap-[100px] gap-[35px]">
           <div className="w-full flex flex-col justify-center items-center">
             <div
-              className="md:text-[70px] text-[32px] text-center"
+              className={`text-[32px] text-center ${
+                i18n.language === "zh"
+                  ? "md:text-[80px]  font-bold"
+                  : "md:text-[70px]"
+              }`}
               style={{
                 fontFamily: "SF Pro Display B",
                 lineHeight: "normal",
               }}
             >
               {/*Desktop*/}
-              {i18n.language === "en" && (
-                <div className="w-[793px] hidden md:flex flex-col justify-center items-center">
-                  {t("thoughtful-feature")}
-                </div>
-              )}
-              {i18n.language === "ms" && (
-                <div className="w-full hidden md:flex flex-col justify-center items-center">
-                  {t("thoughtful-feature")}
-                </div>
-              )}
+              <div
+                className={`hidden md:flex flex-col justify-center items-center ${
+                  i18n.language === "en"
+                    ? "md:w-[793px] "
+                    : i18n.language === "zh"
+                    ? "md:w-[720px]"
+                    : "w-full"
+                }`}
+              >
+                {t("thoughtful-feature")}
+              </div>
+
               {/*Mobile*/}
               <div className="md:hidden flex flex-col justify-center items-center">
                 <div> {t("thoughtful-feature1-mobile")}</div>
                 <div> {t("thoughtful-feature2-mobile")}</div>
-                <div> {t("thoughtful-feature3-mobile")}</div>
+                {!(i18n.language === "zh") && (
+                  <div> {t("thoughtful-feature3-mobile")}</div>
+                )}
               </div>
             </div>
           </div>

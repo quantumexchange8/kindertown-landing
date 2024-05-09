@@ -30,7 +30,7 @@ const Parent = () => {
                   className="md:w-[200px] md:h-[200px] w-[100px] h-[100px]"
                 />
               </div>
-              <div className="absolute md:bottom-[150px] md:right-[128px] bottom-[70px] right-[80px]">
+              <div className="absolute md:bottom-[150px] md:right-[128px] bottom-[75px] right-[60px]">
                 <img
                   src={Arrow}
                   alt="arrow"
@@ -41,7 +41,7 @@ const Parent = () => {
               <div className="absolute md:bottom-[88px] md:left-[94px] md:right-[175px] left-[30px] right-[84px] bottom-[25px] md:w-[531px] w-[239px]">
                 <div
                   className={`md:text-[80px] text-4xl text-[#0CA39B] ${
-                    i18n.language === "zn" ? "font-bold" : ""
+                    i18n.language === "zh" ? "font-bold" : ""
                   }`}
                   style={{
                     fontFamily: "SF Pro Display B",
@@ -58,7 +58,7 @@ const Parent = () => {
               <div className="flex flex-col justify-center items-center">
                 <div
                   className={`text-center md:text-[80px] text-4xl ${
-                    i18n.language === "zn" ? "font-bold" : ""
+                    i18n.language === "zh" ? "font-bold" : ""
                   }`}
                   style={{
                     fontFamily: "SF Pro Display B",
@@ -66,7 +66,7 @@ const Parent = () => {
                   }}
                 >
                   {/*mandarin*/}
-                  {i18n.language === "zn" && <div>{t("KT-parents")} </div>}
+                  {i18n.language === "zh" && <div>{t("KT-parents")} </div>}
 
                   {/*eng and ms - web*/}
                   {(i18n.language === "ms" || i18n.language === "en") && (
@@ -85,7 +85,9 @@ const Parent = () => {
 
               <div className="flex flex-col justify-center items-center">
                 <div
-                  className="text-center md:text-[32px] text-xl"
+                  className={`text-center text-xl ${
+                    i18n.language === "zh" ? "md:text-3xl" : "md:text-[32px] "
+                  }`}
                   style={{
                     fontFamily: "SF Pro Display M",
                     lineHeight: "normal",
@@ -103,8 +105,8 @@ const Parent = () => {
                         {t("KT-parent-desc")}
                       </span>
                     )}
-                    {i18n.language === "zn" && (
-                      <span className="inline-block md:w-[550px] w-full">
+                    {i18n.language === "zh" && (
+                      <span className="inline-block md:w-[500px] w-full">
                         {t("KT-parent-desc")}
                       </span>
                     )}
@@ -114,11 +116,15 @@ const Parent = () => {
             </div>
           </div>
           <div className="w-full flex flex-col justify-center items-center md:gap-[300px] gap-[100px]  md:px-0 pl-[31px]  pr-8 ">
-            <div className="w-full flex items-center flex-col gap-[100px]">
+            <div
+              className={`w-full flex items-center flex-col  ${
+                i18n.language === "zh" ? "gap-0" : "gap-[100px]"
+              }`}
+            >
               {/*CONTENT 2 */}
               <div
                 className={`w-full flex items-center justify-center md:gap-[66px]  ${
-                  i18n.language === "zn" ? "gap-[10px]" : "gap-[26px]"
+                  i18n.language === "zh" ? "gap-[10px]" : "gap-[26px]"
                 }`}
               >
                 <div className="flex flex-col ">
@@ -132,7 +138,7 @@ const Parent = () => {
                 <div className="flex flex-col items-center">
                   <div
                     className={`text-center w-full text-[#F67F00] ${
-                      i18n.language === "zn"
+                      i18n.language === "zh"
                         ? "md:text-[70px] text-2xl font-bold"
                         : " md:text-[50px] text-xl"
                     }`}
@@ -150,7 +156,7 @@ const Parent = () => {
                     </div>
                     <div
                       className={`md:hidden flex flex-col items-center justify-center  ${
-                        i18n.language === "zn" ? "w-[168px]" : "w-[154px]"
+                        i18n.language === "zh" ? "w-[168px]" : "w-[154px]"
                       }`}
                     >
                       <div> {t("design-mobile1")}</div>
@@ -168,13 +174,13 @@ const Parent = () => {
               {/*CONTENT 3 */}
               <div
                 className={`w-full flex items-center justify-center md:gap-[66px]  ${
-                  i18n.language === "zn" ? "gap-[7px]" : "gap-[26px]"
+                  i18n.language === "zh" ? "gap-[7px]" : "gap-[26px]"
                 }`}
               >
                 <div className="flex flex-col items-center">
                   <div
                     className={`text-center  w-full text-[#64697A] ${
-                      i18n.language === "zn"
+                      i18n.language === "zh"
                         ? "md:text-[70px] text-2xl font-bold"
                         : "md:text-[50px] text-xl"
                     }`}
@@ -185,7 +191,7 @@ const Parent = () => {
                   >
                     <div
                       className={`hidden md:flex flex-col justify-center ${
-                        i18n.language === "zn" ? "items-end" : "items-center"
+                        i18n.language === "zh" ? "items-end" : "items-center"
                       }`}
                     >
                       <div>{t("build-learning")}</div>
@@ -199,7 +205,7 @@ const Parent = () => {
                     </div>
                     <div
                       className={`md:hidden flex flex-col justify-center w-[154px] ${
-                        i18n.language === "zn" ? "items-end" : "items-center"
+                        i18n.language === "zh" ? "items-end" : "items-center"
                       }`}
                     >
                       <div>{t("build-learning-mobile")}</div>
@@ -222,7 +228,7 @@ const Parent = () => {
               {/*CONTENT 4 */}
               <div
                 className={`w-full flex items-center justify-center md:gap-[66px] ${
-                  i18n.language === "zn" ? "gap-[14px]" : "gap-[26px]"
+                  i18n.language === "zh" ? "gap-[14px]" : "gap-[26px]"
                 }`}
               >
                 <div className="flex flex-col ">
@@ -236,7 +242,7 @@ const Parent = () => {
                 <div className="flex flex-col items-center">
                   <div
                     className={`text-center  w-full text-[#003A91]  ${
-                      i18n.language === "zn"
+                      i18n.language === "zh"
                         ? "md:text-[70px] text-2xl font-bold"
                         : "md:text-[50px] text-xl"
                     }`}
@@ -247,7 +253,7 @@ const Parent = () => {
                   >
                     <div
                       className={`hidden md:flex flex-col justify-center ${
-                        i18n.language === "zn" ? "items-start" : "items-center "
+                        i18n.language === "zh" ? "items-start" : "items-center "
                       }`}
                     >
                       <div>{t("boundless-imagination")}</div>
@@ -272,13 +278,13 @@ const Parent = () => {
               {/*CONTENT 5 */}
               <div
                 className={`w-full flex items-center justify-center md:gap-[66px] ${
-                  i18n.language === "zn" ? "gap-5" : " gap-[26px] "
+                  i18n.language === "zh" ? "gap-5" : " gap-[26px] "
                 }`}
               >
                 <div className="flex flex-col items-center">
                   <div
                     className={`flex flex-col text-center  w-full text-[#FF0001]  items-center justify-center ${
-                      i18n.language === "zn"
+                      i18n.language === "zh"
                         ? "md:text-[70px] text-2xl font-bold"
                         : "md:text-[50px] text-xl"
                     }`}
@@ -300,7 +306,7 @@ const Parent = () => {
                     <div className="md:hidden flex flex-col items-center justify-center w-[154px]">
                       <div> {t("ignite-learning-mobile")}</div>
                       <div> {t("ignite-learning2-mobile")}</div>
-                      {!(i18n.language === "zn") && (
+                      {!(i18n.language === "zh") && (
                         <>
                           <div> {t("ignite-learning3-mobile")}</div>
                           <div>{t("ignite-learning4-mobile")}</div>
@@ -320,7 +326,7 @@ const Parent = () => {
               {/*CONTENT 6 */}
               <div
                 className={`w-full flex items-center justify-center md:gap-[66px]  ${
-                  i18n.language === "zn" ? "gap-[10px]" : "gap-[26px]"
+                  i18n.language === "zh" ? "gap-[10px]" : "gap-[26px]"
                 }`}
               >
                 <div className="flex flex-col">
@@ -333,7 +339,7 @@ const Parent = () => {
                 <div className="flex flex-col items-center">
                   <div
                     className={`text-center w-full text-[#4D9138]  ${
-                      i18n.language === "zn"
+                      i18n.language === "zh"
                         ? "md:text-[70px] text-2xl font-bold"
                         : " md:text-[50px]  text-xl"
                     }`}
@@ -345,7 +351,7 @@ const Parent = () => {
                     {/*Desktop*/}
                     <div
                       className={`hidden md:flex flex-col justify-center ${
-                        i18n.language === "zn"
+                        i18n.language === "zh"
                           ? "items-start"
                           : " items-center "
                       }`}
@@ -356,12 +362,12 @@ const Parent = () => {
                     {/*Mobile*/}
                     <div
                       className={`md:hidden flex flex-col items-center justify-center ${
-                        i18n.language === "zn" ? " w-[170px] " : "  w-[154px]  "
+                        i18n.language === "zh" ? " w-[170px] " : "  w-[154px]  "
                       }`}
                     >
                       <div>{t("share-moment-mobile")}</div>
                       <div>{t("share-moment2-mobile")}</div>
-                      {!(i18n.language === "zn") && (
+                      {!(i18n.language === "zh") && (
                         <>
                           {" "}
                           <div>{t("share-moment3-mobile")}</div>
@@ -374,12 +380,16 @@ const Parent = () => {
               </div>
             </div>
 
-            <div className="w-full flex flex-col md:gap-[150px] gap-[50px]">
+            <div
+              className={`w-full flex flex-col  gap-[50px] ${
+                i18n.language === "zh" ? "md:gap-[100px]" : "md:gap-[150px]"
+              }`}
+            >
               <div className="flex flex-col justify-center items-center">
                 <div className="flex flex-col items-center">
                   <div
                     className={`text-center md:text-[60px] text-2xl ${
-                      i18n.language === "zn" ? "font-bold" : ""
+                      i18n.language === "zh" ? "font-bold" : ""
                     }`}
                     style={{
                       fontFamily: "SF Pro Display B",
@@ -389,14 +399,14 @@ const Parent = () => {
                     <div className="md:hidden flex flex-col items-center justify-center">
                       <div> {t("attractive-widget")}</div>
 
-                      {i18n.language === "zn" && (
+                      {i18n.language === "zh" && (
                         <div> {t("attractive-widget2")}</div>
                       )}
                     </div>
                     <div className="hidden md:flex items-center justify-center">
                       <span className="inline-block w-[950px]">
                         <div> {t("attractive-widget")}</div>
-                        {i18n.language === "zn" && (
+                        {i18n.language === "zh" && (
                           <div> {t("attractive-widget2")}</div>
                         )}
                       </span>

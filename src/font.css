@@ -47,3 +47,8 @@
   font-family: "SF Pro Display EB";
   src: url("./fonts/SF-Pro-Display-Heavy.otf") format("opentype");
 }
+
+@font-face {
+  font-family: "SF Georgian Rounded";
+  src: url("./fonts/SF-Georgian-Rounded.ttf") format("opentype");
+}

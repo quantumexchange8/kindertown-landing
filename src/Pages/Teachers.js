@@ -46,7 +46,9 @@ const Teacher = () => {
 
               <div className="hidden md:flex flex-col justify-center items-center">
                 <div
-                  className="text-center md:text-[32px] text-xl"
+                  className={`text-center text-xl ${
+                    i18n.language === "zh" ? "md:text-3xl" : "md:text-[32px]"
+                  }`}
                   style={{
                     fontFamily: "SF Pro Display M",
                     lineHeight: "normal",
@@ -54,7 +56,7 @@ const Teacher = () => {
                 >
                   <span
                     className={`inline-block ${
-                      i18n.language === "zh" ? "md:w-[900px]" : "w-full"
+                      i18n.language === "zh" ? "md:w-[850px]" : "w-full"
                     }`}
                   >
                     {t("KT-teacher-desc")}
@@ -99,9 +101,10 @@ const Teacher = () => {
                   style={{
                     fontFamily:
                       i18n.language === "zh"
-                        ? "SF Pro Display M"
+                        ? "SF Pro Display B"
                         : "SF Pro Display Semibold",
                     lineHeight: "normal",
+                    fontWeight: i18n.language === "zh" ? "700" : "",
                   }}
                 >
                   <span
@@ -135,8 +138,12 @@ const Teacher = () => {
                     i18n.language === "zh" ? "text-xl" : "text-base"
                   }`}
                   style={{
-                    fontFamily: "SF Pro Display Semibold",
+                    fontFamily:
+                      i18n.language === "zh"
+                        ? "SF Pro Display B"
+                        : "SF Pro Display Semibold",
                     lineHeight: "normal",
+                    fontWeight: i18n.language === "zh" ? "700" : "",
                   }}
                 >
                   <div className="flex flex-col justify-center items-center">
@@ -166,7 +173,11 @@ const Teacher = () => {
                     i18n.language === "zh" ? "text-xl" : "text-base"
                   }`}
                   style={{
-                    fontFamily: "SF Pro Display Semibold",
+                    fontFamily:
+                      i18n.language === "zh"
+                        ? "SF Pro Display B"
+                        : "SF Pro Display Semibold",
+                    fontWeight: i18n.language === "zh" ? "700" : "",
                     lineHeight: "normal",
                   }}
                 >
@@ -205,7 +216,11 @@ const Teacher = () => {
                     i18n.language === "zh" ? "text-xl" : "text-base"
                   }`}
                   style={{
-                    fontFamily: "SF Pro Display Semibold",
+                    fontFamily:
+                      i18n.language === "zh"
+                        ? "SF Pro Display B"
+                        : "SF Pro Display Semibold",
+                    fontWeight: i18n.language === "zh" ? "700" : "",
                     lineHeight: "normal",
                   }}
                 >
@@ -234,7 +249,11 @@ const Teacher = () => {
                     i18n.language === "zh" ? "text-xl" : "text-base"
                   }`}
                   style={{
-                    fontFamily: "SF Pro Display Semibold",
+                    fontFamily:
+                      i18n.language === "zh"
+                        ? "SF Pro Display B"
+                        : "SF Pro Display Semibold",
+                    fontWeight: i18n.language === "zh" ? "700" : "",
                     lineHeight: "normal",
                   }}
                 >

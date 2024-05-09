@@ -3,7 +3,7 @@ import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 import enTranslation from "./lang/eng/eng.json";
 import msTranslation from "./lang/malay/malay.json";
-import znTranslation from "./lang/mandarin/zn.json";
+import zhTranslation from "./lang/mandarin/zh.json";
 i18n
   .use(LanguageDetector)
   .use(initReactI18next)
@@ -11,7 +11,7 @@ i18n
     resources: {
       en: { translation: enTranslation },
       ms: { translation: msTranslation },
-      zn: { translation: znTranslation },
+      zh: { translation: zhTranslation },
     },
     fallbackLng: "en",
     detection: {

@@ -21,9 +21,11 @@ const ReferralProgrames = () => {
               {/*CONTENT 1*/}
               <div className="flex flex-col justify-center items-center md:px-0 pl-[31px] pr-8">
                 <div className="w-full md:w-[800px] flex flex-col gap-[50px]">
-                  <div className="flex flex-col justify-center items-center">
+                  <div className="flex flex-col">
                     <div
-                      className="md:text-[70px] text-[36px]"
+                      className={`md:text-[70px] text-[36px] ${
+                        i18n.language === "zh" ? "font-bold" : ""
+                      }`}
                       style={{
                         fontFamily: "SF Pro Display B",
                         lineHeight: "normal",
@@ -42,6 +44,25 @@ const ReferralProgrames = () => {
                           .
                         </div>
                       )}
+                      {i18n.language === "zh" && (
+                        <div className="flex flex-col">
+                          <div>
+                            <span className="text-[#7600D3]">
+                              {t("tiny-act")}
+                            </span>
+                            {t("sharing-monumental")}
+                          </div>
+                          <div>
+                            {" "}
+                            {t("sharing-monumental2")}{" "}
+                            <span className="text-[#FFA1AC]">
+                              {" "}
+                              {t("momentum")}
+                            </span>
+                          </div>
+                        </div>
+                      )}
+
                       {i18n.language === "ms" && (
                         <>
                           <div className="flex flex-wrap gap-x-3">
@@ -69,7 +90,11 @@ const ReferralProgrames = () => {
                 <div className="w-full  flex flex-col items-center md:gap-[100px] gap-[50px]">
                   <div className="flex flex-col">
                     <div
-                      className="md:text-[32px] text-[20px] text-center"
+                      className={`text-[20px] text-center ${
+                        i18n.language === "zh"
+                          ? "md:text-3xl font-semibold"
+                          : "md:text-[32px] "
+                      }`}
                       style={{
                         fontFamily: "SF Pro Display Semibold",
                         lineHeight: "normal",
@@ -112,11 +137,25 @@ const ReferralProgrames = () => {
                     {i18n.language === "ms" && (
                       <div>
                         <div>{t("recommendation")}</div>
-                        <div>{t("is")}</div>
+                        <div>
+                          {t("is")}{" "}
+                          <span className="text-[#4D9138]">{t("simply")} </span>
+                        </div>
+                      </div>
+                    )}
+                    {i18n.language === "zh" && (
+                      <div className=" font-bold">
+                        <div>{t("recommendation")}</div>
+                        <div>
+                          <span className="text-[#4D9138]">{t("simply")} </span>{" "}
+                          {t("is")}
+                        </div>
                       </div>
                     )}
                   </div>
                 </div>
+
+                {/**Coding lama */}
                 {/*Box1*/}
                 <div className="relative w-full flex flex-col justify-center items-center md:rounded-[47px] rounded-[20px] bg-[#C1FFB4]  pt-[51px] md:pt-[129px] md:gap-[129px] gap-[50px]">
                   <div>
@@ -129,7 +168,9 @@ const ReferralProgrames = () => {
                   <div className="relative w-full md:rounded-b-[47px] rounded-b-[20px] bg-[#6EDD58]  md:py-[80px] pt-[31px] pb-[30px] md:px-[75px] px-[15px]">
                     <div className="flex flex-col justify-center items-center md:gap-[30px] gap-5">
                       <div
-                        className="md:text-[40px] text-base"
+                        className={`md:text-[40px] text-base ${
+                          i18n.language === "zh" ? "font-bold" : ""
+                        }`}
                         style={{
                           fontFamily: "SF Pro Display B",
                           lineHeight: "normal",
@@ -145,7 +186,11 @@ const ReferralProgrames = () => {
                         }}
                       >
                         <div className="flex flex-col">
-                          {t("regardless-register")}
+                          <div> {t("regardless-register")}</div>
+
+                          {i18n.language === "zh" && (
+                            <div> {t("regardless-register2")}</div>
+                          )}
                         </div>
                       </div>
                     </div>
@@ -163,7 +208,9 @@ const ReferralProgrames = () => {
                   <div className="relative w-full md:rounded-b-[47px] rounded-b-[20px] bg-[#FFE55A]  pt-[30px] pb-[31px] md:py-[80px] md:px-[75px] px-[15px]">
                     <div className="flex flex-col justify-center items-center md:gap-[30px] gap-5">
                       <div
-                        className="md:text-[40px] text-base"
+                        className={`md:text-[40px] text-base ${
+                          i18n.language === "zh" ? "font-bold" : ""
+                        }`}
                         style={{
                           fontFamily: "SF Pro Display B",
                           lineHeight: "normal",
@@ -179,7 +226,10 @@ const ReferralProgrames = () => {
                         }}
                       >
                         <div className="flex flex-col">
-                          {t("copy-referral")}
+                          <div> {t("copy-referral")}</div>
+                          {i18n.language === "zh" && (
+                            <div> {t("copy-referral2")}</div>
+                          )}
                         </div>
                       </div>
                     </div>
@@ -197,7 +247,9 @@ const ReferralProgrames = () => {
                   <div className="relative w-full md:rounded-b-[47px] rounded-b-[20px] bg-[#FF6161] pt-[30px] pb-[31px] md:py-[80px] md:px-[75px] px-[15px]">
                     <div className="flex flex-col justify-center items-center md:gap-[30px] gap-5">
                       <div
-                        className="md:text-[40px] text-base"
+                        className={`md:text-[40px] text-base ${
+                          i18n.language === "zh" ? "font-bold" : ""
+                        }`}
                         style={{
                           fontFamily: "SF Pro Display B",
                           lineHeight: "normal",
@@ -239,7 +291,9 @@ const ReferralProgrames = () => {
                   <div className="relative w-full md:rounded-b-[47px] rounded-b-[20px] bg-[#7188FF]  md:py-[80px] md:px-[75px] pt-[20px] pb-[21px] px-[15px]">
                     <div className="flex flex-col justify-center items-center md:gap-[30px] gap-5">
                       <div
-                        className="md:text-[40px] text-base"
+                        className={`md:text-[40px] text-base ${
+                          i18n.language === "zh" ? "font-bold" : ""
+                        }`}
                         style={{
                           fontFamily: "SF Pro Display B",
                           lineHeight: "normal",
@@ -255,7 +309,8 @@ const ReferralProgrames = () => {
                         }}
                       >
                         <div className="flex flex-col">
-                          {t("referee-subscribe-desc")}
+                          <div> {t("referee-subscribe-desc")}</div>
+                          <div> {t("referee-subscribe-desc2")}</div>
                         </div>
                       </div>
                     </div>
