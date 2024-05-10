@@ -65,7 +65,7 @@ const Footer = () => {
                       <button
                         className="hover:text-[#F67F00]"
                         onClick={() => {
-                          i18n.changeLanguage("zn");
+                          i18n.changeLanguage("zh");
                           window.scrollTo({ top: 0, behavior: "smooth" });
                         }}
                       >

@@ -155,97 +155,117 @@ const ReferralProgrames = () => {
                   </div>
                 </div>
 
-                {/**Coding lama */}
-                {/*Box1*/}
-                <div className="relative w-full flex flex-col justify-center items-center md:rounded-[47px] rounded-[20px] bg-[#C1FFB4]  pt-[51px] md:pt-[129px] md:gap-[129px] gap-[50px]">
-                  <div>
+                {/*Box - 1 */}
+                <div>
+                  <div className="relative w-full flex flex-col items-center justify-center md:rounded-t-[47px] rounded-t-[20px] bg-[#C1FFB4]  md:py-[129px] py-[51px]">
                     <img
                       src={ic}
-                      alt="IdentificationCard"
+                      alt="IdentitiyCard"
                       className="md:w-[300px] w-[130px]"
                     />
                   </div>
-                  <div className="relative w-full md:rounded-b-[47px] rounded-b-[20px] bg-[#6EDD58]  md:py-[80px] pt-[31px] pb-[30px] md:px-[75px] px-[15px]">
-                    <div className="flex flex-col justify-center items-center md:gap-[30px] gap-5">
-                      <div
-                        className={`md:text-[40px] text-base ${
-                          i18n.language === "zh" ? "font-bold" : ""
-                        }`}
-                        style={{
-                          fontFamily: "SF Pro Display B",
-                          lineHeight: "normal",
-                        }}
-                      >
-                        {t("register-account")}
-                      </div>
-                      <div
-                        className="text-center md:text-[32px] text-base"
-                        style={{
-                          fontFamily: "SF Pro Display M",
-                          lineHeight: "normal",
-                        }}
-                      >
-                        <div className="flex flex-col">
-                          <div> {t("regardless-register")}</div>
+                  <div
+                    className={`relative w-full flex flex-col items-center justify-center md:rounded-b-[47px] rounded-b-[20px] bg-[#6EDD58] md:px-[75px]  md:gap-[30px] ${
+                      i18n.language === "zh"
+                        ? " py-[29px] md:py-[75px] px-[35px]  gap-4"
+                        : " pt-[30px] pb-[31px] md:py-[80px]  px-[15px]  gap-5"
+                    }`}
+                  >
+                    <div
+                      className={`md:text-[40px] text-base ${
+                        i18n.language === "zh" ? "font-bold" : ""
+                      }`}
+                      style={{
+                        fontFamily: "SF Pro Display B",
+                        lineHeight: "normal",
+                      }}
+                    >
+                      {t("register-account")}
+                    </div>
+                    <div
+                      className={`text-center md:text-[32px] ${
+                        i18n.language === "zh" ? "text-sm" : "text-base"
+                      }`}
+                      style={{
+                        fontFamily: "SF Pro Display M",
+                        lineHeight: "normal",
+                      }}
+                    >
+                      <div> {t("regardless-register")}</div>
 
-                          {i18n.language === "zh" && (
-                            <div> {t("regardless-register2")}</div>
-                          )}
-                        </div>
-                      </div>
+                      {i18n.language === "zh" && (
+                        <div> {t("regardless-register2")}</div>
+                      )}
                     </div>
                   </div>
                 </div>
-                {/*Box2*/}
-                <div className="relative w-full flex flex-col items-center justify-center md:rounded-[47px] rounded-[20px] bg-[#FFF6C5] pt-[44px] md:pt-[115px] gap-[45px] md:gap-[114px]">
-                  <div>
+
+                {/*Box - 2 */}
+                <div>
+                  <div className="relative w-full flex flex-col items-center justify-center md:rounded-t-[47px] rounded-t-[20px] bg-[#FFF6C5]  md:py-[115px] pt-[44px] pb-[45px]">
                     <img
                       src={card}
                       alt="Card"
                       className="md:w-[300px] w-[130px]"
                     />
                   </div>
-                  <div className="relative w-full md:rounded-b-[47px] rounded-b-[20px] bg-[#FFE55A]  pt-[30px] pb-[31px] md:py-[80px] md:px-[75px] px-[15px]">
-                    <div className="flex flex-col justify-center items-center md:gap-[30px] gap-5">
-                      <div
-                        className={`md:text-[40px] text-base ${
-                          i18n.language === "zh" ? "font-bold" : ""
-                        }`}
-                        style={{
-                          fontFamily: "SF Pro Display B",
-                          lineHeight: "normal",
-                        }}
-                      >
-                        {t("referral-code")}
-                      </div>
-                      <div
-                        className="text-center md:text-[32px]  text-base"
-                        style={{
-                          fontFamily: "SF Pro Display M",
-                          lineHeight: "normal",
-                        }}
-                      >
-                        <div className="flex flex-col">
-                          <div> {t("copy-referral")}</div>
-                          {i18n.language === "zh" && (
-                            <div> {t("copy-referral2")}</div>
-                          )}
-                        </div>
-                      </div>
+                  <div
+                    className={`relative w-full flex flex-col items-center justify-center md:rounded-b-[47px] rounded-b-[20px] bg-[#FFE55A] md:px-[75px]  md:gap-[30px] ${
+                      i18n.language === "zh"
+                        ? " py-[29px] md:py-[75px] px-[35px]  gap-4"
+                        : " pt-[30px] pb-[31px] md:py-[80px]  px-[15px]  gap-5"
+                    }`}
+                  >
+                    <div
+                      className={`md:text-[40px] text-base ${
+                        i18n.language === "zh" ? "font-bold" : ""
+                      }`}
+                      style={{
+                        fontFamily: "SF Pro Display B",
+                        lineHeight: "normal",
+                      }}
+                    >
+                      {t("referral-code")}
+                    </div>
+                    <div
+                      className={`text-center md:text-[32px] ${
+                        i18n.language === "zh" ? "text-sm" : "text-base"
+                      }`}
+                      style={{
+                        fontFamily: "SF Pro Display M",
+                        lineHeight: "normal",
+                      }}
+                    >
+                      <div> {t("copy-referral")}</div>
+
+                      {i18n.language === "zh" && (
+                        <div> {t("copy-referral2")}</div>
+                      )}
                     </div>
                   </div>
                 </div>
-                {/*Box3*/}
-                <div className="relative w-full flex flex-col items-center justify-center md:rounded-[47px] rounded-[20px] bg-[#FFB9B9]  md:pt-[80px] pt-[29px] md:gap-[80px] gap-[30px]">
-                  <div>
+
+                {/*Box - 3*/}
+                <div>
+                  <div className="relative w-full flex flex-col items-center justify-center md:rounded-t-[47px] rounded-t-[20px] bg-[#FFB9B9]  md:py-[80px] pt-[29px] pb-[30px]">
                     <img
                       src={register}
                       alt="Register"
                       className="md:w-[300px] w-[130px]"
                     />
                   </div>
-                  <div className="relative w-full md:rounded-b-[47px] rounded-b-[20px] bg-[#FF6161] pt-[30px] pb-[31px] md:py-[80px] md:px-[75px] px-[15px]">
-                    <div className="flex flex-col justify-center items-center md:gap-[30px] gap-5">
+                  <div
+                    className={`relative w-full md:rounded-b-[47px] rounded-b-[20px] bg-[#FF6161] md:px-[75px] ${
+                      i18n.language === "zh"
+                        ? "py-[29px] md:py-[75px]  px-[35px]"
+                        : "pt-[30px] pb-[31px] md:py-[80px]  px-[15px]"
+                    }`}
+                  >
+                    <div
+                      className={`flex flex-col justify-center items-center md:gap-[30px] ${
+                        i18n.language === "zh" ? " gap-4 " : " gap-5"
+                      }`}
+                    >
                       <div
                         className={`md:text-[40px] text-base ${
                           i18n.language === "zh" ? "font-bold" : ""
@@ -258,95 +278,108 @@ const ReferralProgrames = () => {
                         {t("referee-register")}
                       </div>
                       <div
-                        className="text-center md:text-[32px] text-base"
+                        className={`text-center md:text-[32px]${
+                          i18n.language === "zh" ? " text-sm " : " text-base "
+                        }`}
                         style={{
                           fontFamily: "SF Pro Display M",
                           lineHeight: "normal",
                         }}
                       >
-                        <div className="hidden md:flex flex-col">
-                          <div className="flex items-center">
-                            {t("referee-register-desc1")}
-                          </div>
-                          <div className="flex justify-center items-center">
-                            {t("referee-register-desc2")}
-                          </div>
-                        </div>
-                        <div className="md:hidden flex flex-wrap">
-                          {t("referee-register-mobile")}
-                        </div>
+                        <div> {t("referee-register-desc")}</div>
+                        {(i18n.language === "en" || i18n.language === "zh") && (
+                          <div> {t("referee-register-desc2")}</div>
+                        )}
                       </div>
                     </div>
                   </div>
                 </div>
-                {/*Box4*/}
-                <div className="relative w-full flex flex-col items-center justify-center md:rounded-[47px] rounded-[20px] bg-[#BEC8FF]  md:pt-[94px] pt-[35px] md:gap-[94px] gap-9">
-                  <div>
+                {/*Box - 4*/}
+                <div>
+                  <div className="relative w-full flex flex-col items-center justify-center md:rounded-t-[47px] rounded-t-[20px] bg-[#BEC8FF]  md:py-[94px] pt-[35px] pb-[36px]">
                     <img
                       src={subscribe}
                       alt="Subscriber"
                       className="md:w-[300px] w-[130px]"
                     />
                   </div>
-                  <div className="relative w-full md:rounded-b-[47px] rounded-b-[20px] bg-[#7188FF]  md:py-[80px] md:px-[75px] pt-[20px] pb-[21px] px-[15px]">
-                    <div className="flex flex-col justify-center items-center md:gap-[30px] gap-5">
-                      <div
-                        className={`md:text-[40px] text-base ${
-                          i18n.language === "zh" ? "font-bold" : ""
-                        }`}
-                        style={{
-                          fontFamily: "SF Pro Display B",
-                          lineHeight: "normal",
-                        }}
-                      >
-                        {t("referee-subscribe")}
-                      </div>
-                      <div
-                        className="text-center md:text-[32px] text-base"
-                        style={{
-                          fontFamily: "SF Pro Display M",
-                          lineHeight: "normal",
-                        }}
-                      >
-                        <div className="flex flex-col">
-                          <div> {t("referee-subscribe-desc")}</div>
-                          <div> {t("referee-subscribe-desc2")}</div>
-                        </div>
-                      </div>
+                  <div
+                    className={`relative w-full flex flex-col md:rounded-b-[47px] rounded-b-[20px] bg-[#7188FF]  md:px-[75px]  ${
+                      i18n.language === "zh"
+                        ? "md:py-[60px] py-[29px] pl-[28px] pr-[27px] gap-4"
+                        : "md:py-[80px] py-[21px] px-[15px] gap-5"
+                    }`}
+                  >
+                    <div
+                      className={`text-center md:text-[40px] text-base ${
+                        i18n.language === "zh" ? "font-bold" : ""
+                      }`}
+                      style={{
+                        fontFamily: "SF Pro Display B",
+                        lineHeight: "normal",
+                      }}
+                    >
+                      {t("referee-subscribe")}
+                    </div>
+                    <div
+                      className="text-center md:text-[32px] text-base"
+                      style={{
+                        fontFamily: "SF Pro Display M",
+                        lineHeight: "normal",
+                      }}
+                    >
+                      <div> {t("referee-subscribe-desc")}</div>
+                      {i18n.language === "zh" && (
+                        <div> {t("referee-subscribe-desc2")}</div>
+                      )}
                     </div>
                   </div>
                 </div>
+                {/**Coding lama */}
+
+                {/*Box - 5}
+
+              
                 {/*Box5*/}
-                <div className="relative w-full flex flex-col items-center justify-center md:rounded-[47px] rounded-[20px] bg-[#FFD976]  md:pt-[95px] md:gap-[95px] gap-[35px] pt-[36px]">
-                  <div>
+                <div>
+                  <div className="relative w-full flex flex-col items-center justify-center md:rounded-t-[47px] rounded-t-[20px] bg-[#FFD976]  md:py-[95px] py-[36px]">
                     <img
                       src={reward}
                       alt="Reward"
                       className="md:w-[300px] w-[130px]"
                     />
                   </div>
-                  <div className="relative md:rounded-b-[47px] rounded-b-[20px] bg-[#FFB800]  pt-[30px] md:pt-[78px] pb-[31px] md:pb-[79px] px-[15px] md:px-[89px]">
-                    <div className="flex flex-col justify-center items-center md:gap-[30px] gap-5">
-                      <div
-                        className="md:text-[40px] text-base text-center"
-                        style={{
-                          fontFamily: "SF Pro Display B",
-                          lineHeight: "normal",
-                        }}
-                      >
-                        {t("receive-reward")}
-                      </div>
-                      <div
-                        className="text-center md:text-[32px] text-base"
-                        style={{
-                          fontFamily: "SF Pro Display M",
-                          lineHeight: "normal",
-                        }}
-                      >
-                        <div className=" flex flex-wrap">
-                          {t("receive-reward-desc")}
-                        </div>
-                      </div>
+                  <div
+                    className={`relative flex flex-col justify-center items-center md:rounded-b-[47px] rounded-b-[20px] bg-[#FFB800]  md:gap-[30px] ${
+                      i18n.language === "zh"
+                        ? "md:pt-[74px] md:pb-[73px] md:pl-[75px] md:pr-[103px] py-[29px] px-[35px]  gap-4 "
+                        : "py-[31px] md:pt-[78px] md:pb-[79px] md:px-[89px] px-[15px]  gap-5 "
+                    }`}
+                  >
+                    <div
+                      className={`md:text-[40px] text-base text-center ${
+                        i18n.language === "zh" ? "font-bold" : ""
+                      }`}
+                      style={{
+                        fontFamily: "SF Pro Display B",
+                        lineHeight: "normal",
+                      }}
+                    >
+                      {t("receive-reward")}
+                    </div>
+                    <div
+                      className={`text-center md:text-[32px] ${
+                        i18n.language === "zh" ? "text-sm" : "text-base"
+                      }`}
+                      style={{
+                        fontFamily: "SF Pro Display M",
+                        lineHeight: "normal",
+                      }}
+                    >
+                      <div>{t("receive-reward-desc")}</div>
+                      {i18n.language === "zh" && (
+                        <div>{t("receive-reward-desc2")}</div>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -355,20 +388,23 @@ const ReferralProgrames = () => {
               <div className="w-full flex flex-col justify-center items-center md:gap-[100px] gap-[30px]">
                 <div className="w-full flex flex-col justify-center items-center ">
                   <div
-                    className="md:text-[70px] text-2xl text-center"
+                    className={`md:text-[70px] text-2xl text-center ${
+                      i18n.language === "zh" ? "font-bold" : ""
+                    }`}
                     style={{
                       fontFamily: "SF Pro Display B",
                       lineHeight: "normal",
                     }}
                   >
-                    {i18n.language === "en" && (
-                      <div className="md:w-[800px] w-full">
-                        {t("mutual-reward")}
-                      </div>
-                    )}
-                    {i18n.language === "ms" && (
-                      <div className=" w-full">{t("mutual-reward")}</div>
-                    )}
+                    <div
+                      className={`${
+                        i18n.language === "ms"
+                          ? "w-full"
+                          : "md:w-[800px]  w-full"
+                      }`}
+                    >
+                      {t("mutual-reward")}
+                    </div>
                   </div>
                 </div>
                 <div className="flex flex-col justify-center items-center">
@@ -380,7 +416,11 @@ const ReferralProgrames = () => {
                     }}
                   >
                     <div>
-                      <span className="md:w-[950px] w-full inline-block">
+                      <span
+                        className={`md:w-[950px] w-full inline-block ${
+                          i18n.language === "zh" ? "font-[600]" : ""
+                        }`}
+                      >
                         {t("step-simple")}
                       </span>
                     </div>
