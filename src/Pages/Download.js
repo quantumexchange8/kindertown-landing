@@ -73,24 +73,16 @@ const Download = () => {
       );
   };
 
-  const tapFinger = () => {
-    switch (i18n.language) {
-      case "en":
-        return "md:w-[292px] w-full";
-      case "ms":
-        return "md:w-[339px] w-full";
-      default:
-        return "md:w-[292px] w-full";
-    }
-  };
   const tapFingerGap = () => {
     switch (i18n.language) {
       case "en":
-        return "md:gap-20";
+        return "md:gap-20 gap-[19px]";
       case "ms":
-        return "md:gap-[33px]";
+        return "md:gap-[33px] gap-[19px]";
+      case "zh":
+        return "md:gap-[80px] gap-[28px]";
       default:
-        return "md:gap-[33px]";
+        return "md:gap-20 gap-[19px]";
     }
   };
   const CaptureVideo = () => {
@@ -99,6 +91,8 @@ const Download = () => {
         return "md:w-[300px]";
       case "ms":
         return "md:w-[380px]";
+      case "zh":
+        return "md:w-[290px] font-bold";
       default:
         return "md:w-[300px]";
     }
@@ -110,40 +104,10 @@ const Download = () => {
         return "md:w-[326px] w-[141px]";
       case "ms":
         return "md:w-[420px] w-[170px]";
+      case "zh":
+        return "md:w-[336px] w-[141px]";
       default:
         return "md:w-[326px] w-[141px]";
-    }
-  };
-
-  const paddingQues = () => {
-    switch (i18n.language) {
-      case "en":
-        return "md:px-[108px] pl-[34px] md:py-[85px] py-[33px] pr-[43px] md:gap-[68px] gap-[8px]";
-      case "ms":
-        return "md:pl-[80px]  pl-[34px] md:pr-[108px] pr-[34px] md:py-[85px] py-[18px] md:gap-[66px] gap-[17px]";
-      default:
-        return "md:px-[108px] pl-[34px] md:py-[85px] py-[33px] pr-[43px] md:gap-[68px] gap-[8px]";
-    }
-  };
-
-  const font30 = () => {
-    switch (i18n.language) {
-      case "en":
-        return "md:text-3xl text-[10px]";
-      case "ms":
-        return "md:text-[25px] text-[10px]";
-      default:
-        return "md:text-3xl text-[10px]";
-    }
-  };
-  const getWidthClass = (width) => {
-    switch (i18n.language) {
-      case "en":
-        return `md:w-[370px]`;
-      case "ms":
-        return `md:w-[${width}px]`;
-      default:
-        return `md:w-[370px]`;
     }
   };
 
@@ -163,6 +127,8 @@ const Download = () => {
         return "md:gap-[86px] gap-[31px] md:pt-[80px] md:pb-[55px] pt-[32px] pb-[19px]";
       case "ms":
         return "md:gap-[63px] gap-[21px] md:pt-[73px] md:pb-[55px] pt-[27px] pb-[19px]";
+      case "zh":
+        return "md:gap-[50px] md:pt-[76px] md:pb-[55px] pt-[31px] pb-5 gap-[31px]";
       default:
         return "md:gap-[86px] gap-[31px] md:pt-[80px] md:pb-[55px] pt-[32px] pb-[19px]";
     }
@@ -177,14 +143,20 @@ const Download = () => {
               {/*Content 1*/}
 
               <div
-                className="w-full md:px-0 pl-[31px] pr-[32px] md:text-[50px] text-2xl text-center"
+                className={`w-full md:px-0 pl-[31px] pr-[32px] md:text-[50px] text-2xl text-center ${
+                  i18n.language === "zh" ? "font-bold" : ""
+                }`}
                 style={{
                   fontFamily: "SF Pro Display B",
                   lineHeight: "normal",
                 }}
               >
                 <div className=" flex flex-col items-center">
-                  <span className="inline-block md:max-w-[950px] w-full">
+                  <span
+                    className={`inline-block  w-full ${
+                      i18n.language === "zh" ? "w-full" : "md:max-w-[950px]"
+                    }`}
+                  >
                     {t("dw-KT-app")}
                   </span>
                 </div>
@@ -193,19 +165,34 @@ const Download = () => {
               <div className="w-full flex flex-col md:gap-5 gap-[30px]">
                 <div className="w-full flex flex-wrap justify-center md:gap-5 gap-[30px] md:px-0 pl-[31px] pr-[32px]">
                   <div className="relative md:w-[490px] md:h-[500px] h-[336px] w-full flex flex-col md:rounded-[30px] rounded-[20px] bg-[#FFDFA1] md:pt-[44px] pt-[27px] md:pl-[52px] pl-[35px] pr-[28px] md:pr-[30px] md:gap-6 gap-[19px]">
-                    <div className="flex flex-col items-end md:gap-5 gap-[9px]">
+                    <div
+                      className={`flex flex-col items-end  gap-[9px] ${
+                        i18n.language === "zh"
+                          ? "font-bold  md:gap-4"
+                          : "md:gap-5"
+                      }`}
+                    >
                       <div
                         className="md:text-[30px] text-base"
                         style={{ fontFamily: "SF Pro Display B" }}
                       >
-                        Kindertown Parent
+                        {t("KT-parent")}
                       </div>
                       <div
-                        className="md:text-2xl text-base text-[#666] text-right"
-                        style={{ fontFamily: "SF Pro Display M" }}
+                        className={` text-[#666] text-right ${
+                          i18n.language === "zh"
+                            ? "md:text-xl text-sm"
+                            : "md:text-2xl text-base"
+                        }`}
+                        style={{
+                          fontFamily: "SF Pro Display M",
+                          lineHeight: "normal",
+                        }}
                       >
                         <div>{t("understand-child")}</div>
-                        <div> {t("learning-journey")}</div>
+                        {!(i18n.language === "zh") && (
+                          <div> {t("learning-journey")}</div>
+                        )}
                       </div>
                     </div>
                     <div className="flex overflow-hidden justify-between">
@@ -238,15 +225,24 @@ const Download = () => {
                     </div>
                     <div className="flex flex-col md:gap-5 gap-[10px]">
                       <div
-                        className="text-base md:text-[30px]"
+                        className={`text-base md:text-[30px] ${
+                          i18n.language === "zh" ? "font-bold" : ""
+                        }`}
                         style={{ fontFamily: "SF Pro Display B" }}
                       >
-                        Kindertown Teacher
+                        {t("kindertown-teacher")}
                       </div>
                       <div className="w-full flex justify-between">
                         <div
-                          className="text-base md:text-2xl text-[#FFF]"
-                          style={{ fontFamily: "SF Pro Display M" }}
+                          className={` text-[#FFF] ${
+                            i18n.language === "zh"
+                              ? "md:text-xl text-sm"
+                              : "text-base md:text-2xl"
+                          }`}
+                          style={{
+                            fontFamily: "SF Pro Display M",
+                            lineHeight: "normal",
+                          }}
                         >
                           <div> {t("escape-busy")}</div>
                           <div> {t("valuable-time")}</div>
@@ -357,27 +353,43 @@ const Download = () => {
                       <img src={imac} alt="imac" className="w-full" />
                     </div>
                     <div
-                      className={`flex flex-col md:gap-5 gap-[10px] w-[124px] md:w-[${
-                        i18n.language === "ms" ? "280px" : "256px"
-                      }]`}
+                      className={`flex flex-col md:gap-5 gap-[10px]  w-[124px] ${
+                        i18n.language === "zh"
+                          ? "md:w-[243px]"
+                          : i18n.language === "ms"
+                          ? "md:w-[280px]"
+                          : "md:w-[256px]"
+                      }`}
                     >
                       <div className="flex flex-col">
                         <div
-                          className="md:text-[30px] text-base"
+                          className={`md:text-[30px] text-base ${
+                            i18n.language === "zh" ? "font-bold" : ""
+                          }`}
                           style={{
                             fontFamily: "SF Pro Display B",
                             lineHeight: "normal",
                           }}
                         >
-                          <div className="hidden md:flex">Kindertown Admin</div>
-                          <div className="md:hidden flex flex-col">
-                            <div>Kindertown</div>
-                            <div> Admin</div>
-                          </div>
+                          {i18n.language === "zh" && <div>{t("KT-admin")}</div>}
+
+                          {!(i18n.language === "zh") && (
+                            <>
+                              <div className="hidden md:flex">
+                                {t("KT-admin")}
+                              </div>
+                              <div className="md:hidden flex flex-col">
+                                <div>Kindertown</div>
+                                <div> Admin</div>
+                              </div>
+                            </>
+                          )}
                         </div>
                       </div>
                       <div
-                        className="flex flex-col md:text-2xl text-sm text-left text-white"
+                        className={`flex flex-col text-sm text-left text-white ${
+                          i18n.language === "zh" ? "md:text-xl" : "md:text-2xl "
+                        }`}
                         style={{
                           fontFamily: "SF Pro Display M",
                           lineHeight: "normal",
@@ -386,7 +398,9 @@ const Download = () => {
                         <div className="hidden md:flex flex-col">
                           <div>{t("no-sluggish")}</div>
                           <div>{t("school-enroll")}</div>
-                          <div>{t("process-now")}</div>
+                          {!(i18n.language === "zh") && (
+                            <div>{t("process-now")}</div>
+                          )}
                         </div>
                         <div className="md:hidden flex flex-col">
                           <div>{t("no-sluggish-full")}</div>
@@ -468,7 +482,9 @@ const Download = () => {
             {/*Content 3 */}
             <div className="w-full md:px-0 pl-[31px] pr-[32px]">
               <div
-                className="md:text-4xl text-base md:leading-[50px] leading-normal"
+                className={`md:text-4xl text-base md:leading-[50px] leading-normal ${
+                  i18n.language === "zh" ? "font-bold" : ""
+                }`}
                 style={{ fontFamily: "SF Pro Display B" }}
               >
                 {t("dedicated-work")}
@@ -480,22 +496,22 @@ const Download = () => {
               <div className="w-full flex flex-wrap justify-center items-center md:gap-5 gap-[7px]">
                 <div
                   className={`w-full relative h-[176px] md:h-[500px] md:rounded-[30px] rounded-[10px] bg-[#D5FFCD] flex   md:pt-[100px] pt-[35px] ${
-                    i18n.language === "en"
-                      ? "gap-[29px] md:gap-[88px]  pr-[40px] md:pr-[112px] md:pl-[100px] pl-[32px] "
+                    i18n.language === "zh"
+                      ? "md:gap-[37px] gap-[30px] pr-[39px] pl-[32px] md:pr-[112px] md:pl-[91px]"
                       : i18n.language === "ms"
                       ? "gap-[16px] md:gap-[13px] pr-[39px] md:pr-[112px] md:pl-[75px] pl-[32px]"
-                      : ""
+                      : "gap-[29px] md:gap-[88px]  pr-[40px] md:pr-[112px] md:pl-[100px] pl-[32px] "
                   }`}
                 >
                   <div>
                     {" "}
                     <div
                       className={`${
-                        i18n.language === "en"
-                          ? "md:text-[40px] text-base "
+                        i18n.language === "zh"
+                          ? "  md:text-[50px] text-base font-bold md:w-[460px]"
                           : i18n.language === "ms"
                           ? "md:text-[40px] text-xs w-[160px] md:w-[500px]"
-                          : ""
+                          : "md:text-[40px] text-base"
                       }`}
                       style={{
                         fontFamily: "SF Pro Display B",
@@ -510,32 +526,15 @@ const Download = () => {
                       src={phone}
                       alt="Mobile"
                       className={` ${
-                        i18n.language === "en"
-                          ? "absolute md:top-2 md:left-0 object-cover w-full  "
+                        i18n.language === "zh"
+                          ? " absolute md:top-2 md:left-0 object-cover w-full "
                           : i18n.language === "ms"
                           ? "absolute md:top-5 md:left-0 w-full  "
-                          : ""
+                          : "absolute md:top-2 md:left-0 object-cover w-full "
                       }`}
                     />
                   </div>
                 </div>
-                {/* <div className="relative w-full md:h-[500px] h-[176px] md:rounded-[30px] rounded-[10px] bg-[#D5FFCD] flex gap-[29px] md:gap-[88px] md:pr-[112px] pr-[40px] md:pl-[100px] pl-[32px] md:pt-[100px] pt-[35px] overflow-hidden">
-                  <div className="flex flex-col items-center md:w-[400px]">
-                    <div
-                      className="md:text-[40px] text-base"
-                      style={{
-                        fontFamily: "SF Pro Display B",
-                        lineHeight: "normal",
-                      }}
-                    >
-                      No longer will it be troublesome to pay school fees
-                      through doorstep visits.
-                    </div>
-                  </div>
-                  <div className="flex flex-col justify-center md:w-[300px] w-full relative md:top-[100px] top-5">
-                    <img src={phone} alt="Mobile" />
-                  </div>
-                </div> */}
 
                 <div className="w-full flex justify-center items-center md:gap-5 gap-[7px]">
                   <div className="relative md:w-[490px] w-full h-[177px] md:h-[500px] md:rounded-[30px] rounded-[10px] bg-[#176200] flex flex-col md:px-[45px] px-[16px] md:pt-[66px] pt-[22px] pb-[31px] md:pb-[85px] md:gap-[51px] gap-[22px]">
@@ -589,7 +588,9 @@ const Download = () => {
                     </div>
                     <div className="flex flex-col justify-center items-center">
                       <div
-                        className="md:text-3xl text-[10px] text-white text-center"
+                        className={`md:text-3xl text-[10px] text-white text-center ${
+                          i18n.language === "zh" ? "font-bold" : ""
+                        }`}
                         style={{
                           fontFamily: "SF Pro Display B",
                           lineHeight: "normal",
@@ -598,7 +599,9 @@ const Download = () => {
                         <div className="hidden md:flex flex-col">
                           <div>{t("thoughtful-widget")}</div>
                           <div> {t("children-cultivate")}</div>
-                          <div>{t("good-habit")}</div>
+                          {!(i18n.language === "zh") && (
+                            <div>{t("good-habit")}</div>
+                          )}
                         </div>
                         <div className="md:hidden flex flex-col">
                           {t("thoughtful-widget-mobile")}
@@ -611,7 +614,11 @@ const Download = () => {
                   >
                     <div className="flex flex-col justify-center items-center">
                       <div
-                        className="md:text-3xl text-[10px] text-center"
+                        className={`text-center ${
+                          i18n.language === "zh"
+                            ? "md:text-[40px] text-xs font-bold"
+                            : "md:text-3xl text-[10px] "
+                        }`}
                         style={{
                           fontFamily: "SF Pro Display B",
                           lineHeight: "normal",
@@ -642,7 +649,11 @@ const Download = () => {
                     </div>
                     <div className="flex flex-col justify-center items-center">
                       <div
-                        className="md:text-3xl text-[10px] text-center"
+                        className={`md:text-3xl  text-center ${
+                          i18n.language === "zh"
+                            ? "text-xs font-bold"
+                            : "text-[10px]"
+                        }`}
                         style={{
                           fontFamily: "SF Pro Display B",
                           lineHeight: "normal",
@@ -691,47 +702,94 @@ const Download = () => {
                     lineHeight: "normal",
                   }}
                 >
-                  <div className="hidden md:flex flex-col">
-                    <div>
-                      {t("more")}
-                      <span className="text-[#FF5F5F]">
-                        {" "}
-                        {t("intelligent")}{" "}
-                      </span>
-                      {i18n.language === "en" && (
-                        <span> {t("experiences")} </span>
-                      )}
-                    </div>
-                    <div>
-                      {t("with")}&nbsp;
-                      <span className="text-[#F67F00]">{t("Kindertown")}</span>
-                      {i18n.language === "en" && (
-                        <span>&nbsp;{t("system")}</span>
-                      )}
-                    </div>
-                  </div>
-                  <div className="md:hidden flex flex-wrap justify-center items-center">
-                    {t("more")}&nbsp;
-                    <span className="text-[#FF5F5F]">{t("intelligent")} </span>
-                    {i18n.language === "en" && (
-                      <span> {t("experience")}&nbsp; </span>
-                    )}
-                    <span></span> {t("with")}
-                    <span className="text-[#F67F00]">
-                      {t("Kindertown")}&nbsp;
-                    </span>
-                    {i18n.language === "en" && <span>{t("system")}</span>}
-                  </div>
+                  {i18n.language === "en" && (
+                    <>
+                      {/*Web */}
+                      <div className="hidden md:flex flex-wrap justify-center">
+                        <span className="whitespace-pre-line">
+                          {t("more")}{" "}
+                          <span className="text-[#FF5F5F]">
+                            {t("intelligent")}
+                          </span>{" "}
+                          {t("xperience")}{" "}
+                        </span>
+                        <span className="whitespace-pre-line">
+                          {t("with")}{" "}
+                          <span className="text-[#F67F00]">{t("KT")}</span>{" "}
+                          {t("system")}
+                        </span>
+                      </div>
+                      {/*Mobile */}
+                      <div className="md:hidden flex flex-wrap justify-center whitespace-pre-line">
+                        {t("more")}&nbsp;
+                        <span className="text-[#FF5F5F]">
+                          {t("intelligent")}&nbsp;
+                        </span>
+                        {t("xperience")}&nbsp;{t("with")}&nbsp;
+                        <span className="text-[#F67F00]">{t("KT")}</span>&nbsp;
+                        {t("system")}
+                      </div>
+                    </>
+                  )}
+
+                  {i18n.language === "ms" && (
+                    <>
+                      {/*Web */}
+                      <div className="hidden md:flex flex-wrap justify-center">
+                        <span className="whitespace-pre-line">
+                          {t("more")}{" "}
+                          <span className="text-[#FF5F5F]">
+                            {t("intelligent")}
+                          </span>{" "}
+                        </span>
+                        <span className="whitespace-pre-line">
+                          {t("with")}&nbsp;
+                          <span className="text-[#F67F00]">{t("KT")}</span>{" "}
+                        </span>
+                      </div>
+                      {/*Mobile */}
+                      <div className="md:hidden flex flex-wrap justify-center whitespace-pre-line">
+                        {t("more")}&nbsp;
+                        <span className="text-[#FF5F5F]">
+                          {t("intelligent")}&nbsp;
+                        </span>
+                        {t("with")}&nbsp;
+                        <span className="text-[#F67F00]">{t("KT")}</span>&nbsp;
+                      </div>
+                    </>
+                  )}
+                  {i18n.language === "zh" && (
+                    <>
+                      <div className="flex flex-wrap justify-center text-center font-bold">
+                        <span className="whitespace-pre-line">
+                          <span className="text-[#F67F00]">{t("more")}</span>{" "}
+                          {t("intelligent")}{" "}
+                        </span>
+                        <span className="whitespace-pre-line">
+                          <span className="text-[#FF5F5F]">
+                            {t("xperience")}
+                          </span>{" "}
+                          {t("with")}&nbsp;
+                        </span>
+                      </div>
+                    </>
+                  )}
                 </div>
 
                 {/*Content 6*/}
 
                 <div className="w-full md:max-w-[1000px] flex flex-col justify-center items-center md:gap-5 gap-2">
                   <div
-                    className={`w-full flex justify-center items-center md:rounded-[30px] rounded-[10px] bg-[#7F5FFF] md:pl-[99px] md:pr-[29px] md:py-[58px] py-5 pr-[10px] pl-[27px] gap-[19px] ${tapFingerGap()}`}
+                    className={`w-full flex justify-center items-center md:rounded-[30px] rounded-[10px] bg-[#7F5FFF] md:pl-[99px] md:pr-[29px] md:py-[58px] py-5 pr-[10px] pl-[27px] ${tapFingerGap()}`}
                   >
                     <div
-                      className={`md:text-[30px] text-xs text-white ${tapFinger()}`}
+                      className={`md:text-[30px] text-xs text-white ${
+                        i18n.language === "ms"
+                          ? "md:w-[339px] w-full"
+                          : i18n.language === "zh"
+                          ? "md:w-[292px] w-full font-bold"
+                          : "md:w-[292px] w-full"
+                      }`}
                       style={{
                         fontFamily: "SF Pro Display B",
                         lineHeight: "normal",
@@ -768,7 +826,13 @@ const Download = () => {
                     </div>
                   </div>
                   <div className="w-full flex justify-center items-center md:gap-5 gap-[7px]">
-                    <div className="w-full flex flex-col bg-[#582DFF] md:h-[500px] h-[180px] md:rounded-[30px] rounded-[10px] justify-center items-center md:px-[35px] md:pt-[54px] md:pb-[113px] pt-[19px] pb-[21px] px-[18px] md:gap-[90px] gap-[21px]">
+                    <div
+                      className={`w-full flex flex-col bg-[#582DFF] md:h-[500px] h-[180px] md:rounded-[30px] rounded-[10px] justify-center items-center md:px-[35px] md:pt-[54px] md:pb-[113px] pt-[19px] pb-[21px] px-[18px] gap-[21px] ${
+                        i18n.language === "zh"
+                          ? "md:gap-[55px]"
+                          : "md:gap-[90px] "
+                      }`}
+                    >
                       <div>
                         <img
                           src={calendar}
@@ -777,7 +841,11 @@ const Download = () => {
                         />
                       </div>
                       <div
-                        className="md:text-[30px] text-xs text-white text-center"
+                        className={`text-xs text-white text-center ${
+                          i18n.language === "zh"
+                            ? "md:text-[40px] font-bold"
+                            : "md:text-[30px] "
+                        }`}
                         style={{
                           fontFamily: "SF Pro Display B",
                           lineHeight: "normal",
@@ -787,9 +855,17 @@ const Download = () => {
                           <div> {t("easy-arrangement")}</div>
                           <div>{t("easy-arrangement2")}</div>
                         </div>
-                        <div className="md:hidden flex flex-col">
-                          {t("easy-arrangement-mobile")}
-                        </div>
+                        {!(i18n.language === "zh") && (
+                          <div className="md:hidden flex flex-col">
+                            {t("easy-arrangement-mobile")}
+                          </div>
+                        )}
+                        {i18n.language === "zh" && (
+                          <div className="md:hidden flex flex-col">
+                            <div> {t("easy-arrangement")}</div>
+                            <div>{t("easy-arrangement2")}</div>
+                          </div>
+                        )}
                       </div>
                     </div>
                     <div className="w-full flex flex-col bg-[#7F5FFF] md:h-[500px] md:rounded-[30px] rounded-[10px] justify-center items-center md:px-[35px] md:pt-[54px] md:pb-[93px] pt-[19px] pb-[21px] px-[21px] md:gap-[69px] gap-[20px]">
@@ -801,13 +877,20 @@ const Download = () => {
                         />
                       </div>
                       <div
-                        className="md:text-[30px] text-xs text-center"
+                        className={`text-xs text-center ${
+                          i18n.language === "zh"
+                            ? "md:text-[40px] font-bold"
+                            : "md:text-[30px] "
+                        }`}
                         style={{
                           fontFamily: "SF Pro Display B",
                           lineHeight: "normal",
                         }}
                       >
-                        {t("student-condition")}
+                        <div>{t("student-condition")}</div>
+                        {i18n.language === "zh" && (
+                          <div>{t("student-condition2")}</div>
+                        )}
                       </div>
                     </div>
                   </div>
@@ -824,14 +907,21 @@ const Download = () => {
                     }}
                   >
                     <div className="w-full flex flex-col">
-                      <span className="inline-block md:w-[960px]">
+                      <span
+                        className={`inline-block ${
+                          i18n.language === "zh"
+                            ? "md:w-[850px] font-bold"
+                            : " md:w-[960px]"
+                        }`}
+                      >
                         {t("KT-more-than")}{" "}
-                        <span className="text-[#814300]">{t("system")}</span>
+                        <span className="text-[#814300]">{t("system")}</span>;
                         {t("like-your")}{" "}
                         <span className="text-[#23D300]">
                           {t("intelligent-assistant")}
                         </span>
-                        {i18n.language === "ms" && <span>{t("anda")}</span>}
+                        {i18n.language === "zh" && <span>{t("fullstop")}</span>}
+                        {i18n.language === "ms" && <span>{t("anda")}.</span>}
                       </span>
                     </div>
                   </div>
@@ -850,20 +940,21 @@ const Download = () => {
                     <div className="absolute md:bottom-14 bottom-[18px] left-[21px] md:left-14 flex items-center">
                       <div className="flex flex-col">
                         <div
-                          className="md:text-[30px] text-xs text-left"
+                          className={`md:text-[30px] text-left ${
+                            i18n.language === "ms"
+                              ? "md:w-[320px] w-[142px]  text-xs"
+                              : i18n.language === "en"
+                              ? "md:w-[280px] w-[130px]  text-xs"
+                              : i18n.language === "zh"
+                              ? "md:w-[300px] font-bold w-[106px] text-[10px]"
+                              : "md:w-[280px] w-[130px]  text-xs"
+                          }`}
                           style={{
                             fontFamily: "SF Pro Display B",
                             lineHeight: "normal",
                           }}
                         >
-                          <div>{t("the-most")}</div>
-                          <div>{t("indispensable-tool")}</div>
-                          <div>{t("for-educational")} </div>
-                          {i18n.language === "en" && (
-                            <div>{t("institution-is")}</div>
-                          )}
-
-                          <div>{t("intelligent-assistant")}</div>
+                          <div>{t("educational-tool")}</div>
                         </div>
                       </div>
                     </div>
@@ -871,40 +962,53 @@ const Download = () => {
 
                   {/*COntent 8*/}
 
-                  <div
-                    className={`relative w-full md:rounded-[30px] rounded-[10px] bg-[#FCBF4A] flex justify-center items-center md:py-[85px] ${paddingQues()}`}
-                  >
+                  {/*  have to fix tomorrow
+                  <div className="w-full md:rounded-[30px] rounded-[10px] bg-[#FCBF4A] flex justify-center items-center md:py-[85px] gap-5">
                     <div
-                      className={`flex flex-col md:gap-[30px] gap-[10px] ${font30()}`}
+                      className={`flex flex-col md:gap-[30px] gap-[10px] ${
+                        i18n.language === "zh"
+                          ? "md:text-2xl text-[8px] font-bold"
+                          : i18n.language === "ms"
+                          ? "md:w-[25px]  text-[10px]"
+                          : "md:text-3xl  text-[10px] "
+                      }`}
                       style={{
                         fontFamily: "SF Pro Display B",
                         lineHeight: "normal",
                       }}
                     >
-                      <div
-                        className={`text-[#FF0001] w-[140px] ${getWidthClass(
-                          440
-                        )}`}
-                      >
+                      <div className="text-[#FF0001] w-[140px] ">
                         {t("line-up")}{" "}
                       </div>
-                      <div
-                        className={`text-[#4800FF] w-[150px] ${getWidthClass(
-                          470
-                        )}`}
-                      >
+                      <div className="text-[#4800FF] w-[150px] ">
                         {t("submit-docs")}{" "}
                       </div>
-                      <div
-                        className={`text-[#00821D] w-[160px] ${getWidthClass(
-                          470
-                        )}`}
-                      >
+                      <div className="text-[#00821D] w-[160px]">
                         {t("seat-advance")}{" "}
                       </div>
                       <div className="w-[170px] md:w-[440px]">
                         {t("same-ques")}{" "}
                       </div>
+                    </div>
+                    <div className="flex">
+                      <img
+                        src={open}
+                        alt="OpenSign"
+                        className="md:w-[250px] md:h-[298px] w-[88px] h-[105px]"
+                      />
+                    </div>
+                  </div>
+*/}
+
+                  <div className="w-full flex md:rounded-[30px] rounded-[10px] bg-[#FCBF4A] md:py-[85px] md:gap-[68px] gap-[9px] md:pl-[108px] md:pr-[108px]">
+                    <div
+                      className="flex flex-col md:gap-[30px] gap-[10px] md:text-3xl"
+                      style={{ fontFamily: "SF Pro Display B" }}
+                    >
+                      <div className="text-[#FF0001] ">{t("line-up")}</div>
+                      <div className="text-[#4800FF]">{t("submit-docs")} </div>
+                      <div className="text-[#00821D]">{t("seat-advance")} </div>
+                      <div>{t("same-ques")} </div>
                     </div>
                     <div>
                       <img
