@@ -155,7 +155,7 @@ const CareerOpportunities = () => {
                       lineHeight: "normal",
                     }}
                   >
-                    <div className="hidden md:flex flex-col justify-center items-center">
+                    <div className="w-full hidden md:flex flex-col justify-center items-center">
                       <div> {t("energy-converge1")} </div>
                       <div>{t("energy-converge2")}</div>
                       <div>{t("energy-converge3")}</div>
@@ -180,7 +180,7 @@ const CareerOpportunities = () => {
         </div>
       </div>
 
-      <div className="w-full  flex flex-col justify-center items-center md:pt-[150px] pt-[80px] md:gap-[300px] gap-[100px] md:pb-[300px] pb-[100px] ">
+      <div className="w-full  flex flex-col justify-center items-center md:pt-[400px] pt-[100px] md:gap-[300px] gap-[100px] md:pb-[300px] pb-[100px] ">
         <div className="w-full flex flex-col justify-center items-center md:gap-[400px] gap-[100px]">
           <div className="w-full flex flex-col md:gap-[400px] gap-[100px] items-center">
             {/*content 4*/}
