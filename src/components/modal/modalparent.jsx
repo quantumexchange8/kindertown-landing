@@ -63,7 +63,9 @@ const ModalParent = ({ showModal1, setShowModal1 }) => {
                         ? "md:w-[410px] w-[180px] "
                         : i18n.language === "ms"
                         ? "md:w-[440px] w-[180px]"
-                        : " md:w-[410px] w-[180px]"
+                        : i18n.language === "zh"
+                        ? " md:w-[350px] w-[180px] font-bold"
+                        : "md:w-[440px] w-[180px]"
                     }`}
                     style={{
                       fontFamily: "SF Pro Display B",
@@ -74,11 +76,22 @@ const ModalParent = ({ showModal1, setShowModal1 }) => {
                   </div>
                 </div>
                 {/*Content1*/}
-                <div className="w-full md:w-[900px] flex flex-col justify-center items-center  md:pt-[100px] pt-[50px] md:px-0 pl-[31px] pr-8 md:gap-[200px] gap-[100px]  md:pb-[100px] pb-[60px]">
+                <div
+                  className={`w-full md:w-[900px] flex flex-col justify-center items-center  md:pt-[100px] pt-[50px] md:px-0 pl-[31px] pr-8 gap-[100px]  md:pb-[100px] pb-[60px] ${
+                    i18n.language === "zh"
+                      ? " md:gap-[100px]"
+                      : " md:gap-[200px]"
+                  }`}
+                >
                   <div className="w-full md:w-[700px] flex flex-col md:gap-[50px] gap-5">
                     <div
-                      className="md:text-4xl text-[24px]"
-                      style={{ fontFamily: "SF Pro Display B" }}
+                      className={`md:text-4xl text-[24px] ${
+                        i18n.language === "zh" ? "font-bold" : ""
+                      }`}
+                      style={{
+                        fontFamily: "SF Pro Display B",
+                        lineHeight: "normal",
+                      }}
                     >
                       <div className="hidden md:flex flex-col">
                         <div> {t("parentmodal-title1")}</div>
@@ -89,7 +102,11 @@ const ModalParent = ({ showModal1, setShowModal1 }) => {
                       </div>
                     </div>
                     <div
-                      className=" md:text-[32px] text-xl"
+                      className={` text-xl ${
+                        i18n.language === "zh"
+                          ? "md:text-3xl"
+                          : "md:text-[32px]"
+                      }`}
                       style={{
                         fontFamily: "SF Pro Display M",
                         lineHeight: "normal",
@@ -99,7 +116,11 @@ const ModalParent = ({ showModal1, setShowModal1 }) => {
                     </div>
                     <div className="flex">
                       <div
-                        className=" md:text-[32px] text-xl"
+                        className={`text-xl ${
+                          i18n.language === "zh"
+                            ? "md:text-3xl"
+                            : "md:text-[32px]"
+                        }`}
                         style={{
                           fontFamily: "SF Pro Display M",
                           lineHeight: "normal",
@@ -296,14 +317,20 @@ const ModalParent = ({ showModal1, setShowModal1 }) => {
                     <div className="w-full flex flex-col justify-center md:gap-[50px] gap-[30px]">
                       <div className=" w-full flex flex-col">
                         <div
-                          className="md:text-4xl text-xl"
+                          className={`md:text-4xl text-xl ${
+                            i18n.language === "zh" ? "font-bold" : ""
+                          }`}
                           style={{ fontFamily: " SF Pro Display B" }}
                         >
                           {t("feature")}:
                         </div>
                       </div>
                       <div
-                        className="w-full md:w-[700px] flex flex-col md:text-[32px] text-base"
+                        className={`w-full md:w-[700px] flex flex-col text-base ${
+                          i18n.language === "zh"
+                            ? "md:text-[30px]"
+                            : " md:text-[32px]"
+                        }`}
                         style={{
                           fontFamily: "SF Pro Display R",
                           lineHeight: "normal",

@@ -63,6 +63,8 @@ const ModalAdmin = ({ showModal3, setShowModal3 }) => {
                         ? "md:w-[389px] w-[164px] "
                         : i18n.language === "ms"
                         ? " md:w-[420px] w-[170px]"
+                        : i18n.language === "zh"
+                        ? "md:w-[389px] w-[164px] font-bold"
                         : "md:w-[389px] w-[164px] "
                     }
                     `}
@@ -81,14 +83,20 @@ const ModalAdmin = ({ showModal3, setShowModal3 }) => {
                       {/*Content 2*/}
                       <div className="w-full flex flex-col md:gap-[50px] gap-[30px]">
                         <div
-                          className="md:text-4xl text-2xl text-left"
+                          className={`md:text-4xl text-2xl text-left ${
+                            i18n.language === "zh" ? "font-bold" : ""
+                          }`}
                           style={{ fontFamily: "SF Pro Display B" }}
                         >
                           {t("adminmodal-title")}
                         </div>
                         <div className="flex">
                           <div
-                            className=" md:text-[32px] text-xl text-left"
+                            className={`text-xl text-left ${
+                              i18n.language === "zh"
+                                ? "md:text-[30px]"
+                                : " md:text-[32px] "
+                            }`}
                             style={{
                               fontFamily: "SF Pro Display M",
                               lineHeight: "normal",
@@ -111,7 +119,13 @@ const ModalAdmin = ({ showModal3, setShowModal3 }) => {
                         <hr className=" w-full border-[#F67F00] mx-auto dark:border-[#F67F00]-900" />
                       </div>
                       {/*CONTENT 3*/}
-                      <div className="w-full flex flex-col md:gap-[200px] gap-[100px]">
+                      <div
+                        className={`w-full flex flex-col gap-[100px] ${
+                          i18n.language === "zh"
+                            ? "md:gap-[100px]"
+                            : "md:gap-[200px] "
+                        }`}
+                      >
                         <div className="w-full flex flex-col items-center">
                           <div
                             className="md:text-[32px] text-2xl text-center"
@@ -120,16 +134,20 @@ const ModalAdmin = ({ showModal3, setShowModal3 }) => {
                               lineHeight: "normal",
                             }}
                           >
-                            <div
-                              className={`flex flex-wrap   ${
-                                i18n.language === "en"
-                                  ? "md:w-[650px] "
-                                  : i18n.language === "ms"
-                                  ? "md:w-full"
-                                  : "md:w-[650px] "
-                              }`}
-                            >
-                              {t("subscribe-plan")}
+                            <div className="flex flex-wrap">
+                              <span
+                                className={`${
+                                  i18n.language === "en"
+                                    ? "md:w-[650px] "
+                                    : i18n.language === "ms"
+                                    ? "md:w-full"
+                                    : i18n.language === "zh"
+                                    ? "md:w-[700px] "
+                                    : "md:w-[650px]"
+                                }`}
+                              >
+                                {t("subscribe-plan")}
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -320,7 +338,9 @@ const ModalAdmin = ({ showModal3, setShowModal3 }) => {
                             <div className="w-full flex flex-col justify-center items-center md:gap-[50px] gap-[30px]">
                               <div className="w-full flex flex-col">
                                 <div
-                                  className="md:text-4xl text-2xl text-left"
+                                  className={`md:text-4xl text-2xl text-left ${
+                                    i18n.language === "zh" ? "font-bold" : ""
+                                  }`}
                                   style={{ fontFamily: " SF Pro Display B" }}
                                 >
                                   {t("feature")}:
@@ -356,14 +376,36 @@ const ModalAdmin = ({ showModal3, setShowModal3 }) => {
                               </div>
                             </div>
                             <div className="w-full">
-                              <div className="w-full relative md:rounded-t-[30px] rounded-t-[14px] bg-[#FF8400] md:py-[38px] pt-[15px] pb-[17px] md:pl-[86px] md:pr-[85px] pl-[37px] pr-[32px]">
+                              <div
+                                className={`w-full relative md:rounded-t-[30px] rounded-t-[14px] bg-[#FF8400] md:py-[38px] pt-[15px] pb-[17px] md:pl-[86px] md:pr-[85px]  ${
+                                  i18n.language === "zh"
+                                    ? "pl-[40px] pr-[49px]"
+                                    : "pl-[37px] pr-[32px]"
+                                }`}
+                              >
                                 <div
-                                  className="md:text-xl text-xs flex justify-between"
+                                  className="md:text-xl text-xs flex justify-center"
                                   style={{ fontFamily: "SF Pro Display M" }}
                                 >
-                                  <div> Free</div>
-                                  <div>Standard</div>
-                                  <div>Premium</div>
+                                  <div
+                                    className={`flex ${
+                                      i18n.language === "zh"
+                                        ? "md:gap-[203px] font-semibold gap-[90px]"
+                                        : "md:gap-[156px] gap-[64px]"
+                                    }`}
+                                  >
+                                    <div
+                                      className={`flex ${
+                                        i18n.language === "zh"
+                                          ? "md:gap-[182px] gap-[71px]"
+                                          : "md:gap-[156px]  gap-[64px]"
+                                      }`}
+                                    >
+                                      <div> {t("free")}</div>
+                                      <div> {t("standard")}</div>
+                                    </div>
+                                    <div> {t("premium")}</div>
+                                  </div>
                                 </div>
                               </div>
                               <div
@@ -371,17 +413,17 @@ const ModalAdmin = ({ showModal3, setShowModal3 }) => {
                                   i18n.language === "en"
                                     ? "md:pl-[72px] pl-[29px] pr-[29px] md:pr-[79px]"
                                     : i18n.language === "ms"
-                                    ? "md:pl-[76px]  md:pr-[27px] pl-[25px] pr-5"
-                                    : ""
+                                    ? "md:pl-[75px]  md:pr-[28px] pl-[27px] pr-5"
+                                    : "md:pl-[67px] md:pr-[67px] pl-[30px] pr-[39px]"
                                 }`}
                               >
                                 <div
-                                  className={`md:text-xl text-xs flex ${
+                                  className={`md:text-xl flex ${
                                     i18n.language === "en"
-                                      ? "md:gap-[128px] gap-[47px]"
+                                      ? "md:gap-[127px] gap-[47px] justify-center  text-xs"
                                       : i18n.language === "ms"
-                                      ? "md:gap-[65px] gap-4"
-                                      : ""
+                                      ? "md:gap-[47px] gap-7  text-xs"
+                                      : "md:gap-[163px] gap-[70px] justify-center text-[10px]"
                                   }`}
                                   style={{ fontFamily: "SF Pro Display M" }}
                                 >
@@ -390,12 +432,19 @@ const ModalAdmin = ({ showModal3, setShowModal3 }) => {
                                       i18n.language === "en"
                                         ? "md:gap-[128px] gap-[46px]"
                                         : i18n.language === "ms"
-                                        ? "md:gap-[100px] gap-4"
-                                        : ""
+                                        ? "md:gap-[92px] gap-8  justify-center"
+                                        : "md:gap-[142px] gap-[55px] justify-center"
                                     }`}
                                   >
-                                    <div className="md:w-[70px]">
-                                      {" "}
+                                    <div
+                                      className={`${
+                                        i18n.language === "zh"
+                                          ? "md:w-[80px] w-[40px]"
+                                          : i18n.language === "ms"
+                                          ? "md:w-[65px] w-[50px]"
+                                          : "md:w-[70px]"
+                                      }`}
+                                    >
                                       {t("limit-access")}
                                     </div>
                                     <div
@@ -403,8 +452,10 @@ const ModalAdmin = ({ showModal3, setShowModal3 }) => {
                                         i18n.language === "en"
                                           ? " md:w-[121px]"
                                           : i18n.language === "ms"
-                                          ? ""
-                                          : ""
+                                          ? "md:w-[193px]"
+                                          : i18n.language === "zh"
+                                          ? "md:w-[80px] "
+                                          : "md:w-[121px]"
                                       }`}
                                     >
                                       <div> {t("daily-charge")}</div>
@@ -412,7 +463,15 @@ const ModalAdmin = ({ showModal3, setShowModal3 }) => {
                                         <div> {t("daily-charge2")}</div>
                                       )}
                                     </div>
-                                    <div className="md:hidden flex flex-col text-center">
+                                    <div
+                                      className={`md:hidden flex flex-col text-center ${
+                                        i18n.language === "ms"
+                                          ? "w-[100px]"
+                                          : i18n.language === "zh"
+                                          ? " w-[40px]"
+                                          : "w-full"
+                                      }`}
+                                    >
                                       <div> {t("daily-charge-mobile")}</div>
                                     </div>
                                   </div>
@@ -423,10 +482,11 @@ const ModalAdmin = ({ showModal3, setShowModal3 }) => {
                                         ? " md:w-[97px]"
                                         : i18n.language === "ms"
                                         ? "md:w-[186px] w-[69px]"
-                                        : ""
+                                        : i18n.language === "zh"
+                                        ? " md:w-[80px] w-[40px]"
+                                        : "md:w-[97px]"
                                     }`}
                                   >
-                                    {" "}
                                     {t("get-quote")}
                                   </div>
                                 </div>

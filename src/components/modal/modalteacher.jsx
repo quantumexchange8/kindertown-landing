@@ -63,7 +63,9 @@ const ModalTeacher = ({ showModal2, setShowModal2 }) => {
                         ? " md:w-[330px] w-[140px] "
                         : i18n.language === "ms"
                         ? " md:w-[370px] w-[154px]"
-                        : "md:w-[330px] w-[140px]"
+                        : i18n.language === "zh"
+                        ? "md:w-[330px] w-[140px] font-bold"
+                        : "md:w-[330px] w-[140px] "
                     }
                     `}
                     style={{
@@ -76,7 +78,13 @@ const ModalTeacher = ({ showModal2, setShowModal2 }) => {
                 </div>
 
                 <div className="w-full md:max-w-[900px] flex flex-col justify-center items-center md:pt-[100px] pt-[50px] md:px-0 pl-[31px] pr-[32px]  md:pb-[100px] pb-[60px]">
-                  <div className="w-full md:w-[700px] flex flex-col md:gap-[200px] gap-[100px]">
+                  <div
+                    className={`w-full md:w-[700px] flex flex-col gap-[100px] ${
+                      i18n.language === "zh"
+                        ? " md:gap-[100px]"
+                        : " md:gap-[200px]"
+                    }`}
+                  >
                     {/* CONTENT 2*/}
                     <div className="w-full flex flex-col md:gap-[50px] gap-5">
                       <div
@@ -84,12 +92,24 @@ const ModalTeacher = ({ showModal2, setShowModal2 }) => {
                         style={{ fontFamily: "SF Pro Display B" }}
                       >
                         <div className="flex flex-col">
-                          {t("teachermodal-title")}
+                          <span
+                            className={`inline-block ${
+                              i18n.language === "zh"
+                                ? "md:w-[650px] w-full font-bold"
+                                : "w-full"
+                            }`}
+                          >
+                            {t("teachermodal-title")}
+                          </span>
                         </div>
                       </div>
                       <div className="flex">
                         <div
-                          className="md:text-[32px] text-xl"
+                          className={`text-xl ${
+                            i18n.language === "zh"
+                              ? "md:text-3xl"
+                              : "md:text-[32px]"
+                          }`}
                           style={{
                             fontFamily: "SF Pro Display M",
                             lineHeight: "normal",
@@ -97,7 +117,13 @@ const ModalTeacher = ({ showModal2, setShowModal2 }) => {
                         >
                           {t("teachermodal-desc1")}
                         </div>{" "}
-                        <div className="hidden md:flex absolute right-[40px] top-[930px]">
+                        <div
+                          className={`hidden md:flex absolute ${
+                            i18n.language === "zh"
+                              ? " right-[40px] top-[1000px] "
+                              : " right-[40px] top-[930px] "
+                          }`}
+                        >
                           <button onClick={() => setShowModal2(false)}>
                             <img
                               src={close}
@@ -108,7 +134,11 @@ const ModalTeacher = ({ showModal2, setShowModal2 }) => {
                         </div>
                       </div>
                       <div
-                        className="md:text-[32px] text-xl"
+                        className={`text-xl ${
+                          i18n.language === "zh"
+                            ? "md:text-3xl"
+                            : "md:text-[32px]"
+                        }`}
                         style={{
                           fontFamily: "SF Pro Display M",
                           lineHeight: "normal",
@@ -279,20 +309,32 @@ const ModalTeacher = ({ showModal2, setShowModal2 }) => {
                       <div className="w-full flex flex-col  justify-center md:gap-[50px] gap-[30px]">
                         <div className="w-full flex flex-col">
                           <div
-                            className="md:text-4xl text-2xl"
+                            className={`md:text-4xl text-2xl ${
+                              i18n.language === "zh" ? "font-bold" : ""
+                            }`}
                             style={{ fontFamily: " SF Pro Display B" }}
                           >
                             {t("feature")}:
                           </div>
                         </div>
                         <div
-                          className="w-full md:w-[700px] flex flex-col md:text-[32px] text-base"
+                          className={`w-full md:w-[700px] flex flex-col text-base ${
+                            i18n.language === "zh"
+                              ? "md:text-[30px]"
+                              : "md:text-[32px]"
+                          }`}
                           style={{
                             fontFamily: "SF Pro Display R",
                             lineHeight: "normal",
                           }}
                         >
-                          <ul className="list-outside list-disc flex flex-col md:gap-10 gap-5 md:pl-[50px] pl-[30px]">
+                          <ul
+                            className={`list-outside list-disc flex flex-col md:gap-10 gap-5 pl-[30px] ${
+                              i18n.language === "zh"
+                                ? " md:pl-[53px]"
+                                : " md:pl-[50px]"
+                            }`}
+                          >
                             <li>{t("update-checkin")}</li>
                             <li>{t("update-temp")}</li>
                             <li>{t("update-activity")}</li>

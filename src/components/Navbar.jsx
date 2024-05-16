@@ -366,7 +366,7 @@ const Navbar = () => {
                               }`}
                               style={{ fontFamily: "SF Pro Display M" }}
                             >
-                              Kindertown Parent
+                              {t("footer-parent")}
                             </Link>
                           </div>
                           <div>
@@ -379,7 +379,7 @@ const Navbar = () => {
                               }`}
                               style={{ fontFamily: "SF Pro Display M" }}
                             >
-                              Kindertown Teacher
+                              {t("footer-teacher")}
                             </Link>
                           </div>
                           <div>
@@ -392,7 +392,7 @@ const Navbar = () => {
                               }`}
                               style={{ fontFamily: "SF Pro Display M" }}
                             >
-                              Kindertown Admin
+                              {t("footer-admin")}
                             </Link>
                           </div>
                         </div>
@@ -455,7 +455,7 @@ const Navbar = () => {
               style={{ fontFamily: "SF Pro Medium" }}
               onClick={() => setActiveProductSubPage("parent")}
             >
-              Kindertown Parent
+              {t("footer-parent")}
             </Link>
             <Link
               to="/products/teacher"
@@ -467,7 +467,7 @@ const Navbar = () => {
               style={{ fontFamily: "SF Pro Medium" }}
               onClick={() => setActiveProductSubPage("teacher")}
             >
-              Kindertown Teacher
+              {t("footer-teacher")}
             </Link>
             <Link
               to="/products/admin"
@@ -479,7 +479,7 @@ const Navbar = () => {
               style={{ fontFamily: "SF Pro Medium" }}
               onClick={() => setActiveProductSubPage("admin")}
             >
-              Kindertown Admin
+              {t("footer-admin")}
             </Link>
           </div>
         </div>
