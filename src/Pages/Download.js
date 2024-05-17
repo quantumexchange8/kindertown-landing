@@ -194,7 +194,7 @@ const Download = () => {
                           className="md:w-[250px] w-[168px]"
                         />
                       </div>
-                      <div className="flex items-end pb-[30px]">
+                      <div className="flex items-end pb-[34px]">
                         <button onClick={() => setShowModal1(true)}>
                           <img
                             src={button1}
