@@ -11,7 +11,7 @@ import Tools from "../assets/home/measure.svg";
 import Family from "../assets/home/family.png";
 import Teachers from "../assets/home/teachers.png";
 import Slowmode from "../assets/home/slowmode.png";
-import Choose from "../assets/home/choose.svg";
+import Choose from "../assets/home/Blocks.svg";
 import Owners from "../assets/home/schoolowners.png";
 import Admin from "../assets/home/admin.png";
 import Teacher2 from "../assets/home/teachers2.png";
@@ -1099,20 +1099,18 @@ const Home = () => {
                   lineHeight: "normal",
                 }}
               >
-                {/*Desktop*/}
-                <div className="hidden md:flex flex-col justify-center items-center">
-                  <div> {t("choose-desc1")}</div>
-                  <div> {t("choose-desc2")}</div>
-                  {(i18n.language === "ms" || i18n.language === "en") && (
-                    <div> {t("choose-desc3")}</div>
-                  )}
-
-                  {i18n.language === "ms" && <div> {t("choose-desc4")}</div>}
-                </div>
-
-                {/*Mobile*/}
-                <div className="w-full md:hidden flex items-center justify-center ">
-                  {t("choose-desc")}
+                <div className="w-full flex items-center justify-center ">
+                  <span
+                    className={`w-full ${
+                      i18n.language === "en"
+                        ? "md:w-[858px]"
+                        : i18n.language === "ms"
+                        ? "md:w-[908px]"
+                        : "md:w-[800px]"
+                    }`}
+                  >
+                    {t("choose-desc")}
+                  </span>
                 </div>
               </div>
             </div>

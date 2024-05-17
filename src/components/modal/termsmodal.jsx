@@ -52,7 +52,7 @@ const termsmodal = ({ TermsOpen, setTermsOpen }) => {
                         className="md:text-[28px] text-base"
                         style={{ fontFamily: "SF Pro Display M" }}
                       >
-                        Kindertown Website Terms of Use
+                        Information & Notices
                       </div>
                     </div>
                   </div>
@@ -78,17 +78,22 @@ const termsmodal = ({ TermsOpen, setTermsOpen }) => {
                           <div>
                             These Terms and Conditions of Use (hereinafter
                             referred to as the "Terms of Use") apply to the
-                            Kindertown website located at www.kindertown.pro,
-                            and all associated sites linked to
-                            www.kindertown.pro by Kindertown, its subsidiaries,
-                            and affiliated companies, including Kindertown sites
-                            worldwide (collectively referred to as the
-                            "Website"). The Website is the property of
-                            Kindertown Company (hereinafter referred to as
-                            "Kindertown") and its licensors. By using the
-                            Website, you agree to comply with these Terms of
-                            Use; if you do not agree, please do not use the
-                            Website.
+                            Kindertown website located at{" "}
+                            <span className="text-[#0075FE]">
+                              www.kindertown.pro
+                            </span>
+                            , and all associated sites linked to{" "}
+                            <span className="text-[#0075FE]">
+                              www.kindertown.pro
+                            </span>{" "}
+                            by Kindertown, its subsidiaries, and affiliated
+                            companies, including Kindertown sites worldwide
+                            (collectively referred to as the "Website"). The
+                            Website is the property of Kindertown Company
+                            (hereinafter referred to as "Kindertown") and its
+                            licensors. By using the Website, you agree to comply
+                            with these Terms of Use; if you do not agree, please
+                            do not use the Website.
                           </div>
                           <div>
                             Kindertown reserves the right, at its sole
@@ -125,7 +130,10 @@ const termsmodal = ({ TermsOpen, setTermsOpen }) => {
                         </div>
                         <div
                           className="md:text-xl text-base flex flex-col md:gap-7 gap-4"
-                          style={{ fontFamily: "SF Pro Display M" }}
+                          style={{
+                            fontFamily: "SF Pro Display M",
+                            lineHeight: "normal",
+                          }}
                         >
                           <div>
                             The following content (referred to collectively as
@@ -202,7 +210,10 @@ const termsmodal = ({ TermsOpen, setTermsOpen }) => {
                       <div className="flex flex-col gap-5">
                         <div
                           className="md:text-3xl text-xl"
-                          style={{ fontFamily: "SF Pro Display B" }}
+                          style={{
+                            fontFamily: "SF Pro Display B",
+                            lineHeight: "normal",
+                          }}
                         >
                           Your Use of the Website
                         </div>

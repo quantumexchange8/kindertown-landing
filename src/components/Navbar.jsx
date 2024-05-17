@@ -283,15 +283,25 @@ const Navbar = () => {
                 >
                   <div className="h-full flex gap-[50px]">
                     <div className="w-[114px] flex flex-col justify-between text-left">
-                      <div className="text-[20px]">
+                      <div
+                        className={`text-[20px] ${
+                          i18n.language === "zh" ? "font-semibold" : ""
+                        }`}
+                      >
                         <Link
                           to="/"
                           className={`${
                             location.pathname === "/"
                               ? ` ${linkStylesmobile.base}`
                               : ""
-                          } px-2`}
-                          style={{ fontFamily: "SF Pro Display M" }}
+                          } ${
+                            i18n.language === "ms"
+                              ? "px-[5px]"
+                              : i18n.language === "zh"
+                              ? "px-3"
+                              : "px-2"
+                          }`}
+                          style={{ fontFamily: "SF Pro Display Semibold" }}
                           onClick={() => {
                             setShowJoinUsSubmenu(false);
                             setProduct(false);
@@ -300,14 +310,24 @@ const Navbar = () => {
                           {t("home")}
                         </Link>
                       </div>
-                      <div className="text-[20px]">
+                      <div
+                        className={`text-[20px] ${
+                          i18n.language === "zh" ? "font-semibold" : ""
+                        }`}
+                      >
                         <button
                           className={`${
                             location.pathname.includes("/products")
                               ? ` ${linkStylesmobile.base}`
                               : ""
-                          } px-2 `}
-                          style={{ fontFamily: "SF Pro Display M" }}
+                          }  ${
+                            i18n.language === "ms"
+                              ? "px-[5px]"
+                              : i18n.language === "zh"
+                              ? "px-3"
+                              : "px-2"
+                          }`}
+                          style={{ fontFamily: "SF Pro Display Semibold" }}
                           onClick={() => {
                             toggleProductDropdown();
 
@@ -317,14 +337,24 @@ const Navbar = () => {
                           {t("products")}
                         </button>
                       </div>
-                      <div className="text-[20px]">
+                      <div
+                        className={`text-[20px] ${
+                          i18n.language === "zh" ? "font-semibold" : ""
+                        }`}
+                      >
                         <button
                           className={`${
                             location.pathname.includes("/join-us")
                               ? ` ${linkStylesmobile.base}`
                               : ""
-                          } px-2 `}
-                          style={{ fontFamily: "SF Pro Display M" }}
+                          }  ${
+                            i18n.language === "ms"
+                              ? "px-[5px]"
+                              : i18n.language === "zh"
+                              ? "px-3"
+                              : "px-2"
+                          } `}
+                          style={{ fontFamily: "SF Pro Display Semibold" }}
                           onClick={() => {
                             toggleJoinUsDropdown();
                             setProduct(false);
@@ -333,15 +363,25 @@ const Navbar = () => {
                           {t("join-us")}
                         </button>
                       </div>
-                      <div className="text-[20px]">
+                      <div
+                        className={`text-[20px]  ${
+                          i18n.language === "zh" ? "font-semibold" : ""
+                        }`}
+                      >
                         <Link
                           to="/download"
                           className={`${
                             location.pathname === "/download"
                               ? ` ${linkStylesmobile.base}`
                               : ""
-                          } px-2 `}
-                          style={{ fontFamily: "SF Pro Display M" }}
+                          } ${
+                            i18n.language === "ms"
+                              ? "px-[5px]"
+                              : i18n.language === "zh"
+                              ? "px-3"
+                              : "px-2"
+                          } `}
+                          style={{ fontFamily: "SF Pro Display Semibold" }}
                           onClick={() => {
                             setProduct(false);
 
@@ -354,8 +394,8 @@ const Navbar = () => {
                     </div>
                     {showProduct && (
                       <div className="flex gap-4">
-                        <div className="border-r border-gray-300 h-full"></div>
-                        <div className="flex flex-col gap-5">
+                        <div className="border-r border-[#F67F00] h-full"></div>
+                        <div className="flex flex-col gap-4">
                           <div>
                             <Link
                               to="/products/parent"
