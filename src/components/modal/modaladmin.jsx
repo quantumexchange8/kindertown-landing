@@ -391,14 +391,14 @@ const ModalAdmin = ({ showModal3, setShowModal3 }) => {
                                     className={`flex ${
                                       i18n.language === "zh"
                                         ? "md:gap-[203px] font-semibold gap-[90px]"
-                                        : "md:gap-[156px] gap-[64px]"
+                                        : "md:gap-[156px] gap-[63px]"
                                     }`}
                                   >
                                     <div
                                       className={`flex ${
                                         i18n.language === "zh"
                                           ? "md:gap-[182px] gap-[71px]"
-                                          : "md:gap-[156px]  gap-[64px]"
+                                          : "md:gap-[156px]  gap-[63px]"
                                       }`}
                                     >
                                       <div> {t("free")}</div>
@@ -411,9 +411,9 @@ const ModalAdmin = ({ showModal3, setShowModal3 }) => {
                               <div
                                 className={`w-full relative md:rounded-b-[30px] rounded-b-[14px] bg-[#FFB261] md:py-[38px] py-[9px] ${
                                   i18n.language === "en"
-                                    ? "md:pl-[72px] pl-[29px] pr-[29px] md:pr-[79px]"
+                                    ? "md:pl-[72px] pl-[35px] pr-[30px] md:pr-[79px]"
                                     : i18n.language === "ms"
-                                    ? "md:pl-[75px]  md:pr-[28px] pl-[27px] pr-5"
+                                    ? "md:pl-[75px]  md:pr-[28px] pl-[29px] pr-5"
                                     : "md:pl-[67px] md:pr-[67px] pl-[30px] pr-[39px]"
                                 }`}
                               >
@@ -422,7 +422,7 @@ const ModalAdmin = ({ showModal3, setShowModal3 }) => {
                                     i18n.language === "en"
                                       ? "md:gap-[127px] gap-[47px] justify-center  text-xs"
                                       : i18n.language === "ms"
-                                      ? "md:gap-[47px] gap-7  text-xs"
+                                      ? "md:gap-[47px] gap-6  text-xs"
                                       : "md:gap-[163px] gap-[70px] justify-center text-[10px]"
                                   }`}
                                   style={{ fontFamily: "SF Pro Display M" }}
@@ -430,9 +430,9 @@ const ModalAdmin = ({ showModal3, setShowModal3 }) => {
                                   <div
                                     className={`flex text-center ${
                                       i18n.language === "en"
-                                        ? "md:gap-[128px] gap-[46px]"
+                                        ? "md:gap-[128px] gap-[47px]"
                                         : i18n.language === "ms"
-                                        ? "md:gap-[92px] gap-8  justify-center"
+                                        ? "md:gap-[92px] gap-7  justify-center"
                                         : "md:gap-[142px] gap-[55px] justify-center"
                                     }`}
                                   >

@@ -64,7 +64,7 @@ const ModalParent = ({ showModal1, setShowModal1 }) => {
                         : i18n.language === "ms"
                         ? "md:w-[440px] w-[180px]"
                         : i18n.language === "zh"
-                        ? " md:w-[350px] w-[180px] font-bold"
+                        ? " md:w-[350px] w-[110px] font-bold"
                         : "md:w-[440px] w-[180px]"
                     }`}
                     style={{
