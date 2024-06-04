@@ -43,7 +43,7 @@ const termsmodal = ({ TermsOpen, setTermsOpen }) => {
 
                     <div className="w-full flex flex-col md:gap-5 gap-[15px] text-[#000]">
                       <div
-                        className="md:text-5xl text-xl"
+                        className="md:w-[620px] w-full md:text-5xl text-xl"
                         style={{ fontFamily: "SF Pro Display B" }}
                       >
                         Kindertown Website Terms of Use

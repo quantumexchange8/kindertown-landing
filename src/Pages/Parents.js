@@ -76,7 +76,7 @@ const Parent = () => {
                       </div>
                       <div className="md:hidden flex flex-col">
                         <div> {t("Kindertown")}</div>
-                        <div> {t("parent")}</div>
+                        <div> Parents</div>
                       </div>
                     </div>
                   )}

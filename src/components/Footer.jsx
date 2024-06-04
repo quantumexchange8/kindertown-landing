@@ -133,7 +133,9 @@ const Footer = () => {
                 <div className="flex flex-col md:gap-9">
                   <div className="flex flex-col md:gap-[15px]">
                     <div
-                      className="md:text-2xl text-right"
+                      className={`md:text-2xl text-right ${
+                        i18n.language === "zh" ? "font-semibold" : ""
+                      }`}
                       style={{ fontFamily: "SF Pro Display Semibold" }}
                     >
                       {t("stay-connect")}
@@ -185,7 +187,9 @@ const Footer = () => {
                   </div>
                   <div className="flex flex-col md:gap-[15px]">
                     <div
-                      className="text-2xl text-right"
+                      className={`text-2xl text-right ${
+                        i18n.language === "zh" ? "font-semibold" : ""
+                      }`}
                       style={{ fontFamily: "SF Pro Display Semibold" }}
                     >
                       {t("discover-app")}

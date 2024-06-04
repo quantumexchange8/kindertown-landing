@@ -36,7 +36,7 @@ const Navbar = () => {
 
   //Css for menu for web version
   const linkStyles = {
-    base: "flex justify-center items-center text-[#FFF] bg-[#F67F00] rounded-[15px]",
+    base: "flex justify-center items-center text-[#FFF] bg-[#F67F00] rounded-[15px] py-0.5",
     home: "w-[66px]",
     products: "w-[90px]",
     joinUs: "w-[100px]",

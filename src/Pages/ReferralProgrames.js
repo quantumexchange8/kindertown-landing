@@ -144,7 +144,7 @@ const ReferralProgrames = () => {
                       </div>
                     )}
                     {i18n.language === "zh" && (
-                      <div className=" font-bold">
+                      <div className=" font-bold text-center">
                         <div>{t("recommendation")}</div>
                         <div>
                           <span className="text-[#4D9138]">{t("simply")} </span>{" "}

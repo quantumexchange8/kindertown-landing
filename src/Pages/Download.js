@@ -740,12 +740,12 @@ const Download = () => {
                         </span>
                       </div>
                       {/*Mobile */}
-                      <div className="md:hidden flex flex-wrap justify-center whitespace-pre-line">
-                        {t("more")}&nbsp;
+                      <div className="md:hidden flex flex-wrap justify-center whitespace-pre-wrap">
+                        {t("more")}{" "}
                         <span className="text-[#FF5F5F]">
-                          {t("intelligent")}&nbsp;
+                          {t("intelligent")}{" "}
                         </span>
-                        {t("with")}&nbsp;
+                        {t("with")}{" "}
                         <span className="text-[#F67F00]">{t("KT")}</span>&nbsp;
                       </div>
                     </>
@@ -1148,9 +1148,17 @@ const Download = () => {
               Your browser does not support the video tag.
             </video>
 
-            <div className="md:w-[490px] md:h-[180px] w-[120px] h-[70px] absolute md:bottom-[117px] bottom-[25px] md:left-[114px] left-[31px]">
+            <div
+              className={`md:w-[700px] md:h-[180px] w-[140px] h-[70px] absolute md:bottom-[117px] md:left-[114px] left-[31px] ${
+                i18n.language === "zh" ? "bottom-0" : " bottom-[25px]"
+              }`}
+            >
               <div
-                className="text-xs  text-white"
+                className={`text-white ${
+                  i18n.language === "zh"
+                    ? "text-[10px]  md:text-[50px]"
+                    : "text-xs  md:text-[40px]"
+                }`}
                 style={{
                   fontFamily: "SF Pro Display B",
                   lineHeight: "normal",
@@ -1159,10 +1167,10 @@ const Download = () => {
                 <div
                   className={`flex flex-col ${
                     i18n.language === "zh"
-                      ? "md:w-[700px] md:text-[50px]"
+                      ? "md:w-[700px] w-[140px]"
                       : i18n.language === "ms"
-                      ? "md:w-[564px] w-[130px] md:text-[40px] "
-                      : "md:w-[490px] w-[120px] md:text-[40px] "
+                      ? "md:w-[564px] w-[130px]"
+                      : "md:w-[490px] w-[120px]"
                   }`}
                 >
                   {t("moment-children")}

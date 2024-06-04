@@ -97,9 +97,17 @@ const ModalParent = ({ showModal1, setShowModal1 }) => {
                         <div> {t("parentmodal-title1")}</div>
                         <div> {t("parentmodal-title2")}</div>
                       </div>
-                      <div className=" md:hidden flex flex-col">
-                        {t("parentmodal-title-full")}
-                      </div>
+                      {!(i18n.language === "zh") && (
+                        <div className=" md:hidden flex flex-col">
+                          {t("parentmodal-title-full")}
+                        </div>
+                      )}
+                      {i18n.language === "zh" && (
+                        <div className=" md:hidden flex flex-col">
+                          <div> {t("parentmodal-title1")}</div>
+                          <div> {t("parentmodal-title2")}</div>
+                        </div>
+                      )}
                     </div>
                     <div
                       className={` text-xl ${

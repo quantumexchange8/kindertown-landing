@@ -377,148 +377,97 @@ const ModalAdmin = ({ showModal3, setShowModal3 }) => {
                             </div>
                             <div className="w-full">
                               <div
-                                className={`w-full relative md:rounded-t-[30px] rounded-t-[14px] bg-[#FF8400] md:py-[38px] pt-[15px] pb-[17px] md:pl-[86px] md:pr-[85px]  ${
+                                className={`w-full md:rounded-t-[30px] rounded-t-[14px] bg-[#FF8400] flex justify-center items-center md:py-[38px] pt-[16px] pb-[17px] md:text-xl ${
                                   i18n.language === "zh"
-                                    ? "pl-[40px] pr-[49px]"
-                                    : "pl-[37px] pr-[32px]"
+                                    ? "font-semibold md:pl-[86px] md:pr-[108px] md:gap-[182px] gap-[84px] text-[10px]  pl-[36px] pr-[49px]"
+                                    : " md:gap-[156px] gap-[63px]  md:pl-[86px] md:pr-[85px]   pl-[37px] pr-[32px]  text-xs"
                                 }`}
+                                style={{
+                                  fontFamily: "SF Pro Display Semibold",
+                                }}
                               >
+                                <div>{t("free")}</div>
                                 <div
-                                  className="md:text-xl text-xs flex justify-center"
-                                  style={{ fontFamily: "SF Pro Display M" }}
+                                  className={`flex ${
+                                    i18n.language === "zh"
+                                      ? "md:gap-[203px] gap-[95px]"
+                                      : "md:gap-[156px] gap-[63px]"
+                                  }`}
                                 >
-                                  <div
-                                    className={`flex ${
-                                      i18n.language === "zh"
-                                        ? "md:gap-[203px] font-semibold gap-[90px]"
-                                        : "md:gap-[156px] gap-[63px]"
-                                    }`}
-                                  >
-                                    <div
-                                      className={`flex ${
-                                        i18n.language === "zh"
-                                          ? "md:gap-[182px] gap-[71px]"
-                                          : "md:gap-[156px]  gap-[63px]"
-                                      }`}
-                                    >
-                                      <div> {t("free")}</div>
-                                      <div> {t("standard")}</div>
-                                    </div>
-                                    <div> {t("premium")}</div>
-                                  </div>
+                                  <div> {t("standard")}</div>
+                                  <div> {t("premium")}</div>
                                 </div>
                               </div>
                               <div
-                                className={`w-full relative md:rounded-b-[30px] rounded-b-[14px] bg-[#FFB261] md:py-[38px] py-[9px] ${
-                                  i18n.language === "en"
-                                    ? "md:pl-[72px] pl-[35px] pr-[30px] md:pr-[79px]"
-                                    : i18n.language === "ms"
-                                    ? "md:pl-[75px]  md:pr-[28px] pl-[29px] pr-5"
-                                    : "md:pl-[67px] md:pr-[67px] pl-[30px] pr-[39px]"
-                                }`}
+                                className={`w-full md:rounded-b-[30px] rounded-b-[14px] bg-[#FFB261] flex items-center text-center md:py-[38px] py-[9px] md:text-xl
+                                ${
+                                  i18n.language === "ms"
+                                    ? "md:pl-[75px] md:pr-[28px] pl-[29px] pr-5 md:gap-[92px] gap-8 justify-center  text-xs"
+                                    : i18n.language === "en"
+                                    ? "md:pl-[72px] md:pr-[79px] px-[29px] md:gap-[127px] gap-[46px] justify-center  text-xs"
+                                    : i18n.language === "zh"
+                                    ? "md:pl-[67px] md:pr-[88px] pl-[30px] pr-[39px] md:gap-[142px] gap-[60px] text-[10px] justify-center"
+                                    : " md:pl-[72px] md:pr-[79px] px-[29px] md:gap-[127px] gap-[46px]  text-xs"
+                                }
+                                `}
+                                style={{
+                                  fontFamily: "SF Pro Display Semibold",
+                                }}
                               >
                                 <div
-                                  className={`md:text-xl flex ${
-                                    i18n.language === "en"
-                                      ? "md:gap-[127px] gap-[47px] justify-center  text-xs"
-                                      : i18n.language === "ms"
-                                      ? "md:gap-[47px] gap-6  text-xs"
-                                      : "md:gap-[163px] gap-[70px] justify-center text-[10px]"
+                                  className={`${
+                                    i18n.language === "ms"
+                                      ? "md:w-[65px] w-[40px]"
+                                      : i18n.language === "zh"
+                                      ? "md:w-[80px]"
+                                      : i18n.language === "en"
+                                      ? "md:w-[71px] w-[43px]"
+                                      : "md:w-[71px] w-[43px]"
                                   }`}
-                                  style={{ fontFamily: "SF Pro Display M" }}
                                 >
+                                  {" "}
+                                  {t("limit-access")}
+                                </div>
+                                <div
+                                  className={`flex ${
+                                    i18n.language === "ms"
+                                      ? "md:gap-[47px] gap-6"
+                                      : i18n.language === "en"
+                                      ? "md:gap-[125px]  gap-[46px]"
+                                      : i18n.language === "zh"
+                                      ? "md:gap-[163px] gap-[75px]"
+                                      : "md:gap-[125px]  gap-[46px]"
+                                  }`}
+                                >
+                                  {" "}
                                   <div
-                                    className={`flex text-center ${
-                                      i18n.language === "en"
-                                        ? "md:gap-[128px] gap-[47px]"
-                                        : i18n.language === "ms"
-                                        ? "md:gap-[92px] gap-7  justify-center"
-                                        : "md:gap-[142px] gap-[55px] justify-center"
-                                    }`}
-                                  >
-                                    <div
-                                      className={`${
-                                        i18n.language === "zh"
-                                          ? "md:w-[80px] w-[40px]"
-                                          : i18n.language === "ms"
-                                          ? "md:w-[65px] w-[50px]"
-                                          : "md:w-[70px]"
-                                      }`}
-                                    >
-                                      {t("limit-access")}
-                                    </div>
-                                    <div
-                                      className={`hidden md:flex flex-col text-center ${
-                                        i18n.language === "en"
-                                          ? " md:w-[121px]"
-                                          : i18n.language === "ms"
-                                          ? "md:w-[193px]"
-                                          : i18n.language === "zh"
-                                          ? "md:w-[80px] "
-                                          : "md:w-[121px]"
-                                      }`}
-                                    >
-                                      <div> {t("daily-charge")}</div>
-                                      {i18n.language === "ms" && (
-                                        <div> {t("daily-charge2")}</div>
-                                      )}
-                                    </div>
-                                    <div
-                                      className={`md:hidden flex flex-col text-center ${
-                                        i18n.language === "ms"
-                                          ? "w-[100px]"
-                                          : i18n.language === "zh"
-                                          ? " w-[40px]"
-                                          : "w-full"
-                                      }`}
-                                    >
-                                      <div> {t("daily-charge-mobile")}</div>
-                                    </div>
-                                  </div>
-
-                                  <div
-                                    className={` text-center ${
-                                      i18n.language === "en"
-                                        ? " md:w-[97px]"
-                                        : i18n.language === "ms"
-                                        ? "md:w-[186px] w-[69px]"
+                                    className={` flex flex-col ${
+                                      i18n.language === "ms"
+                                        ? "justify-center"
                                         : i18n.language === "zh"
-                                        ? " md:w-[80px] w-[40px]"
-                                        : "md:w-[97px]"
+                                        ? "md:w-[80px] w-[40px]"
+                                        : "md:w-[121px] w-[74px]"
                                     }`}
                                   >
+                                    <div> {t("daily-charge")}</div>
+                                    {i18n.language === "ms" && (
+                                      <div> {t("daily-charge2")}</div>
+                                    )}
+                                  </div>
+                                  <div
+                                    className={`${
+                                      i18n.language === "ms"
+                                        ? "md:w-[199px] w-[69px]"
+                                        : i18n.language === "zh"
+                                        ? "md:w-[80px] w-[40px]"
+                                        : "md:w-[97px] w-[60px]"
+                                    }`}
+                                  >
+                                    {" "}
                                     {t("get-quote")}
                                   </div>
                                 </div>
                               </div>
-                              {/*
-     <div className="relative w-full md:rounded-t-[30px] rounded-t-[14px] bg-[#FF8400] items-center md:pl-[86px] pl-[37px] pr-[32px] md:pr-[85px] md:py-[38px] pt-[15px] pb-[17px]">
-                                <div
-                                  className="md:text-xl text-xs flex justify-between text-center "
-                                  style={{ fontFamily: "SF Pro Display M" }}
-                                >
-                                  <div className="flex flex-col"> Free</div>
-                                  <div className="flex flex-col">Standard</div>
-                                  <div className="flex flex-col">Premium</div>
-                                </div>
-                              </div>
-                              <div className="relative w-full md:rounded-b-[30px] rounded-b-[14px] bg-[#FFB261] items-center md:pl-[72px] md:pr-[79px] px-[29px] md:py-[26px] py-[9px]">
-                                <div
-                                  className="md:text-xl text-xs flex md:justify-between gap-[47px] md:gap-0 text-center"
-                                  style={{ fontFamily: "SF Pro Display M" }}
-                                >
-                                  <div className="flex-col md:w-[70px]">
-                                    {t("limit-access")}
-                                  </div>
-                                  <div className="flex-col md:w-[121px]">
-                                    {t("daily-charge")}
-                                  </div>
-                                  <div className="flex-col md:w-[97px]">
-                                    Get Quote Now!
-                                  </div>
-                                </div>
-                              </div>
-*/}
                             </div>
                           </div>
                         </div>

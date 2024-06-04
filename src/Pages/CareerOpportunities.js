@@ -68,8 +68,8 @@ const CareerOpportunities = () => {
                   {t("crafting-experience1")}{" "}
                   <span className="text-[#4D9138]">
                     {t("crafting-experience2")}
-                  </span>{" "}
-                  {t("crafting-experience3")}{" "}
+                  </span>
+                  ; {t("crafting-experience3")}{" "}
                   <span className="text-[#F67F00]">
                     {t("crafting-experience4")}
                   </span>{" "}
