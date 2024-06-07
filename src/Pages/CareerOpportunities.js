@@ -318,7 +318,9 @@ const CareerOpportunities = () => {
 
         <div
           className={`md:max-w-[1000px] w-full flex flex-col md:px-0 pl-[31px] pr-[32px] ${
-            i18n.language === "zh" ? "md:gap-[50px] gap-[30px]" : "gap-[30px]"
+            i18n.language === "zh"
+              ? "md:gap-[30px] gap-[30px]"
+              : "md:gap-[50px] gap-[30px]"
           }`}
         >
           <div

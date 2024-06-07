@@ -60,7 +60,7 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                         </div>
                       </div>
                       <div
-                        className="md:text-2xl gap-[16px]"
+                        className="md:text-2xl text-base gap-[16px]"
                         style={{ fontFamily: "SF Pro Display R" }}
                       >
                         Updated November 6, 2023
@@ -192,7 +192,10 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                         </div>
 
                         <div>
-                          <span style={{ fontFamily: "SF Pro Display B" }}>
+                          <span
+                            style={{ fontFamily: "SF Pro Display B" }}
+                            className="font-[700]"
+                          >
                             To exercise your privacy rights and choices and to
                             ensure the security of your personal data,
                           </span>

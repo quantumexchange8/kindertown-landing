@@ -8,9 +8,43 @@ import Tab4 from "../assets/teacher/tab4.png";
 import Tab5 from "../assets/teacher/tab5.png";
 import CTLogo from "../assets/admin/ct-logo.svg";
 import Header from "../assets/teacher/header.png";
+import MobileHeader from "../assets/teacher/mobile-header.png";
+import HeaderMalay from "../assets/teacher/Header-malay.png";
+import MobileHeaderM from "../assets/teacher/mobile-header-malay.png";
+import HeaderChinese from "../assets/teacher/header-chinese.png";
+import MobileHeaderC from "../assets/teacher/mobile-header-chinese.png";
 import { useTranslation } from "react-i18next";
 const Teacher = () => {
   const { i18n, t } = useTranslation();
+
+  let headerImageWeb;
+  switch (i18n.language) {
+    case "zh":
+      headerImageWeb = HeaderChinese;
+      break;
+    case "ms":
+      headerImageWeb = HeaderMalay;
+      break;
+    case "en":
+    default:
+      headerImageWeb = Header;
+      break;
+  }
+
+  let headerImageMobile;
+  switch (i18n.language) {
+    case "zh":
+      headerImageMobile = MobileHeaderC;
+      break;
+    case "ms":
+      headerImageMobile = MobileHeaderM;
+      break;
+    case "en":
+    default:
+      headerImageMobile = MobileHeader;
+      break;
+  }
+
   return (
     <>
       <div
@@ -18,16 +52,16 @@ const Teacher = () => {
           i18n.language === "zh" ? "md:pb-[300px]" : "md:pb-[200px]"
         }`}
       >
-        <div className="w-full">
-          <img src={Header} alt="Header" className="w-full" />
+        <div className="w-full hidden md:flex">
+          <img src={headerImageWeb} alt="Header" className="w-full" />
+        </div>
+
+        <div className="w-full md:hidden flex">
+          <img src={headerImageMobile} alt="Header" className="w-full" />
         </div>
 
         <div className="w-full flex flex-col justify-center items-center md:px-0 pl-[31px] pr-[32px]">
-          <div
-            className={`w-full md:max-w-[1000px]  flex flex-col  gap-[100px] ${
-              i18n.language === "zh" ? " md:gap-[300px]" : "  md:gap-[200px]"
-            }`}
-          >
+          <div className="w-full md:max-w-[1000px]  flex flex-col  gap-[100px]  md:gap-[200px]">
             {/*CONTENT 2*/}
             <div className="w-full flex flex-col md:gap-[50px] gap-[30px]">
               <div className="flex flex-col justify-center items-center">

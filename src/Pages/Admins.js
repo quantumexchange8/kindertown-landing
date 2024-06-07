@@ -292,10 +292,10 @@ const Admin = () => {
         <div className="w-full md:w-[1102px] flex flex-col justify-center items-center  md:gap-[100px] gap-[35px]">
           <div className="w-full flex flex-col justify-center items-center">
             <div
-              className={`text-[32px] text-center ${
+              className={`text-center ${
                 i18n.language === "zh"
-                  ? "md:text-[80px]  font-bold"
-                  : "md:text-[70px]"
+                  ? "md:text-[80px]  font-bold text-4xl"
+                  : "md:text-[70px] text-[32px] "
               }`}
               style={{
                 fontFamily: "SF Pro Display B",

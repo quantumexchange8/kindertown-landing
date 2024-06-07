@@ -1,5 +1,4 @@
 import React, { useState, useRef } from "react";
-
 import Swal from "sweetalert2";
 
 import emailjs from "@emailjs/browser";
@@ -53,7 +52,7 @@ const Download = () => {
     const userEmail = formData.get("from_email"); // Assuming the input field has name="email"
 
     emailjs
-      //change the id, template id and public key
+
       .sendForm("service_pszh76a", "template_4m4ms5u", form.current, {
         publicKey: "gQzDzwQht4bausMz-",
         userEmail: userEmail,
@@ -125,9 +124,19 @@ const Download = () => {
   };
   return (
     <>
-      <div className="w-full flex flex-wrap justify-center md:pt-[150px] pt-[80px] md:gap-[200px] gap-[50px] md:pb-[200px]">
+      <div
+        className={`w-full flex flex-wrap justify-center md:pt-[150px] pt-[80px] gap-[50px] ${
+          i18n.language === "zh"
+            ? "md:gap-[250px]  md:pb-[100px] "
+            : "md:gap-[200px]  md:pb-[200px] "
+        }`}
+      >
         <div className="w-full md:max-w-[1000px] flex flex-col justify-center items-center ">
-          <div className="w-full flex flex-col md:gap-[200px] gap-[100px]">
+          <div
+            className={`w-full flex flex-col gap-[100px] ${
+              i18n.language === "zh" ? " md:gap-[250px] " : " md:gap-[200px] "
+            }`}
+          >
             {/*Content 1 & 2*/}
             <div className="w-full flex flex-col md:gap-[200px] gap-[50px]">
               {/*Content 1*/}
@@ -152,8 +161,16 @@ const Download = () => {
                 </div>
               </div>
               {/*Content 2*/}
-              <div className="w-full flex flex-col md:gap-5 gap-[30px]">
-                <div className="w-full flex flex-wrap justify-center md:gap-5 gap-[30px] md:px-0 pl-[31px] pr-[32px]">
+              <div
+                className={`w-full flex flex-col md:gap-5 ${
+                  i18n.language === "zh" ? "gap-[50px]" : " gap-[30px]"
+                }`}
+              >
+                <div
+                  className={`w-full flex flex-wrap justify-center md:gap-5 md:px-0 pl-[31px] pr-[32px] ${
+                    i18n.language === "zh" ? "gap-[50px]" : " gap-[30px]"
+                  }`}
+                >
                   <div className="relative md:w-[490px] md:h-[500px] h-[336px] w-full flex flex-col md:rounded-[30px] rounded-[20px] bg-[#FFDFA1] md:pt-[44px] pt-[27px] md:pl-[52px] pl-[35px] pr-[28px] md:pr-[30px] md:gap-6 gap-[19px]">
                     <div
                       className={`flex flex-col items-end  gap-[9px] ${
@@ -253,89 +270,6 @@ const Download = () => {
                       </div>
                     </div>
                   </div>
-
-                  {/*   <div className="relative w-full md:w-[490px] md:h-[500px] h-[337px] md:rounded-[30px] rounded-[20px] bg-[#FFDFA1] pt-[44px] md:pl-[52px] pl-[35px] pr-[28px] md:pr-[30px] flex flex-col md:gap-6 gap-[19px]">
-                    <div className="flex flex-col items-end md:gap-5 gap-[10px]">
-                      <div
-                        className="md:text-3xl text-base  text-right"
-                        style={{
-                          fontFamily: "SF Pro Display B",
-                          lineHeight: "normal",
-                        }}
-                      >
-                        Kindertown Parent
-                      </div>
-                      <div
-                        className="md:text-2xl text-base text-[#666] text-right md:w-[280px] w-[200px]"
-                        style={{ fontFamily: "SF Pro Display M" }}
-                      >
-                        Understanding the child's learning journey.
-                      </div>
-                    </div>
-                    <div className="flex flex-col justify-center overflow-hidden">
-                      <div>
-                        <div className="relative md:top-[100px] top-[80px]">
-                          <img
-                            src={mobile}
-                            alt="Mobile"
-                            className="md:w-[250px]  w-[168px]"
-                          />
-                        </div>
-                        <div className="absolute bottom-0 right-0 p-[30px]">
-                          <button onClick={() => setShowModal1(true)}>
-                            <img
-                              src={button1}
-                              alt="Button1"
-                              className="md:w-[40px] md:h-[40px] w-[25px] h-[25px]"
-                            />
-                          </button>
-                          <Modal1
-                            showModal1={showModal1}
-                            setShowModal1={setShowModal1}
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="relative w-full md:w-[490px] md:h-[500px] md:rounded-[30px] rounded-[20px] bg-[#3F5DFF] md:pt-[41px] pt-[27px] md:pb-[30px] pb-[28px] md:pl-[62px] px-[42px] md:pr-[63px] flex flex-col md:gap-6 gap-[33px]">
-                    <div className="flex flex-col justify-end">
-                      <img src={tab} alt="Tablet" className="md:w-[365px]" />
-                    </div>
-                    <div className="flex flex-col justify-start">
-                      <div className="flex">
-                        <div className="flex flex-col items-start md:gap-5 gap-[10px]">
-                          <div
-                            className="md:text-3xl text-base  text-left"
-                            style={{ fontFamily: "SF Pro Display B" }}
-                          >
-                            Kindertown Teacher
-                          </div>
-                          <div
-                            className="md:text-2xl  text-base text-white text-left md:w-[243px] w-[176px]"
-                            style={{
-                              fontFamily: "SF Pro Display M",
-                              lineHeight: "normal",
-                            }}
-                          >
-                            Escape the busyness, save valuable time.
-                          </div>
-                        </div>
-                        <div className="absolute bottom-[30px] right-[30px]">
-                          <button onClick={() => setShowModal2(true)}>
-                            <img
-                              src={button2}
-                              alt="Button2"
-                              className="md:w-[40px] md:h-[40px] w-[25px] h-[25px]"
-                            />
-                          </button>
-                          <Modal2
-                            showModal2={showModal2}
-                            setShowModal2={setShowModal2}
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>*/}
                 </div>
                 <div className="w-full">
                   <div className="relative w-full bg-[#2FC300] md:rounded-[30px] justify-between items-center flex md:gap-[100px] gap-6 py-[43px] md:pt-[49px] md:pr-[98px] pr-[32px] md:pb-0  overflow-hidden">
@@ -481,7 +415,11 @@ const Download = () => {
               </div>
             </div>
 
-            <div className="w-full flex flex-col md:px-0 pl-[19px] pr-[21px] gap-[100px] md:gap-[300px]">
+            <div
+              className={`w-full flex flex-col md:px-0 pl-[19px] pr-[21px] gap-[100px] ${
+                i18n.language === "zh" ? "md:gap-[250px]" : " md:gap-[300px] "
+              }`}
+            >
               {/*Content 4 */}
               <div className="w-full flex flex-wrap justify-center items-center md:gap-5 gap-[7px]">
                 <div
@@ -960,44 +898,6 @@ const Download = () => {
 
                   {/*COntent 8*/}
 
-                  {/*  have to fix tomorrow
-                  <div className="w-full md:rounded-[30px] rounded-[10px] bg-[#FCBF4A] flex justify-center items-center md:py-[85px] gap-5">
-                    <div
-                      className={`flex flex-col md:gap-[30px] gap-[10px] ${
-                        i18n.language === "zh"
-                          ? "md:text-2xl text-[8px] font-bold"
-                          : i18n.language === "ms"
-                          ? "md:w-[25px]  text-[10px]"
-                          : "md:text-3xl  text-[10px] "
-                      }`}
-                      style={{
-                        fontFamily: "SF Pro Display B",
-                        lineHeight: "normal",
-                      }}
-                    >
-                      <div className="text-[#FF0001] w-[140px] ">
-                        {t("line-up")}{" "}
-                      </div>
-                      <div className="text-[#4800FF] w-[150px] ">
-                        {t("submit-docs")}{" "}
-                      </div>
-                      <div className="text-[#00821D] w-[160px]">
-                        {t("seat-advance")}{" "}
-                      </div>
-                      <div className="w-[170px] md:w-[440px]">
-                        {t("same-ques")}{" "}
-                      </div>
-                    </div>
-                    <div className="flex">
-                      <img
-                        src={open}
-                        alt="OpenSign"
-                        className="md:w-[250px] md:h-[298px] w-[88px] h-[105px]"
-                      />
-                    </div>
-                  </div>
-*/}
-
                   <div
                     className={`w-full flex justify-between items-center md:rounded-[30px] rounded-[10px] bg-[#FCBF4A] md:py-[85px] py-[31px]  pl-[34px] pr-[43px] md:gap-[68px] md:pl-[108px] md:pr-[108px] ${
                       i18n.language === "zh" ? "gap-[43px]" : " gap-[9px]"
@@ -1248,6 +1148,7 @@ const Download = () => {
                       className="md:w-[246px] md:h-[246px] w-[100px] h-[100px]"
                     />
                   </div>
+
                   <form ref={form} onSubmit={sendEmail}>
                     <div className="w-full flex flex-col items-center md:gap-[100px] gap-[42px]">
                       <div className="w-full md:w-[928px] flex md:flex flex-col md:gap-[30px] gap-5">

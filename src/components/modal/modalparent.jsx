@@ -83,7 +83,11 @@ const ModalParent = ({ showModal1, setShowModal1 }) => {
                       : " md:gap-[200px]"
                   }`}
                 >
-                  <div className="w-full md:w-[700px] flex flex-col md:gap-[50px] gap-5">
+                  <div
+                    className={`w-full md:w-[700px] flex flex-col md:gap-[50px] ${
+                      i18n.language === "en" ? " gap-5" : " gap-[30px]"
+                    }`}
+                  >
                     <div
                       className={`md:text-4xl text-[24px] ${
                         i18n.language === "zh" ? "font-bold" : ""

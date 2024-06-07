@@ -163,7 +163,7 @@ const termsmodal = ({ TermsOpen, setTermsOpen }) => {
                             articles, and similar materials) intentionally made
                             available by Kindertown for downloading from the
                             website, provided that you
-                            <ul className="list-none list-inside">
+                            <ul className="list-none list-inside pt-2 md:pt-0">
                               <li>
                                 <span
                                   style={{ fontFamily: "SF Pro Display B" }}
@@ -384,16 +384,40 @@ const termsmodal = ({ TermsOpen, setTermsOpen }) => {
                           </div>
                           <div>
                             Kindertown reserves the right to do any of the
-                            following, at any time, without notice: (1) modify,
-                            suspend, or terminate the operation of or access to
-                            the website, or any portion of the website, for any
-                            reason; (2) modify or change the website, the
-                            entirety or portions of the website's content, and
-                            any applicable policies or terms; and (3) interrupt
-                            the operation of the website, or any portion of the
-                            website, as necessary to perform routine or
-                            non-routine maintenance, error correction, or other
-                            changes.
+                            following, at any time, without notice:
+                            <ul className="list-none list-inside">
+                              <li>
+                                <span
+                                  style={{ fontFamily: "SF Pro Display B" }}
+                                >
+                                  (1){" "}
+                                </span>
+                                modify, suspend, or terminate the operation of
+                                or access to the website, or any portion of the
+                                website, for any reason;
+                              </li>
+                              <li>
+                                <span
+                                  style={{ fontFamily: "SF Pro Display B" }}
+                                >
+                                  (2){" "}
+                                </span>
+                                modify or change the website, the entirety or
+                                portions of the website's content, and any
+                                applicable policies or terms; and
+                              </li>
+                              <li>
+                                <span
+                                  style={{ fontFamily: "SF Pro Display B" }}
+                                >
+                                  (3){" "}
+                                </span>
+                                interrupt the operation of the website, or any
+                                portion of the website, as necessary to perform
+                                routine or non-routine maintenance, error
+                                correction, or other changes.
+                              </li>
+                            </ul>
                           </div>
                         </div>
                       </div>

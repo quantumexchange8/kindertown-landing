@@ -86,7 +86,17 @@ const ModalTeacher = ({ showModal2, setShowModal2 }) => {
                     }`}
                   >
                     {/* CONTENT 2*/}
-                    <div className="w-full flex flex-col md:gap-[50px] gap-5">
+                    <div
+                      className={`w-full flex flex-col ${
+                        i18n.language === "en"
+                          ? "md:gap-[50px] gap-5 "
+                          : i18n.language === "ms"
+                          ? "md:gap-[53px] gap-[30px]"
+                          : i18n.language === "zh"
+                          ? "md:gap-[50px] gap-[30px]"
+                          : "md:gap-[50px] gap-5 "
+                      }`}
+                    >
                       <div
                         className="md:text-4xl text-2xl"
                         style={{ fontFamily: "SF Pro Display B" }}

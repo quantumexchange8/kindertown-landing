@@ -406,7 +406,7 @@ const Navbar = () => {
                               }`}
                               style={{ fontFamily: "SF Pro Display M" }}
                             >
-                              {t("footer-parent")}
+                              {t("KT-parent")}
                             </Link>
                           </div>
                           <div>
@@ -495,7 +495,7 @@ const Navbar = () => {
               style={{ fontFamily: "SF Pro Medium" }}
               onClick={() => setActiveProductSubPage("parent")}
             >
-              {t("footer-parent")}
+              {t("KT-parent")}
             </Link>
             <Link
               to="/products/teacher"

@@ -112,7 +112,11 @@ const ReferralProgrames = () => {
             {/*content 3 & 4 */}
             <div className="w-full flex flex-col justify-center items-center md:gap-[200px] gap-[100px] md:px-0 pl-[31px] pr-[32px]">
               {/*Content 3*/}
-              <div className="w-full md:w-[800px] flex flex-col md:gap-[100px] gap-[50px]">
+              <div
+                className={`w-full md:w-[800px] flex flex-col  gap-[50px] ${
+                  i18n.language === "zh" ? "md:gap-[200px]" : "md:gap-[100px]"
+                }`}
+              >
                 {/*Ttile*/}
                 <div className="flex flex-col">
                   <div
@@ -122,6 +126,7 @@ const ReferralProgrames = () => {
                       lineHeight: "normal",
                     }}
                   >
+                    {/**Eng */}
                     {i18n.language === "en" && (
                       <div>
                         <div>{t("recommendation")}</div>
@@ -134,20 +139,24 @@ const ReferralProgrames = () => {
                       </div>
                     )}
 
+                    {/**Malay */}
                     {i18n.language === "ms" && (
                       <div>
                         <div>{t("recommendation")}</div>
                         <div>
                           {t("is")}{" "}
-                          <span className="text-[#4D9138]">{t("simply")} </span>
+                          <span className="text-[#4D9138] md:text-black">
+                            {t("simply")}{" "}
+                          </span>
                         </div>
                       </div>
                     )}
+                    {/**Chinese */}
                     {i18n.language === "zh" && (
-                      <div className=" font-bold text-center">
+                      <div className=" font-bold md:text-center">
                         <div>{t("recommendation")}</div>
                         <div>
-                          <span className="text-[#4D9138]">{t("simply")} </span>{" "}
+                          {t("simply")}
                           {t("is")}
                         </div>
                       </div>
