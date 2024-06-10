@@ -146,8 +146,14 @@ const Home = () => {
               <div className="w-full flex flex-wrap md:gap-7 gap-[30px]">
                 <div
                   className={`w-full md:w-[315px] rounded-[30px] pt-[47px] pb-12 md:pt-[70px] md:pb-[71px] px-[25px] md:pl-[27px]  ${
-                    i18n.language === "zh" ? "md:pr-[28px]" : "md:pr-[18px]"
-                  } bg-[#F67F00] flex flex-col justify-center items-center gap-[50px] md:gap-[60px]`}
+                    i18n.language === "zh"
+                      ? "md:pr-[28px] md:gap-[60px]  gap-[60px] "
+                      : i18n.language === "ms"
+                      ? "md:pr-[18px] md:gap-[50px]  gap-[50px] "
+                      : i18n.language === "en"
+                      ? "md:pr-[18px] md:gap-[60px] gap-[50px] "
+                      : "md:pr-[18px] md:gap-[60px]  gap-[50px] "
+                  } bg-[#F67F00] flex flex-col justify-center items-center`}
                 >
                   <div>
                     <img
@@ -160,7 +166,7 @@ const Home = () => {
                   <div
                     className={`flex flex-col items-center  w-[270px] md:h-full ${
                       i18n.language === "zh"
-                        ? "gap-[30px] md:gap-[26px] "
+                        ? "gap-5 md:gap-[26px] "
                         : "gap-[30px] md:gap-5 "
                     }`}
                   >
@@ -249,9 +255,13 @@ const Home = () => {
                 <div
                   className={`w-full md:w-[315px] rounded-[30px] py-[44px] ${
                     i18n.language === "zh"
-                      ? "md:pt-[70px] md:pb-[94px]"
-                      : " md:py-[70px]"
-                  } md:pl-[22px] md:pr-[23px] px-[25px] bg-[#FFC19F]  flex flex-col justify-center items-center gap-[50px] md:gap-[60px]`}
+                      ? "md:pt-[70px] md:pb-[94px]  md:gap-[60px] gap-[60px]"
+                      : i18n.language === "ms"
+                      ? " gap-[30px]  md:py-[70px]  md:gap-[50px]"
+                      : i18n.language === "en"
+                      ? " gap-[50px]  md:py-[70px]  md:gap-[60px]"
+                      : " gap-[50px]  md:py-[70px]  md:gap-[60px]"
+                  } md:pl-[22px] md:pr-[23px] px-[25px] bg-[#FFC19F]  flex flex-col justify-center items-center`}
                 >
                   <div>
                     <img
@@ -264,7 +274,7 @@ const Home = () => {
                   <div
                     className={`flex flex-col items-center w-[270px] md:h-full ${
                       i18n.language === "zh"
-                        ? "gap-[30px] md:gap-[26px] "
+                        ? "gap-5 md:gap-[26px] "
                         : "gap-[30px] md:gap-5 "
                     }`}
                   >
@@ -312,8 +322,14 @@ const Home = () => {
                 </div>
                 <div
                   className={`w-full md:w-[314px] rounded-[30px] py-[60px] md:pt-[70px] md:pb-[93px] px-[25px] ${
-                    i18n.language === "zh" ? "md:px-[27px]" : " md:px-[22px]"
-                  } bg-[#FCBF4A]  flex flex-col justify-center items-center gap-[50px] md:gap-[60px]`}
+                    i18n.language === "zh"
+                      ? "md:px-[27px]  md:gap-[60px] gap-[60px]"
+                      : i18n.language === "en"
+                      ? " md:px-[22px]  md:gap-[60px] gap-[50px]"
+                      : i18n.language === "ms"
+                      ? " md:gap-[50px] md:px-[22px] gap-[50px]"
+                      : " md:px-[22px]  md:gap-[60px]  gap-[50px]"
+                  } bg-[#FCBF4A]  flex flex-col justify-center items-center`}
                 >
                   <div>
                     <img
@@ -324,14 +340,14 @@ const Home = () => {
                   </div>
 
                   <div
-                    className={`flex flex-col items-center gap-[30px] w-full md:h-full ${
+                    className={`flex flex-col items-center w-full md:h-full ${
                       i18n.language === "zh"
-                        ? "md:gap-[26px]"
+                        ? "md:gap-[26px]  gap-5"
                         : i18n.language === "ms"
-                        ? "md:gap-5"
+                        ? "md:gap-5 gap-5"
                         : i18n.language === "en"
-                        ? "md:gap-[18px]"
-                        : "md:gap-[18px]"
+                        ? "md:gap-[18px]  gap-[30px]"
+                        : "md:gap-[18px]  gap-[30px]"
                     }`}
                   >
                     <div
@@ -368,9 +384,13 @@ const Home = () => {
                 <div
                   className={`w-full md:w-[315px] rounded-[30px] bg-[#FDE0A4] px-[25px] md:pl-[27px]  ${
                     i18n.language === "zh"
-                      ? "md:pr-[28px] md:pt-[70px] md:pb-[94px]"
-                      : "md:pr-[18px]  md:py-[70px]"
-                  } pt-[47px] pb-12 flex flex-col justify-center items-center gap-[50px] md:gap-[60px]`}
+                      ? "md:pr-[28px] md:pt-[70px] md:pb-[94px] md:gap-[60px] gap-[60px]"
+                      : i18n.language === "ms"
+                      ? "md:pr-[18px]  md:py-[70px]  md:gap-[51px] gap-[50px]"
+                      : i18n.language === "en"
+                      ? "md:pr-[18px]  md:py-[70px]  md:gap-[60px] gap-[50px]"
+                      : "md:pr-[18px]  md:py-[70px]  md:gap-[60px]  gap-[50px]"
+                  } pt-[47px] pb-12 flex flex-col justify-center items-center`}
                 >
                   <div>
                     <img
@@ -426,10 +446,14 @@ const Home = () => {
                 </div>
 
                 <div
-                  className={`w-full md:w-[315px] rounded-[30px]  bg-[#E0956C] flex flex-col justify-center items-center md:gap-[60px] gap-[50px] md:pt-[70px] ${
+                  className={`w-full md:w-[315px] rounded-[30px]  bg-[#E0956C] flex flex-col justify-center items-center md:pt-[70px] ${
                     i18n.language === "zh"
-                      ? "md:pb-[94px] md:pr-[28px]"
-                      : " md:pb-[71px] md:pr-[18px]"
+                      ? "md:pb-[94px] md:pr-[28px] md:gap-[60px] gap-[60px] "
+                      : i18n.language === "ms"
+                      ? "md:pb-[71px] md:pr-[18px] md:gap-[50px] gap-[50px] "
+                      : i18n.language === "en"
+                      ? "md:pb-[71px] md:pr-[18px] md:gap-[60px] gap-[50px] "
+                      : "md:gap-[60px]  md:pb-[71px] md:pr-[18px] gap-[50px] "
                   } md:pl-[27px]  pt-[47px] pb-[48px] px-[25px]`}
                 >
                   <div>
@@ -507,8 +531,14 @@ const Home = () => {
                 </div>
 
                 <div
-                  className={`w-full md:w-[314px] rounded-[30px]  bg-[#FFDDB9] flex flex-col justify-center items-center gap-[50px] md:gap-[60px] px-[25px] ${
-                    i18n.language === "zh" ? "md:px-[27px]" : "md:px-[22px]"
+                  className={`w-full md:w-[314px] rounded-[30px]  bg-[#FFDDB9] flex flex-col justify-center items-center px-[25px] ${
+                    i18n.language === "zh"
+                      ? "md:px-[27px] md:gap-[60px] gap-[60px]"
+                      : i18n.language === "ms"
+                      ? "md:px-[22px] md:gap-[51px] gap-[50px]  "
+                      : i18n.language === "en"
+                      ? "md:gap-[60px] md:px-[22px] gap-[50px]  "
+                      : "md:gap-[60px] md:px-[22px] gap-[50px]  "
                   }  md:pt-[70px] md:pb-[71px] pt-[38px] pb-[39px]`}
                 >
                   <div>
@@ -813,10 +843,20 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="w-full flex md:py-[200px] py-[100px] md:px-0 pl-[31px] pr-[32px] justify-center items-center">
+      <div
+        className={`w-full flex py-[100px] md:px-0 pl-[31px] pr-[32px] justify-center items-center ${
+          i18n.language === "zh"
+            ? " md:pt-[150px] md:pb-[200px]"
+            : " md:py-[200px]"
+        }`}
+      >
         <div className="w-full md:max-w-[1000px] flex flex-col justify-center items-center md:gap-[200px] gap-[100px]">
           {/*CONTENT 9*/}
-          <div className="w-full flex flex-col justify-center items-center gap-[30px] md:gap-[50px]">
+          <div
+            className={`w-full flex flex-col justify-center items-center md:gap-[50px] ${
+              i18n.language === "zh" ? " gap-[50px]" : " gap-[30px]"
+            }`}
+          >
             <div
               className={`flex flex-col justify-center items-center ${
                 i18n.language === "zh"
@@ -1060,7 +1100,11 @@ const Home = () => {
               <img
                 src={Parent}
                 alt="Parent"
-                className="md:w-[530px] md:h-[450px] w-[207px] h-[180px]"
+                className={` w-[207px] h-[180px] ${
+                  i18n.language === "zh"
+                    ? " md:w-[530px] md:h-[530px]"
+                    : "  md:w-[530px] md:h-[450px]"
+                }`}
               />
             </div>
             <div
