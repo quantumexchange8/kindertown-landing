@@ -1,7 +1,7 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import Swal from "sweetalert2";
-
-import emailjs from "@emailjs/browser";
+import axios from "axios";
+//import emailjs from "@emailjs/browser";
 import "./modal.css";
 import Modal1 from "../components/modal/modalparent";
 import Modal2 from "../components/modal/modalteacher";
@@ -38,38 +38,46 @@ const Download = () => {
   const [showModal1, setShowModal1] = useState(false);
   const [showModal2, setShowModal2] = useState(false);
   const [showModal3, setShowModal3] = useState(false);
-
+  const [formData, setFormData] = useState({
+    schoolname: "",
+    email: "",
+    name: "",
+    contact: "",
+  });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const form = useRef();
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
-  const sendEmail = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (isSubmitting) return; // Prevent multiple submissions
 
-    setIsSubmitting(true);
-
-    const formData = new FormData(form.current);
-    const userEmail = formData.get("from_email"); // Assuming the input field has name="email"
-
-    emailjs
-
-      .sendForm("service_pszh76a", "template_4m4ms5u", form.current, {
-        publicKey: "gQzDzwQht4bausMz-",
-        userEmail: userEmail,
-      })
-      .then(
-        () => {
-          console.log("SUCCESS!");
-          setIsSubmitting(false); // Enable the button after submission
-          Swal.fire("Success!", "Form submitted successfully", "success");
-          form.current.reset(); // Reset the form
-        },
-        (error) => {
-          console.log("FAILED...", error.text);
-          setIsSubmitting(false); // Enable the button after submission
-          Swal.fire("Error!", "Form submission failed", "error");
-        }
-      );
+    setIsSubmitting(true); // Disable the submit button
+    try {
+      await axios.post("http://localhost:5000/send-email", formData);
+      Swal.fire({
+        icon: "success",
+        title: "Email sent successfully",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+      setFormData({
+        schoolname: "",
+        email: "",
+        name: "",
+        contact: "",
+      }); // Reset the form fields
+    } catch (error) {
+      Swal.fire({
+        icon: "error",
+        title: "Error sending email",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+    } finally {
+      setIsSubmitting(false); // Enable the submit button
+    }
   };
 
   const tapFingerGap = () => {
@@ -1115,8 +1123,14 @@ const Download = () => {
             </div>
             <div className="w-full  flex justify-center items-center">
               <div
-                className={`relative w-full md:max-w-[1100px] md:rounded-[30px] flex flex-col items-center gap-[30px]  md:px-[86px] pr-[32px] pl-[31px] md:pt-[82px] py-[50px] md:pb-[95px] ${
-                  i18n.language === "zh" ? "md:gap-[138px]" : "md:gap-[90px]"
+                className={`relative w-full md:max-w-[1100px] md:rounded-[30px] flex flex-col items-center  md:px-[86px] pr-[32px] pl-[31px] md:pt-[82px] py-[50px] md:pb-[95px] ${
+                  i18n.language === "zh"
+                    ? "md:gap-[138px] gap-[50px]"
+                    : i18n.language === "en"
+                    ? "md:gap-[90px]  gap-[30px]"
+                    : i18n.language === "ms"
+                    ? "md:gap-[92px]  gap-[37px]"
+                    : "md:gap-[90px]  gap-[30px]"
                 }`}
                 style={{
                   background:
@@ -1149,6 +1163,119 @@ const Download = () => {
                     />
                   </div>
 
+                  <form onSubmit={handleSubmit}>
+                    <div className="w-full flex flex-col md:gap-[100px] gap-[42px] justify-center items-center">
+                      <div className="w-full flex md:flex flex-wrap md:gap-7  gap-5">
+                        <div className="w-full md:w-[450px] flex flex-col md:gap-[30px] gap-5">
+                          <div
+                            className="flex flex-col md:gap-4 gap-[6px] md:text-xl text-base"
+                            style={{
+                              fontFamily:
+                                i18n.language === "zh"
+                                  ? "SF Pro Display M"
+                                  : "SF Pro Display R",
+                              fontWeight: i18n.language === "zh" ? "500" : "",
+                            }}
+                          >
+                            <label>{t("school-name")}</label>
+                            <input
+                              className="md:w-[450px] w-full h-[66px] bg-transparent border-2 rounded-[15px] border-white text-gray-900 px-2 dark:hover:bg-gray-700"
+                              type="text"
+                              name="schoolname"
+                              value={formData.schoolname}
+                              onChange={handleChange}
+                              required
+                            />
+                          </div>
+                          <div
+                            className="flex flex-col md:gap-4 gap-[6px] md:text-xl text-base"
+                            style={{ fontFamily: "SF Pro Display R" }}
+                          >
+                            <label>{t("email-address")}</label>
+                            <input
+                              className="md:w-[450px] w-full h-[66px] bg-transparent border-2 rounded-[15px] border-white text-gray-900 px-2 dark:hover:bg-gray-700"
+                              type="email"
+                              name="email"
+                              value={formData.email}
+                              onChange={handleChange}
+                              required
+                            />
+                          </div>
+                        </div>
+                        <div className="w-full md:w-[450px] flex flex-col md:gap-[30px]  gap-5">
+                          <div
+                            className="flex flex-col md:gap-4 gap-[6px] md:text-xl"
+                            style={{ fontFamily: "SF Pro Display R" }}
+                          >
+                            <label>{t("name-pic")}</label>
+                            <input
+                              className="md:w-[450px] w-full h-[66px] bg-transparent border-2 rounded-[15px] border-white text-gray-900 px-2 dark:hover:bg-gray-700"
+                              type="text"
+                              name="name"
+                              value={formData.name}
+                              onChange={handleChange}
+                              required
+                            />
+                          </div>
+                          <div
+                            className="flex flex-col md:gap-4 gap-[6px] md:text-xl text-base"
+                            style={{ fontFamily: "SF Pro Display R" }}
+                          >
+                            <label>{t("contact-no")}</label>
+                            <input
+                              className="md:w-[450px] w-full h-[66px] bg-transparent border-2 rounded-[15px] border-white text-gray-900 px-2 dark:hover:bg-gray-700"
+                              type="text"
+                              name="contact"
+                              value={formData.contact}
+                              onChange={handleChange}
+                              required
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div className="w-full md:w-[536px] flex justify-center items-center">
+                        {" "}
+                        <button
+                          type="submit"
+                          className={`${
+                            i18n.language === "zh"
+                              ? "md:pt-[23px] md:pb-[22px]"
+                              : i18n.language === "ms"
+                              ? "md:pt-[18px] md:pb-[17px]"
+                              : "md:pt-[23px] md:pb-[22px]"
+                          } flex items-center justify-center w-full md:w-[536px] md:pl-[53px] px-4 md:pr-[52px] md:h-[93px]  py-[22px] text-gray-900 ring-[#BBB] ring-1 bg-white border border-gray-300 shadow-md focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 rounded-[15px] dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700`}
+                        >
+                          <div
+                            className={`flex md:flex-row flex-col justify-center items-center md:gap-[29px] ${
+                              i18n.language === "ms"
+                                ? "gap-[13px]"
+                                : " gap-[7px]"
+                            }`}
+                          >
+                            <div
+                              className="flex flex-col md:text-xl text-base md:w-[362px] w-full md:order-first order-last"
+                              style={{
+                                fontFamily: "SF Pro Display M",
+                                lineHeight: "normal",
+                              }}
+                            >
+                              <div>{t("24hr-send")}</div>
+                              <div>{t("service-contact")}</div>
+                            </div>
+                            <div>
+                              <img
+                                src={tele}
+                                alt="Tele"
+                                className="w-10 h-10 md:order-last order-first"
+                              />
+                            </div>
+                          </div>
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+
+                  {/*
                   <form ref={form} onSubmit={sendEmail}>
                     <div className="w-full flex flex-col items-center md:gap-[100px] gap-[42px]">
                       <div className="w-full md:w-[928px] flex md:flex flex-col md:gap-[30px] gap-5">
@@ -1238,7 +1365,7 @@ const Download = () => {
                         </button>
                       </div>
                     </div>
-                  </form>
+                  </form> */}
                 </div>
               </div>
             </div>

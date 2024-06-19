@@ -200,7 +200,7 @@ const ReferralProgrames = () => {
                           i18n.language === "zh" ? "text-sm" : "text-base"
                         }`}
                         style={{
-                          fontFamily: "SF Pro Display M",
+                          fontFamily: "SF Pro Display R",
                           lineHeight: "normal",
                         }}
                       >
@@ -245,7 +245,7 @@ const ReferralProgrames = () => {
                           i18n.language === "zh" ? "text-sm" : "text-base"
                         }`}
                         style={{
-                          fontFamily: "SF Pro Display M",
+                          fontFamily: "SF Pro Display R",
                           lineHeight: "normal",
                         }}
                       >
@@ -295,7 +295,7 @@ const ReferralProgrames = () => {
                             i18n.language === "zh" ? " text-sm " : " text-base "
                           }`}
                           style={{
-                            fontFamily: "SF Pro Display M",
+                            fontFamily: "SF Pro Display R",
                             lineHeight: "normal",
                           }}
                         >
@@ -338,7 +338,7 @@ const ReferralProgrames = () => {
                       <div
                         className="text-center md:text-[32px] text-base"
                         style={{
-                          fontFamily: "SF Pro Display M",
+                          fontFamily: "SF Pro Display R",
                           lineHeight: "normal",
                         }}
                       >
@@ -381,7 +381,7 @@ const ReferralProgrames = () => {
                           i18n.language === "zh" ? "text-sm" : "text-base"
                         }`}
                         style={{
-                          fontFamily: "SF Pro Display M",
+                          fontFamily: "SF Pro Display R",
                           lineHeight: "normal",
                         }}
                       >
