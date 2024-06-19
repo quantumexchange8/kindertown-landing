@@ -77,10 +77,12 @@ const ModalParent = ({ showModal1, setShowModal1 }) => {
                 </div>
                 {/*Content1*/}
                 <div
-                  className={`w-full md:w-[900px] flex flex-col justify-center items-center  md:pt-[100px] pt-[50px] md:px-0 pl-[31px] pr-8 gap-[100px]  md:pb-[100px] pb-[60px] ${
+                  className={`w-full md:w-[900px] flex flex-col justify-center items-center  md:pt-[100px] pt-[50px] md:px-0 pl-[31px] pr-8 md:pb-[100px] pb-[60px] ${
                     i18n.language === "zh"
-                      ? " md:gap-[100px]"
-                      : " md:gap-[200px]"
+                      ? " md:gap-[100px] gap-[50px]"
+                      : i18n.language === "en"
+                      ? " md:gap-[200px]  gap-[100px] "
+                      : " md:gap-[200px] gap-[200px]"
                   }`}
                 >
                   <div

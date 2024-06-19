@@ -79,10 +79,12 @@ const ModalTeacher = ({ showModal2, setShowModal2 }) => {
 
                 <div className="w-full md:max-w-[900px] flex flex-col justify-center items-center md:pt-[100px] pt-[50px] md:px-0 pl-[31px] pr-[32px]  md:pb-[100px] pb-[60px]">
                   <div
-                    className={`w-full md:w-[700px] flex flex-col gap-[100px] ${
+                    className={`w-full md:w-[700px] flex flex-col ${
                       i18n.language === "zh"
-                        ? " md:gap-[100px]"
-                        : " md:gap-[200px]"
+                        ? " md:gap-[100px] gap-[50px]"
+                        : i18n.language === "en"
+                        ? " md:gap-[200px]  gap-[100px]"
+                        : " md:gap-[200px]  gap-[200px]"
                     }`}
                   >
                     {/* CONTENT 2*/}

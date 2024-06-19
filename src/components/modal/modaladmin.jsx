@@ -122,8 +122,10 @@ const ModalAdmin = ({ showModal3, setShowModal3 }) => {
                       <div
                         className={`w-full flex flex-col gap-[100px] ${
                           i18n.language === "zh"
-                            ? "md:gap-[100px]"
-                            : "md:gap-[200px] "
+                            ? "md:gap-[100px] gap-[50px]"
+                            : i18n.language === "en"
+                            ? "md:gap-[200px] gap-[100px] "
+                            : "md:gap-[200px] gap-[200px]"
                         }`}
                       >
                         <div className="w-full flex flex-col items-center">
