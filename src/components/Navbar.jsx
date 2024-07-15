@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { GlobalIcon } from "./Icons/outline";
+import { GlobalIcon, GroupIcon } from "./Icons/outline";
 import { useTranslation } from "react-i18next";
 import "../font.css";
 import logo from "../assets/logo.svg";
@@ -120,6 +120,18 @@ const Navbar = () => {
           {/* web/desktop*/}
           <div className="hidden md:flex items-center gap-[20px]">
             <Link
+              to="/products/parent"
+              className={`${
+                location.pathname.includes("/products")
+                  ? `${linkStyles.base} ${linkStyles.products}`
+                  : " hover:text-[#F67F00]"
+              } `}
+              style={{ fontFamily: "SF Pro Display M" }}
+              onClick={handleProductsClick}
+            >
+              {t("about-us")}
+            </Link>
+            <Link
               to="/"
               className={`${
                 location.pathname === "/"
@@ -152,7 +164,7 @@ const Navbar = () => {
               style={{ fontFamily: "SF Pro Display M" }}
               onClick={handleJoinUsClick}
             >
-              {t("join-us")}
+              {t("referral-program")}
             </Link>
             <Link
               to="/download"
@@ -214,6 +226,17 @@ const Navbar = () => {
                 </div>
               )}
             </div>
+            <button onClick={toggleLanguageDropdown}>
+                <div
+                  className={`transition duration-300 ease-in-out transform ${
+                    isHovered ? "hover:scale-110 opacity-90" : ""
+                  }`}
+                  onMouseEnter={() => setIsHovered(true)}
+                  onMouseLeave={() => setIsHovered(false)}
+                >
+                  <GroupIcon />
+                </div>
+              </button>
           </div>
 
           {/* mobile*/}

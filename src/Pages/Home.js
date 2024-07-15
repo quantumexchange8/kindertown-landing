@@ -24,7 +24,7 @@ const Home = () => {
   const getDocumentJourneyWidth = () => {
     switch (i18n.language) {
       case "en":
-        return "md:w-[460px] w-[150px]";
+        return "md:w-[650px] w-[171px]";
       case "ms":
         return "md:w-[495px] w-[160px]";
       case "zh":
@@ -36,7 +36,7 @@ const Home = () => {
   const TeacherDescWidth = () => {
     switch (i18n.language) {
       case "en":
-        return "w-[900px]";
+        return "w-[1000px]";
       case "ms":
         return " w-[990px]";
       case "zh":
@@ -65,16 +65,16 @@ const Home = () => {
                 <div
                   className={`flex flex-col items-center w-full ${
                     i18n.language === "en"
-                      ? "gap-[30px] md:gap-[60px] "
+                      ? "gap-[30px] md:gap-[50px] "
                       : i18n.language === "ms"
-                      ? "md:gap-[100px] gap-[30px] "
+                      ? "gap-[20px] md:gap-[50px] "
                       : i18n.language === "zh"
                       ? "gap-[50px] md:gap-[100px] "
                       : "gap-[30px] md:gap-[60px] "
                   }`}
                 >
                   <div
-                    className={`w-full text-4xl md:text-[80px] text-center md:leading-[90px] ${
+                    className={`w-full text-4xl md:text-[80px] text-center md:leading-[90px] text-[#F67F00] gap-[50px] ${
                       i18n.language === "zh" ? "font-black" : ""
                     }`}
                     style={{ fontFamily: "SF Pro Display B" }}
@@ -603,12 +603,12 @@ const Home = () => {
           </div>
         </div>
         <div
-          className={`w-full flex flex-col bg-[#FFF7EF] justify-center items-center md:px-0 px-5 md:py-[150px] pt-[50px] ${
+          className={`w-full flex flex-col bg-[#FFF] justify-center items-center md:px-0 px-5 md:py-[150px] pt-[50px] ${
             i18n.language === "en" ? "pb-[100px]" : "  pb-[50px]"
           }`}
         >
           <div
-            className={`w-full md:max-w-[1000px] flex flex-col justify-center md:gap-[200px] ${
+            className={`w-full md:max-w-[1000px] flex flex-col justify-center md:gap-[100px] ${
               i18n.language === "zh" ? "gap-[50px]" : "gap-[100px]"
             }`}
           >
@@ -627,7 +627,7 @@ const Home = () => {
                     fontFamily: "SF Pro Display B",
                     lineHeight: "normal",
                   }}
-                  className={`text-center text-4xl md:text-[80px] text-[#7A5AF8] md:leading-[90px]  w-full  ${
+                  className={`text-center text-4xl md:text-[96px] text-[#7A5AF8] md:leading-none  w-full  ${
                     i18n.language === "zh" ? "font-bold" : " "
                   }`}
                 >
@@ -647,24 +647,24 @@ const Home = () => {
             >
               {/*Content 5*/}
               <div
-                className={`flex flex-wrap w-full md:gap-9  ${
-                  i18n.language === "zh" ? "gap-5" : " gap-[30px]"
+                className={`flex flex-col ${
+                  i18n.language === "zh" ? "gap-5" : " "
                 }`}
               >
                 <div>
                   <img
                     src={Family}
                     alt="Family"
-                    className="md:w-[100px] md:h-[100px] w-[73px] h-[73px]"
+                    className="md:w-[150px] md:h-[150px] w-[73px] h-[73px]"
                   />
                 </div>
                 <div
-                  className={`flex flex-col justify-center w-full md:w-[864px] md:gap-[30px] ${
+                  className={`flex flex-col justify-center w-full md:w-[864px] md:gap-[10px] ${
                     i18n.language === "zh" ? "gap-[10px]" : "  gap-[15px]"
                   }`}
                 >
                   <div
-                    className="text-[#4D9138] text-[20px] md:text-[32px] md:pt-[30px]"
+                    className="text-[#4D9138] text-[20px] md:text-[32px] md:pt-[20px]"
                     style={{
                       fontFamily: "SF Pro Display EB",
                       fontWeight: i18n.language === "zh" ? "860" : "",
@@ -695,9 +695,9 @@ const Home = () => {
               </div>
 
               <div
-                className={`flex flex-col  gap-[100px] ${
+                className={`flex flex-col ] ${
                   i18n.language === "en"
-                    ? "md:gap-[125px]"
+                    ? "md:gap-[150px]"
                     : i18n.language === "ms"
                     ? "md:gap-[150px]"
                     : i18n.language === "zh"
@@ -707,24 +707,24 @@ const Home = () => {
               >
                 {/*Content 6*/}
                 <div
-                  className={`flex flex-wrap w-full md:gap-9  ${
-                    i18n.language === "zh" ? "gap-5" : " gap-[30px]"
+                  className={`flex flex-col w-full ${
+                    i18n.language === "zh" ? "gap-5" : ""
                   }`}
                 >
                   <div>
                     <img
                       src={Teachers}
                       alt="Teacher"
-                      className="md:w-[100px] md:h-[100px] w-[73px] h-[73px]"
+                      className="md:w-[150px] md:h-[150px] w-[73px] h-[73px]"
                     />
                   </div>
                   <div
-                    className={`flex flex-col justify-center md:w-[864px] md:gap-[30px] ${
+                    className={`flex flex-col justify-center w-full md:w-[864px] md:gap-[10px] ${
                       i18n.language === "zh" ? "gap-[10px]" : "  gap-[15px]"
                     }`}
                   >
                     <div
-                      className={`text-[#752912] md:text-[32px] text-[20px] md:pt-[30px] ${
+                      className={`text-[#752912] text-[20px] md:text-[32px] md:pt-[20px] ${
                         i18n.language === "zh" ? "font-bold" : ""
                       }`}
                       style={{
@@ -757,8 +757,8 @@ const Home = () => {
                 </div>
                 {/*Content 7*/}
                 <div
-                  className={`flex flex-wrap w-full md:gap-9 ${
-                    i18n.language === "zh" ? "gap-5" : " gap-[30px]"
+                  className={`flex flex-col w-full  ${
+                    i18n.language === "zh" ? "gap-5" : ""
                   }`}
                 >
                   <div>
@@ -782,7 +782,7 @@ const Home = () => {
                     }`}
                   >
                     <div
-                      className={`text-[#00A0CB] md:text-[32px] text-xl md:pt-[30px] ${
+                      className={`text-[#00A0CB] text-[20px] md:text-[32px] md:pt-[20px] ${
                         i18n.language === "zh" ? "font-bold" : ""
                       }`}
                       style={{ fontFamily: "SF Pro Display EB" }}
@@ -791,7 +791,7 @@ const Home = () => {
                     </div>
                     <div>
                       <div
-                        className={`text-xl  flex flex-col md:gap-10 gap-5  ${
+                        className={`text-[20px]  flex flex-col md:gap-10 gap-5 ${
                           i18n.language === "zh"
                             ? "md:text-[30px]"
                             : "md:text-[32px]"
@@ -818,7 +818,7 @@ const Home = () => {
 
       {/*Content 8 - Video */}
 
-      <div className="relative w-full  md:h-[900px] h-[280px] overflow-hidden">
+      <div className="relative w-full  md:h-[900px] h-[300px] overflow-hidden">
         <div className="w-full md:pt-[108px] md:pl-[106px]">
           <video
             src={GirlBg}
@@ -828,13 +828,13 @@ const Home = () => {
             className="absolute md:top-0 left-0 w-full md:object-cover object-center"
           />
 
-          <div className="absolute md:left-24 md:top-24 left-5 top-[21px] flex items-center">
+          <div className="absolute flex items-center justify-center h-screen text-[#F67F00]">
             <div
-              className={`md:text-[40px] text-base  ${getDocumentJourneyWidth()}`}
+              className={`md:text-[48px] text-base  ${getDocumentJourneyWidth()}`}
               style={{
                 fontFamily: "SF Pro Display B",
                 lineHeight: "normal",
-                fontWeight: i18n.language === "zh" ? "700" : "",
+                fontWeight: i18n.language === "700",
               }}
             >
               {t("document-journey")}
@@ -847,10 +847,10 @@ const Home = () => {
         className={`w-full flex py-[100px] md:px-0 pl-[31px] pr-[32px] justify-center items-center ${
           i18n.language === "zh"
             ? " md:pt-[150px] md:pb-[200px]"
-            : " md:py-[200px]"
+            : " md:py-[150px]"
         }`}
       >
-        <div className="w-full md:max-w-[1000px] flex flex-col justify-center items-center md:gap-[200px] gap-[100px]">
+        <div className="w-full md:max-w-[1000px] flex flex-col justify-center items-center md:gap-[150px] gap-[50px]">
           {/*CONTENT 9*/}
           <div
             className={`w-full flex flex-col justify-center items-center md:gap-[50px] ${
@@ -868,7 +868,7 @@ const Home = () => {
                 <img
                   src={Choose}
                   alt="Teachers"
-                  className="md:w-32 md:h-32 w-full"
+                  className="md:w-[200px] md:h-[200px] w-full"
                 />
               </div>
               <div
@@ -935,7 +935,7 @@ const Home = () => {
               className={`flex flex-col justify-center items-center ${
                 i18n.language === "zh"
                   ? "gap-5 md:gap-4"
-                  : " gap-4 md:gap-[30px]"
+                  : " gap-4 md:gap-[10px]"
               }`}
             >
               <div
@@ -994,7 +994,7 @@ const Home = () => {
               className={`w-full flex flex-col justify-center items-center  ${
                 i18n.language === "zh"
                   ? "gap-5 md:gap-4"
-                  : " gap-4 md:gap-[30px]"
+                  : " gap-4 md:gap-[10px]"
               }`}
             >
               <div
@@ -1052,7 +1052,7 @@ const Home = () => {
               className={`flex flex-col justify-center items-center  ${
                 i18n.language === "zh"
                   ? "gap-5 md:gap-4"
-                  : " gap-4 md:gap-[30px]"
+                  : " gap-4 md:gap-[10px]"
               }`}
             >
               <div
@@ -1069,7 +1069,7 @@ const Home = () => {
                   className={`text-center  ${
                     i18n.language === "zh"
                       ? "md:text-[30px] text-xl"
-                      : "md:text-[32px] text-base "
+                      : "md:text-[24px] text-base "
                   }`}
                   style={{
                     fontFamily: "SF Pro Display M",

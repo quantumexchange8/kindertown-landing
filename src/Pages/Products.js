@@ -10,7 +10,7 @@ const Products = () => {
       <div>
         <div
           className="flex justify-center w-full text-[80px] text-center leading-[90px]"
-          style={{ fontFamily: "SF Pro Display B" }}
+          style={{ fontFamily: "SF Pro Display B"}}
         >
           <div className="w-[610px]">Zero - Worries. Zero - Hassle.</div>
         </div>
