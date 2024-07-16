@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import i18n from "../i18n";
 import { Link } from "react-router-dom";
 import logo from "../assets/footer/logo.svg";
@@ -14,6 +14,7 @@ import ct from "../assets/footer/ct.svg";
 import Privacy from "../components/modal/privacymodal";
 import Terms from "../components/modal/termsmodal";
 import { useTranslation } from "react-i18next";
+
 const Footer = () => {
   const [PrivacyOpen, setPrivacyOpen] = useState(false);
   const [TermsOpen, setTermsOpen] = useState(false);
@@ -21,22 +22,71 @@ const Footer = () => {
     window.location.href = url;
   };
   const { t } = useTranslation();
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
 
+  useEffect(() => {
+    const updateScreenSize = () => {
+      setIsSmallScreen(window.innerWidth <= 768);
+    };
+
+    updateScreenSize();
+    window.addEventListener('resize', updateScreenSize);
+    return () => {
+      window.removeEventListener('resize', updateScreenSize);
+    }
+  })
   return (
     <footer>
-      <div className="flex flex-col gap-[11px] md:gap-0">
-        <div className="w-full bg-[#FFF7EF] flex flex-col justify-center items-center  md:pt-16  md:pb-[64px]  py-7 md:px-0 pl-[31px] pr-8">
+      <div className="flex justify-center">
+        <button className={`bg-white border-2 border-[#f67f00] border-solid rounded-[31px] shadow-[2px_4px_4px_0px_rgba(246,127,0,0.50)] w-[333px] h-[50px] ${i18n.language === "en"
+          ? "md:w-[600px] md:h-[60px]"
+          : i18n.language === "ms"
+            ? "md:w-[760px] md:h-[60px]"
+            : i18n.language === "zh"
+              ? "md:w-[450px] md:h-[60px]"
+              : "md:w-[600px] md:h-[60px]"
+          }`}>
+          <div style={{
+            fontFamily: "SF Pro Display B",
+            lineHeight: "normal",
+          }}
+            className={`inline-block md:text-xl font-wrap font-semibold text-[14px] items-center justify-center text-pretty ${i18n.language === "ms"
+              ? "mx-8" : " "
+              }`}>
+            {i18n.language === "en" && (
+              <>
+                {isSmallScreen ? (
+                  <>
+                    <div>{t("complimentary-demo1")}</div>
+                    <div>{t("complimentary-demo2")}</div>
+                  </>
+                ) : (
+                  <div>{t("complimentary-demo")}</div>
+                )}
+              </>
+            )}
+            {i18n.language === "ms" && (
+              <>
+                {isSmallScreen ? (
+                  <>
+                    <div>{t("complimentary-demo1")}</div>
+                    <div>{t("complimentary-demo2")}</div>
+                  </>
+                ) : (
+                  <div>{t("complimentary-demo")}</div>
+                )}
+              </>
+            )}
+            {i18n.language === "zh" && (
+              <div> {t("complimentary-demo")}</div>
+            )}
+          </div>
+        </button>
+      </div>
+      <div className="flex flex-col gap-[11px] md:gap-0 md:pt-[150px] pt-[50px]">
+        <div className="w-full bg-[#FFF7EF] flex flex-col justify-center items-center md:pt-24  md:pb-[85px]  py-7 md:px-0 pl-[31px] pr-8">
           {/*Desktop*/}
           <div className="w-full md:max-w-[1000px] hidden md:flex flex-col md:gap-9">
-            <div className="flex justify-start items-start w-[74px] h-[50px]">
-              <Link
-                to="/"
-                onClick={() => handleLinkClick("/")}
-                className="hover:text-[#F67F00]"
-              >
-                <img src={logo} alt="Logo" />
-              </Link>
-            </div>
             <div className="w-full flex flex-col gap-12">
               <div className="w-full flex flex-wrap justify-between">
                 <div className="flex flex-col md:gap-[25px]">
@@ -133,9 +183,8 @@ const Footer = () => {
                 <div className="flex flex-col md:gap-9">
                   <div className="flex flex-col md:gap-[15px]">
                     <div
-                      className={`md:text-2xl text-right ${
-                        i18n.language === "zh" ? "font-semibold" : ""
-                      }`}
+                      className={`md:text-2xl text-right ${i18n.language === "zh" ? "font-semibold" : ""
+                        }`}
                       style={{ fontFamily: "SF Pro Display Semibold" }}
                     >
                       {t("stay-connect")}
@@ -187,9 +236,8 @@ const Footer = () => {
                   </div>
                   <div className="flex flex-col md:gap-[15px]">
                     <div
-                      className={`text-2xl text-right ${
-                        i18n.language === "zh" ? "font-semibold" : ""
-                      }`}
+                      className={`text-2xl text-right ${i18n.language === "zh" ? "font-semibold" : ""
+                        }`}
                       style={{ fontFamily: "SF Pro Display Semibold" }}
                     >
                       {t("discover-app")}
@@ -259,7 +307,7 @@ const Footer = () => {
           </div>
 
           {/*Mobile*/}
-          <div className="w-full md:hidden flex flex-col gap-10 ">
+          <div className="w-full md:hidden flex flex-col gap-10">
             <div
               className="flex flex-col gap-5 text-xl"
               style={{ fontFamily: "SF Pro Display M" }}

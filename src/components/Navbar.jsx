@@ -6,6 +6,8 @@ import "../font.css";
 import logo from "../assets/logo.svg";
 import menu from "../assets/menu.svg";
 import i18n from "../i18n";
+import About from "../components/modal/aboutmodal";
+
 const Navbar = () => {
   const { t } = useTranslation();
   const location = useLocation();
@@ -16,6 +18,7 @@ const Navbar = () => {
   const [showProduct, setProduct] = useState(false);
   const [showJoin, setShowJoinUsSubmenu] = useState(false);
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
+  const [AboutOpen, setAboutOpen] = useState(false);
 
   const toggleLanguageDropdown = () => {
     setIsLanguageOpen(!isLanguageOpen);
@@ -45,7 +48,7 @@ const Navbar = () => {
 
   //Css for menu for mobile version
   const linkStylesmobile = {
-    base: " text-[#FFF] bg-[#F67F00] rounded-[15px]",
+    base: "border border-[#F67F00] rounded-[5px]",
 
     /*   base: "flex justify-center items-center text-[#FFF] bg-[#F67F00] rounded-[15px]",
     home: "w-[76px]",
@@ -110,6 +113,7 @@ const Navbar = () => {
     e.stopPropagation(); // Stop propagation to prevent backdrop click from firing
   };
   const [isHovered, setIsHovered] = useState(false);
+  
   return (
     <div className="w-full flex flex-col fixed top-0  z-40 justify-center items-center">
       <div className="bg-[#fff7efe6] w-full flex justify-center h-[50px] px-5 md:px-0">
@@ -120,17 +124,17 @@ const Navbar = () => {
           {/* web/desktop*/}
           <div className="hidden md:flex items-center gap-[20px]">
             <Link
-              to="/products/parent"
-              className={`${
-                location.pathname.includes("/products")
-                  ? `${linkStyles.base} ${linkStyles.products}`
-                  : " hover:text-[#F67F00]"
-              } `}
+              // to="/products/parent"
+              className={`hover:text-[#F67F00]`}
               style={{ fontFamily: "SF Pro Display M" }}
-              onClick={handleProductsClick}
+              onClick={() => setAboutOpen(true)}
             >
               {t("about-us")}
             </Link>
+            <About
+              AboutOpen={AboutOpen}
+              setAboutOpen={setAboutOpen}
+            />
             <Link
               to="/"
               className={`${
