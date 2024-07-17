@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import i18n from "../i18n";
 import { Link } from "react-router-dom";
-import logo from "../assets/footer/logo.svg";
+// import logo from "../assets/footer/logo.svg";
 import wsp from "../assets/footer/wsp-01.svg";
 import fb from "../assets/footer/fb.svg";
 import ig from "../assets/footer/ig-01.svg";
@@ -22,19 +22,6 @@ const Footer = () => {
     window.location.href = url;
   };
   const { t } = useTranslation();
-  const [isSmallScreen, setIsSmallScreen] = useState(false);
-
-  useEffect(() => {
-    const updateScreenSize = () => {
-      setIsSmallScreen(window.innerWidth <= 768);
-    };
-
-    updateScreenSize();
-    window.addEventListener('resize', updateScreenSize);
-    return () => {
-      window.removeEventListener('resize', updateScreenSize);
-    }
-  })
   return (
     <footer>
       <div className="flex justify-center">
@@ -53,33 +40,22 @@ const Footer = () => {
             className={`inline-block md:text-xl font-wrap font-semibold text-[14px] items-center justify-center text-pretty ${i18n.language === "ms"
               ? "mx-8" : " "
               }`}>
-            {i18n.language === "en" && (
-              <>
-                {isSmallScreen ? (
-                  <>
-                    <div>{t("complimentary-demo1")}</div>
-                    <div>{t("complimentary-demo2")}</div>
-                  </>
-                ) : (
-                  <div>{t("complimentary-demo")}</div>
-                )}
-              </>
-            )}
-            {i18n.language === "ms" && (
-              <>
-                {isSmallScreen ? (
-                  <>
-                    <div>{t("complimentary-demo1")}</div>
-                    <div>{t("complimentary-demo2")}</div>
-                  </>
-                ) : (
-                  <div>{t("complimentary-demo")}</div>
-                )}
-              </>
-            )}
-            {i18n.language === "zh" && (
-              <div> {t("complimentary-demo")}</div>
-            )}
+            {/* Desktop */}
+            <div className="inline-block hidden md:flex">{t("complimentary-demo")}</div>
+            {/* Mobile */}
+            <div className="flex flex-col md:hidden">
+              {i18n.language === "zh" && (
+                <div>{t("complimentary-demo")}</div>
+              )}
+              {i18n.language === "en" && (
+                <><div>{t("complimentary-demo1")}</div>
+                <div>{t("complimentary-demo2")}</div></>
+              )}
+              {i18n.language === "ms" && (
+                <><div>{t("complimentary-demo1")}</div>
+                <div>{t("complimentary-demo2")}</div></>
+              )}
+            </div>
           </div>
         </button>
       </div>

@@ -1073,12 +1073,12 @@ const Home = () => {
 
                   {/*Desktop*/}
                   <div className="hidden md:flex flex-wrap justify-center items-center">
-                    <span className={`inline-block ${TeacherDescWidth()}`}>
+                    <div className={`inline-block ${TeacherDescWidth()}`}>
                       <div>{t("teacher-desc")}</div>
                       {i18n.language === "zh" && (
                         <div>{t("teacher-desc2")}</div>
                       )}
-                    </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1115,10 +1115,10 @@ const Home = () => {
 
               <div className="flex items-center">
                 <div
-                  className={`text-center text-pretty ${
+                  className={`text-center text-pretty tracking-widest font-semibold ${
                     i18n.language === "zh"
-                      ? "md:text-[30px] text-xl"
-                      : "md:text-[24px] text-base "
+                      ? "md:text-[30px] text-sm"
+                      : "md:text-[24px] text-sm "
                   }`}
                   style={{
                     fontFamily: "SF Pro Display M",

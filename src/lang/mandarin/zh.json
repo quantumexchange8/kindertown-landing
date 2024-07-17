@@ -68,9 +68,9 @@
   "teacher": "教师",
   "teacher-desc": "有效提升教师对学生态度和学习进展的责任感，",
   "teacher-desc2": "并且实现学生作业和活动在学校内的更快实时同步。",
-  "teacher-desc-mobile": "有效提升教师对学生态度和学习进展的责任感，并且实现学生作业和活动在学校内的更快实时同步。",
+  "teacher-desc-mobile": "有效提升教师对学生态度和学习进展的责任感, 并且实现学生作业和活动在学校内的更快实时同步。",
   "parent": "家长",
-  "parent-desc": "实时了解您孩子的学习进展、学校活动、通知、温度记录、幼儿园签到、重要更新以及便捷的学费支付选项。 该系统使家长更加人性化和有效地参与 学校相关事务。",
+  "parent-desc": "实时了解您孩子的学习进展, 学校活动, 通知, 温度记录, 幼儿园签到, 重要更新以及便捷的学费支付选项. 该系统使家长更加人性化和有效地参与学校相關事务.",
   "bring-expert": "将专业",
   "bring-expert2": "的工具",
   "bring-expert3": "带入您的校园.",
@@ -313,5 +313,15 @@
   "footer-parent": "幼儿城家长版",
   "footer-teacher": "幼儿城教师版",
   "footer-admin": "幼儿城管理员",
-  "complimentary-demo": "请留下您的联系方式以便安排免费的演示"
+  "complimentary-demo": "请留下您的联系方式以便安排免费的演示",
+  "leave-your-contact":"留下您的联系方式",
+  "leave-your-contact-desc1":"请耐心等待",
+  "leave-your-contact-desc2":"我们的服务人员将很快与您联系",
+  "form-full-name":"姓名",
+  "form-school-name":"学校名称",
+  "form-contact-number":"联系号码",
+  "form-email-address":"电子邮件",
+  "form-location":"您的所在地区",
+  "form-interest-product":"我们那种产品令您感到兴趣?",
+  "form-send":"发送"
 }

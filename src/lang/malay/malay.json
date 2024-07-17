@@ -323,5 +323,15 @@
   "footer-admin": "Kindertown Admin",
   "complimentary-demo": "Untuk jadual demo percuma, sila hubungi kami di maklumat berikut",
   "complimentary-demo1": "Untuk jadual demo percuma, sila",
-  "complimentary-demo2": " hubungi kami di maklumat berikut"
+  "complimentary-demo2": " hubungi kami di maklumat berikut",
+  "leave-your-contact":"Tinggalkan maklumat hubungan anda",
+  "leave-your-contact-desc1":"Sila bersabar, kakitangan kami",
+  "leave-your-contact-desc2":" akan menghubungi anda segera.",
+  "form-full-name":"Nama Penuh",
+  "form-school-name":"Nama Sekolah",
+  "form-contact-number":"Nombor telefon",
+  "form-email-address":"Emel",
+  "form-location":"Negeri atau lokasi anda",
+  "form-interest-product":"Produk apakah yang anda minati?",
+  "form-send":"Hantar"
 }

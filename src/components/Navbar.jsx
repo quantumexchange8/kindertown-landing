@@ -7,6 +7,7 @@ import logo from "../assets/logo.svg";
 import menu from "../assets/menu.svg";
 import i18n from "../i18n";
 import About from "../components/modal/aboutmodal";
+import Form from "../components/modal/formmodal";
 
 const Navbar = () => {
   const { t } = useTranslation();
@@ -19,6 +20,7 @@ const Navbar = () => {
   const [showJoin, setShowJoinUsSubmenu] = useState(false);
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
   const [AboutOpen, setAboutOpen] = useState(false);
+  const [FormOpen, setFormOpen] = useState(false);
 
   const toggleLanguageDropdown = () => {
     setIsLanguageOpen(!isLanguageOpen);
@@ -113,9 +115,9 @@ const Navbar = () => {
     e.stopPropagation(); // Stop propagation to prevent backdrop click from firing
   };
   const [isHovered, setIsHovered] = useState(false);
-  
+
   return (
-    <div className="w-full flex flex-col fixed top-0  z-40 justify-center items-center">
+    <div className="w-full flex fixed flex-col top-0  z-40 justify-center items-center">
       <div className="bg-[#fff7efe6] w-full flex justify-center h-[50px] px-5 md:px-0">
         <div className="w-full md:w-[1000px] flex items-center justify-between">
           <div className="flex flex-col">
@@ -124,7 +126,6 @@ const Navbar = () => {
           {/* web/desktop*/}
           <div className="hidden md:flex items-center gap-[20px]">
             <Link
-              // to="/products/parent"
               className={`hover:text-[#F67F00]`}
               style={{ fontFamily: "SF Pro Display M" }}
               onClick={() => setAboutOpen(true)}
@@ -137,22 +138,20 @@ const Navbar = () => {
             />
             <Link
               to="/"
-              className={`${
-                location.pathname === "/"
+              className={`${location.pathname === "/"
                   ? `${linkStyles.base} ${linkStyles.home}`
                   : " hover:text-[#F67F00]"
-              } `}
+                } `}
               style={{ fontFamily: "SF Pro Display M" }}
             >
               {t("home")}
             </Link>
             <Link
               to="/products/parent"
-              className={`${
-                location.pathname.includes("/products")
+              className={`${location.pathname.includes("/products")
                   ? `${linkStyles.base} ${linkStyles.products}`
                   : " hover:text-[#F67F00]"
-              } `}
+                } `}
               style={{ fontFamily: "SF Pro Display M" }}
               onClick={handleProductsClick}
             >
@@ -160,11 +159,10 @@ const Navbar = () => {
             </Link>
             <Link
               to="/join-us/referral-program"
-              className={`${
-                location.pathname.includes("/join-us")
+              className={`${location.pathname.includes("/join-us")
                   ? `${linkStyles.base} ${linkStyles.joinUs}`
                   : " hover:text-[#F67F00]"
-              } `}
+                } `}
               style={{ fontFamily: "SF Pro Display M" }}
               onClick={handleJoinUsClick}
             >
@@ -172,11 +170,10 @@ const Navbar = () => {
             </Link>
             <Link
               to="/download"
-              className={`${
-                location.pathname === "/download"
+              className={`${location.pathname === "/download"
                   ? `${linkStyles.base} ${linkStyles.download}`
                   : " hover:text-[#F67F00]"
-              } `}
+                } `}
               style={{ fontFamily: "SF Pro Display M" }}
             >
               {t("download")}
@@ -184,9 +181,8 @@ const Navbar = () => {
             <div className="relative">
               <button onClick={toggleLanguageDropdown}>
                 <div
-                  className={`transition duration-300 ease-in-out transform ${
-                    isHovered ? "hover:scale-110 opacity-90" : ""
-                  }`}
+                  className={`transition duration-300 ease-in-out transform ${isHovered ? "hover:scale-110 opacity-90" : ""
+                    }`}
                   onMouseEnter={() => setIsHovered(true)}
                   onMouseLeave={() => setIsHovered(false)}
                 >
@@ -230,17 +226,17 @@ const Navbar = () => {
                 </div>
               )}
             </div>
-            <button onClick={toggleLanguageDropdown}>
-                <div
-                  className={`transition duration-300 ease-in-out transform ${
-                    isHovered ? "hover:scale-110 opacity-90" : ""
+            <button onClick={() => setFormOpen(true)}>
+              <div
+                className={`transition duration-300 ease-in-out transform ${isHovered ? "hover:scale-110 opacity-90" : ""
                   }`}
-                  onMouseEnter={() => setIsHovered(true)}
-                  onMouseLeave={() => setIsHovered(false)}
-                >
-                  <GroupIcon />
-                </div>
-              </button>
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+              >
+                <GroupIcon />
+              </div>
+            </button>
+            <Form FormOpen={FormOpen} setFormOpen={setFormOpen} />
           </div>
 
           {/* mobile*/}
@@ -294,10 +290,10 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-          <div className={`md:hidden ${showMenu ? "block" : "hidden"}`}>
-            <div className="fixed inset-0 z-50">
+          <div className={`md:hidden ${showMenu ? "" : "hidden"}`}>
+            <div className="fixed inset-0 z-50 bg-gray-800 bg-opacity-50 backdrop-blur-sm">
               <div
-                className="bg-[#E8E8E8] bg-opacity-75 backdrop-blur-sm flex items-center justify-center min-h-screen"
+                className="bg-[#E8E8E8] bg-opacity-75 backdrop-blur-sm flex items-center justify-center min-h-screen "
                 onClick={() => {
                   handleCloseModal();
                   setShowJoinUsSubmenu(false);
@@ -305,30 +301,38 @@ const Navbar = () => {
                 }}
               >
                 <div
-                  className="bg-white fixed justify-center top-[40px] w-full flex flex-col  h-[212px] py-[30px] px-5"
+                  className="bg-white fixed border rounded-[5px] justify-center top-[40px] w-4/5 h-[225px] flex flex-col p-[30px]"
                   onClick={handleModalClick}
                 >
-                  <div className="h-full flex gap-[50px]">
-                    <div className="w-[114px] flex flex-col justify-between text-left">
+                  <div className="h-[225px] flex gap-[50px]">
+                    <div className="flex flex-col text-left gap-[20px] h-auto">
                       <div
-                        className={`text-[20px] ${
-                          i18n.language === "zh" ? "font-semibold" : ""
-                        }`}
+                        className={`text-[14px] px-2 ${i18n.language === "zh" ? "font-bold" : ""
+                          }`}
+                      >
+                        <button
+                          style={{ fontFamily: "SF Pro Display B" }}
+                          onClick={() => setAboutOpen(true)}
+                        >
+                          {t("about-us")}
+                        </button>
+                        <About AboutOpen={AboutOpen} setAboutOpen={setAboutOpen} />
+                        </div>
+                      <div
+                        className= "text-[14px] font-bold"
                       >
                         <Link
                           to="/"
-                          className={`${
-                            location.pathname === "/"
+                          className={`${location.pathname === "/"
                               ? ` ${linkStylesmobile.base}`
                               : ""
-                          } ${
-                            i18n.language === "ms"
+                            } ${i18n.language === "ms"
                               ? "px-[5px]"
                               : i18n.language === "zh"
-                              ? "px-3"
-                              : "px-2"
-                          }`}
-                          style={{ fontFamily: "SF Pro Display Semibold" }}
+                                ? "px-3"
+                                : "px-2"
+                            } `}
+                          style={{ fontFamily: "SF Pro Display B" }}
                           onClick={() => {
                             setShowJoinUsSubmenu(false);
                             setProduct(false);
@@ -338,23 +342,20 @@ const Navbar = () => {
                         </Link>
                       </div>
                       <div
-                        className={`text-[20px] ${
-                          i18n.language === "zh" ? "font-semibold" : ""
-                        }`}
+                        className={`text-[14px] ${i18n.language === "zh" ? "font-bold" : ""
+                          }`}
                       >
                         <button
-                          className={`${
-                            location.pathname.includes("/products")
+                          className={`${location.pathname.includes("/products")
                               ? ` ${linkStylesmobile.base}`
                               : ""
-                          }  ${
-                            i18n.language === "ms"
+                            }  ${i18n.language === "ms"
                               ? "px-[5px]"
                               : i18n.language === "zh"
-                              ? "px-3"
-                              : "px-2"
-                          }`}
-                          style={{ fontFamily: "SF Pro Display Semibold" }}
+                                ? "px-3"
+                                : "px-2"
+                            }`}
+                          style={{ fontFamily: "SF Pro Display B" }}
                           onClick={() => {
                             toggleProductDropdown();
 
@@ -365,23 +366,20 @@ const Navbar = () => {
                         </button>
                       </div>
                       <div
-                        className={`text-[20px] ${
-                          i18n.language === "zh" ? "font-semibold" : ""
-                        }`}
+                        className={`text-[14px] ${i18n.language === "zh" ? "font-bold" : ""
+                          }`}
                       >
                         <button
-                          className={`${
-                            location.pathname.includes("/join-us")
+                          className={`${location.pathname.includes("/join-us")
                               ? ` ${linkStylesmobile.base}`
                               : ""
-                          }  ${
-                            i18n.language === "ms"
+                            }  ${i18n.language === "ms"
                               ? "px-[5px]"
                               : i18n.language === "zh"
-                              ? "px-3"
-                              : "px-2"
-                          } `}
-                          style={{ fontFamily: "SF Pro Display Semibold" }}
+                                ? "px-3"
+                                : "px-2"
+                            } `}
+                          style={{ fontFamily: "SF Pro Display B" }}
                           onClick={() => {
                             toggleJoinUsDropdown();
                             setProduct(false);
@@ -391,24 +389,21 @@ const Navbar = () => {
                         </button>
                       </div>
                       <div
-                        className={`text-[20px]  ${
-                          i18n.language === "zh" ? "font-semibold" : ""
-                        }`}
+                        className={`text-[14px] font-bold ${i18n.language === "zh" ? "font-bold" : ""
+                          }`}
                       >
                         <Link
                           to="/download"
-                          className={`${
-                            location.pathname === "/download"
+                          className={`${location.pathname === "/download"
                               ? ` ${linkStylesmobile.base}`
                               : ""
-                          } ${
-                            i18n.language === "ms"
+                            } ${i18n.language === "ms"
                               ? "px-[5px]"
                               : i18n.language === "zh"
-                              ? "px-3"
-                              : "px-2"
-                          } `}
-                          style={{ fontFamily: "SF Pro Display Semibold" }}
+                                ? "px-3"
+                                : "px-2"
+                            } `}
+                          style={{ fontFamily: "SF Pro Display B" }}
                           onClick={() => {
                             setProduct(false);
 
@@ -420,17 +415,16 @@ const Navbar = () => {
                       </div>
                     </div>
                     {showProduct && (
-                      <div className="flex gap-4">
+                      <div className="flex gap-5">
                         <div className="border-r border-[#F67F00] h-full"></div>
-                        <div className="flex flex-col gap-4">
+                        <div className="flex flex-col gap-5">
                           <div>
                             <Link
                               to="/products/parent"
-                              className={`${
-                                location.pathname === "/products"
+                              className={`${location.pathname === "/products"
                                   ? `${linkStylesmobile.base}`
                                   : ""
-                              }`}
+                                } text-sm`}
                               style={{ fontFamily: "SF Pro Display M" }}
                             >
                               {t("KT-parent")}
@@ -439,11 +433,10 @@ const Navbar = () => {
                           <div>
                             <Link
                               to="/products/teacher"
-                              className={`${
-                                location.pathname === "/products"
+                              className={`${location.pathname === "/products"
                                   ? `${linkStylesmobile.base}`
                                   : ""
-                              }`}
+                                } text-sm`}
                               style={{ fontFamily: "SF Pro Display M" }}
                             >
                               {t("footer-teacher")}
@@ -452,11 +445,10 @@ const Navbar = () => {
                           <div>
                             <Link
                               to="/products/admin"
-                              className={`${
-                                location.pathname === "/products"
+                              className={`${location.pathname === "/products"
                                   ? `${linkStylesmobile.base}`
                                   : ""
-                              }`}
+                                } text-sm`}
                               style={{ fontFamily: "SF Pro Display M" }}
                             >
                               {t("footer-admin")}
@@ -468,16 +460,15 @@ const Navbar = () => {
 
                     {showJoin && (
                       <div className="flex gap-4">
-                        <div className="border-r border-gray-300 h-full"></div>
+                        <div className="border-r border-[#F67F00] h-full"></div>
                         <div className="flex flex-col h-[100px] gap-5">
                           <div>
                             <Link
                               to="/join-us/referral-program"
-                              className={`${
-                                location.pathname === "/join-us"
+                              className={`${location.pathname === "/join-us"
                                   ? `${linkStylesmobile.base}`
                                   : ""
-                              }`}
+                                }`}
                               style={{ fontFamily: "SF Pro Display M" }}
                             >
                               {t("referral-program")}
@@ -486,11 +477,10 @@ const Navbar = () => {
                           <div>
                             <Link
                               to="/join-us/career-opportunities"
-                              className={`${
-                                location.pathname === "/join-us"
+                              className={`${location.pathname === "/join-us"
                                   ? `${linkStylesmobile.base}`
                                   : ""
-                              }`}
+                                }`}
                               style={{ fontFamily: "SF Pro Display M" }}
                             >
                               {t("career-opportunity")}
@@ -514,11 +504,10 @@ const Navbar = () => {
           <div className="max-w-[1000px] w-full flex items-end justify-end gap-[26px] border-b border-[#DDD]">
             <Link
               to="/products/parent"
-              className={`${
-                activeProductSubPage === "parent"
+              className={`${activeProductSubPage === "parent"
                   ? `${subLinkStyles.active}`
                   : `${subLinkStyles.none}`
-              }`}
+                }`}
               style={{ fontFamily: "SF Pro Medium" }}
               onClick={() => setActiveProductSubPage("parent")}
             >
@@ -526,11 +515,10 @@ const Navbar = () => {
             </Link>
             <Link
               to="/products/teacher"
-              className={`${
-                activeProductSubPage === "teacher"
+              className={`${activeProductSubPage === "teacher"
                   ? `${subLinkStyles.active}`
                   : `${subLinkStyles.none}`
-              }`}
+                }`}
               style={{ fontFamily: "SF Pro Medium" }}
               onClick={() => setActiveProductSubPage("teacher")}
             >
@@ -538,11 +526,10 @@ const Navbar = () => {
             </Link>
             <Link
               to="/products/admin"
-              className={`${
-                activeProductSubPage === "admin"
+              className={`${activeProductSubPage === "admin"
                   ? `${subLinkStyles.active}`
                   : `${subLinkStyles.none}`
-              }`}
+                }`}
               style={{ fontFamily: "SF Pro Medium" }}
               onClick={() => setActiveProductSubPage("admin")}
             >
@@ -557,11 +544,10 @@ const Navbar = () => {
           <div className="max-w-[1000px] w-full flex items-end justify-end gap-[26px] border-b border-[#DDD]">
             <Link
               to="/join-us/referral-program"
-              className={`${
-                activeJoinUsSubPage === "referral-program"
+              className={`${activeJoinUsSubPage === "referral-program"
                   ? `${subLinkStyles.active}`
                   : `${subLinkStyles.none}`
-              }`}
+                }`}
               style={{ fontFamily: "SF Pro Medium" }}
               onClick={() => setActiveJoinUsSubPage("referral-program")}
             >
@@ -569,11 +555,10 @@ const Navbar = () => {
             </Link>
             <Link
               to="/join-us/career-opportunities"
-              className={`${
-                activeJoinUsSubPage === "career-opportunities"
+              className={`${activeJoinUsSubPage === "career-opportunities"
                   ? `${subLinkStyles.active}`
                   : `${subLinkStyles.none}`
-              }`}
+                }`}
               style={{ fontFamily: "SF Pro Medium" }}
               onClick={() => setActiveJoinUsSubPage("career-opportunities")}
             >

@@ -309,5 +309,15 @@
   "footer-admin": "Kindertown Admin",
   "complimentary-demo": "Leave your contact to schedule a complimentary demo",
   "complimentary-demo1": "Leave your contact to ",
-  "complimentary-demo2": "schedule a complimentary demo"
+  "complimentary-demo2": "schedule a complimentary demo",
+  "leave-your-contact":"Leave your contact",
+  "leave-your-contact-desc1":"Please be patient, our service",
+  "leave-your-contact-desc2":" personnel will contact you shortly.",
+  "form-full-name":"Full name",
+  "form-school-name":"School name",
+  "form-contact-number":"Contact number",
+  "form-email-address":"Email address",
+  "form-location":"Your state or location",
+  "form-interest-product":"What products are you interested in?",
+  "form-send":"Send"
 }
