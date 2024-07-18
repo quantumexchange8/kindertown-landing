@@ -5,5 +5,7 @@ module.exports = {
       md: "1000px",
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms')
+  ],
 };
