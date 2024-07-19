@@ -1,72 +1,33 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import i18n from "../i18n";
 import { Link } from "react-router-dom";
-// import logo from "../assets/footer/logo.svg";
-import wsp from "../assets/footer/wsp-01.svg";
-import fb from "../assets/footer/fb.svg";
-import ig from "../assets/footer/ig-01.svg";
-import msg from "../assets/footer/msg-01.svg";
-import linkedin from "../assets/footer/in-01.svg";
-import tele from "../assets/footer/tele-01.svg";
 import google from "../assets/footer/android.svg";
+import scmd from "../assets/footer/social-media.svg";
 import ios from "../assets/footer/apple.svg";
 import ct from "../assets/footer/ct.svg";
 import Privacy from "../components/modal/privacymodal";
 import Terms from "../components/modal/termsmodal";
+import Form from "../components/modal/formmodal";
+import About from "../components/modal/aboutmodal";
 import { useTranslation } from "react-i18next";
 
 const Footer = () => {
   const [PrivacyOpen, setPrivacyOpen] = useState(false);
   const [TermsOpen, setTermsOpen] = useState(false);
-  const handleLinkClick = (url) => {
-    window.location.href = url;
-  };
+  const [FormOpen, setFormOpen] = useState(false);
+  const [AboutOpen, setAboutOpen] = useState(false);
+
   const { t } = useTranslation();
   return (
     <footer>
-      <div className="flex justify-center">
-        <button className={`bg-white border-2 border-[#f67f00] border-solid rounded-[31px] shadow-[2px_4px_4px_0px_rgba(246,127,0,0.50)] w-[333px] h-[50px] ${i18n.language === "en"
-          ? "md:w-[600px] md:h-[60px]"
-          : i18n.language === "ms"
-            ? "md:w-[760px] md:h-[60px]"
-            : i18n.language === "zh"
-              ? "md:w-[450px] md:h-[60px]"
-              : "md:w-[600px] md:h-[60px]"
-          }`}>
-          <div style={{
-            fontFamily: "SF Pro Display B",
-            lineHeight: "normal",
-          }}
-            className={`inline-block md:text-xl font-wrap font-semibold text-[14px] items-center justify-center text-pretty ${i18n.language === "ms"
-              ? "mx-8" : " "
-              }`}>
-            {/* Desktop */}
-            <div className="inline-block hidden md:flex">{t("complimentary-demo")}</div>
-            {/* Mobile */}
-            <div className="flex flex-col md:hidden">
-              {i18n.language === "zh" && (
-                <div>{t("complimentary-demo")}</div>
-              )}
-              {i18n.language === "en" && (
-                <><div>{t("complimentary-demo1")}</div>
-                <div>{t("complimentary-demo2")}</div></>
-              )}
-              {i18n.language === "ms" && (
-                <><div>{t("complimentary-demo1")}</div>
-                <div>{t("complimentary-demo2")}</div></>
-              )}
-            </div>
-          </div>
-        </button>
-      </div>
-      <div className="flex flex-col gap-[11px] md:gap-0 md:pt-[150px] pt-[50px]">
-        <div className="w-full bg-[#FFF7EF] flex flex-col justify-center items-center md:pt-24  md:pb-[85px]  py-7 md:px-0 pl-[31px] pr-8">
+      <div className="flex flex-col gap-[11px] md:gap-0">
+        <div className="w-full bg-[#FFF7EF] flex flex-col justify-center items-center md:pt-24  md:pb-[85px] pb-[30px] pt-7 md:px-0 pl-[31px] pr-8">
           {/*Desktop*/}
           <div className="w-full md:max-w-[1000px] hidden md:flex flex-col md:gap-9">
             <div className="w-full flex flex-col gap-12">
               <div className="w-full flex flex-wrap justify-between">
                 <div className="flex flex-col md:gap-[25px]">
-                  <div className="flex md:gap-[30px] md:text-2xl font-semibold">
+                  <div className="flex md:gap-[30px] md:text-2xl font-bold">
                     <button
                       className="hover:text-[#F67F00]"
                       onClick={() => {
@@ -106,23 +67,35 @@ const Footer = () => {
                     <div className="flex md:gap-9">
                       <div className="md:w-[207px]">
                         <Link
+                          onClick={() => setAboutOpen(true)}
+                          className="hover:text-[#F67F00]"
+                        >
+                          {t("about-us")}
+                        </Link>
+                        <About
+                          AboutOpen={AboutOpen}
+                          setAboutOpen={setAboutOpen}
+                        />
+                      </div>
+                      <div>
+                        <Link
                           to="/products/parent"
                           className="hover:text-[#F67F00]"
                         >
                           {t("footer-parent")}
                         </Link>
                       </div>
-                      <div>
-                        <Link
-                          to="/join-us/referral-program"
-                          className="hover:text-[#F67F00]"
-                        >
-                          {t("referral-program")}
-                        </Link>
-                      </div>
                     </div>
                     <div className="flex md:gap-9">
                       <div className="md:w-[207px]">
+                        <Link
+                          to="/"
+                          className="hover:text-[#F67F00]"
+                        >
+                          {t("home")}
+                        </Link>
+                      </div>
+                      <div>
                         <Link
                           to="/products/teacher"
                           className="hover:text-[#F67F00]"
@@ -130,27 +103,19 @@ const Footer = () => {
                           {t("footer-teacher")}
                         </Link>
                       </div>
-                      <div>
-                        <Link
-                          to="/join-us/career-opportunities"
-                          className="hover:text-[#F67F00]"
-                        >
-                          {t("career-opportunity")}
-                        </Link>
-                      </div>
                     </div>
                     <div className="flex md:gap-9">
                       <div className="md:w-[207px]">
                         <Link
-                          to="/products/admin"
+                          to="/join-us/referral-program"
                           className="hover:text-[#F67F00]"
                         >
-                          {t("footer-admin")}
+                          {t("footer-referral")}
                         </Link>
                       </div>
                       <div>
-                        <Link to="/download" className="hover:text-[#F67F00]">
-                          {t("download")}
+                        <Link to="/products/admin" className="hover:text-[#F67F00]">
+                          {t("footer-admin")}
                         </Link>
                       </div>
                     </div>
@@ -165,56 +130,24 @@ const Footer = () => {
                     >
                       {t("stay-connect")}
                     </div>
-                    <div className="flex justify-end gap-[10px]">
+                    <div className="flex justify-end">
                       <div className="flex flex-col">
-                        <img
-                          src={wsp}
-                          alt="Whatsapp"
-                          className="w-[30px] h-[30px]"
-                        />
-                      </div>
-                      <div className="flex flex-col">
-                        <img
-                          src={tele}
-                          alt="Telegram"
-                          className="w-[30px] h-[30px]"
-                        />
-                      </div>
-                      <div className="flex flex-col">
-                        <img
-                          src={msg}
-                          alt="Messenger"
-                          className="w-[30px] h-[30px]"
-                        />
-                      </div>
-                      <div className="flex flex-col">
-                        <img
-                          src={fb}
-                          alt="Facebook"
-                          className="w-[30px] h-[30px]"
-                        />
-                      </div>
-                      <div className="flex flex-col">
-                        <img
-                          src={ig}
-                          alt="Instagram"
-                          className="w-[30px] h-[30px]"
-                        />
-                      </div>
-                      <div className="flex flex-col">
-                        <img
-                          src={linkedin}
-                          alt="Linkedin"
-                          className="w-[30px] h-[30px]"
-                        />
+                        <div className="flex justify-end">
+                          <div className="flex flex-col">
+                            <img
+                              src={scmd}
+                              alt="Social Media"
+                              className="h-[30px]"
+                            />
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                   <div className="flex flex-col md:gap-[15px]">
                     <div
-                      className={`text-2xl text-right ${i18n.language === "zh" ? "font-semibold" : ""
-                        }`}
-                      style={{ fontFamily: "SF Pro Display Semibold" }}
+                      className={`text-2xl text-right font-bold`}
+                      style={{ fontFamily: "SF Pro Display B" }}
                     >
                       {t("discover-app")}
                     </div>
@@ -283,7 +216,7 @@ const Footer = () => {
           </div>
 
           {/*Mobile*/}
-          <div className="w-full md:hidden flex flex-col gap-10">
+          <div className="w-full md:hidden flex flex-col gap-[50px]">
             <div
               className="flex flex-col gap-5 text-xl"
               style={{ fontFamily: "SF Pro Display M" }}
@@ -313,7 +246,7 @@ const Footer = () => {
                 {t("download")}
               </Link>
             </div>
-            <div className="flex flex-col gap-9">
+            <div className="flex flex-col">
               <div className="flex flex-wrap gap-[15px]">
                 <div
                   className="text-2xl"
@@ -321,79 +254,57 @@ const Footer = () => {
                 >
                   {t("stay-connect")}
                 </div>
-                <div className="flex justify-end gap-[10px]">
+                <div className="flex justify-end">
                   <div className="flex flex-col">
                     <img
-                      src={wsp}
-                      alt="Whatsapp"
-                      className="w-[30px] h-[30px]"
-                    />
-                  </div>
-                  <div className="flex flex-col">
-                    <img
-                      src={tele}
-                      alt="Telegram"
-                      className="w-[30px] h-[30px]"
-                    />
-                  </div>
-                  <div className="flex flex-col">
-                    <img
-                      src={msg}
-                      alt="Messenger"
-                      className="w-[30px] h-[30px]"
-                    />
-                  </div>
-                  <div className="flex flex-col">
-                    <img
-                      src={fb}
-                      alt="Facebook"
-                      className="w-[30px] h-[30px]"
-                    />
-                  </div>
-                  <div className="flex flex-col">
-                    <img
-                      src={ig}
-                      alt="Instagram"
-                      className="w-[30px] h-[30px]"
-                    />
-                  </div>
-                  <div className="flex flex-col">
-                    <img
-                      src={linkedin}
-                      alt="Linkedin"
-                      className="w-[30px] h-[30px]"
+                      src={scmd}
+                      alt="Social Media"
+                      className="h-[30px]"
                     />
                   </div>
                 </div>
               </div>
-              <div className="flex flex-wrap">
-                <div
-                  className="text-xs text-[#565656]"
-                  style={{ fontFamily: "SF Pro Display R" }}
-                >
-                  <div>© 2006 Current Tech Industries Sdn Bhd.</div>
-                  <div className="flex gap-4">
-                    <span>|</span>
-                    <button
-                      className="hover:text-[#FF8400]"
-                      onClick={() => setPrivacyOpen(true)}
-                    >
-                      Privacy Policy
-                    </button>
-                    <Privacy
-                      PrivacyOpen={PrivacyOpen}
-                      setPrivacyOpen={setPrivacyOpen}
-                    />
-                    <span>|</span>
-                    <button
-                      className="hover:text-[#FF8400]"
-                      onClick={() => setTermsOpen(true)}
-                    >
-                      Terms of use
-                    </button>
-                    <Terms TermsOpen={TermsOpen} setTermsOpen={setTermsOpen} />
-                    <span>|</span>
-                  </div>
+            </div>
+            <div className="flex flex-col md:gap-[15px]">
+              <div
+                className={`text-2xl ${i18n.language === "zh" ? "font-semibold" : ""
+                  }`}
+                style={{ fontFamily: "SF Pro Display Semibold" }}
+              >
+                {t("discover-app")}
+              </div>
+              <div className="flex flex-col gap-3 md:hidden w-[172px]">
+                <img src={ios} alt="IOS" />
+                <img src={google} alt="Android" />
+              </div>
+            </div>
+            <div className="flex flex-wrap md:hidden">
+              <div
+                className="text-xs text-[#565656]"
+                style={{ fontFamily: "SF Pro Display R" }}
+              >
+                <div>© 2006 Current Tech Industries Sdn Bhd.</div>
+                <div className="flex gap-4">
+                  <span>|</span>
+                  <button
+                    className="hover:text-[#FF8400]"
+                    onClick={() => setPrivacyOpen(true)}
+                  >
+                    Privacy Policy
+                  </button>
+                  <Privacy
+                    PrivacyOpen={PrivacyOpen}
+                    setPrivacyOpen={setPrivacyOpen}
+                  />
+                  <span>|</span>
+                  <button
+                    className="hover:text-[#FF8400]"
+                    onClick={() => setTermsOpen(true)}
+                  >
+                    Terms of use
+                  </button>
+                  <Terms TermsOpen={TermsOpen} setTermsOpen={setTermsOpen} />
+                  <span>|</span>
                 </div>
               </div>
             </div>

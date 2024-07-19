@@ -210,7 +210,7 @@ const FormModal = ({ FormOpen, setFormOpen }) => {
                                                         <input className="shadow border border-solid border-[#F67F00] bg-[#FFF8F1] rounded-[10px] w-full md:h-[60px] focus:outline-none focus:shadow-outline"
                                                             name="formLocation"
                                                             type="text"
-                                                            value={formData.formContactNumber}
+                                                            value={formData.formLocation}
                                                             onChange={handleChange}
                                                             required>
                                                         </input>
@@ -235,10 +235,14 @@ const FormModal = ({ FormOpen, setFormOpen }) => {
                                                                 fontFamily: "SF Pro Display M",
                                                                 lineHeight: "normal",
                                                             }}>
-                                                            <label><input type="radio" name="formInterested" className="w-5 h-5" value="form-KP" checked={formData.formInterested === 'Kindertown Teacher'} onChange={handleChange} /> Kindertown Parents</label>
-                                                            <label><input type="radio" name="formInterested" value="form-KT" checked={formData.formInterested === 'Kindertown Teacher'} onChange={handleChange} /> Kindertown Teacher</label>
-                                                            <label><input type="radio" name="formInterested" value="form-KA" checked={formData.formInterested === 'Kindertown Admin'} onChange={handleChange} /> Kindertown Admin</label>
-                                                            <label><input type="radio" name="formInterested" value="form-ALL" checked={formData.formInterested === 'All Products'} onChange={handleChange} /> All Products</label>
+                                                            <label><input type="radio" name="formInterested" className="checked:border-[#F67F00] text-[#F67F00] checked:ring-transparent" value="form-KP" /> Kindertown Parents</label>
+                                                            {/*  checked={formData.formInterested === 'Kindertown Teacher'} onChange={handleChange}  */}
+                                                            <label><input type="radio" name="formInterested" className="checked:border-[#F67F00] text-[#F67F00] checked:ring-transparent" value="form-KT" /> Kindertown Teacher</label>
+                                                            {/* checked={formData.formInterested === 'Kindertown Teacher'} onChange={handleChange}  */}
+                                                            <label><input type="radio" name="formInterested" className="checked:border-[#F67F00] text-[#F67F00] checked:ring-transparent" value="form-KA" /> Kindertown Admin</label>
+                                                            {/* checked={formData.formInterested === 'Kindertown Admin'} onChange={handleChange}  */}
+                                                            <label><input type="radio" name="formInterested" className="checked:border-[#F67F00] text-[#F67F00] checked:ring-transparent" value="form-ALL" /> All Products</label>
+                                                            {/* checked={formData.formInterested === 'All Products'} onChange={handleChange}  */}
                                                         </div>
                                                     </div>
                                                 </div>
@@ -253,7 +257,8 @@ const FormModal = ({ FormOpen, setFormOpen }) => {
                                                     <SuccessSubmit
                                                         showSuccessSubmit={showSuccessSubmit}
                                                         setShowSuccessSubmit={setShowSuccessSubmit} />
-                                                    {t("form-send")}</button>
+                                                    {t("form-send")}
+                                                </button>
 
                                             </div>
 

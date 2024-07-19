@@ -139,8 +139,8 @@ const Navbar = () => {
             <Link
               to="/"
               className={`${location.pathname === "/"
-                  ? `${linkStyles.base} ${linkStyles.home}`
-                  : " hover:text-[#F67F00]"
+                ? `${linkStyles.base} ${linkStyles.home}`
+                : " hover:text-[#F67F00]"
                 } `}
               style={{ fontFamily: "SF Pro Display M" }}
             >
@@ -149,8 +149,8 @@ const Navbar = () => {
             <Link
               to="/products/parent"
               className={`${location.pathname.includes("/products")
-                  ? `${linkStyles.base} ${linkStyles.products}`
-                  : " hover:text-[#F67F00]"
+                ? `${linkStyles.base} ${linkStyles.products}`
+                : " hover:text-[#F67F00]"
                 } `}
               style={{ fontFamily: "SF Pro Display M" }}
               onClick={handleProductsClick}
@@ -160,8 +160,8 @@ const Navbar = () => {
             <Link
               to="/join-us/referral-program"
               className={`${location.pathname.includes("/join-us")
-                  ? `${linkStyles.base} ${linkStyles.joinUs}`
-                  : " hover:text-[#F67F00]"
+                ? `${linkStyles.base} ${linkStyles.joinUs}`
+                : " hover:text-[#F67F00]"
                 } `}
               style={{ fontFamily: "SF Pro Display M" }}
               onClick={handleJoinUsClick}
@@ -171,8 +171,8 @@ const Navbar = () => {
             <Link
               to="/download"
               className={`${location.pathname === "/download"
-                  ? `${linkStyles.base} ${linkStyles.download}`
-                  : " hover:text-[#F67F00]"
+                ? `${linkStyles.base} ${linkStyles.download}`
+                : " hover:text-[#F67F00]"
                 } `}
               style={{ fontFamily: "SF Pro Display M" }}
             >
@@ -181,7 +181,7 @@ const Navbar = () => {
             <div className="relative">
               <button onClick={toggleLanguageDropdown}>
                 <div
-                  className={`transition duration-300 ease-in-out transform ${isHovered ? "hover:scale-110 opacity-90" : ""
+                  className={`transition duration-300 ease-in-out transform md:hidden ${isHovered ? "hover:scale-110 opacity-90" : ""
                     }`}
                   onMouseEnter={() => setIsHovered(true)}
                   onMouseLeave={() => setIsHovered(false)}
@@ -226,9 +226,12 @@ const Navbar = () => {
                 </div>
               )}
             </div>
-            <button onClick={() => setFormOpen(true)}>
+            <button onClick={() => {
+              setFormOpen(true)
+              setIsLanguageOpen(false)
+            }}>
               <div
-                className={`transition duration-300 ease-in-out transform ${isHovered ? "hover:scale-110 opacity-90" : ""
+                className={`transition duration-300 ease-in-out transform md:hidden ${isHovered ? "hover:scale-110 opacity-90" : ""
                   }`}
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
@@ -317,15 +320,15 @@ const Navbar = () => {
                           {t("about-us")}
                         </button>
                         <About AboutOpen={AboutOpen} setAboutOpen={setAboutOpen} />
-                        </div>
+                      </div>
                       <div
-                        className= "text-[14px] font-bold"
+                        className="text-[14px] font-bold"
                       >
                         <Link
                           to="/"
                           className={`${location.pathname === "/"
-                              ? ` ${linkStylesmobile.base}`
-                              : ""
+                            ? ` ${linkStylesmobile.base}`
+                            : ""
                             } ${i18n.language === "ms"
                               ? "px-[5px]"
                               : i18n.language === "zh"
@@ -347,8 +350,8 @@ const Navbar = () => {
                       >
                         <button
                           className={`${location.pathname.includes("/products")
-                              ? ` ${linkStylesmobile.base}`
-                              : ""
+                            ? ` ${linkStylesmobile.base}`
+                            : ""
                             }  ${i18n.language === "ms"
                               ? "px-[5px]"
                               : i18n.language === "zh"
@@ -371,8 +374,8 @@ const Navbar = () => {
                       >
                         <button
                           className={`${location.pathname.includes("/join-us")
-                              ? ` ${linkStylesmobile.base}`
-                              : ""
+                            ? ` ${linkStylesmobile.base}`
+                            : ""
                             }  ${i18n.language === "ms"
                               ? "px-[5px]"
                               : i18n.language === "zh"
@@ -395,8 +398,8 @@ const Navbar = () => {
                         <Link
                           to="/download"
                           className={`${location.pathname === "/download"
-                              ? ` ${linkStylesmobile.base}`
-                              : ""
+                            ? ` ${linkStylesmobile.base}`
+                            : ""
                             } ${i18n.language === "ms"
                               ? "px-[5px]"
                               : i18n.language === "zh"
@@ -422,8 +425,8 @@ const Navbar = () => {
                             <Link
                               to="/products/parent"
                               className={`${location.pathname === "/products"
-                                  ? `${linkStylesmobile.base}`
-                                  : ""
+                                ? `${linkStylesmobile.base}`
+                                : ""
                                 } text-sm`}
                               style={{ fontFamily: "SF Pro Display M" }}
                             >
@@ -434,8 +437,8 @@ const Navbar = () => {
                             <Link
                               to="/products/teacher"
                               className={`${location.pathname === "/products"
-                                  ? `${linkStylesmobile.base}`
-                                  : ""
+                                ? `${linkStylesmobile.base}`
+                                : ""
                                 } text-sm`}
                               style={{ fontFamily: "SF Pro Display M" }}
                             >
@@ -446,8 +449,8 @@ const Navbar = () => {
                             <Link
                               to="/products/admin"
                               className={`${location.pathname === "/products"
-                                  ? `${linkStylesmobile.base}`
-                                  : ""
+                                ? `${linkStylesmobile.base}`
+                                : ""
                                 } text-sm`}
                               style={{ fontFamily: "SF Pro Display M" }}
                             >
@@ -466,8 +469,8 @@ const Navbar = () => {
                             <Link
                               to="/join-us/referral-program"
                               className={`${location.pathname === "/join-us"
-                                  ? `${linkStylesmobile.base}`
-                                  : ""
+                                ? `${linkStylesmobile.base}`
+                                : ""
                                 }`}
                               style={{ fontFamily: "SF Pro Display M" }}
                             >
@@ -478,8 +481,8 @@ const Navbar = () => {
                             <Link
                               to="/join-us/career-opportunities"
                               className={`${location.pathname === "/join-us"
-                                  ? `${linkStylesmobile.base}`
-                                  : ""
+                                ? `${linkStylesmobile.base}`
+                                : ""
                                 }`}
                               style={{ fontFamily: "SF Pro Display M" }}
                             >
@@ -505,8 +508,8 @@ const Navbar = () => {
             <Link
               to="/products/parent"
               className={`${activeProductSubPage === "parent"
-                  ? `${subLinkStyles.active}`
-                  : `${subLinkStyles.none}`
+                ? `${subLinkStyles.active}`
+                : `${subLinkStyles.none}`
                 }`}
               style={{ fontFamily: "SF Pro Medium" }}
               onClick={() => setActiveProductSubPage("parent")}
@@ -516,8 +519,8 @@ const Navbar = () => {
             <Link
               to="/products/teacher"
               className={`${activeProductSubPage === "teacher"
-                  ? `${subLinkStyles.active}`
-                  : `${subLinkStyles.none}`
+                ? `${subLinkStyles.active}`
+                : `${subLinkStyles.none}`
                 }`}
               style={{ fontFamily: "SF Pro Medium" }}
               onClick={() => setActiveProductSubPage("teacher")}
@@ -527,8 +530,8 @@ const Navbar = () => {
             <Link
               to="/products/admin"
               className={`${activeProductSubPage === "admin"
-                  ? `${subLinkStyles.active}`
-                  : `${subLinkStyles.none}`
+                ? `${subLinkStyles.active}`
+                : `${subLinkStyles.none}`
                 }`}
               style={{ fontFamily: "SF Pro Medium" }}
               onClick={() => setActiveProductSubPage("admin")}
@@ -545,8 +548,8 @@ const Navbar = () => {
             <Link
               to="/join-us/referral-program"
               className={`${activeJoinUsSubPage === "referral-program"
-                  ? `${subLinkStyles.active}`
-                  : `${subLinkStyles.none}`
+                ? `${subLinkStyles.active}`
+                : `${subLinkStyles.none}`
                 }`}
               style={{ fontFamily: "SF Pro Medium" }}
               onClick={() => setActiveJoinUsSubPage("referral-program")}
@@ -556,8 +559,8 @@ const Navbar = () => {
             <Link
               to="/join-us/career-opportunities"
               className={`${activeJoinUsSubPage === "career-opportunities"
-                  ? `${subLinkStyles.active}`
-                  : `${subLinkStyles.none}`
+                ? `${subLinkStyles.active}`
+                : `${subLinkStyles.none}`
                 }`}
               style={{ fontFamily: "SF Pro Medium" }}
               onClick={() => setActiveJoinUsSubPage("career-opportunities")}

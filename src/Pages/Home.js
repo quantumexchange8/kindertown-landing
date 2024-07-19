@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import GirlBg from "../assets/girl_child.mp4";
 import Planner from "../assets/home/planner.png";
@@ -17,7 +17,9 @@ import Admin from "../assets/home/admin.png";
 import Teacher2 from "../assets/home/teachers2.png";
 import Parent from "../assets/home/parent.png";
 import Main from "../assets/home/main.png";
+import PopupForm from "./Form";
 import { useTranslation } from "react-i18next";
+import Privacy from "./Privacy";
 const Home = () => {
   const { t, i18n } = useTranslation();
 
@@ -45,6 +47,7 @@ const Home = () => {
         return "w-[900px]";
     }
   };
+  const [openForm, setOpenForm] = useState(false);
   return (
     <>
       <div
@@ -748,16 +751,16 @@ const Home = () => {
               }}
             >
               {(i18n.language === 'ms')
-              ? <><><div className="md:hidden">{t("document-journey3")}</div><div className="md:hidden">{t("document-journey4")}</div></>
-              <><div className="md:flex hidden">{t("document-journey1")}</div><div className="md:flex justify-center hidden">{t("document-journey2")}</div></></>
-              : <><div>{t("document-journey1")}</div><div>{t("document-journey2")}</div></>}
+                ? <><><div className="md:hidden">{t("document-journey3")}</div><div className="md:hidden">{t("document-journey4")}</div></>
+                  <><div className="md:flex hidden">{t("document-journey1")}</div><div className="md:flex justify-center hidden">{t("document-journey2")}</div></></>
+                : <><div>{t("document-journey1")}</div><div>{t("document-journey2")}</div></>}
             </div>
           </div>
         </div>
       </div>
 
       <div
-        className="w-full flex py-[100px] md:px-0 pl-[31px] pr-[32px] justify-center items-center md:py-[150px]">
+        className="w-full flex py-[50px] md:px-0 pl-[31px] pr-[32px] justify-center items-center md:py-[150px]">
         <div className="w-full md:max-w-[1000px] flex flex-col justify-center items-center md:gap-[150px] gap-[50px]">
           {/*CONTENT 9*/}
           <div
@@ -809,7 +812,7 @@ const Home = () => {
               >
                 <div className="w-full flex items-center justify-center ">
                   <span
-                    className={`w-full ${i18n.language === "en"
+                    className={`w-full font-semibold ${i18n.language === "en"
                       ? "md:w-[1000px]"
                       : i18n.language === "ms"
                         ? "md:w-[908px]"
@@ -836,8 +839,7 @@ const Home = () => {
               className={`flex flex-col justify-center items-center gap-2.5`}
             >
               <div
-                className={`md:text-[48px] text-[32px] ${i18n.language === "zh" ? "font-bold" : ""
-                  }`}
+                className={`md:text-[48px] text-[32px] font-bold `}
                 style={{ fontFamily: "SF Pro Display B" }}
               >
                 {t("school-owner")}
@@ -864,7 +866,7 @@ const Home = () => {
 
                   {/**mobile version */}
                   <div className="md:hidden flex flex-col justify-center items-center">
-                    <div> {t("school-owner-desc-mobile")}</div>
+                    <div className="font-semibold"> {t("school-owner-desc-mobile")}</div>
                   </div>
                 </div>
               </div>
@@ -891,8 +893,7 @@ const Home = () => {
                 }`}
             >
               <div
-                className={`md:text-[48px] text-[32px] ${i18n.language === "zh" ? "font-bold" : ""
-                  }`}
+                className={`md:text-[48px] text-[32px] font-bold `}
                 style={{ fontFamily: "SF Pro Display B" }}
               >
                 {t("administrator")}
@@ -916,8 +917,8 @@ const Home = () => {
                       <div> {t("admin-desc3")}</div>
                       <div> {t("admin-desc4")}</div>
                     </div>
-                    <div className="md:hidden flex flex-col justify-center items-center">
-                      <div> {t("admin-desc")}</div>
+                    <div className="md:hidden flex flex-col justify-center items-center ">
+                      <div className="font-semibold"> {t("admin-desc")}</div>
                     </div>
                   </>
                 )}
@@ -965,13 +966,13 @@ const Home = () => {
                   }}
                 >
                   {/*Mobile*/}
-                  <div className="md:hidden flex items-center justify-center text-center">
+                  <div className="md:hidden flex items-center justify-center text-center font-semibold ">
                     {t("teacher-desc-mobile")}
                   </div>
 
                   {/*Desktop*/}
                   <div className="hidden md:flex flex-wrap justify-center items-center">
-                    <div className={`inline-block ${TeacherDescWidth()}`}>
+                    <div className={`inline-block font-semibold  ${TeacherDescWidth()}`}>
                       <div>{t("teacher-desc")}</div>
                       {i18n.language === "zh" && (
                         <div>{t("teacher-desc2")}</div>
@@ -983,26 +984,19 @@ const Home = () => {
             </div>
           </div>
           {/*CONTENT 13*/}
-          <div className="flex flex-col justify-center items-center gap-[50px]">
+          <div className="flex flex-col justify-center items-center md:gap-[50px] gap-5">
             <div>
               <img
                 src={Parent}
                 alt="Parent"
-                className={` w-[207px] h-[180px] ${i18n.language === "zh"
-                  ? " md:w-[530px] md:h-[530px]"
-                  : "  md:w-[530px] md:h-[450px]"
-                  }`}
+                className={` w-[207px] h-[180px] md:w-[500px] md:h-[430px]`}
               />
             </div>
             <div
-              className={`flex flex-col justify-center items-center text-center ${i18n.language === "zh"
-                ? "gap-5 md:gap-4"
-                : " gap-4 md:gap-[10px]"
-                }`}
+              className={`flex flex-col justify-center items-center text-center gap-[10px]`}
             >
               <div
-                className={`md:text-[50px] text-[32px]  ${i18n.language === "zh" ? "font-bold" : ""
-                  }`}
+                className={`md:text-[50px] text-[32px] `}
                 style={{ fontFamily: "SF Pro Display B" }}
               >
                 {t("parent")}
@@ -1010,7 +1004,7 @@ const Home = () => {
 
               <div className="flex items-center">
                 <div
-                  className={`text-center text-pretty tracking-widest font-semibold ${i18n.language === "zh"
+                  className={`text-center text-pretty md:font-medium font-semibold ${i18n.language === "zh"
                     ? "md:text-[30px] text-sm"
                     : "md:text-[24px] text-sm "
                     }`}
@@ -1159,6 +1153,7 @@ const Home = () => {
         </div>
       </div>
 */}
+      <PopupForm />
     </>
   );
 };
