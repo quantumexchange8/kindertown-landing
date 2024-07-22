@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import GirlBg from "../assets/girl_child.mp4";
 import Planner from "../assets/home/planner.png";
@@ -19,7 +19,6 @@ import Parent from "../assets/home/parent.png";
 import Main from "../assets/home/main.png";
 import PopupForm from "./Form";
 import { useTranslation } from "react-i18next";
-import Privacy from "./Privacy";
 const Home = () => {
   const { t, i18n } = useTranslation();
 
@@ -47,7 +46,7 @@ const Home = () => {
         return "w-[900px]";
     }
   };
-  const [openForm, setOpenForm] = useState(false);
+  // const [openForm, setOpenForm] = useState(false);
   return (
     <>
       <div

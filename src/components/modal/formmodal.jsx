@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import logo from "../../assets/termspolicy/Icon.svg"
+import logo from "../../assets/termspolicy/Icon.svg";
+import form from "../../assets/mobileform.svg";
 import close from "../../assets/parentmodal/close.svg";
 import SuccessSubmit from "./successsubmitmodal";
 import { useTranslation } from "react-i18next";
+import { Field, Label, Radio, RadioGroup } from '@headlessui/react'
 
 const FormModal = ({ FormOpen, setFormOpen }) => {
     const { t, i18n } = useTranslation();
@@ -14,6 +16,7 @@ const FormModal = ({ FormOpen, setFormOpen }) => {
     };
 
     const [showSuccessSubmit, setShowSuccessSubmit] = useState(false);
+    const interestedPlans = ['Kindertown Parent', 'Kindertown Teacher', 'Kindertown Admin', 'All Products']
 
     const [formData, setFormData] = useState({
         formFullName: '',
@@ -21,8 +24,11 @@ const FormModal = ({ FormOpen, setFormOpen }) => {
         formContactNumber: '',
         formEmailAddress: '',
         formLocation: '',
-        formInterested: '',
+        formInterested: 'Kindertown Parent',
     })
+
+    let [interestedPlan, setInterestedPlan] = useState(interestedPlans[0])
+
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -43,15 +49,15 @@ const FormModal = ({ FormOpen, setFormOpen }) => {
             {FormOpen ? (
                 <>
                     <div
-                        className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+                        className="justify-center items-center md:flex md:pt-0 pt-[20px] overflow-x-hidden px-[30px] overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
                         onClick={handleCloseModal}
                     >
                         <div
                             className="relative md:w-[1200px] max-w-[1000px] overflow-auto my-auto md:py-[50px] flex justify-center modal-content"
                             onClick={handleModalClick}
                         >
-                            <div className="border-0 w-full md:rounded-[50px] relative flex flex-col bg-white outline-none focus:outline-none justify-center items-center md:p-[50px] pt-[50px] md:pb-[100px] pb-[60px]">
-                                <div className="absolute top-0 right-0 md:p-[50px]">
+                            <div className="border-0 w-full md:rounded-[50px] rounded-[10px] relative flex flex-col bg-white outline-none focus:outline-none justify-center items-center md:p-[50px] pt-[50px] md:pb-[100px] pb-[60px]">
+                                <div className="absolute md:flex hidden top-0 right-0 md:p-[50px]">
                                     <button onClick={() => setFormOpen(false)}>
                                         <img
                                             src={close}
@@ -60,17 +66,28 @@ const FormModal = ({ FormOpen, setFormOpen }) => {
                                         />
                                     </button>
                                 </div>
-                                <div className="flex flex-col gap-[50px] w-full md:px-[50px] px-[30px]">
+                                <div className="flex flex-col md:gap-[50px] gap-[30px] w-full md:px-[50px] px-[30px]">
                                     <div className="flex flex-col md:gap-[30px] gap-[50px]">
-                                        <div className="flex flex-row flex-wrap items-center justify-center">
+                                        <div className="md:flex hidden flex-row flex-wrap items-center justify-center">
                                             <img src={logo} alt="Logo" className="md:w-[150px] w-[100px] md:h-[100px] h-[66.667px]" />
-
+                                        </div>
+                                        <div className="flex md:hidden relative flex-row flex-wrap items-center justify-center">
+                                            <img src={form} alt="Form" className="md:w-[150px] w-[100px] md:h-[100px] h-[66.667px]" />
+                                            <div className="md:hidden absolute items-end justify-items-end top-0 right-0 md:p-[50px]">
+                                                <button onClick={() => setFormOpen(false)}>
+                                                    <img
+                                                        src={close}
+                                                        alt="CloseButton"
+                                                        className="md:w-[35px] md:h-[35px] w-[30px] h-[30px] z-50"
+                                                    />
+                                                </button>
+                                            </div>
                                         </div>
                                         {/*Title*/}
                                         {/* <form onSubmit=(handleSubmit)></form> */}
                                         <div className="flex flex-col md:gap-5 gap-[15px] text-[#000]">
                                             <div
-                                                className={`text-2xl flex justify-center font-bold ${i18n.language === "ms" ? "md:text-[42px]" : "md:text-5xl"}`}
+                                                className={`md:text-[48px] text-xl flex justify-center font-bold `}
                                                 style={{ fontFamily: "SF Pro Display B" }}
                                             >
                                                 {t("leave-your-contact")}
@@ -102,7 +119,7 @@ const FormModal = ({ FormOpen, setFormOpen }) => {
                                             <div className="flex flex-col md:gap-[50px] gap-[30px]">
                                                 <div className="flex flex-col md:gap-[10px]">
                                                     <div
-                                                        className="md:text-base text-2xl font-bold"
+                                                        className="md:text-base text-sm font-bold"
                                                         style={{ fontFamily: "SF Pro Display B" }}
                                                     >
                                                         {t("form-full-name")}<span className="text-[#F00]">*</span>
@@ -125,7 +142,7 @@ const FormModal = ({ FormOpen, setFormOpen }) => {
                                                 </div>
                                                 <div className="flex flex-col md:gap-[10px]">
                                                     <div
-                                                        className="md:text-base text-2xl font-bold"
+                                                        className="md:text-base text-sm font-bold"
                                                         style={{ fontFamily: "SF Pro Display B" }}
                                                     >
                                                         {t("form-school-name")}<span className="text-[#F00]">*</span>
@@ -149,7 +166,7 @@ const FormModal = ({ FormOpen, setFormOpen }) => {
                                                 </div>
                                                 <div className="flex flex-col md:gap-[10px]">
                                                     <div
-                                                        className="md:text-base text-2xl font-bold"
+                                                        className="md:text-base text-sm font-bold"
                                                         style={{ fontFamily: "SF Pro Display B" }}
                                                     >
                                                         {t("form-contact-number")}<span className="text-[#F00]">*</span>
@@ -172,7 +189,7 @@ const FormModal = ({ FormOpen, setFormOpen }) => {
                                                 </div>
                                                 <div className="flex flex-col md:gap-[10px]">
                                                     <div
-                                                        className="md:text-base text-2xl font-bold"
+                                                        className="md:text-base text-sm font-bold"
                                                         style={{ fontFamily: "SF Pro Display B" }}
                                                     >
                                                         {t("form-email-address")}<span className="text-[#F00]">*</span>
@@ -195,13 +212,13 @@ const FormModal = ({ FormOpen, setFormOpen }) => {
                                                 </div>
                                                 <div className="flex flex-col md:gap-[10px]">
                                                     <div
-                                                        className="md:text-base text-2xl font-bold"
+                                                        className="md:text-base text-sm font-bold"
                                                         style={{ fontFamily: "SF Pro Display B" }}
                                                     >
                                                         {t("form-location")}<span className="text-[#F00]">*</span>
                                                     </div>
                                                     <div
-                                                        className="md:text-2xl text-sm flex flex-col gap-[50px]"
+                                                        className="md:text-sm text-sm flex flex-col gap-[50px]"
                                                         style={{
                                                             fontFamily: "SF Pro Display M",
                                                             lineHeight: "normal",
@@ -216,9 +233,9 @@ const FormModal = ({ FormOpen, setFormOpen }) => {
                                                         </input>
                                                     </div>
                                                 </div>
-                                                <div className="flex flex-col md:gap-[25px]">
+                                                <div className="flex flex-col md:gap-[25px] ">
                                                     <div
-                                                        className="md:text-base text-2xl font-bold"
+                                                        className="md:text-base text-sm font-bold mb-[20px]"
                                                         style={{ fontFamily: "SF Pro Display B" }}
                                                     >
                                                         {t("form-interest-product")}<span className="text-[#F00]">*</span>
@@ -235,20 +252,28 @@ const FormModal = ({ FormOpen, setFormOpen }) => {
                                                                 fontFamily: "SF Pro Display M",
                                                                 lineHeight: "normal",
                                                             }}>
-                                                            <label><input type="radio" name="formInterested" className="checked:border-[#F67F00] text-[#F67F00] checked:ring-transparent" value="form-KP" /> Kindertown Parents</label>
-                                                            {/*  checked={formData.formInterested === 'Kindertown Teacher'} onChange={handleChange}  */}
-                                                            <label><input type="radio" name="formInterested" className="checked:border-[#F67F00] text-[#F67F00] checked:ring-transparent" value="form-KT" /> Kindertown Teacher</label>
-                                                            {/* checked={formData.formInterested === 'Kindertown Teacher'} onChange={handleChange}  */}
-                                                            <label><input type="radio" name="formInterested" className="checked:border-[#F67F00] text-[#F67F00] checked:ring-transparent" value="form-KA" /> Kindertown Admin</label>
-                                                            {/* checked={formData.formInterested === 'Kindertown Admin'} onChange={handleChange}  */}
-                                                            <label><input type="radio" name="formInterested" className="checked:border-[#F67F00] text-[#F67F00] checked:ring-transparent" value="form-ALL" /> All Products</label>
-                                                            {/* checked={formData.formInterested === 'All Products'} onChange={handleChange}  */}
+                                                            <RadioGroup name="formInterested" value={interestedPlan} onChange={setInterestedPlan} aria-label="Server size"
+                                                                className="md:flex md:flex-wrap md:w-[1200px] w-full ">
+                                                                {interestedPlans.map((interestedPlan) => (
+                                                                    <Field key={interestedPlan} className="flex items-center gap-[15px] mb-[20px]">
+                                                                        <Radio
+                                                                            value={interestedPlan}
+                                                                            className="group flex size-5 items-center justify-center rounded-full border bg-white data-[checked]:bg-[#F67F00] gap-[60px]"
+                                                                        >
+                                                                            <span className="invisible size-2 rounded-full bg-white group-data-[checked]:visible" />
+                                                                        </Radio>
+                                                                        <Label>{interestedPlan}</Label>
+                                                                    </Field>
+                                                                ))}
+                                                            </RadioGroup>
                                                         </div>
+
+
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className="flex justify-end">
-                                                <button type="submit" className="md:w-[130px] md:h-[60px] md:text-xl font-semibold border-2 border-[#F67F00] rounded-[31px] shadow-[2px_4px_4px_0px_rgba(246,127,0,0.50)]"
+                                            <div className="flex md:justify-end justify-center">
+                                                <button type="submit" className="md:w-[130px] w-[80px] md:h-[60px] h-[30px] md:text-xl text-sm font-semibold border-2 border-[#F67F00] md:rounded-[31px] rounded-[10px] shadow-[2px_4px_4px_0px_rgba(246,127,0,0.50)]"
                                                     style={{
                                                         fontFamily: "SF Pro Display M",
                                                         lineHeight: "normal"
@@ -273,6 +298,7 @@ const FormModal = ({ FormOpen, setFormOpen }) => {
             ) : null}
         </>
     );
-};
+}
+
 
 export default FormModal;

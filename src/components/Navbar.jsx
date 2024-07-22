@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { GlobalIcon, GroupIcon } from "./Icons/outline";
+import { GlobalIcon } from "./Icons/outline";
 import { useTranslation } from "react-i18next";
 import "../font.css";
 import logo from "../assets/logo.svg";
 import menu from "../assets/menu.svg";
+import formIcon from "../assets/form.svg";
 import i18n from "../i18n";
 import About from "../components/modal/aboutmodal";
 import Form from "../components/modal/formmodal";
@@ -117,8 +118,8 @@ const Navbar = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className="w-full flex fixed flex-col top-0  z-40 justify-center items-center">
-      <div className="bg-[#fff7efe6] w-full flex justify-center h-[50px] px-5 md:px-0">
+    <div className="w-full flex fixed flex-col top-0 z-40 absolute justify-center items-center">
+      <div className="bg-[#fff7efe6] w-full flex justify-center h-[60px] px-5 md:px-0">
         <div className="w-full md:w-[1000px] flex items-center justify-between">
           <div className="flex flex-col">
             <img src={logo} alt="Logo" />
@@ -181,7 +182,7 @@ const Navbar = () => {
             <div className="relative">
               <button onClick={toggleLanguageDropdown}>
                 <div
-                  className={`transition duration-300 ease-in-out transform md:hidden ${isHovered ? "hover:scale-110 opacity-90" : ""
+                  className={`transition duration-300 ease-in-out transform ${isHovered ? "hover:scale-110 opacity-90" : ""
                     }`}
                   onMouseEnter={() => setIsHovered(true)}
                   onMouseLeave={() => setIsHovered(false)}
@@ -231,12 +232,12 @@ const Navbar = () => {
               setIsLanguageOpen(false)
             }}>
               <div
-                className={`transition duration-300 ease-in-out transform md:hidden ${isHovered ? "hover:scale-110 opacity-90" : ""
+                className={`transition duration-300 ease-in-out transform ${isHovered ? "hover:scale-110 opacity-90" : ""
                   }`}
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
               >
-                <GroupIcon />
+                <img src={formIcon} alt="form" />
               </div>
             </button>
             <Form FormOpen={FormOpen} setFormOpen={setFormOpen} />
@@ -293,10 +294,10 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-          <div className={`md:hidden ${showMenu ? "" : "hidden"}`}>
+          <div className={`${showMenu ? "" : "hidden"}`}>
             <div className="fixed inset-0 z-50 bg-gray-800 bg-opacity-50 backdrop-blur-sm">
               <div
-                className="bg-[#E8E8E8] bg-opacity-75 backdrop-blur-sm flex items-center justify-center min-h-screen "
+                className="h-full bg-[#E8E8E8] bg-opacity-75 backdrop-blur-sm flex items-center justify-center min-h-screen "
                 onClick={() => {
                   handleCloseModal();
                   setShowJoinUsSubmenu(false);

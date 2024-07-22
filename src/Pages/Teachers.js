@@ -6,69 +6,49 @@ import Tab2 from "../assets/teacher/tab2.png";
 import Tab3 from "../assets/teacher/tab3.png";
 import Tab4 from "../assets/teacher/tab4.png";
 import Tab5 from "../assets/teacher/tab5.png";
+import PopupForm from "./Form";
 import CTLogo from "../assets/admin/ct-logo.svg";
-import Header from "../assets/teacher/header.png";
-import MobileHeader from "../assets/teacher/mobile-header.png";
-import HeaderMalay from "../assets/teacher/Header-malay.png";
-import MobileHeaderM from "../assets/teacher/mobile-header-malay.png";
-import HeaderChinese from "../assets/teacher/header-chinese.png";
-import MobileHeaderC from "../assets/teacher/mobile-header-chinese.png";
+import TeacherBg from "../assets/teacher/productsTeacher.mp4"
 import { useTranslation } from "react-i18next";
 const Teacher = () => {
   const { i18n, t } = useTranslation();
-
-  let headerImageWeb;
-  switch (i18n.language) {
-    case "zh":
-      headerImageWeb = HeaderChinese;
-      break;
-    case "ms":
-      headerImageWeb = HeaderMalay;
-      break;
-    case "en":
-    default:
-      headerImageWeb = Header;
-      break;
-  }
-
-  let headerImageMobile;
-  switch (i18n.language) {
-    case "zh":
-      headerImageMobile = MobileHeaderC;
-      break;
-    case "ms":
-      headerImageMobile = MobileHeaderM;
-      break;
-    case "en":
-    default:
-      headerImageMobile = MobileHeader;
-      break;
-  }
-
   return (
     <>
       <div
-        className={`w-full flex flex-col justify-center items-center md:pt-[150px] pt-[80px] md:gap-[100px] gap-[50px] pb-[100px] ${
-          i18n.language === "zh" ? "md:pb-[300px]" : "md:pb-[200px]"
-        }`}
+        className={`w-full flex flex-col justify-center items-center md:pt-[60px] pt-[80px] md:gap-[150px] gap-[50px] md:pb-[150px]`}
       >
-        <div className="w-full hidden md:flex">
-          <img src={headerImageWeb} alt="Header" className="w-full" />
-        </div>
+        <div className="relative w-full md:pb-[20px] md:h-[900px] h-[300px] overflow-hidden">
+          <div className="w-full md:pt-[108px] md:pl-[106px]">
+            <video
+              src={TeacherBg}
+              autoPlay
+              loop
+              muted
+              className="absolute md:top-0 left-0 w-full h-[300px] md:h-auto object-cover object-center"
+            />
 
-        <div className="w-full md:hidden flex">
-          <img src={headerImageMobile} alt="Header" className="w-full" />
+            <div className="absolute flex items-center justify-center text-center inset-0 text-[#F2FFA1] z-10">
+              <div
+                className={`md:text-[64px] text-2xl font-bold`}
+                style={{
+                  fontFamily: "SF Pro Display B",
+                  lineHeight: "normal",
+                }}
+              >
+                <><div>{t("right-smiles1")}</div>
+                  <div>{t("right-smiles2")}</div></>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="w-full flex flex-col justify-center items-center md:px-0 pl-[31px] pr-[32px]">
-          <div className="w-full md:max-w-[1000px]  flex flex-col  gap-[100px]  md:gap-[200px]">
+          <div className="w-full md:max-w-[1000px]  flex flex-col  gap-[100px]  md:gap-[150px]">
             {/*CONTENT 2*/}
-            <div className="w-full flex flex-col md:gap-[50px] gap-[30px]">
+            <div className="w-full flex flex-col gap-[30px]">
               <div className="flex flex-col justify-center items-center">
                 <div
-                  className={`text-center md:text-[80px] text-4xl  ${
-                    i18n.language === "zh" ? "font-bold" : ""
-                  }`}
+                  className={`text-center md:text-[80px] text-4xl font-bold`}
                   style={{
                     fontFamily: "SF Pro Display B",
                     lineHeight: "normal",
@@ -78,23 +58,20 @@ const Teacher = () => {
                 </div>
               </div>
 
-              <div className="hidden md:flex flex-col justify-center items-center">
+              <div className="hidden md:flex flex-col justify-center items-center md:w-full">
                 <div
-                  className={`text-center text-xl ${
-                    i18n.language === "zh" ? "md:text-3xl" : "md:text-[32px]"
-                  }`}
+                  className={`text-center text-xl md:text-[32px]`}
                   style={{
                     fontFamily: "SF Pro Display M",
                     lineHeight: "normal",
                   }}
                 >
-                  <span
-                    className={`inline-block ${
-                      i18n.language === "zh" ? "md:w-[850px]" : "w-full"
-                    }`}
-                  >
-                    {t("KT-teacher-desc")}
-                  </span>
+                  <div className={`inline-block w-full`}> {t("KT-teacher-desc1")}</div>
+                  <div className={`inline-block w-full`}> {t("KT-teacher-desc2")}</div>
+                  {!(i18n.language === 'zh')
+                    ? <div className={`inline-block w-full`}> {t("KT-teacher-desc3")}</div>
+                    : ""
+                  }
                 </div>
               </div>
               <div className="md:hidden flex flex-col justify-center items-center">
@@ -114,11 +91,7 @@ const Teacher = () => {
             </div>
             {/*CONTENT 3*/}
             <div
-              className={`w-full flex flex-col ${
-                i18n.language === "zh"
-                  ? "md:gap-[100px] gap-[50px] "
-                  : "md:gap-[50px] gap-[30px] "
-              }`}
+              className={`w-full flex flex-col gap-[30px]`}
             >
               <div className="flex flex-col justify-center items-center">
                 <img
@@ -129,58 +102,48 @@ const Teacher = () => {
               </div>
               <div className="flex flex-col justify-center items-center">
                 <div
-                  className={`flex flex-col justify-center md:text-[40px] text-center ${
-                    i18n.language === "zh" ? "text-xl" : "text-base"
-                  }`}
+                  className={`flex flex-col justify-center md:text-[32px] text-center text-medium`}
                   style={{
-                    fontFamily:
-                      i18n.language === "zh"
-                        ? "SF Pro Display B"
-                        : "SF Pro Display Semibold",
+                    fontFamily: "SF Pro Display M",
                     lineHeight: "normal",
-                    fontWeight: i18n.language === "zh" ? "700" : "",
                   }}
                 >
-                  <span
-                    className={`inline-block text-center ${
-                      i18n.language === "zh" ? "md:w-[965px]" : "w-full"
-                    }`}
+                  <div
+                    className={`inline-block text-center w-full tracking-wide`}
                   >
-                    {t("diff-ways")}
-                  </span>
+                    <div>{t("diff-ways1")}</div>
+                    <div>{t("diff-ways2")}</div>
+                  </div>
                 </div>
               </div>
             </div>
             {/*CONTENT 4*/}
             <div
-              className={`w-full flex flex-col ${
-                i18n.language === "zh"
-                  ? "md:gap-[100px] gap-[50px] "
-                  : "md:gap-[50px] gap-[30px] "
-              }`}
+              className={`w-full flex flex-col gap-[30px]`}
             >
               <div className="flex flex-col justify-center items-center">
                 <img
                   src={Tab2}
                   alt="Tablet2"
-                  className="md:w-[800px] md:h-[614px]"
+                  className="md:w-[800px] md:h-auto"
                 />
               </div>
               <div className="flex flex-col justify-center items-center">
                 <div
-                  className={`flex flex-col md:text-[40px] text-center ${
-                    i18n.language === "zh" ? "text-xl" : "text-base"
-                  }`}
+                  className={`flex flex-col md:text-[32px] text-center`}
                   style={{
-                    fontFamily:
-                      i18n.language === "zh"
-                        ? "SF Pro Display B"
-                        : "SF Pro Display Semibold",
+                    fontFamily: "SF Pro Display M",
                     lineHeight: "normal",
-                    fontWeight: i18n.language === "zh" ? "700" : "",
                   }}
                 >
-                  <div className="flex flex-col justify-center items-center">
+                  <div className={`flex flex-col justify-center items-center" ${i18n.language === "en"
+                      ? "tracking-tight"
+                      : i18n.language === "ms"
+                        ? "tracking-wide"
+                        : i18n.language === "zh"
+                          ? "tracking-tighter"
+                          : "tracking-tight"
+                      }`}>
                     {t("solve-challenge")}
                   </div>
                 </div>
@@ -188,11 +151,7 @@ const Teacher = () => {
             </div>
             {/*CONTENT 5*/}
             <div
-              className={`w-full flex flex-col ${
-                i18n.language === "zh"
-                  ? "md:gap-[100px] gap-[50px] "
-                  : "md:gap-[50px] gap-[30px] "
-              }`}
+              className={`w-full flex flex-col gap-[30px]`}
             >
               <div className="flex flex-col justify-center items-center">
                 <img
@@ -203,39 +162,26 @@ const Teacher = () => {
               </div>
               <div className="flex flex-col justify-center items-center">
                 <div
-                  className={`md:text-[40px] text-center ${
-                    i18n.language === "zh" ? "text-xl" : "text-base"
-                  }`}
+                  className={`md:text-[32px] text-center`}
                   style={{
-                    fontFamily:
-                      i18n.language === "zh"
-                        ? "SF Pro Display B"
-                        : "SF Pro Display Semibold",
-                    fontWeight: i18n.language === "zh" ? "700" : "",
+                    fontFamily: "SF Pro Display M",
                     lineHeight: "normal",
                   }}
                 >
                   <div className="flex flex-col">
-                    <span
-                      className={`inline-block ${
-                        i18n.language === "zh"
-                          ? "md:w-[960px] w-full"
-                          : "w-full"
-                      }`}
+                    <div
+                      className={`inline-block ${(i18n.language === 'zh')? '' : 'tracking-wider'}`}
                     >
-                      {t("harness-power")}
-                    </span>
+                      {t("harness-power1")}
+                      {i18n.language === 'zh'? <><div>{t("harness-power2")}</div><div>{t("harness-power3")}</div></>:''}
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
             {/*CONTENT 6*/}
             <div
-              className={`w-full flex flex-col ${
-                i18n.language === "zh"
-                  ? "md:gap-[100px] gap-[50px] "
-                  : "md:gap-[50px] gap-[30px] "
-              }`}
+              className={`w-full flex flex-col gap-[30px]`}
             >
               <div className="flex flex-col justify-center items-center">
                 <img
@@ -246,29 +192,23 @@ const Teacher = () => {
               </div>
               <div className="flex flex-col justify-center items-center">
                 <div
-                  className={`md:text-[40px] text-center ${
-                    i18n.language === "zh" ? "text-xl" : "text-base"
-                  }`}
+                  className={`md:text-[32px] text-center font-medium`}
                   style={{
-                    fontFamily:
-                      i18n.language === "zh"
-                        ? "SF Pro Display B"
-                        : "SF Pro Display Semibold",
-                    fontWeight: i18n.language === "zh" ? "700" : "",
+                    fontFamily: "SF Pro Display M",
                     lineHeight: "normal",
                   }}
                 >
-                  <div className="flex flex-col">{t("take-pride")}</div>
+                  <div className={`flex flex-col text-pretty text-center ${(i18n.language === 'zh' ? '':'tracking-wider')}`}>
+                    <div>{t("take-pride")}</div>
+                    <div>{t("take-pride2")}</div>
+                    <div>{t("take-pride3")}</div>
+                    </div>
                 </div>
               </div>
             </div>
             {/*CONTENT 7*/}
             <div
-              className={`w-full flex flex-col ${
-                i18n.language === "zh"
-                  ? "md:gap-[100px] gap-[50px] "
-                  : "md:gap-[50px] gap-[30px] "
-              }`}
+              className={`w-full flex flex-col gap-[30px]`}
             >
               <div className="flex flex-col justify-center items-center">
                 <img
@@ -279,24 +219,20 @@ const Teacher = () => {
               </div>
               <div className="flex flex-col justify-center items-center">
                 <div
-                  className={`md:text-[40px] text-center ${
-                    i18n.language === "zh" ? "text-xl" : "text-base"
-                  }`}
+                  className={`md:text-[32px] text-center`}
                   style={{
-                    fontFamily:
-                      i18n.language === "zh"
-                        ? "SF Pro Display B"
-                        : "SF Pro Display Semibold",
-                    fontWeight: i18n.language === "zh" ? "700" : "",
+                    fontFamily: "SF Pro Display M",
                     lineHeight: "normal",
                   }}
                 >
-                  <div className="flex flex-col text-center">
+                  <div className={`flex flex-col text-center ${!(i18n.language === 'zh')? 'tracking-wider' : ''}`}>
                     {t("kingdom-community")}
                   </div>
                 </div>
               </div>
             </div>
+            <PopupForm/>
+
             {/*CONTENT 8*/}
             <div className="w-full flex flex-col md:px-0 items-center">
               <div className="w-full md:w-[1000px] flex flex-col justify-center items-center">

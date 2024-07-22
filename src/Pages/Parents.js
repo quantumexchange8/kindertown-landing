@@ -20,9 +20,9 @@ const Parent = () => {
   const { t, i18n } = useTranslation();
   return (
     <>
-      <div className="w-full flex flex-col relative md:pb-[200px] pt-[60px] pb-[100px] justify-center items-center">
+      <div className="w-full flex flex-col relative md:pb-[200px] pt-[60px] pb-[50px] justify-center items-center">
         <div className="w-full md:min-w-[1000px] flex flex-col md:gap-[150px] gap-[100px]">
-          <div className="w-full md:px-0 px-5 flex flex-col gap-[50px] md:gap-[100px]  items-center">
+          <div className="w-full flex flex-col gap-[60px] md:gap-[100px] items-center">
             {/*Content 1*/}
             <div className="relative w-full md:pb-[20px] md:h-[900px] h-[300px] overflow-hidden">
               <div className="w-full md:pt-[108px] md:pl-[106px]">
@@ -31,7 +31,7 @@ const Parent = () => {
                   autoPlay
                   loop
                   muted
-                  className="absolute md:top-0 left-0 w-full object-cover object-center"
+                  className="absolute md:top-0 left-0 w-full h-[300px] md:h-auto object-cover object-center"
                 />
 
                 <div className="absolute flex items-center justify-center text-center inset-0 text-[#0CA39B] z-10">
@@ -51,7 +51,7 @@ const Parent = () => {
             <div className="w-full flex flex-col gap-[30px]">
               <div className="flex flex-col justify-center items-center">
                 <div
-                  className={`text-center md:text-[80px] text-4xl ${i18n.language === "zh" ? "font-bold" : ""
+                  className={`text-center md:text-[80px] text-[24px] ${i18n.language === "zh" ? "font-bold" : ""
                     }`}
                   style={{
                     fontFamily: "SF Pro Display B",
@@ -68,8 +68,7 @@ const Parent = () => {
                         {t("KT-parents")}
                       </div>
                       <div className="md:hidden flex flex-col">
-                        <div> {t("Kindertown")}</div>
-                        <div> Parents</div>
+                        <div> {t("KT-parents")}</div>
                       </div>
                     </div>
                   )}
@@ -78,53 +77,64 @@ const Parent = () => {
 
               <div className="flex flex-col justify-center items-center">
                 <div
-                  className={`text-center text-xl md:text-[32px]`}
+                  className={`text-center text-sm md:text-[32px] indent-px`}
                   style={{
                     fontFamily: "SF Pro Display M",
                     lineHeight: "normal",
                   }}
                 >
-                  {/*Desktop*/}
-                  <div className="flex flex-wrap items-center justify-center">
+                  <div className="flex flex-wrap items-center justify-center ">
                     {i18n.language === "en" && (
-                      <span className="inline-block md:w-[785px] w-full">
+                      <><div className="md:inline-block hidden md:w-[785px] ">
                         {t("KT-parent-desc")}
-                      </span>
+                      </div>
+                        <div className="md:hidden inline-block w-3/5 flex flex-col items-center justify-center text-center">
+                          <div>{t("mobile-KT-parent-desc1")}</div>
+                          <div>{t("mobile-KT-parent-desc2")}</div>
+                        </div></>
                     )}
                     {i18n.language === "ms" && (
-                      <span className="inline-block md:w-[1000px] w-full tracking-wider leading-none">
+                      <><div className="inline-block md:w-[1000px] hidden md:leading-none tracking-wider">
                         {t("KT-parent-desc")}
-                      </span>
+                      </div>
+                        <div className="md:hidden inline-block w-4/5 flex flex-col items-center justify-center text-center font-semibold tracking-wider">
+                          <div>{t("mobile-KT-parent-desc1")}</div>
+                          <div>{t("mobile-KT-parent-desc2")}</div>
+                        </div></>
                     )}
                     {i18n.language === "zh" && (
-                      <span className="inline-block md:w-[500px] w-full">
+                      <><div className="inline-block md:w-[1000px] hidden md:leading-none tracking-wider">
                         {t("KT-parent-desc")}
-                      </span>
+                      </div>
+                        <div className="md:hidden inline-block w-full flex flex-col items-center justify-center text-center font-semibold">
+                          <div>{t("mobile-KT-parent-desc1")}</div>
+                          <div>{t("mobile-KT-parent-desc2")}</div>
+                        </div></>
                     )}
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="w-full flex flex-col justify-center items-center md:gap-[150px] gap-[100px]  md:px-0 pl-[31px]  pr-8 ">
+          <div className="w-full flex flex-col justify-center items-center md:gap-[150px] gap-[100px]  md:px-0 px-[30px]">
             <div
-              className={`w-full flex items-center flex-col gap-[150px]`}
+              className={`w-full flex items-center flex-col md:gap-[150px] gap-[100px]`}
             >
               {/*CONTENT 2 */}
               <div
-                className={`md:w-[1000px] h-[612px] w-full relative `}
+                className={`md:w-[1000px] md:h-[612px] h-[250px] w-full relative `}
               >
                 <div className="flex flex-col absolute">
                   <img
                     src={Phone1}
                     alt="phone1"
-                    className="md:w-[800px] w-[150px] bottom-0 left-0"
+                    className="md:w-[800px] w-full bottom-0 left-0 md:h-auto h-[250px]"
                   />
                 </div>
 
                 <div className="flex flex-col items-center absolute top-0 right-0">
                   <div
-                    className={`text-center md:w-[480px] text-[#F67F00] font-bold md:text-[64px] text-xl`}
+                    className={`text-center md:w-[480px] text-[#F67F00] font-bold md:text-[64px] text-base`}
                     style={{
                       fontFamily: "SF Pro Display B",
                       lineHeight: "normal",
@@ -135,36 +145,27 @@ const Parent = () => {
                       <div>{t("design-web2")}</div>
                     </div>
                     <div
-                      className={`md:hidden flex flex-col items-center justify-center  ${i18n.language === "zh" ? "w-[168px]" : "w-[154px]"
+                      className={`md:hidden flex flex-col relative text-right ${i18n.language === "en" ? "w-[120px]" : "w-[140px]"
                         }`}
                     >
-                      <div> {t("design-mobile1")}</div>
+                      <div>{t("design-mobile1")}</div>
                       <div>{t("design-mobile2")}</div>
-                      {(i18n.language === "ms" || i18n.language === "en") && (
-                        <>
-                          <div>{t("design-mobile1")}</div>
-                          <div> {t("design-mobile3")}</div>
-                        </>
-                      )}
                     </div>
                   </div>
                 </div>
               </div>
               {/*CONTENT 3 */}
-              <div
-                className={`w-full h-[800px] flex items-center justify-center ${i18n.language === "zh" ? "md:gap-[300px] gap-[7px]" : "md:gap-[150px] gap-[26px]"
-                  }`}
-              >
+              <div className={`w-full md:h-[800px] relative flex justify-center md:gap-[150px] gap-[50px]`}>
                 <div className="flex flex-col">
                   <div
-                    className={`w-full text-[#64697A] md:text-[64px] text-[16px] font-bold h-[800px]`}
+                    className={`w-full text-[#64697A] md:text-[64px] text-[16px] font-bold md:h-[800px]`}
                     style={{
                       fontFamily: "SF Pro Display B",
                       lineHeight: "normal",
                     }}
                   >
                     <div
-                      className={`hidden md:flex flex-col text-left md:w-[532.997px] md:[800px]`}
+                      className={`hidden md:flex flex-col text-left md:w-[532.997px]`}
                     >
                       <div>{t("build-learning")}</div>
                       <div>{t("build-learning2")}</div>
@@ -176,35 +177,28 @@ const Parent = () => {
                       )}
                     </div>
                     <div
-                      className={`md:hidden flex flex-col justify-center w-[154px] ${i18n.language === "zh" ? "items-end" : "items-center"
-                        }`}
+                      className={`md:hidden flex flex-col text-left w-[154px]`}
                     >
                       <div>{t("build-learning-mobile")}</div>
                       <div> {t("build-learning2-mobile")}</div>
-                      <div>{t("build-learning3")}</div>
-                      {(i18n.language === "ms" || i18n.language === "en") && (
-                        <div>{t("build-learning4")}</div>
-                      )}
                     </div>
                   </div>
                 </div>
-                <div className="flex flex-col">
+                <div className="flex flex-col ">
                   <img
                     src={Phone2}
                     alt="phone2"
-                    className=" md:w-[350px] md:h-[800px] w-[150px] object-fill"
+                    className=" md:w-[350px] md:h-[800px] h-[300px] object-fill"
                   />
                 </div>
               </div>
               {/*CONTENT 4 */}
-              <div
-                className={`w-[1000px] h-[800px] flex relative `}
-              >
-                <div className="flex flex-col absolute">
+              <div className={`md:w-[1000px] md:h-[800px] h-[300px] w-full relative flex justify-center `}>
+                <div className="flex flex-col absolute bottom-0 left-0">
                   <img
                     src={Phone3}
                     alt="phone3"
-                    className="bottom-0 left-0"
+                    className="bottom-0 left-0 md:h-[800px] md:w-auto h-[300px]"
                   />
                 </div>
 
@@ -224,32 +218,23 @@ const Parent = () => {
                     >
                       <div>{t("boundless-imagination")}</div>
                       <div>{t("boundless-imagination2")}</div>
-                      {/* {i18n.language === "ms" && (
-                        <div>{t("boundless-imagination3")}</div>
-                      )} */}
                     </div>
-                    <div className="md:hidden flex flex-col items-center justify-center w-[154px]">
-                      <div>{t("boundless-imagination-mobile")}</div>
-                      <div>{t("boundless-imagination2-mobile")}</div>
-                      {(i18n.language === "ms" || i18n.language === "en") && (
-                        <>
-                          <div>{t("boundless-imagination3-mobile")}</div>
-                          <div>{t("boundless-imagination4-mobile")}</div>
-                        </>
-                      )}
+                    <div className="md:hidden flex flex-col text-right justify-center w-[150px]">
+                      <div>{t("boundless-imagination")}</div>
+                      <div>{t("boundless-imagination2")}</div>
                     </div>
                   </div>
                 </div>
               </div>
               {/*CONTENT 5 */}
               <div
-                className={`w-full flex flex-col md:gap-[50px] items-center justify-center `}
+                className={`w-full flex flex-col md:gap-[50px] gap-[20px] items-center justify-center `}
               >
                 <div className="items-center">
                   <div
-                    className={`flex flex-col text-center  w-full text-[#FF0001]  items-center justify-center ${i18n.language === "zh"
-                      ? "md:text-[70px] text-2xl font-bold"
-                      : "md:text-[50px] text-xl"
+                    className={`flex flex-col text-center w-full text-[#FF0001] items-center justify-center md:text-[64px] text-base font-bold ${i18n.language === "zh"
+                      ? "md:text-[70px] "
+                      : "md:text-[50px] "
                       }`}
                     style={{
                       fontFamily: "SF Pro Display B",
@@ -266,15 +251,9 @@ const Parent = () => {
                     </div>
 
                     {/*Mobile*/}
-                    <div className="md:hidden flex flex-col items-center justify-center w-[154px]">
+                    <div className="md:hidden flex flex-col items-center justify-center w-[254px]">
                       <div> {t("ignite-learning-mobile")}</div>
                       <div> {t("ignite-learning2-mobile")}</div>
-                      {!(i18n.language === "zh") && (
-                        <>
-                          <div>{t("ignite-learning3-mobile")}</div>
-                          <div>{t("ignite-learning4-mobile")}</div>
-                        </>
-                      )}
                     </div>
                   </div>
                 </div>
@@ -288,15 +267,11 @@ const Parent = () => {
               </div>
               {/*CONTENT 6 */}
               <div
-                className={`w-full flex flex-col items-center justify-center${i18n.language === "zh" ? "gap-[10px]" : "gap-[26px]"
-                  }`}
+                className={`w-full flex flex-col items-center justify-center `}
               >
-                <div className="flex flex-col items-center md:gap-[50px] ">
+                <div className="flex flex-col items-center md:gap-[50px] gap-[20px]">
                   <div
-                    className={`text-center w-full text-[#4D9138] md:text-[64px] font-bold ${i18n.language === "zh"
-                      ? "text-2xl font-bold"
-                      : "text-xl"
-                      }`}
+                    className={`text-center w-full text-[#4D9138] md:text-[64px] font-bold text-base`}
                     style={{
                       fontFamily: "SF Pro Display B",
                       lineHeight: "normal",
@@ -314,36 +289,29 @@ const Parent = () => {
                     </div>
                     {/*Mobile*/}
                     <div
-                      className={`md:hidden flex flex-col items-center justify-center ${i18n.language === "zh" ? " w-[170px] " : "  w-[154px]  "
-                        }`}
+                      className={`md:hidden flex flex-col items-center justify-center w-[333px]`}
                     >
                       <div>{t("share-moment-mobile")}</div>
                       <div>{t("share-moment2-mobile")}</div>
-                      {!(i18n.language === "zh") && (
-                        <>
-                          {" "}
-                          <div>{t("share-moment3-mobile")}</div>
-                          <div>{t("share-moment4-mobile")}</div>
-                        </>
-                      )}
                     </div>
                   </div>
                   <div className="flex flex-col">
                     <img
                       src={Phone5}
                       alt="phone5"
-                      className=" md:w-[350px] md:h-[800px] w-[150px]"
+                      className=" md:w-[350px] md:h-[800px] h-[300px]"
                     />
                   </div>
                 </div>
               </div>
             </div>
-
-            <div className={`w-[1000px] flex flex-wrap gap-[50px] md:gap-[100px]`}>
+            
+            {/* CONTENT 7 */}
+            <div className={`md:w-[1000px] flex flex-wrap gap-[30px] md:gap-[100px]`}>
               <div className="flex flex-col justify-center items-center w-full">
                 <div className="flex flex-col items-center">
                   <div
-                    className={`text-center md:text-[48px] text-2xl font-bold`}
+                    className={`text-center md:text-[48px] text-base font-bold`}
                     style={{
                       fontFamily: "SF Pro Display B",
                       lineHeight: "normal",
@@ -351,9 +319,7 @@ const Parent = () => {
                   >
                     <div className="md:hidden flex flex-col items-center justify-center">
                       <div> {t("attractive-widget")}</div>
-                      {i18n.language === "zh" && (
-                        <div> {t("attractive-widget2")}</div>
-                      )}
+                      <div> {t("attractive-widget2")}</div>
                     </div>
                     <div className="hidden md:flex items-center justify-center">
                       <span className="inline-block">
@@ -366,46 +332,47 @@ const Parent = () => {
               </div>
               <div className="w-full flex flex-wrap md:gap-[100px] gap-4">
                 <div className="flex justify-between w-full">
-                  <div className="flex flex-row">
+                  <div className="md:flex md:flex-row w-1/3">
                     <img
                       src={Jam1}
                       alt="Jam1"
-                      className="md:w-[320px] md:h-[255]"
+                      className="w-max-full h-auto"
                     />
                   </div>
-                  <div className="flex flex-col flex-shrink">
+                  <div className="md:flex md:flex-row w-1/3">
                     <img
                       src={Jam2}
                       alt="Jam2"
-                      className="md:w-[320px] md:h-[255]"
+                      className="w-max-full h-auto"
                     />
                   </div>
-                  <div className="flex flex-col flex-shrink">
+                  <div className="md:flex md:flex-row w-1/3">
                     <img
                       src={Jam3}
                       alt="Jam3"
-                      className="md:w-[320px] md:h-[255]"
+                      className="w-max-full h-auto"
                     />
                   </div>
                 </div>
                 <div className="flex justify-between w-full">
-                  <div className="flex flex-col flex-shrink">
+                  <div className="md:flex md:flex-row w-1/3">
                     <img
                       src={Phone6}
                       alt="Phone6"
-                      className="md:w-[320px] md:h-[255]"
+                      className="w-max-full h-auto"
                     />
-                  </div><div className="flex flex-col flex-shrink">
+                  </div>
+                  <div className="md:flex md:flex-row w-1/3">
                     <img
                       src={Phone7}
                       alt="Phone7"
-                      className="md:w-[320px] md:h-[255]"
+                      className="w-max-full h-auto"
                     />
-                  </div><div className="flex flex-col flex-shrink">
+                  </div><div className="md:flex md:flex-row w-1/3">
                     <img
                       src={Phone8}
                       alt="Phone8"
-                      className="md:w-[320px] md:h-[255]"
+                      className="w-max-full h-auto"
                     />
                   </div>
                 </div>
