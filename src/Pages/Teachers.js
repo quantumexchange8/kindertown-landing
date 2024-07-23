@@ -15,7 +15,7 @@ const Teacher = () => {
   return (
     <>
       <div
-        className={`w-full flex flex-col justify-center items-center md:pt-[60px] pt-[80px] md:gap-[150px] gap-[50px] md:pb-[150px]`}
+        className={`w-full flex flex-col justify-center items-center pt-[60px] md:gap-[150px] gap-[50px] md:pb-[150px]`}
       >
         <div className="relative w-full md:pb-[20px] md:h-[900px] h-[300px] overflow-hidden">
           <div className="w-full md:pt-[108px] md:pl-[106px]">
@@ -45,10 +45,10 @@ const Teacher = () => {
         <div className="w-full flex flex-col justify-center items-center md:px-0 pl-[31px] pr-[32px]">
           <div className="w-full md:max-w-[1000px]  flex flex-col  gap-[100px]  md:gap-[150px]">
             {/*CONTENT 2*/}
-            <div className="w-full flex flex-col gap-[30px]">
+            <div className="w-full flex flex-col md:gap-[30px] gap-[10px]">
               <div className="flex flex-col justify-center items-center">
                 <div
-                  className={`text-center md:text-[80px] text-4xl font-bold`}
+                  className={`text-center md:text-[80px] text-2xl font-bold`}
                   style={{
                     fontFamily: "SF Pro Display B",
                     lineHeight: "normal",
@@ -76,22 +76,21 @@ const Teacher = () => {
               </div>
               <div className="md:hidden flex flex-col justify-center items-center">
                 <div
-                  className="text-center md:text-[32px] text-xl"
+                  className="text-center md:text-[32px] text-sm tracking-wide font-semibold"
                   style={{
-                    fontFamily:
-                      i18n.language === "zh"
-                        ? "SF Pro Display M"
-                        : "SF Pro Display Semibold",
+                    fontFamily: "SF Pro Display Semibold",
                     lineHeight: "normal",
                   }}
                 >
-                  {t("KT-teacher-desc")}
+                  <div className={`inline-block w-full`}> {t("mobile-KT-teacher-desc1")}</div>
+                  <div className={`inline-block w-full`}> {t("mobile-KT-teacher-desc2")}</div>
+                  <div className={`inline-block w-full`}> {t("mobile-KT-teacher-desc3")}</div>
                 </div>
               </div>
             </div>
             {/*CONTENT 3*/}
             <div
-              className={`w-full flex flex-col gap-[30px]`}
+              className={`w-full flex flex-col md:gap-[30px] gap-[20px]`}
             >
               <div className="flex flex-col justify-center items-center">
                 <img
@@ -102,24 +101,28 @@ const Teacher = () => {
               </div>
               <div className="flex flex-col justify-center items-center">
                 <div
-                  className={`flex flex-col justify-center md:text-[32px] text-center text-medium`}
+                  className={`md:text-[32px] text-sm text-center md:font-medium font-semibold`}
                   style={{
-                    fontFamily: "SF Pro Display M",
+                    fontFamily: "SF Pro Display Semibold",
                     lineHeight: "normal",
                   }}
                 >
                   <div
-                    className={`inline-block text-center w-full tracking-wide`}
+                    className={`md:flex flex-col hidden inline-block text-center w-full tracking-wide`}
                   >
-                    <div>{t("diff-ways1")}</div>
+                    <div className="text-balance">{t("diff-ways1")}</div>
                     <div>{t("diff-ways2")}</div>
+                  </div>
+                  <div className="md:hidden flex flex-col inline-block text-center w-full px-[10px]">
+                    <div className={`${i18n.language === 'zh'? 'tracking-tight':''}`}>{t("mobile-diff-ways1")}</div>
+                    <div>{t("mobile-diff-ways2")}</div>
                   </div>
                 </div>
               </div>
             </div>
             {/*CONTENT 4*/}
             <div
-              className={`w-full flex flex-col gap-[30px]`}
+              className={`w-full flex flex-col md:gap-[30px] gap-[20px]`}
             >
               <div className="flex flex-col justify-center items-center">
                 <img
@@ -130,28 +133,33 @@ const Teacher = () => {
               </div>
               <div className="flex flex-col justify-center items-center">
                 <div
-                  className={`flex flex-col md:text-[32px] text-center`}
+                  className={`flex flex-col md:text-[32px] text-sm text-center md:font-medium font-semibold`}
                   style={{
-                    fontFamily: "SF Pro Display M",
+                    fontFamily: "SF Pro Display Semibold",
                     lineHeight: "normal",
                   }}
                 >
-                  <div className={`flex flex-col justify-center items-center" ${i18n.language === "en"
-                      ? "tracking-tight"
-                      : i18n.language === "ms"
-                        ? "tracking-wide"
-                        : i18n.language === "zh"
-                          ? "tracking-tighter"
-                          : "tracking-tight"
-                      }`}>
+                  <div className={`md:flex hidden flex-col justify-center items-center" ${i18n.language === "en"
+                    ? "tracking-tight"
+                    : i18n.language === "ms"
+                      ? "tracking-wide"
+                      : i18n.language === "zh"
+                        ? "tracking-tighter"
+                        : "tracking-tight"
+                    }`}>
                     {t("solve-challenge")}
+                  </div>
+
+                  <div className="md:hidden flex flex-col justify-center items-center tracking-wide">
+                    <div>{t("mobile-solve-challenge1")}</div>
+                    <div>{t("mobile-solve-challenge2")}</div>
                   </div>
                 </div>
               </div>
             </div>
             {/*CONTENT 5*/}
             <div
-              className={`w-full flex flex-col gap-[30px]`}
+              className={`w-full flex flex-col md:gap-[30px] gap-[20px]`}
             >
               <div className="flex flex-col justify-center items-center">
                 <img
@@ -160,20 +168,22 @@ const Teacher = () => {
                   className="md:w-[800px] md:h-[614px]"
                 />
               </div>
-              <div className="flex flex-col justify-center items-center">
+              <div className="flex flex-col justify-center items-center md:font-medium font-semibold">
                 <div
-                  className={`md:text-[32px] text-center`}
+                  className={`md:text-[32px] text-sm text-center`}
                   style={{
-                    fontFamily: "SF Pro Display M",
+                    fontFamily: "SF Pro Display Semibold",
                     lineHeight: "normal",
                   }}
                 >
                   <div className="flex flex-col">
-                    <div
-                      className={`inline-block ${(i18n.language === 'zh')? '' : 'tracking-wider'}`}
-                    >
+                    <div className={`md:flex hidden inline-block ${(i18n.language === 'zh') ? '' : 'tracking-wider'}`}>
                       {t("harness-power1")}
-                      {i18n.language === 'zh'? <><div>{t("harness-power2")}</div><div>{t("harness-power3")}</div></>:''}
+                      {i18n.language === 'zh' ? <><div>{t("harness-power2")}</div><div>{t("harness-power3")}</div></> : ''}
+                    </div>
+                    <div className={`md:hidden flex flex-col inline-block ${(i18n.language === 'zh') ? '' : 'tracking-wider'}`}>
+                      {t("mobile-harness-power1")}
+                      {i18n.language === 'zh' ? <><div>{t("mobile-harness-power2")}</div><div>{t("mobile-harness-power3")}</div></> : ''}
                     </div>
                   </div>
                 </div>
@@ -181,7 +191,7 @@ const Teacher = () => {
             </div>
             {/*CONTENT 6*/}
             <div
-              className={`w-full flex flex-col gap-[30px]`}
+              className={`w-full flex flex-col md:gap-[30px] gap-[20px]`}
             >
               <div className="flex flex-col justify-center items-center">
                 <img
@@ -192,23 +202,28 @@ const Teacher = () => {
               </div>
               <div className="flex flex-col justify-center items-center">
                 <div
-                  className={`md:text-[32px] text-center font-medium`}
+                  className={`md:text-[32px] text-sm text-center md:font-medium font-semibold`}
                   style={{
-                    fontFamily: "SF Pro Display M",
+                    fontFamily: "SF Pro Display Semibold",
                     lineHeight: "normal",
                   }}
                 >
-                  <div className={`flex flex-col text-pretty text-center ${(i18n.language === 'zh' ? '':'tracking-wider')}`}>
+                  <div className={`md:flex hidden flex-col text-pretty text-center ${(i18n.language === 'zh' ? '' : 'tracking-wider')}`}>
                     <div>{t("take-pride")}</div>
                     <div>{t("take-pride2")}</div>
                     <div>{t("take-pride3")}</div>
-                    </div>
+                  </div>
+                  <div className={`md:hidden flex flex-col text-pretty text-center ${(i18n.language === 'zh' ? '' : 'tracking-wider')}`}>
+                    <div>{t("mobile-take-pride1")}</div>
+                    <div>{t("mobile-take-pride2")}</div>
+                    <div>{t("mobile-take-pride3")}</div>
+                  </div>
                 </div>
               </div>
             </div>
             {/*CONTENT 7*/}
             <div
-              className={`w-full flex flex-col gap-[30px]`}
+              className={`w-full flex flex-col md:gap-[30px] gap-[20px] md:pb-[150px] pb-[50px]`}
             >
               <div className="flex flex-col justify-center items-center">
                 <img
@@ -219,70 +234,77 @@ const Teacher = () => {
               </div>
               <div className="flex flex-col justify-center items-center">
                 <div
-                  className={`md:text-[32px] text-center`}
+                  className={`md:text-[32px] text-sm text-center md:font-medium font-semibold`}
                   style={{
-                    fontFamily: "SF Pro Display M",
+                    fontFamily: "SF Pro Display Semibold",
                     lineHeight: "normal",
                   }}
                 >
-                  <div className={`flex flex-col text-center ${!(i18n.language === 'zh')? 'tracking-wider' : ''}`}>
+                  <div className={`md:flex hidden flex-col text-center ${!(i18n.language === 'zh') ? 'tracking-wider' : ''}`}>
                     {t("kingdom-community")}
+                  </div>
+                  <div className={`flex md:hidden flex-col text-center ${!(i18n.language === 'zh') ? 'tracking-wider' : ''}`}>
+                    <div>{t("mobile-kingdom-community1")}</div>
+                    <div>{t("mobile-kingdom-community2")}</div>
+                    <div>{t("mobile-kingdom-community3")}</div>
                   </div>
                 </div>
               </div>
             </div>
-            <PopupForm/>
+            
 
             {/*CONTENT 8*/}
-            <div className="w-full flex flex-col md:px-0 items-center">
-              <div className="w-full md:w-[1000px] flex flex-col justify-center items-center">
-                <div className="flex flex-col justify-center items-center">
-                  <div className="relative flex flex-col justify-center md:w-[400px] w-[167px] rounded-[16px] md:rounded-[50px] bg-gradient-to-t from-[#ADADAD] to-[#F9F9F9] md:pt-[53px] pt-[27px] md:pb-[61px] pb-[22px] md:pl-[34px] md:pr-[33px] px-[14px] md:gap-[59px] gap-[27px]">
+
+          </div>
+          <PopupForm />
+          <div className="w-full md:flex hidden flex-col md:px-0 items-center">
+            <div className="w-full md:w-[1000px] flex flex-col justify-center items-center">
+              <div className="flex flex-col justify-center items-center">
+                <div className="relative flex flex-col justify-center md:w-[400px] w-[167px] rounded-[16px] md:rounded-[50px] bg-gradient-to-t from-[#ADADAD] to-[#F9F9F9] md:pt-[53px] pt-[27px] md:pb-[61px] pb-[22px] md:pl-[34px] md:pr-[33px] px-[14px] md:gap-[59px] gap-[27px]">
+                  <div className="flex flex-col justify-center items-center">
+                    <img
+                      src={CTLogo}
+                      alt="CTLogo"
+                      className="md:w-[160px] md:h-[106px] w-[66px]"
+                    />
+                  </div>
+                  <div className="flex flex-col justify-center items-center md:gap-[40px] gap-3">
                     <div className="flex flex-col justify-center items-center">
-                      <img
-                        src={CTLogo}
-                        alt="CTLogo"
-                        className="md:w-[160px] md:h-[106px] w-[66px]"
-                      />
-                    </div>
-                    <div className="flex flex-col justify-center items-center md:gap-[40px] gap-3">
-                      <div className="flex flex-col justify-center items-center">
-                        <div
-                          className="md:text-[24px] text-[10px] inline-block"
-                          style={{
-                            fontFamily: "SF Pro Display B",
-                            lineHeight: "normal",
-                          }}
-                        >
-                          CT PRODUCT &nbsp;
-                          <span className=" bg-black  md:w-[77px] h-[29px] md:rounded-[4px] rounded-[2px] text-white md:px-[5.6px] px-[3px] py-[1px]">
-                            CARE
-                          </span>
-                        </div>
+                      <div
+                        className="md:text-[24px] text-[10px] inline-block"
+                        style={{
+                          fontFamily: "SF Pro Display B",
+                          lineHeight: "normal",
+                        }}
+                      >
+                        CT PRODUCT &nbsp;
+                        <span className=" bg-black  md:w-[77px] h-[29px] md:rounded-[4px] rounded-[2px] text-white md:px-[5.6px] px-[3px] py-[1px]">
+                          CARE
+                        </span>
                       </div>
-                      <div className="flex flex-col justify-center items-center">
+                    </div>
+                    <div className="flex flex-col justify-center items-center">
+                      <div
+                        className="md:text-[24px] text-[10px] inline-block text-center"
+                        style={{
+                          lineHeight: "normal",
+                        }}
+                      >
                         <div
-                          className="md:text-[24px] text-[10px] inline-block text-center"
-                          style={{
-                            lineHeight: "normal",
-                          }}
+                          className="hidden md:flex flex-col"
+                          style={{ fontFamily: "SF Pro Display R" }}
                         >
-                          <div
-                            className="hidden md:flex flex-col"
-                            style={{ fontFamily: "SF Pro Display R" }}
-                          >
-                            <div className="flex items-center justify-center ">
-                              Free provide face to face training and online
-                              tutorials.
-                            </div>
-                          </div>
-                          <div
-                            className="md:hidden flex flex-wrap"
-                            style={{ fontFamily: "SF Pro Display Semibold" }}
-                          >
+                          <div className="flex items-center justify-center ">
                             Free provide face to face training and online
                             tutorials.
                           </div>
+                        </div>
+                        <div
+                          className="md:hidden flex flex-wrap"
+                          style={{ fontFamily: "SF Pro Display Semibold" }}
+                        >
+                          Free provide face to face training and online
+                          tutorials.
                         </div>
                       </div>
                     </div>

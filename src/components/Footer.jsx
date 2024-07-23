@@ -7,14 +7,12 @@ import ios from "../assets/footer/apple.svg";
 import ct from "../assets/footer/ct.svg";
 import Privacy from "../components/modal/privacymodal";
 import Terms from "../components/modal/termsmodal";
-import Form from "../components/modal/formmodal";
 import About from "../components/modal/aboutmodal";
 import { useTranslation } from "react-i18next";
 
 const Footer = () => {
   const [PrivacyOpen, setPrivacyOpen] = useState(false);
   const [TermsOpen, setTermsOpen] = useState(false);
-  const [FormOpen, setFormOpen] = useState(false);
   const [AboutOpen, setAboutOpen] = useState(false);
 
   const { t } = useTranslation();
@@ -221,29 +219,36 @@ const Footer = () => {
               className="flex flex-col gap-5 text-xl"
               style={{ fontFamily: "SF Pro Display M" }}
             >
-              <Link to="/products/parent" className="hover:text-[#F67F00]">
+              <Link
+                onClick={() => setAboutOpen(true)}
+                className="hover:text-[#F67F00]"
+              >
+                {t("about-us")}
+              </Link>
+              <About
+                AboutOpen={AboutOpen}
+                setAboutOpen={setAboutOpen}
+              />
+              <Link to="/" className="hover:text-[#F67F00]">
+                {t("home")}
+              </Link>
+              <Link to="/join-us/referral-program" className="hover:text-[#F67F00]">
+                {t("footer-referral")}
+              </Link>
+              <Link
+                to="/products/parent"
+                className="hover:text-[#F67F00]"
+              >
                 {t("footer-parent")}
               </Link>
-              <Link to="/products/teacher" className="hover:text-[#F67F00]">
+              <Link
+                to="/products/teacher"
+                className="hover:text-[#F67F00]"
+              >
                 {t("footer-teacher")}
               </Link>
               <Link to="/products/admin" className="hover:text-[#F67F00]">
                 {t("footer-admin")}
-              </Link>
-              <Link
-                to="/join-us/referral-program"
-                className="hover:text-[#F67F00]"
-              >
-                {t("referral-program")}
-              </Link>
-              <Link
-                to="/join-us/career-opportunities"
-                className="hover:text-[#F67F00]"
-              >
-                {t("career-opportunity")}
-              </Link>
-              <Link to="/download" className="hover:text-[#F67F00]">
-                {t("download")}
               </Link>
             </div>
             <div className="flex flex-col">

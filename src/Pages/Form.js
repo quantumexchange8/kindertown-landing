@@ -45,7 +45,7 @@ const PopupForm = () => {
                     fontFamily: "SF Pro Display B",
                     lineHeight: "normal",
                 }}
-                    className={`inline-block md:text-xl font-wrap font-semibold text-[14px] items-center justify-center text-pretty ${i18n.language === "ms"
+                    className={`inline-block md:text-xl font-wrap font-semibold text-[16px] items-center justify-center text-pretty ${i18n.language === "ms"
                         ? "mx-8" : " "
                         }`}>
                     {/* Desktop */}

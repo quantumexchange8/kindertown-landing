@@ -1,11 +1,11 @@
 // JoinUs.jsx
 import React from "react";
 import Privacy from "./Privacy";
-import Header from "../assets/admin/header.png";
-import Device from "../assets/admin/Device - Macbook Pro.png";
+import productsAdmin from "../assets/admin/productsAdmin.mp4";
+import Device from "../assets/admin/Device.png";
 import Device2 from "../assets/admin/Device2.png";
-import Macbook from "../assets/admin/macbook2.png";
-import Macbook2 from "../assets/admin/Device.png";
+import Macbook from "../assets/admin/macbook.png";
+import Macbook2 from "../assets/admin/macbook2.png";
 import Ipad from "../assets/admin/ipad.png";
 import icon1 from "../assets/admin/icon1.svg";
 import icon2 from "../assets/admin/icon2.svg";
@@ -32,82 +32,76 @@ import icon22 from "../assets/admin/icon22.svg";
 import icon23 from "../assets/admin/icon23.svg";
 import icon24 from "../assets/admin/icon24.svg";
 import CTLogo from "../assets/admin/ct-logo.svg";
+import PopupForm from "./Form";
 import { useTranslation } from "react-i18next";
 const Admin = () => {
   const { t, i18n } = useTranslation();
   return (
     <>
-      <div className="w-full flex flex-col justify-center items-center md:pt-[150px] pt-[80px] md:px-0 px-5 md:gap-[200px] gap-[100px] md:pb-[200px] pb-[100px]">
+      <div className="w-full flex flex-col justify-center items-center md:pt-[60px] pt-[60px] w-max-[1000px] md:px-0 md:gap-[150px] gap-[50px] md:pb-[200px] pb-[50px]">
+        <div className="relative w-full md:pb-[20px] md:h-[900px] h-[300px] overflow-hidden">
+          <div className="w-full md:pt-[108px] md:pl-[106px]">
+            <video
+              src={productsAdmin}
+              autoPlay
+              loop
+              muted
+              className="absolute md:top-0 left-0 w-full h-[300px] md:h-auto object-cover object-center"
+            />
+
+            <div className="absolute flex items-center justify-center text-center inset-0 text-[#6938EF] z-10">
+              <div
+                className={`md:text-[64px] text-2xl font-bold`}
+                style={{
+                  fontFamily: "SF Pro Display B",
+                  lineHeight: "normal",
+                }}
+              >
+                <><div>{t("inclusive-environment1")}</div>
+                  <div>{t("inclusive-environment2")}</div></>
+              </div>
+            </div>
+          </div>
+        </div>
         <div
-          className={`w-full md:max-w-[1000px] flex flex-col justify-center items-center  gap-[100px] ${
-            i18n.language === "zh" ? "md:gap-[300px]" : "md:gap-[200px]"
-          }`}
+          className={`w-full max-w-[1000px] px-[30px] flex flex-col justify-center items-center gap-[100px] md:gap-[150px]`}
         >
           {/*Content 1*/}
           <div className="w-full flex flex-col md:gap-[100px] gap-[50px]">
-            <div className="flex flex-col items-center">
-              <img
-                src={Header}
-                alt="Header"
-                className="md:w-[800px] md:h-[622px]"
-              />
-            </div>
-
-            <div className="w-full flex flex-col justify-center items-center md:gap-[50px] gap-[30px]">
+            <div className="w-full flex flex-col justify-center items-center gap-[30px]">
               <div className="flex flex-col items-center">
                 <div
-                  className={`md:text-[80px] text-4xl ${
-                    i18n.language === "zh" ? "font-bold" : ""
-                  }`}
+                  className={`md:text-[80px] text-2xl font-bold`}
                   style={{
                     fontFamily: "SF Pro Display B",
                     lineHeight: "normal",
                   }}
                 >
-                  {i18n.language === "zh" && <div>{t("KT-admin")}</div>}
-
-                  {!(i18n.language === "zh") && (
-                    <>
-                      <div className="hidden md:flex">{t("KT-admin")}</div>
-                      <div className="md:hidden flex flex-col items-center">
-                        <div> Kindertown</div>
-                        <div> Admin</div>
-                      </div>
-                    </>
-                  )}
+                  <div>{t("KT-admin")}</div>
                 </div>
               </div>
               <div className="flex flex-col justify-center items-center">
                 <div
-                  className={`text-center text-xl ${
-                    i18n.language === "zh" ? "md:text-3xl " : "md:text-[32px] "
-                  }`}
+                  className={`text-center text-sm md:text-[32px]`}
                   style={{
                     lineHeight: "normal",
-                  }}
-                >
+                  }}>
                   <div
                     className="hidden md:flex flex-col"
-                    style={{ fontFamily: "SF Pro Display M" }}
-                  >
-                    <span
-                      className={`inline-block ${
-                        i18n.language === "zh" ? "md:w-[700px]" : "w-full"
-                      }`}
-                    >
-                      {t("KT-admin-desc")}
-                    </span>
+                    style={{ fontFamily: "SF Pro Display M" }}>
+                    <div
+                      className={`flex flex-col items-center ${i18n.language === "zh" ? "font-semibold" : "font-medium"
+                        }`}>
+                      <div>{t("KT-admin-desc1")}</div>
+                      <div className="md:w-[805px]">{t("KT-admin-desc2")}</div>
+                    </div>
                   </div>
                   <div
-                    className="md:hidden flex flex-col"
+                    className={`md:hidden flex flex-col font-semibold ${(i18n.language === 'zh' ? '' : 'tracking-wider')}`}
                     style={{
-                      fontFamily:
-                        i18n.language === "zh"
-                          ? "SF Pro Display M"
-                          : " SF Pro Display Semibold",
-                    }}
-                  >
-                    {t("KT-admin-desc")}
+                      fontFamily: "SF Pro Display Semibold"
+                    }}>
+                    {t("KT-admin-desc1")}{t("KT-admin-desc2")}
                   </div>
                 </div>
               </div>
@@ -115,65 +109,54 @@ const Admin = () => {
           </div>
           {/*Content 2 -- Superb Interface  */}
           <div
-            className={`w-full flex md:flex-row flex-col justify-center items-center gap-[30px] ${
-              i18n.language === "zh"
-                ? " md:gap-[50px] font-bold"
-                : " md:gap-[30px]"
-            }`}
+            className={`w-full flex md:flex-row flex-col justify-center items-center gap-[30px]`}
           >
             <div
-              className="flex flex-col  text-center"
+              className="flex flex-col text-center relative w-full font-bold md:gap-0 gap-[20px]"
               style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
             >
               <div
-                className={`hidden md:flex md:w-[400px] ${
-                  i18n.language === "ms" ? "md:text-[40px]" : "md:text-[50px]"
-                }`}
+                className={`hidden md:flex ${i18n.language === "ms" ? "md:w-[400px]" : "md:w-[300px]"} 
+                md:absolute top-0 right-0 text-right ${i18n.language === "zh" ? "md:text-[55px] indent-24" : "md:text-[36px]"
+                  }`}
               >
                 {t("superb-interface")}
               </div>
 
-              <div className="md:hidden flex flex-col text-xl">
+              <div className={`md:hidden flex flex-col ${(i18n.language === 'ms') ? "text-[16px] px-[5px]" : "text-[20px]"} `}>
                 <div>{t("superb-interface-mobile")}</div>
-                <div>{t("superb-interface2-mobile")}</div>
+              </div>
+
+              <div className="w-full flex flex-col">
+                <img src={Device} alt="Device" className="w-full md:w-[800px]" />
               </div>
             </div>
 
-            <div className="w-full flex flex-col">
-              <img src={Device} alt="Device" className="w-full" />
-            </div>
+
           </div>
-          {/*Content 3*/}
+          {/*Content 3 -- School Enrollment*/}
           <div
-            className={`w-full flex md:flex-row flex-col justify-center items-center gap-[30px] ${
-              i18n.language === "zh" ? "md:gap-[66px]" : "md:gap-[30px]"
-            }`}
+            className={`w-full flex md:flex-row flex-col justify-center md:gap-0 gap-[20px]`}
           >
-            <div className="w-full flex flex-col md:order-1 order-2">
-              <img src={Device2} alt="Device2" className="w-full" />
+            <div className="w-full flex flex-col md:order-2 order-2">
+              <img src={Device2} alt="Device2" className="w-full md:w-[733px]" />
             </div>
             <div
-              className="flex flex-col  text-center  md:order-2 order-1"
+              className="flex flex-col md:order-1 order-1"
               style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
             >
               {/*Desktop */}
               <div
-                className={`hidden md:flex items-center md:w-[400px] ${
-                  i18n.language === "zh"
-                    ? "md:text-[50px] "
-                    : i18n.language === "en"
-                    ? "md:text-[50px] "
-                    : i18n.language === "ms"
-                    ? "md:text-[40px]"
-                    : " md:text-[50px]"
-                }`}
+                className={`hidden md:flex items-center md:w-[275px] ${i18n.language === "zh"
+                  ? "md:text-[55px] "
+                  : "md:text-[36px]"
+                  }`}
               >
                 <span
-                  className={`inline-block ${
-                    i18n.language === "zh"
-                      ? "md:w-[300px] w-full font-bold"
-                      : "w-full"
-                  }`}
+                  className={`inline-block ${i18n.language === "zh"
+                    ? "w-full font-bold"
+                    : "w-full"
+                    }`}
                 >
                   {t("efficient-timesave")}
                 </span>
@@ -181,42 +164,33 @@ const Admin = () => {
 
               {/*Mobile */}
               <div
-                className={`md:hidden flex flex-col justify-center items-center text-xl ${
-                  i18n.language === "zh" ? "font-bold" : ""
-                }`}
+                className={`md:hidden flex flex-col justify-center items-center text-base font-bold`}
                 style={{ lineHeight: "normal" }}
               >
                 <div> {t("efficient-timesave-mobile")}</div>
                 <div> {t("efficient-timesave2-mobile")}</div>
-                {!(i18n.language === "zh") && (
-                  <div> {t("efficient-timesave3-mobile")}</div>
-                )}
               </div>
             </div>
           </div>
-          {/*CONTENT 4*/}
-          <div className="w-full flex flex-col justify-center md:gap-[100px] gap-[30px]">
+          {/*CONTENT 4 -- Management Tools*/}
+          <div className="w-full flex flex-col justify-center md:gap-[50px] gap-[30px]">
             <div className="flex flex-col justify-center items-center">
               <div
-                className={`text-center  text-xl ${
-                  i18n.language === "zh"
-                    ? "md:text-[50px] font-bold"
-                    : "md:text-[40px]"
-                }`}
+                className={`text-center text-base md:text-[36px] font-bold`}
                 style={{
                   lineHeight: "normal",
                 }}
               >
                 {/*Desktop*/}
                 <div
-                  className="hidden md:flex flex-col items-center"
-                  style={{ fontFamily: "SF Pro Display Semibold" }}
+                  className={`hidden md:flex flex-col items-center ${i18n.language === "ms" ? "text-balance" : (i18n.language === "zh") ? "md:w-[700px]" : ""}`}
+                  style={{ fontFamily: "SF Pro Display B" }}
                 >
                   {t("manage-tool")}
                 </div>
                 {/*Mobile*/}
                 <div
-                  className="md:hidden flex flex-col items-center"
+                  className={`md:hidden flex flex-col items-center ${i18n.language === 'en' ? "tracking-[0.04em]" : i18n.language === 'ms' ? "tracking-wide" : "tracking-wider"}`}
                   style={{ fontFamily: "SF Pro Display B" }}
                 >
                   {t("manage-tool")}
@@ -228,24 +202,20 @@ const Admin = () => {
               <img src={Macbook} alt="Macbook" />
             </div>
           </div>
-          {/*CONTENT 5*/}
-          <div className="w-full flex flex-col justify-center md:gap-[100px] gap-[30px]">
+          {/*CONTENT 5 -- Significant Contributions */}
+          <div className="w-full flex flex-col justify-center md:gap-[50px] gap-[20px]">
             <div className="flex flex-col justify-center items-center">
               <div
-                className={`text-center  text-xl ${
-                  i18n.language === "zh"
-                    ? "md:text-[50px] font-bold"
-                    : "md:text-[40px]"
-                }`}
+                className={`text-center text-base md:text-[36px] font-bold`}
                 style={{
                   lineHeight: "normal",
                 }}
               >
                 <div
-                  className="hidden md:flex flex-col items-center "
-                  style={{ fontFamily: "SF Pro Display Semibold" }}
+                  className="hidden md:flex flex-col items-center"
+                  style={{ fontFamily: "SF Pro Display B" }}
                 >
-                  <div className="flex items-center">
+                  <div className={`flex items-center ${i18n.language === "zh" ? "md:w-[550px]" : "text-balance"}`}>
                     {t("academic-achievement")}
                   </div>
                 </div>
@@ -253,7 +223,8 @@ const Admin = () => {
                   className="md:hidden flex flex-col items-center "
                   style={{ fontFamily: "SF Pro Display B" }}
                 >
-                  {t("academic-achievement")}
+                  <div>{t("mobile-academic-achievement1")}</div>
+                  <div>{t("mobile-academic-achievement2")}</div>
                 </div>
               </div>
             </div>
@@ -261,24 +232,28 @@ const Admin = () => {
               <img src={Macbook2} alt="Macbook2" className="w-full" />
             </div>
           </div>
-          {/*CONTENT 6*/}
-          <div className="w-full flex flex-col justify-center  md:gap-[100px] gap-[30px]">
+          {/*CONTENT 6 -- Management system*/}
+          <div className="w-full flex flex-col justify-center  md:gap-[50px] gap-[20px]">
             <div className="flex flex-col justify-center items-center">
               <div
-                className={`text-center text-xl ${
-                  i18n.language === "zh"
-                    ? " md:text-3xl font-semibold"
-                    : " md:text-[40px]"
-                }`}
+                className={`text-center text-base md:text-[36px] text-pretty`}
                 style={{
                   lineHeight: "normal",
                 }}
               >
                 <div
-                  className="flex flex-col items-center"
-                  style={{ fontFamily: "SF Pro Display Semibold" }}
+                  className="md:flex flex-col hidden items-center font-bold"
+                  style={{ fontFamily: "SF Pro Display B" }}
                 >
-                  {t("value-learning")}
+                  <div className={`${i18n.language === "zh"?"tracking-tight":"text-balance"}`}>{t("management-system1")}</div>
+                  <div>{t("management-system2")}</div>
+                </div>
+                <div
+                  className={`md:hidden flex flex-col items-center font-bold`}
+                  style={{ fontFamily: "SF Pro Display B" }}
+                >
+                  <div>{t("mobile-management-system1")}</div>
+                  <div>{t("mobile-management-system2")}</div>
                 </div>
               </div>
             </div>
@@ -287,16 +262,12 @@ const Admin = () => {
             </div>
           </div>
         </div>
-        {/*Content 7*/}
+        {/*Content 7 -- Thoughtful features*/}
 
         <div className="w-full md:w-[1102px] flex flex-col justify-center items-center  md:gap-[100px] gap-[35px]">
           <div className="w-full flex flex-col justify-center items-center">
             <div
-              className={`text-center ${
-                i18n.language === "zh"
-                  ? "md:text-[80px]  font-bold text-4xl"
-                  : "md:text-[70px] text-[32px] "
-              }`}
+              className={`text-center font-bold md:text-[64px]`}
               style={{
                 fontFamily: "SF Pro Display B",
                 lineHeight: "normal",
@@ -304,24 +275,20 @@ const Admin = () => {
             >
               {/*Desktop*/}
               <div
-                className={`hidden md:flex flex-col justify-center items-center ${
-                  i18n.language === "en"
-                    ? "md:w-[793px] "
-                    : i18n.language === "zh"
-                    ? "md:w-[720px]"
-                    : "w-full"
-                }`}
+                className={`hidden md:flex flex-col justify-center items-center ${i18n.language === "en"
+                  ? "md:w-[750px] "
+                  : i18n.language === "zh"
+                    ? "md:w-[700px]"
+                    : "md:w-[900px]"
+                  }`}
               >
                 {t("thoughtful-feature")}
               </div>
 
               {/*Mobile*/}
               <div className="md:hidden flex flex-col justify-center items-center">
-                <div> {t("thoughtful-feature1-mobile")}</div>
-                <div> {t("thoughtful-feature2-mobile")}</div>
-                {!(i18n.language === "zh") && (
-                  <div> {t("thoughtful-feature3-mobile")}</div>
-                )}
+                <div>{t("thoughtful-feature1-mobile")}</div>
+                <div>{t("thoughtful-feature2-mobile")}</div>
               </div>
             </div>
           </div>
@@ -334,24 +301,8 @@ const Admin = () => {
                   <img
                     src={icon1}
                     alt="admission"
-                    className="md:w-[50px] md:h-[50px] w-[30px]"
+                    className="w-[50px] h-[50px]"
                   />
-                </div>
-                <div
-                  className="md:text-base text-[10px] md:w-[106px] w-full text-center"
-                  style={{
-                    fontFamily: "SF Pro Display M",
-                    lineHeight: "normal",
-                  }}
-                >
-                  <div className="hidden md:flex flex-col items-center">
-                    <div>Admission</div>
-                    <div>& Enrollment</div>
-                  </div>
-                  <div className="md:hidden flex flex-col items-center">
-                    <div>School</div>
-                    <div>Enrollment</div>
-                  </div>
                 </div>
               </div>
               {/*Icon 2*/}
@@ -360,41 +311,18 @@ const Admin = () => {
                   <img
                     src={icon2}
                     alt="Student"
-                    className="md:w-[50px] md:h-[50px] w-[30px]"
+                    className="w-[50px] h-[50px]"
                   />
                 </div>
-                <div
-                  className="md:text-base text-[10px] md:w-[106px] w-full text-center"
-                  style={{
-                    fontFamily: "SF Pro Display M",
-                    lineHeight: "normal",
-                  }}
-                >
-                  <div className="flex flex-col items-center">
-                    <div>Student</div>
-                    <div>database</div>
-                  </div>
-                </div>
               </div>
+              {/*Icon 3*/}
               <div className="flex flex-col justify-center items-center md:gap-4 gap-[10px]">
                 <div>
                   <img
                     src={icon3}
                     alt="Dashboard"
-                    className="md:w-[50px] md:h-[50px] w-[30px]"
+                    className="w-[50px] h-[50px]"
                   />
-                </div>
-                <div
-                  className="md:text-base text-[10px] md:w-[106px] w-full text-center"
-                  style={{
-                    fontFamily: "SF Pro Display M",
-                    lineHeight: "normal",
-                  }}
-                >
-                  <div className="flex flex-col items-center">
-                    <div>Statistic</div>
-                    <div>dashboard</div>
-                  </div>
                 </div>
               </div>
               {/*Icon 4*/}
@@ -403,20 +331,8 @@ const Admin = () => {
                   <img
                     src={icon4}
                     alt="Classroom"
-                    className="md:w-[50px] md:h-[50px] w-[30px]"
+                    className="w-[50px] h-[50px]"
                   />
-                </div>
-                <div
-                  className="md:text-base text-[10px] md:w-[106px] w-full  text-center"
-                  style={{
-                    fontFamily: "SF Pro Display M",
-                    lineHeight: "normal",
-                  }}
-                >
-                  <div className="flex flex-col items-center">
-                    <div className="flex items-center">Classroom</div>
-                    <div className="flex items-center">management</div>
-                  </div>
                 </div>
               </div>
               {/*Icon 5*/}
@@ -425,20 +341,8 @@ const Admin = () => {
                   <img
                     src={icon5}
                     alt="Qualification"
-                    className="md:w-[50px] md:h-[50px] w-[30px]"
+                    className="w-[50px] h-[50px]"
                   />
-                </div>
-                <div
-                  className="md:text-base text-[10px] md:w-[106px] w-full  text-center"
-                  style={{
-                    fontFamily: "SF Pro Display M",
-                    lineHeight: "normal",
-                  }}
-                >
-                  <div className="flex flex-col items-center">
-                    <div className="flex items-center">Academic</div>
-                    <div className="flex items-center">qualification</div>
-                  </div>
                 </div>
               </div>
               {/*Icon 6*/}
@@ -447,20 +351,8 @@ const Admin = () => {
                   <img
                     src={icon6}
                     alt="Check Log"
-                    className="md:w-[50px] md:h-[50px] w-[30px]"
+                    className="w-[50px] h-[50px]"
                   />
-                </div>
-                <div
-                  className="md:text-base text-[10px] md:w-[106px] w-full text-center"
-                  style={{
-                    fontFamily: "SF Pro Display M",
-                    lineHeight: "normal",
-                  }}
-                >
-                  <div className="flex flex-col items-center">
-                    <div className="flex items-center">Student</div>
-                    <div className="flex items-center">check log</div>
-                  </div>
                 </div>
               </div>
               {/*Icon 7*/}
@@ -469,24 +361,8 @@ const Admin = () => {
                   <img
                     src={icon7}
                     alt="Homework"
-                    className="md:w-[50px] md:h-[50px] w-[30px]"
+                    className="w-[50px] h-[50px]"
                   />
-                </div>
-                <div
-                  className="md:text-base text-[10px] md:w-[106px] w-full text-center"
-                  style={{
-                    fontFamily: "SF Pro Display M",
-                    lineHeight: "normal",
-                  }}
-                >
-                  <div className="hidden md:flex flex-col items-center">
-                    <div className="flex items-center">homework &</div>
-                    <div className="flex items-center">doc upload</div>
-                  </div>
-                  <div className="md:hidden flex flex-col items-center">
-                    <div className="flex items-center">homework </div>
-                    <div className="flex items-center">upload</div>
-                  </div>
                 </div>
               </div>
               {/*Icon 8*/}
@@ -495,20 +371,8 @@ const Admin = () => {
                   <img
                     src={icon8}
                     alt="Download"
-                    className="md:w-[50px] md:h-[50px] w-[30px]"
+                    className="w-[50px] h-[50px]"
                   />
-                </div>
-                <div
-                  className="md:text-base text-[10px] md:w-[106px] w-full  text-center"
-                  style={{
-                    fontFamily: "SF Pro Display M",
-                    lineHeight: "normal",
-                  }}
-                >
-                  <div className="flex flex-col items-center">
-                    <div className="flex items-center">Download in</div>
-                    <div className="flex items-center">Excel / PDF</div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -520,24 +384,8 @@ const Admin = () => {
                   <img
                     src={icon9}
                     alt="Calendar"
-                    className="md:w-[50px] md:h-[50px] w-[30px]"
+                    className="w-[50px] h-[50px]"
                   />
-                </div>
-                <div
-                  className="md:text-base text-[10px] md:w-[106px] w-full text-center"
-                  style={{
-                    fontFamily: "SF Pro Display M",
-                    lineHeight: "normal",
-                  }}
-                >
-                  <div className="hidden md:flex flex-col items-center">
-                    <div className="flex items-center">Calendar &</div>
-                    <div className="flex items-center">schedule</div>
-                  </div>
-                  <div className=" md:hidden flex flex-col items-center">
-                    <div className="flex items-center">Calendar </div>
-                    <div className="flex items-center">schedule</div>
-                  </div>
                 </div>
               </div>
               {/*Icon 2*/}
@@ -546,20 +394,8 @@ const Admin = () => {
                   <img
                     src={icon10}
                     alt="Email"
-                    className="md:w-[50px] md:h-[50px] w-[30px]"
+                    className="w-[50px] h-[50px]"
                   />
-                </div>
-                <div
-                  className="md:text-base text-[10px] md:w-[106px] w-full text-center"
-                  style={{
-                    fontFamily: "SF Pro Display M",
-                    lineHeight: "normal",
-                  }}
-                >
-                  <div className="flex flex-col items-center">
-                    <div className="flex items-center">Email</div>
-                    <div className="flex items-center">notification</div>
-                  </div>
                 </div>
               </div>
               {/*Icon 3*/}
@@ -568,20 +404,8 @@ const Admin = () => {
                   <img
                     src={icon11}
                     alt="Announcement"
-                    className="md:w-[50px] md:h-[50px] w-[30px]"
+                    className="w-[50px] h-[50px]"
                   />
-                </div>
-                <div
-                  className="md:text-base text-[10px] md:w-[106px] w-full text-center"
-                  style={{
-                    fontFamily: "SF Pro Display M",
-                    lineHeight: "normal",
-                  }}
-                >
-                  <div className="flex flex-col items-center">
-                    <div className="flex items-center">Create</div>
-                    <div className="flex items-center">announcement</div>
-                  </div>
                 </div>
               </div>
               {/*Icon 4*/}
@@ -590,20 +414,8 @@ const Admin = () => {
                   <img
                     src={icon12}
                     alt="Community"
-                    className="md:w-[50px] md:h-[50px] w-[30px]"
+                    className="w-[50px] h-[50px]"
                   />
-                </div>
-                <div
-                  className="md:text-base text-[10px] md:w-[106px] w-full text-center"
-                  style={{
-                    fontFamily: "SF Pro Display M",
-                    lineHeight: "normal",
-                  }}
-                >
-                  <div className="flex flex-col items-center">
-                    <div className="flex items-center">School</div>
-                    <div className="flex items-center">community</div>
-                  </div>
                 </div>
               </div>
               {/*Icon 5*/}
@@ -612,20 +424,8 @@ const Admin = () => {
                   <img
                     src={icon13}
                     alt="Payment"
-                    className="md:w-[50px] md:h-[50px] w-[30px]"
+                    className="w-[50px] h-[50px]"
                   />
-                </div>
-                <div
-                  className="md:text-base text-[10px] md:w-[106px] w-full text-center"
-                  style={{
-                    fontFamily: "SF Pro Display M",
-                    lineHeight: "normal",
-                  }}
-                >
-                  <div className="flex flex-col items-center">
-                    <div className="flex items-center">Payment</div>
-                    <div className="flex items-center">gateway</div>
-                  </div>
                 </div>
               </div>
               {/*Icon 6*/}
@@ -634,20 +434,8 @@ const Admin = () => {
                   <img
                     src={icon14}
                     alt="Market"
-                    className="md:w-[50px] md:h-[50px] w-[30px]"
+                    className="w-[50px] h-[50px]"
                   />
-                </div>
-                <div
-                  className="md:text-base text-[10px] md:w-[106px] w-full  text-center"
-                  style={{
-                    fontFamily: "SF Pro Display M",
-                    lineHeight: "normal",
-                  }}
-                >
-                  <div className="flex flex-col items-center">
-                    <div className="flex items-center">School</div>
-                    <div className="flex items-center">market</div>
-                  </div>
                 </div>
               </div>
               {/*Icon 7*/}
@@ -656,20 +444,8 @@ const Admin = () => {
                   <img
                     src={icon15}
                     alt="TimeTable"
-                    className="md:w-[50px] md:h-[50px] w-[30px]"
+                    className="w-[50px] h-[50px]"
                   />
-                </div>
-                <div
-                  className="md:text-base text-[10px] md:w-[106px] w-full text-center"
-                  style={{
-                    fontFamily: "SF Pro Display M",
-                    lineHeight: "normal",
-                  }}
-                >
-                  <div className="flex flex-col items-center">
-                    <div className="flex items-center">Time table</div>
-                    <div className="flex items-center">setup</div>
-                  </div>
                 </div>
               </div>
               {/*Icon 8*/}
@@ -678,20 +454,8 @@ const Admin = () => {
                   <img
                     src={icon16}
                     alt="Event"
-                    className="md:w-[50px] md:h-[50px] w-[30px]"
+                    className="w-[50px] h-[50px]"
                   />
-                </div>
-                <div
-                  className="md:text-base text-[10px] md:w-[106px] w-full  text-center"
-                  style={{
-                    fontFamily: "SF Pro Display M",
-                    lineHeight: "normal",
-                  }}
-                >
-                  <div className="flex flex-col items-center">
-                    <div className="flex items-center">Create event</div>
-                    <div className="flex items-center">& activities</div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -703,20 +467,8 @@ const Admin = () => {
                   <img
                     src={icon17}
                     alt="Attendance"
-                    className="md:w-[50px] md:h-[50px] w-[30px]"
+                    className="w-[50px] h-[50px]"
                   />
-                </div>
-                <div
-                  className="md:text-base text-[10px] md:w-[106px] w-full  text-center"
-                  style={{
-                    fontFamily: "SF Pro Display M",
-                    lineHeight: "normal",
-                  }}
-                >
-                  <div className="flex flex-col items-center">
-                    <div className="flex items-center">attendance</div>
-                    <div className="flex items-center">& report</div>
-                  </div>
                 </div>
               </div>
               {/*Icon 2*/}
@@ -725,20 +477,8 @@ const Admin = () => {
                   <img
                     src={icon18}
                     alt="Grading"
-                    className="md:w-[50px] md:h-[50px] w-[30px]"
+                    className="w-[50px] h-[50px]"
                   />
-                </div>
-                <div
-                  className="md:text-base text-[10px] md:w-[106px] w-full  text-center"
-                  style={{
-                    fontFamily: "SF Pro Display M",
-                    lineHeight: "normal",
-                  }}
-                >
-                  <div className="flex flex-col items-center">
-                    <div className="flex items-center">Grading</div>
-                    <div className="flex items-center">scheme</div>
-                  </div>
                 </div>
               </div>
               {/*Icon 3*/}
@@ -747,20 +487,8 @@ const Admin = () => {
                   <img
                     src={icon19}
                     alt="daycare"
-                    className="md:w-[50px] md:h-[50px] w-[30px]"
+                    className="w-[50px] h-[50px]"
                   />
-                </div>
-                <div
-                  className="md:text-base text-[10px] md:w-[106px] w-full  text-center"
-                  style={{
-                    fontFamily: "SF Pro Display M",
-                    lineHeight: "normal",
-                  }}
-                >
-                  <div className="flex flex-col items-center">
-                    <div className="flex items-center">Daycare</div>
-                    <div className="flex items-center">(Add-on)</div>
-                  </div>
                 </div>
               </div>
               {/*Icon 4*/}
@@ -769,20 +497,8 @@ const Admin = () => {
                   <img
                     src={icon20}
                     alt="bus"
-                    className="md:w-[50px] md:h-[50px] w-[30px]"
+                    className="w-[50px] h-[50px]"
                   />
-                </div>
-                <div
-                  className="md:text-base text-[10px] md:w-[106px] w-full  text-center"
-                  style={{
-                    fontFamily: "SF Pro Display M",
-                    lineHeight: "normal",
-                  }}
-                >
-                  <div className="flex flex-col items-center">
-                    <div className="flex items-center">Bus service</div>
-                    <div className="flex items-center">(Add-on)</div>
-                  </div>
                 </div>
               </div>
               {/*Icon 5*/}
@@ -791,20 +507,8 @@ const Admin = () => {
                   <img
                     src={icon21}
                     alt="CCTV"
-                    className="md:w-[50px] md:h-[50px] w-[30px]"
+                    className="w-[50px] h-[50px]"
                   />
-                </div>
-                <div
-                  className="md:text-base text-[10px] md:w-[106px] w-full text-center"
-                  style={{
-                    fontFamily: "SF Pro Display M",
-                    lineHeight: "normal",
-                  }}
-                >
-                  <div className="flex flex-col items-center">
-                    <div className="flex items-center">Live CCTV</div>
-                    <div className="flex items-center">(Add-on)</div>
-                  </div>
                 </div>
               </div>
               {/*Icon 6*/}
@@ -813,20 +517,8 @@ const Admin = () => {
                   <img
                     src={icon22}
                     alt="SMS"
-                    className="md:w-[50px] md:h-[50px] w-[30px]"
+                    className="w-[50px] h-[50px]"
                   />
-                </div>
-                <div
-                  className="md:text-base text-[10px] md:w-[106px] w-full  text-center"
-                  style={{
-                    fontFamily: "SF Pro Display M",
-                    lineHeight: "normal",
-                  }}
-                >
-                  <div className="flex flex-col items-center">
-                    <div className="flex items-center">SMS Service</div>
-                    <div className="flex items-center">(Add-on)</div>
-                  </div>
                 </div>
               </div>
               {/*Icon 7*/}
@@ -835,20 +527,8 @@ const Admin = () => {
                   <img
                     src={icon23}
                     alt="homework"
-                    className="md:w-[50px] md:h-[50px] w-[30px]"
+                    className="w-[50px] h-[50px]"
                   />
-                </div>
-                <div
-                  className="md:text-base text-[10px] md:w-[106px] w-full  text-center"
-                  style={{
-                    fontFamily: "SF Pro Display M",
-                    lineHeight: "normal",
-                  }}
-                >
-                  <div className="flex flex-col items-center">
-                    <div className="flex items-center">e-Homework</div>
-                    <div className="flex items-center">(Add-on)</div>
-                  </div>
                 </div>
               </div>
               {/*Icon 8*/}
@@ -857,72 +537,61 @@ const Admin = () => {
                   <img
                     src={icon24}
                     alt="exam"
-                    className="md:w-[50px] md:h-[50px] w-[30px]"
+                    className="w-[50px] h-[50px]"
                   />
-                </div>
-                <div
-                  className="md:text-base text-[10px] md:w-[106px] w-full  text-center"
-                  style={{
-                    fontFamily: "SF Pro Display M",
-                    lineHeight: "normal",
-                  }}
-                >
-                  <div className="flex flex-col items-center">
-                    <div className="flex items-center">e-Exam</div>
-                    <div className="flex items-center">(Add-on)</div>
-                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        {/*Content 8*/}
-        <div className="w-full md:max-w-[1000px] flex flex-col justify-center items-center">
-          <div className="flex flex-col justify-center items-center">
-            <div className="relative flex flex-col justify-center md:w-[400px] w-[167px] rounded-[16px] md:rounded-[50px] bg-gradient-to-t from-[#ADADAD] to-[#F9F9F9] md:pt-[53px] pt-[27px] md:pb-[61px] pb-[22px] md:pl-[34px] md:pr-[33px] px-[14px] md:gap-[59px] gap-[27px]">
+      </div>
+      <PopupForm />
+      {/*Content 8*/}
+      <div className="w-full md:flex hidden flex-col justify-center items-center md:pb-[150px]">
+        <div className="flex flex-col justify-center items-center">
+          <div className="relative flex flex-col justify-center md:w-[400px] w-[167px] rounded-[16px] md:rounded-[50px] bg-gradient-to-t from-[#ADADAD] to-[#F9F9F9] md:pt-[53px] pt-[27px] md:pb-[61px] pb-[22px] md:pl-[34px] md:pr-[33px] px-[14px] md:gap-[59px] gap-[27px]">
+            <div className="flex flex-col justify-center items-center">
+              <img
+                src={CTLogo}
+                alt="CTLogo"
+                className="md:w-[160px] md:h-[106px] w-[66px]"
+              />
+            </div>
+            <div className="flex flex-col justify-center items-center md:gap-[40px] gap-3">
               <div className="flex flex-col justify-center items-center">
-                <img
-                  src={CTLogo}
-                  alt="CTLogo"
-                  className="md:w-[160px] md:h-[106px] w-[66px]"
-                />
-              </div>
-              <div className="flex flex-col justify-center items-center md:gap-[40px] gap-3">
-                <div className="flex flex-col justify-center items-center">
-                  <div
-                    className="md:text-[24px] text-[10px] inline-block"
-                    style={{
-                      fontFamily: "SF Pro Display B",
-                      lineHeight: "normal",
-                    }}
-                  >
-                    CT PRODUCT &nbsp;
-                    <span className=" bg-black  md:w-[77px] h-[29px] md:rounded-[4px] rounded-[2px] text-white md:px-[5.6px] px-[3px] py-[1px]">
-                      CARE
-                    </span>
-                  </div>
+                <div
+                  className="md:text-[24px] text-[10px] inline-block"
+                  style={{
+                    fontFamily: "SF Pro Display B",
+                    lineHeight: "normal",
+                  }}
+                >
+                  CT PRODUCT &nbsp;
+                  <span className=" bg-black  md:w-[77px] h-[29px] md:rounded-[4px] rounded-[2px] text-white md:px-[5.6px] px-[3px] py-[1px]">
+                    CARE
+                  </span>
                 </div>
-                <div className="flex flex-col justify-center items-center">
+              </div>
+              <div className="flex flex-col justify-center items-center">
+                <div
+                  className="md:text-[24px] text-[10px] inline-block text-center"
+                  style={{
+                    lineHeight: "normal",
+                  }}
+                >
                   <div
-                    className="md:text-[24px] text-[10px] inline-block text-center"
-                    style={{
-                      lineHeight: "normal",
-                    }}
+                    className="hidden md:flex flex-col"
+                    style={{ fontFamily: "SF Pro Display R" }}
                   >
-                    <div
-                      className="hidden md:flex flex-col"
-                      style={{ fontFamily: "SF Pro Display R" }}
-                    >
-                      <div className="flex items-center justify-center ">
-                        Free provide face to face training and online tutorials.
-                      </div>
-                    </div>
-                    <div
-                      className="md:hidden flex flex-wrap"
-                      style={{ fontFamily: "SF Pro Display Semibold" }}
-                    >
+                    <div className="flex items-center justify-center ">
                       Free provide face to face training and online tutorials.
                     </div>
+                  </div>
+                  <div
+                    className="md:hidden flex flex-wrap"
+                    style={{ fontFamily: "SF Pro Display Semibold" }}
+                  >
+                    Free provide face to face training and online tutorials.
                   </div>
                 </div>
               </div>
