@@ -6,6 +6,7 @@ import "../font.css";
 import logo from "../assets/logo.svg";
 import menu from "../assets/menu.svg";
 import formIcon from "../assets/form.svg";
+import triangle from "../assets/triangle.svg";
 import i18n from "../i18n";
 import About from "../components/modal/aboutmodal";
 import Form from "../components/modal/formmodal";
@@ -15,7 +16,8 @@ const Navbar = () => {
   const location = useLocation();
   const [activeProductSubPage, setActiveProductSubPage] = useState("parent"); // Default active sub-page for Products section
   const [activeJoinUsSubPage, setActiveJoinUsSubPage] =
-    useState("referral-program"); // Default active sub-page for Products section
+    useState("referral-program"); // Default active sub-page for Join Us section
+  const [activeDownloadsSubPage, setActiveDownloadsSubpage] = useState("parents");
   const [showMenu, setShowMenu] = useState(false); // State to manage the visibility of the menu
   const [showProduct, setProduct] = useState(false);
   const [showJoin, setShowJoinUsSubmenu] = useState(false);
@@ -33,6 +35,9 @@ const Navbar = () => {
   const toggleJoinUsDropdown = () => {
     setShowJoinUsSubmenu((prev) => !prev); //Toggle dropdown for submenu Join Us for mobile view
   };
+  const toggleDownloadDropdown = () => {
+    setActiveDownloadsSubpage((prev) => !prev);
+  }
 
   //Close the menu whenever the location change and scroll to top-mobile view
   useEffect(() => {
@@ -72,6 +77,8 @@ const Navbar = () => {
       setActiveProductSubPage(getActiveProductSubPage(location.pathname));
     } else if (location.pathname.includes("/join-us")) {
       setActiveJoinUsSubPage(getActiveJoinUsSubPage(location.pathname));
+    } else if (location.pathname.includes("/download")){
+      setActiveDownloadsSubpage(getActiveDownloadSubPage(location.pathname));
     }
   }, [location.pathname]);
 
@@ -91,6 +98,19 @@ const Navbar = () => {
     } else if (pathname.includes("/products/teacher")) {
       return "teacher";
     } else if (pathname.includes("/products/admin")) {
+      return "admin";
+    }
+    // Default to "parent" if none matches
+    return "parent";
+  };
+
+  const getActiveDownloadSubPage = (pathname) => {
+    // Logic to determine active sub-page for Download section
+    if (pathname.includes("/download/parent")) {
+      return "parent";
+    } else if (pathname.includes("/download/teacher")) {
+      return "teacher";
+    } else if (pathname.includes("/download/admin")) {
       return "admin";
     }
     // Default to "parent" if none matches
@@ -170,8 +190,8 @@ const Navbar = () => {
               {t("referral-program")}
             </Link>
             <Link
-              to="/download"
-              className={`${location.pathname === "/download"
+              to="/download/parent"
+              className={`${location.pathname === "/download/parent"
                 ? `${linkStyles.base} ${linkStyles.download}`
                 : " hover:text-[#F67F00]"
                 } `}
@@ -191,13 +211,16 @@ const Navbar = () => {
                 </div>
               </button>
               {isLanguageOpen && (
-                <div className="absolute top-full right-[5px] z-50 bg-[#fff7efe6] shadow-md">
+                <div className="absolute top-full right-[5px]">
+                  <div className="absolute top-0 right-[10px]">
+                    <img src={triangle} alt="" />
+                  </div>
                   <div
-                    className="py-2 flex flex-col px-5 gap-4 items-start md:text-base"
+                    className="py-2 flex flex-col mt-[6px] mr-[10px] px-5 gap-4 items-center md:text-base z-50 bg-[#F67F00] text-[#FFFFFF] shadow-md rounded-b-[10px] rounded-tl-[10px] "
                     style={{ fontFamily: "SF Pro Display R" }}
                   >
                     <button
-                      className="hover:text-[#F67F00]"
+                      className=""
                       onClick={() => {
                         i18n.changeLanguage("en");
                         window.location.reload();
@@ -206,7 +229,7 @@ const Navbar = () => {
                       English
                     </button>
                     <button
-                      className="hover:text-[#F67F00]"
+                      className=""
                       onClick={() => {
                         i18n.changeLanguage("ms");
                         window.location.reload();
@@ -215,7 +238,7 @@ const Navbar = () => {
                       Malay
                     </button>
                     <button
-                      className="hover:text-[#F67F00]"
+                      className=""
                       onClick={() => {
                         i18n.changeLanguage("zh");
                         window.location.reload();
@@ -251,13 +274,13 @@ const Navbar = () => {
                   <GlobalIcon />
                 </button>
                 {isLanguageOpen && (
-                  <div className="absolute top-full right-[5px] z-50 bg-[#fff7ef] shadow-md">
+                  <div className="absolute top-full right-[5px] z-50 shadow-md">
                     <div
-                      className="py-2 flex flex-col px-5 gap-4 items-start md:text-base"
+                      className="py-2 flex flex-col px-5 gap-4 items-center md:text-base bg-[#FFFFFF] text-[#F67F00]"
                       style={{ fontFamily: "SF Pro Display R" }}
                     >
                       <button
-                        className="hover:text-[#F67F00]"
+                        className=""
                         onClick={() => {
                           i18n.changeLanguage("en");
                           window.location.reload();
@@ -266,7 +289,7 @@ const Navbar = () => {
                         English
                       </button>
                       <button
-                        className="hover:text-[#F67F00]"
+                        className=""
                         onClick={() => {
                           i18n.changeLanguage("ms");
                           window.location.reload();
@@ -275,7 +298,7 @@ const Navbar = () => {
                         Malay
                       </button>
                       <button
-                        className="hover:text-[#F67F00]"
+                        className=""
                         onClick={() => {
                           i18n.changeLanguage("zh");
                           window.location.reload();
@@ -397,8 +420,8 @@ const Navbar = () => {
                           }`}
                       >
                         <Link
-                          to="/download"
-                          className={`${location.pathname === "/download"
+                          to="/download/parent"
+                          className={`${location.pathname === "/download/parent"
                             ? ` ${linkStylesmobile.base}`
                             : ""
                             } ${i18n.language === "ms"
@@ -567,6 +590,46 @@ const Navbar = () => {
               onClick={() => setActiveJoinUsSubPage("career-opportunities")}
             >
               {t("career-opportunity")}
+            </Link>
+          </div>
+        </div>
+      )}
+
+      {location.pathname.includes("/download") && (
+        <div className="w-full bg-[#ffffffe6] hidden md:flex justify-center h-[50px]">
+          <div className="max-w-[1000px] w-full flex items-end justify-end gap-[26px] border-b border-[#DDD]">
+            <Link
+              to="/download/parent"
+              className={`${activeDownloadsSubPage === "parent"
+                ? `${subLinkStyles.active}`
+                : `${subLinkStyles.none}`
+                }`}
+              style={{ fontFamily: "SF Pro Medium" }}
+              onClick={() => setActiveDownloadsSubpage("parent")}
+            >
+              {t("navbar-parent")}
+            </Link>
+            <Link
+              to="/download/teacher"
+              className={`${activeDownloadsSubPage === "teacher"
+                ? `${subLinkStyles.active}`
+                : `${subLinkStyles.none}`
+                }`}
+              style={{ fontFamily: "SF Pro Medium" }}
+              onClick={() => setActiveDownloadsSubpage("teacher")}
+            >
+              {t("navbar-teacher")}
+            </Link>
+            <Link
+              to="/download/admin"
+              className={`${activeDownloadsSubPage === "admin"
+                ? `${subLinkStyles.active}`
+                : `${subLinkStyles.none}`
+                }`}
+              style={{ fontFamily: "SF Pro Medium" }}
+              onClick={() => setActiveDownloadsSubpage("admin")}
+            >
+              {t("navbar-admin")}
             </Link>
           </div>
         </div>

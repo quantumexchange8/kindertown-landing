@@ -10,6 +10,9 @@ import CareerOpportunities from "./Pages/CareerOpportunities";
 import Download from "./Pages/Download";
 import ScrollUp from "react-scroll-up";
 import arrowUpImage from "../src/assets/up1-01.png";
+import DownloadParent from "./Pages/DownloadParents";
+import DownloadTeacher from "./Pages/DownloadTeacher";
+import DownloadAdmin from "./Pages/DownloadAdmin";
 function App() {
   return (
     <Router>
@@ -29,6 +32,9 @@ function App() {
             element={<CareerOpportunities />}
           />
           <Route path="/download" element={<Download />} />
+          <Route path="/download/parent" element={<DownloadParent />} />
+          <Route path="/download/teacher" element={<DownloadTeacher />} />
+          <Route path="/download/admin" element={<DownloadAdmin />} />
         </Routes>
         <Footer />
         <ScrollUp showUnder={150} duration={2000}>

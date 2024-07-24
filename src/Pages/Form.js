@@ -16,13 +16,19 @@ const PopupForm = () => {
         '/products/teacher':'interested-teacher',
         '/products/admin':'interested-admin',
         '/join-us/referral-program':'receive-details',
+        '/download/parent':'jadual-percuma',
+        '/download/teacher':'jadual-percuma',
+        '/download/admin':'jadual-percuma',
     }
     const mobileButtonTexts = {
         '/': 'complimentary-demo',
         '/products/parent':'interested-parent',
         '/products/teacher':'interested-teacher',
         '/products/admin':'interested-admin',
-        '/join-us/referral-program':'receive-details',
+        '/join-us/referral-program':'mobile-receive-details',
+        '/download/parent':'mobile-jadual-percuma',
+        '/download/teacher':'mobile-jadual-percuma',
+        '/download/admin':'mobile-jadual-percuma',
     }
     const webButtonText = webButtonTexts[location.pathname] || 'defaultButton';
     const mobileButtonText = mobileButtonTexts[location.pathname] || 'defaultButton';
@@ -45,7 +51,7 @@ const PopupForm = () => {
                     fontFamily: "SF Pro Display B",
                     lineHeight: "normal",
                 }}
-                    className={`inline-block md:text-xl font-wrap font-semibold text-[16px] items-center justify-center text-pretty ${i18n.language === "ms"
+                    className={`inline-block md:text-xl font-wrap font-semibold text-[14px] items-center justify-center text-pretty ${i18n.language === "ms"
                         ? "mx-8" : " "
                         }`}>
                     {/* Desktop */}
