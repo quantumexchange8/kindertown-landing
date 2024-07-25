@@ -21,6 +21,7 @@ const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false); // State to manage the visibility of the menu
   const [showProduct, setProduct] = useState(false);
   const [showJoin, setShowJoinUsSubmenu] = useState(false);
+  const [showDownload, setShowDownloadSubpage] = useState(false);
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
   const [AboutOpen, setAboutOpen] = useState(false);
   const [FormOpen, setFormOpen] = useState(false);
@@ -36,7 +37,7 @@ const Navbar = () => {
     setShowJoinUsSubmenu((prev) => !prev); //Toggle dropdown for submenu Join Us for mobile view
   };
   const toggleDownloadDropdown = () => {
-    setActiveDownloadsSubpage((prev) => !prev);
+    setShowDownloadSubpage((prev) => !prev);
   }
 
   //Close the menu whenever the location change and scroll to top-mobile view
@@ -77,7 +78,7 @@ const Navbar = () => {
       setActiveProductSubPage(getActiveProductSubPage(location.pathname));
     } else if (location.pathname.includes("/join-us")) {
       setActiveJoinUsSubPage(getActiveJoinUsSubPage(location.pathname));
-    } else if (location.pathname.includes("/download")){
+    } else if (location.pathname.includes("/download")) {
       setActiveDownloadsSubpage(getActiveDownloadSubPage(location.pathname));
     }
   }, [location.pathname]);
@@ -90,6 +91,9 @@ const Navbar = () => {
   const handleJoinUsClick = () => {
     setActiveJoinUsSubPage("referral-program"); // Set the default active sub-page to referral
   };
+  const handleDownloadClick = () => {
+    setActiveDownloadsSubpage("parent");
+  }
 
   const getActiveProductSubPage = (pathname) => {
     // Logic to determine active sub-page for Products section
@@ -196,6 +200,7 @@ const Navbar = () => {
                 : " hover:text-[#F67F00]"
                 } `}
               style={{ fontFamily: "SF Pro Display M" }}
+              onClick={handleDownloadClick}
             >
               {t("download")}
             </Link>
@@ -325,16 +330,17 @@ const Navbar = () => {
                   handleCloseModal();
                   setShowJoinUsSubmenu(false);
                   setProduct(false);
+                  setShowDownloadSubpage(false);
                 }}
               >
                 <div
                   className="bg-white fixed border rounded-[5px] justify-center top-[40px] w-4/5 h-[225px] flex flex-col p-[30px]"
                   onClick={handleModalClick}
                 >
-                  <div className="h-[225px] flex gap-[50px]">
+                  <div className="h-[225px] flex gap-[20px]">
                     <div className="flex flex-col text-left gap-[20px] h-auto">
                       <div
-                        className={`text-[14px] px-2 ${i18n.language === "zh" ? "font-bold" : ""
+                        className={`text-[14px] ${i18n.language === "zh" ? "font-bold" : ""
                           }`}
                       >
                         <button
@@ -350,19 +356,11 @@ const Navbar = () => {
                       >
                         <Link
                           to="/"
-                          className={`${location.pathname === "/"
-                            ? ` ${linkStylesmobile.base}`
-                            : ""
-                            } ${i18n.language === "ms"
-                              ? "px-[5px]"
-                              : i18n.language === "zh"
-                                ? "px-3"
-                                : "px-2"
-                            } `}
                           style={{ fontFamily: "SF Pro Display B" }}
                           onClick={() => {
                             setShowJoinUsSubmenu(false);
                             setProduct(false);
+                            setShowDownloadSubpage(false);
                           }}
                         >
                           {t("home")}
@@ -373,72 +371,43 @@ const Navbar = () => {
                           }`}
                       >
                         <button
-                          className={`${location.pathname.includes("/products")
-                            ? ` ${linkStylesmobile.base}`
-                            : ""
-                            }  ${i18n.language === "ms"
-                              ? "px-[5px]"
-                              : i18n.language === "zh"
-                                ? "px-3"
-                                : "px-2"
-                            }`}
                           style={{ fontFamily: "SF Pro Display B" }}
                           onClick={() => {
                             toggleProductDropdown();
-
                             setShowJoinUsSubmenu(false);
+                            setShowDownloadSubpage(false);
                           }}
                         >
                           {t("products")}
                         </button>
                       </div>
                       <div
-                        className={`text-[14px] ${i18n.language === "zh" ? "font-bold" : ""
-                          }`}
+                        className={`text-[14px] font-bold`}
                       >
                         <button
-                          className={`${location.pathname.includes("/join-us")
-                            ? ` ${linkStylesmobile.base}`
-                            : ""
-                            }  ${i18n.language === "ms"
-                              ? "px-[5px]"
-                              : i18n.language === "zh"
-                                ? "px-3"
-                                : "px-2"
-                            } `}
                           style={{ fontFamily: "SF Pro Display B" }}
                           onClick={() => {
                             toggleJoinUsDropdown();
                             setProduct(false);
+                            setShowDownloadSubpage(false);
                           }}
                         >
-                          {t("join-us")}
+                          {t("referral-program")}
                         </button>
                       </div>
                       <div
-                        className={`text-[14px] font-bold ${i18n.language === "zh" ? "font-bold" : ""
-                          }`}
+                        className={`text-[14px] font-bold`}
                       >
-                        <Link
-                          to="/download/parent"
-                          className={`${location.pathname === "/download/parent"
-                            ? ` ${linkStylesmobile.base}`
-                            : ""
-                            } ${i18n.language === "ms"
-                              ? "px-[5px]"
-                              : i18n.language === "zh"
-                                ? "px-3"
-                                : "px-2"
-                            } `}
+                        <button
                           style={{ fontFamily: "SF Pro Display B" }}
                           onClick={() => {
-                            setProduct(false);
-
+                            toggleDownloadDropdown();
                             setShowJoinUsSubmenu(false);
+                            setProduct(false);
                           }}
                         >
                           {t("download")}
-                        </Link>
+                        </button>
                       </div>
                     </div>
                     {showProduct && (
@@ -488,7 +457,7 @@ const Navbar = () => {
                     {showJoin && (
                       <div className="flex gap-4">
                         <div className="border-r border-[#F67F00] h-full"></div>
-                        <div className="flex flex-col h-[100px] gap-5">
+                        <div className="flex flex-col gap-5">
                           <div>
                             <Link
                               to="/join-us/referral-program"
@@ -511,6 +480,50 @@ const Navbar = () => {
                               style={{ fontFamily: "SF Pro Display M" }}
                             >
                               {t("career-opportunity")}
+                            </Link>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+
+                    {showDownload && (
+                      <div className="flex gap-[30px]">
+                        <div className="border-r border-[#F67F00] h-full"></div>
+                        <div className="flex flex-col h-[100px] gap-5">
+                          <div>
+                            <Link
+                              to="/download/parent"
+                              className={`${location.pathname === "/download"
+                                ? `${linkStylesmobile.base}`
+                                : ""
+                                } text-sm `}
+                              style={{ fontFamily: "SF Pro Display M" }}
+                            >
+                              {t("navbar-parent")}
+                            </Link>
+                          </div>
+                          <div>
+                            <Link
+                              to="/download/teacher"
+                              className={`${location.pathname === "/download"
+                                ? `${linkStylesmobile.base}`
+                                : ""
+                                } text-sm `}
+                              style={{ fontFamily: "SF Pro Display M" }}
+                            >
+                              {t("navbar-teacher")}
+                            </Link>
+                          </div>
+                          <div>
+                            <Link
+                              to="/download/admin"
+                              className={`${location.pathname === "/download"
+                                ? `${linkStylesmobile.base}`
+                                : ""
+                                } text-sm `}
+                              style={{ fontFamily: "SF Pro Display M" }}
+                            >
+                              {t("navbar-admin")}
                             </Link>
                           </div>
                         </div>
@@ -618,7 +631,7 @@ const Navbar = () => {
               style={{ fontFamily: "SF Pro Medium" }}
               onClick={() => setActiveDownloadsSubpage("teacher")}
             >
-              {t("navbar-teacher")}
+              {t("footer-teacher")}
             </Link>
             <Link
               to="/download/admin"
@@ -629,7 +642,7 @@ const Navbar = () => {
               style={{ fontFamily: "SF Pro Medium" }}
               onClick={() => setActiveDownloadsSubpage("admin")}
             >
-              {t("navbar-admin")}
+              {t("footer-admin")}
             </Link>
           </div>
         </div>

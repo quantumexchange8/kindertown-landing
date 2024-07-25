@@ -36,21 +36,21 @@ const DownloadAdmin = () => {
                     </div>
                 </div>
 
-                <div className="w-full flex flex-col justify-center text-center items-center md:gap-[150px] gap-[50px]">
+                <div className="w-full flex flex-col justify-center text-center items-center md:gap-[150px] gap-[50px] px-[30px]">
                     <div className="w-full flex flex-col justify-center text-center max-w-[1000px]">
-                        <div className="w-full flex flex-col md:gap-[50px]">
-                            <div className="md:text-[48px] font-bold text-balance"
+                        <div className="w-full flex flex-col md:gap-[50px] gap-[20px]">
+                            <div className="md:text-[48px] font-bold"
                                 style={{
                                     fontFamily: "SF Pro Display B",
                                     lineHeight: "normal",
                                 }}>
-                                <div>{t("adminmodal-title")}</div>
-                                {/* <div>{t("teachermodal-title2")}</div>
-                                <div>{t("teachermodal-title3")}</div> */}
+                                <div className="text-balance">{t("adminmodal-title1")}</div>
+                                <div>{t("adminmodal-title2")}</div>
+                                <div>{t("adminmodal-title3")}</div>
                             </div>
 
                             {i18n.language === 'zh'
-                                ? <div className="md:text-[32px] md:flex flex-col font-semibold"
+                                ? <div className="md:text-[32px] md:flex flex-col hidden font-semibold"
                                     style={{
                                         fontFamily: "SF Pro Display Semibold",
                                         lineHeight: "normal",
@@ -59,7 +59,7 @@ const DownloadAdmin = () => {
                                     <div>{t("adminmodal-desc2")}</div>
                                     <div>{t("adminmodal-desc3")}</div>
                                 </div>
-                                : <div className="md:text-[32px] md:flex flex-col font-medium"
+                                : <div className="md:text-[32px] md:flex flex-col hidden font-medium"
                                     style={{
                                         fontFamily: "SF Pro Display M",
                                         lineHeight: "normal",
@@ -69,27 +69,37 @@ const DownloadAdmin = () => {
                                     <div>{t("adminmodal-desc3")}</div>
                                 </div>
                             }
+
+                            <div className="flex flex-col md:hidden text-sm font-semibold text-balance"
+                                style={{
+                                    fontFamily: "SF Pro Display Semibold",
+                                    lineHeight: "normal",
+                                }}>
+                                    <div className="">{t("mobile-adminmodal-desc1")}</div>
+                                    <div>{t("mobile-adminmodal-desc2")}</div>
+                                    <div>{t("mobile-adminmodal-desc3")}</div>
+                                    </div>
                         </div>
                     </div>
 
-                    <div className="w-full flex flex-col justify-center items-center md:w-[742px] md:gap-[100px]">
+                    <div className="w-full flex flex-col justify-center items-center md:w-[742px] w-[260px] md:gap-[100px] gap-[30px]">
                         <div>
                             <img
                                 src={icon}
                                 alt="parentlogo"
-                                className="md:w-[250px] md:h-[250px]" />
+                                className="md:w-[250px] md:h-[250px] w-[100px] h-[100px]" />
                         </div>
 
                         <div className="w-full flex flex-row md:gap-[50px] justify-between align-center">
                             <img
                                 src={apple}
                                 alt="playstore"
-                                className="md:w-[346px]" />
+                                className="md:w-[346px] w-[120px]" />
 
                             <img
                                 src={android}
                                 alt="appstore"
-                                className="md:w-[346px]" />
+                                className="md:w-[346px] w-[120px]" />
                         </div>
                     </div>
 

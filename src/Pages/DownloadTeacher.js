@@ -37,10 +37,11 @@ const DownloadTeacher = () => {
                     </div>
                 </div>
 
-                <div className="w-full flex flex-col justify-center text-center items-center md:gap-[150px] gap-[50px]">
+                <div className="w-full flex flex-col justify-center text-center items-center md:gap-[150px] gap-[50px] px-[30px]">
                     <div className="w-full flex flex-col justify-center text-center max-w-[1000px]">
-                        <div className="w-full flex flex-col md:gap-[50px]">
-                            <div className="md:text-[64px] font-bold"
+                        <div className="w-full flex flex-col md:gap-[50px] gap-[20px]">
+                            {/* web view */}
+                            <div className="md:text-[64px] md:flex flex-col hidden font-bold"
                                 style={{
                                     fontFamily: "SF Pro Display B",
                                     lineHeight: "normal",
@@ -49,9 +50,18 @@ const DownloadTeacher = () => {
                                 <div>{t("teachermodal-title2")}</div>
                                 <div>{t("teachermodal-title3")}</div>
                             </div>
+                            {/* mobile view */}
+                            <div className="md:text-[64px] md:hidden flex flex-col font-bold"
+                                style={{
+                                    fontFamily: "SF Pro Display B",
+                                    lineHeight: "normal",
+                                }}>
+                                <div>{t("mobile-teachermodal-title1")}</div>
+                                <div>{t("mobile-teachermodal-title2")}</div>
+                            </div>
 
                             {i18n.language === 'zh'
-                                ? <div className="md:text-[32px] md:flex flex-col font-semibold"
+                                ? <div className="md:text-[32px] md:flex flex-col hidden font-semibold"
                                     style={{
                                         fontFamily: "SF Pro Display Semibold",
                                         lineHeight: "normal",
@@ -61,7 +71,7 @@ const DownloadTeacher = () => {
                                     <div>{t("teachermodal-desc3")}</div>
                                     <div>{t("teachermodal-desc4")}</div>
                                 </div>
-                                : <div className="md:text-[32px] md:flex flex-col font-medium md:gap-[30px] tracking-wider"
+                                : <div className="md:text-[32px] md:flex flex-col hidden font-medium md:gap-[30px]"
                                     style={{
                                         fontFamily: "SF Pro Display M",
                                         lineHeight: "normal",
@@ -70,27 +80,40 @@ const DownloadTeacher = () => {
                                     <div>{t("teachermodal-desc2")}</div>
                                 </div>
                             }
+
+                            <div className="md:hidden flex flex-col text-sm font-semibold"
+                                style={{
+                                    fontFamily: "SF Pro Display B",
+                                    lineHeight: "normal",
+                                }}>
+                                <div>{t("mobile-teachermodal-desc1")}</div>
+                                <div>{t("mobile-teachermodal-desc2")}</div>                                
+                                <div className="text-balance">{t("mobile-teachermodal-desc3")}</div>                                
+                                <div className="pb-[20px]">{t("mobile-teachermodal-desc4")}</div>                                
+                                <div className="text-balance">{t("mobile-teachermodal-desc5")}</div>    
+                                <div>{t("mobile-teachermodal-desc6")}</div>                            
+                            </div>
                         </div>
                     </div>
 
-                    <div className="w-full flex flex-col justify-center items-center md:w-[742px] md:gap-[100px]">
+                    <div className="w-full flex flex-col justify-center items-center md:w-[742px] w-[260px] md:gap-[100px] gap-[30px]">
                         <div>
                             <img
                                 src={icon}
                                 alt="parentlogo"
-                                className="md:w-[250px] md:h-[250px]" />
+                                className="md:w-[250px] md:h-[250px] w-[100px] h-[100px]" />
                         </div>
 
                         <div className="w-full flex flex-row md:gap-[50px] justify-between align-center">
                             <img
                                 src={apple}
                                 alt="playstore"
-                                className="md:w-[346px]" />
+                                className="md:w-[346px] w-[120px]" />
 
                             <img
                                 src={android}
                                 alt="appstore"
-                                className="md:w-[346px]" />
+                                className="md:w-[346px] w-[120px]" />
                         </div>
                     </div>
 
@@ -113,8 +136,8 @@ const DownloadTeacher = () => {
                         >
                             <ul
                                 className={`list-outside list-disc flex flex-col md:gap-10 gap-5 pl-[30px] ${i18n.language === "zh"
-                                        ? " md:pl-[53px]"
-                                        : " md:pl-[50px]"
+                                    ? " md:pl-[53px]"
+                                    : " md:pl-[50px]"
                                     }`}
                             >
                                 <li>{t("update-checkin")}</li>

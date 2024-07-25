@@ -122,8 +122,7 @@ const Footer = () => {
                 <div className="flex flex-col md:gap-9">
                   <div className="flex flex-col md:gap-[15px]">
                     <div
-                      className={`md:text-2xl text-right ${i18n.language === "zh" ? "font-semibold" : ""
-                        }`}
+                      className={`md:text-2xl text-right font-semibold`}
                       style={{ fontFamily: "SF Pro Display Semibold" }}
                     >
                       {t("stay-connect")}
@@ -252,14 +251,14 @@ const Footer = () => {
               </Link>
             </div>
             <div className="flex flex-col">
-              <div className="flex flex-wrap gap-[15px]">
+              <div className="flex flex-col flex-wrap gap-[20px]">
                 <div
-                  className="text-2xl"
+                  className="text-xl font-semibold"
                   style={{ fontFamily: "SF Pro Display Semibold" }}
                 >
                   {t("stay-connect")}
                 </div>
-                <div className="flex justify-end">
+                <div className="flex">
                   <div className="flex flex-col">
                     <img
                       src={scmd}
@@ -270,10 +269,9 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col md:gap-[15px]">
+            <div className="flex flex-col md:gap-[15px] gap-[20px]">
               <div
-                className={`text-2xl ${i18n.language === "zh" ? "font-semibold" : ""
-                  }`}
+                className={`text-xl font-semibold`}
                 style={{ fontFamily: "SF Pro Display Semibold" }}
               >
                 {t("discover-app")}
@@ -285,11 +283,12 @@ const Footer = () => {
             </div>
             <div className="flex flex-wrap md:hidden">
               <div
-                className="text-xs text-[#565656]"
-                style={{ fontFamily: "SF Pro Display R" }}
+                className="text-xs text-[#565656] tracking-wide"
+                style={{ fontFamily: "SF Pro Display R", lineHeight: "25px", }}
               >
-                <div>© 2006 Current Tech Industries Sdn Bhd.</div>
-                <div className="flex gap-4">
+                <div className="flex flex-row gap-6">
+                <div>© </div><div>2006 Current Tech Industries Sdn Bhd.</div></div>
+                <div className="flex gap-6">
                   <span>|</span>
                   <button
                     className="hover:text-[#FF8400]"

@@ -36,10 +36,10 @@ const DownloadParent = () => {
                     </div>
                 </div>
 
-                <div className="w-full flex flex-col justify-center text-center items-center md:gap-[150px] gap-[50px]">
+                <div className="w-full flex flex-col justify-center text-center items-center md:gap-[150px] gap-[100px] px-[30px] ">
                     <div className="w-full flex flex-col justify-center text-center max-w-[1000px]">
-                        <div className="w-full flex flex-col md:gap-[50px]">
-                            <div className="md:text-[64px] font-bold"
+                        <div className="w-full flex flex-col md:gap-[50px] gap-[10px]">
+                            <div className="md:text-[64px] text-[16px] font-bold"
                                 style={{
                                     fontFamily: "SF Pro Display B",
                                     lineHeight: "normal",
@@ -49,81 +49,113 @@ const DownloadParent = () => {
                             </div>
 
                             {i18n.language === 'zh'
-                                ? <div className="md:text-[32px] md:flex flex-col font-semibold"
-                                    style={{
-                                        fontFamily: "SF Pro Display Semibold",
-                                        lineHeight: "normal",
-                                    }}>
-                                    <div>{t("parentmodal-desc1")}</div>
-                                    <div className="md:pb-[50px]">{t("parentmodal-desc2")}</div>
-                                    <div>{t("parentmodal-desc3")}</div>
-                                </div>
-                                : <div className="md:text-[32px] md:flex flex-col font-medium md:gap-[30px] tracking-[0.045em]"
-                                    style={{
-                                        fontFamily: "SF Pro Display M",
-                                        lineHeight: "normal",
-                                    }}>
-                                    <div>{t("parentmodal-desc1")}</div>
-                                    <div>{t("parentmodal-desc2")}</div>
-                                </div>
+                                ? <>
+                                    {/* web view */}
+                                    <div className="md:text-[32px] text-[14px] md:flex flex-col hidden font-semibold"
+                                        style={{
+                                            fontFamily: "SF Pro Display Semibold",
+                                            lineHeight: "normal",
+                                        }}>
+                                        <div>{t("parentmodal-desc1")}</div>
+                                        <div className="md:pb-[50px]">{t("parentmodal-desc2")}</div>
+                                        <div>{t("parentmodal-desc3")}</div>
+                                    </div>
+                                    {/* mobile view */}
+                                    <div className="text-[14px] md:hidden flex flex-col font-semibold"
+                                        style={{
+                                            fontFamily: "SF Pro Display Semibold",
+                                            lineHeight: "normal",
+                                        }}>
+                                        <div className="pb-[20px]">{t("mobile-parentmodal-desc1")}</div>
+                                        <div>{t("mobile-parentmodal-desc2")}</div>
+                                        <div>{t("mobile-parentmodal-desc3")}</div>
+                                    </div></>
+                                : <>
+                                    {/* web view */}
+                                    <div className="md:text-[32px] md:flex flex-col hidden px-[30px] md:font-medium md:gap-[30px] "
+                                        style={{
+                                            fontFamily: "SF Pro Display M",
+                                            lineHeight: "normal",
+                                        }}>
+                                        <div>{t("parentmodal-desc1")}</div>
+                                        <div className={`${i18n.language === 'ms' ? "text-balance" : ""}`}>{t("parentmodal-desc2")}</div>
+                                    </div>
+                                    {/* mobile view */}
+                                    <div className=" text-sm md:hidden flex flex-col font-semibold text-balance tracking-wider gap-[20px]"
+                                        style={{
+                                            fontFamily: "SF Pro Display R",
+                                            lineHeight: "normal",
+                                        }}>
+                                        <div className="text-pretty">
+                                            <div>{t("mobile-parentmodal-desc1")}</div>
+                                            <div>{t("mobile-parentmodal-desc2")}</div>
+                                            <div>{t("mobile-parentmodal-desc3")}</div>
+                                        </div>
+                                        <div>
+                                            <div>{t("mobile-parentmodal-desc4")}</div>
+                                            <div>{t("mobile-parentmodal-desc5")}</div>
+                                            <div>{t("mobile-parentmodal-desc6")}</div>
+                                        </div>
+                                    </div></>
                             }
                         </div>
                     </div>
 
-                    <div className="w-full flex flex-col justify-center items-center md:w-[742px] md:gap-[100px]">
+                    <div className="w-full flex flex-col justify-center items-center md:w-[742px] w-[260px] md:gap-[100px] gap-[30px]">
                         <div>
                             <img
                                 src={icon}
                                 alt="parentlogo"
-                                className="md:w-[250px] md:h-[250px]"/>
+                                className="md:w-[250px] md:h-[250px] w-[100px] h-[100px]" />
                         </div>
 
                         <div className="w-full flex flex-row md:gap-[50px] justify-between align-center">
                             <img
-                            src={apple}
-                            alt="playstore"
-                            className="md:w-[346px]"/>
+                                src={apple}
+                                alt="playstore"
+                                className="md:w-[346px] w-[120px]" />
 
                             <img
-                            src={android}
-                            alt="appstore"
-                            className="md:w-[346px]"/>
+                                src={android}
+                                alt="appstore"
+                                className="md:w-[346px] w-[120px]" />
                         </div>
                     </div>
 
-                    <div className="w-full flex flex-col text-start md:gap-[50px] gap-[30px] max-w-[1000px]">
-                      <div className=" w-full flex flex-col">
-                        <div
-                          className={`md:text-4xl text-xl font-bold`}
-                          style={{ fontFamily: " SF Pro Display B" }}
-                        >
-                          {t("feature")}:
+                    <div className="w-full flex flex-col text-start md:gap-[50px] gap-[30px] md:max-w-[1000px]">
+                        <div className=" w-full flex flex-col">
+                            <div
+                                className={`md:text-4xl text-xl font-bold`}
+                                style={{ fontFamily: " SF Pro Display B" }}
+                            >
+                                {t("feature")}:
+                            </div>
                         </div>
-                      </div>
-                      <div
-                        className={`w-full flex flex-col text-base md:text-[32px]`}
-                        style={{
-                          fontFamily: "SF Pro Display R",
-                          lineHeight: "normal",
-                        }}
-                      >
-                        <ul className="list-outside list-disc flex flex-col md:gap-10 gap-5 md:pl-[50px] pl-[25px] ">
-                          <li>{t("search-kindergarten")}</li>
-                          <li>{t("referral-function")}</li>
-                          <li>{t("seat-reserve")}</li>
-                          <li>{t("pay-school")}</li>
-                          <li>{t("instant-noti")}</li>
-                          <li>{t("daily-mission")}</li>
-                          <li>{t("academic-performance")}</li>
-                          <li>{t("feedback-form")}</li>
-                          <li>{t("purchase-supplies")}</li>
-                          <li>{t("self-pickup")}</li>
-                          <li>{t("track-activity")}</li>
-                          <li>{t("live-cctv")}</li>
-                          <li>{t("interact-community")}</li>
-                          <li>{t("cute-widget")}</li>
-                        </ul>
-                      </div>
+                        <div
+                            className={`w-full flex flex-col text-base md:text-[32px]`}
+                            style={{
+                                fontFamily: "SF Pro Display R",
+                                lineHeight: "normal",
+                            }}
+                        >
+                            <ul className={`list-outside list-disc flex flex-col md:gap-10 gap-5 md:pl-[50px] pl-[25px] md:tracking-none tracking-[0.06em] md:font-medium
+                                ${i18n.language === 'zh' ? "font-medium" : "font-semibold"}`}>
+                                <li>{t("search-kindergarten")}</li>
+                                <li>{t("referral-function")}</li>
+                                <li>{t("seat-reserve")}</li>
+                                <li>{t("pay-school")}</li>
+                                <li>{t("instant-noti")}</li>
+                                <li>{t("daily-mission")}</li>
+                                <li>{t("academic-performance")}</li>
+                                <li>{t("feedback-form")}</li>
+                                <li>{t("purchase-supplies")}</li>
+                                <li>{t("self-pickup")}</li>
+                                <li>{t("track-activity")}</li>
+                                <li>{t("live-cctv")}</li>
+                                <li>{t("interact-community")}</li>
+                                <li>{t("cute-widget")}</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
