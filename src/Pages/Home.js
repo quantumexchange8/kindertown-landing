@@ -34,18 +34,6 @@ const Home = () => {
         return "md:w-[650px] w-[312px]";
     }
   };
-  const TeacherDescWidth = () => {
-    switch (i18n.language) {
-      case "en":
-        return "w-[1000px]";
-      case "ms":
-        return " w-[990px]";
-      case "zh":
-        return " w-full";
-      default:
-        return "w-[900px]";
-    }
-  };
   // const [openForm, setOpenForm] = useState(false);
   return (
     <>
@@ -63,14 +51,9 @@ const Home = () => {
               {/*Content 2 */}
               <div className="w-full flex flex-col justify-center gap-[150px]">
                 <div
-                  className={`flex flex-col items-center w-full md:gap-[50px] ${i18n.language === "en"
-                    ? "gap-[20px]"
-                    : i18n.language === "ms"
-                      ? "gap-[20px] "
-                      : i18n.language === "zh"
-                        ? "gap-[10px] "
-                        : "gap-[20px]"
-                    }`}
+                  className={`flex flex-col items-center w-full md:gap-[50px] ${i18n.language === "zh"
+                    ? "gap-[10px]"
+                    : "gap-[20px]"}`}
                 >
                   <div
                     className={`w-full text-4xl md:text-[80px] text-center md:leading-[90px] text-[#F67F00] gap-[50px]
@@ -82,20 +65,34 @@ const Home = () => {
                     <div> {t("zero-hassle")}</div>
                   </div>
                   <div
-                    className={`w-full text-center md:font-bold font-semibold md:text-[32px] text-xl`}
+                    className={`w-full text-center font-semibold md:text-[32px] text-base ${i18n.language === 'zh' ? "md:font-semibold" : "md:font-medium"}`}
                     style={{
                       fontFamily: "SF Pro Display M",
                       lineHeight: "normal",
                     }}
                   >
                     <div
-                      className={"inline-block md:w-[1000px]"}
+                      className={"md:flex flex-col hidden items-center justify-center md:w-[1000px]"}
                       style={{
-                        fontFamily: "SF Pro Display B",
+                        fontFamily: "SF Pro Display M",
                         lineHeight: "normal",
                       }}
                     >
-                      {t("main-text")}
+                      <div>{t("main-text1")}</div>
+                      <div>{t("main-text2")}</div>
+                      <div>{t("main-text3")}</div>
+                    </div>
+                    <div
+                      className={"md:hidden flex flex-col items-center justify-center w-full text-balance tracking-wide"}
+                      style={{
+                        fontFamily: "SF Pro Display M",
+                        lineHeight: "normal",
+                      }}
+                    >
+                      <div>{t("main-text-mobile1")}</div>
+                      <div>{t("main-text-mobile2")}</div>
+                      <div>{t("main-text-mobile3")}</div>
+                      <div>{t("main-text-mobile4")}</div>
                     </div>
                   </div>
                 </div>
@@ -199,7 +196,7 @@ const Home = () => {
                       } gap-[10px] w-[270px]`}
                   >
                     <div
-                      className={`text-center text-xl w-full font-bold`}
+                      className={`text-center md:text-xl text-base w-full font-bold`}
                       style={{ fontFamily: "SF Pro Display B", lineHeight: "normal", }}
                     >
                       <div className="flex flex-col items-center justify-center">
@@ -209,13 +206,18 @@ const Home = () => {
                     </div>
 
                     <div
-                      className="text-center text-xl"
+                      className="text-center md:text-xl text-sm"
                       style={{ fontFamily: "SF Pro Display M", lineHeight: "normal", }}
                     >
-                      <div className="flex flex-col items-center justify-center">
+                      <div className="md:flex flex-col hidden items-center justify-center">
                         <div>{t("stay-inform")}</div>
                         <div>{t("stay-inform2")}</div>
                         <div>{t("stay-inform3")}</div>
+                      </div>
+                      <div className="flex flex-col md:hidden items-center justify-center">
+                        <div>{t("stay-inform-mobile1")}</div>
+                        <div>{t("stay-inform-mobile2")}</div>
+                        <div>{t("stay-inform-mobile3")}</div>
                       </div>
                     </div>
                   </div>
@@ -236,7 +238,7 @@ const Home = () => {
                     className={`flex flex-col items-center md:gap-5 gap-[10px] w-[270px]`}
                   >
                     <div
-                      className={`text-center text-xl w-full font-bold`}
+                      className={`text-center md:text-xl text-base w-full font-bold`}
                       style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
                     >
                       <div className="flex flex-col items-center justify-center">
@@ -246,12 +248,18 @@ const Home = () => {
                     </div>
 
                     <div
-                      className="text-center text-xl md:h-[72px]"
+                      className="text-center md:text-xl text-sm md:h-[72px]"
                       style={{ fontFamily: "SF Pro Display M", lineHeight: "normal", }}
                     >
-                      <div>{t("latest-happening")}</div>
-                      <div>{t("latest-happening2")}</div>
-                      <div>{t("latest-happening3")}</div>
+                      <div className="md:flex flex-col hidden items-center justify-center">
+                        <div>{t("latest-happening")}</div>
+                        <div>{t("latest-happening2")}</div>
+                        <div>{t("latest-happening3")}</div>
+                      </div>
+                      <div className="flex flex-col md:hidden items-center justify-center">
+                        <div>{t("latest-happening-mobile1")}</div>
+                        <div>{t("latest-happening-mobile2")}</div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -271,7 +279,7 @@ const Home = () => {
                     className={`flex flex-col items-center md:gap-5 gap-[10px] w-[270px]`}
                   >
                     <div
-                      className={`text-center text-xl w-full font-bold`}
+                      className={`text-center md:text-xl text-base w-full font-bold`}
                       style={{ fontFamily: "SF Pro Display B", lineHeight: "normal", }}
                     >
                       <div className="flex flex-col items-center justify-center">
@@ -281,12 +289,19 @@ const Home = () => {
                     </div>
 
                     <div
-                      className="text-center text-xl"
+                      className="text-center md:text-xl text-sm md:h-[72px]"
                       style={{ fontFamily: "SF Pro Display M", lineHeight: "normal", }}
                     >
-                      <div>{t("school-fee")}</div>
-                      <div>{t("school-fee2")}</div>
-                      <div>{t("school-fee3")}</div>
+                      <div className="md:flex flex-col hidden items-center justify-center">
+                        <div>{t("school-fee")}</div>
+                        <div>{t("school-fee2")}</div>
+                        <div>{t("school-fee3")}</div>
+                      </div>
+                      <div className="flex flex-col md:hidden items-center justify-center">
+                        <div>{t("school-fee-mobile1")}</div>
+                        <div>{t("school-fee-mobile2")}</div>
+                        <div>{t("school-fee-mobile3")}</div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -307,27 +322,18 @@ const Home = () => {
                     className={`flex flex-col items-center md:gap-5 gap-[10px] w-[270px]`}
                   >
                     <div
-                      className={`text-center text-xl w-full font-bold`}
+                      className={`text-center md:text-xl text-base w-full font-bold`}
                       style={{ fontFamily: "SF Pro Display B", lineHeight: "normal", }}
                     >
-                      <div className="hidden md:flex flex-col">
+                      <div className="flex flex-col">
                         <div className="flex flex-col items-center justify-center">
                           <div>{t("market-convenience")}</div>
                           <div>{t("market-convenience2")}</div>
                         </div>
                       </div>
-                      {/*mobile*/}
-                      <div
-                        className="md:hidden flex flex-col"
-                        style={{ lineHeight: "normal" }}
-                      >
-                        <div> {t("market-convenience-mobile")}</div>
-                        <div> {t("market-convenience2-mobile")}</div>
-                      </div>
                     </div>
-
                     <div
-                      className="text-center text-xl"
+                      className="text-center md:text-xl text-sm"
                       style={{ fontFamily: "SF Pro Display M", lineHeight: "normal", }}
                     >
                       <div>{t("supply-resource1")}</div>
@@ -344,14 +350,14 @@ const Home = () => {
                     <img
                       src={Tel}
                       alt="Telephone"
-                      className="md:h-[120px] md:w-[126px]"
+                      className="h-[120px] w-[126px]"
                     />
                   </div>
                   <div
                     className={`flex flex-col items-center md:gap-5 gap-[10px] w-[270px]`}
                   >
                     <div
-                      className={`text-center text-xl w-full font-bold`}
+                      className={`text-center md:text-xl text-base w-full font-bold`}
                       style={{ fontFamily: "SF Pro Display B", lineHeight: "normal", }}
                     >
                       <div className="flex flex-col items-center justify-center">
@@ -361,12 +367,19 @@ const Home = () => {
                     </div>
 
                     <div
-                      className="text-center text-xl"
+                      className="text-center md:text-xl text-sm md:h-[72px]"
                       style={{ fontFamily: "SF Pro Display M", lineHeight: "normal", }}
                     >
-                      <div>{t("interaction-teacher")}</div>
-                      <div>{t("interaction-teacher2")}</div>
-                      <div>{t("interaction-teacher3")}</div>
+                      <div className="md:flex flex-col hidden items-center justify-center">
+                        <div>{t("interaction-teacher")}</div>
+                        <div>{t("interaction-teacher2")}</div>
+                        <div>{t("interaction-teacher3")}</div>
+                      </div>
+                      <div className="flex flex-col md:hidden items-center justify-center">
+                        <div>{t("interaction-teacher-mobile1")}</div>
+                        <div>{t("interaction-teacher-mobile2")}</div>
+                        <div>{t("interaction-teacher-mobile3")}</div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -425,7 +438,7 @@ const Home = () => {
                   className={`flex flex-col justify-center w-full gap-[10px]`}
                 >
                   <div
-                    className="text-[#4D9138] font-bold text-[20px] md:text-[32px]"
+                    className="text-[#4D9138] font-bold text-[16px] md:text-[32px]"
                     style={{
                       fontFamily: "SF Pro Display EB",
                       lineHeight: "normal",
@@ -435,14 +448,29 @@ const Home = () => {
                   </div>
                   <div>
                     <div
-                      className={`flex flex-col md:text-[32px] text-sm md:font-medium font-semibold md:gap-10 gap-5`}
+                      className={`flex flex-col justify-center md:text-[32px] text-sm md:font-medium font-semibold text-balance`}
                       style={{
                         fontFamily: "SF Pro Display M",
                         lineHeight: "normal",
                       }}
                     >
-                      <div>{t("learn-journey-desc")}</div>
-                      <div>{t("learn-journey-desc2")}</div>
+                      <div className="md:flex flex-col hidden text-center justify-center ">
+                        <div>{t("learn-journey-desc1")}</div>
+                        <div>{t("learn-journey-desc2")}</div>
+                        <div>{t("learn-journey-desc3")}</div>
+                        <div className="md:pb-[30px]">{t("learn-journey-desc4")}</div>
+                        <div>{t("learn-journey-desc5")}</div>
+                        <div>{t("learn-journey-desc6")}</div>
+                      </div>
+                      <div className={`flex flex-col md:hidden text-left ${i18n.language === 'en' ? "tracking-wide" : i18n.language === 'ms' ? "tracking-[0.095em]" : ""}`}>
+                        <div>{t("learn-journey-desc-mobile1")}</div>
+                        <div>{t("learn-journey-desc-mobile2")}</div>
+                        <div>{t("learn-journey-desc-mobile3")}</div>
+                        <div className="pb-[30px]">{t("learn-journey-desc-mobile4")}</div>
+                        <div>{t("learn-journey-desc-mobile5")}</div>
+                        <div>{t("learn-journey-desc-mobile6")}</div>
+                        <div>{t("learn-journey-desc-mobile7")}</div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -466,7 +494,7 @@ const Home = () => {
                     className={`flex flex-col justify-center w-full gap-[10px] `}
                   >
                     <div
-                      className={`text-[#752912] font-bold text-[20px] md:text-[32px]`}
+                      className={`text-[#752912] font-bold text-[16px] md:text-[32px]`}
                       style={{
                         fontFamily: "SF Pro Display EB",
                         lineHeight: "normal",
@@ -476,14 +504,28 @@ const Home = () => {
                     </div>
                     <div>
                       <div
-                        className={`flex flex-col md:text-[32px] text-sm md:font-medium font-semibold md:gap-10 gap-5`}
+                        className={`flex flex-col justify-center md:text-[32px] text-sm md:font-medium font-semibold text-balance`}
                         style={{
                           fontFamily: "SF Pro Display M",
                           lineHeight: "normal",
                         }}
                       >
-                        <div>{t("busy-teacher-desc")}</div>
-                        <div>{t("busy-teacher-desc2")}</div>
+                        <div className="md:flex flex-col hidden text-center justify-center ">
+                          <div>{t("busy-teacher-desc1")}</div>
+                          <div className="md:pb-[30px]">{t("busy-teacher-desc2")}</div>
+                          <div>{t("busy-teacher-desc3")}</div>
+                          <div>{t("busy-teacher-desc4")}</div>
+                          <div>{t("busy-teacher-desc5")}</div>
+                          <div>{t("busy-teacher-desc6")}</div>
+                        </div>
+                        <div className={`flex flex-col md:hidden text-left ${i18n.language === 'en' ? "tracking-wider" : i18n.language === 'ms' ? "tracking-widest" : ""}`}>
+                          <div>{t("busy-teacher-desc-mobile1")}</div>
+                          <div>{t("busy-teacher-desc-mobile2")}</div>
+                          <div className="pb-[30px]">{t("busy-teacher-desc-mobile3")}</div>
+                          <div>{t("busy-teacher-desc-mobile4")}</div>
+                          <div>{t("busy-teacher-desc-mobile5")}</div>
+                          <div>{t("busy-teacher-desc-mobile6")}</div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -503,7 +545,7 @@ const Home = () => {
                     className={`flex flex-col justify-center w-full gap-[10px] `}
                   >
                     <div
-                      className={`text-[#00A0CB] font-bold text-[20px] md:text-[32px]`}
+                      className={`text-[#00A0CB] font-bold text-[16px] md:text-[32px]`}
                       style={{
                         fontFamily: "SF Pro Display EB",
                         lineHeight: "normal",
@@ -513,14 +555,18 @@ const Home = () => {
                     </div>
                     <div>
                       <div
-                        className={`flex flex-col md:text-[32px] text-sm md:font-medium font-semibold md:gap-10 gap-5`}
+                        className={`flex flex-col justify-center md:text-[32px] text-sm md:font-medium font-semibold text-balance`}
                         style={{
                           fontFamily: "SF Pro Display M",
                           lineHeight: "normal",
                         }}
                       >
-                        <div>{t("slow-mode-desc")}</div>
+                        <div>{t("slow-mode-desc1")}</div>
                         <div>{t("slow-mode-desc2")}</div>
+                        <div>{t("slow-mode-desc3")}</div>
+                        <div className="md:pb-[30px]">{t("slow-mode-desc4")}</div>
+                        <div>{t("slow-mode-desc5")}</div>
+                        <div>{t("slow-mode-desc6")}</div>
                       </div>
                     </div>
                   </div>
@@ -615,7 +661,7 @@ const Home = () => {
             </div>
           </div>
 
-          {/*CONTENT 10 -- School Owners */}
+          {/* CONTENT 10 -- School Owners */}
           <div className="w-full flex flex-col justify-center items-center md:gap-[50px] gap-[20px]">
             <div>
               <img
@@ -636,21 +682,16 @@ const Home = () => {
 
               <div className="flex items-center">
                 <div
-                  className={`text-center justify-center items-center ${i18n.language === "zh"
-                    ? "md:text-[30px] text-xl"
-                    : "md:text-[24px] text-base"
-                    }`}
+                  className={`text-center justify-center items-center md:text-[24px] text-[14px]`}
                   style={{
                     fontFamily: "SF Pro Display M",
                     lineHeight: "normal",
                   }}
                 >
                   {/**Web version */}
-                  <div className="hidden md:flex flex-col justify-center items-center">
-                    <div> {t("school-owner-desc")}</div>
-                    {i18n.language === "zh" && (
-                      <div> {t("school-owner-desc2")}</div>
-                    )}
+                  <div className="hidden md:flex flex-col justify-center items-center text-balance">
+                    <div> {t("school-owner-desc1")}</div>
+                    <div> {t("school-owner-desc2")}</div>
                   </div>
 
                   {/**mobile version */}
@@ -662,7 +703,7 @@ const Home = () => {
             </div>
           </div>
 
-          {/*CONTENT 11*/}
+          {/*CONTENT 11 -- Adminstrators*/}
 
           <div
             className={`w-full flex flex-col justify-center items-center ${i18n.language === "zh" ? "gap-[50px]" : "md:gap-[50px] gap-[49px]"
@@ -676,51 +717,38 @@ const Home = () => {
               />
             </div>
             <div
-              className={`w-full flex flex-col justify-center items-center  ${i18n.language === "zh"
-                ? "gap-5 md:gap-4"
-                : " gap-4 md:gap-[10px]"
+              className={`w-full flex flex-col justify-center items-center md:gap-[10px] ${i18n.language === "zh"
+                ? "gap-5"
+                : "gap-4"
                 }`}
             >
               <div
-                className={`md:text-[48px] text-[32px] font-bold `}
+                className={`md:text-[48px] text-[32px] font-bold`}
                 style={{ fontFamily: "SF Pro Display B" }}
               >
                 {t("administrator")}
               </div>
 
               <div
-                className={`w-full flex flex-col items-center text-center  ${i18n.language === "zh"
-                  ? "md:text-3xl text-xl"
-                  : "md:text-[24px] text-base"
-                  }`}
+                className={`w-full flex flex-col items-center text-center md:text-[24px] text-[14px]`}
                 style={{
                   fontFamily: "SF Pro Display M",
                   lineHeight: "normal",
                 }}
               >
-                {i18n.language === "ms" && (
-                  <>
-                    <div className="hidden md:flex flex-col justify-center items-center">
-                      <div> {t("admin-desc1")}</div>
-                      <div> {t("admin-desc2")}</div>
-                      <div> {t("admin-desc3")}</div>
-                      <div> {t("admin-desc4")}</div>
-                    </div>
-                    <div className="md:hidden flex flex-col justify-center items-center ">
-                      <div className="font-semibold"> {t("admin-desc")}</div>
-                    </div>
-                  </>
-                )}
-                {(i18n.language === "en" || i18n.language === "zh") && (
-                  <div className="flex flex-col justify-center items-center">
-                    <div> {t("admin-desc")}</div>
-                  </div>
-                )}
+                <div className="w-full flex items-center justify-center ">
+                  <span
+                    className={`md:flex flex-col justify-center items-center text-balance`}
+                  >
+                    <div>{t("admin-desc1")}</div>
+                    <div>{t("admin-desc2")}</div>
+                  </span>
+                </div>
               </div>
             </div>
           </div>
 
-          {/*CONTENT 12*/}
+          {/*CONTENT 12 -- Teachers */}
           <div className="w-full flex flex-col justify-center items-center gap-[50px]">
             <div>
               <img
@@ -730,14 +758,13 @@ const Home = () => {
               />
             </div>
             <div
-              className={`flex flex-col justify-center items-center  ${i18n.language === "zh"
-                ? "gap-5 md:gap-4"
-                : " gap-4 md:gap-[10px]"
+              className={`flex flex-col justify-center items-center md:gap-[10px] ${i18n.language === "zh"
+                ? "gap-5"
+                : "gap-4 "
                 }`}
             >
               <div
-                className={`md:text-[48px] text-[32px]  ${i18n.language === "zh" ? "font-bold" : ""
-                  }`}
+                className={`md:text-[48px] text-[32px] font-bold `}
                 style={{ fontFamily: "SF Pro Display B" }}
               >
                 {t("teacher")}
@@ -745,9 +772,9 @@ const Home = () => {
 
               <div className="flex items-center">
                 <div
-                  className={`text-center  ${i18n.language === "zh"
-                    ? "md:text-[30px] text-xl"
-                    : "md:text-[24px] text-base "
+                  className={`text-center md:text-[24px] ${i18n.language === "zh"
+                    ? "text-xl"
+                    : "text-base "
                     }`}
                   style={{
                     fontFamily: "SF Pro Display M",
@@ -761,49 +788,46 @@ const Home = () => {
 
                   {/*Desktop*/}
                   <div className="hidden md:flex flex-wrap justify-center items-center">
-                    <div className={`inline-block font-medium  ${TeacherDescWidth()}`}>
-                      <div>{t("teacher-desc")}</div>
-                      {i18n.language === "zh" && (
-                        <div>{t("teacher-desc2")}</div>
-                      )}
+                    <div className={`inline-block font-medium flex flex-col justify-center text-center text-balance`}>
+                      <div>{t("teacher-desc1")}</div>
+                      <div>{t("teacher-desc2")}</div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          {/*CONTENT 13*/}
+          {/*CONTENT 13 -- Parents */}
           <div className="flex flex-col justify-center items-center md:gap-[50px] gap-5">
             <div>
               <img
                 src={Parent}
                 alt="Parent"
-                className={` w-[207px] h-[180px] md:w-[500px] md:h-[430px]`}
+                className={`w-[207px] h-[180px] md:w-[500px] md:h-[430px]`}
               />
             </div>
             <div
               className={`flex flex-col justify-center items-center text-center gap-[10px]`}
             >
               <div
-                className={`md:text-[50px] text-[32px] `}
-                style={{ fontFamily: "SF Pro Display B" }}
+                className={`md:text-[48px] text-[32px] `}
+                style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
               >
                 {t("parent")}
               </div>
 
               <div className="flex items-center">
                 <div
-                  className={`text-center text-pretty md:font-medium font-semibold ${i18n.language === "zh"
-                    ? "md:text-[30px] text-sm"
-                    : "md:text-[24px] text-sm "
-                    }`}
+                  className={`text-center text-pretty md:font-medium font-semibold md:text-[24px] text-sm`}
                   style={{
                     fontFamily: "SF Pro Display M",
                     lineHeight: "normal",
                   }}
                 >
-                  <div className="flex items-center justify-center ">
-                    {t("parent-desc")}
+                  <div className="flex flex-col items-center justify-center text-center text-balance">
+                    <div>{t("parent-desc1")}</div>
+                    <div>{t("parent-desc2")}</div>
+                    <div>{t("parent-desc3")}</div>
                   </div>
                 </div>
               </div>

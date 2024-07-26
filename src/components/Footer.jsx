@@ -148,7 +148,7 @@ const Footer = () => {
                     >
                       {t("discover-app")}
                     </div>
-                    <div className="flex justify-end gap-3">
+                    <div className="flex justify-end gap-3 ">
                       <img src={ios} alt="IOS" />
                       <img src={google} alt="Android" />
                     </div>

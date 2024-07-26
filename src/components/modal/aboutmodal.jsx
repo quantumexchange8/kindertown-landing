@@ -1,5 +1,4 @@
 import React from "react";
-
 import logo from "../../assets/admin/ct-logo.svg"
 import close from "../../assets/parentmodal/close.svg";
 const aboutmodal = ({ AboutOpen, setAboutOpen }) => {

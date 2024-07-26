@@ -109,7 +109,7 @@ const DownloadParent = () => {
                                 className="md:w-[250px] md:h-[250px] w-[100px] h-[100px]" />
                         </div>
 
-                        <div className="w-full flex flex-row md:gap-[50px] justify-between align-center">
+                        <div className="flex flex-row md:gap-[50px] gap-[20px] justify-between align-center">
                             <img
                                 src={apple}
                                 alt="playstore"

@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 import { Field, Label, Radio, RadioGroup } from '@headlessui/react'
 
 const FormModal = ({ FormOpen, setFormOpen }) => {
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
     const handleCloseModal = () => {
         setFormOpen(false);
     };
@@ -42,6 +42,15 @@ const FormModal = ({ FormOpen, setFormOpen }) => {
         e.preventDefault();
         // fetch('/api', { method: form.method, body: formData })
         console.log(formData);
+        setShowSuccessSubmit(true);
+        setFormData({
+            formFullName: '',
+            formSchoolName: '',
+            formContactNumber: '',
+            formEmailAddress: '',
+            formLocation: '',
+            formInterested: 'Kindertown Parent',
+        });
     }
 
     return (
@@ -253,7 +262,7 @@ const FormModal = ({ FormOpen, setFormOpen }) => {
                                                                 lineHeight: "normal",
                                                             }}>
                                                             <RadioGroup name="formInterested" value={interestedPlan} onChange={setInterestedPlan} aria-label="Server size"
-                                                                className="md:flex md:flex-wrap md:w-[1200px] w-full ">
+                                                                className="md:flex md:flex-wrap md:w-[1200px] w-full justify-between">
                                                                 {interestedPlans.map((interestedPlan) => (
                                                                     <Field key={interestedPlan} className="flex items-center gap-[15px] mb-[20px]">
                                                                         <Radio
@@ -278,13 +287,14 @@ const FormModal = ({ FormOpen, setFormOpen }) => {
                                                         fontFamily: "SF Pro Display M",
                                                         lineHeight: "normal"
                                                     }}
-                                                    onClick={() => (setShowSuccessSubmit(true))}>
-                                                    <SuccessSubmit
-                                                        showSuccessSubmit={showSuccessSubmit}
-                                                        setShowSuccessSubmit={setShowSuccessSubmit} />
+                                                    onClick={() => (setShowSuccessSubmit(true))}
+                                                    >
+                                                    
                                                     {t("form-send")}
                                                 </button>
-
+                                                <SuccessSubmit 
+                                                    showSuccessSubmit={showSuccessSubmit} 
+                                                    setShowSuccessSubmit={setShowSuccessSubmit} />
                                             </div>
 
                                         </div>
