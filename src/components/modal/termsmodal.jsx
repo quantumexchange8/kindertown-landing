@@ -23,7 +23,7 @@ const termsmodal = ({ TermsOpen, setTermsOpen }) => {
               className="relative w-full md:max-w-[900px] overflow-auto  my-auto md:py-[50px] flex modal-content"
               onClick={handleModalClick}
             >
-              <div className="md:hidden fixed z-50 bottom-[20px] right-[20px]">
+              {/* <div className="md:hidden fixed z-50 bottom-[20px] right-[20px]">
                 <button onClick={() => setTermsOpen(false)}>
                   <img
                     src={close}
@@ -31,13 +31,22 @@ const termsmodal = ({ TermsOpen, setTermsOpen }) => {
                     className="md:w-[60px] md:h-[60px] w-[50px] h-[50px]"
                   />
                 </button>
-              </div>
+              </div> */}
               {/*content*/}
               <div className="border-0 md:rounded-[50px] relative flex flex-col w-full bg-white outline-none focus:outline-none justify-center items-center md:px-0 pl-[41px] pr-[42px] md:pt-20 pt-[50px] md:pb-[100px] pb-[60px]">
                 <div className="md:w-[700px] w-full flex flex-col gap-[100px]">
                   <div className="flex flex-col md:gap-[200px] gap-[100px]">
-                    <div className="flex flex-col w-[74px] h-[50px]">
-                      <img src={logo} alt="Logo" />
+                  <div className="flex flex-row w-full h-[100px] justify-between">
+                      <img src={logo} alt="Logo" className="h-[100px]" />
+                      <div className="flex">
+                        <button onClick={() => setTermsOpen(false)}>
+                          <img
+                            src={close}
+                            alt="CloseButton"
+                            className="md:w-[60px] md:h-[60px] w-[30px] h-[30px]"
+                          />
+                        </button>
+                      </div>
                     </div>
                     {/*CONTENT 1*/}
 
@@ -107,15 +116,6 @@ const termsmodal = ({ TermsOpen, setTermsOpen }) => {
                             non-exclusive, non-transferable, limited privilege
                             to access and use the Website.
                           </div>
-                        </div>
-                        <div className="hidden md:flex justify-end">
-                          <button onClick={() => setTermsOpen(false)}>
-                            <img
-                              src={close}
-                              alt="CloseButton"
-                              className=" w-[60px] h-[60px]"
-                            />
-                          </button>
                         </div>
                       </div>
                     </div>

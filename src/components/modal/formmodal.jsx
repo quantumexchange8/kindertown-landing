@@ -24,10 +24,10 @@ const FormModal = ({ FormOpen, setFormOpen }) => {
         formContactNumber: '',
         formEmailAddress: '',
         formLocation: '',
-        formInterested: 'Kindertown Parent',
+        formInterested: '',
     })
 
-    let [interestedPlan, setInterestedPlan] = useState(interestedPlans[0])
+    const [interestedPlan, setInterestedPlan] = useState('');
 
 
     const handleChange = (e) => {
@@ -41,16 +41,20 @@ const FormModal = ({ FormOpen, setFormOpen }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         // fetch('/api', { method: form.method, body: formData })
-        console.log(formData);
-        setShowSuccessSubmit(true);
-        setFormData({
-            formFullName: '',
-            formSchoolName: '',
-            formContactNumber: '',
-            formEmailAddress: '',
-            formLocation: '',
-            formInterested: 'Kindertown Parent',
-        });
+        try {
+            console.log(formData);
+            setShowSuccessSubmit(true);
+            setFormData({
+                formFullName: '',
+                formSchoolName: '',
+                formContactNumber: '',
+                formEmailAddress: '',
+                formLocation: '',
+                formInterested: 'Kindertown Parent',
+            });
+        } catch (error) {
+            console.error("Form submission failed: ", error);
+        }
     }
 
     return (
@@ -62,7 +66,7 @@ const FormModal = ({ FormOpen, setFormOpen }) => {
                         onClick={handleCloseModal}
                     >
                         <div
-                            className="relative md:w-[1200px] max-w-[1000px] overflow-auto my-auto md:py-[50px] flex justify-center modal-content"
+                            className="relative md:w-[1200px] max-w-[1200px] overflow-auto my-auto md:py-[50px] flex justify-center modal-content"
                             onClick={handleModalClick}
                         >
                             <div className="border-0 w-full md:rounded-[50px] rounded-[10px] relative flex flex-col bg-white outline-none focus:outline-none justify-center items-center md:p-[50px] pt-[50px] md:pb-[100px] pb-[60px]">
@@ -261,8 +265,13 @@ const FormModal = ({ FormOpen, setFormOpen }) => {
                                                                 fontFamily: "SF Pro Display M",
                                                                 lineHeight: "normal",
                                                             }}>
-                                                            <RadioGroup name="formInterested" value={interestedPlan} onChange={setInterestedPlan} aria-label="Server size"
-                                                                className="md:flex md:flex-wrap md:w-[1200px] w-full justify-between">
+                                                            <RadioGroup 
+                                                            name="formInterested" 
+                                                            value={interestedPlan} 
+                                                            onChange={setInterestedPlan} 
+                                                            aria-label="Server size"
+                                                            className="md:flex md:flex-wrap md:w-[1200px] w-full justify-between"
+                                                            >
                                                                 {interestedPlans.map((interestedPlan) => (
                                                                     <Field key={interestedPlan} className="flex items-center gap-[15px] mb-[20px]">
                                                                         <Radio
@@ -288,12 +297,12 @@ const FormModal = ({ FormOpen, setFormOpen }) => {
                                                         lineHeight: "normal"
                                                     }}
                                                     onClick={() => (setShowSuccessSubmit(true))}
-                                                    >
-                                                    
+                                                >
+
                                                     {t("form-send")}
                                                 </button>
-                                                <SuccessSubmit 
-                                                    showSuccessSubmit={showSuccessSubmit} 
+                                                <SuccessSubmit
+                                                    showSuccessSubmit={showSuccessSubmit}
                                                     setShowSuccessSubmit={setShowSuccessSubmit} />
                                             </div>
 

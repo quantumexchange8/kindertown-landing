@@ -39,7 +39,7 @@ const DownloadTeacher = () => {
 
                 <div className="w-full flex flex-col justify-center text-center items-center md:gap-[150px] gap-[50px] px-[30px]">
                     <div className="w-full flex flex-col justify-center text-center max-w-[1000px]">
-                        <div className="w-full flex flex-col md:gap-[50px] gap-[20px]">
+                        <div className="w-full flex flex-col md:gap-[50px] gap-[10px]">
                             {/* web view */}
                             <div className="md:text-[64px] md:flex flex-col hidden font-bold"
                                 style={{
@@ -67,17 +67,25 @@ const DownloadTeacher = () => {
                                         lineHeight: "normal",
                                     }}>
                                     <div>{t("teachermodal-desc1")}</div>
-                                    <div className="md:pb-[50px]">{t("teachermodal-desc2")}</div>
-                                    <div>{t("teachermodal-desc3")}</div>
-                                    <div>{t("teachermodal-desc4")}</div>
+                                    <div>{t("teachermodal-desc2")}</div>
+                                    <div className="md:pb-[50px]">{t("teachermodal-desc6")}</div>
+                                    <div>{t("teachermodal-desc7")}</div>
+                                    <div>{t("teachermodal-desc8")}</div>
                                 </div>
-                                : <div className="md:text-[32px] md:flex flex-col hidden font-medium md:gap-[30px]"
+                                : <div className="md:text-[32px] md:flex flex-col hidden font-medium"
                                     style={{
                                         fontFamily: "SF Pro Display M",
                                         lineHeight: "normal",
                                     }}>
                                     <div>{t("teachermodal-desc1")}</div>
                                     <div>{t("teachermodal-desc2")}</div>
+                                    <div>{t("teachermodal-desc3")}</div>
+                                    <div>{t("teachermodal-desc4")}</div>
+                                    <div>{t("teachermodal-desc5")}</div>
+                                    <div className="md:pb-[30px]">{t("teachermodal-desc6")}</div>
+                                    <div>{t("teachermodal-desc7")}</div>
+                                    <div>{t("teachermodal-desc8")}</div>
+                                    <div>{t("teachermodal-desc9")}</div>
                                 </div>
                             }
 
@@ -86,12 +94,8 @@ const DownloadTeacher = () => {
                                     fontFamily: "SF Pro Display B",
                                     lineHeight: "normal",
                                 }}>
-                                <div>{t("mobile-teachermodal-desc1")}</div>
-                                <div>{t("mobile-teachermodal-desc2")}</div>                                
-                                <div className="text-balance">{t("mobile-teachermodal-desc3")}</div>                                
-                                <div className="pb-[20px]">{t("mobile-teachermodal-desc4")}</div>                                
-                                <div className="text-balance">{t("mobile-teachermodal-desc5")}</div>    
-                                <div>{t("mobile-teachermodal-desc6")}</div>                            
+                                <div className="pb-[20px]">{t("mobile-teachermodal-desc1")}</div>
+                                <div>{t("mobile-teachermodal-desc2")}</div>                        
                             </div>
                         </div>
                     </div>
@@ -104,7 +108,7 @@ const DownloadTeacher = () => {
                                 className="md:w-[250px] md:h-[250px] w-[100px] h-[100px]" />
                         </div>
 
-                        <div className="w-full flex flex-row md:gap-[50px] justify-between align-center">
+                        <div className="flex flex-row md:gap-[50px] gap-[20px] justify-between align-center">
                             <img
                                 src={apple}
                                 alt="playstore"
@@ -115,7 +119,7 @@ const DownloadTeacher = () => {
                                 alt="appstore"
                                 className="md:w-[346px] w-[120px]" />
                         </div>
-                    </div>
+                    </div>  
 
                     <div className="w-full flex flex-col text-start max-w-[1000px] justify-center md:gap-[50px] gap-[30px]">
                         <div className="w-full flex flex-col">

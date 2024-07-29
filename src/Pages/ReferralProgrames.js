@@ -59,7 +59,7 @@ const ReferralProgrames = () => {
                     <div
                       className={`md:text-[32px] text-sm flex flex-col text-center md:w-full ${i18n.language === "zh"
                         ? "md:font-semibold"
-                        : ""
+                        : "md:font-medium"
                         } font-semibold`}
                       style={{
                         fontFamily: `${i18n.language === "zh" ? "SF Pro Display Semibold" : "SF Pro Display M"}`,
@@ -70,10 +70,9 @@ const ReferralProgrames = () => {
                         <div className={`${i18n.language === "zh" ? "" : "text-balance"}`}>{t("comprehensive-referral1")}</div>
                         <div className="tracking-wider">{t("comprehensive-referral2")}</div>
                       </div>
-                      <div className={`md:hidden flex flex-col justify-center items-center text-balance`}>
-                        <div>{t("mobile-comprehensive-referral1")}</div>
+                      <div className={`md:hidden flex flex-col justify-center items-center`}>
+                        <div className="text-balance">{t("mobile-comprehensive-referral1")}</div>
                         <div>{t("mobile-comprehensive-referral2")}</div>
-                        <div>{t("mobile-comprehensive-referral3")}</div>
                       </div>
                     </div>
                   </div>
@@ -373,7 +372,7 @@ const ReferralProgrames = () => {
                     >
                       {/* web view title */}
                       <div
-                        className={`md:text-[32px] md:flex flex-col hidden text-base font-bold`}
+                        className={`md:text-[32px] md:flex flex-col text-center hidden text-base font-bold`}
                         style={{
                           fontFamily: "SF Pro Display B",
                           lineHeight: `${i18n.language === 'en' ? "60px" : "normal"}`,
@@ -410,7 +409,7 @@ const ReferralProgrames = () => {
               <div className="w-full flex flex-col justify-center items-center md:gap-[100px] gap-[30px]">
                 <div className="w-full flex flex-col justify-center items-center ">
                   <div
-                    className={`md:text-[64px] text-2xl text-center font-bold md:w-[850px]`}
+                    className={`md:text-[64px] md:flex flex-col hidden text-center font-bold md:w-[850px]`}
                     style={{
                       fontFamily: "SF Pro Display B",
                       lineHeight: "normal",
@@ -418,6 +417,18 @@ const ReferralProgrames = () => {
                   >
                     <div>{t("mutual-reward1")}</div>
                     <div className={`${i18n.language === 'en' ? 'md:text-pretty text-balance' : ''}`}>{t("mutual-reward2")}</div>
+                  </div>
+                  <div
+                    className={`text-2xl flex flex-col md:hidden text-center font-bold`}
+                    style={{
+                      fontFamily: "SF Pro Display B",
+                      lineHeight: "normal",
+                    }}
+                  >
+                    <div>{t("mutual-reward-mobile1")}</div>
+                    <div>{t("mutual-reward-mobile2")}</div>
+                    <div>{t("mutual-reward-mobile3")}</div>
+
                   </div>
                 </div>
                 <div className="flex flex-col justify-center items-center">
@@ -438,11 +449,10 @@ const ReferralProgrames = () => {
                     </div>
                     <div>
                       <span
-                        className={`md:w-[1000px] w-full text-[16px] flex flex-col items-center md:hidden`}
+                        className={`md:w-[1000px] w-full text-[16px] flex flex-col items-center md:hidden font-semibold`}
                       >
                         <div>{t("mobile-step-simple1")}</div>
                         <div>{t("mobile-step-simple2")}</div>
-                        <div>{t("mobile-step-simple3")}</div>
                       </span>
                     </div>
                   </div>

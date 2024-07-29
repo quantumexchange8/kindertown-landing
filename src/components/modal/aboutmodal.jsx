@@ -14,7 +14,7 @@ const aboutmodal = ({ AboutOpen, setAboutOpen }) => {
             {AboutOpen ? (
                 <>
                     <div
-                        className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+                        className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-[70] outline-none focus:outline-none"
                         onClick={handleCloseModal}
                     >
                         <div
@@ -34,14 +34,14 @@ const aboutmodal = ({ AboutOpen, setAboutOpen }) => {
                             <div className="border-0 w-full md:rounded-[50px] relative flex flex-col bg-white outline-none focus:outline-none justify-center items-center md:pt-70 pt-[50px] md:pb-[150px] pb-[60px]">
                                 <div className="md:w-[1000px] w-full flex flex-col gap-[50px] md:px-[100px] px-[30px]">
                                     <div className="flex flex-col md:gap-[30px] gap-[50px] ">
-                                        <div className="flex flex-row flex-wrap items-center justify-between pr-[60px]">
-                                            <img src={logo} alt="Logo" className="md:w-[150px] w-[100px] md:h-[100px] h-[66.667px]" />
-                                            <div className="flex flex-col">
+                                        <div className="flex flex-row flex-wrap items-center justify-between ">
+                                            <div><img src={logo} alt="Logo" className="md:w-[150px] w-[100px] md:h-[100px] h-[66.667px]" /></div>
+                                            <div className="flex flex-row ">
                                                 <button onClick={() => setAboutOpen(false)}>
                                                     <img
                                                         src={close}
                                                         alt="CloseButton"
-                                                        className="md:w-[60px] md:h-[60px] w-[30px] h-[30px] fixed z-50"
+                                                        className="md:w-[60px] md:h-[60px] w-[30px] h-[30px] z-50"
                                                     />
                                                 </button>
                                             </div>
@@ -63,21 +63,19 @@ const aboutmodal = ({ AboutOpen, setAboutOpen }) => {
                                         {" "}
                                         <div className="w-full flex flex-col gap-5 text-[#000]">
                                             <div
-                                                className="md:text-[24px] text-sm not-italic"
+                                                className="md:text-[24px] text-sm "
                                                 style={{
                                                     fontFamily: "SF Pro Display M",
                                                     lineHeight: "normal",
                                                 }}
                                             >
-                                                <div className="font-medium md:text-2xl text-sm tracking-wider md:leading-none leading-normal">
+                                                <div className="font-medium md:text-2xl text-sm">
                                                     <div>
                                                         Welcome to Current Tech Industries Sdn Bhd.
                                                         <br /><br />
                                                         Founded in 2006 and headquartered in Kuala Lumpur Malaysia, Current Tech Industries stands as a pioneer in technology, web, and software development. Over the years, we have led the charge in technological innovation, equipping businesses to thrive in the digital age.
                                                         <br /><br />
-                                                        <span className="tracking-widest">
                                                             At Current Tech Industries, our mission is clear: to empower traditional industries to seamlessly transition into the modern technological era. We achieve this by harnessing cutting-edge solutions and leveraging unparalleled expertise to drive digital transformation and foster growth across all sectors.
-                                                        </span>
                                                         <br /><br />
                                                         As part of our strategic expansion, we are excited to announce our plans to establish strategic branches in Penang and East Malaysia. These expansions will not only strengthen our regional presence but also enable us to deliver localised support and advanced technological solutions tailored to meet the unique needs of our clients.
                                                         <br /><br />

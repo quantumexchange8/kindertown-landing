@@ -55,7 +55,7 @@ const Navbar = () => {
 
   //Css for menu for web version
   const linkStyles = {
-    base: "flex justify-center items-center text-[#FFF] bg-[#F67F00] rounded-[15px] py-0.5",
+    base: "flex justify-center items-center text-[#000] border border-[#F67F00] rounded-[5px] py-0.5",
     home: "w-[66px]",
     products: "w-[90px]",
     joinUs: "w-[100px]",
@@ -148,8 +148,8 @@ const Navbar = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className="w-full flex fixed flex-col top-0 z-40 absolute justify-center items-center">
-      <div className="bg-[#fff7efe6] w-full flex justify-center h-[60px] px-5 md:px-0">
+    <div className="w-full flex fixed flex-col top-0 z-[60] absolute justify-center items-center">
+      <div className="bg-[#fff7efe6] z-[60] w-full flex justify-center h-[60px] px-5 md:px-0">
         <div className="w-full md:w-[1000px] flex items-center justify-between">
           <div className="flex flex-col">
             <img src={logo} alt="Logo" />
@@ -201,7 +201,7 @@ const Navbar = () => {
             </Link>
             <Link
               to="/download/parent"
-              className={`${location.pathname === "/download/parent"
+              className={`${location.pathname.includes("/download")
                 ? `${linkStyles.base} ${linkStyles.download}`
                 : " hover:text-[#F67F00]"
                 } `}
@@ -286,11 +286,11 @@ const Navbar = () => {
                   <GlobalIcon />
                 </button>
                 {showLanguageModal && (
-                  <div className="fixed inset-0 z-50 bg-gray-800 bg-opacity-50 backdrop-blur-sm" 
+                  <div className="fixed inset-0 z-50 bg-gray-800 bg-opacity-50 backdrop-blur-sm pt-[20px]" 
                   onClick={handleBackdropClick}>
                     <div className="z-50 flex flex-row justify-center">
                       <div
-                        className="w-[180px] py-[30px] flex flex-col gap-[30px] items-center text-[20px] font-semibold bg-[#FFFFFF] text-[#F67F00] rounded-[5px] "
+                        className="w-[180px] py-[30px] flex flex-col gap-[30px] items-center text-[20px] font-semibold bg-[#FFFFFF] text-[#F67F00] rounded-[5px]  "
                         style={{ fontFamily: "SF Pro Display Semibold", lineHeight: "normal" }}
                         onClick={handleModalClick}
                       >
@@ -336,7 +336,7 @@ const Navbar = () => {
           <div className={`${showMenu ? "" : "hidden"}`}>
             <div className="fixed inset-0 z-50 bg-gray-800 bg-opacity-50 backdrop-blur-sm">
               <div
-                className="h-full bg-[#E8E8E8] bg-opacity-75 backdrop-blur-sm flex items-center justify-center min-h-screen "
+                className="h-full bg-[#E8E8E8] bg-opacity-75 backdrop-blur-sm flex items-center justify-center min-h-screen"
                 onClick={() => {
                   handleCloseModal();
                   // setShowJoinUsSubmenu(false);
@@ -345,14 +345,13 @@ const Navbar = () => {
                 }}
               >
                 <div
-                  className="bg-white fixed border rounded-[5px] justify-center top-[40px] w-4/5 h-[225px] flex flex-col p-[30px]"
+                  className="bg-white fixed border rounded-[5px] justify-center top-[40px] w-auto min-w-[274px] h-[225px] flex flex-col p-[30px]"
                   onClick={handleModalClick}
                 >
-                  <div className="h-[225px] flex gap-[20px]">
+                  <div className="h-[225px] flex gap-[30px]">
                     <div className="flex flex-col text-left gap-[20px] h-auto">
                       <div
-                        className={`text-[14px] ${i18n.language === "zh" ? "font-bold" : ""
-                          }`}
+                        className={`text-[14px] font-bold`}
                       >
                         <button
                           style={{ fontFamily: "SF Pro Display B" }}
@@ -378,8 +377,7 @@ const Navbar = () => {
                         </Link>
                       </div>
                       <div
-                        className={`text-[14px] ${i18n.language === "zh" ? "font-bold" : ""
-                          }`}
+                        className={`text-[14px] font-bold`}
                       >
                         <button
                           style={{ fontFamily: "SF Pro Display B" }}

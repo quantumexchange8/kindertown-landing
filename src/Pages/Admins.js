@@ -64,7 +64,7 @@ const Admin = () => {
           </div>
         </div>
         <div
-          className={`w-full max-w-[1000px] px-[30px] flex flex-col justify-center items-center gap-[100px] md:gap-[150px]`}
+          className={`w-full max-w-[1000px] md:px-0 px-[30px] flex flex-col justify-center items-center gap-[100px] md:gap-[150px]`}
         >
           {/*Content 1*/}
           <div className="w-full flex flex-col md:gap-[100px] gap-[50px]">
@@ -236,24 +236,26 @@ const Admin = () => {
           <div className="w-full flex flex-col justify-center  md:gap-[50px] gap-[20px]">
             <div className="flex flex-col justify-center items-center">
               <div
-                className={`text-center text-base md:text-[36px] text-pretty`}
+                className={`text-center text-base md:text-[36px]`}
                 style={{
                   lineHeight: "normal",
                 }}
               >
                 <div
-                  className="md:flex flex-col hidden items-center font-bold"
+                  className="md:flex flex-col hidden items-center font-bold "
                   style={{ fontFamily: "SF Pro Display B" }}
                 >
-                  <div className={`${i18n.language === "zh"?"tracking-tight":"text-balance"}`}>{t("management-system1")}</div>
+                  <div>{t("management-system1")}</div>
                   <div>{t("management-system2")}</div>
+                  <div>{t("management-system3")}</div>
+                  <div>{t("management-system4")}</div>
+                  <div>{t("management-system5")}</div>
                 </div>
                 <div
                   className={`md:hidden flex flex-col items-center font-bold`}
                   style={{ fontFamily: "SF Pro Display B" }}
                 >
-                  <div>{t("mobile-management-system1")}</div>
-                  <div>{t("mobile-management-system2")}</div>
+                  <div>{t("mobile-management-system")}</div>
                 </div>
               </div>
             </div>

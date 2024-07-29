@@ -44,7 +44,7 @@ const Teacher = () => {
 
         <div className="w-full flex flex-col justify-center items-center md:px-0 pl-[31px] pr-[32px]">
           <div className="w-full md:max-w-[1000px]  flex flex-col  gap-[100px]  md:gap-[150px]">
-            {/*CONTENT 2*/}
+            {/*CONTENT 2 -- Main description */}
             <div className="w-full flex flex-col md:gap-[30px] gap-[10px]">
               <div className="flex flex-col justify-center items-center">
                 <div
@@ -88,7 +88,7 @@ const Teacher = () => {
                 </div>
               </div>
             </div>
-            {/*CONTENT 3*/}
+            {/*CONTENT 3 -- Different ways*/}
             <div
               className={`w-full flex flex-col md:gap-[30px] gap-[20px]`}
             >
@@ -108,19 +108,21 @@ const Teacher = () => {
                   }}
                 >
                   <div
-                    className={`md:flex flex-col hidden inline-block text-center w-full tracking-wide`}
+                    className={`md:flex flex-col hidden inline-block text-center w-full`}
                   >
-                    <div className="text-balance">{t("diff-ways1")}</div>
+                    <div>{t("diff-ways1")}</div>
                     <div>{t("diff-ways2")}</div>
+                    <div>{t("diff-ways3")}</div>
+                    <div>{t("diff-ways4")}</div>
                   </div>
                   <div className="md:hidden flex flex-col inline-block text-center w-full px-[10px]">
-                    <div className={`${i18n.language === 'zh'? 'tracking-tight':''}`}>{t("mobile-diff-ways1")}</div>
+                    <div>{t("mobile-diff-ways1")}</div>
                     <div>{t("mobile-diff-ways2")}</div>
                   </div>
                 </div>
               </div>
             </div>
-            {/*CONTENT 4*/}
+            {/*CONTENT 4 -- Solving the challenges*/}
             <div
               className={`w-full flex flex-col md:gap-[30px] gap-[20px]`}
             >
@@ -139,25 +141,20 @@ const Teacher = () => {
                     lineHeight: "normal",
                   }}
                 >
-                  <div className={`md:flex hidden flex-col justify-center items-center" ${i18n.language === "en"
-                    ? "tracking-tight"
-                    : i18n.language === "ms"
-                      ? "tracking-wide"
-                      : i18n.language === "zh"
-                        ? "tracking-tighter"
-                        : "tracking-tight"
-                    }`}>
-                    {t("solve-challenge")}
+                  <div className={`md:flex hidden flex-col justify-center items-center`}>
+                    <div>{t("solve-challenge1")}</div>
+                    <div>{t("solve-challenge2")}</div>
+                    <div>{t("solve-challenge3")}</div>
+                    <div>{t("solve-challenge4")}</div>
                   </div>
 
                   <div className="md:hidden flex flex-col justify-center items-center tracking-wide">
-                    <div>{t("mobile-solve-challenge1")}</div>
-                    <div>{t("mobile-solve-challenge2")}</div>
+                    <div>{t("mobile-solve-challenge")}</div>
                   </div>
                 </div>
               </div>
             </div>
-            {/*CONTENT 5*/}
+            {/*CONTENT 5 -- Fully harnesses*/}
             <div
               className={`w-full flex flex-col md:gap-[30px] gap-[20px]`}
             >
@@ -177,10 +174,13 @@ const Teacher = () => {
                   }}
                 >
                   <div className="flex flex-col">
-                    <div className={`md:flex hidden inline-block ${(i18n.language === 'zh') ? '' : 'tracking-wider'}`}>
-                      {t("harness-power1")}
-                      {i18n.language === 'zh' ? <><div>{t("harness-power2")}</div><div>{t("harness-power3")}</div></> : ''}
+                    <div className={`md:flex hidden flex-col justify-center items-center`}>
+                      <div>{t("harness-power1")}</div>
+                      <div>{t("harness-power2")}</div>
+                      <div>{t("harness-power3")}</div>
+                      <div>{t("harness-power4")}</div>
                     </div>
+
                     <div className={`md:hidden flex flex-col inline-block ${(i18n.language === 'zh') ? '' : 'tracking-wider'}`}>
                       {t("mobile-harness-power1")}
                       {i18n.language === 'zh' ? <><div>{t("mobile-harness-power2")}</div><div>{t("mobile-harness-power3")}</div></> : ''}
@@ -189,7 +189,7 @@ const Teacher = () => {
                 </div>
               </div>
             </div>
-            {/*CONTENT 6*/}
+            {/*CONTENT 6 -- Offer a solution*/}
             <div
               className={`w-full flex flex-col md:gap-[30px] gap-[20px]`}
             >
@@ -208,20 +208,20 @@ const Teacher = () => {
                     lineHeight: "normal",
                   }}
                 >
-                  <div className={`md:flex hidden flex-col text-pretty text-center ${(i18n.language === 'zh' ? '' : 'tracking-wider')}`}>
+                  <div className={`md:flex hidden flex-col text-pretty text-center`}>
                     <div>{t("take-pride")}</div>
                     <div>{t("take-pride2")}</div>
                     <div>{t("take-pride3")}</div>
+                    <div>{t("take-pride4")}</div>
                   </div>
-                  <div className={`md:hidden flex flex-col text-pretty text-center ${(i18n.language === 'zh' ? '' : 'tracking-wider')}`}>
+                  <div className={`md:hidden flex flex-col text-pretty text-center`}>
                     <div>{t("mobile-take-pride1")}</div>
                     <div>{t("mobile-take-pride2")}</div>
-                    <div>{t("mobile-take-pride3")}</div>
                   </div>
                 </div>
               </div>
             </div>
-            {/*CONTENT 7*/}
+            {/*CONTENT 7 -- Kindertown community*/}
             <div
               className={`w-full flex flex-col md:gap-[30px] gap-[20px] md:pb-[150px] pb-[50px]`}
             >
@@ -240,18 +240,23 @@ const Teacher = () => {
                     lineHeight: "normal",
                   }}
                 >
-                  <div className={`md:flex hidden flex-col text-center ${!(i18n.language === 'zh') ? 'tracking-wider' : ''}`}>
-                    {t("kingdom-community")}
+                  <div className={`md:flex hidden flex-col text-pretty text-center`}>
+                    <div>{t("kingdom-community1")}</div>
+                    <div>{t("kingdom-community2")}</div>
+                    <div>{t("kingdom-community3")}</div>
+                    <div>{t("kingdom-community4")}</div>
+                    <div>{t("kingdom-community5")}</div>
                   </div>
-                  <div className={`flex md:hidden flex-col text-center ${!(i18n.language === 'zh') ? 'tracking-wider' : ''}`}>
+                  <div className={`flex md:hidden flex-col text-center ${i18n.language != 'en' ? 'text-balance' : ''}`}>
                     <div>{t("mobile-kingdom-community1")}</div>
                     <div>{t("mobile-kingdom-community2")}</div>
                     <div>{t("mobile-kingdom-community3")}</div>
+                    <div>{t("mobile-kingdom-community4")}</div>
                   </div>
                 </div>
               </div>
             </div>
-            
+
 
             {/*CONTENT 8*/}
 

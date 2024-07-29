@@ -7,7 +7,7 @@ import Teacher from "./Pages/Teachers";
 import Admin from "./Pages/Admins";
 import ReferralProgrames from "./Pages/ReferralProgrames";
 import CareerOpportunities from "./Pages/CareerOpportunities";
-import Download from "./Pages/Download";
+// import Download from "./Pages/Download";
 import ScrollUp from "react-scroll-up";
 import arrowUpImage from "../src/assets/up1-01.png";
 import DownloadParent from "./Pages/DownloadParents";
@@ -31,7 +31,7 @@ function App() {
             path="/join-us/career-opportunities"
             element={<CareerOpportunities />}
           />
-          <Route path="/download" element={<Download />} />
+          {/* <Route path="/download" element={<Download />} /> */}
           <Route path="/download/parent" element={<DownloadParent />} />
           <Route path="/download/teacher" element={<DownloadTeacher />} />
           <Route path="/download/admin" element={<DownloadAdmin />} />

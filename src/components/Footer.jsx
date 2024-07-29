@@ -14,6 +14,9 @@ const Footer = () => {
   const [PrivacyOpen, setPrivacyOpen] = useState(false);
   const [TermsOpen, setTermsOpen] = useState(false);
   const [AboutOpen, setAboutOpen] = useState(false);
+  const handleModalClick = (e) => {
+    e.stopPropagation();
+  }
 
   const { t } = useTranslation();
   return (
@@ -62,10 +65,14 @@ const Footer = () => {
                     className="flex flex-col md:gap-4 md:text-xl"
                     style={{ fontFamily: "SF Pro Display M" }}
                   >
-                    <div className="flex md:gap-9">
+                    <div className="flex md:gap-9" >
                       <div className="md:w-[207px]">
                         <Link
-                          onClick={() => setAboutOpen(true)}
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            e.preventDefault();
+                            setAboutOpen(true);
+                          }}
                           className="hover:text-[#F67F00]"
                         >
                           {t("about-us")}

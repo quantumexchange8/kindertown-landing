@@ -44,7 +44,7 @@ const DownloadAdmin = () => {
                                     fontFamily: "SF Pro Display B",
                                     lineHeight: "normal",
                                 }}>
-                                <div className="text-balance">{t("adminmodal-title1")}</div>
+                                <div>{t("adminmodal-title1")}</div>
                                 <div>{t("adminmodal-title2")}</div>
                                 <div>{t("adminmodal-title3")}</div>
                             </div>
@@ -75,7 +75,7 @@ const DownloadAdmin = () => {
                                     fontFamily: "SF Pro Display Semibold",
                                     lineHeight: "normal",
                                 }}>
-                                    <div className="">{t("mobile-adminmodal-desc1")}</div>
+                                    <div>{t("mobile-adminmodal-desc1")}</div>
                                     <div>{t("mobile-adminmodal-desc2")}</div>
                                     <div>{t("mobile-adminmodal-desc3")}</div>
                                     </div>
@@ -90,7 +90,7 @@ const DownloadAdmin = () => {
                                 className="md:w-[250px] md:h-[250px] w-[100px] h-[100px]" />
                         </div>
 
-                        <div className="w-full flex flex-row md:gap-[50px] justify-between align-center">
+                        <div className="flex flex-row md:gap-[50px] gap-[20px] justify-between align-center">
                             <img
                                 src={apple}
                                 alt="playstore"

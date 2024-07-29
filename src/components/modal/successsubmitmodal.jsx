@@ -30,19 +30,37 @@ const SuccessSubmitmodal = ({ showSuccessSubmit, setShowSuccessSubmit }) => {
                         onClick={handleCloseModal}
                     >
                         <div
-                            className="relative w-full max-w-[255px] flex justify-center modal-content"
+                            className="relative w-full md:max-w-[255px] max-w-[155px] flex justify-center modal-content"
                             onClick={handleModalClick}
                         >
-                            <div className="border-0 w-full md:rounded-[16.393px] relative flex flex-col bg-white outline-none focus:outline-none justify-center items-center">
-                                <div className="md:w-[255px] md:h-[200px] w-full flex flex-col gap-[30px] md:px-[45px] px-[30px] justify-center items-center">
+                            <div className="relative flex flex-col outline-none focus:outline-none justify-center items-center">
+                                <div className="w-[255px] h-[200px] w-full md:flex flex-col hidden 
+                                gap-[30px] px-[45px] justify-center items-center bg-white border rounded-[16.393px]">
                                     <img
                                         src={SuccessSubmit}
                                         alt="SuccessSubmit"
-                                        className="md:w-[81.967px] md:h-[81.967px]"
+                                        className="w-[81.967px] md:h-[81.967px] "
                                     />
 
                                     <div
                                         className="flex flex-col justify-center text-center text-[24px] font-semibold"
+                                        style={{
+                                            fontFamily: "SF Pro Display Semibold",
+                                            lineHeight: "normal"
+                                        }}>
+                                        {t("message-sent")}
+                                    </div>
+                                </div>
+                                <div className=" w-[155px] h-[122px] w-full flex flex-col md:hidden fixed top-[40px]
+                                gap-[20px] px-[20px] justify-center items-center bg-white border rounded-[16.393px]">
+                                    <img
+                                        src={SuccessSubmit}
+                                        alt="SuccessSubmit"
+                                        className="w-[50px] h-[50px]"
+                                    />
+
+                                    <div
+                                        className="flex flex-col justify-center text-center text-[16px] font-semibold"
                                         style={{
                                             fontFamily: "SF Pro Display Semibold",
                                             lineHeight: "normal"

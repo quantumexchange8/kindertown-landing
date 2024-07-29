@@ -68,33 +68,34 @@ const DownloadParent = () => {
                                         }}>
                                         <div className="pb-[20px]">{t("mobile-parentmodal-desc1")}</div>
                                         <div>{t("mobile-parentmodal-desc2")}</div>
-                                        <div>{t("mobile-parentmodal-desc3")}</div>
                                     </div></>
                                 : <>
                                     {/* web view */}
-                                    <div className="md:text-[32px] md:flex flex-col hidden px-[30px] md:font-medium md:gap-[30px] "
+                                    <div className="md:text-[32px] md:flex flex-col hidden px-[30px] md:font-medium"
                                         style={{
                                             fontFamily: "SF Pro Display M",
                                             lineHeight: "normal",
                                         }}>
                                         <div>{t("parentmodal-desc1")}</div>
-                                        <div className={`${i18n.language === 'ms' ? "text-balance" : ""}`}>{t("parentmodal-desc2")}</div>
+                                        <div>{t("parentmodal-desc2")}</div>
+                                        <div className="pb-[30px]">{t("parentmodal-desc3")}</div>
+                                        <div>{t("parentmodal-desc4")}</div>
+                                        <div>{t("parentmodal-desc5")}</div>
+                                        <div>{t("parentmodal-desc6")}</div>
                                     </div>
                                     {/* mobile view */}
-                                    <div className=" text-sm md:hidden flex flex-col font-semibold text-balance tracking-wider gap-[20px]"
+                                    <div className=" text-sm md:hidden flex flex-col font-semibold gap-[30px]"
                                         style={{
                                             fontFamily: "SF Pro Display R",
                                             lineHeight: "normal",
                                         }}>
-                                        <div className="text-pretty">
+                                        <div>
                                             <div>{t("mobile-parentmodal-desc1")}</div>
                                             <div>{t("mobile-parentmodal-desc2")}</div>
                                             <div>{t("mobile-parentmodal-desc3")}</div>
                                         </div>
                                         <div>
                                             <div>{t("mobile-parentmodal-desc4")}</div>
-                                            <div>{t("mobile-parentmodal-desc5")}</div>
-                                            <div>{t("mobile-parentmodal-desc6")}</div>
                                         </div>
                                     </div></>
                             }

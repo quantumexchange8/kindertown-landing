@@ -23,21 +23,21 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
               className="relative w-full md:max-w-[900px] overflow-auto  my-auto md:py-[50px] flex  modal-content"
               onClick={handleModalClick}
             >
-              <div className="md:hidden fixed z-50 bottom-[20px] right-[20px]">
-                <button onClick={() => setPrivacyOpen(false)}>
-                  <img
-                    src={close}
-                    alt="CloseButton"
-                    className="md:w-[60px] md:h-[60px] w-[50px] h-[50px]"
-                  />
-                </button>
-              </div>
               {/*content*/}
               <div className="border-0 md:rounded-[50px] shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none  justify-center items-center md:px-0 pl-[41px] pr-[42px] md:pt-20 pt-[50px] md:pb-[100px] pb-[60px]">
                 <div className="w-full flex flex-col md:max-w-[700px] gap-[100px]">
                   <div className="flex flex-col md:gap-[200px] gap-[100px] text-[#000]">
-                    <div className="flex flex-col md:w-[74px] md:h-[50px] w-[55px]">
-                      <img src={logo} alt="Logo" />
+                  <div className="flex flex-row w-full h-[100px] justify-between">
+                      <img src={logo} alt="Logo" className="h-[100px]" />
+                      <div className="flex">
+                        <button onClick={() => setPrivacyOpen(false)}>
+                          <img
+                            src={close}
+                            alt="CloseButton"
+                            className="md:w-[60px] md:h-[60px] w-[30px] h-[30px]"
+                          />
+                        </button>
+                      </div>
                     </div>
                     {/*CONTENT 1*/}
                     <div className="w-full flex flex-col md:gap-10 gap-[30px]">
@@ -99,7 +99,7 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                               {" "}
                               kindertown.pro/privacy.
                             </span>
-                            <div className=" hidden md:flex absolute top-[224px] right-0">
+                            {/* <div className=" hidden md:flex absolute top-[224px] right-0">
                               <button onClick={() => setPrivacyOpen(false)}>
                                 <img
                                   src={close}
@@ -107,7 +107,7 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                                   className="w-[60px] h-[60px]"
                                 />
                               </button>
-                            </div>
+                            </div> */}
                           </div>
                           <div className="flex flex-col">
                             You can familiarize yourself with our privacy
