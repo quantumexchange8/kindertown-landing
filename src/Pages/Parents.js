@@ -336,21 +336,21 @@ const Parent = () => {
                     <img
                       src={Jam1}
                       alt="Jam1"
-                      className="w-max-full h-auto"
+                      className="w-max-full h-full"
                     />
                   </div>
                   <div className="md:flex md:flex-row w-1/3">
                     <img
                       src={Jam2}
                       alt="Jam2"
-                      className="w-max-full h-auto"
+                      className="w-max-full h-full"
                     />
                   </div>
                   <div className="md:flex md:flex-row w-1/3">
                     <img
                       src={Jam3}
                       alt="Jam3"
-                      className="w-max-full h-auto"
+                      className="w-max-full h-full"
                     />
                   </div>
                 </div>
@@ -359,20 +359,20 @@ const Parent = () => {
                     <img
                       src={Phone6}
                       alt="Phone6"
-                      className="w-max-full h-auto"
+                      className="w-max-full h-full"
                     />
                   </div>
                   <div className="md:flex md:flex-row w-1/3">
                     <img
                       src={Phone7}
                       alt="Phone7"
-                      className="w-max-full h-auto"
+                      className="w-max-full h-full"
                     />
                   </div><div className="md:flex md:flex-row w-1/3">
                     <img
                       src={Phone8}
                       alt="Phone8"
-                      className="w-max-full h-auto"
+                      className="w-max-full h-full"
                     />
                   </div>
                 </div>

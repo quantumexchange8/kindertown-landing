@@ -17,7 +17,7 @@ const Navbar = () => {
   const [activeProductSubPage, setActiveProductSubPage] = useState("parent"); // Default active sub-page for Products section
   // const [activeJoinUsSubPage, setActiveJoinUsSubPage] =
   //   useState("referral-program");
-  const [activeDownloadsSubPage, setActiveDownloadsSubpage] = useState("parents");
+  const [activeDownloadsSubPage, setActiveDownloadsSubpage] = useState("parent");
   const [showMenu, setShowMenu] = useState(false); // State to manage the visibility of the menu
   const [showLanguageModal, setShowLanguageModal] = useState(false); // State to manage visibility of mobile view language menu (as modal)
   const [showProduct, setProduct] = useState(false);
@@ -266,7 +266,7 @@ const Navbar = () => {
               setFormOpen(true)
               setIsLanguageOpen(false)
             }}
-            className="md:w-[25px] md:h-[25px]">
+            className="md:w-[30px] md:h-[30px]">
               <div
                 className={`transition duration-300 ease-in-out transform ${isHovered ? "hover:scale-110 opacity-90" : ""
                   }`}
