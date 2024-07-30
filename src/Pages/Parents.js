@@ -7,12 +7,18 @@ import Phone2 from "../assets/parent/phone2.png";
 import Phone3 from "../assets/parent/phone3.png";
 import Phone4 from "../assets/parent/phone4.png";
 import Phone5 from "../assets/parent/phone5.png";
-import Phone6 from "../assets/parent/phone6.png";
-import Phone7 from "../assets/parent/phone7.png";
+import Phone6 from "../assets/parent/phone6.svg";
+import Phone7 from "../assets/parent/phone7.svg";
 import Phone8 from "../assets/parent/phone8.png";
-import Jam1 from "../assets/parent/jam1.png";
-import Jam2 from "../assets/parent/jam2.png";
-import Jam3 from "../assets/parent/jam3.png";
+import Phone9 from "../assets/parent/phone9.svg";
+import Phone10 from "../assets/parent/phone10.svg";
+import Phone11 from "../assets/parent/phone11.png";
+import Jam1 from "../assets/parent/jam1.svg";
+import Jam2 from "../assets/parent/jam2.svg";
+import Jam3 from "../assets/parent/jam3.svg";
+import Jam4 from "../assets/parent/jam4.svg";
+import Jam5 from "../assets/parent/jam5.svg";
+import Jam6 from "../assets/parent/jam6.svg";
 import BringExpert from "../assets/indoors_day.mp4";
 import { useTranslation } from "react-i18next";
 
@@ -31,6 +37,8 @@ const Parent = () => {
                   autoPlay
                   loop
                   muted
+                  playsInline
+                  preload="auto"
                   className="absolute md:top-0 left-0 w-full h-[300px] md:h-auto object-cover object-center"
                 />
 
@@ -38,7 +46,6 @@ const Parent = () => {
                   <div
                     className={`md:text-[64px] text-2xl font-bold`}
                     style={{
-                      fontFamily: "SF Pro Display B",
                       lineHeight: "normal",
                     }}
                   >
@@ -48,38 +55,25 @@ const Parent = () => {
                 </div>
               </div>
             </div>
-            <div className="w-full flex flex-col gap-[30px]">
+            <div className="w-full flex flex-col gap-[30px] px-[30px]">
               <div className="flex flex-col justify-center items-center">
                 <div
-                  className={`text-center md:text-[80px] text-[24px] ${i18n.language === "zh" ? "font-bold" : ""
-                    }`}
+                  className={`text-center md:text-[80px] text-[24px] font-bold`}
                   style={{
-                    fontFamily: "SF Pro Display B",
                     lineHeight: "normal",
                   }}
                 >
-                  {/*mandarin*/}
-                  {i18n.language === "zh" && <div>{t("KT-parents")} </div>}
+                  <div className="flex flex-col justify-center items-center text-center">
+                    {t("KT-parents")}
+                  </div>
 
-                  {/*eng and ms - web*/}
-                  {(i18n.language === "ms" || i18n.language === "en") && (
-                    <div className="flex flex-col justify-center items-center text-center">
-                      <div className="hidden md:flex flex-col ">
-                        {t("KT-parents")}
-                      </div>
-                      <div className="md:hidden flex flex-col">
-                        <div> {t("KT-parents")}</div>
-                      </div>
-                    </div>
-                  )}
                 </div>
               </div>
 
               <div className="flex flex-col justify-center items-center">
                 <div
-                  className={`text-center text-sm md:text-[32px] indent-px`}
+                  className={`text-center text-sm md:text-[32px] font-medium`}
                   style={{
-                    fontFamily: "SF Pro Display M",
                     lineHeight: "normal",
                   }}
                 >
@@ -88,27 +82,24 @@ const Parent = () => {
                       <><div className="md:inline-block hidden md:w-[785px] ">
                         {t("KT-parent-desc")}
                       </div>
-                        <div className="md:hidden inline-block w-3/5 flex flex-col items-center justify-center text-center">
-                          <div>{t("mobile-KT-parent-desc1")}</div>
-                          <div>{t("mobile-KT-parent-desc2")}</div>
+                        <div className="md:hidden inline-block w-full flex flex-col items-center justify-center font-semibold text-center">
+                          <div>{t("mobile-KT-parent-desc")}</div>
                         </div></>
                     )}
                     {i18n.language === "ms" && (
-                      <><div className="md:inline-block md:w-[1000px] hidden md:leading-none tracking-wider">
+                      <><div className="md:inline-block md:w-[1000px] hidden md:leading-none">
                         {t("KT-parent-desc")}
                       </div>
-                        <div className="md:hidden inline-block w-4/5 flex flex-col items-center justify-center text-center font-semibold tracking-wider">
-                          <div>{t("mobile-KT-parent-desc1")}</div>
-                          <div>{t("mobile-KT-parent-desc2")}</div>
+                        <div className="md:hidden inline-block w-full flex flex-col items-center justify-center text-center">
+                          <div>{t("mobile-KT-parent-desc")}</div>
                         </div></>
                     )}
                     {i18n.language === "zh" && (
-                      <><div className="md:inline-block md:w-[1000px] hidden md:leading-none font-semibold tracking-wider" style={{fontFamily: "SF Pro Display Semibold", lineHeight:"normal"}}>
+                      <><div className="md:inline-block md:w-[1000px] hidden md:leading-none font-semibold" style={{ lineHeight: "normal" }}>
                         {t("KT-parent-desc")}
                       </div>
                         <div className="md:hidden inline-block w-full flex flex-col items-center justify-center text-center font-semibold">
-                          <div>{t("mobile-KT-parent-desc1")}</div>
-                          <div>{t("mobile-KT-parent-desc2")}</div>
+                          <div>{t("mobile-KT-parent-desc")}</div>
                         </div></>
                     )}
                   </div>
@@ -136,7 +127,6 @@ const Parent = () => {
                   <div
                     className={`text-center md:w-[480px] text-[#F67F00] font-bold md:text-[64px] text-base`}
                     style={{
-                      fontFamily: "SF Pro Display B",
                       lineHeight: "normal",
                     }}
                   >
@@ -160,7 +150,6 @@ const Parent = () => {
                   <div
                     className={`w-full text-[#64697A] md:text-[64px] text-[16px] font-bold md:h-[800px]`}
                     style={{
-                      fontFamily: "SF Pro Display B",
                       lineHeight: "normal",
                     }}
                   >
@@ -206,7 +195,6 @@ const Parent = () => {
                   <div
                     className={`text-center  w-full text-[#003A91] md:text-[64px] text-[16px] font-bold`}
                     style={{
-                      fontFamily: "SF Pro Display B",
                       lineHeight: "normal",
                     }}
                   >
@@ -237,7 +225,6 @@ const Parent = () => {
                       : "md:text-[50px] "
                       }`}
                     style={{
-                      fontFamily: "SF Pro Display B",
                       lineHeight: "normal",
                     }}
                   >
@@ -273,7 +260,6 @@ const Parent = () => {
                   <div
                     className={`text-center w-full text-[#4D9138] md:text-[64px] font-bold text-base`}
                     style={{
-                      fontFamily: "SF Pro Display B",
                       lineHeight: "normal",
                     }}
                   >
@@ -305,7 +291,7 @@ const Parent = () => {
                 </div>
               </div>
             </div>
-            
+
             {/* CONTENT 7 */}
             <div className={`md:w-[1000px] flex flex-wrap gap-[30px] md:gap-[100px]`}>
               <div className="flex flex-col justify-center items-center w-full">
@@ -313,7 +299,6 @@ const Parent = () => {
                   <div
                     className={`text-center md:text-[48px] text-base font-bold`}
                     style={{
-                      fontFamily: "SF Pro Display B",
                       lineHeight: "normal",
                     }}
                   >
@@ -330,49 +315,98 @@ const Parent = () => {
                   </div>
                 </div>
               </div>
-              <div className="w-full flex flex-wrap md:gap-[100px] gap-4">
+              <div className="w-full md:flex flex-wrap hidden md:gap-[100px] align-center">
                 <div className="flex justify-between w-full">
-                  <div className="md:flex md:flex-row w-1/3">
+                  <div className="flex flex-row">
                     <img
                       src={Jam1}
                       alt="Jam1"
-                      className="w-max-full h-full"
+                      className="w-max-full"
                     />
                   </div>
-                  <div className="md:flex md:flex-row w-1/3">
+                  <div className="flex flex-row">
                     <img
                       src={Jam2}
                       alt="Jam2"
-                      className="w-max-full h-full"
+                      className="w-max-full"
                     />
                   </div>
-                  <div className="md:flex md:flex-row w-1/3">
+                  <div className="flex flex-row">
                     <img
                       src={Jam3}
                       alt="Jam3"
-                      className="w-max-full h-full"
+                      className="w-max-full"
                     />
                   </div>
                 </div>
                 <div className="flex justify-between w-full">
-                  <div className="md:flex md:flex-row w-1/3">
+                  <div className="md:flex md:flex-row">
                     <img
                       src={Phone6}
                       alt="Phone6"
-                      className="w-max-full h-full"
+                      className="w-max-full"
                     />
                   </div>
-                  <div className="md:flex md:flex-row w-1/3">
+                  <div className="md:flex md:flex-row">
                     <img
                       src={Phone7}
                       alt="Phone7"
-                      className="w-max-full h-full"
+                      className="w-max-full"
                     />
-                  </div><div className="md:flex md:flex-row w-1/3">
+                  </div>
+                  <div className="md:flex md:flex-row">
                     <img
                       src={Phone8}
                       alt="Phone8"
-                      className="w-max-full h-full"
+                      className="w-max-full"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="w-full flex flex-wrap md:hidden align-center gap-4">
+                <div className="flex justify-between w-full">
+                  <div className="flex flex-row">
+                    <img
+                      src={Jam4}
+                      alt="Jam4"
+                      className="w-max-full"
+                    />
+                  </div>
+                  <div className="flex flex-row">
+                    <img
+                      src={Jam5}
+                      alt="Jam5"
+                      className="w-max-full"
+                    />
+                  </div>
+                  <div className="flex flex-row">
+                    <img
+                      src={Jam6}
+                      alt="Jam6"
+                      className="w-max-full"
+                    />
+                  </div>
+                </div>
+                <div className="flex justify-between w-full">
+                  <div className="flex flex-row">
+                    <img
+                      src={Phone9}
+                      alt="Phone9"
+                      className="w-max-full"
+                    />
+                  </div>
+                  <div className="md:flex md:flex-row">
+                    <img
+                      src={Phone10}
+                      alt="Phone10"
+                      className="w-max-full"
+                    />
+                  </div>
+                  <div className="md:flex md:flex-row">
+                    <img
+                      src={Phone11}
+                      alt="Phone11"
+                      className="w-max-full"
                     />
                   </div>
                 </div>

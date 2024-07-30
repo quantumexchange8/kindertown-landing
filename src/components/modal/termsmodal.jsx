@@ -32,9 +32,9 @@ const termsmodal = ({ TermsOpen, setTermsOpen }) => {
                 </button>
               </div> */}
               {/*content*/}
-              <div className="border-0 md:rounded-[50px] relative flex flex-col w-full bg-white outline-none focus:outline-none justify-center items-center md:px-0 pl-[41px] pr-[42px] md:pt-20 pt-[50px] md:pb-[100px] pb-[60px]">
+              <div className="border-0 md:rounded-[50px] relative flex flex-col w-full bg-white outline-none focus:outline-none justify-center items-center md:px-0 px-[30px] md:pt-20 pt-[50px] md:pb-[100px] pb-[60px]">
                 <div className="md:w-[700px] w-full flex flex-col gap-[100px]">
-                  <div className="flex flex-col md:gap-[200px] gap-[100px]">
+                  <div className="flex flex-col md:gap-[60px] gap-[50px]">
                   <div className="flex flex-row w-full h-[100px] justify-between">
                       <img src={logo} alt="Logo" className="h-[100px]" />
                       <div className="flex">
@@ -49,36 +49,32 @@ const termsmodal = ({ TermsOpen, setTermsOpen }) => {
                     </div>
                     {/*CONTENT 1*/}
 
-                    <div className="w-full flex flex-col md:gap-5 gap-[15px] text-[#000]">
+                    <div className="w-full flex flex-col md:gap-[30px] gap-[20px] text-[#000]">
                       <div
-                        className="md:w-[620px] w-full md:text-5xl text-xl"
-                        style={{ fontFamily: "SF Pro Display B" }}
+                        className="md:w-[620px] w-full md:text-5xl text-2xl font-bold"
                       >
                         Kindertown Website Terms of Use
                       </div>
                       <div
-                        className="md:text-[28px] text-base"
-                        style={{ fontFamily: "SF Pro Display M" }}
+                        className="md:text-[24px] text-base"
                       >
                         Information & Notices
                       </div>
                     </div>
                   </div>
                   {/*CONTENT 2*/}
-                  <div className="w-full flex flex-col md:gap-[91px] gap-[100px]">
+                  <div className="w-full flex flex-col md:gap-[150px] gap-[50px]">
                     {" "}
-                    <div className="w-full flex flex-col gap-5 text-[#000]">
+                    <div className="w-full flex flex-col gap-[10px] text-[#000]">
                       <div
-                        className="md:text-3xl text-xl"
-                        style={{ fontFamily: "SF Pro Display B" }}
+                        className="md:text-[32px] font-bold text-xl"
                       >
-                        Ownership of Site; Agreement to Terms of Use
+                        Ownership of Site; <br></br> Agreement to Terms of Use
                       </div>
 
                       <div
-                        className="md:text-2xl text-base"
+                        className="md:text-2xl text-sm font-medium"
                         style={{
-                          fontFamily: "SF Pro Display M",
                           lineHeight: "normal",
                         }}
                       >
@@ -87,11 +83,11 @@ const termsmodal = ({ TermsOpen, setTermsOpen }) => {
                             These Terms and Conditions of Use (hereinafter
                             referred to as the "Terms of Use") apply to the
                             Kindertown website located at{" "}
-                            <span className="text-[#0075FE]">
+                            <span className="text-[#0075FE] underline">
                               www.kindertown.pro
                             </span>
                             , and all associated sites linked to{" "}
-                            <span className="text-[#0075FE]">
+                            <span className="text-[#0075FE] underline">
                               www.kindertown.pro
                             </span>{" "}
                             by Kindertown, its subsidiaries, and affiliated
@@ -120,17 +116,15 @@ const termsmodal = ({ TermsOpen, setTermsOpen }) => {
                     </div>
                     <div className="flex flex-col md:gap-[150px] gap-[100px] text-[#000]">
                       {/*CONTENT 3*/}
-                      <div className="flex flex-col gap-5">
+                      <div className="flex flex-col gap-[10px]">
                         <div
-                          className="md:text-3xl text-xl"
-                          style={{ fontFamily: "SF Pro Display B" }}
+                          className="md:text-[32px] font-bold text-xl"
                         >
                           Content
                         </div>
                         <div
-                          className="md:text-xl text-base flex flex-col md:gap-7 gap-4"
+                          className="md:text-[24px] font-medium text-sm flex flex-col md:gap-7 gap-4"
                           style={{
-                            fontFamily: "SF Pro Display M",
                             lineHeight: "normal",
                           }}
                         >
@@ -165,7 +159,6 @@ const termsmodal = ({ TermsOpen, setTermsOpen }) => {
                             <ul className="list-none list-inside pt-2 md:pt-0">
                               <li>
                                 <span
-                                  style={{ fontFamily: "SF Pro Display B" }}
                                 >
                                   (1){" "}
                                 </span>
@@ -174,7 +167,6 @@ const termsmodal = ({ TermsOpen, setTermsOpen }) => {
                               </li>
                               <li>
                                 <span
-                                  style={{ fontFamily: "SF Pro Display B" }}
                                 >
                                   (2){" "}
                                 </span>
@@ -185,7 +177,6 @@ const termsmodal = ({ TermsOpen, setTermsOpen }) => {
                               </li>
                               <li>
                                 <span
-                                  style={{ fontFamily: "SF Pro Display B" }}
                                 >
                                   (3){" "}
                                 </span>
@@ -194,7 +185,6 @@ const termsmodal = ({ TermsOpen, setTermsOpen }) => {
                               </li>
                               <li>
                                 <span
-                                  style={{ fontFamily: "SF Pro Display B" }}
                                 >
                                   (4){" "}
                                 </span>
@@ -206,19 +196,17 @@ const termsmodal = ({ TermsOpen, setTermsOpen }) => {
                         </div>
                       </div>
                       {/*CONTENT 4*/}
-                      <div className="flex flex-col gap-5">
+                      <div className="flex flex-col gap-[10px]">
                         <div
-                          className="md:text-3xl text-xl"
+                          className="md:text-[32px] font-bold text-xl"
                           style={{
-                            fontFamily: "SF Pro Display B",
                             lineHeight: "normal",
                           }}
                         >
                           Your Use of the Website
                         </div>
                         <div
-                          className="md:text-xl text-base flex flex-col md:gap-7 gap-4"
-                          style={{ fontFamily: "SF Pro Display M" }}
+                          className="md:text-2xl text-sm font-medium flex flex-col md:gap-7 gap-4"
                         >
                           <div>
                             You may not use any "deep-link," "page-scrape,"
@@ -292,16 +280,14 @@ const termsmodal = ({ TermsOpen, setTermsOpen }) => {
                         </div>
                       </div>
                       {/*CONTENT 5*/}
-                      <div className="flex flex-col gap-5">
+                      <div className="flex flex-col gap-[10px]">
                         <div
-                          className="md:text-3xl text-xl"
-                          style={{ fontFamily: "SF Pro Display B" }}
+                          className="md:text-[32px] font-bold text-xl"
                         >
                           Accounts, Passwords, and Security
                         </div>
                         <div
-                          className="md:text-xl text-base flex flex-col md:gap-7 gap-4"
-                          style={{ fontFamily: "SF Pro Display M" }}
+                          className="md:text-2xl text-sm font-medium flex flex-col md:gap-7 gap-4"
                         >
                           <div>
                             Certain features or services offered on the website
@@ -334,16 +320,14 @@ const termsmodal = ({ TermsOpen, setTermsOpen }) => {
                         </div>
                       </div>
                       {/*CONTENT 6*/}
-                      <div className="flex flex-col gap-5">
+                      <div className="flex flex-col gap-[10px]">
                         <div
-                          className="md:text-3xl text-xl"
-                          style={{ fontFamily: "SF Pro Display B" }}
+                          className="md:text-[32px] font-bold text-xl"
                         >
                           Disclaimer
                         </div>
                         <div
-                          className="md:text-xl text-base flex flex-col md:gap-7 gap-4"
-                          style={{ fontFamily: "SF Pro Display M" }}
+                          className="md:text-2xl text-sm font-medium flex flex-col md:gap-7 gap-4"
                         >
                           <div>
                             Kindertown does not guarantee that the website or
@@ -387,7 +371,6 @@ const termsmodal = ({ TermsOpen, setTermsOpen }) => {
                             <ul className="list-none list-inside">
                               <li>
                                 <span
-                                  style={{ fontFamily: "SF Pro Display B" }}
                                 >
                                   (1){" "}
                                 </span>
@@ -397,7 +380,6 @@ const termsmodal = ({ TermsOpen, setTermsOpen }) => {
                               </li>
                               <li>
                                 <span
-                                  style={{ fontFamily: "SF Pro Display B" }}
                                 >
                                   (2){" "}
                                 </span>
@@ -407,7 +389,6 @@ const termsmodal = ({ TermsOpen, setTermsOpen }) => {
                               </li>
                               <li>
                                 <span
-                                  style={{ fontFamily: "SF Pro Display B" }}
                                 >
                                   (3){" "}
                                 </span>

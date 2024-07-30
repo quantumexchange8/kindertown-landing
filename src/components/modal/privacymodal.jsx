@@ -20,13 +20,13 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
             onClick={handleCloseModal}
           >
             <div
-              className="relative w-full md:max-w-[900px] overflow-auto  my-auto md:py-[50px] flex  modal-content"
+              className="relative w-full md:max-w-[1000px] overflow-auto  my-auto md:py-[50px] flex  modal-content"
               onClick={handleModalClick}
             >
               {/*content*/}
-              <div className="border-0 md:rounded-[50px] shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none  justify-center items-center md:px-0 pl-[41px] pr-[42px] md:pt-20 pt-[50px] md:pb-[100px] pb-[60px]">
-                <div className="w-full flex flex-col md:max-w-[700px] gap-[100px]">
-                  <div className="flex flex-col md:gap-[200px] gap-[100px] text-[#000]">
+              <div className="border-0 md:rounded-[50px] shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none justify-center items-center md:px-0 px-[30px] md:pt-20 pt-[50px] md:pb-[100px] pb-[60px]">
+                <div className="w-full flex flex-col md:max-w-[800px] gap-[100px]">
+                  <div className="flex flex-col md:gap-[60px] gap-[50px] text-[#000]">
                   <div className="flex flex-row w-full h-[100px] justify-between">
                       <img src={logo} alt="Logo" className="h-[100px]" />
                       <div className="flex">
@@ -40,18 +40,16 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                       </div>
                     </div>
                     {/*CONTENT 1*/}
-                    <div className="w-full flex flex-col md:gap-10 gap-[30px]">
-                      <div className="flex flex-col md:gap-5 gap-[15px]">
+                    <div className="w-full flex flex-col gap-[10px]">
+                      <div className="flex flex-col md:gap-[30px] gap-[15px]">
                         <div
-                          className="md:text-5xl text-xl"
-                          style={{ fontFamily: "SF Pro Display B" }}
+                          className="md:text-5xl text-xl font-bold"
                         >
                           Kindertown Privacy Policy
                         </div>
                         <div
-                          className="md:text-[28px] text-base"
+                          className="md:text-[24px] text-base font-semibold"
                           style={{
-                            fontFamily: "SF Pro Display M",
                             lineHeight: "normal",
                           }}
                         >
@@ -60,8 +58,7 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                         </div>
                       </div>
                       <div
-                        className="md:text-2xl text-base gap-[16px]"
-                        style={{ fontFamily: "SF Pro Display R" }}
+                        className="md:text-2xl text-base gap-[16px] font-medium"
                       >
                         Updated November 6, 2023
                       </div>
@@ -70,14 +67,13 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
 
                   <div className="w-full flex flex-col md:gap-[150px] gap-[100px] text-[#000]">
                     {/*CONTENT 2*/}
-                    <div className="flex flex-col gap-5">
+                    <div className="flex flex-col md:gap-[30px] gap-[10px]">
                       <div className="md:w-[150px] md:h-[150px] w-[100px] h-[100px]">
                         <img src={handshake} alt="Handshake" />
                       </div>
                       <div
-                        className="md:text-2xl text-base"
+                        className="md:text-2xl text-base md:font-medium font-semibold"
                         style={{
-                          fontFamily: "SF Pro Display M",
                           lineHeight: "normal",
                         }}
                       >
@@ -95,19 +91,10 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                             before using these features. You can also view this
                             information at any time by accessing settings
                             related to these features and/or online at
-                            <span className="text-[#0075FE]">
+                            <span className="text-[#0075FE] underline">
                               {" "}
-                              kindertown.pro/privacy.
-                            </span>
-                            {/* <div className=" hidden md:flex absolute top-[224px] right-0">
-                              <button onClick={() => setPrivacyOpen(false)}>
-                                <img
-                                  src={close}
-                                  alt="CloseButton"
-                                  className="w-[60px] h-[60px]"
-                                />
-                              </button>
-                            </div> */}
+                              kindertown.pro/privacy
+                            </span>.
                           </div>
                           <div className="flex flex-col">
                             You can familiarize yourself with our privacy
@@ -119,17 +106,15 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                     </div>
 
                     {/*CONTENT 3*/}
-                    <div className="flex flex-col gap-5">
+                    <div className="flex flex-col gap-[10px]">
                       <div
-                        className="md:text-3xl text-xl"
-                        style={{ fontFamily: "SF Pro Display B" }}
+                        className="md:text-[32px] text-xl font-bold"
                       >
                         What Is Personal Data at Kindertown?
                       </div>
                       <div
-                        className="flex flex-col md:gap-7 gap-4 md:text-xl text-base"
+                        className="flex flex-col md:gap-7 gap-4 md:text-2xl text-sm font-medium"
                         style={{
-                          fontFamily: "SF Pro Display M",
                           lineHeight: "normal",
                         }}
                       >
@@ -164,17 +149,15 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                     </div>
 
                     {/*CONTENT 4*/}
-                    <div className="flex flex-col gap-5">
+                    <div className="flex flex-col gap-[10px]">
                       <div
-                        className="md:text-3xl text-xl"
-                        style={{ fontFamily: "SF Pro Display B" }}
+                        className="md:text-[32px] text-xl font-bold"
                       >
                         Your Privacy Rights at Kindertown
                       </div>
                       <div
-                        className="flex flex-col md:gap-7 gap-4 md:text-xl text-base"
+                        className="flex flex-col md:gap-7 gap-4 md:text-2xl text-sm font-medium"
                         style={{
-                          fontFamily: "SF Pro Display M",
                           lineHeight: "normal",
                         }}
                       >
@@ -192,13 +175,8 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                         </div>
 
                         <div>
-                          <span
-                            style={{ fontFamily: "SF Pro Display B" }}
-                            className="font-[700]"
-                          >
-                            To exercise your privacy rights and choices and to
+                          To exercise your privacy rights and choices and to
                             ensure the security of your personal data,
-                          </span>
                           you must sign in to your Kindertown account and
                           undergo identity verification.
                         </div>
@@ -217,25 +195,23 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                           extremely impractical. If you are unable to access
                           Kindertown's privacy page from your location, you can
                           submit a request at{" "}
-                          <span className="text-[#0075FE]">
-                            kindertown.pro/support/contact.
-                          </span>
+                          <span className="text-[#0075FE] underline">
+                            kindertown.pro/support/contact
+                          </span>.
                         </div>
                       </div>
                     </div>
 
                     {/*CONTENT 5*/}
-                    <div className="flex flex-col gap-5">
+                    <div className="flex flex-col gap-[10px]">
                       <div
-                        className="md:text-3xl text-xl"
-                        style={{ fontFamily: "SF Pro Display B" }}
+                        className="md:text-[32px] text-xl font-bold"
                       >
                         Personal Data Kindertown Collects from You
                       </div>
                       <div
-                        className="flex flex-col md:gap-7 gap-4 md:text-xl text-base"
+                        className="flex flex-col md:gap-7 gap-4 md:text-2xl text-sm font-medium"
                         style={{
-                          fontFamily: "SF Pro Display M",
                           lineHeight: "normal",
                         }}
                       >
@@ -256,8 +232,7 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                           <ul className="list-inside list-disc flex flex-col md:gap-7 gap-4 ">
                             <li>
                               <span
-                                style={{ fontFamily: "SF Pro Display B" }}
-                                className="pl-0"
+                                className="font-bold"
                               >
                                 Account Information:{" "}
                               </span>
@@ -265,14 +240,14 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                               including email address, account status, and age.
                             </li>
                             <li>
-                              <span style={{ fontFamily: "SF Pro Display B" }}>
+                              <span className="font-bold">
                                 Contact Information:{" "}
                               </span>
                               Name, email address, physical address, phone
                               number, or other contact information
                             </li>
                             <li>
-                              <span style={{ fontFamily: "SF Pro Display B" }}>
+                              <span className="font-bold">
                                 Payment Information:{" "}
                               </span>{" "}
                               Data about your billing address and method of
@@ -280,7 +255,7 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                               other payment card information.
                             </li>
                             <li>
-                              <span style={{ fontFamily: "SF Pro Display B" }}>
+                              <span className="font-bold">
                                 Transaction Information:{" "}
                               </span>
                               Data about purchases of Kindertown-related
@@ -289,13 +264,13 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                               software.
                             </li>
                             <li>
-                              <span style={{ fontFamily: "SF Pro Display B" }}>
+                              <span className="font-bold">
                                 Fraud Prevention Information:
                               </span>{" "}
                               Data used to identify and prevent fraud.
                             </li>
                             <li>
-                              <span style={{ fontFamily: "SF Pro Display B" }}>
+                              <span className="font-bold">
                                 Usage Data:
                               </span>{" "}
                               Data about your activity on and use of our
@@ -305,7 +280,7 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                               other diagnostic data, and other usage data.
                             </li>
                             <li>
-                              <span style={{ fontFamily: "SF Pro Display B" }}>
+                              <span className="font-bold">
                                 Other Information You Provide to Us:
                               </span>{" "}
                               Details such as the content of your communications
@@ -325,17 +300,16 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                       </div>
                     </div>
                     {/*CONTENT 6*/}
-                    <div className="flex flex-col gap-5">
+                    <div className="flex flex-col gap-[10px]">
                       <div
-                        className="md:text-3xl text-xl"
-                        style={{ fontFamily: "SF Pro Display B" }}
+                        className="md:text-[32px] text-xl font-bold"
+                       style={{ lineHeight: "normal" }}
                       >
                         Personal Data Kindertown Receives from Other Sources
                       </div>
                       <div
-                        className="flex flex-col md:gap-7 gap-4 md:text-xl text-base"
+                        className="flex flex-col md:gap-7 gap-4 md:text-2xl text-sm font-medium"
                         style={{
-                          fontFamily: "SF Pro Display M",
                           lineHeight: "normal",
                         }}
                       >
@@ -351,7 +325,7 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                         <div>
                           <ul className="list-inside list-disc flex flex-col md:gap-7 gap-4 ">
                             <li>
-                              <span style={{ fontFamily: "SF Pro Display B" }}>
+                              <span className="font-bold">
                                 Individuals.{" "}
                               </span>
                               Kindertown may collect data about you from other
@@ -361,7 +335,7 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                               or forums, or shared content with you.
                             </li>
                             <li>
-                              <span style={{ fontFamily: "SF Pro Display B" }}>
+                              <span className="font-bold">
                                 At Your Direction.{" "}
                               </span>
                               You may direct other individuals or third parties
@@ -374,7 +348,7 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                               referrals made to Kindertown.
                             </li>
                             <li>
-                              <span style={{ fontFamily: "SF Pro Display B" }}>
+                              <span className="font-bold">
                                 Kindertown Partners.{" "}
                               </span>{" "}
                               We may also validate the information you provide —
@@ -393,17 +367,16 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                       </div>
                     </div>
                     {/*CONTENT 7*/}
-                    <div className="flex flex-col gap-5">
+                    <div className="flex flex-col gap-[10px]">
                       <div
-                        className="md:text-3xl text-xl"
-                        style={{ fontFamily: "SF Pro Display B" }}
+                        className="md:text-[32px] text-xl font-bold"
+                       
                       >
                         Kindertown’s Use of Personal Data
                       </div>
                       <div
-                        className="flex flex-col md:gap-7 gap-4 md:text-xl text-base"
+                        className="flex flex-col md:gap-7 gap-4 md:text-2xl text-sm font-medium"
                         style={{
-                          fontFamily: "SF Pro Display M",
                           lineHeight: "normal",
                         }}
                       >
@@ -425,7 +398,7 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                         <div>
                           <ul className="list-inside list-disc flex flex-col md:gap-7 gap-4">
                             <li>
-                              <span style={{ fontFamily: "SF Pro Display B" }}>
+                              <span className="font-bold">
                                 Power Our Services.{" "}
                               </span>
                               Kindertown collects necessary personal data to
@@ -438,7 +411,7 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                               the requested content and for royalty purposes.
                             </li>
                             <li>
-                              <span style={{ fontFamily: "SF Pro Display B" }}>
+                              <span className="font-bold">
                                 Process Your Transactions.{" "}
                               </span>
                               To process transactions, Kindertown must collect
@@ -446,7 +419,7 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                               information.
                             </li>
                             <li>
-                              <span style={{ fontFamily: "SF Pro Display B" }}>
+                              <span className="font-bold">
                                 Communicate with You.{" "}
                               </span>
                               To respond to your communications, reach out to
@@ -462,7 +435,7 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                               receiving these important notices.
                             </li>
                             <li>
-                              <span style={{ fontFamily: "SF Pro Display B" }}>
+                              <span className="font-bold">
                                 Security and Fraud Prevention.{" "}
                               </span>
                               To protect individuals, employees, and Kindertown,
@@ -473,7 +446,7 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                               sexual exploitation material.
                             </li>
                             <li>
-                              <span style={{ fontFamily: "SF Pro Display B" }}>
+                              <span className="font-bold">
                                 Personal Data Used for Personalization.{" "}
                               </span>
                               If you choose to personalize your services or
@@ -487,7 +460,7 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                               personal data.
                             </li>
                             <li>
-                              <span style={{ fontFamily: "SF Pro Display B" }}>
+                              <span className="font-bold">
                                 Compliance with Law.{" "}
                               </span>
                               To comply with applicable law — for example, to
@@ -499,17 +472,16 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                       </div>
                     </div>
                     {/*CONTENT 8*/}
-                    <div className="flex flex-col gap-5">
+                    <div className="flex flex-col gap-[10px]">
                       <div
-                        className="md:text-3xl text-xl"
-                        style={{ fontFamily: "SF Pro Display B" }}
+                        className="md:text-[32px] text-xl font-bold"
+                       
                       >
                         Kindertown’s Sharing of Personal Data
                       </div>
                       <div
-                        className="flex flex-col md:gap-7 gap-4 md:text-xl text-base"
+                        className="flex flex-col md:gap-7 gap-4 md:text-2xl text-sm font-medium"
                         style={{
-                          fontFamily: "SF Pro Display M",
                           lineHeight: "normal",
                         }}
                       >
@@ -525,7 +497,7 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                         <div>
                           <ul className="list-inside list-disc flex flex-col md:gap-7 gap-4">
                             <li>
-                              <span style={{ fontFamily: "SF Pro Display B" }}>
+                              <span className="font-bold">
                                 Service Providers.{" "}
                               </span>
                               Kindertown may engage third parties to act as our
@@ -539,7 +511,7 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                               instructions.
                             </li>
                             <li>
-                              <span style={{ fontFamily: "SF Pro Display B" }}>
+                              <span className="font-bold">
                                 Others.{" "}
                               </span>
                               Kindertown may share personal data with others at
@@ -561,17 +533,15 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                       </div>
                     </div>
                     {/*CONTENT 9*/}
-                    <div className="flex flex-col gap-5">
+                    <div className="flex flex-col gap-[10px]">
                       <div
-                        className="md:text-3xl text-xl"
-                        style={{ fontFamily: "SF Pro Display B" }}
+                        className="md:text-[32px] text-xl font-bold"
                       >
                         Protection of Personal Data at Kindertown
                       </div>
                       <div
-                        className="flex flex-col md:text-xl text-base"
+                        className="flex flex-col md:gap-7 gap-4 md:text-2xl text-sm font-medium"
                         style={{
-                          fontFamily: "SF Pro Display M",
                           lineHeight: "normal",
                         }}
                       >
@@ -588,17 +558,16 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                       </div>
                     </div>
                     {/*CONTENT 10*/}
-                    <div className="flex flex-col gap-5">
+                    <div className="flex flex-col gap-[10px]">
                       <div
-                        className="md:text-3xl text-xl"
-                        style={{ fontFamily: "SF Pro Display B" }}
+                        className="md:text-[32px] text-xl font-bold"
+                       
                       >
                         Children and Personal Data
                       </div>
                       <div
-                        className="flex flex-col md:gap-7 gap-4 md:text-xl text-base"
+                        className="flex flex-col md:gap-7 gap-4 md:text-2xl text-sm font-medium"
                         style={{
-                          fontFamily: "SF Pro Display M",
                           lineHeight: "normal",
                         }}
                       >
@@ -619,7 +588,7 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                         <div>
                           <ul className="list-inside list-disc flex flex-col md:gap-7 gap-4  ">
                             <li>
-                              <span style={{ fontFamily: "SF Pro Display B" }}>
+                              <span className="font-bold">
                                 Parents.{" "}
                               </span>
                               To create a parent and child account, parents must
@@ -629,7 +598,7 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                               enrollment procedures.
                             </li>
                             <li>
-                              <span style={{ fontFamily: "SF Pro Display B" }}>
+                              <span className="font-bold">
                                 Educational Institutions.{" "}
                               </span>
                               Educational institutions using the Kindertown
@@ -647,17 +616,16 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                       </div>
                     </div>
                     {/*CONTENT 11*/}
-                    <div className="flex flex-col gap-5">
+                    <div className="flex flex-col gap-[10px]">
                       <div
-                        className="md:text-3xl text-xl"
-                        style={{ fontFamily: "SF Pro Display B" }}
+                        className="md:text-[32px] text-xl font-bold"
+                       
                       >
                         Privacy Questions
                       </div>
                       <div
-                        className="flex flex-col  md:gap-7 gap-4 md:text-xl text-base"
+                        className="flex flex-col md:gap-7 gap-4 md:text-2xl text-sm font-medium"
                         style={{
-                          fontFamily: "SF Pro Display M",
                           lineHeight: "normal",
                         }}
                       >

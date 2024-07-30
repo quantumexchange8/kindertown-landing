@@ -14,7 +14,7 @@ const ReferralProgrames = () => {
 
   return (
     <>
-      <div className="w-full flex flex-col w-max-[1000px] justify-center items-center pt-[60px] md:pb-[200px] pb-[100px]">
+      <div className="w-full flex flex-col w-max-[1000px] justify-center items-center pt-[60px] md:pb-[150px] pb-[100px]">
         <div className="w-full flex flex-col justify-center items-center">
           <div
             className={`w-full w-max-[1000px] flex flex-col gap-[100px] md:gap-[150px]`}
@@ -29,6 +29,8 @@ const ReferralProgrames = () => {
                     autoPlay
                     loop
                     muted
+                    playsInline
+                    preload="auto"
                     className="absolute md:top-0 left-0 w-full h-[300px] md:h-auto object-cover object-center"
                   />
 
@@ -36,7 +38,6 @@ const ReferralProgrames = () => {
                     <div
                       className={`md:text-[64px] text-2xl font-bold`}
                       style={{
-                        fontFamily: "SF Pro Display B",
                         lineHeight: "normal",
                       }}
                     >
@@ -52,7 +53,6 @@ const ReferralProgrames = () => {
                   <div className="flex flex-col md:w-[1000px] md:gap-[30px] gap-[10px]">
                     <div className="flex flex-col text-center font-bold md:text-[80px] text-2xl "
                       style={{
-                        fontFamily: "SF Pro Display B",
                         lineHeight: "normal",
                       }}>
                       {t("referral-program")}</div>
@@ -62,13 +62,12 @@ const ReferralProgrames = () => {
                         : "md:font-medium"
                         } font-semibold`}
                       style={{
-                        fontFamily: `${i18n.language === "zh" ? "SF Pro Display Semibold" : "SF Pro Display M"}`,
                         lineHeight: "normal",
                       }}
                     >
                       <div className="md:flex flex-col hidden">
                         <div className={`${i18n.language === "zh" ? "" : "text-balance"}`}>{t("comprehensive-referral1")}</div>
-                        <div className="tracking-wider">{t("comprehensive-referral2")}</div>
+                        <div>{t("comprehensive-referral2")}</div>
                       </div>
                       <div className={`md:hidden flex flex-col justify-center items-center`}>
                         <div className="text-balance">{t("mobile-comprehensive-referral1")}</div>
@@ -83,7 +82,7 @@ const ReferralProgrames = () => {
               </div>
             </div>
             {/*content 3 & 4 */}
-            <div className="w-full flex flex-col justify-center items-center md:gap-[200px] gap-[100px] md:px-0 px-[30px]">
+            <div className="w-full flex flex-col justify-center items-center md:gap-[150px] gap-[100px] md:px-0 px-[30px]">
               {/*Content 3*/}
               <div className="w-full md:w-[800px] flex flex-col  gap-[50px] md:gap-[100px]">
                 {/*Ttile*/}
@@ -91,7 +90,6 @@ const ReferralProgrames = () => {
                   <div
                     className="md:text-[75px] text-[30px] font-bold"
                     style={{
-                      fontFamily: "SF Pro Display B",
                       lineHeight: "normal",
                     }}
                   >
@@ -104,7 +102,7 @@ const ReferralProgrames = () => {
                           <span className="text-[#F67F00]">{t("simply")} </span>
                           {t("a")}
                         </div>
-                        <div className="text-[#00944D]">{t("straightforward-act")}</div>
+                        <div className="text-[#00944D] text-center">{t("straightforward-act")}</div>
                       </div>
                     )}
 
@@ -158,7 +156,6 @@ const ReferralProgrames = () => {
                       <div
                         className={`md:text-[32px] md:flex flex-col hidden text-base font-bold`}
                         style={{
-                          fontFamily: "SF Pro Display B",
                           lineHeight: `${i18n.language === 'en' ? "60px" : "normal"}`,
                         }}
                       >
@@ -168,16 +165,14 @@ const ReferralProgrames = () => {
                       <div
                         className={`flex flex-col md:hidden text-base font-bold`}
                         style={{
-                          fontFamily: "SF Pro Display B",
                           lineHeight: "normal",
                         }}
                       >
                         {t("register-account")}
                       </div>
                       <div
-                        className="md:flex flex-col hidden text-center md:text-[20px] tracking-wide text-sm md:font-medium"
+                        className="md:flex flex-col hidden text-center md:text-[20px] text-sm md:font-medium"
                         style={{
-                          fontFamily: "SF Pro Display M",
                           lineHeight: "normal",
                         }}
                       >
@@ -185,9 +180,8 @@ const ReferralProgrames = () => {
                         <div> {t("regardless-register2")}</div>
                       </div>
                       <div
-                        className="text-center md:hidden flex flex-col tracking-wider text-sm font-medium"
+                        className="text-center md:hidden flex flex-col text-sm font-medium"
                         style={{
-                          fontFamily: "SF Pro Display R",
                           lineHeight: "normal",
                         }}
                       >
@@ -219,7 +213,6 @@ const ReferralProgrames = () => {
                       <div
                         className={`md:text-[32px] md:flex flex-col hidden text-base font-bold`}
                         style={{
-                          fontFamily: "SF Pro Display B",
                           lineHeight: `${i18n.language === 'en' ? "60px" : "normal"}`,
                         }}
                       >
@@ -229,7 +222,6 @@ const ReferralProgrames = () => {
                       <div
                         className={`flex flex-col md:hidden text-base font-bold`}
                         style={{
-                          fontFamily: "SF Pro Display B",
                           lineHeight: "normal",
                         }}
                       >
@@ -238,7 +230,6 @@ const ReferralProgrames = () => {
                       <div
                         className={`text-center md:text-[20px] text-sm font-medium`}
                         style={{
-                          fontFamily: "SF Pro Display M",
                           lineHeight: "normal",
                         }}
                       >
@@ -273,7 +264,6 @@ const ReferralProgrames = () => {
                         <div
                           className={`md:text-[32px] md:flex flex-col hidden text-base font-bold`}
                           style={{
-                            fontFamily: "SF Pro Display B",
                             lineHeight: `${i18n.language === 'en' ? "60px" : "normal"}`,
                           }}
                         >
@@ -283,7 +273,6 @@ const ReferralProgrames = () => {
                         <div
                           className={`flex flex-col md:hidden text-base font-bold`}
                           style={{
-                            fontFamily: "SF Pro Display B",
                             lineHeight: "normal",
                           }}
                         >
@@ -292,7 +281,6 @@ const ReferralProgrames = () => {
                         <div
                           className={`text-center md:text-[20px] text-sm `}
                           style={{
-                            fontFamily: "SF Pro Display M",
                             lineHeight: "normal",
                           }}
                         >
@@ -324,7 +312,6 @@ const ReferralProgrames = () => {
                       <div
                         className={`md:text-[32px] md:flex flex-col hidden text-base font-bold`}
                         style={{
-                          fontFamily: "SF Pro Display B",
                           lineHeight: `${i18n.language === 'en' ? "60px" : "normal"}`,
                         }}
                       >
@@ -332,9 +319,8 @@ const ReferralProgrames = () => {
                       </div>
                       {/* mobile view title */}
                       <div
-                        className={`flex flex-col md:hidden text-base font-bold tracking-wider`}
+                        className={`flex flex-col md:hidden text-base font-bold`}
                         style={{
-                          fontFamily: "SF Pro Display B",
                           lineHeight: "normal",
                         }}
                       >
@@ -343,7 +329,6 @@ const ReferralProgrames = () => {
                       <div
                         className="text-center md:text-[20px] text-base"
                         style={{
-                          fontFamily: "SF Pro Display M",
                           lineHeight: "normal",
                         }}
                       >
@@ -374,7 +359,6 @@ const ReferralProgrames = () => {
                       <div
                         className={`md:text-[32px] md:flex flex-col text-center hidden text-base font-bold`}
                         style={{
-                          fontFamily: "SF Pro Display B",
                           lineHeight: `${i18n.language === 'en' ? "60px" : "normal"}`,
                         }}
                       >
@@ -382,9 +366,8 @@ const ReferralProgrames = () => {
                       </div>
                       {/* mobile view title */}
                       <div
-                        className={`flex flex-col md:hidden text-base text-center font-bold tracking-wider`}
+                        className={`flex flex-col md:hidden text-base text-center font-bold`}
                         style={{
-                          fontFamily: "SF Pro Display B",
                           lineHeight: "normal",
                         }}
                       >
@@ -394,7 +377,6 @@ const ReferralProgrames = () => {
                         className={`text-center md:text-[20px] ${i18n.language === "zh" ? "text-sm" : "text-base"
                           }`}
                         style={{
-                          fontFamily: "SF Pro Display M",
                           lineHeight: "normal",
                         }}
                       >
@@ -409,9 +391,8 @@ const ReferralProgrames = () => {
               <div className="w-full flex flex-col justify-center items-center md:gap-[100px] gap-[30px]">
                 <div className="w-full flex flex-col justify-center items-center ">
                   <div
-                    className={`md:text-[64px] md:flex flex-col hidden text-center font-bold md:w-[850px]`}
+                    className={`md:text-[64px] md:flex flex-col hidden text-center font-bold md:w-[1000px]`}
                     style={{
-                      fontFamily: "SF Pro Display B",
                       lineHeight: "normal",
                     }}
                   >
@@ -421,7 +402,6 @@ const ReferralProgrames = () => {
                   <div
                     className={`text-2xl flex flex-col md:hidden text-center font-bold`}
                     style={{
-                      fontFamily: "SF Pro Display B",
                       lineHeight: "normal",
                     }}
                   >
@@ -435,13 +415,12 @@ const ReferralProgrames = () => {
                   <div
                     className="md:text-[40px] text-xl text-center"
                     style={{
-                      fontFamily: "SF Pro Display M",
                       lineHeight: "normal",
                     }}
                   >
                     <div>
                       <span
-                        className={`md:w-[1000px] w-full md:inline-block hidden tracking-wide`}
+                        className={`md:w-[1000px] font-medium w-full md:inline-block hidden`}
                       >
                         <div>{t("step-simple1")}</div>
                         <div>{t("step-simple2")}</div>

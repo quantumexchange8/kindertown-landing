@@ -46,6 +46,8 @@ const Admin = () => {
               autoPlay
               loop
               muted
+              playsInline
+              preload="auto"
               className="absolute md:top-0 left-0 w-full h-[300px] md:h-auto object-cover object-center"
             />
 
@@ -53,7 +55,6 @@ const Admin = () => {
               <div
                 className={`md:text-[64px] text-2xl font-bold`}
                 style={{
-                  fontFamily: "SF Pro Display B",
                   lineHeight: "normal",
                 }}
               >
@@ -73,7 +74,6 @@ const Admin = () => {
                 <div
                   className={`md:text-[80px] text-2xl font-bold`}
                   style={{
-                    fontFamily: "SF Pro Display B",
                     lineHeight: "normal",
                   }}
                 >
@@ -87,8 +87,7 @@ const Admin = () => {
                     lineHeight: "normal",
                   }}>
                   <div
-                    className="hidden md:flex flex-col"
-                    style={{ fontFamily: "SF Pro Display M" }}>
+                    className="hidden md:flex flex-col">
                     <div
                       className={`flex flex-col items-center ${i18n.language === "zh" ? "font-semibold" : "font-medium"
                         }`}>
@@ -97,10 +96,7 @@ const Admin = () => {
                     </div>
                   </div>
                   <div
-                    className={`md:hidden flex flex-col font-semibold ${(i18n.language === 'zh' ? '' : 'tracking-wider')}`}
-                    style={{
-                      fontFamily: "SF Pro Display Semibold"
-                    }}>
+                    className={`md:hidden flex flex-col font-semibold`}>
                     {t("KT-admin-desc1")}{t("KT-admin-desc2")}
                   </div>
                 </div>
@@ -113,7 +109,7 @@ const Admin = () => {
           >
             <div
               className="flex flex-col text-center relative w-full font-bold md:gap-0 gap-[20px]"
-              style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
+              style={{ lineHeight: "normal" }}
             >
               <div
                 className={`hidden md:flex ${i18n.language === "ms" ? "md:w-[400px]" : "md:w-[300px]"} 
@@ -123,7 +119,7 @@ const Admin = () => {
                 {t("superb-interface")}
               </div>
 
-              <div className={`md:hidden flex flex-col ${(i18n.language === 'ms') ? "text-[16px] px-[5px]" : "text-[20px]"} `}>
+              <div className={`md:hidden flex flex-col text-[16px]]`}>
                 <div>{t("superb-interface-mobile")}</div>
               </div>
 
@@ -143,7 +139,7 @@ const Admin = () => {
             </div>
             <div
               className="flex flex-col md:order-1 order-1"
-              style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
+              style={{ lineHeight: "normal" }}
             >
               {/*Desktop */}
               <div
@@ -184,14 +180,12 @@ const Admin = () => {
                 {/*Desktop*/}
                 <div
                   className={`hidden md:flex flex-col items-center ${i18n.language === "ms" ? "text-balance" : (i18n.language === "zh") ? "md:w-[700px]" : ""}`}
-                  style={{ fontFamily: "SF Pro Display B" }}
                 >
                   {t("manage-tool")}
                 </div>
                 {/*Mobile*/}
                 <div
-                  className={`md:hidden flex flex-col items-center ${i18n.language === 'en' ? "tracking-[0.04em]" : i18n.language === 'ms' ? "tracking-wide" : "tracking-wider"}`}
-                  style={{ fontFamily: "SF Pro Display B" }}
+                  className={`md:hidden flex flex-col items-center`}
                 >
                   {t("manage-tool")}
                 </div>
@@ -213,7 +207,6 @@ const Admin = () => {
               >
                 <div
                   className="hidden md:flex flex-col items-center"
-                  style={{ fontFamily: "SF Pro Display B" }}
                 >
                   <div className={`flex items-center ${i18n.language === "zh" ? "md:w-[550px]" : "text-balance"}`}>
                     {t("academic-achievement")}
@@ -221,7 +214,6 @@ const Admin = () => {
                 </div>
                 <div
                   className="md:hidden flex flex-col items-center "
-                  style={{ fontFamily: "SF Pro Display B" }}
                 >
                   <div>{t("mobile-academic-achievement1")}</div>
                   <div>{t("mobile-academic-achievement2")}</div>
@@ -243,7 +235,6 @@ const Admin = () => {
               >
                 <div
                   className="md:flex flex-col hidden items-center font-bold "
-                  style={{ fontFamily: "SF Pro Display B" }}
                 >
                   <div>{t("management-system1")}</div>
                   <div>{t("management-system2")}</div>
@@ -253,7 +244,6 @@ const Admin = () => {
                 </div>
                 <div
                   className={`md:hidden flex flex-col items-center font-bold`}
-                  style={{ fontFamily: "SF Pro Display B" }}
                 >
                   <div>{t("mobile-management-system")}</div>
                 </div>
@@ -271,7 +261,6 @@ const Admin = () => {
             <div
               className={`text-center font-bold md:text-[64px]`}
               style={{
-                fontFamily: "SF Pro Display B",
                 lineHeight: "normal",
               }}
             >
@@ -564,7 +553,6 @@ const Admin = () => {
                 <div
                   className="md:text-[24px] text-[10px] inline-block"
                   style={{
-                    fontFamily: "SF Pro Display B",
                     lineHeight: "normal",
                   }}
                 >
@@ -583,7 +571,6 @@ const Admin = () => {
                 >
                   <div
                     className="hidden md:flex flex-col"
-                    style={{ fontFamily: "SF Pro Display R" }}
                   >
                     <div className="flex items-center justify-center ">
                       Free provide face to face training and online tutorials.
@@ -591,7 +578,6 @@ const Admin = () => {
                   </div>
                   <div
                     className="md:hidden flex flex-wrap"
-                    style={{ fontFamily: "SF Pro Display Semibold" }}
                   >
                     Free provide face to face training and online tutorials.
                   </div>

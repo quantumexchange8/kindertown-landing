@@ -24,6 +24,8 @@ const Teacher = () => {
               autoPlay
               loop
               muted
+              playsInline
+              preload="auto"
               className="absolute md:top-0 left-0 w-full h-[300px] md:h-auto object-cover object-center"
             />
 
@@ -31,7 +33,6 @@ const Teacher = () => {
               <div
                 className={`md:text-[64px] text-2xl font-bold`}
                 style={{
-                  fontFamily: "SF Pro Display B",
                   lineHeight: "normal",
                 }}
               >
@@ -48,9 +49,8 @@ const Teacher = () => {
             <div className="w-full flex flex-col md:gap-[30px] gap-[10px]">
               <div className="flex flex-col justify-center items-center">
                 <div
-                  className={`text-center md:text-[80px] text-2xl font-bold`}
+                  className={`text-center md:text-[80px] text-[24px] font-bold`}
                   style={{
-                    fontFamily: "SF Pro Display B",
                     lineHeight: "normal",
                   }}
                 >
@@ -62,7 +62,6 @@ const Teacher = () => {
                 <div
                   className={`text-center text-xl md:text-[32px]`}
                   style={{
-                    fontFamily: "SF Pro Display M",
                     lineHeight: "normal",
                   }}
                 >
@@ -76,15 +75,12 @@ const Teacher = () => {
               </div>
               <div className="md:hidden flex flex-col justify-center items-center">
                 <div
-                  className="text-center md:text-[32px] text-sm tracking-wide font-semibold"
+                  className="text-center md:text-[32px] text-sm font-semibold"
                   style={{
-                    fontFamily: "SF Pro Display Semibold",
                     lineHeight: "normal",
                   }}
                 >
-                  <div className={`inline-block w-full`}> {t("mobile-KT-teacher-desc1")}</div>
-                  <div className={`inline-block w-full`}> {t("mobile-KT-teacher-desc2")}</div>
-                  <div className={`inline-block w-full`}> {t("mobile-KT-teacher-desc3")}</div>
+                  <div className={`w-full`}> {t("mobile-KT-teacher-desc")}</div>
                 </div>
               </div>
             </div>
@@ -103,7 +99,6 @@ const Teacher = () => {
                 <div
                   className={`md:text-[32px] text-sm text-center md:font-medium font-semibold`}
                   style={{
-                    fontFamily: "SF Pro Display Semibold",
                     lineHeight: "normal",
                   }}
                 >
@@ -116,8 +111,7 @@ const Teacher = () => {
                     <div>{t("diff-ways4")}</div>
                   </div>
                   <div className="md:hidden flex flex-col inline-block text-center w-full px-[10px]">
-                    <div>{t("mobile-diff-ways1")}</div>
-                    <div>{t("mobile-diff-ways2")}</div>
+                    <div>{t("mobile-diff-ways")}</div>
                   </div>
                 </div>
               </div>
@@ -137,7 +131,6 @@ const Teacher = () => {
                 <div
                   className={`flex flex-col md:text-[32px] text-sm text-center md:font-medium font-semibold`}
                   style={{
-                    fontFamily: "SF Pro Display Semibold",
                     lineHeight: "normal",
                   }}
                 >
@@ -169,7 +162,6 @@ const Teacher = () => {
                 <div
                   className={`md:text-[32px] text-sm text-center`}
                   style={{
-                    fontFamily: "SF Pro Display Semibold",
                     lineHeight: "normal",
                   }}
                 >
@@ -181,9 +173,8 @@ const Teacher = () => {
                       <div>{t("harness-power4")}</div>
                     </div>
 
-                    <div className={`md:hidden flex flex-col inline-block ${(i18n.language === 'zh') ? '' : 'tracking-wider'}`}>
-                      {t("mobile-harness-power1")}
-                      {i18n.language === 'zh' ? <><div>{t("mobile-harness-power2")}</div><div>{t("mobile-harness-power3")}</div></> : ''}
+                    <div className={`md:hidden flex flex-col inline-block`}>
+                      {t("mobile-harness-power")}
                     </div>
                   </div>
                 </div>
@@ -204,7 +195,6 @@ const Teacher = () => {
                 <div
                   className={`md:text-[32px] text-sm text-center md:font-medium font-semibold`}
                   style={{
-                    fontFamily: "SF Pro Display Semibold",
                     lineHeight: "normal",
                   }}
                 >
@@ -215,8 +205,7 @@ const Teacher = () => {
                     <div>{t("take-pride4")}</div>
                   </div>
                   <div className={`md:hidden flex flex-col text-pretty text-center`}>
-                    <div>{t("mobile-take-pride1")}</div>
-                    <div>{t("mobile-take-pride2")}</div>
+                    <div>{t("mobile-take-pride")}</div>
                   </div>
                 </div>
               </div>
@@ -236,7 +225,6 @@ const Teacher = () => {
                 <div
                   className={`md:text-[32px] text-sm text-center md:font-medium font-semibold`}
                   style={{
-                    fontFamily: "SF Pro Display Semibold",
                     lineHeight: "normal",
                   }}
                 >
@@ -247,11 +235,8 @@ const Teacher = () => {
                     <div>{t("kingdom-community4")}</div>
                     <div>{t("kingdom-community5")}</div>
                   </div>
-                  <div className={`flex md:hidden flex-col text-center ${i18n.language !== 'en' ? 'text-balance' : ''}`}>
-                    <div>{t("mobile-kingdom-community1")}</div>
-                    <div>{t("mobile-kingdom-community2")}</div>
-                    <div>{t("mobile-kingdom-community3")}</div>
-                    <div>{t("mobile-kingdom-community4")}</div>
+                  <div className={`flex md:hidden flex-col text-center`}>
+                    <div>{t("mobile-kingdom-community")}</div>
                   </div>
                 </div>
               </div>
@@ -278,7 +263,6 @@ const Teacher = () => {
                       <div
                         className="md:text-[24px] text-[10px] inline-block"
                         style={{
-                          fontFamily: "SF Pro Display B",
                           lineHeight: "normal",
                         }}
                       >
@@ -297,7 +281,6 @@ const Teacher = () => {
                       >
                         <div
                           className="hidden md:flex flex-col"
-                          style={{ fontFamily: "SF Pro Display R" }}
                         >
                           <div className="flex items-center justify-center ">
                             Free provide face to face training and online
@@ -306,7 +289,7 @@ const Teacher = () => {
                         </div>
                         <div
                           className="md:hidden flex flex-wrap"
-                          style={{ fontFamily: "SF Pro Display Semibold" }}
+                          style={{ lineHeight:"normal" }}
                         >
                           Free provide face to face training and online
                           tutorials.

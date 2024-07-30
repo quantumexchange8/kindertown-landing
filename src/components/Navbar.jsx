@@ -149,8 +149,8 @@ const Navbar = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className="w-full flex fixed flex-col top-0 z-[60] absolute justify-center items-center">
-      <div className="bg-[#fff7efe6] z-[60] w-full flex justify-center h-[60px] px-5 md:px-0">
+    <div className="w-full flex fixed flex-col top-0 z-[40] justify-center items-center">
+      <div className="bg-[#fff7efe6] z-[40] w-full flex justify-center h-[60px] px-5 md:px-0">
         <div className="w-full md:w-[1000px] flex items-center justify-between">
           <div className="flex flex-col">
             <img src={logo} alt="Logo" />
@@ -159,7 +159,6 @@ const Navbar = () => {
           <div className="hidden md:flex items-center font-semibold gap-[20px]">
             <Link
               className={`hover:text-[#F67F00]`}
-              style={{ fontFamily: "SF Pro Display M" }}
               onClick={() => setAboutOpen(true)}
             >
               {t("about-us")}
@@ -174,7 +173,6 @@ const Navbar = () => {
                 ? `${linkStyles.base} ${linkStyles.home}`
                 : " hover:text-[#F67F00]"
                 } `}
-              style={{ fontFamily: "SF Pro Display M" }}
             >
               {t("home")}
             </Link>
@@ -184,7 +182,6 @@ const Navbar = () => {
                 ? `${linkStyles.base} ${linkStyles.products}`
                 : " hover:text-[#F67F00]"
                 } `}
-              style={{ fontFamily: "SF Pro Display M" }}
               onClick={handleProductsClick}
             >
               {t("products")}
@@ -195,8 +192,6 @@ const Navbar = () => {
                 ? `${linkStyles.base} ${linkStyles.joinUs}`
                 : " hover:text-[#F67F00]"
                 } `}
-              style={{ fontFamily: "SF Pro Display M" }}
-            // onClick={handleJoinUsClick}
             >
               {t("referral-program")}
             </Link>
@@ -206,7 +201,6 @@ const Navbar = () => {
                 ? `${linkStyles.base} ${linkStyles.download}`
                 : " hover:text-[#F67F00]"
                 } `}
-              style={{ fontFamily: "SF Pro Display M" }}
               onClick={handleDownloadClick}
             >
               {t("download")}
@@ -229,7 +223,6 @@ const Navbar = () => {
                   </div>
                   <div
                     className="py-2 flex flex-col mt-[6px] mr-[10px] px-5 gap-4 items-center md:text-base z-50 bg-[#F67F00] text-[#FFFFFF] shadow-md rounded-b-[10px] rounded-tl-[10px] "
-                    style={{ fontFamily: "SF Pro Display R" }}
                   >
                     <button
                       className=""
@@ -292,7 +285,7 @@ const Navbar = () => {
                     <div className="z-50 flex flex-row justify-center">
                       <div
                         className="w-[180px] py-[30px] flex flex-col gap-[30px] items-center text-[20px] font-semibold bg-[#FFFFFF] text-[#F67F00] rounded-[5px]  "
-                        style={{ fontFamily: "SF Pro Display Semibold", lineHeight: "normal" }}
+                        style={{ lineHeight: "normal" }}
                         onClick={handleModalClick}
                       >
                         <button
@@ -327,7 +320,7 @@ const Navbar = () => {
                   </div>
                 )}
               </div>
-              <div className="w-[26px]">
+              <div className="w-[30px]">
                 <button onClick={() => setShowMenu(!showMenu)}>
                   <img src={menu} alt="Menu" />
                 </button>
@@ -355,7 +348,6 @@ const Navbar = () => {
                         className={`text-[14px] font-bold`}
                       >
                         <button
-                          style={{ fontFamily: "SF Pro Display B" }}
                           onClick={() => setAboutOpen(true)}
                         >
                           {t("about-us")}
@@ -367,7 +359,6 @@ const Navbar = () => {
                       >
                         <Link
                           to="/"
-                          style={{ fontFamily: "SF Pro Display B" }}
                           onClick={() => {
                             // setShowJoinUsSubmenu(false);
                             setProduct(false);
@@ -381,7 +372,6 @@ const Navbar = () => {
                         className={`text-[14px] font-bold`}
                       >
                         <button
-                          style={{ fontFamily: "SF Pro Display B" }}
                           onClick={() => {
                             toggleProductDropdown();
                             // setShowJoinUsSubmenu(false);
@@ -396,7 +386,6 @@ const Navbar = () => {
                       >
                         <Link
                           to="/join-us/referral-program"
-                          style={{ fontFamily: "SF Pro Display B" }}
                           onClick={() => {
                             // setShowJoinUsSubmenu(false);
                             setProduct(false);
@@ -410,7 +399,6 @@ const Navbar = () => {
                         className={`text-[14px] font-bold`}
                       >
                         <button
-                          style={{ fontFamily: "SF Pro Display B" }}
                           onClick={() => {
                             toggleDownloadDropdown();
                             // setShowJoinUsSubmenu(false);
@@ -432,7 +420,6 @@ const Navbar = () => {
                                 ? `${linkStylesmobile.active}`
                                 : `${linkStylesmobile.none}`
                                 } text-sm`}
-                              style={{ fontFamily: "SF Pro Display M" }}
                               
                             >
                               {t("KT-parent")}
@@ -445,7 +432,6 @@ const Navbar = () => {
                                 ? `${linkStylesmobile.active}`
                                 : `${linkStylesmobile.none}`
                                 } text-sm`}
-                              style={{ fontFamily: "SF Pro Display M" }}
                             >
                               {t("footer-teacher")}
                             </Link>
@@ -457,7 +443,6 @@ const Navbar = () => {
                                 ? `${linkStylesmobile.active}`
                                 : `${linkStylesmobile.none}`
                                 } text-sm`}
-                              style={{ fontFamily: "SF Pro Display M" }}
                             >
                               {t("footer-admin")}
                             </Link>
@@ -509,7 +494,6 @@ const Navbar = () => {
                                 ? `${linkStylesmobile.active}`
                                 : `${linkStylesmobile.none}`
                                 } text-sm `}
-                              style={{ fontFamily: "SF Pro Display M" }}
                             >
                               {t("navbar-parent")}
                             </Link>
@@ -521,7 +505,6 @@ const Navbar = () => {
                                 ? `${linkStylesmobile.active}`
                                 : `${linkStylesmobile.none}`
                                 } text-sm `}
-                              style={{ fontFamily: "SF Pro Display M" }}
                             >
                               {t("navbar-teacher")}
                             </Link>
@@ -533,7 +516,6 @@ const Navbar = () => {
                                 ? `${subLinkStyles.active}`
                                 : `${subLinkStyles.none}`
                                 } text-sm `}
-                              style={{ fontFamily: "SF Pro Display M" }}
                             >
                               {t("navbar-admin")}
                             </Link>
@@ -561,7 +543,6 @@ const Navbar = () => {
                   ? `${subLinkStyles.active}`
                   : `${subLinkStyles.none} `
                   }`}
-                style={{ fontFamily: "SF Pro Medium" }}
                 onClick={() => setActiveProductSubPage("parent")}
               >
                 {t("KT-parent")}
@@ -572,7 +553,6 @@ const Navbar = () => {
                   ? `${subLinkStyles.active}`
                   : `${subLinkStyles.none}`
                   }`}
-                style={{ fontFamily: "SF Pro Medium" }}
                 onClick={() => setActiveProductSubPage("teacher")}
               >
                 {t("footer-teacher")}
@@ -583,7 +563,6 @@ const Navbar = () => {
                   ? `${subLinkStyles.active}`
                   : `${subLinkStyles.none}`
                   }`}
-                style={{ fontFamily: "SF Pro Medium" }}
                 onClick={() => setActiveProductSubPage("admin")}
               >
                 {t("footer-admin")}
@@ -634,7 +613,6 @@ const Navbar = () => {
                   ? `${subLinkStyles.active}`
                   : `${subLinkStyles.none}`
                   }`}
-                style={{ fontFamily: "SF Pro Medium" }}
                 onClick={() => setActiveDownloadsSubpage("parent")}
               >
                 {t("navbar-parent")}
@@ -645,7 +623,6 @@ const Navbar = () => {
                   ? `${subLinkStyles.active}`
                   : `${subLinkStyles.none}`
                   }`}
-                style={{ fontFamily: "SF Pro Medium" }}
                 onClick={() => setActiveDownloadsSubpage("teacher")}
               >
                 {t("navbar-teacher")}
@@ -656,7 +633,6 @@ const Navbar = () => {
                   ? `${subLinkStyles.active}`
                   : `${subLinkStyles.none}`
                   }`}
-                style={{ fontFamily: "SF Pro Medium" }}
                 onClick={() => setActiveDownloadsSubpage("admin")}
               >
                 {t("navbar-admin")}

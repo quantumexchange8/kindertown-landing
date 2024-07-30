@@ -19,6 +19,8 @@ const DownloadAdmin = () => {
                             autoPlay
                             loop
                             muted
+                            playsInline
+                            preload="auto"
                             className="absolute md:top-0 left-0 w-full h-[300px] md:h-auto object-cover object-center"
                         />
 
@@ -26,7 +28,6 @@ const DownloadAdmin = () => {
                             <div
                                 className={`md:text-[64px] text-2xl font-bold`}
                                 style={{
-                                    fontFamily: "SF Pro Display B",
                                     lineHeight: "normal",
                                 }}
                             >
@@ -42,7 +43,6 @@ const DownloadAdmin = () => {
                         <div className="w-full flex flex-col md:gap-[50px] gap-[20px]">
                             <div className="md:text-[48px] font-bold"
                                 style={{
-                                    fontFamily: "SF Pro Display B",
                                     lineHeight: "normal",
                                 }}>
                                 <div>{t("adminmodal-title1")}</div>
@@ -53,7 +53,6 @@ const DownloadAdmin = () => {
                             {i18n.language === 'zh'
                                 ? <div className="md:text-[32px] md:flex flex-col hidden font-semibold"
                                     style={{
-                                        fontFamily: "SF Pro Display Semibold",
                                         lineHeight: "normal",
                                     }}>
                                     <div>{t("adminmodal-desc1")}</div>
@@ -62,7 +61,6 @@ const DownloadAdmin = () => {
                                 </div>
                                 : <div className="md:text-[32px] md:flex flex-col hidden font-medium"
                                     style={{
-                                        fontFamily: "SF Pro Display M",
                                         lineHeight: "normal",
                                     }}>
                                     <div>{t("adminmodal-desc1")}</div>
@@ -73,7 +71,6 @@ const DownloadAdmin = () => {
 
                             <div className="flex flex-col md:hidden text-sm font-semibold text-balance"
                                 style={{
-                                    fontFamily: "SF Pro Display Semibold",
                                     lineHeight: "normal",
                                 }}>
                                     <div>{t("mobile-adminmodal-desc1")}</div>
@@ -109,15 +106,16 @@ const DownloadAdmin = () => {
                             <div
                                 className={`md:text-4xl text-2xl text-left ${i18n.language === "zh" ? "font-bold" : ""
                                     }`}
-                                style={{ fontFamily: " SF Pro Display B" }}
                             >
                                 {t("feature")}:
                             </div>
                         </div>
                         <div
-                            className="w-full md:w-[700px] flex flex-col md:text-[32px] text-base"
+                            className={`w-full flex flex-col md:text-[32px] text-base md:font-medium ${i18n.language === "zh"
+                                ? "font-medium"
+                                : "font-semibold"
+                                }`}
                             style={{
-                                fontFamily: "SF Pro Display R",
                                 lineHeight: "normal",
                             }}
                         >

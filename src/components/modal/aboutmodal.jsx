@@ -52,7 +52,6 @@ const aboutmodal = ({ AboutOpen, setAboutOpen }) => {
                                         <div className="w-full flex flex-col md:gap-5 gap-[15px] text-[#000]">
                                             <div
                                                 className="md:w-[464px] w-full md:h-auto h-[58px] md:text-[40px] text-2xl md:leading-[3rem]"
-                                                style={{ fontFamily: "SF Pro Display B" }}
                                             >
                                                 We are <br /> Current Tech Industries
                                             </div>
@@ -65,7 +64,6 @@ const aboutmodal = ({ AboutOpen, setAboutOpen }) => {
                                             <div
                                                 className="md:text-[24px] text-sm "
                                                 style={{
-                                                    fontFamily: "SF Pro Display M",
                                                     lineHeight: "normal",
                                                 }}
                                             >
@@ -91,14 +89,12 @@ const aboutmodal = ({ AboutOpen, setAboutOpen }) => {
                                             <div className="flex flex-col md:gap-[50px] gap-[30px]">
                                                 <div
                                                     className="md:text-[40px] text-2xl font-bold"
-                                                    style={{ fontFamily: "SF Pro Display B" }}
                                                 >
                                                     Our Service
                                                 </div>
                                                 <div
                                                     className="md:text-2xl text-sm flex flex-col gap-[50px]"
                                                     style={{
-                                                        fontFamily: "SF Pro Display M",
                                                         lineHeight: "normal",
                                                     }}
                                                 >

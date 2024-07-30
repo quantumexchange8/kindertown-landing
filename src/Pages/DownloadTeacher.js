@@ -19,6 +19,8 @@ const DownloadTeacher = () => {
                             autoPlay
                             loop
                             muted
+                            playsInline
+                            preload="auto"
                             className="absolute md:top-0 left-0 w-full h-[300px] md:h-auto object-cover object-center"
                         />
 
@@ -26,7 +28,6 @@ const DownloadTeacher = () => {
                             <div
                                 className={`md:text-[64px] text-2xl font-bold`}
                                 style={{
-                                    fontFamily: "SF Pro Display B",
                                     lineHeight: "normal",
                                 }}
                             >
@@ -44,7 +45,6 @@ const DownloadTeacher = () => {
                             {/* web view */}
                             <div className="md:text-[64px] md:flex flex-col hidden font-bold"
                                 style={{
-                                    fontFamily: "SF Pro Display B",
                                     lineHeight: "normal",
                                 }}>
                                 <div>{t("teachermodal-title1")}</div>
@@ -54,7 +54,6 @@ const DownloadTeacher = () => {
                             {/* mobile view */}
                             <div className="md:text-[64px] md:hidden flex flex-col font-bold"
                                 style={{
-                                    fontFamily: "SF Pro Display B",
                                     lineHeight: "normal",
                                 }}>
                                 <div>{t("mobile-teachermodal-title1")}</div>
@@ -64,7 +63,6 @@ const DownloadTeacher = () => {
                             {i18n.language === 'zh'
                                 ? <div className="md:text-[32px] md:flex flex-col hidden font-semibold"
                                     style={{
-                                        fontFamily: "SF Pro Display Semibold",
                                         lineHeight: "normal",
                                     }}>
                                     <div>{t("teachermodal-desc1")}</div>
@@ -75,7 +73,6 @@ const DownloadTeacher = () => {
                                 </div>
                                 : <div className="md:text-[32px] md:flex flex-col hidden font-medium"
                                     style={{
-                                        fontFamily: "SF Pro Display M",
                                         lineHeight: "normal",
                                     }}>
                                     <div>{t("teachermodal-desc1")}</div>
@@ -92,7 +89,6 @@ const DownloadTeacher = () => {
 
                             <div className="md:hidden flex flex-col text-sm font-semibold"
                                 style={{
-                                    fontFamily: "SF Pro Display B",
                                     lineHeight: "normal",
                                 }}>
                                 <div className="pb-[20px]">{t("mobile-teachermodal-desc1")}</div>
@@ -127,23 +123,21 @@ const DownloadTeacher = () => {
                             <div
                                 className={`md:text-4xl text-2xl ${i18n.language === "zh" ? "font-bold" : ""
                                     }`}
-                                style={{ fontFamily: " SF Pro Display B" }}
                             >
                                 {t("feature")}:
                             </div>
                         </div>
                         <div
-                            className={`w-full flex flex-col md:text-[32px] text-base `}
+                            className={`w-full flex flex-col md:text-[32px] text-base md:font-medium ${i18n.language === "zh"
+                                    ? "font-medium"
+                                    : "font-semibold"
+                                    }`}
                             style={{
-                                fontFamily: "SF Pro Display R",
                                 lineHeight: "normal",
                             }}
                         >
                             <ul
-                                className={`list-outside list-disc flex flex-col md:gap-10 gap-5 pl-[30px] ${i18n.language === "zh"
-                                    ? " md:pl-[53px]"
-                                    : " md:pl-[50px]"
-                                    }`}
+                                className={`list-outside list-disc flex flex-col md:gap-10 gap-5 pl-[30px] md:pl-[50px]`}
                             >
                                 <li>{t("update-checkin")}</li>
                                 <li>{t("update-temp")}</li>

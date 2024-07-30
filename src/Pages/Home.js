@@ -56,10 +56,9 @@ const Home = () => {
                     : "gap-[20px]"}`}
                 >
                   <div
-                    className={`w-full text-4xl md:text-[80px] text-center md:leading-[90px] text-[#F67F00] gap-[50px]
-                       ${i18n.language === "zh" ? "font-bold" : ""
+                    className={`w-full text-4xl md:text-[80px] text-center md:leading-[90px] text-[#F67F00] gap-[50px] 
+                       ${i18n.language === "zh" ? "font-bold" : "font-bold"
                       }`}
-                    style={{ fontFamily: "SF Pro Display B" }}
                   >
                     <div>{t("zero-worry")}</div>
                     <div> {t("zero-hassle")}</div>
@@ -67,14 +66,12 @@ const Home = () => {
                   <div
                     className={`w-full text-center font-semibold md:text-[32px] text-base ${i18n.language === 'zh' ? "md:font-semibold" : "md:font-medium"}`}
                     style={{
-                      fontFamily: "SF Pro Display M",
                       lineHeight: "normal",
                     }}
                   >
                     <div
                       className={"md:flex flex-col hidden items-center justify-center md:w-[1000px]"}
                       style={{
-                        fontFamily: "SF Pro Display M",
                         lineHeight: "normal",
                       }}
                     >
@@ -85,14 +82,10 @@ const Home = () => {
                     <div
                       className={"md:hidden flex flex-col items-center justify-center w-full text-balance"}
                       style={{
-                        fontFamily: "SF Pro Display M",
                         lineHeight: "normal",
                       }}
                     >
-                      <div>{t("main-text-mobile1")}</div>
-                      <div>{t("main-text-mobile2")}</div>
-                      <div>{t("main-text-mobile3")}</div>
-                      <div>{t("main-text-mobile4")}</div>
+                      <div>{t("main-text-mobile")}</div>
                     </div>
                   </div>
                 </div>
@@ -104,7 +97,6 @@ const Home = () => {
               <div
                 className={`text-center md:w-[460px] font-bold`}
                 style={{
-                  fontFamily: "SF Pro Display B",
                   lineHeight: "normal",
                 }}
               >
@@ -129,7 +121,6 @@ const Home = () => {
                     <div
                       className={`text-center text-xl w-full font-bold`}
                       style={{
-                        fontFamily: "SF Pro Display B",
                         lineHeight: "normal",
                       }}
                     >
@@ -150,7 +141,6 @@ const Home = () => {
                       <div
                         className="flex flex-col items-center justify-center"
                         style={{
-                          fontFamily: "SF Pro Display M",
                           lineHeight: "normal",
                         }}
                       >
@@ -164,7 +154,6 @@ const Home = () => {
                       <div
                         className="flex flex-col items-center justify-center"
                         style={{
-                          fontFamily: "SF Pro Display M",
                           lineHeight: "normal",
                         }}
                       >
@@ -196,8 +185,8 @@ const Home = () => {
                       } gap-[10px] w-[270px]`}
                   >
                     <div
-                      className={`text-center md:text-xl text-base w-full font-bold`}
-                      style={{ fontFamily: "SF Pro Display B", lineHeight: "normal", }}
+                      className={`text-center md:text-xl text-base w-full tracking-tight font-bold`}
+                      style={{ lineHeight: "normal", }}
                     >
                       <div className="flex flex-col items-center justify-center">
                         <div>{t("know-ur-kid")}</div>
@@ -207,7 +196,7 @@ const Home = () => {
 
                     <div
                       className="text-center md:text-xl text-sm"
-                      style={{ fontFamily: "SF Pro Display M", lineHeight: "normal", }}
+                      style={{ lineHeight: "normal", }}
                     >
                       <div className="md:flex flex-col hidden items-center justify-center">
                         <div>{t("stay-inform")}</div>
@@ -239,7 +228,7 @@ const Home = () => {
                   >
                     <div
                       className={`text-center md:text-xl text-base w-full font-bold`}
-                      style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
+                      style={{ lineHeight: "normal" }}
                     >
                       <div className="flex flex-col items-center justify-center">
                         <div>{t("miss-school-act")}</div>
@@ -249,7 +238,7 @@ const Home = () => {
 
                     <div
                       className="text-center md:text-xl text-sm md:h-[72px]"
-                      style={{ fontFamily: "SF Pro Display M", lineHeight: "normal", }}
+                      style={{ lineHeight: "normal", }}
                     >
                       <div className="md:flex flex-col hidden items-center justify-center">
                         <div>{t("latest-happening")}</div>
@@ -280,7 +269,7 @@ const Home = () => {
                   >
                     <div
                       className={`text-center md:text-xl text-base w-full font-bold`}
-                      style={{ fontFamily: "SF Pro Display B", lineHeight: "normal", }}
+                      style={{ lineHeight: "normal", }}
                     >
                       <div className="flex flex-col items-center justify-center">
                         <div>{t("pay-fees")}</div>
@@ -290,7 +279,7 @@ const Home = () => {
 
                     <div
                       className="text-center md:text-xl text-sm md:h-[72px]"
-                      style={{ fontFamily: "SF Pro Display M", lineHeight: "normal", }}
+                      style={{ lineHeight: "normal", }}
                     >
                       <div className="md:flex flex-col hidden items-center justify-center">
                         <div>{t("school-fee")}</div>
@@ -323,7 +312,7 @@ const Home = () => {
                   >
                     <div
                       className={`text-center md:text-xl text-base w-full font-bold`}
-                      style={{ fontFamily: "SF Pro Display B", lineHeight: "normal", }}
+                      style={{ lineHeight: "normal", }}
                     >
                       <div className="flex flex-col">
                         <div className="flex flex-col items-center justify-center">
@@ -334,7 +323,7 @@ const Home = () => {
                     </div>
                     <div
                       className="text-center md:text-xl text-sm"
-                      style={{ fontFamily: "SF Pro Display M", lineHeight: "normal", }}
+                      style={{ lineHeight: "normal", }}
                     >
                       <div>{t("supply-resource1")}</div>
                       <div>{t("supply-resource2")}</div>
@@ -358,7 +347,7 @@ const Home = () => {
                   >
                     <div
                       className={`text-center md:text-xl text-base w-full font-bold`}
-                      style={{ fontFamily: "SF Pro Display B", lineHeight: "normal", }}
+                      style={{ lineHeight: "normal", }}
                     >
                       <div className="flex flex-col items-center justify-center">
                         <div>{t("countless-feature")}</div>
@@ -368,7 +357,7 @@ const Home = () => {
 
                     <div
                       className="text-center md:text-xl text-sm md:h-[72px]"
-                      style={{ fontFamily: "SF Pro Display M", lineHeight: "normal", }}
+                      style={{ lineHeight: "normal", }}
                     >
                       <div className="md:flex flex-col hidden items-center justify-center">
                         <div>{t("interaction-teacher")}</div>
@@ -405,11 +394,9 @@ const Home = () => {
               <div className="flex flex-col items-center w-full ">
                 <div
                   style={{
-                    fontFamily: "SF Pro Display B",
                     lineHeight: "normal",
                   }}
-                  className={`text-center text-4xl md:text-[96px] text-[#7A5AF8] md:leading-none  w-full  ${i18n.language === "zh" ? "font-bold" : " "
-                    }`}
+                  className={`text-center text-4xl md:text-[96px] text-[#7A5AF8] w-full font-bold`}
                 >
                   <div className="flex items-center justify-center">
                     {t("essential-tool")}
@@ -440,7 +427,6 @@ const Home = () => {
                   <div
                     className="text-[#4D9138] font-bold text-[16px] md:text-[32px]"
                     style={{
-                      fontFamily: "SF Pro Display B",
                       lineHeight: "normal",
                     }}
                   >
@@ -448,21 +434,19 @@ const Home = () => {
                   </div>
                   <div>
                     <div
-                      className={`flex flex-col justify-center md:text-[32px] text-sm font-semibold`}
+                      className={`flex flex-col justify-center md:text-[32px] text-sm md:font-medium font-semibold`}
                       style={{
-                        fontFamily: "SF Pro Display M",
                         lineHeight: "normal",
                       }}
                     >
                       <div className="md:flex flex-col hidden text-left justify-center ">
                         <div>{t("learn-journey-desc1")}</div>
                         <div className="md:pb-[30px]">{t("learn-journey-desc2")}</div>
-                        <div>{t("learn-journey-desc3")}</div>
+                        <div className={`${i18n.language === 'ms' ? "tracking-[-0.02em]" : ''}`}>{t("learn-journey-desc3")}</div>
                       </div>
                       <div className={`flex flex-col md:hidden text-left`}>
-                        <div>{t("learn-journey-desc-mobile1")}</div>
-                        <div className="pb-[30px]">{t("learn-journey-desc-mobile2")}</div>
-                        <div>{t("learn-journey-desc-mobile3")}</div>
+                        <div className="pb-[30px]">{t("learn-journey-desc-mobile1")}</div>
+                        <div>{t("learn-journey-desc-mobile2")}</div>
                       </div>
                     </div>
                   </div>
@@ -489,7 +473,6 @@ const Home = () => {
                     <div
                       className={`text-[#752912] font-bold text-[16px] md:text-[32px]`}
                       style={{
-                        fontFamily: "SF Pro Display EB",
                         lineHeight: "normal",
                       }}
                     >
@@ -497,22 +480,20 @@ const Home = () => {
                     </div>
                     <div>
                       <div
-                        className={`flex flex-col justify-center md:text-[32px] text-sm font-semibold ${i18n.language === 'ms' ? 'text-balance' : ''}`}
+                        className={`flex flex-col justify-center md:text-[32px] text-sm md:font-medium font-semibold`}
                         style={{
-                          fontFamily: "SF Pro Display M",
                           lineHeight: "normal",
                         }}
                       >
                         <div className="md:flex flex-col hidden text-left justify-center ">
                           <div>{t("busy-teacher-desc1")}</div>
                           <div>{t("busy-teacher-desc2")}</div>
-                          <div className="md:pb-[30px]">{t("busy-teacher-desc3")}</div>
+                          <div className={`md:pb-[30px] `}>{t("busy-teacher-desc3")}</div>
                           <div>{t("busy-teacher-desc4")}</div>
                         </div>
                         <div className={`flex flex-col md:hidden text-left`}>
-                          <div>{t("busy-teacher-desc-mobile1")}</div>
-                          <div className="pb-[30px]">{t("busy-teacher-desc-mobile2")}</div>
-                          <div>{t("busy-teacher-desc-mobile3")}</div>
+                          <div className="pb-[30px]">{t("busy-teacher-desc-mobile1")}</div>
+                          <div>{t("busy-teacher-desc-mobile2")}</div>
                         </div>
                       </div>
                     </div>
@@ -535,7 +516,6 @@ const Home = () => {
                     <div
                       className={`text-[#00A0CB] font-bold text-[16px] md:text-[32px]`}
                       style={{
-                        fontFamily: "SF Pro Display EB",
                         lineHeight: "normal",
                       }}
                     >
@@ -543,9 +523,8 @@ const Home = () => {
                     </div>
                     <div>
                       <div
-                        className={`md:flex flex-col hidden justify-center md:text-[32px] gap-[30px] font-semibold`}
+                        className={`md:flex flex-col hidden justify-center md:text-[32px] gap-[30px] md:font-medium font-semibold`}
                         style={{
-                          fontFamily: "SF Pro Display M",
                           lineHeight: "normal",
                         }}
                       >
@@ -555,7 +534,6 @@ const Home = () => {
                       <div
                         className={`flex flex-col md:hidden justify-center gap-[30px] text-sm md:font-medium font-semibold`}
                         style={{
-                          fontFamily: "SF Pro Display M",
                           lineHeight: "normal",
                         }}
                       >
@@ -580,21 +558,37 @@ const Home = () => {
             autoPlay
             loop
             muted
+            playsInline
+            preload="auto"
             className="absolute md:top-0 left-0 w-full md:object-cover object-center"
           />
 
           <div className="absolute flex items-center justify-center text-center inset-0 text-[#F67F00] z-10">
             <div
-              className={`md:text-[48px] text-2xl font-bold ${getDocumentJourneyWidth()}`}
+              className={`md:text-[48px] md:flex flex-col hidden font-bold w-full`}
               style={{
                 fontFamily: "SF Pro Display B",
                 lineHeight: "normal",
               }}
             >
-              {(i18n.language === 'ms')
-                ? <><><div className="md:hidden">{t("document-journey3")}</div><div className="md:hidden">{t("document-journey4")}</div></>
-                  <><div className="md:flex hidden">{t("document-journey1")}</div><div className="md:flex justify-center hidden">{t("document-journey2")}</div></></>
-                : <><div>{t("document-journey1")}</div><div>{t("document-journey2")}</div></>}
+              <div className="md:flex flex-col hidden text-center">
+                <div>{t("document-journey1")}</div>
+                <div>{t("document-journey2")}</div>
+                <div>{t("document-journey3")}</div>
+              </div>
+            </div>
+            <div
+              className={`flex flex-col md:hidden text-2xl font-bold w-full`}
+              style={{
+                lineHeight: "normal",
+              }}
+            >
+              <div className="flex flex-col md:hidden text-center">
+                <div>{t("document-journey-mobile1")}</div>
+                <div>{t("document-journey-mobile2")}</div>
+                <div>{t("document-journey-mobile3")}</div>
+                <div>{t("document-journey-mobile4")}</div>
+              </div>
             </div>
           </div>
         </div>
@@ -608,7 +602,7 @@ const Home = () => {
             className={`w-full flex flex-col justify-center items-center md:gap-[30px] gap-[10px]`}
           >
             <div
-              className={`flex flex-col justify-center items-center md:gap-[50px] gap-[30px]}`}
+              className={`flex flex-col justify-center items-center md:gap-[50px] gap-[30px]`}
             >
               <div>
                 <img
@@ -622,9 +616,18 @@ const Home = () => {
                   }`}
               >
                 <div
-                  className={`text-[#752A15] md:text-[96px] text-center text-4xl md:leading-tight font-bold flex flex-col`}
+                  className={`text-[#752A15] md:text-[96px] text-center md:leading-tight font-bold md:flex flex-col hidden`}
                   style={{
                     fontFamily: "SF Pro Display B",
+                    lineHeight: "normal",
+                  }}
+                >
+                  <div> {t("choose-KT1")}</div>
+                  <div> {t("choose-KT2")}</div>
+                </div>
+                <div
+                  className={`text-[#752A15] text-center text-4xl font-bold flex flex-col md:hidden`}
+                  style={{
                     lineHeight: "normal",
                   }}
                 >
@@ -638,7 +641,6 @@ const Home = () => {
               <div
                 className={`md:text-[32px] text-sm text-center`}
                 style={{
-                  fontFamily: "SF Pro Display M",
                   lineHeight: "normal",
                 }}
               >
@@ -656,10 +658,10 @@ const Home = () => {
                     className={`w-full flex flex-col md:font-medium font-semibold`}
                   >
                     {(i18n.language === 'zh')
-                    ?
-                    <><div>{t("choose-desc-mobile1")}</div><div>{t("choose-desc-mobile2")}</div></>
-                    :
-                    <div>{t("choose-desc-mobile")}</div>}
+                      ?
+                      <><div>{t("choose-desc-mobile1")}</div><div>{t("choose-desc-mobile2")}</div></>
+                      :
+                      <div>{t("choose-desc-mobile")}</div>}
                   </span>
                 </div>
               </div>
@@ -680,7 +682,6 @@ const Home = () => {
             >
               <div
                 className={`md:text-[48px] text-[32px] font-bold `}
-                style={{ fontFamily: "SF Pro Display B" }}
               >
                 {t("school-owner")}
               </div>
@@ -689,24 +690,23 @@ const Home = () => {
                 <div
                   className={`text-center justify-center items-center md:text-[24px] text-[14px]`}
                   style={{
-                    fontFamily: "SF Pro Display M",
                     lineHeight: "normal",
                   }}
                 >
                   {/**Web version */}
-                  <div className="hidden md:flex flex-col justify-center items-center text-balance">
+                  <div className="hidden md:flex flex-col justify-center items-center font-medium text-balance">
                     <div> {t("school-owner-desc1")}</div>
                     <div> {t("school-owner-desc2")}</div>
                   </div>
 
                   {/**mobile version */}
                   <div className="w-full flex md:hidden items-center justify-center ">
-                  <span
-                    className={`w-full flex flex-col font-semibold`}
-                  >
-                    <div>{t("school-owner-desc-mobile")}</div>
-                  </span>
-                </div>
+                    <span
+                      className={`w-full flex flex-col font-semibold`}
+                    >
+                      <div>{t("school-owner-desc-mobile")}</div>
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -733,7 +733,6 @@ const Home = () => {
             >
               <div
                 className={`md:text-[48px] text-[32px] font-bold`}
-                style={{ fontFamily: "SF Pro Display B" }}
               >
                 {t("administrator")}
               </div>
@@ -741,23 +740,22 @@ const Home = () => {
               <div
                 className={`w-full flex flex-col items-center text-center md:text-[24px] text-[14px]`}
                 style={{
-                  fontFamily: "SF Pro Display M",
                   lineHeight: "normal",
                 }}
               >
                 <div className="w-full flex items-center justify-center ">
                   <span
-                    className={`md:flex flex-col hidden justify-center items-center text-balance`}
+                    className={`md:flex flex-col hidden justify-center items-center text-balance font-medium`}
                   >
                     <div>{t("admin-desc1")}</div>
                     <div>{t("admin-desc2")}</div>
                   </span>
                 </div>
-                  <span
-                    className={`flex flex-col md:hidden justify-center items-center font-semibold`}
-                  >
-                    <div>{t("admin-desc")}</div>
-                  </span>
+                <span
+                  className={`flex flex-col md:hidden justify-center items-center font-semibold`}
+                >
+                  <div>{t("admin-desc")}</div>
+                </span>
               </div>
             </div>
           </div>
@@ -779,7 +777,6 @@ const Home = () => {
             >
               <div
                 className={`md:text-[48px] text-[32px] font-bold `}
-                style={{ fontFamily: "SF Pro Display B" }}
               >
                 {t("teacher")}
               </div>
@@ -788,7 +785,6 @@ const Home = () => {
                 <div
                   className={`text-center md:text-[24px] text-sm`}
                   style={{
-                    fontFamily: "SF Pro Display M",
                     lineHeight: "normal",
                   }}
                 >
@@ -818,11 +814,11 @@ const Home = () => {
               />
             </div>
             <div
-              className={`flex flex-col justify-center items-center text-center gap-[10px]`}
+              className={`flex flex-col justify-center items-center text-center gap-[10px] font-bold`}
             >
               <div
                 className={`md:text-[48px] text-[32px] `}
-                style={{ fontFamily: "SF Pro Display B", lineHeight: "normal" }}
+                style={{ lineHeight: "normal" }}
               >
                 {t("parent")}
               </div>
@@ -831,7 +827,6 @@ const Home = () => {
                 <div
                   className={`text-center text-pretty md:font-medium font-semibold md:text-[24px] text-sm`}
                   style={{
-                    fontFamily: "SF Pro Display M",
                     lineHeight: "normal",
                   }}
                 >

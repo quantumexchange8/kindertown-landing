@@ -19,6 +19,8 @@ const DownloadParent = () => {
                             autoPlay
                             loop
                             muted
+                            playsInline
+                            preload="auto"
                             className="absolute md:top-0 left-0 w-full h-[300px] md:h-auto object-cover object-center"
                         />
 
@@ -26,7 +28,6 @@ const DownloadParent = () => {
                             <div
                                 className={`md:text-[64px] text-2xl font-bold`}
                                 style={{
-                                    fontFamily: "SF Pro Display B",
                                     lineHeight: "normal",
                                 }}
                             >
@@ -42,7 +43,6 @@ const DownloadParent = () => {
                         <div className="w-full flex flex-col md:gap-[50px] gap-[10px]">
                             <div className="md:text-[64px] text-[16px] font-bold"
                                 style={{
-                                    fontFamily: "SF Pro Display B",
                                     lineHeight: "normal",
                                 }}>
                                 <div>{t("parentmodal-title1")}</div>
@@ -54,7 +54,6 @@ const DownloadParent = () => {
                                     {/* web view */}
                                     <div className="md:text-[32px] text-[14px] md:flex flex-col hidden font-semibold"
                                         style={{
-                                            fontFamily: "SF Pro Display Semibold",
                                             lineHeight: "normal",
                                         }}>
                                         <div>{t("parentmodal-desc1")}</div>
@@ -64,17 +63,15 @@ const DownloadParent = () => {
                                     {/* mobile view */}
                                     <div className="text-[14px] md:hidden flex flex-col font-semibold"
                                         style={{
-                                            fontFamily: "SF Pro Display Semibold",
                                             lineHeight: "normal",
                                         }}>
-                                        <div className="pb-[20px]">{t("mobile-parentmodal-desc1")}</div>
+                                        <div className="pb-[30px]">{t("mobile-parentmodal-desc1")}</div>
                                         <div>{t("mobile-parentmodal-desc2")}</div>
                                     </div></>
                                 : <>
                                     {/* web view */}
-                                    <div className="md:text-[32px] md:flex flex-col hidden px-[30px] md:font-medium"
+                                    <div className="md:text-[32px] md:flex flex-col hidden md:font-medium"
                                         style={{
-                                            fontFamily: "SF Pro Display M",
                                             lineHeight: "normal",
                                         }}>
                                         <div>{t("parentmodal-desc1")}</div>
@@ -87,17 +84,10 @@ const DownloadParent = () => {
                                     {/* mobile view */}
                                     <div className=" text-sm md:hidden flex flex-col font-semibold gap-[30px]"
                                         style={{
-                                            fontFamily: "SF Pro Display R",
                                             lineHeight: "normal",
                                         }}>
-                                        <div>
                                             <div>{t("mobile-parentmodal-desc1")}</div>
                                             <div>{t("mobile-parentmodal-desc2")}</div>
-                                            <div>{t("mobile-parentmodal-desc3")}</div>
-                                        </div>
-                                        <div>
-                                            <div>{t("mobile-parentmodal-desc4")}</div>
-                                        </div>
                                     </div></>
                             }
                         </div>
@@ -128,7 +118,6 @@ const DownloadParent = () => {
                         <div className=" w-full flex flex-col">
                             <div
                                 className={`md:text-4xl text-xl font-bold`}
-                                style={{ fontFamily: " SF Pro Display B" }}
                             >
                                 {t("feature")}:
                             </div>
@@ -136,11 +125,10 @@ const DownloadParent = () => {
                         <div
                             className={`w-full flex flex-col text-base md:text-[32px]`}
                             style={{
-                                fontFamily: "SF Pro Display R",
                                 lineHeight: "normal",
                             }}
                         >
-                            <ul className={`list-outside list-disc flex flex-col md:gap-10 gap-5 md:pl-[50px] pl-[25px] md:tracking-none tracking-[0.06em] md:font-medium
+                            <ul className={`list-outside list-disc flex flex-col md:gap-10 gap-5 md:pl-[50px] pl-[25px] md:font-medium
                                 ${i18n.language === 'zh' ? "font-medium" : "font-semibold"}`}>
                                 <li>{t("search-kindergarten")}</li>
                                 <li>{t("referral-function")}</li>

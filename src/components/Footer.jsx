@@ -59,8 +59,7 @@ const Footer = () => {
                     </div>
                   </div>
                   <div
-                    className="flex flex-col md:gap-4 md:text-xl"
-                    style={{ fontFamily: "SF Pro Display M" }}
+                    className="flex flex-col md:gap-4 md:text-xl font-medium"
                   >
                     <div className="flex md:gap-9" >
                       <div className="md:w-[207px]">
@@ -126,8 +125,7 @@ const Footer = () => {
                 <div className="flex flex-col md:gap-9">
                   <div className="flex flex-col md:gap-[15px]">
                     <div
-                      className={`md:text-2xl text-right font-semibold`}
-                      style={{ fontFamily: "SF Pro Display Semibold" }}
+                      className={`md:text-2xl text-right font-bold`}
                     >
                       {t("stay-connect")}
                     </div>
@@ -148,7 +146,6 @@ const Footer = () => {
                   <div className="flex flex-col md:gap-[15px]">
                     <div
                       className={`text-2xl text-right font-bold`}
-                      style={{ fontFamily: "SF Pro Display B" }}
                     >
                       {t("discover-app")}
                     </div>
@@ -164,7 +161,6 @@ const Footer = () => {
                 <div className="flex justify-between">
                   <div
                     className="text-xs text-[#565656]"
-                    style={{ fontFamily: "SF Pro Display R" }}
                   >
                     <div className="flex gap-2">
                       <div className="flex-col">
@@ -206,7 +202,6 @@ const Footer = () => {
                     </div>
                     <div
                       className="text-xs"
-                      style={{ fontFamily: "SF Pro Display R" }}
                     >
                       Powered by Current Tech Industries
                     </div>
@@ -219,8 +214,7 @@ const Footer = () => {
           {/*Mobile*/}
           <div className="w-full md:hidden flex flex-col gap-[50px]">
             <div
-              className="flex flex-col gap-5 text-xl"
-              style={{ fontFamily: "SF Pro Display M" }}
+              className="flex flex-col gap-5 text-xl font-medium"
             >
               <Link
                 onClick={() => setAboutOpen(true)}
@@ -258,7 +252,6 @@ const Footer = () => {
               <div className="flex flex-col flex-wrap gap-[20px]">
                 <div
                   className="text-xl font-semibold"
-                  style={{ fontFamily: "SF Pro Display Semibold" }}
                 >
                   {t("stay-connect")}
                 </div>
@@ -276,7 +269,6 @@ const Footer = () => {
             <div className="flex flex-col md:gap-[15px] gap-[20px]">
               <div
                 className={`text-xl font-semibold`}
-                style={{ fontFamily: "SF Pro Display Semibold" }}
               >
                 {t("discover-app")}
               </div>
@@ -288,7 +280,7 @@ const Footer = () => {
             <div className="flex flex-wrap md:hidden">
               <div
                 className="text-xs text-[#565656] tracking-wide"
-                style={{ fontFamily: "SF Pro Display R", lineHeight: "25px", }}
+                style={{ lineHeight: "25px", }}
               >
                 <div className="flex flex-row gap-6">
                 <div>© </div><div>2006 Current Tech Industries Sdn Bhd.</div></div>
@@ -318,11 +310,11 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="md:hidden flex gap-4 pb-[51px] pl-[31px] pr-8">
+        <div className="md:hidden flex gap-4 pb-7 pl-[31px] pr-8">
           <div>
             <img src={ct} alt="CTLogo" />
           </div>
-          <div className="text-xs" style={{ fontFamily: "SF Pro Display R" }}>
+          <div className="text-xs">
             Powered by Current Tech Industries
           </div>
         </div>
