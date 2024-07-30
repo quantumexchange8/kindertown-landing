@@ -247,7 +247,7 @@ const Teacher = () => {
                     <div>{t("kingdom-community4")}</div>
                     <div>{t("kingdom-community5")}</div>
                   </div>
-                  <div className={`flex md:hidden flex-col text-center ${i18n.language != 'en' ? 'text-balance' : ''}`}>
+                  <div className={`flex md:hidden flex-col text-center ${i18n.language !== 'en' ? 'text-balance' : ''}`}>
                     <div>{t("mobile-kingdom-community1")}</div>
                     <div>{t("mobile-kingdom-community2")}</div>
                     <div>{t("mobile-kingdom-community3")}</div>

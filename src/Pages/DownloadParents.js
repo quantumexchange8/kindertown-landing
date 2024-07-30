@@ -5,6 +5,7 @@ import apple from "../assets/parentmodal/apple.svg";
 import android from "../assets/parentmodal/android.svg";
 import parentVideo from "../assets/parentmodal/video.mp4";
 import { useTranslation } from "react-i18next";
+import "./modal.css";
 
 const DownloadParent = () => {
     const { t, i18n } = useTranslation();

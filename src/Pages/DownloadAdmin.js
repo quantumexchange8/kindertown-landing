@@ -5,6 +5,7 @@ import apple from "../assets/parentmodal/apple.svg";
 import android from "../assets/parentmodal/android.svg";
 import adminVideo from "../assets/adminmodal/videoadmin.mp4";
 import { useTranslation } from "react-i18next";
+import "./modal.css";
 
 const DownloadAdmin = () => {
     const { t, i18n } = useTranslation();

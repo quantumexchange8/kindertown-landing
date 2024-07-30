@@ -10,5 +10,5 @@
 
 /* Apply the animation to modal content */
 .modal-content {
-  animation: fadeIn 0.8s ease-in-out forwards;
+  animation: fadeIn 0.8s ease-in-out forwards !important;
 }

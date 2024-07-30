@@ -64,7 +64,8 @@ const Navbar = () => {
 
   //Css for menu for mobile version
   const linkStylesmobile = {
-    base: "border border-[#F67F00] rounded-[5px]",
+    active: "text-[#000] text-center text-base",
+    none: "text-[#BBB] text-center text-base",
 
     /*   base: "flex justify-center items-center text-[#FFF] bg-[#F67F00] rounded-[15px]",
     home: "w-[76px]",
@@ -421,17 +422,18 @@ const Navbar = () => {
                       </div>
                     </div>
                     {showProduct && (
-                      <div className="flex gap-5">
+                      <div className="flex gap-[30px]">
                         <div className="border-r border-[#F67F00] h-full"></div>
                         <div className="flex flex-col gap-5">
                           <div>
                             <Link
                               to="/products/parent"
-                              className={`${location.pathname === "/products"
-                                ? `${linkStylesmobile.base}`
-                                : ""
+                              className={`${activeProductSubPage === "parent"
+                                ? `${linkStylesmobile.active}`
+                                : `${linkStylesmobile.none}`
                                 } text-sm`}
                               style={{ fontFamily: "SF Pro Display M" }}
+                              
                             >
                               {t("KT-parent")}
                             </Link>
@@ -439,9 +441,9 @@ const Navbar = () => {
                           <div>
                             <Link
                               to="/products/teacher"
-                              className={`${location.pathname === "/products"
-                                ? `${linkStylesmobile.base}`
-                                : ""
+                              className={`${activeProductSubPage === "teacher"
+                                ? `${linkStylesmobile.active}`
+                                : `${linkStylesmobile.none}`
                                 } text-sm`}
                               style={{ fontFamily: "SF Pro Display M" }}
                             >
@@ -451,9 +453,9 @@ const Navbar = () => {
                           <div>
                             <Link
                               to="/products/admin"
-                              className={`${location.pathname === "/products"
-                                ? `${linkStylesmobile.base}`
-                                : ""
+                              className={`${activeProductSubPage === "admin"
+                                ? `${linkStylesmobile.active}`
+                                : `${linkStylesmobile.none}`
                                 } text-sm`}
                               style={{ fontFamily: "SF Pro Display M" }}
                             >
@@ -503,9 +505,9 @@ const Navbar = () => {
                           <div>
                             <Link
                               to="/download/parent"
-                              className={`${location.pathname === "/download"
-                                ? `${linkStylesmobile.base}`
-                                : ""
+                              className={`${activeDownloadsSubPage === "parent"
+                                ? `${linkStylesmobile.active}`
+                                : `${linkStylesmobile.none}`
                                 } text-sm `}
                               style={{ fontFamily: "SF Pro Display M" }}
                             >
@@ -515,9 +517,9 @@ const Navbar = () => {
                           <div>
                             <Link
                               to="/download/teacher"
-                              className={`${location.pathname === "/download"
-                                ? `${linkStylesmobile.base}`
-                                : ""
+                              className={`${activeDownloadsSubPage === "teacher"
+                                ? `${linkStylesmobile.active}`
+                                : `${linkStylesmobile.none}`
                                 } text-sm `}
                               style={{ fontFamily: "SF Pro Display M" }}
                             >
@@ -527,9 +529,9 @@ const Navbar = () => {
                           <div>
                             <Link
                               to="/download/admin"
-                              className={`${location.pathname === "/download"
-                                ? `${linkStylesmobile.base}`
-                                : ""
+                              className={`${activeDownloadsSubPage === "admin"
+                                ? `${subLinkStyles.active}`
+                                : `${subLinkStyles.none}`
                                 } text-sm `}
                               style={{ fontFamily: "SF Pro Display M" }}
                             >

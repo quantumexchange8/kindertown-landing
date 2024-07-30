@@ -1,7 +1,6 @@
 import React from "react";
 
 import logo from "../../assets/termspolicy/Icon.svg";
-
 import close from "../../assets/parentmodal/close.svg";
 const termsmodal = ({ TermsOpen, setTermsOpen }) => {
   const handleCloseModal = () => {
@@ -20,7 +19,7 @@ const termsmodal = ({ TermsOpen, setTermsOpen }) => {
             onClick={handleCloseModal}
           >
             <div
-              className="relative w-full md:max-w-[900px] overflow-auto  my-auto md:py-[50px] flex modal-content"
+              className="relative w-full md:max-w-[900px] overflow-auto my-auto md:py-[50px] flex modal-content"
               onClick={handleModalClick}
             >
               {/* <div className="md:hidden fixed z-50 bottom-[20px] right-[20px]">

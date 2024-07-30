@@ -14,9 +14,6 @@ const Footer = () => {
   const [PrivacyOpen, setPrivacyOpen] = useState(false);
   const [TermsOpen, setTermsOpen] = useState(false);
   const [AboutOpen, setAboutOpen] = useState(false);
-  const handleModalClick = (e) => {
-    e.stopPropagation();
-  }
 
   const { t } = useTranslation();
   return (
