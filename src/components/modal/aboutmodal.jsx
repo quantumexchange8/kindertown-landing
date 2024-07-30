@@ -103,58 +103,58 @@ const aboutmodal = ({ AboutOpen, setAboutOpen }) => {
                                                     }}
                                                 >
                                                     <div>
-                                                        <div className="font-bold md:text-2xl text-[20px] leading-normal pb-[10px] tracking-wider">
+                                                        <div className="font-bold md:text-2xl text-[20px] leading-normal pb-[10px]">
                                                             Software
                                                         </div>
-                                                        <div className="text-[#666] tracking-wider">
+                                                        <div className="text-[#666] font-medium">
                                                         Empower your business with bespoke software solutions. Our expert developers turn your vision into reality, delivering innovative and dependable software tailored to your unique requirements.
                                                         </div>
                                                     </div>
                                                     <div>
-                                                        <div className="font-bold md:text-2xl text-[20px] leading-normal pb-[10px] tracking-wider">
+                                                        <div className="font-bold md:text-2xl text-[20px] leading-normal pb-[10px]">
                                                             Website
                                                         </div>
-                                                        <div className="text-[#666] tracking-wider">
+                                                        <div className="text-[#666] font-medium">
                                                             We develop websites of all sizes using a step-by-step approach. From pre-production planning and crafting the GUI design to backend development, we execute each phase with precision.
                                                         </div>
                                                     </div>
                                                     <div>
-                                                        <div className="font-bold md:text-2xl text-[20px] leading-normal pb-[10px] tracking-wider">
+                                                        <div className="font-bold md:text-2xl text-[20px] leading-normal pb-[10px]">
                                                             Mobile App
                                                         </div>
-                                                        <div className="text-[#666] tracking-[.075em]">
+                                                        <div className="text-[#666] font-medium">
                                                             We transform our clients’ core ideas into innovative applications for mobile, cloud, and web platforms. We ensure these apps are compatible with major platforms and accessible on a wide range of devices.
                                                         </div>
                                                     </div>
                                                     <div>
-                                                        <div className="font-bold md:text-2xl text-[20px] leading-normal pb-[10px] tracking-wider">
+                                                        <div className="font-bold md:text-2xl text-[20px] leading-normal pb-[10px]">
                                                             Management System
                                                         </div>
-                                                        <div className="text-[#666] tracking-wider">
+                                                        <div className="text-[#666] font-medium">
                                                             The Employee Intelligence Management System (EIMS) is a groundbreaking HR tool that enhances workflow efficiency. It fosters organizational growth and unlocks employee potential through intuitive dashboards, automation, and predictive analytics.
                                                         </div>
                                                     </div>
                                                     <div>
-                                                        <div className="font-bold md:text-2xl text-[20px] leading-normal pb-[10px] tracking-wider">
+                                                        <div className="font-bold md:text-2xl text-[20px] leading-normal pb-[10px]">
                                                             POS System
                                                         </div>
-                                                        <div className="text-[#666] tracking-wider">
+                                                        <div className="text-[#666] font-medium">
                                                             Maximize your business efficiency with our robust POS and e-Invoice system. Seamlessly handle sales, inventory, and customer data, ensuring a frictionless checkout experience. Integrated into your workflow, it boosts productivity and customer satisfaction.
                                                         </div>
                                                     </div>
                                                     <div>
-                                                        <div className="font-bold md:text-2xl text-[20px] leading-normal pb-[10px] tracking-wider">
+                                                        <div className="font-bold md:text-2xl text-[20px] leading-normal pb-[10px]">
                                                             Support & Service
                                                         </div>
-                                                        <div className="text-[#666] tracking-wider">
+                                                        <div className="text-[#666] font-medium">
                                                             Enhance system performance with our expert support. Our team guarantees timely updates and troubleshooting to ensure smooth operations, maintaining your systems at optimal efficiency.
                                                         </div>
                                                     </div>
                                                     <div>
-                                                        <div className="font-bold md:text-2xl text-[20px] leading-normal pb-[10px] tracking-wider">
+                                                        <div className="font-bold md:text-2xl text-[20px] leading-normal pb-[10px]">
                                                             More info
                                                         </div>
-                                                        <div className="text-[#666] tracking-wider">
+                                                        <div className="text-[#666] font-medium">
                                                             You can learn more about us by visiting our official website at: <br />
                                                             <a href="#" className="text-[#0075fe] underline underline-offset-4">
                                                                 Current Tech Industries</a>.
