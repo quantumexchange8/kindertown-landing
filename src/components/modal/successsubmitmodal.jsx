@@ -35,7 +35,7 @@ const SuccessSubmitmodal = ({ showSuccessSubmit, setShowSuccessSubmit }) => {
                         >
                             <div className="relative flex flex-col outline-none focus:outline-none justify-center items-center">
                                 <div className="w-[255px] h-[200px] w-full md:flex flex-col hidden 
-                                gap-[30px] px-[45px] justify-center items-center bg-white border rounded-[16.393px]">
+                                gap-[30px] px-[39px] justify-center items-center bg-white border rounded-[16.393px]">
                                     <img
                                         src={SuccessSubmit}
                                         alt="SuccessSubmit"
@@ -45,14 +45,13 @@ const SuccessSubmitmodal = ({ showSuccessSubmit, setShowSuccessSubmit }) => {
                                     <div
                                         className="flex flex-col justify-center text-center text-[24px] font-semibold"
                                         style={{
-                                            fontFamily: "SF Pro Display Semibold",
                                             lineHeight: "normal"
                                         }}>
                                         {t("message-sent")}
                                     </div>
                                 </div>
-                                <div className=" w-[155px] h-[122px] w-full flex flex-col md:hidden fixed top-[40px]
-                                gap-[20px] px-[20px] justify-center items-center bg-white border rounded-[16.393px]">
+                                <div className=" w-[155px] h-[122px] flex flex-col md:hidden fixed top-[40px]
+                                gap-[20px] px-[20px] justify-center items-center bg-white border rounded-[10px]">
                                     <img
                                         src={SuccessSubmit}
                                         alt="SuccessSubmit"
@@ -62,7 +61,6 @@ const SuccessSubmitmodal = ({ showSuccessSubmit, setShowSuccessSubmit }) => {
                                     <div
                                         className="flex flex-col justify-center text-center text-[16px] font-semibold"
                                         style={{
-                                            fontFamily: "SF Pro Display Semibold",
                                             lineHeight: "normal"
                                         }}>
                                         {t("message-sent")}

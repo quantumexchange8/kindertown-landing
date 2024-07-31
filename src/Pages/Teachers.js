@@ -60,7 +60,7 @@ const Teacher = () => {
 
               <div className="hidden md:flex flex-col justify-center items-center md:w-full">
                 <div
-                  className={`text-center text-xl md:text-[32px]`}
+                  className={`text-center text-xl md:text-[32px] font-medium`}
                   style={{
                     lineHeight: "normal",
                   }}
@@ -141,7 +141,7 @@ const Teacher = () => {
                     <div>{t("solve-challenge4")}</div>
                   </div>
 
-                  <div className="md:hidden flex flex-col justify-center items-center tracking-wide">
+                  <div className="md:hidden flex flex-col justify-center items-center">
                     <div>{t("mobile-solve-challenge")}</div>
                   </div>
                 </div>
@@ -261,7 +261,7 @@ const Teacher = () => {
                   <div className="flex flex-col justify-center items-center md:gap-[40px] gap-3">
                     <div className="flex flex-col justify-center items-center">
                       <div
-                        className="md:text-[24px] text-[10px] inline-block"
+                        className="md:text-[24px] text-[10px] inline-block font-bold"
                         style={{
                           lineHeight: "normal",
                         }}
@@ -272,9 +272,9 @@ const Teacher = () => {
                         </span>
                       </div>
                     </div>
-                    <div className="flex flex-col justify-center items-center">
+                    <div className="flex flex-col justify-center items-center font-medium">
                       <div
-                        className="md:text-[24px] text-[10px] inline-block text-center"
+                        className="md:text-[20px] text-[10px] inline-block text-center"
                         style={{
                           lineHeight: "normal",
                         }}
