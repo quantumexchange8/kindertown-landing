@@ -84,7 +84,7 @@ const ReferralProgrames = () => {
             {/*content 3 & 4 */}
             <div className="w-full flex flex-col justify-center items-center md:gap-[150px] gap-[100px] md:px-0 px-[30px]">
               {/*Content 3*/}
-              <div className="w-full md:w-[800px] flex flex-col  gap-[50px] md:gap-[100px]">
+              <div className="w-full md:w-[1000px] flex flex-col  gap-[50px] md:gap-[100px]">
                 {/*Ttile*/}
                 <div className="flex flex-col">
                   <div
@@ -102,7 +102,7 @@ const ReferralProgrames = () => {
                           <span className="text-[#F67F00]">{t("simply")} </span>
                           {t("a")}
                         </div>
-                        <div className="text-[#00944D] text-center">{t("straightforward-act")}</div>
+                        <div className="text-[#00944D]">{t("straightforward-act")}</div>
                       </div>
                     )}
 
@@ -397,7 +397,7 @@ const ReferralProgrames = () => {
                     }}
                   >
                     <div>{t("mutual-reward1")}</div>
-                    <div className={`${i18n.language === 'en' ? 'md:text-pretty text-balance' : ''}`}>{t("mutual-reward2")}</div>
+                    <div className={`${i18n.language === 'en' ? 'text-balance' : ''}`}>{t("mutual-reward2")}</div>
                   </div>
                   <div
                     className={`text-2xl flex flex-col md:hidden text-center font-bold`}

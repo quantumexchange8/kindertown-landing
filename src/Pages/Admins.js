@@ -112,7 +112,7 @@ const Admin = () => {
               style={{ lineHeight: "normal" }}
             >
               <div
-                className={`hidden md:flex ${i18n.language === "ms" ? "md:w-[400px]" : "md:w-[300px]"} 
+                className={`hidden md:flex tracking-tight ${i18n.language === "ms" ? "md:w-[400px]" : "md:w-[300px]"} 
                 md:absolute top-0 right-0 text-right ${i18n.language === "zh" ? "md:text-[55px] indent-24" : "md:text-[36px]"
                   }`}
               >
@@ -149,7 +149,7 @@ const Admin = () => {
                   }`}
               >
                 <span
-                  className={`inline-block w-full font-bold`}
+                  className={`inline-block w-full font-bold tracking-tight`}
                 >
                   {t("efficient-timesave")}
                 </span>
@@ -253,7 +253,7 @@ const Admin = () => {
         </div>
         {/*Content 7 -- Thoughtful features*/}
 
-        <div className="w-full md:w-[1102px] flex flex-col justify-center items-center  md:gap-[100px] gap-[35px]">
+        <div className="w-full md:w-[1000px] flex flex-col justify-center items-center  md:gap-[100px] gap-[35px]">
           <div className="w-full flex flex-col justify-center items-center">
             <div
               className={`text-center font-bold md:text-[64px]`}
@@ -264,10 +264,10 @@ const Admin = () => {
               {/*Desktop*/}
               <div
                 className={`hidden md:flex flex-col justify-center items-center ${i18n.language === "en"
-                  ? "md:w-[750px] "
+                  ? "md:w-[800px]"
                   : i18n.language === "zh"
                     ? "md:w-[700px]"
-                    : "md:w-[900px]"
+                    : "md:w-[950px]"
                   }`}
               >
                 {t("thoughtful-feature")}

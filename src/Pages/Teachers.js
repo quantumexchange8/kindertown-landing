@@ -66,7 +66,7 @@ const Teacher = () => {
                   }}
                 >
                   <div className={`inline-block w-full`}> {t("KT-teacher-desc1")}</div>
-                  <div className={`inline-block w-full`}> {t("KT-teacher-desc2")}</div>
+                  <div className={`inline-block w-full tracking-tight`}> {t("KT-teacher-desc2")}</div>
                   {!(i18n.language === 'zh')
                     ? <div className={`inline-block w-full`}> {t("KT-teacher-desc3")}</div>
                     : ""
@@ -105,7 +105,7 @@ const Teacher = () => {
                   <div
                     className={`md:flex flex-col hidden inline-block text-center w-full`}
                   >
-                    <div>{t("diff-ways1")}</div>
+                    <div className="tracking-tight">{t("diff-ways1")}</div>
                     <div>{t("diff-ways2")}</div>
                     <div>{t("diff-ways3")}</div>
                     <div>{t("diff-ways4")}</div>
@@ -231,7 +231,7 @@ const Teacher = () => {
                   <div className={`md:flex hidden flex-col text-pretty text-center`}>
                     <div>{t("kingdom-community1")}</div>
                     <div>{t("kingdom-community2")}</div>
-                    <div>{t("kingdom-community3")}</div>
+                    <div className="tracking-tight">{t("kingdom-community3")}</div>
                     <div>{t("kingdom-community4")}</div>
                     <div>{t("kingdom-community5")}</div>
                   </div>
