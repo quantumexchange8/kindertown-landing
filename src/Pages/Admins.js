@@ -551,7 +551,7 @@ const Admin = () => {
             <div className="flex flex-col justify-center items-center md:gap-[40px] gap-3">
               <div className="flex flex-col justify-center items-center">
                 <div
-                  className="md:text-[24px] text-[10px] inline-block"
+                  className="md:text-[24px] text-[10px] inline-block font-bold"
                   style={{
                     lineHeight: "normal",
                   }}
@@ -564,7 +564,7 @@ const Admin = () => {
               </div>
               <div className="flex flex-col justify-center items-center">
                 <div
-                  className="md:text-[24px] text-[10px] inline-block text-center"
+                  className="md:text-[24px] text-[10px] inline-block text-center font-medium"
                   style={{
                     lineHeight: "normal",
                   }}
