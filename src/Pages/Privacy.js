@@ -23,7 +23,7 @@ const Privacy = () => {
               className="hidden md:flex flex-col text-center text-[#FFF] text-2xl w-[1000px]"
               style={{ lineHeight: "normal" }}
             >
-              {i18n.language === 'ms' 
+              {i18n.language !== 'zh' 
                 ? <div>{t("privacy-desc1")}</div>
                 : <><div>{t("privacy-desc1")}</div><div>{t("privacy-desc2")}</div></>
               }
