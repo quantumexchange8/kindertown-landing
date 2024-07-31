@@ -80,7 +80,7 @@ const FormModal = ({ FormOpen, setFormOpen }) => {
                                     </button>
                                 </div>
                                 <div className="flex flex-col md:gap-[50px] gap-[30px] w-full md:px-[50px] px-[30px]">
-                                    <div className="flex flex-col md:gap-[30px] gap-[50px]">
+                                    <div className="flex flex-col md:gap-[30px] gap-[20px]">
                                         <div className="md:flex hidden flex-row flex-wrap items-center justify-center">
                                             <img src={logo} alt="Logo" className="md:w-[150px] w-[100px] md:h-[100px] h-[66.667px]" />
                                         </div>
@@ -100,8 +100,7 @@ const FormModal = ({ FormOpen, setFormOpen }) => {
                                         {/* <form onSubmit=(handleSubmit)></form> */}
                                         <div className="flex flex-col md:gap-5 gap-[15px] text-[#000]">
                                             <div
-                                                className={`md:text-[48px] text-xl flex justify-center font-bold `}
-                                                style={{ fontFamily: "SF Pro Display B" }}
+                                                className={`md:text-[48px] text-xl flex justify-center text-center font-bold `}
                                             >
                                                 {t("leave-your-contact")}
                                             </div>
@@ -112,7 +111,6 @@ const FormModal = ({ FormOpen, setFormOpen }) => {
                                             <div
                                                 className="flex flex-col items-center align-center"
                                                 style={{
-                                                    fontFamily: "SF Pro Display M",
                                                     lineHeight: "normal",
                                                 }}
                                             >
@@ -133,14 +131,12 @@ const FormModal = ({ FormOpen, setFormOpen }) => {
                                                 <div className="flex flex-col md:gap-[10px]">
                                                     <div
                                                         className="md:text-base text-sm font-bold"
-                                                        style={{ fontFamily: "SF Pro Display B" }}
                                                     >
                                                         {t("form-full-name")}<span className="text-[#F00]">*</span>
                                                     </div>
                                                     <div
                                                         className="md:text-2xl text-sm flex flex-col gap-[50px]"
                                                         style={{
-                                                            fontFamily: "SF Pro Display M",
                                                             lineHeight: "normal",
                                                         }}
                                                     >
@@ -156,14 +152,12 @@ const FormModal = ({ FormOpen, setFormOpen }) => {
                                                 <div className="flex flex-col md:gap-[10px]">
                                                     <div
                                                         className="md:text-base text-sm font-bold"
-                                                        style={{ fontFamily: "SF Pro Display B" }}
                                                     >
                                                         {t("form-school-name")}<span className="text-[#F00]">*</span>
                                                     </div>
                                                     <div
                                                         className="md:text-2xl text-sm flex flex-col gap-[50px]"
                                                         style={{
-                                                            fontFamily: "SF Pro Display M",
                                                             lineHeight: "normal",
                                                         }}
                                                     >
@@ -180,14 +174,12 @@ const FormModal = ({ FormOpen, setFormOpen }) => {
                                                 <div className="flex flex-col md:gap-[10px]">
                                                     <div
                                                         className="md:text-base text-sm font-bold"
-                                                        style={{ fontFamily: "SF Pro Display B" }}
                                                     >
                                                         {t("form-contact-number")}<span className="text-[#F00]">*</span>
                                                     </div>
                                                     <div
                                                         className="md:text-2xl text-sm flex flex-col gap-[50px]"
                                                         style={{
-                                                            fontFamily: "SF Pro Display M",
                                                             lineHeight: "normal",
                                                         }}
                                                     >
@@ -203,14 +195,12 @@ const FormModal = ({ FormOpen, setFormOpen }) => {
                                                 <div className="flex flex-col md:gap-[10px]">
                                                     <div
                                                         className="md:text-base text-sm font-bold"
-                                                        style={{ fontFamily: "SF Pro Display B" }}
                                                     >
                                                         {t("form-email-address")}<span className="text-[#F00]">*</span>
                                                     </div>
                                                     <div
                                                         className="md:text-2xl text-sm flex flex-col gap-[50px]"
                                                         style={{
-                                                            fontFamily: "SF Pro Display M",
                                                             lineHeight: "normal",
                                                         }}
                                                     >
@@ -226,14 +216,12 @@ const FormModal = ({ FormOpen, setFormOpen }) => {
                                                 <div className="flex flex-col md:gap-[10px]">
                                                     <div
                                                         className="md:text-base text-sm font-bold"
-                                                        style={{ fontFamily: "SF Pro Display B" }}
                                                     >
                                                         {t("form-location")}<span className="text-[#F00]">*</span>
                                                     </div>
                                                     <div
                                                         className="md:text-sm text-sm flex flex-col gap-[50px]"
                                                         style={{
-                                                            fontFamily: "SF Pro Display M",
                                                             lineHeight: "normal",
                                                         }}
                                                     >
@@ -249,20 +237,17 @@ const FormModal = ({ FormOpen, setFormOpen }) => {
                                                 <div className="flex flex-col md:gap-[25px] ">
                                                     <div
                                                         className="md:text-base text-sm font-bold mb-[20px]"
-                                                        style={{ fontFamily: "SF Pro Display B" }}
                                                     >
                                                         {t("form-interest-product")}<span className="text-[#F00]">*</span>
                                                     </div>
                                                     <div
                                                         className="md:text-2xl text-sm flex flex-col gap-[50px]"
                                                         style={{
-                                                            fontFamily: "SF Pro Display M",
                                                             lineHeight: "normal",
                                                         }}
                                                     >
                                                         <div className="flex flex-row justify-start text-medium text-base md:gap-[60px]"
                                                             style={{
-                                                                fontFamily: "SF Pro Display M",
                                                                 lineHeight: "normal",
                                                             }}>
                                                             <RadioGroup 
@@ -293,7 +278,6 @@ const FormModal = ({ FormOpen, setFormOpen }) => {
                                             <div className="flex md:justify-end justify-center">
                                                 <button type="submit" className="md:w-[130px] w-[80px] md:h-[60px] h-[30px] md:text-xl text-sm font-semibold border-2 border-[#F67F00] md:rounded-[31px] rounded-[10px] shadow-[2px_4px_4px_0px_rgba(246,127,0,0.50)]"
                                                     style={{
-                                                        fontFamily: "SF Pro Display M",
                                                         lineHeight: "normal"
                                                     }}
                                                     onClick={() => (setShowSuccessSubmit(true))}

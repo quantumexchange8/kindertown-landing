@@ -33,15 +33,24 @@ const aboutmodal = ({ AboutOpen, setAboutOpen }) => {
                             {/*content*/}
                             <div className="border-0 w-full md:rounded-[50px] relative flex flex-col bg-white outline-none focus:outline-none justify-center items-center md:pt-70 pt-[50px] md:pb-[150px] pb-[60px]">
                                 <div className="md:w-[1000px] w-full flex flex-col gap-[50px] md:px-[100px] px-[30px]">
-                                    <div className="flex flex-col md:gap-[30px] gap-[50px] ">
-                                        <div className="flex flex-row flex-wrap items-center justify-between ">
+                                    <div className="flex flex-col md:gap-[30px] gap-[50px]">
+                                        <div className="flex flex-row items-center justify-between ">
                                             <div><img src={logo} alt="Logo" className="md:w-[150px] w-[100px] md:h-[100px] h-[66.667px]" /></div>
-                                            <div className="flex flex-row ">
+                                            <div className="md:flex flex-row hidden">
                                                 <button onClick={() => setAboutOpen(false)}>
                                                     <img
                                                         src={close}
                                                         alt="CloseButton"
-                                                        className="md:w-[60px] md:h-[60px] w-[30px] h-[30px] z-50"
+                                                        className="md:w-[60px] md:h-[60px] w-[30px] h-[30px]"
+                                                    />
+                                                </button>
+                                            </div>
+                                            <div className="flex flex-row md:hidden">
+                                                <button onClick={() => setAboutOpen(false)}>
+                                                    <img
+                                                        src={close}
+                                                        alt="CloseButton"
+                                                        className="md:w-[60px] md:h-[60px] w-[30px] h-[30px] fixed right-[30px] top-[50px]"
                                                     />
                                                 </button>
                                             </div>

@@ -49,7 +49,6 @@ const PopupForm = () => {
                 onClick={() => setFormOpen(true)}
             >
                 <div style={{
-                    fontFamily: "SF Pro Display B",
                     lineHeight: "normal",
                 }}
                     className={`inline-block md:text-xl font-wrap font-semibold text-[14px] items-center justify-center text-pretty ${i18n.language === "ms"

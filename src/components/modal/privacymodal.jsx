@@ -29,12 +29,21 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                   <div className="flex flex-col md:gap-[60px] gap-[50px] text-[#000]">
                   <div className="flex flex-row w-full h-[100px] justify-between">
                       <img src={logo} alt="Logo" className="h-[100px]" />
-                      <div className="flex">
+                      <div className="md:flex relative hidden">
                         <button onClick={() => setPrivacyOpen(false)}>
                           <img
                             src={close}
                             alt="CloseButton"
                             className="md:w-[60px] md:h-[60px] w-[30px] h-[30px]"
+                          />
+                        </button>
+                      </div>
+                      <div className="flex relative md:hidden">
+                        <button onClick={() => setPrivacyOpen(false)}>
+                          <img
+                            src={close}
+                            alt="CloseButton"
+                            className="md:w-[60px] md:h-[60px] w-[30px] h-[30px] fixed top-[50px] right-[30px]"
                           />
                         </button>
                       </div>

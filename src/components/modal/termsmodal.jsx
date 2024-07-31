@@ -35,14 +35,23 @@ const termsmodal = ({ TermsOpen, setTermsOpen }) => {
               <div className="border-0 md:rounded-[50px] relative flex flex-col w-full bg-white outline-none focus:outline-none justify-center items-center md:px-0 px-[30px] md:pt-20 pt-[50px] md:pb-[100px] pb-[60px]">
                 <div className="md:w-[700px] w-full flex flex-col gap-[100px]">
                   <div className="flex flex-col md:gap-[60px] gap-[50px]">
-                  <div className="flex flex-row w-full h-[100px] justify-between">
+                    <div className="flex flex-row w-full h-[100px] justify-between">
                       <img src={logo} alt="Logo" className="h-[100px]" />
-                      <div className="flex">
+                      <div className="md:flex relative hidden">
                         <button onClick={() => setTermsOpen(false)}>
                           <img
                             src={close}
                             alt="CloseButton"
                             className="md:w-[60px] md:h-[60px] w-[30px] h-[30px]"
+                          />
+                        </button>
+                      </div>
+                      <div className="flex relative md:hidden">
+                        <button onClick={() => setTermsOpen(false)}>
+                          <img
+                            src={close}
+                            alt="CloseButton"
+                            className="md:w-[60px] md:h-[60px] w-[30px] h-[30px] fixed right-[30px] top-[50px]"
                           />
                         </button>
                       </div>
