@@ -51,9 +51,7 @@ const PopupForm = () => {
                 <div style={{
                     lineHeight: "normal",
                 }}
-                    className={`inline-block md:text-xl font-wrap font-semibold text-[14px] items-center justify-center text-pretty ${i18n.language === "ms"
-                        ? "mx-8" : " "
-                        }`}>
+                    className={`inline-block md:text-xl font-wrap font-semibold text-[14px] items-center justify-center text-pretty `}>
                     {/* Desktop */}
                     <div className="inline-block hidden md:flex"><span dangerouslySetInnerHTML={createMarkup(t(webButtonText))} /></div>
                     {/* Mobile */}
