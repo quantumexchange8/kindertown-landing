@@ -161,8 +161,8 @@ const aboutmodal = ({ AboutOpen, setAboutOpen }) => {
                                                         </div>
                                                         <div className="text-[#666] font-medium">
                                                             You can learn more about us by visiting our official website at: <br />
-                                                            <a href="#" className="text-[#0075fe] underline underline-offset-4">
-                                                                Current Tech Industries</a>.
+                                                            <span className="text-[#0075fe] underline underline-offset-4">
+                                                                Current Tech Industries</span>.
                                                         </div>
                                                     </div>
                                                 </div>

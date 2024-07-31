@@ -18,7 +18,7 @@ const SuccessSubmitmodal = ({ showSuccessSubmit, setShowSuccessSubmit }) => {
             setShowSuccessSubmit(false);
         }, 1500);
         return () => clearTimeout(timer);
-    }, [showSuccessSubmit]); 
+    }, ); 
 
     const { t } = useTranslation();
     return (

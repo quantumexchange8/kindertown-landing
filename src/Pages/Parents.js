@@ -87,7 +87,7 @@ const Parent = () => {
                         </div></>
                     )}
                     {i18n.language === "ms" && (
-                      <><div className="md:inline-block md:w-[1000px] hidden md:leading-none">
+                      <><div className="md:inline-block md:w-[1000px] hidden">
                         {t("KT-parent-desc")}
                       </div>
                         <div className="md:hidden inline-block w-full flex flex-col items-center justify-center text-center">
@@ -95,7 +95,7 @@ const Parent = () => {
                         </div></>
                     )}
                     {i18n.language === "zh" && (
-                      <><div className="md:inline-block md:w-[1000px] hidden md:leading-none font-semibold" style={{ lineHeight: "normal" }}>
+                      <><div className="md:inline-block md:w-[1000px] hidden font-semibold" style={{ lineHeight: "normal" }}>
                         {t("KT-parent-desc")}
                       </div>
                         <div className="md:hidden inline-block w-full flex flex-col items-center justify-center text-center font-semibold">

@@ -149,10 +149,7 @@ const Admin = () => {
                   }`}
               >
                 <span
-                  className={`inline-block ${i18n.language === "zh"
-                    ? "w-full font-bold"
-                    : "w-full"
-                    }`}
+                  className={`inline-block w-full font-bold`}
                 >
                   {t("efficient-timesave")}
                 </span>

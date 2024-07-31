@@ -21,19 +21,6 @@ import PopupForm from "./Form";
 import { useTranslation } from "react-i18next";
 const Home = () => {
   const { t, i18n } = useTranslation();
-
-  const getDocumentJourneyWidth = () => {
-    switch (i18n.language) {
-      case "en":
-        return "md:w-[650px] w-[312px]";
-      case "ms":
-        return "md:w-[700px] w-[250px]";
-      case "zh":
-        return "md:w-[650px] w-[240px]";
-      default:
-        return "md:w-[650px] w-[312px]";
-    }
-  };
   // const [openForm, setOpenForm] = useState(false);
   return (
     <>
@@ -56,9 +43,7 @@ const Home = () => {
                     : "gap-[20px]"}`}
                 >
                   <div
-                    className={`w-full text-4xl md:text-[80px] text-center md:leading-[90px] text-[#F67F00] gap-[50px] 
-                       ${i18n.language === "zh" ? "font-bold" : "font-bold"
-                      }`}
+                    className={`w-full text-4xl md:text-[80px] text-center md:leading-[90px] text-[#F67F00] gap-[50px] font-bold`}
                   >
                     <div>{t("zero-worry")}</div>
                     <div> {t("zero-hassle")}</div>
@@ -95,7 +80,7 @@ const Home = () => {
             {/*Kindertown superhighlight*/}
             <div className="flex flex-col md:gap-[50px] gap-[30px] justify-center items-center md:text-3xl text-base ">
               <div
-                className={`text-center md:w-[460px] font-bold`}
+                className={`text-center w-full font-bold`}
                 style={{
                   lineHeight: "normal",
                 }}
@@ -442,7 +427,7 @@ const Home = () => {
                       <div className="md:flex flex-col hidden text-left justify-center ">
                         <div>{t("learn-journey-desc1")}</div>
                         <div className="md:pb-[30px]">{t("learn-journey-desc2")}</div>
-                        <div className={`${i18n.language === 'ms' ? "tracking-[-0.02em]" : ''}`}>{t("learn-journey-desc3")}</div>
+                        <div>{t("learn-journey-desc3")}</div>
                       </div>
                       <div className={`flex flex-col md:hidden text-left`}>
                         <div className="pb-[30px]">{t("learn-journey-desc-mobile1")}</div>
@@ -616,7 +601,7 @@ const Home = () => {
                   }`}
               >
                 <div
-                  className={`text-[#752A15] md:text-[96px] text-center md:leading-tight font-bold md:flex flex-col hidden`}
+                  className={`text-[#752A15] md:text-[96px] text-center font-bold md:flex flex-col hidden`}
                   style={{
                     fontFamily: "SF Pro Display B",
                     lineHeight: "normal",
