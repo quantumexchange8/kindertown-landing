@@ -31,7 +31,7 @@ const Teacher = () => {
 
             <div className="absolute flex items-center justify-center text-center inset-0 text-[#F2FFA1] z-10">
               <div
-                className={`md:text-[64px] text-2xl font-bold`}
+                className={`md:text-[64px] text-2xl font-bold md:w-full w-[258px] text-balance`}
                 style={{
                   lineHeight: "normal",
                 }}
@@ -60,7 +60,7 @@ const Teacher = () => {
 
               <div className="hidden md:flex flex-col justify-center items-center md:w-full">
                 <div
-                  className={`text-center text-xl md:text-[32px] font-semibold`}
+                  className={`text-center text-xl md:text-[32px] ${i18n.language === 'zh' ? 'font-semibold' : 'font-medium'}`}
                   style={{
                     lineHeight: "normal",
                   }}
@@ -80,7 +80,7 @@ const Teacher = () => {
                     lineHeight: "normal",
                   }}
                 >
-                  <div className={`w-full`}> {t("mobile-KT-teacher-desc")}</div>
+                  <div className={`w-[340px]`}> {t("mobile-KT-teacher-desc")}</div>
                 </div>
               </div>
             </div>
@@ -97,20 +97,20 @@ const Teacher = () => {
               </div>
               <div className="flex flex-col justify-center items-center">
                 <div
-                  className={`md:text-[32px] text-sm text-center font-semibold`}
+                  className={`md:text-[32px] text-sm text-center `}
                   style={{
                     lineHeight: "normal",
                   }}
                 >
                   <div
-                    className={`md:flex flex-col hidden inline-block text-center w-full`}
+                    className={`md:flex flex-col hidden text-center w-full font-medium`}
                   >
                     <div className="tracking-tight">{t("diff-ways1")}</div>
                     <div>{t("diff-ways2")}</div>
                     <div>{t("diff-ways3")}</div>
                     <div>{t("diff-ways4")}</div>
                   </div>
-                  <div className="md:hidden flex flex-col inline-block text-center w-full px-[10px]">
+                  <div className="md:hidden flex flex-col text-center w-[340px] font-semibold">
                     <div>{t("mobile-diff-ways")}</div>
                   </div>
                 </div>
@@ -129,19 +129,19 @@ const Teacher = () => {
               </div>
               <div className="flex flex-col justify-center items-center">
                 <div
-                  className={`flex flex-col md:text-[32px] text-sm text-center font-semibold`}
+                  className={`flex flex-col md:text-[32px] text-sm text-center `}
                   style={{
                     lineHeight: "normal",
                   }}
                 >
-                  <div className={`md:flex hidden flex-col justify-center items-center`}>
+                  <div className={`md:flex hidden flex-col justify-center items-center font-medium`}>
                     <div>{t("solve-challenge1")}</div>
                     <div>{t("solve-challenge2")}</div>
                     <div>{t("solve-challenge3")}</div>
                     <div>{t("solve-challenge4")}</div>
                   </div>
 
-                  <div className="md:hidden flex flex-col justify-center items-center">
+                  <div className="md:hidden flex flex-col justify-center items-center font-semibold w-[340px]">
                     <div>{t("mobile-solve-challenge")}</div>
                   </div>
                 </div>
@@ -166,14 +166,14 @@ const Teacher = () => {
                   }}
                 >
                   <div className="flex flex-col">
-                    <div className={`md:flex hidden flex-col justify-center tracking-tight items-center`}>
+                    <div className={`md:flex hidden flex-col justify-center tracking-tight items-center font-medium`}>
                       <div>{t("harness-power1")}</div>
                       <div>{t("harness-power2")}</div>
                       <div>{t("harness-power3")}</div>
                       <div>{t("harness-power4")}</div>
                     </div>
 
-                    <div className={`md:hidden flex flex-col inline-block`}>
+                    <div className={`md:hidden flex flex-col font-semibold w-[340px]`}>
                       {t("mobile-harness-power")}
                     </div>
                   </div>
@@ -193,18 +193,18 @@ const Teacher = () => {
               </div>
               <div className="flex flex-col justify-center items-center">
                 <div
-                  className={`md:text-[32px] text-sm text-center font-semibold`}
+                  className={`md:text-[32px] text-sm text-center`}
                   style={{
                     lineHeight: "normal",
                   }}
                 >
-                  <div className={`md:flex hidden flex-col tracking-tight text-center`}>
+                  <div className={`md:flex hidden flex-col tracking-tight text-center font-medium`}>
                     <div>{t("take-pride")}</div>
                     <div>{t("take-pride2")}</div>
                     <div>{t("take-pride3")}</div>
                     <div>{t("take-pride4")}</div>
                   </div>
-                  <div className={`md:hidden flex flex-col text-pretty text-center`}>
+                  <div className={`md:hidden flex flex-col text-pretty text-center font-semibold w-[340px]`}>
                     <div>{t("mobile-take-pride")}</div>
                   </div>
                 </div>
@@ -223,19 +223,19 @@ const Teacher = () => {
               </div>
               <div className="flex flex-col justify-center items-center">
                 <div
-                  className={`md:text-[32px] text-sm text-center font-semibold`}
+                  className={`md:text-[32px] text-sm text-center font-medium`}
                   style={{
                     lineHeight: "normal",
                   }}
                 >
-                  <div className={`md:flex hidden flex-col text-pretty text-center`}>
+                  <div className={`md:flex hidden flex-col text-pretty text-center font-medium`}>
                     <div>{t("kingdom-community1")}</div>
                     <div>{t("kingdom-community2")}</div>
                     <div className="tracking-tight">{t("kingdom-community3")}</div>
                     <div>{t("kingdom-community4")}</div>
                     <div>{t("kingdom-community5")}</div>
                   </div>
-                  <div className={`flex md:hidden flex-col text-center`}>
+                  <div className={`flex md:hidden flex-col text-center font-semibold w-[340px]`}>
                     <div>{t("mobile-kingdom-community")}</div>
                   </div>
                 </div>

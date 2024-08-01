@@ -41,7 +41,7 @@ const aboutmodal = ({ AboutOpen, setAboutOpen }) => {
                                                     <img
                                                         src={close}
                                                         alt="CloseButton"
-                                                        className="md:w-[60px] md:h-[60px] w-[30px] h-[30px]"
+                                                        className="md:w-[60px] md:h-[60px] w-[30px] h-[30px] fixed"
                                                     />
                                                 </button>
                                             </div>
@@ -60,7 +60,7 @@ const aboutmodal = ({ AboutOpen, setAboutOpen }) => {
 
                                         <div className="w-full flex flex-col md:gap-5 gap-[15px] text-[#000]">
                                             <div
-                                                className="md:w-[464px] w-full md:h-auto h-[58px] md:text-[40px] text-2xl md:leading-[3rem]"
+                                                className="md:w-[464px] w-full md:h-auto h-[58px] md:text-[40px] text-2xl font-bold md:leading-[3rem]"
                                             >
                                                 We are <br /> Current Tech Industries
                                             </div>
@@ -76,7 +76,7 @@ const aboutmodal = ({ AboutOpen, setAboutOpen }) => {
                                                     lineHeight: "normal",
                                                 }}
                                             >
-                                                <div className="font-medium md:text-2xl text-sm">
+                                                <div className="font-medium md:text-2xl text-sm w-full">
                                                     <div>
                                                         Welcome to Current Tech Industries Sdn Bhd.
                                                         <br /><br />
@@ -95,7 +95,7 @@ const aboutmodal = ({ AboutOpen, setAboutOpen }) => {
                                         </div>
                                         <div className="flex flex-col md:gap-[150px] gap-[100px] text-[#000]">
                                             {/*CONTENT 3*/}
-                                            <div className="flex flex-col md:gap-[50px] gap-[30px]">
+                                            <div className="flex flex-col md:gap-[50px] gap-[30px] w-full">
                                                 <div
                                                     className="md:text-[40px] text-2xl font-bold"
                                                 >
@@ -160,7 +160,7 @@ const aboutmodal = ({ AboutOpen, setAboutOpen }) => {
                                                             More info
                                                         </div>
                                                         <div className="text-[#666] font-medium">
-                                                            You can learn more about us by visiting our official website at: <br />
+                                                            You can learn more about us by visiting our official website at: {" "}
                                                             <span className="text-[#0075fe] underline underline-offset-4">
                                                                 Current Tech Industries</span>.
                                                         </div>

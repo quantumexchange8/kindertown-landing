@@ -26,7 +26,7 @@ const DownloadAdmin = () => {
 
                         <div className="absolute flex items-center justify-center text-center inset-0 text-[#FF244C] z-10">
                             <div
-                                className={`md:text-[64px] text-2xl font-bold`}
+                                className={`md:text-[64px] text-2xl font-bold md:w-full w-[340px]`}
                                 style={{
                                     lineHeight: "normal",
                                 }}
@@ -38,9 +38,9 @@ const DownloadAdmin = () => {
                     </div>
                 </div>
 
-                <div className="w-full flex flex-col justify-center text-center items-center md:gap-[150px] gap-[50px] px-[30px]">
-                    <div className="w-full flex flex-col justify-center text-center max-w-[1000px]">
-                        <div className="w-full flex flex-col md:gap-[50px] gap-[20px]">
+                <div className="w-full flex flex-col justify-center text-center items-center md:gap-[150px] gap-[100px] px-[30px]">
+                    <div className="md:w-full w-[340px] flex flex-col justify-center text-center max-w-[1000px] items-center">
+                        <div className="w-full flex flex-col md:gap-[30px] gap-[20px] w-[340px]">
                             <div className="md:text-[48px] font-bold"
                                 style={{
                                     lineHeight: "normal",
@@ -69,7 +69,7 @@ const DownloadAdmin = () => {
                                 </div>
                             }
 
-                            <div className="flex flex-col md:hidden text-sm font-semibold text-balance"
+                            <div className="flex flex-col md:hidden text-sm font-semibold "
                                 style={{
                                     lineHeight: "normal",
                                 }}>
@@ -104,8 +104,7 @@ const DownloadAdmin = () => {
                     <div className="w-full flex flex-col justify-center items-start max-w-[1000px] md:gap-[50px] gap-[30px]">
                         <div className="w-full flex flex-col">
                             <div
-                                className={`md:text-4xl text-2xl text-left ${i18n.language === "zh" ? "font-bold" : ""
-                                    }`}
+                                className={`md:text-4xl text-2xl text-left font-bold`}
                             >
                                 {t("feature")}:
                             </div>

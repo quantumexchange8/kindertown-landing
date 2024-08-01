@@ -37,15 +37,8 @@ const PopupForm = () => {
 
     return (
         <div className="flex justify-center md:pb-[150px] pb-[50px]">
-            <button className={`bg-white border-2 border-[#f67f00] border-solid rounded-[31px] shadow-[2px_4px_4px_0px_rgba(246,127,0,0.50)] w-[333px] h-[50px]
-         ${i18n.language === "en"
-                    ? "md:w-[600px] md:h-[60px]"
-                    : i18n.language === "ms"
-                        ? "md:w-[760px] md:h-[60px]"
-                        : i18n.language === "zh"
-                            ? "md:w-[450px] md:h-[60px]"
-                            : "md:w-[600px] md:h-[60px]"
-                }`}
+            <button className={`bg-white border-2 border-[#f67f00] border-solid rounded-[31px] shadow-[2px_4px_4px_0px_rgba(246,127,0,0.50)] h-[50px] md:h-[60px]
+                `}
                 onClick={() => setFormOpen(true)}
             >
                 <div style={{
@@ -53,9 +46,9 @@ const PopupForm = () => {
                 }}
                     className={`inline-block md:text-xl font-wrap font-semibold text-[14px] items-center justify-center text-pretty `}>
                     {/* Desktop */}
-                    <div className="inline-block hidden md:flex"><span dangerouslySetInnerHTML={createMarkup(t(webButtonText))} /></div>
+                    <div className={`inline-block hidden md:flex ${i18n.language === 'zh'? "md:mx-[50px]" : "md:mx-[30px]"}`}><div dangerouslySetInnerHTML={createMarkup(t(webButtonText))} /></div>
                     {/* Mobile */}
-                    <div className="flex flex-col md:hidden"><span dangerouslySetInnerHTML={createMarkup(t(mobileButtonText))} /></div>
+                    <div className={`flex flex-col md:hidden ${i18n.language === 'zh'? "mx-[50px]" : "mx-[40px]"}`}><div dangerouslySetInnerHTML={createMarkup(t(mobileButtonText))} /></div>
                 </div>
             </button>
 

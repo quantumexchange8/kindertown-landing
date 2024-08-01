@@ -24,11 +24,12 @@ import { useTranslation } from "react-i18next";
 
 const Parent = () => {
   const { t, i18n } = useTranslation();
+
   return (
     <>
       <div className="w-full flex flex-col relative md:pb-[200px] pt-[60px] pb-[50px] justify-center items-center">
         <div className="w-full md:min-w-[1000px] flex flex-col md:gap-[150px] gap-[100px]">
-          <div className="w-full flex flex-col gap-[60px] md:gap-[100px] items-center">
+          <div className="w-full flex flex-col gap-[50px] md:gap-[100px] items-center">
             {/*Content 1*/}
             <div className="relative w-full md:pb-[20px] md:h-[900px] h-[300px] overflow-hidden">
               <div className="w-full md:pt-[108px] md:pl-[106px]">
@@ -55,7 +56,7 @@ const Parent = () => {
                 </div>
               </div>
             </div>
-            <div className="w-full flex flex-col gap-[30px] px-[30px]">
+            <div className="w-full flex flex-col md:gap-[30px] gap-[10px] px-[30px]">
               <div className="flex flex-col justify-center items-center">
                 <div
                   className={`text-center md:text-[80px] text-[24px] font-bold`}
@@ -72,35 +73,39 @@ const Parent = () => {
 
               <div className="flex flex-col justify-center items-center">
                 <div
-                  className={`text-center text-sm md:text-[32px] font-medium`}
+                  className={`text-center text-sm md:text-[32px] md:font-medium font-semibold`}
                   style={{
                     lineHeight: "normal",
                   }}
                 >
                   <div className="flex flex-wrap items-center justify-center ">
-                    {i18n.language === "en" && (
-                      <><div className="md:inline-block hidden md:w-[785px] ">
-                        {t("KT-parent-desc")}
-                      </div>
-                        <div className="md:hidden inline-block w-full flex flex-col items-center justify-center font-semibold text-center">
+                    {i18n.language === "zh" ? (
+                      <>
+                        <div className="md:inline-block md:w-[1000px] hidden font-semibold" style={{ lineHeight: "normal" }}>
+                          {t("KT-parent-desc")}
+                        </div>
+                        <div className="md:hidden flex flex-col items-center justify-center text-center font-semibold w-[340px]">
                           <div>{t("mobile-KT-parent-desc")}</div>
-                        </div></>
-                    )}
-                    {i18n.language === "ms" && (
-                      <><div className="md:inline-block md:w-[1000px] hidden">
-                        {t("KT-parent-desc")}
-                      </div>
-                        <div className="md:hidden inline-block w-full flex flex-col items-center justify-center text-center">
+                        </div>
+                      </>
+                    ) : i18n.language === "ms" ? (
+                      <>
+                        <div className="md:inline-block md:w-[1000px] hidden">
+                          {t("KT-parent-desc")}
+                        </div>
+                        <div className="md:hidden flex flex-col items-center justify-center text-center w-[340px]">
                           <div>{t("mobile-KT-parent-desc")}</div>
-                        </div></>
-                    )}
-                    {i18n.language === "zh" && (
-                      <><div className="md:inline-block md:w-[1000px] hidden font-semibold" style={{ lineHeight: "normal" }}>
-                        {t("KT-parent-desc")}
-                      </div>
-                        <div className="md:hidden inline-block w-full flex flex-col items-center justify-center text-center font-semibold">
+                        </div>
+                      </>
+                    ) : (
+                      <>
+                        <div className="md:inline-block hidden md:w-[785px]">
+                          {t("KT-parent-desc")}
+                        </div>
+                        <div className="md:hidden flex flex-col items-center justify-center font-semibold text-center w-[340px]">
                           <div>{t("mobile-KT-parent-desc")}</div>
-                        </div></>
+                        </div>
+                      </>
                     )}
                   </div>
                 </div>
@@ -113,7 +118,7 @@ const Parent = () => {
             >
               {/*CONTENT 2 */}
               <div
-                className={`md:w-[1000px] md:h-[612px] h-[250px] w-full relative `}
+                className={`md:w-[1000px] md:h-[612px] h-[250px] w-[370px] relative `}
               >
                 <div className="flex flex-col absolute">
                   <img
@@ -125,17 +130,17 @@ const Parent = () => {
 
                 <div className="flex flex-col items-center absolute top-0 right-0">
                   <div
-                    className={`text-center md:w-[480px] text-[#F67F00] font-bold md:text-[64px] text-base`}
+                    className={`text-center md:w-[500px] text-[#F67F00] font-bold md:text-[64px] text-base`}
                     style={{
                       lineHeight: "normal",
                     }}
                   >
-                    <div className="hidden md:flex flex-col text-right relative top-0 right-0">
+                    <div className="hidden md:flex flex-col text-right relative tracking-tight top-0 right-0">
                       <div>{t("design-web1")}</div>
                       <div>{t("design-web2")}</div>
                     </div>
                     <div
-                      className={`md:hidden flex flex-col relative text-right ${i18n.language === "en" ? "w-[120px]" : "w-[140px]"
+                      className={`md:hidden flex flex-col relative text-right ${i18n.language === "en" ? "w-[130px]" : "w-[145px]"
                         }`}
                     >
                       <div>{t("design-mobile1")}</div>
@@ -145,7 +150,7 @@ const Parent = () => {
                 </div>
               </div>
               {/*CONTENT 3 */}
-              <div className={`w-full md:h-[800px] relative flex justify-center md:gap-[150px] gap-[50px]`}>
+              <div className={`md:w-full w-[370px] md:h-[800px] relative flex justify-center md:gap-[150px] gap-[50px]`}>
                 <div className="flex flex-col">
                   <div
                     className={`w-full text-[#64697A] md:text-[64px] text-[16px] font-bold md:h-[800px]`}
@@ -154,7 +159,7 @@ const Parent = () => {
                     }}
                   >
                     <div
-                      className={`hidden md:flex flex-col text-left md:w-[532.997px]`}
+                      className={`hidden md:flex flex-col text-left tracking-tight md:w-[532.997px]`}
                     >
                       <div>{t("build-learning")}</div>
                       <div>{t("build-learning2")}</div>
@@ -182,7 +187,7 @@ const Parent = () => {
                 </div>
               </div>
               {/*CONTENT 4 */}
-              <div className={`md:w-[1000px] md:h-[800px] h-[300px] w-full relative flex justify-center `}>
+              <div className={`md:w-[1000px] md:h-[800px] h-[300px] w-[370px] relative flex justify-center `}>
                 <div className="flex flex-col absolute bottom-0 left-0">
                   <img
                     src={Phone3}
@@ -207,7 +212,10 @@ const Parent = () => {
                       <div>{t("boundless-imagination")}</div>
                       <div>{t("boundless-imagination2")}</div>
                     </div>
-                    <div className="md:hidden flex flex-col text-right justify-center w-[150px]">
+                    <div className={`md:hidden flex flex-col text-right justify-center ${i18n.language === "ms"
+                        ? 'w-[150px]'
+                        : 'w-[100px]'
+                        }`}>
                       <div>{t("boundless-imagination")}</div>
                       <div>{t("boundless-imagination2")}</div>
                     </div>
@@ -238,7 +246,7 @@ const Parent = () => {
                     </div>
 
                     {/*Mobile*/}
-                    <div className="md:hidden flex flex-col items-center justify-center w-[254px]">
+                    <div className="md:hidden flex flex-col items-center justify-center w-[340px]">
                       <div> {t("ignite-learning-mobile")}</div>
                       <div> {t("ignite-learning2-mobile")}</div>
                     </div>

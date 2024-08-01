@@ -79,7 +79,7 @@ const FormModal = ({ FormOpen, setFormOpen }) => {
                                         />
                                     </button>
                                 </div>
-                                <div className="flex flex-col md:gap-[50px] gap-[30px] w-full md:px-[50px] px-[30px]">
+                                <div className="flex flex-col gap-[30px] w-full md:px-[50px] px-[30px]">
                                     <div className="flex flex-col md:gap-[30px] gap-[20px]">
                                         <div className="md:flex hidden flex-row flex-wrap items-center justify-center">
                                             <img src={logo} alt="Logo" className="md:w-[150px] w-[100px] md:h-[100px] h-[66.667px]" />
@@ -128,9 +128,9 @@ const FormModal = ({ FormOpen, setFormOpen }) => {
                                         <div className="flex flex-col md:gap-[100px] gap-[50px]">
                                             {/*Form*/}
                                             <div className="flex flex-col md:gap-[50px] gap-[30px]">
-                                                <div className="flex flex-col md:gap-[10px]">
+                                                <div className="flex flex-col gap-[10px]">
                                                     <div
-                                                        className="md:text-base text-sm font-bold"
+                                                        className="md:text-base text-sm font-semibold"
                                                     >
                                                         {t("form-full-name")}<span className="text-[#F00]">*</span>
                                                     </div>
@@ -149,9 +149,9 @@ const FormModal = ({ FormOpen, setFormOpen }) => {
                                                         </input>
                                                     </div>
                                                 </div>
-                                                <div className="flex flex-col md:gap-[10px]">
+                                                <div className="flex flex-col gap-[10px]">
                                                     <div
-                                                        className="md:text-base text-sm font-bold"
+                                                        className="md:text-base text-sm font-semibold"
                                                     >
                                                         {t("form-school-name")}<span className="text-[#F00]">*</span>
                                                     </div>
@@ -171,9 +171,9 @@ const FormModal = ({ FormOpen, setFormOpen }) => {
                                                         </input>
                                                     </div>
                                                 </div>
-                                                <div className="flex flex-col md:gap-[10px]">
+                                                <div className="flex flex-col gap-[10px]">
                                                     <div
-                                                        className="md:text-base text-sm font-bold"
+                                                        className="md:text-base text-sm font-semibold"
                                                     >
                                                         {t("form-contact-number")}<span className="text-[#F00]">*</span>
                                                     </div>
@@ -192,9 +192,9 @@ const FormModal = ({ FormOpen, setFormOpen }) => {
                                                         </input>
                                                     </div>
                                                 </div>
-                                                <div className="flex flex-col md:gap-[10px]">
+                                                <div className="flex flex-col gap-[10px]">
                                                     <div
-                                                        className="md:text-base text-sm font-bold"
+                                                        className="md:text-base text-sm font-semibold"
                                                     >
                                                         {t("form-email-address")}<span className="text-[#F00]">*</span>
                                                     </div>
@@ -213,9 +213,9 @@ const FormModal = ({ FormOpen, setFormOpen }) => {
                                                         </input>
                                                     </div>
                                                 </div>
-                                                <div className="flex flex-col md:gap-[10px]">
+                                                <div className="flex flex-col gap-[10px]">
                                                     <div
-                                                        className="md:text-base text-sm font-bold"
+                                                        className="md:text-base text-sm font-semibold"
                                                     >
                                                         {t("form-location")}<span className="text-[#F00]">*</span>
                                                     </div>
@@ -236,7 +236,7 @@ const FormModal = ({ FormOpen, setFormOpen }) => {
                                                 </div>
                                                 <div className="flex flex-col md:gap-[25px] ">
                                                     <div
-                                                        className="md:text-base text-sm font-bold mb-[20px]"
+                                                        className="md:text-base text-sm font-semibold mb-[20px]"
                                                     >
                                                         {t("form-interest-product")}<span className="text-[#F00]">*</span>
                                                     </div>
@@ -258,7 +258,7 @@ const FormModal = ({ FormOpen, setFormOpen }) => {
                                                             className="md:flex md:flex-wrap md:w-[1200px] w-full justify-between"
                                                             >
                                                                 {interestedPlans.map((interestedPlan) => (
-                                                                    <Field key={interestedPlan} className="flex items-center gap-[15px] mb-[20px]">
+                                                                    <Field key={interestedPlan} className="flex items-center gap-[15px] mb-[20px] ml-[16px]">
                                                                         <Radio
                                                                             value={interestedPlan}
                                                                             className="group flex size-5 items-center justify-center rounded-full border bg-white data-[checked]:bg-[#F67F00] gap-[60px]"

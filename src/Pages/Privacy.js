@@ -29,7 +29,7 @@ const Privacy = () => {
               }
             </div>
             <div
-              className={`md:hidden flex flex-col text-[#FFF] text-[14px] font-medium `}
+              className={`md:hidden flex flex-col text-[#FFF] text-[14px] font-medium w-[340px]`}
               style={{ lineHeight: "normal" }}
             >
               <div>{t("mobile-privacy-desc")}</div>

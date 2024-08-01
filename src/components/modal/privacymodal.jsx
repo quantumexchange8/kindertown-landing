@@ -34,7 +34,7 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                           <img
                             src={close}
                             alt="CloseButton"
-                            className="md:w-[60px] md:h-[60px] w-[30px] h-[30px]"
+                            className="md:w-[60px] md:h-[60px] w-[30px] h-[30px] fixed"
                           />
                         </button>
                       </div>
@@ -57,7 +57,7 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                           Kindertown Privacy Policy
                         </div>
                         <div
-                          className="md:text-[24px] text-base font-semibold"
+                          className="md:text-[24px] text-base md:font-medium font-semibold"
                           style={{
                             lineHeight: "normal",
                           }}

@@ -62,10 +62,12 @@ const Navbar = () => {
     download: "w-[100px]",
   };
 
+
   //Css for menu for mobile version
   const linkStylesmobile = {
-    active: "text-[#000] text-center text-base",
+    active: "text-[#000] text-center text-base ",
     none: "text-[#BBB] text-center text-base",
+    base: "flex justify-center items-center border border-[#F67F00] rounded-[5px] py-0.5 px-0.5",
 
     /*   base: "flex justify-center items-center text-[#FFF] bg-[#F67F00] rounded-[15px]",
     home: "w-[76px]",
@@ -259,7 +261,7 @@ const Navbar = () => {
               setFormOpen(true)
               setIsLanguageOpen(false)
             }}
-            className="md:w-[30px] md:h-[30px]">
+              className="md:w-[30px] md:h-[30px]">
               <div
                 className={`transition duration-300 ease-in-out transform ${isHovered ? "hover:scale-110 opacity-90" : ""
                   }`}
@@ -280,8 +282,8 @@ const Navbar = () => {
                   <GlobalIcon />
                 </button>
                 {showLanguageModal && (
-                  <div className="fixed inset-0 z-50 bg-gray-800 bg-opacity-50 backdrop-blur-sm pt-[20px]" 
-                  onClick={handleBackdropClick}>
+                  <div className="fixed inset-0 z-50 bg-gray-800 bg-opacity-50 backdrop-blur-sm pt-[20px]"
+                    onClick={handleBackdropClick}>
                     <div className="z-50 flex flex-row justify-center">
                       <div
                         className="w-[180px] py-[30px] flex flex-col gap-[30px] items-center text-[20px] font-semibold bg-[#FFFFFF] text-[#F67F00] rounded-[5px]  "
@@ -359,6 +361,10 @@ const Navbar = () => {
                       >
                         <Link
                           to="/"
+                          className={`${location.pathname === ("/")
+                            ? `${linkStylesmobile.base} ${linkStyles.active}`
+                            : " "
+                            } `}
                           onClick={() => {
                             // setShowJoinUsSubmenu(false);
                             setProduct(false);
@@ -372,6 +378,10 @@ const Navbar = () => {
                         className={`text-[14px] font-bold`}
                       >
                         <button
+                          className={`${location.pathname.includes("/products")
+                            ? `${linkStylesmobile.base} ${linkStyles.active}`
+                            : " "
+                            } `}
                           onClick={() => {
                             toggleProductDropdown();
                             // setShowJoinUsSubmenu(false);
@@ -386,6 +396,10 @@ const Navbar = () => {
                       >
                         <Link
                           to="/join-us/referral-program"
+                          className={`${location.pathname.includes("/join-us")
+                            ? `${linkStylesmobile.base} ${linkStyles.active}`
+                            : " "
+                            } `}
                           onClick={() => {
                             // setShowJoinUsSubmenu(false);
                             setProduct(false);
@@ -399,6 +413,10 @@ const Navbar = () => {
                         className={`text-[14px] font-bold`}
                       >
                         <button
+                        className={`${location.pathname.includes("/download")
+                          ? `${linkStylesmobile.base} ${linkStyles.active}`
+                          : " "
+                          } `}
                           onClick={() => {
                             toggleDownloadDropdown();
                             // setShowJoinUsSubmenu(false);
@@ -420,7 +438,7 @@ const Navbar = () => {
                                 ? `${linkStylesmobile.active}`
                                 : `${linkStylesmobile.none}`
                                 } text-sm`}
-                              
+
                             >
                               {t("KT-parent")}
                             </Link>

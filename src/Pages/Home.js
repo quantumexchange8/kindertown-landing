@@ -36,9 +36,9 @@ const Home = () => {
                 <img src={Main} alt="" loading="lazy" />
               </div>
               {/*Content 2 */}
-              <div className="w-full flex flex-col justify-center gap-[150px]">
+              <div className="w-full flex flex-col justify-center gap-[150px] items-center">
                 <div
-                  className={`flex flex-col items-center w-full md:gap-[50px] ${i18n.language === "zh"
+                  className={`flex flex-col items-center md:w-full w-[340px] md:gap-[50px] ${i18n.language === "zh"
                     ? "gap-[10px]"
                     : "gap-[20px]"}`}
                 >
@@ -65,7 +65,7 @@ const Home = () => {
                       <div>{t("main-text3")}</div>
                     </div>
                     <div
-                      className={"md:hidden flex flex-col items-center justify-center w-full text-balance"}
+                      className={"md:hidden flex flex-col items-center justify-center w-[340px] tracking-tight"}
                       style={{
                         lineHeight: "normal",
                       }}
@@ -122,9 +122,9 @@ const Home = () => {
                       </div>
                     </div>
                     {/*web*/}
-                    <div className="hidden md:flex flex-col text-center text-[20px]">
+                    <div className="hidden md:flex flex-col text-center text-[20px] font-medium">
                       <div
-                        className="flex flex-col items-center justify-center"
+                        className="flex flex-col items-center justify-center tracking-tight" 
                         style={{
                           lineHeight: "normal",
                         }}
@@ -135,7 +135,7 @@ const Home = () => {
                       </div>
                     </div>
                     {/*Mobile*/}
-                    <div className="md:hidden flex flex-col text-center text-[14px]">
+                    <div className="md:hidden flex flex-col text-center text-[14px] text-medium">
                       <div
                         className="flex flex-col items-center justify-center"
                         style={{
@@ -180,7 +180,7 @@ const Home = () => {
                     </div>
 
                     <div
-                      className="text-center md:text-xl text-sm"
+                      className="text-center md:text-xl text-sm font-medium"
                       style={{ lineHeight: "normal", }}
                     >
                       <div className="md:flex flex-col hidden items-center justify-center">
@@ -222,7 +222,7 @@ const Home = () => {
                     </div>
 
                     <div
-                      className="text-center md:text-xl text-sm md:h-[72px]"
+                      className="text-center md:text-xl text-sm md:h-[72px] font-medium"
                       style={{ lineHeight: "normal", }}
                     >
                       <div className="md:flex flex-col hidden items-center justify-center">
@@ -263,7 +263,7 @@ const Home = () => {
                     </div>
 
                     <div
-                      className="text-center md:text-xl text-sm md:h-[72px]"
+                      className="text-center md:text-xl text-sm md:h-[72px] font-medium"
                       style={{ lineHeight: "normal", }}
                     >
                       <div className="md:flex flex-col hidden items-center justify-center">
@@ -296,18 +296,18 @@ const Home = () => {
                     className={`flex flex-col items-center md:gap-5 gap-[10px] w-[270px]`}
                   >
                     <div
-                      className={`text-center md:text-xl text-base w-full font-bold`}
+                      className={`text-center md:text-xl text-base w-full font-bold `}
                       style={{ lineHeight: "normal", }}
                     >
                       <div className="flex flex-col">
-                        <div className="flex flex-col items-center justify-center">
+                        <div className="flex flex-col items-center justify-center ">
                           <div>{t("market-convenience")}</div>
                           <div>{t("market-convenience2")}</div>
                         </div>
                       </div>
                     </div>
                     <div
-                      className="text-center md:text-xl text-sm"
+                      className="text-center md:text-xl text-sm font-medium"
                       style={{ lineHeight: "normal", }}
                     >
                       <div>{t("supply-resource1")}</div>
@@ -341,7 +341,7 @@ const Home = () => {
                     </div>
 
                     <div
-                      className="text-center md:text-xl text-sm md:h-[72px]"
+                      className="text-center md:text-xl text-sm md:h-[72px] font-medium"
                       style={{ lineHeight: "normal", }}
                     >
                       <div className="md:flex flex-col hidden items-center justify-center">
@@ -365,14 +365,14 @@ const Home = () => {
           className={`w-full flex flex-col bg-[#FFF] justify-center items-center md:px-0 px-5 md:py-[150px] pt-[100px] pb-[50px]`}
         >
           <div
-            className={`w-full md:max-w-[1000px] flex flex-col justify-center md:gap-[150px] gap-[50px]`}
+            className={`w-full md:max-w-[1000px] flex flex-col justify-center items-center md:gap-[150px] gap-[50px]`}
           >
             {/*Essential tools*/}
-            <div className="w-full flex flex-col md:gap-[50px] gap-[30px]">
+            <div className="md:w-full w-[340px] flex flex-col md:gap-[50px] gap-[30px]">
               <div className="flex flex-col justify-center items-center">
                 <img
                   src={Tools}
-                  className="md:w-32 md:h-32 w-[100px] h-[100px]"
+                  className="md:w-[200px] md:h-[200px] w-[120px] h-[120px]"
                   alt="Tools"
                 />
               </div>
@@ -381,7 +381,7 @@ const Home = () => {
                   style={{
                     lineHeight: "normal",
                   }}
-                  className={`text-center text-4xl md:text-[96px] text-[#7A5AF8] w-full font-bold`}
+                  className={`text-center text-4xl md:text-[96px] text-[#7A5AF8] md:w-full w-[340px] font-bold`}
                 >
                   <div className="flex items-center justify-center">
                     {t("essential-tool")}
@@ -429,7 +429,7 @@ const Home = () => {
                         <div className="md:pb-[30px]">{t("learn-journey-desc2")}</div>
                         <div>{t("learn-journey-desc3")}</div>
                       </div>
-                      <div className={`flex flex-col md:hidden text-left`}>
+                      <div className={`flex flex-col md:hidden text-left w-[340px]`}>
                         <div className="pb-[30px]">{t("learn-journey-desc-mobile1")}</div>
                         <div>{t("learn-journey-desc-mobile2")}</div>
                       </div>
@@ -476,7 +476,7 @@ const Home = () => {
                           <div className={`md:pb-[30px] `}>{t("busy-teacher-desc3")}</div>
                           <div>{t("busy-teacher-desc4")}</div>
                         </div>
-                        <div className={`flex flex-col md:hidden text-left`}>
+                        <div className={`flex flex-col md:hidden text-left w-[340px]`}>
                           <div className="pb-[30px]">{t("busy-teacher-desc-mobile1")}</div>
                           <div>{t("busy-teacher-desc-mobile2")}</div>
                         </div>
@@ -517,7 +517,7 @@ const Home = () => {
                         <div>{t("slow-mode-desc2")}</div>
                       </div>
                       <div
-                        className={`flex flex-col md:hidden justify-center gap-[30px] text-sm md:font-medium font-semibold`}
+                        className={`flex flex-col md:hidden justify-center gap-[30px] text-sm md:font-medium font-semibold w-[340px]`}
                         style={{
                           lineHeight: "normal",
                         }}
@@ -563,12 +563,12 @@ const Home = () => {
               </div>
             </div>
             <div
-              className={`flex flex-col md:hidden text-2xl font-bold w-full`}
+              className={`flex flex-col md:hidden text-2xl font-bold w-[340px]`}
               style={{
                 lineHeight: "normal",
               }}
             >
-              <div className="flex flex-col md:hidden text-center">
+              <div className="flex flex-col md:hidden text-center w-[340px]">
                 <div>{t("document-journey-mobile1")}</div>
                 <div>{t("document-journey-mobile2")}</div>
                 <div>{t("document-journey-mobile3")}</div>
@@ -593,7 +593,7 @@ const Home = () => {
                 <img
                   src={Choose}
                   alt="Teachers"
-                  className="md:w-[200px] md:h-[200px] w-full"
+                  className="md:w-[200px] md:h-[200px] w-[120px] h-[120px]"
                 />
               </div>
               <div
@@ -639,15 +639,15 @@ const Home = () => {
                   </span>
                 </div>
                 <div className="w-full flex md:hidden items-center justify-center ">
-                  <span
-                    className={`w-full flex flex-col md:font-medium font-semibold`}
+                  <div
+                    className={`md:w-full flex flex-col md:font-medium font-semibold w-[340px]`}
                   >
                     {(i18n.language === 'zh')
                       ?
                       <><div>{t("choose-desc-mobile1")}</div><div>{t("choose-desc-mobile2")}</div></>
                       :
                       <div>{t("choose-desc-mobile")}</div>}
-                  </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -659,14 +659,14 @@ const Home = () => {
               <img
                 src={Owners}
                 alt="Owner"
-                className="md:w-[600px] md:h-[426px] w-[207px] h-[146px]"
+                className="md:w-[500px] md:h-[350px] h-[150px]"
               />
             </div>
             <div
               className={`flex flex-col justify-center items-center gap-2.5`}
             >
               <div
-                className={`md:text-[48px] text-[32px] font-bold `}
+                className={`md:text-[48px] text-[24px] font-bold `}
               >
                 {t("school-owner")}
               </div>
@@ -687,7 +687,7 @@ const Home = () => {
                   {/**mobile version */}
                   <div className="w-full flex md:hidden items-center justify-center ">
                     <span
-                      className={`w-full flex flex-col font-semibold`}
+                      className={`flex flex-col font-semibold w-[340px]`}
                     >
                       <div>{t("school-owner-desc-mobile")}</div>
                     </span>
@@ -700,24 +700,20 @@ const Home = () => {
           {/*CONTENT 11 -- Adminstrators*/}
 
           <div
-            className={`w-full flex flex-col justify-center items-center ${i18n.language === "zh" ? "gap-[50px]" : "md:gap-[50px] gap-[49px]"
-              }`}
+            className={`w-full flex flex-col justify-center items-center gap-[20px] md:gap-[50px]`}
           >
             <div>
               <img
                 src={Admin}
                 alt="Admin"
-                className="md:w-[500px] md:h-[350px] w-[233.459px] h-[150px]"
+                className="md:w-[500px] md:h-[350px] h-[150px]"
               />
             </div>
             <div
-              className={`w-full flex flex-col justify-center items-center md:gap-[10px] ${i18n.language === "zh"
-                ? "gap-5"
-                : "gap-4"
-                }`}
+              className={`w-full flex flex-col justify-center items-center gap-[10px] `}
             >
               <div
-                className={`md:text-[48px] text-[32px] font-bold`}
+                className={`md:text-[48px] text-[24px] font-bold`}
               >
                 {t("administrator")}
               </div>
@@ -737,7 +733,7 @@ const Home = () => {
                   </span>
                 </div>
                 <span
-                  className={`flex flex-col md:hidden justify-center items-center font-semibold`}
+                  className={`flex flex-col md:hidden justify-center items-center font-semibold w-[340px]`}
                 >
                   <div>{t("admin-desc")}</div>
                 </span>
@@ -746,19 +742,16 @@ const Home = () => {
           </div>
 
           {/*CONTENT 12 -- Teachers */}
-          <div className="w-full flex flex-col justify-center items-center gap-[50px]">
+          <div className="w-full flex flex-col justify-center items-center md:gap-[50px] gap-[20px]">
             <div>
               <img
                 src={Teacher2}
                 alt="Teacher"
-                className="md:w-[500px] md:h-[350px] w-[221.786px] h-[150px]"
+                className="md:w-[500px] md:h-[350px] h-[150px]"
               />
             </div>
             <div
-              className={`flex flex-col justify-center items-center md:gap-[10px] ${i18n.language === "zh"
-                ? "gap-5"
-                : "gap-4 "
-                }`}
+              className={`flex flex-col justify-center items-center gap-[10px]`}
             >
               <div
                 className={`md:text-[48px] text-[32px] font-bold `}
@@ -774,7 +767,7 @@ const Home = () => {
                   }}
                 >
                   {/*Mobile*/}
-                  <div className="md:hidden flex items-center justify-center text-center font-semibold ">
+                  <div className="md:hidden flex items-center justify-center text-center font-semibold w-[340px]">
                     {t("teacher-desc-mobile")}
                   </div>
 
@@ -795,7 +788,7 @@ const Home = () => {
               <img
                 src={Parent}
                 alt="Parent"
-                className={`w-[207px] h-[180px] md:w-[500px] md:h-[430px]`}
+                className={` h-[150px] md:w-[500px] md:h-[430px]`}
               />
             </div>
             <div
@@ -820,7 +813,7 @@ const Home = () => {
                     <div>{t("parent-desc2")}</div>
                     <div>{t("parent-desc3")}</div>
                   </div>
-                  <div className="flex flex-col md:hidden items-center justify-center text-center ">
+                  <div className="flex flex-col md:hidden items-center justify-center text-center w-[340px]">
                     <div>{t("parent-desc")}</div>
                   </div>
                 </div>

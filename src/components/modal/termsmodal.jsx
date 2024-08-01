@@ -42,7 +42,7 @@ const termsmodal = ({ TermsOpen, setTermsOpen }) => {
                           <img
                             src={close}
                             alt="CloseButton"
-                            className="md:w-[60px] md:h-[60px] w-[30px] h-[30px]"
+                            className="md:w-[60px] md:h-[60px] fixed"
                           />
                         </button>
                       </div>
@@ -76,7 +76,7 @@ const termsmodal = ({ TermsOpen, setTermsOpen }) => {
                     {" "}
                     <div className="w-full flex flex-col gap-[10px] text-[#000]">
                       <div
-                        className="md:text-[32px] font-bold text-xl"
+                        className="md:text-[32px] font-bold text-xl leading-tight"
                       >
                         Ownership of Site; <br></br> Agreement to Terms of Use
                       </div>
@@ -165,11 +165,10 @@ const termsmodal = ({ TermsOpen, setTermsOpen }) => {
                             articles, and similar materials) intentionally made
                             available by Kindertown for downloading from the
                             website, provided that you
-                            <ul className="list-none list-inside pt-2 md:pt-0">
+                            <ul className="list-disc list-inside pt-2 md:pt-0">
                               <li>
                                 <span
                                 >
-                                  (1){" "}
                                 </span>
                                 do not remove any proprietary notice language in
                                 all copies of such documents;
@@ -177,7 +176,6 @@ const termsmodal = ({ TermsOpen, setTermsOpen }) => {
                               <li>
                                 <span
                                 >
-                                  (2){" "}
                                 </span>
                                 use such information only for your personal,
                                 non-commercial informational purposes and do not
@@ -187,7 +185,6 @@ const termsmodal = ({ TermsOpen, setTermsOpen }) => {
                               <li>
                                 <span
                                 >
-                                  (3){" "}
                                 </span>
                                 make no modifications to any such information;
                                 and
@@ -195,7 +192,6 @@ const termsmodal = ({ TermsOpen, setTermsOpen }) => {
                               <li>
                                 <span
                                 >
-                                  (4){" "}
                                 </span>
                                 do not make any additional representations or
                                 warranties relating to such documents.

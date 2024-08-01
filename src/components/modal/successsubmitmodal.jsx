@@ -59,7 +59,7 @@ const SuccessSubmitmodal = ({ showSuccessSubmit, setShowSuccessSubmit }) => {
                                     />
 
                                     <div
-                                        className="flex flex-col justify-center text-center text-[16px] font-semibold"
+                                        className="flex flex-col justify-center text-center text-[16px] font-medium"
                                         style={{
                                             lineHeight: "normal"
                                         }}>

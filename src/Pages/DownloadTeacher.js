@@ -39,9 +39,9 @@ const DownloadTeacher = () => {
                     </div>
                 </div>
 
-                <div className="w-full flex flex-col justify-center text-center items-center md:gap-[150px] gap-[50px] px-[30px]">
-                    <div className="w-full flex flex-col justify-center text-center max-w-[1000px]">
-                        <div className="w-full flex flex-col md:gap-[50px] gap-[10px]">
+                <div className="w-full flex flex-col justify-center text-center items-center md:gap-[150px] gap-[100px] px-[30px]">
+                    <div className="w-full flex flex-col justify-center text-center max-w-[1000px] items-center">
+                        <div className="md:w-full flex flex-col md:gap-[30px] gap-[10px] w-[340px]">
                             {/* web view */}
                             <div className="md:text-[64px] md:flex flex-col hidden font-bold"
                                 style={{
@@ -121,8 +121,7 @@ const DownloadTeacher = () => {
                     <div className="w-full flex flex-col text-start max-w-[1000px] justify-center md:gap-[50px] gap-[30px]">
                         <div className="w-full flex flex-col">
                             <div
-                                className={`md:text-4xl text-2xl ${i18n.language === "zh" ? "font-bold" : ""
-                                    }`}
+                                className={`md:text-4xl text-2xl font-bold`}
                             >
                                 {t("feature")}:
                             </div>

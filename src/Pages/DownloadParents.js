@@ -40,7 +40,7 @@ const DownloadParent = () => {
 
                 <div className="w-full flex flex-col justify-center text-center items-center md:gap-[150px] gap-[100px] px-[30px] ">
                     <div className="w-full flex flex-col justify-center text-center max-w-[1000px]">
-                        <div className="w-full flex flex-col md:gap-[50px] gap-[10px]">
+                        <div className="w-full flex flex-col md:gap-[50px] gap-[10px] items-center">
                             <div className="md:text-[64px] text-[16px] font-bold"
                                 style={{
                                     lineHeight: "normal",
@@ -61,7 +61,7 @@ const DownloadParent = () => {
                                         <div>{t("parentmodal-desc3")}</div>
                                     </div>
                                     {/* mobile view */}
-                                    <div className="text-[14px] md:hidden flex flex-col font-semibold"
+                                    <div className="text-[14px] md:hidden flex flex-col font-semibold w-[340px]"
                                         style={{
                                             lineHeight: "normal",
                                         }}>
@@ -82,7 +82,7 @@ const DownloadParent = () => {
                                         <div>{t("parentmodal-desc6")}</div>
                                     </div>
                                     {/* mobile view */}
-                                    <div className=" text-sm md:hidden flex flex-col font-semibold gap-[30px]"
+                                    <div className=" text-sm md:hidden flex flex-col font-semibold gap-[30px] w-[340px]"
                                         style={{
                                             lineHeight: "normal",
                                         }}>

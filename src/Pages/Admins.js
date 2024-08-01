@@ -69,7 +69,7 @@ const Admin = () => {
         >
           {/*Content 1*/}
           <div className="w-full flex flex-col md:gap-[100px] gap-[50px]">
-            <div className="w-full flex flex-col justify-center items-center gap-[30px]">
+            <div className="w-full flex flex-col justify-center items-center gap-[10px]">
               <div className="flex flex-col items-center">
                 <div
                   className={`md:text-[80px] text-2xl font-bold`}
@@ -96,7 +96,7 @@ const Admin = () => {
                     </div>
                   </div>
                   <div
-                    className={`md:hidden flex flex-col font-semibold`}>
+                    className={`md:hidden flex flex-col font-semibold w-[340px]`}>
                     {t("KT-admin-desc1")}{t("KT-admin-desc2")}
                   </div>
                 </div>
@@ -108,7 +108,7 @@ const Admin = () => {
             className={`w-full flex md:flex-row flex-col justify-center items-center gap-[30px]`}
           >
             <div
-              className="flex flex-col text-center relative w-full font-bold md:gap-0 gap-[20px]"
+              className="flex flex-col text-center relative w-full font-bold md:gap-0 gap-[20px] align-center items-center"
               style={{ lineHeight: "normal" }}
             >
               <div
@@ -119,7 +119,7 @@ const Admin = () => {
                 {t("superb-interface")}
               </div>
 
-              <div className={`md:hidden flex flex-col text-[16px]]`}>
+              <div className={`md:hidden flex flex-col text-[16px] w-[340px] text-center`}>
                 <div>{t("superb-interface-mobile")}</div>
               </div>
 
@@ -132,7 +132,7 @@ const Admin = () => {
           </div>
           {/*Content 3 -- School Enrollment*/}
           <div
-            className={`w-full flex md:flex-row flex-col justify-center md:gap-0 gap-[20px]`}
+            className={`w-full flex md:flex-row flex-col justify-center items-center md:gap-0 gap-[20px]`}
           >
             <div className="w-full flex flex-col md:order-2 order-2">
               <img src={Device2} alt="Device2" className="w-full md:w-[733px]" />
@@ -157,7 +157,7 @@ const Admin = () => {
 
               {/*Mobile */}
               <div
-                className={`md:hidden flex flex-col justify-center items-center text-base font-bold`}
+                className={`md:hidden flex flex-col justify-center items-center text-base font-bold w-[340px]`}
                 style={{ lineHeight: "normal" }}
               >
                 <div> {t("efficient-timesave-mobile")}</div>
@@ -166,7 +166,7 @@ const Admin = () => {
             </div>
           </div>
           {/*CONTENT 4 -- Management Tools*/}
-          <div className="w-full flex flex-col justify-center md:gap-[50px] gap-[30px]">
+          <div className="w-full flex flex-col justify-center md:gap-[50px] gap-[20px]">
             <div className="flex flex-col justify-center items-center">
               <div
                 className={`text-center text-base md:text-[36px] font-bold`}
@@ -182,7 +182,7 @@ const Admin = () => {
                 </div>
                 {/*Mobile*/}
                 <div
-                  className={`md:hidden flex flex-col items-center`}
+                  className={`md:hidden flex flex-col items-center tracking-tight w-[340px]`}
                 >
                   {t("manage-tool")}
                 </div>
@@ -210,7 +210,7 @@ const Admin = () => {
                   </div>
                 </div>
                 <div
-                  className="md:hidden flex flex-col items-center "
+                  className="md:hidden flex flex-col items-center w-[340px]"
                 >
                   <div>{t("mobile-academic-achievement1")}</div>
                   <div>{t("mobile-academic-achievement2")}</div>
@@ -240,7 +240,7 @@ const Admin = () => {
                   <div>{t("management-system5")}</div>
                 </div>
                 <div
-                  className={`md:hidden flex flex-col items-center font-bold`}
+                  className={`md:hidden flex flex-col items-center font-bold w-[340px]`}
                 >
                   <div>{t("mobile-management-system")}</div>
                 </div>
@@ -253,7 +253,7 @@ const Admin = () => {
         </div>
         {/*Content 7 -- Thoughtful features*/}
 
-        <div className="w-full md:w-[1000px] flex flex-col justify-center items-center  md:gap-[100px] gap-[35px]">
+        <div className="w-full md:w-[1000px] flex flex-col justify-center items-center  md:gap-[100px] gap-[20px]">
           <div className="w-full flex flex-col justify-center items-center">
             <div
               className={`text-center font-bold md:text-[64px]`}
@@ -274,7 +274,7 @@ const Admin = () => {
               </div>
 
               {/*Mobile*/}
-              <div className="md:hidden flex flex-col justify-center items-center">
+              <div className="md:hidden flex flex-col justify-center items-center w-[340px]">
                 <div>{t("thoughtful-feature1-mobile")}</div>
                 <div>{t("thoughtful-feature2-mobile")}</div>
               </div>

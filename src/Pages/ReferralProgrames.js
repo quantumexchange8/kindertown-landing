@@ -14,7 +14,7 @@ const ReferralProgrames = () => {
 
   return (
     <>
-      <div className="w-full flex flex-col w-max-[1000px] justify-center items-center pt-[60px] md:pb-[150px] pb-[100px]">
+      <div className="w-full flex flex-col w-max-[1000px] justify-center items-center pt-[60px] md:pb-[150px] pb-[50px]">
         <div className="w-full flex flex-col justify-center items-center">
           <div
             className={`w-full w-max-[1000px] flex flex-col gap-[100px] md:gap-[150px]`}
@@ -69,8 +69,8 @@ const ReferralProgrames = () => {
                         <div className={`${i18n.language === "zh" ? "" : "text-balance"}`}>{t("comprehensive-referral1")}</div>
                         <div>{t("comprehensive-referral2")}</div>
                       </div>
-                      <div className={`md:hidden flex flex-col justify-center items-center`}>
-                        <div className="text-balance">{t("mobile-comprehensive-referral1")}</div>
+                      <div className={`md:hidden flex flex-col justify-center items-center w-[340px]`}>
+                        <div>{t("mobile-comprehensive-referral1")}</div>
                         <div>{t("mobile-comprehensive-referral2")}</div>
                       </div>
                     </div>
@@ -82,11 +82,11 @@ const ReferralProgrames = () => {
               </div>
             </div>
             {/*content 3 & 4 */}
-            <div className="w-full flex flex-col justify-center items-center md:gap-[150px] gap-[100px] md:px-0 px-[30px]">
+            <div className="w-full flex flex-col justify-center items-center md:gap-[150px] gap-[50px] md:px-0 px-[30px]">
               {/*Content 3*/}
-              <div className="w-full md:w-[1000px] flex flex-col  gap-[50px] md:gap-[100px]">
+              <div className="w-full md:w-[1000px] flex flex-col justify-center items-center gap-[50px] md:gap-[100px]">
                 {/*Ttile*/}
-                <div className="flex flex-col">
+                <div className="flex flex-col md:w-full w-[340px] ">
                   <div
                     className="md:text-[75px] text-[30px] font-bold"
                     style={{
@@ -132,7 +132,7 @@ const ReferralProgrames = () => {
                   </div>
                 </div>
                 <div
-                  className={`flex flex-col items-center justify-center gap-[50px]`}
+                  className={`flex flex-col items-center justify-center md:gap-[50px] gap-[30px]`}
                 >
                   {/*Box - 1 */}
                   <div className="flex flex-col md:w-[600px] w-full">
@@ -319,7 +319,7 @@ const ReferralProgrames = () => {
                       </div>
                       {/* mobile view title */}
                       <div
-                        className={`flex flex-col md:hidden text-base font-bold`}
+                        className={`flex flex-col md:hidden text-base font-bold text-center`}
                         style={{
                           lineHeight: "normal",
                         }}
@@ -327,7 +327,7 @@ const ReferralProgrames = () => {
                         {t("referee-subscribe")}
                       </div>
                       <div
-                        className="text-center md:text-[20px] text-base"
+                        className="text-center md:text-[20px] text-sm flex flex-col md:px-0 px-[30px]"
                         style={{
                           lineHeight: "normal",
                         }}
@@ -366,7 +366,7 @@ const ReferralProgrames = () => {
                       </div>
                       {/* mobile view title */}
                       <div
-                        className={`flex flex-col md:hidden text-base text-center font-bold`}
+                        className={`flex flex-col md:hidden text-sm text-center font-bold`}
                         style={{
                           lineHeight: "normal",
                         }}
@@ -374,8 +374,7 @@ const ReferralProgrames = () => {
                         <div className={`${i18n.language === 'ms' ? 'px-[50px] text-balance' : ''}`}>{t("receive-reward")}</div>
                       </div>
                       <div
-                        className={`text-center md:text-[20px] ${i18n.language === "zh" ? "text-sm" : "text-base"
-                          }`}
+                        className={`text-center md:text-[20px] text-sm`}
                         style={{
                           lineHeight: "normal",
                         }}
@@ -388,7 +387,7 @@ const ReferralProgrames = () => {
                 </div>
               </div>
               {/*Content 4*/}
-              <div className="w-full flex flex-col justify-center items-center md:gap-[100px] gap-[30px]">
+              <div className={`w-full flex flex-col justify-center items-center md:gap-[30px] ${i18n.language === 'ms' ? 'gap-[10px]' : 'gap-[30px]'}`}>
                 <div className="w-full flex flex-col justify-center items-center ">
                   <div
                     className={`md:text-[64px] md:flex flex-col hidden text-center font-bold md:w-[1000px]`}
@@ -400,7 +399,7 @@ const ReferralProgrames = () => {
                     <div className={`${i18n.language === 'en' ? 'text-balance' : ''}`}>{t("mutual-reward2")}</div>
                   </div>
                   <div
-                    className={`text-2xl flex flex-col md:hidden text-center font-bold`}
+                    className={`text-2xl flex flex-col md:hidden text-center font-bold w-[340px]`}
                     style={{
                       lineHeight: "normal",
                     }}
@@ -428,7 +427,7 @@ const ReferralProgrames = () => {
                     </div>
                     <div>
                       <span
-                        className={`md:w-[1000px] w-full text-[16px] flex flex-col items-center md:hidden font-semibold`}
+                        className={`md:w-[1000px] w-[340px] text-[16px] flex flex-col items-center md:hidden font-semibold`}
                       >
                         <div>{t("mobile-step-simple1")}</div>
                         <div>{t("mobile-step-simple2")}</div>
