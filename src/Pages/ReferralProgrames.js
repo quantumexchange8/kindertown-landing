@@ -21,7 +21,7 @@ const ReferralProgrames = () => {
           >
             {/*content 1 & 2 */}
             <div className="w-full flex flex-col md:gap-[150px] gap-[50px]">
-              {/*CONTENT 1*/}
+              {/*CONTENT 1 -- Video*/}
               <div className="relative w-full md:pb-[20px] md:h-[900px] h-[300px] overflow-hidden">
                 <div className="w-full md:pt-[108px] md:pl-[106px]">
                   <video
@@ -47,7 +47,7 @@ const ReferralProgrames = () => {
                   </div>
                 </div>
               </div>
-              {/*CONTENT 2*/}
+              {/*CONTENT 2 -- Referral */}
               <div className="flex flex-col justify-center items-center md:px-0 px-[30px]">
                 <div className="flex flex-col items-center md:gap-[100px] gap-[50px]">
                   <div className="flex flex-col md:w-[1000px] md:gap-[30px] gap-[10px]">
@@ -83,7 +83,7 @@ const ReferralProgrames = () => {
             </div>
             {/*content 3 & 4 */}
             <div className="w-full flex flex-col justify-center items-center md:gap-[150px] gap-[50px] md:px-0 px-[30px]">
-              {/*Content 3*/}
+              {/*Content 3 -- Recommendation */}
               <div className="w-full md:w-[1000px] flex flex-col justify-center items-center gap-[50px] md:gap-[100px]">
                 {/*Ttile*/}
                 <div className="flex flex-col md:w-full w-[340px] ">
@@ -134,7 +134,7 @@ const ReferralProgrames = () => {
                 <div
                   className={`flex flex-col items-center justify-center md:gap-[50px] gap-[30px]`}
                 >
-                  {/*Box - 1 */}
+                  {/*Box - 1 -- Register an account */}
                   <div className="flex flex-col md:w-[600px] w-full">
                     <div className="relative w-full flex flex-col items-center justify-center md:rounded-t-[10px] rounded-t-[5px] md:h-[300px] h-[162.5px] bg-[#C1FFB4] ">
                       <img
@@ -191,7 +191,7 @@ const ReferralProgrames = () => {
                     </div>
                   </div>
 
-                  {/*Box - 2 */}
+                  {/*Box - 2 -- Referral code*/}
                   <div className="flex flex-col md:w-[600px] w-full">
                     <div className="relative w-full flex flex-col items-center justify-center md:rounded-t-[10px] rounded-t-[5px] bg-[#FFF6C5] md:h-[300px] h-[162.5px]">
                       <img
@@ -239,7 +239,7 @@ const ReferralProgrames = () => {
                     </div>
                   </div>
 
-                  {/*Box - 3*/}
+                  {/*Box - 3 -- Registered account */}
                   <div className="flex flex-col md:w-[600px] w-full">
                     <div className="relative w-full flex flex-col items-center justify-center md:rounded-t-[10px] rounded-t-[5px] bg-[#FFB9B9] md:h-[300px] h-[162.5px]">
                       <img
@@ -290,7 +290,7 @@ const ReferralProgrames = () => {
                       </div>
                     </div>
                   </div>
-                  {/*Box - 4*/}
+                  {/*Box - 4 -- Referee successfully subscribed */}
                   <div className="flex flex-col md:w-[600px] w-full">
                     <div className="relative w-full flex flex-col items-center justify-center md:rounded-t-[10px] rounded-t-[5px] bg-[#BEC8FF] md:h-[300px] h-[162.5px]">
                       <img
@@ -337,7 +337,7 @@ const ReferralProgrames = () => {
                       </div>
                     </div>
                   </div>
-                  {/*Box5*/}
+                  {/*Box5 -- Receive rewards */}
                   <div className="flex flex-col md:w-[600px] w-full">
                     <div className="relative w-full flex flex-col items-center justify-center md:rounded-t-[10px] rounded-t-[5px] bg-[#FFD976] md:h-[300px] h-[162.5px]">
                       <img
@@ -386,7 +386,7 @@ const ReferralProgrames = () => {
                   </div>
                 </div>
               </div>
-              {/*Content 4*/}
+              {/*Content 4 -- Receive mutual reward*/}
               <div className={`w-full flex flex-col justify-center items-center md:gap-[30px] ${i18n.language === 'ms' ? 'gap-[10px]' : 'gap-[30px]'}`}>
                 <div className="w-full flex flex-col justify-center items-center ">
                   <div

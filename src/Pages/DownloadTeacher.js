@@ -65,25 +65,15 @@ const DownloadTeacher = () => {
                                     style={{
                                         lineHeight: "normal",
                                     }}>
-                                    <div>{t("teachermodal-desc1")}</div>
+                                    <div className="md:pb-[50px]">{t("teachermodal-desc1")}</div>
                                     <div>{t("teachermodal-desc2")}</div>
-                                    <div className="md:pb-[50px]">{t("teachermodal-desc6")}</div>
-                                    <div>{t("teachermodal-desc7")}</div>
-                                    <div>{t("teachermodal-desc8")}</div>
                                 </div>
-                                : <div className="md:text-[32px] md:flex flex-col hidden font-medium"
+                                : <div className="md:text-[32px] md:flex flex-col hidden font-semibold tracking-tight"
                                     style={{
                                         lineHeight: "normal",
                                     }}>
-                                    <div>{t("teachermodal-desc1")}</div>
+                                    <div className="md:pb-[30px]">{t("teachermodal-desc1")}</div>
                                     <div>{t("teachermodal-desc2")}</div>
-                                    <div>{t("teachermodal-desc3")}</div>
-                                    <div>{t("teachermodal-desc4")}</div>
-                                    <div>{t("teachermodal-desc5")}</div>
-                                    <div className="md:pb-[30px]">{t("teachermodal-desc6")}</div>
-                                    <div>{t("teachermodal-desc7")}</div>
-                                    <div>{t("teachermodal-desc8")}</div>
-                                    <div>{t("teachermodal-desc9")}</div>
                                 </div>
                             }
 

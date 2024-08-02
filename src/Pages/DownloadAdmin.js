@@ -59,7 +59,7 @@ const DownloadAdmin = () => {
                                     <div>{t("adminmodal-desc2")}</div>
                                     <div>{t("adminmodal-desc3")}</div>
                                 </div>
-                                : <div className="md:text-[32px] md:flex flex-col hidden font-medium"
+                                : <div className="md:text-[32px] md:flex flex-col hidden font-semibold"
                                     style={{
                                         lineHeight: "normal",
                                     }}>

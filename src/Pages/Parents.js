@@ -30,7 +30,8 @@ const Parent = () => {
       <div className="w-full flex flex-col relative md:pb-[200px] pt-[60px] pb-[50px] justify-center items-center">
         <div className="w-full md:min-w-[1000px] flex flex-col md:gap-[150px] gap-[100px]">
           <div className="w-full flex flex-col gap-[50px] md:gap-[100px] items-center">
-            {/*Content 1*/}
+
+            {/*Content 1 -- Kindertown parents*/}
             <div className="relative w-full md:pb-[20px] md:h-[900px] h-[300px] overflow-hidden">
               <div className="w-full md:pt-[108px] md:pl-[106px]">
                 <video
@@ -56,6 +57,7 @@ const Parent = () => {
                 </div>
               </div>
             </div>
+            
             <div className="w-full flex flex-col md:gap-[30px] gap-[10px] px-[30px]">
               <div className="flex flex-col justify-center items-center">
                 <div
@@ -112,11 +114,12 @@ const Parent = () => {
               </div>
             </div>
           </div>
+
           <div className="w-full flex flex-col justify-center items-center md:gap-[150px] gap-[100px]  md:px-0 px-[30px]">
             <div
               className={`w-full flex items-center flex-col md:gap-[150px] gap-[100px]`}
             >
-              {/*CONTENT 2 */}
+              {/*CONTENT 2 -- Designed for the future*/}
               <div
                 className={`md:w-[1000px] md:h-[612px] h-[250px] w-[370px] relative `}
               >
@@ -149,7 +152,8 @@ const Parent = () => {
                   </div>
                 </div>
               </div>
-              {/*CONTENT 3 */}
+
+              {/*CONTENT 3 -- Build for learning*/}
               <div className={`md:w-full w-[370px] md:h-[800px] relative flex justify-center md:gap-[150px] gap-[50px]`}>
                 <div className="flex flex-col">
                   <div
@@ -170,6 +174,7 @@ const Parent = () => {
                         </div>
                       )}
                     </div>
+
                     <div
                       className={`md:hidden flex flex-col text-left w-[154px]`}
                     >
@@ -186,7 +191,8 @@ const Parent = () => {
                   />
                 </div>
               </div>
-              {/*CONTENT 4 */}
+
+              {/*CONTENT 4 -- Witness boundless imagination*/}
               <div className={`md:w-[1000px] md:h-[800px] h-[300px] w-[370px] relative flex justify-center `}>
                 <div className="flex flex-col absolute bottom-0 left-0">
                   <img
@@ -222,7 +228,8 @@ const Parent = () => {
                   </div>
                 </div>
               </div>
-              {/*CONTENT 5 */}
+              
+              {/*CONTENT 5 -- Ignite learning passion */}
               <div
                 className={`w-full flex flex-col md:gap-[50px] gap-[20px] items-center justify-center `}
               >
@@ -260,7 +267,8 @@ const Parent = () => {
                   />
                 </div>
               </div>
-              {/*CONTENT 6 */}
+
+              {/*CONTENT 6 -- Share little moment */}
               <div
                 className={`w-full flex flex-col items-center justify-center `}
               >
@@ -300,7 +308,7 @@ const Parent = () => {
               </div>
             </div>
 
-            {/* CONTENT 7 */}
+            {/* CONTENT 7 -- Attractive widget*/}
             <div className={`md:w-[1000px] flex flex-wrap gap-[30px] md:gap-[100px]`}>
               <div className="flex flex-col justify-center items-center w-full">
                 <div className="flex flex-col items-center">
@@ -323,6 +331,8 @@ const Parent = () => {
                   </div>
                 </div>
               </div>
+
+              {/* web view */}
               <div className="w-full md:flex flex-wrap hidden md:gap-[100px] align-center">
                 <div className="flex justify-between w-full">
                   <div className="flex flex-row">
@@ -371,6 +381,8 @@ const Parent = () => {
                   </div>
                 </div>
               </div>
+
+              {/* mobile view */}
               <div className="w-full flex flex-wrap md:hidden align-center gap-4">
                 <div className="flex justify-between w-full">
                   <div className="flex flex-row">

@@ -56,9 +56,8 @@ const DownloadParent = () => {
                                         style={{
                                             lineHeight: "normal",
                                         }}>
-                                        <div>{t("parentmodal-desc1")}</div>
-                                        <div className="md:pb-[50px]">{t("parentmodal-desc2")}</div>
-                                        <div>{t("parentmodal-desc3")}</div>
+                                        <div className="md:pb-[50px]">{t("parentmodal-desc1")}</div>
+                                        <div>{t("parentmodal-desc2")}</div>
                                     </div>
                                     {/* mobile view */}
                                     <div className="text-[14px] md:hidden flex flex-col font-semibold w-[340px]"
@@ -70,16 +69,12 @@ const DownloadParent = () => {
                                     </div></>
                                 : <>
                                     {/* web view */}
-                                    <div className="md:text-[32px] md:flex flex-col hidden md:font-medium"
+                                    <div className="md:text-[32px] md:flex flex-col hidden md:font-semibold"
                                         style={{
                                             lineHeight: "normal",
                                         }}>
-                                        <div>{t("parentmodal-desc1")}</div>
+                                        <div className="pb-[30px]">{t("parentmodal-desc1")}</div>
                                         <div>{t("parentmodal-desc2")}</div>
-                                        <div className="pb-[30px]">{t("parentmodal-desc3")}</div>
-                                        <div>{t("parentmodal-desc4")}</div>
-                                        <div>{t("parentmodal-desc5")}</div>
-                                        <div>{t("parentmodal-desc6")}</div>
                                     </div>
                                     {/* mobile view */}
                                     <div className=" text-sm md:hidden flex flex-col font-semibold gap-[30px] w-[340px]"

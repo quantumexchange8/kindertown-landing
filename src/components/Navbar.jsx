@@ -363,7 +363,7 @@ const Navbar = () => {
                         <Link
                           to="/"
                           className={`${location.pathname === ("/")
-                            ? `${linkStylesmobile.base} ${linkStyles.active}`
+                            ? `${linkStylesmobile.base}`
                             : " "
                             } `}
                           onClick={() => {
@@ -380,7 +380,7 @@ const Navbar = () => {
                       >
                         <button
                           className={`${location.pathname.includes("/products")
-                            ? `${linkStylesmobile.base} ${linkStyles.active}`
+                            ? `${linkStylesmobile.base}`
                             : " "
                             } `}
                           onClick={() => {
@@ -398,7 +398,7 @@ const Navbar = () => {
                         <Link
                           to="/join-us/referral-program"
                           className={`${location.pathname.includes("/join-us")
-                            ? `${linkStylesmobile.base} ${linkStyles.active}`
+                            ? `${linkStylesmobile.base}`
                             : " "
                             } `}
                           onClick={() => {
@@ -415,7 +415,7 @@ const Navbar = () => {
                       >
                         <button
                         className={`${location.pathname.includes("/download")
-                          ? `${linkStylesmobile.base} ${linkStyles.active}`
+                          ? `${linkStylesmobile.base}`
                           : " "
                           } `}
                           onClick={() => {
