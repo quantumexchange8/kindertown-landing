@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { GlobalIcon } from "./Icons/outline";
+import webLanguage from "../assets/logonavbar.svg";
 import { useTranslation } from "react-i18next";
 import "../font.css";
 import logo from "../assets/logo.svg";
@@ -215,7 +216,7 @@ const Navbar = () => {
                   onMouseEnter={() => setIsHovered(true)}
                   onMouseLeave={() => setIsHovered(false)}
                 >
-                  <GlobalIcon />
+                  <img src={webLanguage} alt="language" className="w-[30px] h-[30px]" />
                 </div>
               </button>
               {isLanguageOpen && (
@@ -268,7 +269,7 @@ const Navbar = () => {
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
               >
-                <img src={formIcon} alt="form" />
+                <img src={formIcon} alt="form" className="md:w-[25px] md:h-[25px]"/>
               </div>
             </button>
             <Form FormOpen={FormOpen} setFormOpen={setFormOpen} />
