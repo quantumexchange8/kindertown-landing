@@ -222,7 +222,7 @@ const Admin = () => {
             </div>
           </div>
           {/*CONTENT 6 -- Management system*/}
-          <div className="w-full flex flex-col justify-center  md:gap-[50px] gap-[20px]">
+          <div className="w-full flex flex-col justify-center  md:gap-[50px] gap-[20px] md:pb-0 pb-[50px]">
             <div className="flex flex-col justify-center items-center">
               <div
                 className={`text-center text-base md:text-[36px]`}

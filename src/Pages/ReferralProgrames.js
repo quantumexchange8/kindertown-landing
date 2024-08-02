@@ -93,42 +93,42 @@ const ReferralProgrames = () => {
                       lineHeight: "normal",
                     }}
                   >
-                    {/**Eng */}
-                    {i18n.language === "en" && (
-                      <div className="flex flex-col items-center">
-                        <div className="text-[#00944D]">{t("recommendation")}</div>
-                        <div className="text-[#00944D]">
-                          {t("is")}{" "}
-                          <span className="text-[#F67F00]">{t("simply")} </span>
-                          {t("a")}
+                    {i18n.language === "zh" ?
+                      <>
+                        <div className="flex flex-col items-center">
+                          <div className="text-[#00944D]">{t("recommendation")}</div>
+                          <div className="text-[#F67F00]">
+                            <span className="text-[#00944D]">{t("very")}</span>
+                            {t("simply")}
+                            <span className="text-[#00944D]">{t("is")}</span>
+                          </div>
                         </div>
-                        <div className="text-[#00944D]">{t("straightforward-act")}</div>
-                      </div>
-                    )}
-
-                    {/**Malay */}
-                    {i18n.language === "ms" && (
-                      <div className="flex flex-col items-center">
-                        <div className="text-[#00944D]">{t("recommendation")}</div>
-                        <div className="text-[#00944D]">
-                          {t("is")}{" "}
-                          <span className="text-[#F67F00]">
-                            {t("simply")}{" "}
-                          </span>
-                        </div>
-                      </div>
-                    )}
-                    {/**Chinese */}
-                    {i18n.language === "zh" && (
-                      <div className="flex flex-col items-center">
-                        <div className="text-[#00944D]">{t("recommendation")}</div>
-                        <div className="text-[#F67F00]">
-                          <span className="text-[#00944D]">{t("very")}</span>
-                          {t("simply")}
-                          <span className="text-[#00944D]">{t("is")}</span>
-                        </div>
-                      </div>
-                    )}
+                      </>
+                      : i18n.language === "ms" ?
+                        <>
+                          <div className="flex flex-col items-center">
+                            <div className="text-[#00944D]">{t("recommendation")}</div>
+                            <div className="text-[#00944D]">
+                              {t("is")}{" "}
+                              <span className="text-[#F67F00]">
+                                {t("simply")}{" "}
+                              </span>
+                            </div>
+                          </div>
+                        </>
+                        :
+                        <>
+                          <div className="flex flex-col items-center">
+                            <div className="text-[#00944D]">{t("recommendation")}</div>
+                            <div className="text-[#00944D]">
+                              {t("is")}{" "}
+                              <span className="text-[#F67F00]">{t("simply")} </span>
+                              {t("a")}
+                            </div>
+                            <div className="text-[#00944D]">{t("straightforward-act")}</div>
+                          </div>
+                        </>
+                    }
                   </div>
                 </div>
                 <div
