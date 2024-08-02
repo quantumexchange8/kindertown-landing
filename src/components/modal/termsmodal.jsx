@@ -165,13 +165,10 @@ const termsmodal = ({ TermsOpen, setTermsOpen }) => {
                             articles, and similar materials) intentionally made
                             available by Kindertown for downloading from the
                             website, provided that you
-                            <ul className="list-disc list-inside pt-2 md:pt-0">
+                            <ul className="list-disc list-outside flex flex-col pt-2 md:pt-0 md:pl-0 pl-[20px] ">
                               <li>
-                                <span
-                                >
-                                </span>
-                                do not remove any proprietary notice language in
-                                all copies of such documents;
+                                  do not remove any proprietary notice language in
+                                  all copies of such documents;
                               </li>
                               <li>
                                 <span
@@ -373,36 +370,31 @@ const termsmodal = ({ TermsOpen, setTermsOpen }) => {
                           <div>
                             Kindertown reserves the right to do any of the
                             following, at any time, without notice:
-                            <ul className="list-none list-inside">
-                              <li>
                                 <span
                                 >
-                                  (1){" "}
+                                  {" "}(1){" "}
                                 </span>
                                 modify, suspend, or terminate the operation of
                                 or access to the website, or any portion of the
                                 website, for any reason;
-                              </li>
-                              <li>
+                              
                                 <span
                                 >
-                                  (2){" "}
+                                  {" "}(2){" "}
                                 </span>
                                 modify or change the website, the entirety or
                                 portions of the website's content, and any
                                 applicable policies or terms; and
-                              </li>
-                              <li>
+                              
                                 <span
                                 >
-                                  (3){" "}
+                                  {" "}(3){" "}
                                 </span>
                                 interrupt the operation of the website, or any
                                 portion of the website, as necessary to perform
                                 routine or non-routine maintenance, error
                                 correction, or other changes.
-                              </li>
-                            </ul>
+                              
                           </div>
                         </div>
                       </div>

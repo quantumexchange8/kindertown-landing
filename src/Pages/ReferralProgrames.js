@@ -65,12 +65,12 @@ const ReferralProgrames = () => {
                         lineHeight: "normal",
                       }}
                     >
-                      <div className="md:flex flex-col hidden">
+                      <div className="md:flex flex-col hidden ">
                         <div className={`${i18n.language === "zh" ? "" : "text-balance"}`}>{t("comprehensive-referral1")}</div>
                         <div>{t("comprehensive-referral2")}</div>
                       </div>
-                      <div className={`md:hidden flex flex-col justify-center items-center w-[340px]`}>
-                        <div>{t("mobile-comprehensive-referral1")}</div>
+                      <div className={`md:hidden flex flex-col justify-center items-center w-[340px] `}>
+                        <div className="text-balance">{t("mobile-comprehensive-referral1")}</div>
                         <div>{t("mobile-comprehensive-referral2")}</div>
                       </div>
                     </div>

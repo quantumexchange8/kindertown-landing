@@ -99,7 +99,7 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                             You will read this product-specific information
                             before using these features. You can also view this
                             information at any time by accessing settings
-                            related to these features and/or online at
+                            related to these features and/or online at: <br/>
                             <span className="text-[#0075FE] underline">
                               {" "}
                               kindertown.pro/privacy
@@ -119,7 +119,7 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                       <div
                         className="md:text-[32px] text-xl font-bold"
                       >
-                        What Is Personal Data at Kindertown?
+                        What Is Personal Data at Kindertown
                       </div>
                       <div
                         className="flex flex-col md:gap-7 gap-4 md:text-2xl text-sm font-medium"
@@ -238,7 +238,7 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                         </div>
 
                         <div>
-                          <ul className="list-inside list-disc flex flex-col md:gap-7 gap-4 ">
+                          <ul className="list-outside list-disc flex flex-col md:gap-7 gap-4 md:pl-0 pl-[20px]">
                             <li>
                               <span
                                 className="font-bold"
@@ -332,10 +332,10 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                         </div>
 
                         <div>
-                          <ul className="list-inside list-disc flex flex-col md:gap-7 gap-4 ">
+                          <ul className="list-outside list-disc flex flex-col md:gap-7 gap-4 md:pl-0 pl-[20px]">
                             <li>
                               <span className="font-bold">
-                                Individuals.{" "}
+                                Individuals:{" "}
                               </span>
                               Kindertown may collect data about you from other
                               individuals — for example, if that individual has
@@ -345,7 +345,7 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                             </li>
                             <li>
                               <span className="font-bold">
-                                At Your Direction.{" "}
+                                At Your Direction:{" "}
                               </span>
                               You may direct other individuals or third parties
                               to share data with Kindertown. For example, you
@@ -358,7 +358,7 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                             </li>
                             <li>
                               <span className="font-bold">
-                                Kindertown Partners.{" "}
+                                Kindertown Partners:{" "}
                               </span>{" "}
                               We may also validate the information you provide —
                               for example, when creating a Kindertown ID, with a
@@ -405,10 +405,10 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                         </div>
 
                         <div>
-                          <ul className="list-inside list-disc flex flex-col md:gap-7 gap-4">
+                          <ul className="list-outside list-disc flex flex-col md:gap-7 gap-4 md:pl-0 pl-[30px]">
                             <li>
                               <span className="font-bold">
-                                Power Our Services.{" "}
+                                Power Our Services:{" "}
                               </span>
                               Kindertown collects necessary personal data to
                               power our services, which may include personal
@@ -421,7 +421,7 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                             </li>
                             <li>
                               <span className="font-bold">
-                                Process Your Transactions.{" "}
+                                Process Your Transactions:{" "}
                               </span>
                               To process transactions, Kindertown must collect
                               data such as your name, purchase, and payment
@@ -429,7 +429,7 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                             </li>
                             <li>
                               <span className="font-bold">
-                                Communicate with You.{" "}
+                                Communicate with You:{" "}
                               </span>
                               To respond to your communications, reach out to
                               you about your transactions or account, market our
@@ -445,7 +445,7 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                             </li>
                             <li>
                               <span className="font-bold">
-                                Security and Fraud Prevention.{" "}
+                                Security and Fraud Prevention:{" "}
                               </span>
                               To protect individuals, employees, and Kindertown,
                               and for loss prevention and fraud prevention,
@@ -456,7 +456,7 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                             </li>
                             <li>
                               <span className="font-bold">
-                                Personal Data Used for Personalization.{" "}
+                                Personal Data Used for Personalization:{" "}
                               </span>
                               If you choose to personalize your services or
                               communications where available, Kindertown will
@@ -470,7 +470,7 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                             </li>
                             <li>
                               <span className="font-bold">
-                                Compliance with Law.{" "}
+                                Compliance with Law:{" "}
                               </span>
                               To comply with applicable law — for example, to
                               fulfill tax or reporting obligations, or to comply
@@ -504,7 +504,7 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                         </div>
 
                         <div>
-                          <ul className="list-inside list-disc flex flex-col md:gap-7 gap-4">
+                          <ul className="list-outside list-disc flex flex-col md:gap-7 gap-4 md:pl-0 pl-[30px]">
                             <li>
                               <span className="font-bold">
                                 Service Providers.{" "}
