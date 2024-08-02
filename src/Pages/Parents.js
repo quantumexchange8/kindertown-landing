@@ -31,7 +31,7 @@ const Parent = () => {
         <div className="w-full md:min-w-[1000px] flex flex-col md:gap-[150px] gap-[100px]">
           <div className="w-full flex flex-col gap-[50px] md:gap-[100px] items-center">
 
-            {/*Content 1 -- Kindertown parents*/}
+            {/*Content 1 -- Kindertown*/}
             <div className="relative w-full md:pb-[20px] md:h-[900px] h-[300px] overflow-hidden">
               <div className="w-full md:pt-[108px] md:pl-[106px]">
                 <video
@@ -81,7 +81,7 @@ const Parent = () => {
                   }}
                 >
                   <div className="flex flex-wrap items-center justify-center ">
-                    {i18n.language === "zh" ? (
+                    {i18n.language === "zh" ? 
                       <>
                         <div className="md:inline-block md:w-[1000px] hidden font-semibold" style={{ lineHeight: "normal" }}>
                           {t("KT-parent-desc")}
@@ -90,7 +90,7 @@ const Parent = () => {
                           <div>{t("mobile-KT-parent-desc")}</div>
                         </div>
                       </>
-                    ) : i18n.language === "ms" ? (
+                     : i18n.language === "ms" ? 
                       <>
                         <div className="md:inline-block md:w-[1000px] hidden">
                           {t("KT-parent-desc")}
@@ -99,7 +99,7 @@ const Parent = () => {
                           <div>{t("mobile-KT-parent-desc")}</div>
                         </div>
                       </>
-                    ) : (
+                     : 
                       <>
                         <div className="md:inline-block hidden md:w-[785px]">
                           {t("KT-parent-desc")}
@@ -108,7 +108,7 @@ const Parent = () => {
                           <div>{t("mobile-KT-parent-desc")}</div>
                         </div>
                       </>
-                    )}
+                    }
                   </div>
                 </div>
               </div>

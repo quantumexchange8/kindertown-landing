@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { GlobalIcon } from "./Icons/outline";
-import webLanguage from "../assets/logonavbar.svg";
 import { useTranslation } from "react-i18next";
 import "../font.css";
 import logo from "../assets/logo.svg";
 import menu from "../assets/menu.svg";
 import formIcon from "../assets/form.svg";
 import triangle from "../assets/triangle.svg";
+import webLanguage from "../assets/logonavbar.svg";
 import i18n from "../i18n";
 import About from "../components/modal/aboutmodal";
 import Form from "../components/modal/formmodal";
