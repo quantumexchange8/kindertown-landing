@@ -69,7 +69,7 @@ const DownloadParent = () => {
                                     </div></>
                                 : <>
                                     {/* web view */}
-                                    <div className="md:text-[32px] md:flex flex-col hidden md:font-semibold"
+                                    <div className="md:text-[32px] md:flex flex-col hidden md:font-semibold tracking-tight"
                                         style={{
                                             lineHeight: "normal",
                                         }}>

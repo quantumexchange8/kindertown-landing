@@ -106,7 +106,7 @@ const FormModal = ({ FormOpen, setFormOpen }) => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="w-full flex flex-col md:gap-[100px] gap-[100px]">
+                                    <div className="w-full flex flex-col md:gap-[100px] gap-[100px] pb-[70px]">
                                         <div className="w-full flex flex-col gap-5 text-[#000]">
                                             <div
                                                 className="flex flex-col items-center align-center"

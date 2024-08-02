@@ -11,7 +11,6 @@ const SuccessSubmitmodal = ({ showSuccessSubmit, setShowSuccessSubmit }) => {
         e.stopPropagation(); // Stop propagation to prevent backdrop click from firing
     };
 
-    // const [FormOpen, setFormOpen] = useState(false);
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -34,7 +33,7 @@ const SuccessSubmitmodal = ({ showSuccessSubmit, setShowSuccessSubmit }) => {
                             onClick={handleModalClick}
                         >
                             <div className="relative flex flex-col outline-none focus:outline-none justify-center items-center">
-                                <div className="w-[255px] h-[200px] w-full md:flex flex-col hidden 
+                                <div className="w-[255px] h-[200px] md:flex flex-col hidden 
                                 gap-[30px] px-[39px] justify-center items-center bg-white border rounded-[16.393px]">
                                     <img
                                         src={SuccessSubmit}

@@ -225,7 +225,7 @@ const Navbar = () => {
                     <img src={triangle} alt="" />
                   </div>
                   <div
-                    className="py-2 flex flex-col mt-[6px] mr-[10px] px-5 gap-4 items-center md:text-base z-50 bg-[#F67F00] text-[#FFFFFF] shadow-md rounded-b-[10px] rounded-tl-[10px] "
+                    className="py-2 flex flex-col mt-[6px] mr-[10px] px-6 gap-4 items-center md:text-base z-50 bg-[#F67F00] text-[#FFFFFF] shadow-md rounded-b-[10px] rounded-tl-[10px] "
                   >
                     <button
                       className=""
@@ -555,7 +555,7 @@ const Navbar = () => {
       {location.pathname.includes("/products") && (
         <div className="bg-[#ffffffe6] hidden w-full md:flex justify-center h-[60px]">
           <div className="max-w-[1000px] w-full flex items-end justify-end gap-[26px] h-[50px]">
-            <div className="md:w-auto md:gap-[20px] md:pb-[10px] flex flex-row justify-between border-b border-[#DDD]">
+            <div className="md:w-auto md:gap-[20px] flex flex-row justify-between border-b border-[#DDD]">
               <Link
                 to="/products/parent"
                 className={`${activeProductSubPage === "parent"

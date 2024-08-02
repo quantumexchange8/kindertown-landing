@@ -238,7 +238,7 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                         </div>
 
                         <div>
-                          <ul className="list-outside list-disc flex flex-col md:gap-7 gap-4 md:pl-0 pl-[20px]">
+                          <ul className="list-outside list-disc flex flex-col md:gap-7 gap-4 pl-[20px]">
                             <li>
                               <span
                                 className="font-bold"
@@ -332,7 +332,7 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                         </div>
 
                         <div>
-                          <ul className="list-outside list-disc flex flex-col md:gap-7 gap-4 md:pl-0 pl-[20px]">
+                          <ul className="list-outside list-disc flex flex-col md:gap-7 gap-4 pl-[30px]">
                             <li>
                               <span className="font-bold">
                                 Individuals:{" "}
@@ -405,7 +405,7 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                         </div>
 
                         <div>
-                          <ul className="list-outside list-disc flex flex-col md:gap-7 gap-4 md:pl-0 pl-[30px]">
+                          <ul className="list-outside list-disc flex flex-col md:gap-7 gap-4 pl-[30px]">
                             <li>
                               <span className="font-bold">
                                 Power Our Services:{" "}
@@ -504,10 +504,10 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                         </div>
 
                         <div>
-                          <ul className="list-outside list-disc flex flex-col md:gap-7 gap-4 md:pl-0 pl-[30px]">
+                          <ul className="list-outside list-disc flex flex-col md:gap-7 gap-4 pl-[30px]">
                             <li>
                               <span className="font-bold">
-                                Service Providers.{" "}
+                                Service Providers:{" "}
                               </span>
                               Kindertown may engage third parties to act as our
                               service providers and perform certain tasks on our
@@ -521,7 +521,7 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                             </li>
                             <li>
                               <span className="font-bold">
-                                Others.{" "}
+                                Others:{" "}
                               </span>
                               Kindertown may share personal data with others at
                               your direction or with your consent, such as when
@@ -595,10 +595,10 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                         </div>
 
                         <div>
-                          <ul className="list-inside list-disc flex flex-col md:gap-7 gap-4  ">
+                          <ul className="list-outside list-disc flex flex-col md:gap-7 gap-4 pl-[30px]">
                             <li>
                               <span className="font-bold">
-                                Parents.{" "}
+                                Parents:{" "}
                               </span>
                               To create a parent and child account, parents must
                               submit the Family Privacy Disclosure for Children,
@@ -608,7 +608,7 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                             </li>
                             <li>
                               <span className="font-bold">
-                                Educational Institutions.{" "}
+                                Educational Institutions:{" "}
                               </span>
                               Educational institutions using the Kindertown
                               system for school management can also create new

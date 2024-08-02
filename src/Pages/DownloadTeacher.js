@@ -68,7 +68,7 @@ const DownloadTeacher = () => {
                                     <div className="md:pb-[50px]">{t("teachermodal-desc1")}</div>
                                     <div>{t("teachermodal-desc2")}</div>
                                 </div>
-                                : <div className="md:text-[32px] md:flex flex-col hidden font-semibold tracking-tight"
+                                : <div className="md:text-[32px] md:flex flex-col hidden font-semibold"
                                     style={{
                                         lineHeight: "normal",
                                     }}>
