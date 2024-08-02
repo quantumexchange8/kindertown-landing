@@ -50,7 +50,7 @@ const SuccessSubmitmodal = ({ showSuccessSubmit, setShowSuccessSubmit }) => {
                                     </div>
                                 </div>
                                 <div className=" w-[155px] h-[122px] flex flex-col md:hidden fixed top-[40px]
-                                gap-[20px] px-[20px] justify-center items-center bg-white border rounded-[10px]">
+                                gap-[20px]  justify-center items-center bg-white border rounded-[10px]">
                                     <img
                                         src={SuccessSubmit}
                                         alt="SuccessSubmit"

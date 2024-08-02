@@ -430,7 +430,7 @@ const ReferralProgrames = () => {
                         className={`md:w-[1000px] w-[340px] text-[16px] flex flex-col items-center md:hidden font-semibold`}
                       >
                         <div>{t("mobile-step-simple1")}</div>
-                        <div>{t("mobile-step-simple2")}</div>
+                        <div className="text-balance">{t("mobile-step-simple2")}</div>
                       </span>
                     </div>
                   </div>

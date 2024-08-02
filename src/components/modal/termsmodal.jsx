@@ -165,7 +165,7 @@ const termsmodal = ({ TermsOpen, setTermsOpen }) => {
                             articles, and similar materials) intentionally made
                             available by Kindertown for downloading from the
                             website, provided that you
-                            <ul className="list-disc list-outside flex flex-col pt-7 pl-[30px] gap-[20px]">
+                            <ul className="list-disc list-outside flex flex-col pt-7 pl-[20px] gap-[20px]">
                               <li>
                                   do not remove any proprietary notice language in
                                   all copies of such documents;

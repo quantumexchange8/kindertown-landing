@@ -59,7 +59,7 @@ const DownloadAdmin = () => {
                                     <div>{t("adminmodal-desc2")}</div>
                                     <div>{t("adminmodal-desc3")}</div>
                                 </div>
-                                : <div className="md:text-[32px] md:flex flex-col hidden font-semibold"
+                                : <div className="md:text-[32px] md:flex flex-col hidden font-medium"
                                     style={{
                                         lineHeight: "normal",
                                     }}>
@@ -104,7 +104,7 @@ const DownloadAdmin = () => {
                     <div className="w-full flex flex-col justify-center items-start max-w-[1000px] md:gap-[50px] gap-[30px]">
                         <div className="w-full flex flex-col">
                             <div
-                                className={`md:text-4xl text-2xl text-left font-bold`}
+                                className={`md:text-4xl text-[20px] text-left font-bold`}
                             >
                                 {t("feature")}:
                             </div>

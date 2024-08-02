@@ -138,7 +138,7 @@ const Admin = () => {
               <img src={Device2} alt="Device2" className="w-full md:w-[733px]" />
             </div>
             <div
-              className="flex flex-col md:order-1 order-1"
+              className="flex flex-col md:order-1 order-1 "
               style={{ lineHeight: "normal" }}
             >
               {/*Desktop */}

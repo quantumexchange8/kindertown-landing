@@ -69,7 +69,7 @@ const DownloadParent = () => {
                                     </div></>
                                 : <>
                                     {/* web view */}
-                                    <div className="md:text-[32px] md:flex flex-col hidden md:font-semibold tracking-tight"
+                                    <div className="md:text-[32px] md:flex flex-col hidden md:font-medium"
                                         style={{
                                             lineHeight: "normal",
                                         }}>
@@ -112,7 +112,7 @@ const DownloadParent = () => {
                     <div className="w-full flex flex-col text-start md:gap-[50px] gap-[30px] md:max-w-[1000px]">
                         <div className=" w-full flex flex-col">
                             <div
-                                className={`md:text-4xl text-xl font-bold`}
+                                className={`md:text-4xl text-[20px] font-bold`}
                             >
                                 {t("feature")}:
                             </div>
@@ -123,7 +123,7 @@ const DownloadParent = () => {
                                 lineHeight: "normal",
                             }}
                         >
-                            <ul className={`list-outside list-disc flex flex-col md:gap-10 gap-5 md:pl-[50px] pl-[25px] md:font-medium
+                            <ul className={`list-outside list-disc flex flex-col md:gap-10 gap-5 md:pl-[50px] pl-[25px] md:font-medium 
                                 ${i18n.language === 'zh' ? "font-medium" : "font-semibold"}`}>
                                 <li>{t("search-kindergarten")}</li>
                                 <li>{t("referral-function")}</li>

@@ -754,7 +754,7 @@ const Home = () => {
               className={`flex flex-col justify-center items-center gap-[10px]`}
             >
               <div
-                className={`md:text-[48px] text-[32px] font-bold `}
+                className={`md:text-[48px] text-[24px] font-bold `}
               >
                 {t("teacher")}
               </div>
@@ -795,7 +795,7 @@ const Home = () => {
               className={`flex flex-col justify-center items-center text-center gap-[10px] font-bold`}
             >
               <div
-                className={`md:text-[48px] text-[32px] `}
+                className={`md:text-[48px] text-[24px] `}
                 style={{ lineHeight: "normal" }}
               >
                 {t("parent")}

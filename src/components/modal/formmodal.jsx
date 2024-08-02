@@ -106,7 +106,7 @@ const FormModal = ({ FormOpen, setFormOpen }) => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="w-full flex flex-col md:gap-[100px] gap-[100px] pb-[70px]">
+                                    <div className="w-full flex flex-col md:gap-[100px] gap-[100px] md:pb-[70px]">
                                         <div className="w-full flex flex-col gap-5 text-[#000]">
                                             <div
                                                 className="flex flex-col items-center align-center"
@@ -276,7 +276,7 @@ const FormModal = ({ FormOpen, setFormOpen }) => {
                                                 </div>
                                             </div>
                                             <div className="flex md:justify-end justify-center">
-                                                <button type="submit" className="md:w-[130px] w-[80px] md:h-[60px] h-[30px] md:text-xl text-sm font-semibold border-2 border-[#F67F00] md:rounded-[31px] rounded-[10px] shadow-[2px_4px_4px_0px_rgba(246,127,0,0.50)]"
+                                                <button type="submit" className="md:w-[130px] w-[80px] md:h-[60px] h-[30px] md:text-xl text-sm font-semibold border-2 border-[#F67F00] md:rounded-[31px] rounded-[10px] shadow-[2px_4px_4px_0px_rgba(0,0,0,0.50)]"
                                                     style={{
                                                         lineHeight: "normal"
                                                     }}

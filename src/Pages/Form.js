@@ -22,10 +22,10 @@ const PopupForm = () => {
         '/download/admin': 'jadual-percuma',
     }
     const mobileButtonTexts = {
-        '/': 'complimentary-demo',
-        '/products/parent': 'interested-parent',
-        '/products/teacher': 'interested-teacher',
-        '/products/admin': 'interested-admin',
+        '/': 'mobile-complimentary-demo',
+        '/products/parent': 'mobile-interested-parent',
+        '/products/teacher': 'mobile-interested-teacher',
+        '/products/admin': 'mobile-interested-admin',
         '/join-us/referral-program': 'mobile-receive-details',
         '/download/parent': 'mobile-jadual-percuma',
         '/download/teacher': 'mobile-jadual-percuma',
@@ -44,11 +44,11 @@ const PopupForm = () => {
                 <div style={{
                     lineHeight: "normal",
                 }}
-                    className={`inline-block md:text-xl font-wrap font-semibold text-[14px] items-center justify-center text-pretty `}>
+                    className={` md:text-xl font-wrap font-semibold text-[16px] items-center justify-center text-pretty `}>
                     {/* Desktop */}
                     <div className={`inline-block hidden md:flex ${i18n.language === 'zh'? "md:mx-[50px]" : "md:mx-[30px]"}`}><div dangerouslySetInnerHTML={createMarkup(t(webButtonText))} /></div>
                     {/* Mobile */}
-                    <div className={`flex flex-col md:hidden ${i18n.language === 'zh'? "mx-[50px]" : "mx-[40px]"}`}><div dangerouslySetInnerHTML={createMarkup(t(mobileButtonText))} /></div>
+                    <div className={`flex flex-col md:hidden ${i18n.language === 'zh'? "mx-[40px]" : i18n.language === 'ms'? "mx-[30px]" : "mx-[40px]"}`}><div dangerouslySetInnerHTML={createMarkup(t(mobileButtonText))} /></div>
                 </div>
             </button>
 

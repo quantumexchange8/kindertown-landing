@@ -88,6 +88,7 @@ const Parent = () => {
                         </div>
                         <div className="md:hidden flex flex-col items-center justify-center text-center font-semibold w-[340px]">
                           <div>{t("mobile-KT-parent-desc")}</div>
+                          <div>{t("mobile-KT-parent-desc2")}</div>
                         </div>
                       </>
                      : i18n.language === "ms" ? 

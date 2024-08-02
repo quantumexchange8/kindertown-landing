@@ -80,7 +80,11 @@ const Teacher = () => {
                     lineHeight: "normal",
                   }}
                 >
-                  <div className={`w-[340px]`}> {t("mobile-KT-teacher-desc")}</div>
+                  <div className={`w-[340px]`}>
+                  <div>{t("mobile-KT-teacher-desc")}</div>
+                  <div>{t("mobile-KT-teacher-desc2")}</div>
+                  <div>{t("mobile-KT-teacher-desc3")}</div>
+                  </div>
                 </div>
               </div>
             </div>

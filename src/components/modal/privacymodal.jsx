@@ -99,7 +99,7 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                             You will read this product-specific information
                             before using these features. You can also view this
                             information at any time by accessing settings
-                            related to these features and/or online at: <br/>
+                            related to these features and/or online at:
                             <span className="text-[#0075FE] underline">
                               {" "}
                               kindertown.pro/privacy
@@ -203,7 +203,7 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                           others, is frivolous or malicious, or would be
                           extremely impractical. If you are unable to access
                           Kindertown's privacy page from your location, you can
-                          submit a request at{" "}
+                          submit a request at: {" "}
                           <span className="text-[#0075FE] underline">
                             kindertown.pro/support/contact
                           </span>.
@@ -332,7 +332,7 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                         </div>
 
                         <div>
-                          <ul className="list-outside list-disc flex flex-col md:gap-7 gap-4 pl-[30px]">
+                          <ul className="list-outside list-disc flex flex-col md:gap-7 gap-4 pl-[20px]">
                             <li>
                               <span className="font-bold">
                                 Individuals:{" "}
@@ -405,7 +405,7 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                         </div>
 
                         <div>
-                          <ul className="list-outside list-disc flex flex-col md:gap-7 gap-4 pl-[30px]">
+                          <ul className="list-outside list-disc flex flex-col md:gap-7 gap-4 pl-[20px]">
                             <li>
                               <span className="font-bold">
                                 Power Our Services:{" "}
@@ -504,7 +504,7 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                         </div>
 
                         <div>
-                          <ul className="list-outside list-disc flex flex-col md:gap-7 gap-4 pl-[30px]">
+                          <ul className="list-outside list-disc flex flex-col md:gap-7 gap-4 pl-[20px]">
                             <li>
                               <span className="font-bold">
                                 Service Providers:{" "}
@@ -595,7 +595,7 @@ const PrivacyModal = ({ PrivacyOpen, setPrivacyOpen }) => {
                         </div>
 
                         <div>
-                          <ul className="list-outside list-disc flex flex-col md:gap-7 gap-4 pl-[30px]">
+                          <ul className="list-outside list-disc flex flex-col md:gap-7 gap-4 pl-[20px]">
                             <li>
                               <span className="font-bold">
                                 Parents:{" "}

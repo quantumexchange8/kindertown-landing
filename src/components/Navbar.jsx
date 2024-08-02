@@ -68,7 +68,7 @@ const Navbar = () => {
   const linkStylesmobile = {
     active: "text-[#000] text-center text-base ",
     none: "text-[#BBB] text-center text-base",
-    base: "flex justify-center items-center border border-[#F67F00] rounded-[5px] py-0.5 px-0.5",
+    base: " border border-[#F67F00] rounded-[5px] py-0.5 px-0.5",
 
     /*   base: "flex justify-center items-center text-[#FFF] bg-[#F67F00] rounded-[15px]",
     home: "w-[76px]",

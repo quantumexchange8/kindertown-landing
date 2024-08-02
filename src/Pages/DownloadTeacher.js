@@ -68,7 +68,7 @@ const DownloadTeacher = () => {
                                     <div className="md:pb-[50px]">{t("teachermodal-desc1")}</div>
                                     <div>{t("teachermodal-desc2")}</div>
                                 </div>
-                                : <div className="md:text-[32px] md:flex flex-col hidden font-semibold"
+                                : <div className="md:text-[32px] md:flex flex-col hidden font-medium"
                                     style={{
                                         lineHeight: "normal",
                                     }}>
@@ -111,7 +111,7 @@ const DownloadTeacher = () => {
                     <div className="w-full flex flex-col text-start max-w-[1000px] justify-center md:gap-[50px] gap-[30px]">
                         <div className="w-full flex flex-col">
                             <div
-                                className={`md:text-4xl text-2xl font-bold`}
+                                className={`md:text-4xl text-[20px] font-bold`}
                             >
                                 {t("feature")}:
                             </div>
