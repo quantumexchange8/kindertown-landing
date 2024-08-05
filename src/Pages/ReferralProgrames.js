@@ -132,10 +132,10 @@ const ReferralProgrames = () => {
                   </div>
                 </div>
                 <div
-                  className={`flex flex-col items-center justify-center md:gap-[50px] gap-[30px]`}
+                  className={`flex flex-col items-center justify-center md:gap-[50px] gap-[30px] md:w-[600px] w-full`}
                 >
                   {/*Box - 1 -- Register an account */}
-                  <div className="flex flex-col md:w-[600px] w-full">
+                  <div className="flex flex-col w-full">
                     <div className="relative w-full flex flex-col items-center justify-center md:rounded-t-[10px] rounded-t-[5px] md:h-[300px] h-[162.5px] bg-[#C1FFB4] ">
                       <img
                         src={ic}
@@ -240,7 +240,7 @@ const ReferralProgrames = () => {
                   </div>
 
                   {/*Box - 3 -- Registered account */}
-                  <div className="flex flex-col md:w-[600px] w-full">
+                  <div className="flex flex-col w-full">
                     <div className="relative w-full flex flex-col items-center justify-center md:rounded-t-[10px] rounded-t-[5px] bg-[#FFB9B9] md:h-[300px] h-[162.5px]">
                       <img
                         src={register}
@@ -291,7 +291,7 @@ const ReferralProgrames = () => {
                     </div>
                   </div>
                   {/*Box - 4 -- Referee successfully subscribed */}
-                  <div className="flex flex-col md:w-[600px] w-full">
+                  <div className="flex flex-col w-full">
                     <div className="relative w-full flex flex-col items-center justify-center md:rounded-t-[10px] rounded-t-[5px] bg-[#BEC8FF] md:h-[300px] h-[162.5px]">
                       <img
                         src={subscribe}
@@ -338,7 +338,7 @@ const ReferralProgrames = () => {
                     </div>
                   </div>
                   {/*Box5 -- Receive rewards */}
-                  <div className="flex flex-col md:w-[600px] w-full">
+                  <div className="flex flex-col w-full">
                     <div className="relative w-full flex flex-col items-center justify-center md:rounded-t-[10px] rounded-t-[5px] bg-[#FFD976] md:h-[300px] h-[162.5px]">
                       <img
                         src={reward}
@@ -349,7 +349,7 @@ const ReferralProgrames = () => {
                     <div
                       className={`relative flex flex-col justify-center items-center md:rounded-b-[10px] rounded-b-[5px] bg-[#FFB800] gap-[10px] 
                         ${i18n.language === "ms"
-                          ? "md:py-[42px] py-[9px]"
+                          ? "md:py-[42px] py-[15px]"
                           : i18n.language === "zh"
                             ? "md:py-[54px] py-[25px]"
                             : "md:py-[30px] py-[16.5px]"
