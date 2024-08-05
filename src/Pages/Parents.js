@@ -122,7 +122,7 @@ const Parent = () => {
             >
               {/*CONTENT 2 -- Designed for the future*/}
               <div
-                className={`md:w-[1000px] md:h-[612px] h-[250px] w-[370px] relative `}
+                className={`md:w-[1000px] md:h-[612px] h-[250px] w-[340px] relative `}
               >
                 <div className="flex flex-col absolute">
                   <img
@@ -155,7 +155,7 @@ const Parent = () => {
               </div>
 
               {/*CONTENT 3 -- Build for learning*/}
-              <div className={`md:w-full w-[370px] md:h-[800px] relative flex justify-center md:gap-[150px] gap-[50px]`}>
+              <div className={`md:w-full w-[340px] md:h-[800px] relative flex justify-center md:gap-[150px] gap-[50px]`}>
                 <div className="flex flex-col">
                   <div
                     className={`w-full text-[#64697A] md:text-[64px] text-[16px] font-bold md:h-[800px]`}
@@ -194,7 +194,7 @@ const Parent = () => {
               </div>
 
               {/*CONTENT 4 -- Witness boundless imagination*/}
-              <div className={`md:w-[1000px] md:h-[800px] h-[300px] w-[370px] relative flex justify-center `}>
+              <div className={`md:w-[1000px] md:h-[800px] h-[300px] w-[340px] relative flex justify-center `}>
                 <div className="flex flex-col absolute bottom-0 left-0">
                   <img
                     src={Phone3}

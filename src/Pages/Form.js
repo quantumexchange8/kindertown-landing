@@ -48,7 +48,7 @@ const PopupForm = () => {
                     {/* Desktop */}
                     <div className={`inline-block hidden md:flex ${i18n.language === 'zh'? "md:mx-[50px]" : "md:mx-[30px]"}`}><div dangerouslySetInnerHTML={createMarkup(t(webButtonText))} /></div>
                     {/* Mobile */}
-                    <div className={`flex flex-col md:hidden ${i18n.language === 'zh'? "mx-[40px]" : i18n.language === 'ms'? "mx-[30px]" : "mx-[40px]"}`}><div dangerouslySetInnerHTML={createMarkup(t(mobileButtonText))} /></div>
+                    <div className={`flex flex-col md:hidden w-[340px]`}><div dangerouslySetInnerHTML={createMarkup(t(mobileButtonText))} /></div>
                 </div>
             </button>
 

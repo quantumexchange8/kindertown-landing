@@ -65,7 +65,7 @@ const Home = () => {
                       <div>{t("main-text3")}</div>
                     </div>
                     <div
-                      className={"md:hidden flex flex-col items-center justify-center w-[340px] tracking-tight"}
+                      className={`md:hidden flex flex-col items-center justify-center w-[340px] ${i18n.language === 'ms' ? 'text-balance' : 'tracking-tight'}`}
                       style={{
                         lineHeight: "normal",
                       }}

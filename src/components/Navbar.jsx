@@ -342,7 +342,7 @@ const Navbar = () => {
                 }}
               >
                 <div
-                  className="bg-white fixed border rounded-[5px] justify-center top-[40px] w-auto min-w-[274px] h-[225px] flex flex-col p-[30px]"
+                  className="bg-white fixed border rounded-[5px] justify-center top-[40px] w-auto min-w-[274px] h-[225px] flex flex-col p-[20px]"
                   onClick={handleModalClick}
                 >
                   <div className="h-[225px] flex gap-[30px]">

@@ -327,7 +327,7 @@ const ReferralProgrames = () => {
                         {t("referee-subscribe")}
                       </div>
                       <div
-                        className="text-center md:text-[20px] text-sm flex flex-col md:px-0 px-[30px]"
+                        className="text-center md:text-[20px] text-sm flex flex-col px-0"
                         style={{
                           lineHeight: "normal",
                         }}
